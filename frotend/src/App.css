@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Poppins:ital,wght@0,100;0,200;1,100&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
+
+  font-family: 'Poppins', sans-serif;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+/* input[type="number"] {
+  
+  -moz-appearance: textfield;
+} */
+
+.greenColor {
+  color: green !important; 
+}
+.redColor { 
+  color: red !important;
+}
+
+.model-title
+{
+    text-align: center;
+    margin: 100px auto auto 0;
+    font-size: 50px;
+    color: #272c60;
+}
+
+.divider
+{
+    width: 75px;
+    height: 4px;
+    background-color: #272c60;
+    position: relative;
+    margin: 20px auto 60px;
+}
+
+.members
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member
+{
+    margin: 20px 15px;
+    border-radius: 10px;
+    padding: 0;
+    height: 400px;
+    overflow: hidden;
+}
+
+.member:hover
+{
+    transform: scale(1.01);
+}

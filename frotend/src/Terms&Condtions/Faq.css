@@ -1,0 +1,22 @@
+.Faq_header{
+    color: #02a1e5;
+    font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.Faq_desc{
+    text-align: start;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.desc_body{
+background-color: #f58c00;
+
+}
+.accordion{
+    border: 1px solid black;
+}
+.wraapping{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+}

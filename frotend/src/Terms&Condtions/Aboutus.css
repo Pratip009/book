@@ -1,0 +1,11 @@
+.aboutus_image::before {    
+    content: "";
+    background-image: url("../Image/gate.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.275;
+  }

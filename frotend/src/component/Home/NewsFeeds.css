@@ -1,0 +1,18 @@
+.Apps {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .title {
+    margin-bottom: 50px;
+  }
+  
+  
+  
+  .image_wrapper img {
+    width: 100%;
+  }
+  .image_wrapper p {
+    display: flex;
+align-items: center;
+justify-content: center;  }
