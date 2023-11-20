@@ -1,12 +1,12 @@
 /* Container for the footer */
 .footer {
-background-color: #02a1e5;
+background-color: #3AB0FF;
   color: #fff;
   padding: 30px 0;
   height: auto;
   overflow-x: hidden !important;
   width: auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -31,7 +31,7 @@ background-color: #02a1e5;
   width: 307px;
   padding-left: 40px;
   margin-left: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .foot_logo{
@@ -410,7 +410,7 @@ width: 119%;
   }
 
   .foot_menu li a:hover {
-    color: #f58c00;
+    color: #FF6D28;
   }
 
   /* Grid container for all menu sections */

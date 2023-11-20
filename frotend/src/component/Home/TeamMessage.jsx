@@ -22,7 +22,7 @@ export default function TeamMessage() {
       sx={{
         p: 2,
         marginBottom: "5rem",
-        backgroundColor: "#02a1e5",
+        backgroundColor: "#3AB0FF",
         // borderRadius: "25px",
         maxWidth: "100%",
         flexGrow: 1,
@@ -48,7 +48,7 @@ export default function TeamMessage() {
           >
             <Grid item xs>
               <Typography gutterBottom variant="subtitle1" component="div">
-                <h1 className="Team_text" style={{ color: "black" }}>
+                <h1 className="Team_text" style={{ color: "white" }}>
                   Team Message
                 </h1>
               </Typography>
@@ -56,9 +56,9 @@ export default function TeamMessage() {
                 <p
                   className="team_message"
                   style={{
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Montserrat', sans-serif",
                     fontWeight: "300",
-                    color: "black",
+                    color: "white",
                   }}
                 >
                   We share an enthusiasm for the kind of great learning made
@@ -80,8 +80,8 @@ export default function TeamMessage() {
               <Typography
                 sx={{
                   cursor: "pointer",
-                  fontFamily: "'Roboto', sans-serif",
-                  color: "black",
+                  fontFamily: "'Montserrat', sans-serif",
+                  color: "white",
                 }}
                 variant="body2"
                 className="bottom_team_text"

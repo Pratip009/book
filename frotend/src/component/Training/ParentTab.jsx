@@ -67,7 +67,7 @@ export default function ParentTab() {
           textColor="black"
           variant="fullWidth"
           aria-label="full width tabs example"
-          style={{ backgroundColor: "#f58c00" }}
+          style={{ backgroundColor: "#FF6D28" }}
         >
           <Tab label="Parenting Workshop" {...a11yProps(0)} />
           <Tab label="Education Issues" {...a11yProps(1)} />

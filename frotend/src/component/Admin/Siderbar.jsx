@@ -214,6 +214,17 @@ function Sidebar() {
                   </span>
                 </li>
               </Link>
+              <Link
+                to="/admin/createuser"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <li className={classes.sideBarMenuItem}>
+                  <SchoolIcon fontSize="large" />
+                  <span className={classes.sideBarMenuItem_text}>
+                    Create Users
+                  </span>
+                </li>
+              </Link>
             </ul>
             <div className={classes.divider} />
 

@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
 const taskSchema = new mongoose.Schema({
-  heading: {
-    type: String,
-    required: [true, "Please Enter news heading"],
-    trim: true,
-  },
+  task: { type: String, required: true },
 });
 module.exports = mongoose.model("Task", taskSchema);

@@ -8,7 +8,7 @@
     border: 1px solid rgb(221, 221, 221);
     padding: .5rem;
     background-color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .educate_desc{
     font-family: 'Tinos', serif;
@@ -18,7 +18,7 @@
     font-family: 'Saira Condensed', sans-serif;
         font-size: 20px; 
 margin: 0;
-background-color: #02a1e5;
+background-color: #3AB0FF;
 padding: .5rem;
 color: white;
 }
@@ -31,7 +31,7 @@ color: white;
 }
 .app_desc{
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: rgb(49, 49, 49);
 }
 .app_links1{

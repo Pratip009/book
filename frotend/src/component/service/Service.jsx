@@ -2,6 +2,7 @@ import React from "react";
 import AOS from "aos";
 import { Grid } from "@material-ui/core";
 import "aos/dist/aos.css";
+import Pricing from "../pricing/pricing";
 const Service = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -65,7 +66,9 @@ const Service = () => {
             {/* <Price /> */}
             <img src={require("../../Image/servicessss.png")} alt="" />
           </div>
+          <Pricing/>
         </div>
+     
       </Grid>
       {/* <MetaData title={"Service"} /> */}
     </div>

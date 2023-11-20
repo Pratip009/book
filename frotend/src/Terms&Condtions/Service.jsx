@@ -10,10 +10,10 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   Services_section: {
-    backgroundColor: "#02a1e5",
+    backgroundColor: "#3AB0FF",
     paddingTop: theme.spacing(0.5),
     paddingBottom: theme.spacing(0.5),
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Montserrat', sans-serif",
   },
   Services_wrapper: {
     display: "flex",
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   Services_icon: {
-    color: "#CD1818",
+    color: "#FF2442",
     fontSize: "3rem",
     marginRight: theme.spacing(2.5),
     "& svg": {

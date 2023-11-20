@@ -1,7 +1,7 @@
 
 .header {
   background-color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
   padding: 0;
   position: fixed;
@@ -19,12 +19,12 @@
 .headerTop {
   width: 100%;
 
-  background-color: #02a1e5;
-  /* background-image: linear-gradient(to right,#02a1e55a, #02a1e5 ); */
+  background-color: #3AB0FF;
+  /* background-image: linear-gradient(to right,#3AB0FF5a, #3AB0FF ); */
   color: #040D12;
   display: grid;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   grid-template-columns: 1fr minmax(465px, 1fr);
   height: 33px;
@@ -40,7 +40,7 @@ font-weight: normal;
 
 .headerTopLeft {
   height: fit-content;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px !important;
   margin-left: 2.5rem;
 margin-top: 5px;
@@ -63,7 +63,7 @@ margin-top: 5px;
   align-items: center;
   font-weight: 400;
   font-size: 15px !important;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .headerRetailer {
@@ -86,7 +86,7 @@ margin-top: 5px;
 }
 .My_account{
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 color: black;
   font-size: 13px;
 
@@ -94,16 +94,16 @@ color: black;
 .headerLogin {
   width: 130px;
  cursor: pointer;
-  background-color: #f58c00;
+  background-color: #FF6D28;
   padding-right: 5px;
   padding-left: 30px;
 }
 .headerLogin button {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 33px;
   border: none;
   text-align: center;
-  color: #02a1e5;
+  color: #3AB0FF;
   background-color: rgb(255, 255, 255);
   font-weight: 400;
   font-size: 15px;
@@ -168,11 +168,11 @@ list-style: none;
     font-size: 13px;
     font-weight: 600;
     margin-top: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
 .headerBottom_navMenu ul li a:hover{
-  color: #f58c00;
+  color: #FF6D28;
   transition: .5s ease-in-out;
 }
 
@@ -186,7 +186,7 @@ list-style: none;
 }
 
 .headerBotttom_icons>*:hover{
-  color: #f58c00;
+  color: #FF6D28;
   transition: .5s ease-in-out;
 
 

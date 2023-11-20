@@ -88,7 +88,7 @@ display: flex;
     border-color: rgba(190, 190, 190, 0.805);
 }
 .prod_details_title{
-  color: #02a1e5;
+  color: #3AB0FF;
   font-family: 'Saira Condensed', sans-serif;
 }
 .prod_details_tabs .tabs_item {
@@ -251,7 +251,7 @@ del {
     font-weight: 600;
     font-size: 16px;
     font-family: 'Tinos', serif;
-  color :#f58c00
+  color :#FF6D28
  
 }
 
@@ -315,7 +315,7 @@ ul {
 
 
 .prod_details_addtocart_btn:hover{
-     background: #f58c00 !important;; 
+     background: #FF6D28 !important;; 
   transform: scale(1.05) !important;
  border: none !important;
      transition: transform 0.3s ease 0s !important;
@@ -408,7 +408,7 @@ margin-left: 2px;
 font-family: 'Tinos', serif;
 margin-bottom: 0px;
 padding: 0px;
-  color :#f58c00
+  color :#FF6D28
 
 }
 .productDiscriptiopn_text {

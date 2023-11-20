@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch  } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { load_UserProfile } from "./actions/userAction";
 import axios from "axios";
@@ -39,11 +39,7 @@ import TermsAndConditions from "./Terms&Condtions/TermsCondtion";
 import PrivacyPolicy from "./Terms&Condtions/Privacy";
 import Training from "./component/Training/Training";
 import School from "./component/SchoolManagement/School.jsx";
-
-
-
-
-
+import DashboardUser from "./component/SpecialUser/DashboardSpecial.jsx";
 
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
@@ -55,9 +51,8 @@ const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
 const LazyUpdateProduct = React.lazy(() =>
   import("./component/Admin/UpdateProduct")
 );
-const LazyUpdateNews= React.lazy(() =>
-  import("./component/Admin/NewsFeed")
-);
+const LazyUpdateNews = React.lazy(() => import("./component/Admin/NewsFeed"));
+const LazyCreateUser = React.lazy(() => import("./component/Admin/CreateUser"));
 const LazyProcessOrder = React.lazy(() =>
   import("./component/Admin/ProcessOrder")
 );
@@ -68,8 +63,6 @@ const LazyProductReviews = React.lazy(() =>
 );
 
 function App() {
- 
-
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   const dispatch = useDispatch();
@@ -397,6 +390,22 @@ function App() {
               </>
             )}
           />
+          <Route
+            exact
+            path="/specialuser/dashboarduser"
+            render={() => (
+              <>
+                {<Header />}
+                <PrivateRoute
+                  exact
+                  path="/specialuser/dashboarduser"
+                  component={DashboardUser}
+                />
+                <Services />
+                {<Footer />}
+              </>
+            )}
+          />
 
           <Route
             exact
@@ -435,6 +444,22 @@ function App() {
               <>
                 {<Header />}
                 <PrivateRoute exact path="/shipping" component={Shipping} />
+                <Services />
+                {<Footer />}
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/specialuser"
+            render={() => (
+              <>
+                {<Header />}
+                <PrivateRoute
+                  exact
+                  path="/specialuser"
+                  component={DashboardUser}
+                />
                 <Services />
                 {<Footer />}
               </>
@@ -506,6 +531,14 @@ function App() {
               path="/admin/news"
               component={LazyUpdateNews}
             />
+
+            <PrivateRoute
+              isAdmin={true}
+              exact
+              path="/admin/createuser"
+              component={LazyCreateUser}
+            />
+
             <PrivateRoute
               isAdmin={true}
               exact

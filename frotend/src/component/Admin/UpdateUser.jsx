@@ -354,6 +354,7 @@ function UpdateUser() {
                       </MenuItem>
                       <MenuItem value="admin">Admin</MenuItem>
                       <MenuItem value="user">User</MenuItem>
+                      <MenuItem value="specialuser">Special User</MenuItem>
                     </Select>
                   </div>
 

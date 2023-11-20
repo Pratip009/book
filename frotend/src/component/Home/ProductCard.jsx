@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     currsor: "pointer",
     boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
     "&:hover": {
-      boxShadow: "-1px 10px 29px 0px #02a1e5",
+      boxShadow: "-1px 10px 29px 0px #3AB0FF",
     },
   },
   media: {
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 
   button: {
     marginTop: -15,
-    // backgroundColor: "#02a1e5",
+    // backgroundColor: "#3AB0FF",
     background: "linear-gradient(90deg, #3f51b5, transparent) #2196f3;",
     color: "white",
     transition: "background-color 1s",
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: 45,
     "&:hover": {
-      backgroundColor: "#f58c00",
+      backgroundColor: "#FF6D28",
       color: "white",
       fontWeight: "bold",
     },
@@ -58,13 +58,13 @@ const useStyles = makeStyles((theme) => ({
   oldPrice: {
     textDecoration: "line-through",
     fontWeight: "normal",
-    borderRadius:"5px",
-    padding:"0 8px",
+    borderRadius: "5px",
+    padding: "0 8px",
     fontSize: "1rem",
 
     // backgroundColor: "#ed1c24",
     background: "linear-gradient(90deg, #ed1c24, transparent) #9D0006;",
-    color:"#fff",
+    color: "#fff",
     marginRight: theme.spacing(17),
   },
   finalPrice: {
@@ -72,11 +72,10 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor: "#03C988",
     background: "linear-gradient(90deg, #03C988, transparent) #008F2D;",
 
-    borderRadius:"5px",
-    padding:"0 8px",
+    borderRadius: "5px",
+    padding: "0 8px",
     fontWeight: "normal",
     fontSize: "1rem",
-    
   },
   description: {
     fontSize: "0.9rem",
@@ -110,11 +109,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Card
-      className={classes.root}
-      data-aos="flip-left"
-      
-    >
+    <Card className={classes.root} data-aos="flip-left">
       <Link
         className="productCard"
         to={`/product/${product._id}`}
@@ -131,6 +126,14 @@ const ProductCard = ({ product }) => {
             >
               {nameTruncated}
             </Typography>
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="div"
+              className={classes.description}
+            >
+              {truncated}
+            </Typography>
             <Box display="flex" alignItems="center">
               <Rating
                 name="rating"
@@ -144,14 +147,7 @@ const ProductCard = ({ product }) => {
                 ({product.numOfReviews})
               </Typography>
             </Box>
-            {/* <Typography
-              variant="body2"
-              color="textSecondary"
-              component="div"
-              className={classes.description}
-            >
-              {truncated}
-            </Typography> */}
+            
             <Box display="flex" alignItems="center" marginTop="1rem">
               <Typography variant="body1" className={classes.oldPrice}>
                 {oldPrice}

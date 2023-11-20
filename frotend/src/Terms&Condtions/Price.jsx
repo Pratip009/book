@@ -81,7 +81,7 @@ export default function Price() {
                   color: "white",
                 }}
                 sx={{
-                  backgroundColor: "#02a1e5",
+                  backgroundColor: "#3AB0FF",
                 }}
               />
               <CardContent>

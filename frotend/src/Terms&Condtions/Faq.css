@@ -1,15 +1,15 @@
 .Faq_header{
-    color: #02a1e5;
-    font-family: 'Poppins', sans-serif;
+    color: #3AB0FF;
+    font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 .Faq_desc{
     text-align: start;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
 }
 .desc_body{
-background-color: #f58c00;
+background-color: #FF6D28;
 
 }
 .accordion{

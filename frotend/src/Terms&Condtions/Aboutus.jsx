@@ -171,7 +171,7 @@ const About_UsPage = () => {
               <Button
                 style={{
                   color: "#fff",
-                  backgroundColor: "#f58c00",
+                  backgroundColor: "#FF6D28",
                   display: "flex",
                 }}
                 variant="contained"
@@ -191,482 +191,488 @@ const About_UsPage = () => {
             </Grid>
           </Grid>
         </Container>
-        <Container className={classes.container_12}>
-          {/* Learning needs traits */}
+        <div
+          className="product_back"
+          style={{ backgroundColor: "#F4F6F9", width: "100%" }}
+        >
+          <Container className={classes.container_12}>
+            {/* Learning needs traits */}
 
-          {/* <Traits /> */}
+            {/* <Traits /> */}
 
-          <div className="circle_text">
-            <p className="non_important" style={{ textAlign: "Start" }}>
-              {" "}
-              <span class="circle-sketch-highlight">Learning Needs Traits</span>
-            </p>
-          </div>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            style={{ marginTop: "2rem" }}
-          >
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/teamm1.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
+            <div className="circle_text">
+              <p className="non_important" style={{ textAlign: "Start" }}>
+                {" "}
+                <span class="circle-sketch-highlight">
+                  Learning Needs Traits
+                </span>
+              </p>
+            </div>
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "2rem" }}
+            >
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/teamm1.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
 
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
 
-                    fontWeight: "600",
-                  }}
-                >
-                  L-
-                </Typography>
+                      fontWeight: "600",
+                    }}
+                  >
+                    L-
+                  </Typography>
 
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
 
-                    fontWeight: "600",
-                  }}
-                >
-                  LEADERSHIP
-                </Typography>
-              </Card>
+                      fontWeight: "600",
+                    }}
+                  >
+                    LEADERSHIP
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/effective.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    E-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    EFFECTIVENESS
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/attitude.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    A-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    ATTITUDE
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/relation.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    R-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    RELATION
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/negotiation.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    N-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    NEGOTIATION
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/innovation.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    I-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    INNOVATION
+                  </Typography>
+                </Card>
+              </Grid>
             </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/effective.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "2rem" }}
+            >
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/nurture.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
 
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
 
-                    fontWeight: "600",
-                  }}
-                >
-                  E-
-                </Typography>
+                      fontWeight: "600",
+                    }}
+                  >
+                    N-
+                  </Typography>
 
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
 
-                    fontWeight: "600",
-                  }}
-                >
-                  EFFECTIVENESS
-                </Typography>
-              </Card>
+                      fontWeight: "600",
+                    }}
+                  >
+                    NURTURE
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/goal.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    G-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    GOAL
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/needful.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    N-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    NEEDFUL
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/essential.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    E-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    ESSENTIAL
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/expectation.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    E-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    EXPECTATIONAL
+                  </Typography>
+                </Card>
+              </Grid>
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/development.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
+
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    D-
+                  </Typography>
+
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
+
+                      fontWeight: "600",
+                    }}
+                  >
+                    DEVELOPMENT
+                  </Typography>
+                </Card>
+              </Grid>
             </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/attitude.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "2rem", marginBottom: "2rem" }}
+            >
+              <Grid item xs={4} md={2}>
+                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
+                  {/* <Groups3Icon fontSize="large" /> */}
+                  <img
+                    src={require("../Image/service.png")}
+                    alt=""
+                    style={{ height: "100px" }}
+                  />
 
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
+                  <Typography
+                    style={{
+                      color: "#FF6D28",
+                      fontSize: "25px",
+                      fontFamily: "'Poppins', sans-serif",
 
-                    fontWeight: "600",
-                  }}
-                >
-                  A-
-                </Typography>
+                      fontWeight: "600",
+                    }}
+                  >
+                    S-
+                  </Typography>
 
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
+                  <Typography
+                    style={{
+                      color: "#61677A",
+                      fontSize: "12px",
+                      fontFamily: "'Poppins', sans-serif",
 
-                    fontWeight: "600",
-                  }}
-                >
-                  ATTITUDE
-                </Typography>
-              </Card>
+                      fontWeight: "600",
+                    }}
+                  >
+                    SERVICES
+                  </Typography>
+                </Card>
+              </Grid>
             </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/relation.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  R-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  RELATION
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/negotiation.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  N-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  NEGOTIATION
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/innovation.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  I-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  INNOVATION
-                </Typography>
-              </Card>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            style={{ marginTop: "2rem" }}
-          >
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/nurture.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  N-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  NURTURE
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/goal.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  G-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  GOAL
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/needful.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  N-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  NEEDFUL
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/essential.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  E-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  ESSENTIAL
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/expectation.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  E-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  EXPECTATIONAL
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/development.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  D-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  DEVELOPMENT
-                </Typography>
-              </Card>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            style={{ marginTop: "2rem", marginBottom: "2rem" }}
-          >
-            <Grid item xs={4} md={2}>
-              <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                {/* <Groups3Icon fontSize="large" /> */}
-                <img
-                  src={require("../Image/service.png")}
-                  alt=""
-                  style={{ height: "100px" }}
-                />
-
-                <Typography
-                  style={{
-                    color: "#f58c00",
-                    fontSize: "25px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  S-
-                </Typography>
-
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "12px",
-                    fontFamily: "'Poppins', sans-serif",
-
-                    fontWeight: "600",
-                  }}
-                >
-                  SERVICES
-                </Typography>
-              </Card>
-            </Grid>
-          </Grid>
-        </Container>
-
+          </Container>
+        </div>
         <Container
           className={classes.container_12}
           style={{ maxWidth: "100%" }}
@@ -717,7 +723,7 @@ const About_UsPage = () => {
                 <Button
                   style={{
                     color: "#fff",
-                    backgroundColor: "#f58c00",
+                    backgroundColor: "#FF6D28",
                     display: "flex",
                   }}
                   variant="contained"

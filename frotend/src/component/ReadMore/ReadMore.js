@@ -35,25 +35,25 @@ const ReadMore = ({ header, shortContent, longContent }) => {
             <List sx={{ width: "100%" }}>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />{" "}
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />{" "}
                 </ListItemAvatar>
                 <ListItemText primary="Gain valuable knowledge" />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />{" "}
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />{" "}
                 </ListItemAvatar>
                 <ListItemText primary="Exercise your brain" />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Improve your focus" />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Improve your memory" />
               </ListItem>
@@ -63,20 +63,20 @@ const ReadMore = ({ header, shortContent, longContent }) => {
             <List sx={{ width: "100%" }}>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Enjoy entertainment" />
               </ListItem>
 
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Improve your ability to empathize" />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Improve your communication skills" />
               </ListItem>
@@ -86,19 +86,19 @@ const ReadMore = ({ header, shortContent, longContent }) => {
             <List sx={{ width: "100%" }}>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Reduce stress" />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Improve your mental health" />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#f58c00" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF6D28" }} />
                 </ListItemAvatar>
                 <ListItemText primary="Live longer" />
               </ListItem>
@@ -117,7 +117,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#f58c00",
+          backgroundColor: "#FF6D28",
           display: "flex",
         }}
         variant="contained"

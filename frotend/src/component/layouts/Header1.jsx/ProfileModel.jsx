@@ -64,7 +64,10 @@ const ProfileModal = ({ user, isAuthenticated }) => {
     setIsOpen(false);
     history.push("/admin/dashboard");
   }
-
+  function dashboardHandlerForSpecialUser() {
+    setIsOpen(false);
+    history.push("/specialuser/dashboarduser");
+  }
   function accountHandler() {
     setIsOpen(false);
     history.push("/account");
@@ -143,8 +146,13 @@ const ProfileModal = ({ user, isAuthenticated }) => {
             )}
             <div className="divider" />
             <div className="profile-menu">
-              {user && user.role === "admin" && (
+              {user && user.role === "admin" &&(
                 <div className="menu-item" onClick={dashboardHandler}>
+                  <DashboardIcon className="menu-icon" />
+                  <span>Dashboard</span>
+                </div>
+              )}{user && user.role === "specialuser" &&(
+                <div className="menu-item" onClick={dashboardHandlerForSpecialUser}>
                   <DashboardIcon className="menu-icon" />
                   <span>Dashboard</span>
                 </div>

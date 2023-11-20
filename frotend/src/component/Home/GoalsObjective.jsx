@@ -38,7 +38,7 @@ export default function GoalsObjective() {
           <div className="educate">
             <h3
               className="app_heading"
-              style={{ fontFamily: "'Saira Condensed', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               ABOUT OUR FUTURE TARGET
             </h3>
@@ -55,7 +55,7 @@ export default function GoalsObjective() {
             <Card style={{ boxShadow: "none", backgroundColor: "transparent" }}>
               <CardHeader
                 avatar={
-                  <Avatar style={{ backgroundColor: "#02a1e5" }}>
+                  <Avatar style={{ backgroundColor: "#3AB0FF" }}>
                     <PsychologyIcon fontSize="large" />
                   </Avatar>
                 }
@@ -88,7 +88,7 @@ export default function GoalsObjective() {
             <Card style={{ boxShadow: "none", backgroundColor: "transparent" }}>
               <CardHeader
                 avatar={
-                  <Avatar style={{ backgroundColor: "#f58c00" }}>
+                  <Avatar style={{ backgroundColor: "#FF6D28" }}>
                     <MarkUnreadChatAltIcon fontSize="large" />
                   </Avatar>
                 }

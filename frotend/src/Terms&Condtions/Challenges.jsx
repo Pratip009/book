@@ -30,7 +30,7 @@ export default function Challenges() {
               justifyContent: "center",
             }}
           >
-            <LegendToggleIcon fontSize="large" style={{ color: "#f58c00" }} />{" "}
+            <LegendToggleIcon fontSize="large" style={{ color: "#FF6D28" }} />{" "}
             &nbsp;
             <h4 className="challeges_header">Challenges</h4>
           </div>
@@ -54,7 +54,7 @@ export default function Challenges() {
               justifyContent: "center",
             }}
           >
-            <EmojiObjectsIcon fontSize="large" style={{ color: "#f58c00" }} />{" "}
+            <EmojiObjectsIcon fontSize="large" style={{ color: "#FF6D28" }} />{" "}
             &nbsp;
             <h4 className="challeges_header">Solutions</h4>
           </div>

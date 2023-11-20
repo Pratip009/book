@@ -25,7 +25,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             1.
@@ -33,7 +33,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -62,7 +62,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             2.
@@ -70,7 +70,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -96,7 +96,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             3.
@@ -104,7 +104,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -131,7 +131,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             4.
@@ -139,7 +139,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -168,7 +168,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             5.
@@ -176,7 +176,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -205,7 +205,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             6.
@@ -213,7 +213,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -242,7 +242,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             7.
@@ -250,7 +250,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -280,7 +280,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             8.
@@ -288,7 +288,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -320,7 +320,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             9.
@@ -328,7 +328,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -357,7 +357,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             10.
@@ -365,7 +365,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -394,7 +394,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             11.
@@ -402,7 +402,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -430,7 +430,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             12.
@@ -438,7 +438,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -469,7 +469,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             13.
@@ -477,7 +477,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -504,7 +504,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             14.
@@ -512,7 +512,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -543,7 +543,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             15.
@@ -551,7 +551,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -581,7 +581,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             16.
@@ -589,7 +589,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -619,7 +619,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             17.
@@ -627,7 +627,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -654,7 +654,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             18.
@@ -662,7 +662,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,
@@ -693,7 +693,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Poppins', sans-serif",
 
-              color: "#f58c00",
+              color: "#FF6D28",
             }}
           >
             19.
@@ -701,7 +701,7 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#02a1e5",
+              color: "#3AB0FF",
               fontFamily: "'Poppins', sans-serif",
 
               fontWeight: 600,

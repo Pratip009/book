@@ -45,7 +45,7 @@ const Parent = () => {
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#f58c00",
+          backgroundColor: "#FF6D28",
           display: "flex",
         }}
         variant="contained"

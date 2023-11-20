@@ -68,7 +68,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#02a1e5",
+                    backgroundColor: "#3AB0FF",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -105,7 +105,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#02a1e5",
+                    backgroundColor: "#3AB0FF",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -156,7 +156,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#02a1e5",
+                    backgroundColor: "#3AB0FF",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -193,7 +193,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#02a1e5",
+                    backgroundColor: "#3AB0FF",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -240,7 +240,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#02a1e5",
+                    backgroundColor: "#3AB0FF",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",

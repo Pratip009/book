@@ -60,31 +60,29 @@ p {
 font-family: helvetica, arial, sans serif;
 }
 /* .background_image{
-  background-image: url("../../Image/White-bg.jpg");
+  background-image: url("../../Image/bookhd.avif");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -25px;
 } */
-.background_image::before {    
+/* .background_image::before {    
   content: "";
-  /* background-image: url("../../Image/White-bg.jpg"); */
+  background-image: url("../../Image/bookhdd.jpg");
   background-size: cover;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 1;
-}
+  opacity:0.35;
+} */
 
 .training{
   display: flex;
   justify-content: center;
   align-items: center;
-
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .overlay_section{
   justify-content: center;
@@ -93,7 +91,7 @@ font-family: helvetica, arial, sans serif;
 }
 .goals_heading{
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
 padding: .5rem;
 color: #fff;
@@ -103,7 +101,7 @@ margin-top: -28px;
 margin-bottom: 3rem;
 }
 .goals_objective_header{
-background-color: #02a1e5;
+background-color: #3AB0FF;
 }
 .message_container{
   margin: auto;
@@ -114,30 +112,30 @@ background-color: #02a1e5;
   width: 10px;
 }
 .team_section{
-  background-color: #02a1e5;
+  background-color: #3AB0FF;
   margin-bottom: 5rem;
 }
 .team_message{
   color: #c6c4c4;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 }
 .Team_text{
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-top: -10px;
 }
 
 .bottom_team_text{
   color: #fff;
   font-size: 17px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .headings{
   display: flex;
 justify-content: center;
-font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
 margin-top: 5rem;
 
 font-size: 30px;
@@ -148,7 +146,7 @@ font-size: 30px;
   align-items: center;
 }
 .circle-sketch-highlight{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   position:relative;
   font-size: 30px;
@@ -159,12 +157,12 @@ font-size: 30px;
 }
 .non_important{
   font-size: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .clients_headings{
   display: flex;
 justify-content: center;
-font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
 font-size: 30px;
 margin-top: 0;
 }
@@ -181,21 +179,21 @@ margin-top: 0;
   display: flex;
 justify-content: center;
 font-size: 13px;
-font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
 .container_element_large_text{
   margin: 0 auto;
   font-size: 30px;
-  color: #f58c00;
-  font-family: 'Poppins', sans-serif;
+  color: #FF6D28;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 1.9rem;
 }
 .container_element_small_text{
   margin: 0 auto;
   text-align: start;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: black;
   font-weight: 200;

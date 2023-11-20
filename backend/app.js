@@ -8,20 +8,13 @@ const path = require("path");
 const cors = require("cors");
 require("dotenv").config({ path: "./config/config.env" });
 
-
-
-
-
-
-
 // routes
 
 const user = require("./route/userRoute");
 const order = require("./route/orderRoute");
-const product = require("./route/productRoute")
+const product = require("./route/productRoute");
 const payment = require("./route/paymentRoute");
-const task = require("./route/taskRoute")
-
+const task = require("./route/taskRoute");
 // for req.cookie to get token while autentication
 app.use(cookieParser());
 app.use(express.json());
@@ -37,8 +30,6 @@ app.use("/api/v1", order);
 app.use("/api/v1", payment);
 app.use("/api/v1", task);
 
-
-
 const __dirname1 = path.resolve();
 
 app.use(express.static(path.join(__dirname1, "/frotend/build")));
@@ -46,6 +37,5 @@ app.use(express.static(path.join(__dirname1, "/frotend/build")));
 app.get("*", (req, res) =>
   res.sendFile(path.resolve(__dirname1, "frotend", "build", "index.html"))
 );
-
 
 module.exports = app;

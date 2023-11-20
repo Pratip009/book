@@ -98,7 +98,7 @@ function Header() {
                 >
                   <button
                     className="account_box"
-                    style={{ backgroundColor: "#f58c00" }}
+                    style={{ backgroundColor: "#FF6D28" }}
                   >
                     <LockPersonIcon
                       className="headerRetailer_Svg2"
@@ -121,7 +121,7 @@ function Header() {
                 >
                   <button
                     className="account_box"
-                    style={{ backgroundColor: "#f58c00" }}
+                    style={{ backgroundColor: "#FF6D28" }}
                   >
                     <LockPersonIcon
                       className="headerRetailer_Svg2"
@@ -153,7 +153,7 @@ function Header() {
                     fontSize: 29,
                     color: "black",
                     "&:hover": {
-                      color: "#f58c00",
+                      color: "#FF6D28",
                       cursor: "pointer",
                     },
                   }}
@@ -197,14 +197,14 @@ function Header() {
             <div className="headerBottom_navMenu" data-aos="fade">
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" >Home</Link>
                 </li>
                 <li>
-                  <Link to="/about_us">About</Link>
+                  <Link to="/about_us" >About</Link>
                 </li>
 
                 <li>
-                  <Link to="/products">Product</Link>
+                  <Link to="/products" >Product</Link>
                 </li>
                 <li>
                   <Link to="/training">Training</Link>

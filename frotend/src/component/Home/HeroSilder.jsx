@@ -7,7 +7,7 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import Typed from "react-typed";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   slide: {
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   productButton: {
-    backgroundColor: "#f58c00",
+    backgroundColor: "#FF6D28",
     color: "#fff",
     border: `1px solid ${theme.palette.common.white}`,
     borderRadius: theme.shape.borderRadius,
@@ -74,8 +74,8 @@ const useStyles = makeStyles((theme) => ({
     transition: "background-color 0.3s ease-in-out",
     "&:hover": {
       backgroundColor: theme.palette.common.white,
-      color: "#f58c00",
-      border: "1px solid #f58c00",
+      color: "#FF6D28",
+      border: "1px solid #FF6D28",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",

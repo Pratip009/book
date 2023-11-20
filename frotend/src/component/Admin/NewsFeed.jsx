@@ -8,12 +8,12 @@ import Navbar from "./Navbar";
 import useStyles from "../User/LoginFromStyle";
 import { Avatar, TextField, Typography, Button } from "@material-ui/core";
 import { baseURL } from "../utils/constant";
-
 function NewsFeed() {
   const [toggle, setToggle] = useState(false);
   const [input, setInput] = useState("");
   const [task, setTask] = useState([]);
   const [updateUI, setUpdateUI] = useState(false);
+  const [updateId, setUpdateId] = useState(null);
 
   useEffect(() => {
     axios.get(`${baseURL}/get`).then((res) => {
@@ -27,6 +27,19 @@ function NewsFeed() {
       console.log(res.data);
       setInput("");
       setUpdateUI((prevState) => !prevState);
+    });
+  };
+  const updateMode = (id, text) => {
+    setInput(text);
+    setUpdateId(id);
+  };
+
+  const updateTask = () => {
+    axios.put(`${baseURL}/update/${updateId}`, { task: input }).then((res) => {
+      console.log(res.data);
+      setUpdateUI((prevState) => !prevState);
+      setUpdateId(null);
+      setInput("");
     });
   };
 
@@ -86,12 +99,13 @@ function NewsFeed() {
                   className={classes.loginButton}
                   fullWidth
                   type="submit"
-                  onClick={addTask}
+                  onClick={updateId ? updateTask : addTask}
                 >
-                  Create Notice
+                  {updateId ? "Update Notice" : "Create Notice"}
                 </Button>
               </main>
             </div>
+
             <ul>
               {task.map((task) => (
                 <NewsList
@@ -99,9 +113,11 @@ function NewsFeed() {
                   id={task._id}
                   task={task.task}
                   setUpdateUI={setUpdateUI}
+                  updateMode={updateMode}
                 />
               ))}
             </ul>
+            
           </div>
         </div>
       </>
