@@ -221,7 +221,7 @@ function Sidebar() {
                 <li className={classes.sideBarMenuItem}>
                   <SchoolIcon fontSize="large" />
                   <span className={classes.sideBarMenuItem_text}>
-                    Create Users
+                    Messages
                   </span>
                 </li>
               </Link>

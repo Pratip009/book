@@ -359,7 +359,7 @@ function Home() {
                   our goals and objective
                 </h2> */}
                 <div className="circle_text">
-                  <p className="non_important">
+                  <p className="non_important" data-aos="fade-left">
                     our{" "}
                     <span class="circle-sketch-highlight">
                       goals and objective

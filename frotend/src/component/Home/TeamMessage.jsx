@@ -32,7 +32,7 @@ export default function TeamMessage() {
       }}
     >
       <Grid container spacing={2}>
-        <Grid item xs={12} md={4} sm container>
+        <Grid item xs={12} md={4} sm container data-aos="fade-right">
           <ButtonBase xs={{ width: 128, height: 128 }}>
             <Img src={require("../../Image/discussion.png")} alt="complex" />
           </ButtonBase>
@@ -47,7 +47,7 @@ export default function TeamMessage() {
             className="message_section"
           >
             <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div">
+              <Typography gutterBottom variant="subtitle1" component="div" data-aos="fade-left">
                 <h1 className="Team_text" style={{ color: "white" }}>
                   Team Message
                 </h1>
@@ -60,6 +60,7 @@ export default function TeamMessage() {
                     fontWeight: "300",
                     color: "white",
                   }}
+                  data-aos="fade-left"
                 >
                   We share an enthusiasm for the kind of great learning made
                   possible by skilful and committed training. Specializing in
@@ -85,6 +86,7 @@ export default function TeamMessage() {
                 }}
                 variant="body2"
                 className="bottom_team_text"
+                data-aos="fade-left"
               >
                 Team Learning Needs- we deliver transformation
               </Typography>

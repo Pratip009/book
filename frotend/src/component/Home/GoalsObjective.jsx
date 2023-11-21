@@ -24,6 +24,7 @@ export default function GoalsObjective() {
             src={require("../../Image/Cricket-wepon/aboutus1.jpg")}
             alt="App"
             style={{ height: "auto" }}
+            data-aos="fade-right"
           />
         </Box>
       </Grid>
@@ -34,6 +35,7 @@ export default function GoalsObjective() {
             flexDirection: "column",
             alignItems: "center",
           }}
+          data-aos="fade-left"
         >
           <div className="educate">
             <h3

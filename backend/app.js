@@ -15,6 +15,9 @@ const order = require("./route/orderRoute");
 const product = require("./route/productRoute");
 const payment = require("./route/paymentRoute");
 const task = require("./route/taskRoute");
+const usermessage = require("./route/userMessageRoute");
+const adminMessage = require("./route/adminMessageRoute");
+
 // for req.cookie to get token while autentication
 app.use(cookieParser());
 app.use(express.json());
@@ -29,6 +32,8 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 app.use("/api/v1", task);
+app.use("/api/v1", usermessage);
+app.use("/api/v1", adminMessage);
 
 const __dirname1 = path.resolve();
 

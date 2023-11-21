@@ -5,6 +5,7 @@ const cloudinary = require("cloudinary");
 const path = require('path');
 var express = require('express');  
 const cors = require('cors');
+const Stripe = require('stripe')(process.env.SECRET_KEY);
 
 
 
@@ -40,6 +41,23 @@ const server = app.listen(PORT, () => {
   console.log(`Server is listening on PORT ${process.env.PORT}`);
 });
 
+
+app.post('/payment', async (req, res) => {
+  let status, error;
+  const { token, amount } = req.body;
+  try {
+    await Stripe.charges.create({
+      source: token.id,
+      amount,
+      currency: 'usd',
+    });
+    status = 'success';
+  } catch (error) {
+    console.log(error);
+    status = 'Failure';
+  }
+  res.json({ error, status });
+});
 // Unhandled Promise Rejection  => server issue
 process.on("unhandledRejection" , (err) =>{ 
     console.log(`Error : ${err.message}`);

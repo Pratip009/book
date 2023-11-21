@@ -40,6 +40,8 @@ import PrivacyPolicy from "./Terms&Condtions/Privacy";
 import Training from "./component/Training/Training";
 import School from "./component/SchoolManagement/School.jsx";
 import DashboardUser from "./component/SpecialUser/DashboardSpecial.jsx";
+import Packages from "./component/SpecialUser/Packages.jsx";
+import Chat from "./component/SpecialUser/chat";
 
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
@@ -401,6 +403,32 @@ function App() {
                   path="/specialuser/dashboarduser"
                   component={DashboardUser}
                 />
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/specialuser/packages"
+            render={() => (
+              <>
+                {<Header />}
+                <PrivateRoute
+                  exact
+                  path="/specialuser/packages"
+                  component={Packages}
+                />
+                <Services />
+                {<Footer />}
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/specialuser/chat"
+            render={() => (
+              <>
+                {<Header />}
+                <PrivateRoute exact path="/specialuser/chat" component={Chat} />
                 <Services />
                 {<Footer />}
               </>
