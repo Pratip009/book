@@ -10,7 +10,7 @@ const School = () => {
   }, []);
   return (
     <div className="content1" style={{ overflowX: "hidden" }}>
-      <div style={{ marginTop: "110px", overflowX: "hidden" }}>
+      <div style={{ marginTop: "110px", overflowX: "hidden" }} data-aos="fade-down">
         <img
           src={require("../../Image/breadcrumbnew/school-management.jpg")}
           alt=""
@@ -22,7 +22,7 @@ const School = () => {
       >
         {/* <MetaData title={"Training"} /> */}
         <div className="container___">
-          <div style={{ marginTop: "-5rem" }}>
+          <div style={{ marginTop: "-5rem" }} data-aos="fade-down">
             <h3>School Management Service</h3>
             <span>
               The Learning Needs team has expansive expertise on school

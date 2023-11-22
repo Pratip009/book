@@ -23,12 +23,12 @@ const Training = () => {
         </Grid>
         <Grid item xs={12}>
           <div className="container___">
-            <p>
+            <p style={{fontWeight:"600",fontStyle:"italic"}} data-aos="fade-down">
               "Soft skills’ Behavioural Shift training is essential because we
               do not have it in our academic curricula. However it can be
               developed through continuous training."
             </p>
-            <p>
+            <p data-aos="slide-right">
               Our skill based training programs are designed to encourage
               ‘awareness’ in one’s behavioural patterns. Learning Needs
               international quality Training & Development Programs are designed
@@ -41,6 +41,7 @@ const Training = () => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
+              data-aos="fade-down"
             >
               <p className="non_important">
                 List of <span class="circle-sketch-highlight"> programs </span>
@@ -52,6 +53,7 @@ const Training = () => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
+              data-aos="fade-up"
             >
               <p>
                 There are many different programs offered by Learning Needs that
@@ -63,6 +65,7 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{marginTop:"1rem"}}
+              data-aos="fade-up"
             >
               <Grid item xs={3}>
                 <div
@@ -119,6 +122,7 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{marginTop:"1rem"}}
+              data-aos="fade-up"
             >
               <Grid item xs={3}>
                 <div
@@ -175,6 +179,7 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{marginTop:"1rem"}}
+              data-aos="fade-up"
             >
               <Grid item xs={3}>
                 <div
@@ -231,6 +236,7 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{marginTop:"1rem"}}
+              data-aos="fade-up"
             >
               <Grid item xs={3}>
                 <div
@@ -287,6 +293,7 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{marginTop:"1rem"}}
+              data-aos="fade-up"
             >
               <Grid item xs={3}>
                 <div
@@ -337,7 +344,7 @@ const Training = () => {
                 </div>
               </Grid>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12}  data-aos="fade-up">
           <div style={{ marginTop: "7rem" }}>
             <img
               src={require("../../Image/Challenges2.jpg")}
@@ -352,6 +359,7 @@ const Training = () => {
                 justifyContent: "center",
                 marginTop:"2rem"
               }}
+              data-aos="slide-right"
             >
               <p className="non_important">
                 Way we <span class="circle-sketch-highlight"> deliver </span>{" "}
@@ -365,6 +373,7 @@ const Training = () => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
+              data-aos="slide-left"
             >
               <img src={require("../../Image/inb3.jpg")} alt="" />
             </div>
@@ -376,7 +385,7 @@ const Training = () => {
               
               }}
             >
-              <p className="non_important">
+              <p className="non_important" data-aos="slide-right">
                 Our <span class="circle-sketch-highlight"> Strengths </span>{" "}
               
               </p>

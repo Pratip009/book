@@ -117,7 +117,7 @@ function Products() {
           ) : (
             <>
               <div className="productPage">
-                <div style={{ marginTop: "-15px" }}>
+                <div style={{ marginTop: "-15px" }} data-aos="fade-down">
                   <img
                     src={require("../../Image/breadcrumbnew/product.jpg")}
                     alt=""

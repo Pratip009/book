@@ -317,7 +317,8 @@ function Home() {
                   <div
                     style={{
                       position: "absolute",
-                      // background: `rgba(248, 234, 188, ${percentage*40})`,
+                      background: `rgba(239, 239, 240, ${percentage*40})`,
+                      opacity:0.5,
                       left: "0",
                       top: "0%",
                       width: "100%",

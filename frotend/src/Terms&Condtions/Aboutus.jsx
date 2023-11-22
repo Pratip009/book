@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   introText_about: {
-    fontFamily: "'Saira Condensed',  sans-serif",
+    fontFamily: "Roboto",
     maxWidth: "800px",
     lineHeight: "1.5",
     // margin: "1.5rem 0",
@@ -75,11 +75,12 @@ const useStyles = makeStyles((theme) => ({
   },
   introText_about2: {
     lineHeight: "1.5",
+    fontFamily: "'Montserrat', sans-serif",
 
     marginTop: "-20px",
     color: "#292929",
     fontSize: "0.9rem",
-    fontWeight: "400 !important",
+    fontWeight: "300 !important",
     textAlign: "justify",
     padding: "0.8rem 0",
   },
@@ -126,7 +127,7 @@ const About_UsPage = () => {
   return (
     <>
       <div className={classes.about_us}>
-        <div style={{ marginTop: "-15px" }}>
+        <div style={{ marginTop: "-15px" }} data-aos="slide-down">
           <img src={require("../Image/breadcrumbnew/About-us.jpg")} alt="" />
         </div>
         <MetaData title={"About Us"} />
@@ -135,14 +136,14 @@ const About_UsPage = () => {
           style={{ marginTop: "2rem" }}
         >
           <Grid container spacing={4} justifyContent="center">
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} data-aos="slide-right">
               <img
                 src={require("../Image/about/abb.png")}
                 alt="Learning needs"
                 className={classes.image_about}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} data-aos="slide-left">
               {/* <h1
                 style={{
                   textAlign: "Start",
@@ -200,7 +201,7 @@ const About_UsPage = () => {
 
             {/* <Traits /> */}
 
-            <div className="circle_text">
+            <div className="circle_text" data-aos="slide-down">
               <p className="non_important" style={{ textAlign: "Start" }}>
                 {" "}
                 <span class="circle-sketch-highlight">
@@ -214,7 +215,7 @@ const About_UsPage = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "2rem" }}
             >
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-down">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -248,7 +249,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-down">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -282,7 +283,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-down">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -316,7 +317,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-down">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -350,7 +351,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-down">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -384,7 +385,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-down">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -425,7 +426,7 @@ const About_UsPage = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "2rem" }}
             >
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-up">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -459,7 +460,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-up">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -493,7 +494,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-up">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -527,7 +528,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-up">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -561,7 +562,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-up">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -595,7 +596,7 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-up">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -636,7 +637,7 @@ const About_UsPage = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "2rem", marginBottom: "2rem" }}
             >
-              <Grid item xs={4} md={2}>
+              <Grid item xs={4} md={2} data-aos="fade-left">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -677,13 +678,13 @@ const About_UsPage = () => {
           className={classes.container_12}
           style={{ maxWidth: "100%" }}
         >
-          <div className="circle_text">
+          <div className="circle_text" data-aos="slide-down">
             <p className="non_important" style={{ textAlign: "Start" }}>
               {" "}
               <span class="circle-sketch-highlight">Our Team</span>
             </p>
           </div>
-          <span className="sub_headings">
+          <span className="sub_headings" data-aos="slide-down">
             Learning Needs dedicated leadership team is focused on delivering
             quality service and leadership development programs that exceed our
             clients’ expectations and help them achieve their goals.
@@ -691,18 +692,21 @@ const About_UsPage = () => {
           <Container
             className={classes.container_12}
             style={{ marginTop: "3rem" }}
+            
           >
             <Grid container spacing={4} justifyContent="center">
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={6} data-aos="slide-right">
                 <h2
                   style={{
                     textAlign: "Start",
                     marginTop: "0",
+                    marginBottom:"10px",
                     fontFamily: "'Poppins', sans-serif",
                     fontSize: "16px",
+                    fontWeight:"900",
                   }}
                 >
-                  With us,you can build yourself to achieve your goals
+                  With us , you can build yourself to achieve your goals
                 </h2>
                 <p variant="body1" className={classes.introText_about2}>
                   Learning Needs is committed to help its clients reach their
@@ -725,8 +729,10 @@ const About_UsPage = () => {
                     color: "#fff",
                     backgroundColor: "#FF6D28",
                     display: "flex",
+                    marginTop:"-10px"
                   }}
                   variant="contained"
+                  
                 >
                   Read More..
                 </Button>
@@ -742,7 +748,7 @@ const About_UsPage = () => {
               </Typography> */}
               </Grid>
 
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={6} data-aos="slide-left">
                 <img
                   src={require("../Image/teeam.png")}
                   alt="Learning needs"
@@ -761,13 +767,13 @@ const About_UsPage = () => {
             style={{ marginTop: "3rem" }}
           >
             {/* testimonials */}
-            <span className="sub_headings">
+            <span className="sub_headings" data-aos="fade-down">
               Pride of Pride of Learning Needs
             </span>
             {/* <h2 className="clients_headings" >
               Clients sharing their experience
             </h2> */}
-            <div className="circle_text">
+            <div className="circle_text" data-aos="fade-up">
               <p className="non_important" style={{ textAlign: "Start" }}>
                 Clients sharing their{" "}
                 <span class="circle-sketch-highlight">experience</span>
@@ -781,7 +787,7 @@ const About_UsPage = () => {
             className={classes.container_12}
             style={{ marginTop: "3rem" }}
           >
-            <div className="circle_text">
+            <div className="circle_text" data-aos="fade-down">
               <p className="non_important" style={{ textAlign: "Start" }}>
                 Frequently Asked{" "}
                 <span class="circle-sketch-highlight">Questions</span>
@@ -805,7 +811,7 @@ const About_UsPage = () => {
               >
                 About Learning Needs
               </h1> */}
-                <div className="circle_text">
+                <div className="circle_text" data-aos="fade-down" >
                   <p className="non_important" style={{ textAlign: "Start" }}>
                     {" "}
                     <span class="circle-sketch-highlight">
@@ -817,6 +823,7 @@ const About_UsPage = () => {
                   variant="body1"
                   className={classes.introText_about}
                   style={{ fontSize: "15px" }}
+                  data-aos="slide-right"
                 >
                   Consulting means different things to different people. For us,
                   it is about being a trusted advisor that helps clients chart
@@ -838,6 +845,7 @@ const About_UsPage = () => {
                     margin: "0",
                     padding: "0",
                   }}
+                  data-aos="slide-right"
                 >
                   With all the best wishes!
                 </p>
@@ -850,6 +858,7 @@ const About_UsPage = () => {
                     padding: "0",
                     color: "orange",
                   }}
+                  data-aos="slide-right"
                 >
                   Rahul Singh
                 </p>
@@ -865,7 +874,7 @@ const About_UsPage = () => {
                 competitive prices.
               </Typography> */}
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={6} data-aos="slide-left">
                 <img
                   src={require("../Image/founder.jpg")}
                   style={{ width: 400, height: 400 }}

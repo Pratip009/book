@@ -11,7 +11,7 @@ export default function MediaControlCard() {
   }, []);
   return (
     <Grid container spacing={2} style={{ width: "100%" }}>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} data-aos="fade-right">
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           {/* <CardMedia
             component="img"
@@ -21,7 +21,7 @@ export default function MediaControlCard() {
           <img src={require("../../Image/appp.png")} alt="App" />
         </Box>
       </Grid>
-      <Grid item xs={12} md={8}>
+      <Grid item xs={12} md={8} data-aos="fade-left">
         <Box
           sx={{
             display: "flex",

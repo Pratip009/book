@@ -14,7 +14,10 @@ export default function Faq() {
   return (
     <div className="FAq_image">
       {/* 1,2 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion
+        sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}
+     
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -51,7 +54,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -85,7 +88,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 3,4 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -120,7 +123,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -157,7 +160,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 5,6 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -194,7 +197,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -231,7 +234,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 7,8 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -269,7 +272,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -309,7 +312,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 9,10 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -346,7 +349,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -383,7 +386,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 11,12 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -419,7 +422,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -458,7 +461,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 13,14 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -493,7 +496,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -532,7 +535,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 15,16 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -570,7 +573,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -608,7 +611,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 17,18 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -643,7 +646,7 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -682,7 +685,7 @@ export default function Faq() {
       </Accordion>
       &nbsp;
       {/* 19 */}
-      <Accordion sx={{ border: "1px solid #E8E2E2", boxShadow: "none" }}>
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"

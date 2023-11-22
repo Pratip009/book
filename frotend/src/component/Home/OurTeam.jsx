@@ -15,7 +15,7 @@ export default function OurTeam() {
   return (
     <div id="model1">
       <div className="members">
-        <div className="member">
+        <div className="member" data-aos="fade-down">
           <img width={300} height={300} src={Member1} alt="ceo" />
           <div className="description">
             <h1>Mr. PQR </h1>
@@ -31,7 +31,7 @@ export default function OurTeam() {
             </div>
           </div>
         </div>
-        <div className="member">
+        <div className="member" data-aos="fade-down">
           <img width={300} src={Member2} alt="vc" />
           <div className="description">
             <h1>Mr. ABC </h1>
@@ -47,7 +47,7 @@ export default function OurTeam() {
             </div>
           </div>
         </div>
-        <div className="member">
+        <div className="member" data-aos="fade-down">
           <img width={300} src={Member3} alt="writter" />
           <div className="description">
             <h1>Mr. XYZ </h1>
