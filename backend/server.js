@@ -6,6 +6,7 @@ const path = require('path');
 var express = require('express');  
 const cors = require('cors');
 const Stripe = require('stripe')(process.env.SECRET_KEY);
+const bodyParser = require('body-parser');
 
 
 
@@ -34,6 +35,11 @@ app.use(express.static(path.join(__dirname, "../frotend/build")));
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "../frotend/build/index.html"));
 });
+
+app.use(bodyParser.json());
+
+
+
 
 const PORT = process.env.PORT || 5000;
 

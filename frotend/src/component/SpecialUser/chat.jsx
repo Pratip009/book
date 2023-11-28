@@ -104,15 +104,7 @@ function Chat() {
                     onChange={(e) => setInput(e.target.value)}
                   />
 
-                  <Button variant="bordered" component="label">
-                    Upload File
-                    <input
-                      type="file"
-                      onChange={createProductImagesChange}
-                      multiple
-                      ref={fileInputRef}
-                    />
-                  </Button>
+                 <br/><br/><br/><br/>
                   <Button
                     variant="contained"
                     className={classes.loginButton}

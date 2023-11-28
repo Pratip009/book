@@ -51,22 +51,7 @@ function CreateUser() {
     });
   }, [updateUI]);
 
-  const createdAt = (message) => {
-    const createdAt = new Date(message.createdAt);
-    const options = {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true,
-      timeZone: "Asia/Kolkata",
-    };
-
-    const formatter = new Intl.DateTimeFormat("en-IN", options);
-    const formattedDate = formatter.format(createdAt);
-    return formattedDate;
-  };
+  
 
   const addTasks = () => {
     axios
@@ -119,7 +104,7 @@ function CreateUser() {
             >
               <main>
                 <div className="heading">
-                  <h1>Ask your Question</h1>
+                  <h1>Reply</h1>
                   <TextField
                     variant="outlined"
                     fullWidth
@@ -129,15 +114,8 @@ function CreateUser() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                   />
-                  <Button variant="bordered" component="label">
-                    Upload File
-                    <input
-                      type="file"
-                      onChange={createProductImagesChange}
-                      multiple
-                      ref={fileInputRef}
-                    />
-                  </Button>
+                  
+                  
                   <Button
                     variant="contained"
                     className={classes.loginButton}
@@ -156,7 +134,6 @@ function CreateUser() {
                   key={task._id}
                   id={task._id}
                   task={task.task}
-                  createdAt={createdAt()}
                   secondtasks={task.secondtasks}
                   setUpdateUI={setUpdateUI}
                   updateMode={updateMode}

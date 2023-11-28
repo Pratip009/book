@@ -126,6 +126,7 @@ const ProductCard = ({ product }) => {
             >
               {nameTruncated}
             </Typography>
+            
             <Typography
               variant="body2"
               color="textSecondary"

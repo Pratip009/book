@@ -3,7 +3,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
-function AdminMessageList({ id, task,secondtasks ,createdAt, setUpdateUI, updateMode }) {
+function AdminMessageList({ id, task,secondtasks , setUpdateUI, updateMode }) {
   const removeTask = () => {
     axios.delete(`${baseURL}/delete/${id}`).then((res) => {
       console.log(res);
@@ -32,7 +32,7 @@ function AdminMessageList({ id, task,secondtasks ,createdAt, setUpdateUI, update
                 marginLeft: "20px",
                 color: "green",
               }}
-              onClick={() => updateMode(id, task, secondtasks,createdAt)}
+              onClick={() => updateMode(id, task, secondtasks)}
             />
             <DeleteIcon
               style={{

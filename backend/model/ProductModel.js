@@ -1,4 +1,4 @@
-const mongoose  = require("mongoose");
+const mongoose = require("mongoose");
 const productSchema = mongoose.Schema({
   name: {
     type: String,
@@ -18,7 +18,10 @@ const productSchema = mongoose.Schema({
     type: String,
     required: [true, "Please Enter product info"],
   },
-
+  file: {
+    type: String,
+    required: [true, "Please Enter product file link "],
+  },
   ratings: {
     type: Number,
     default: 0,
@@ -98,5 +101,5 @@ const productSchema = mongoose.Schema({
   },
 });
 
-const ProductModel  = mongoose.model("ProductModel" , productSchema);
-module.exports =ProductModel
+const ProductModel = mongoose.model("ProductModel", productSchema);
+module.exports = ProductModel;

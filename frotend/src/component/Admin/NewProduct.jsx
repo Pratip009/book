@@ -50,6 +50,7 @@ function NewProduct() {
   const [isCategory, setIsCategory] = useState(false);
   const fileInputRef = useRef();
   const [toggle, setToggle] = useState(false);
+  const [file, setFile] = useState("");
 
   const classes = useStyles();
   // togle handler =>
@@ -105,6 +106,7 @@ function NewProduct() {
     myForm.set("category", category);
     myForm.set("Stock", Stock);
     myForm.set("info", info);
+    myForm.set("file",file);
     images.forEach((currImg) => {
       myForm.append("images", currImg);
     });
@@ -128,6 +130,7 @@ function NewProduct() {
       reader.readAsDataURL(file);
     });
   };
+ 
 
   return (
     <>
@@ -370,7 +373,25 @@ function NewProduct() {
                         />
                       ))}
                   </Box>
-
+                  <TextField
+                    variant="outlined"
+                    fullWidth
+                    className={classes.descriptionInput}
+                    label="Pdf Link"
+                    multiline
+                    rows={1}
+                    value={file}
+                    onChange={(e) => setFile(e.target.value)}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <DescriptionIcon
+                            className={classes.descriptionIcon}
+                          />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
                   <Button
                     variant="contained"
                     className={classes.loginButton}

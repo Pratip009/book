@@ -1,9 +1,10 @@
 import React from "react";
-
+import { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   orderSuccess: {
@@ -46,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function OrderSuccess() {
+ 
   const classes = useStyles();
 
   return (
@@ -57,6 +59,10 @@ function OrderSuccess() {
         <br />
         Your Order has been Placed Successfully
       </Typography>
+      {/* <Typography variant="h4" className={classes.successText}>
+        {product.file}
+      </Typography> */}
+      
       <Link to="/orders" className={classes.link}>
         <Button variant="contained" className={classes.viewOrdersButton}>
           View Orders

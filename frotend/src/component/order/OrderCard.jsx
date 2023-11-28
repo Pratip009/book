@@ -5,6 +5,9 @@ import {
   Button,
   Divider,
   useMediaQuery,
+  CardActions,
+  Box,
+  Modal,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ReplayIcon from "@mui/icons-material/Replay";
@@ -14,6 +17,7 @@ import { useAlert } from "react-alert";
 import { addItemToCart } from "../../actions/cartAction";
 import { useHistory } from "react-router-dom";
 import DialogBox from "../Product/DialogBox";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -288,6 +292,36 @@ const OrderCard = ({ item, user }) => {
   const history = useHistory();
   const alert = useAlert();
   const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+
+  const [opend, setOpend] = useState(false);
+  const handleOpend = () => setOpend(true);
+
+  const handleClosed = () => setOpend(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    number: "",
+    bank: "",
+  });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  function alerts() {
+    alert("Your request is submitted");
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("/submit", formData);
+      console.log("Form data sent:", response.data);
+      // Optionally handle success message or redirect after successful submission
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Handle error state or display an error message
+    }
+  };
 
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 999px)");
@@ -412,15 +446,81 @@ const OrderCard = ({ item, user }) => {
                     >
                       View item
                     </Button>
-                    <Button
-                      variant="contained"
-                      className={classes.cancelButton}
-                      onClick={() =>
-                        history.push(`/product/${product.productId}`)
-                      }
-                    >
-                      Cancel Order
-                    </Button>
+                    <CardActions>
+                      <Button
+                        variant="contained"
+                        className={classes.cancelButton}
+                        onClick={handleOpend}
+                      >
+                        Cancel Order & Refund
+                      </Button>
+                      <Modal
+                        open={opend}
+                        onClose={handleClosed}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                      >
+                        <Box
+                          sx={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                            width: 400,
+                            bgcolor: "white",
+                            border: "2px solid #000",
+                            boxShadow: 24,
+                            p: 4,
+                          }}
+                        >
+                          <Typography
+                            id="modal-modal-description"
+                            sx={{ mt: 2 }}
+                          >
+                            <form onSubmit={handleSubmit}>
+                              <input
+                                type="text"
+                                placeholder="Your Full Name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                              />
+                              <input
+                                type="email"
+                                placeholder="Email Address"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                              />
+                              <textarea
+                                name="message"
+                                value={formData.message}
+                                placeholder="Order Id"
+                                onChange={handleChange}
+                              ></textarea>
+                              <textarea
+                                name="number"
+                                value={formData.number}
+                                placeholder="Mobile Number"
+                                onChange={handleChange}
+                              ></textarea>
+                              <textarea
+                                name="bank"
+                                value={formData.bank}
+                                placeholder="Bank Account Number"
+                                onChange={handleChange}
+                              ></textarea>
+                              <button
+                                type="submit"
+                                onclick={alerts}
+                              >
+                                Submit
+                              </button>
+                            </form>
+                          </Typography>
+                        </Box>
+                      </Modal>
+                    </CardActions>
                   </div>
                 </div>
               </div>

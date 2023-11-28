@@ -64,7 +64,7 @@ function UserList() {
     {
       field: "email",
       headerName: "Email",
-      minWidth: 150,
+      maxWidth: 150,
       flex: 0.7,
       headerClassName: "column-header hide-on-mobile",
     },
@@ -98,7 +98,7 @@ function UserList() {
             <Link to={`/admin/user/${params.getValue(params.id, "id")}`}>
               <EditIcon className="icon-" />
             </Link>
-
+            
             <Button
               onClick={() =>
                 deleteUserHandler(params.getValue(params.id, "id"))
@@ -106,7 +106,9 @@ function UserList() {
             >
               <DeleteIcon className="iconbtn" />
             </Button>
-            
+            <Link to={`/admin/user/${params.getValue(params.id, "id")}`}>
+              <ChatIcon className="icon-" />
+            </Link>
           </>
         );
       },

@@ -12,7 +12,7 @@ exports.registerUser = asyncWrapper(async (req, res) => {
   const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
     folder: "Avatar", // this folder cloudainry data base manage by us
     width: 150,
-    crop: "scale",
+    crop: "scale"
   });
 
 
