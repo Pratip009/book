@@ -5,24 +5,30 @@
     text-align:start;
 }
 .app_heading{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 font-size: 30px; 
 margin: 0;
 }
 .app_subheading{
-    margin-bottom: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
     margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
+    
 
 }
 .app_desc{
-    font-size:19px;
-    font-family: 'Montserrat', sans-serif;
+    font-size:15px;
+    font-family: 'Roboto', sans-serif;
     color: rgb(49, 49, 49);
+    text-align: justify;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 .app_links1{
     width: 20%;
+    
 }
 /* .googlePlayStore_link img{
     margin-top: 2rem;

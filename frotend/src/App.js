@@ -18,6 +18,7 @@ import Services from "./Terms&Condtions/Service";
 import Footer from "./component/layouts/Footer/Footer";
 import ProductDetails from "./component/Product/ProductDetails";
 import Gallery from "./component/service/Gallery";
+import Blog from "./component/Home/Blog.jsx";
 import Products from "./component/Product/Products";
 import Signup from "./component/User/SignUp";
 import Login from "./component/User/Login";
@@ -117,7 +118,6 @@ function App() {
               <>
                 {<Header />}
                 <Home />
-                <Services />
                 {<Footer />}
               </>
             )}
@@ -130,7 +130,7 @@ function App() {
               <>
                 {<Header />}
                 <ProductDetails />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -143,7 +143,7 @@ function App() {
               <>
                 {<Header />}
                 <Products />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -155,7 +155,7 @@ function App() {
               <>
                 {<Header />}
                 <Service />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -167,7 +167,19 @@ function App() {
               <>
                 {<Header />}
                 <Gallery />
-                <Services />
+
+                {<Footer />}
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/blog"
+            render={() => (
+              <>
+                {<Header />}
+                <Blog />
+
                 {<Footer />}
               </>
             )}
@@ -179,7 +191,7 @@ function App() {
               <>
                 {<Header />}
                 <Products />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -191,7 +203,7 @@ function App() {
               <>
                 {<Header />}
                 <Products />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -204,7 +216,7 @@ function App() {
               <>
                 {<Header />}
                 <Signup />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -217,7 +229,7 @@ function App() {
               <>
                 {<Header />}
                 <Login />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -230,7 +242,7 @@ function App() {
               <>
                 {<Header />}
                 <ForgetPassword />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -243,7 +255,7 @@ function App() {
               <>
                 {<Header />}
                 <ResetPassword />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -256,7 +268,7 @@ function App() {
               <>
                 {<Header />}
                 <Cart />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -269,7 +281,7 @@ function App() {
               <>
                 {<Header />}
                 <ReturnPolicyPage />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -282,7 +294,7 @@ function App() {
               <>
                 {<Header />}
                 <TermsUse />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -295,7 +307,7 @@ function App() {
               <>
                 {<Header />}
                 <PrivacyPolicy />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -308,7 +320,7 @@ function App() {
               <>
                 {<Header />}
                 <TermsAndConditions />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -321,7 +333,7 @@ function App() {
               <>
                 {<Header />}
                 <ContactForm />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -333,7 +345,7 @@ function App() {
               <>
                 {<Header />}
                 <Training />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -345,7 +357,7 @@ function App() {
               <>
                 {<Header />}
                 <School />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -357,7 +369,7 @@ function App() {
               <>
                 {<Header />}
                 <AboutUsPage />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -370,7 +382,7 @@ function App() {
               <>
                 {<Header />}
                 <PrivateRoute exact path="/account" component={Profile} />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -387,7 +399,7 @@ function App() {
                   path="/profile/update"
                   component={UpdateProfile}
                 />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -417,7 +429,7 @@ function App() {
                   path="/specialuser/packages"
                   component={Packages}
                 />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -429,7 +441,7 @@ function App() {
               <>
                 {<Header />}
                 <PrivateRoute exact path="/specialuser/chat" component={Chat} />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -446,7 +458,7 @@ function App() {
                   path="/password/update"
                   component={UpdatePassword}
                 />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -459,7 +471,7 @@ function App() {
               <>
                 {<Header />}
                 <PrivateRoute exact path="/orders" component={MyOrder} />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -472,7 +484,7 @@ function App() {
               <>
                 {<Header />}
                 <PrivateRoute exact path="/shipping" component={Shipping} />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -488,7 +500,7 @@ function App() {
                   path="/specialuser"
                   component={DashboardUser}
                 />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -505,7 +517,7 @@ function App() {
                   path="/order/confirm"
                   component={ConfirmOrder}
                 />
-                <Services />
+
                 {<Footer />}
               </>
             )}
@@ -518,7 +530,7 @@ function App() {
               <>
                 {<Header />}
                 <PrivateRoute exact path="/success" component={OrderSuccess} />
-                <Services />
+
                 {<Footer />}
               </>
             )}

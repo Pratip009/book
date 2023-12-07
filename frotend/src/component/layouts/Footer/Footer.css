@@ -1,12 +1,12 @@
 /* Container for the footer */
 .footer {
-background-color: #3AB0FF;
+background-color: #003E90;
   color: #fff;
   padding: 30px 0;
   height: auto;
   overflow-x: hidden !important;
   width: auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
 }
 
@@ -22,7 +22,7 @@ background-color: #3AB0FF;
     padding-left: 11px;
     overflow-x: hidden;
     width: 100vw;
- background-color: #BAD7E9;
+ background-color: #003E90;
     padding-bottom: 15px;
 }
 
@@ -31,16 +31,21 @@ background-color: #3AB0FF;
   width: 307px;
   padding-left: 40px;
   margin-left: 20px;
-  font-family: 'Montserrat', sans-serif;
+  margin-top: 120px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .foot_logo{
-     width: 50%;
+     width: 700px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
     margin-left: -10px;
-    margin-top: -12px;
+
+    
 }
 .logo_text{
-  color: #3A1078;
+  color: #ffffff;
   margin-bottom: -20px;
   margin-left: 10px;
   
@@ -58,7 +63,7 @@ background-color: #3AB0FF;
 .Foot_heading{
     font-weight: bolder;
     margin-top: -64px;
-    color: #3A1078;
+    color: #ffffff;
     font-size: 24px;
     margin-left: 15px;
 }
@@ -80,7 +85,7 @@ background-color: #3AB0FF;
   margin-bottom: 10px;
   margin-left: 5px;
   width: 83%;
-  color: #3A1078;
+  color: #ffffff;
 }
 .foot_form{
     width: fit-content;
@@ -112,7 +117,7 @@ background-color: #3AB0FF;
 }
 
 .foot_subs a {
-  color: #3A1078;
+  color: #ffffff;
   font-weight: 700;
   text-decoration: none;
 }
@@ -146,6 +151,7 @@ background-color: #3AB0FF;
  /* Grid container for all menu sections */
   .foot_menu_container {
     display: grid;
+ 
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     grid-gap: 80px;
@@ -157,7 +163,7 @@ background-color: #3AB0FF;
 
 .foot_menu h4 {
   font-size: 16px;
-  color: #3A1078;
+  color: #ffffff;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -173,7 +179,7 @@ background-color: #3AB0FF;
 }
 
 .foot_menu li a {
-  color: #3A1078;
+  color: #ffffff;
 
     font-size: 12px;
     text-decoration: none;
@@ -200,7 +206,7 @@ background-color: #3AB0FF;
   margin-bottom: 20px;
 }
 .foot_dowload_appLink h5{
-  color: #3A1078;
+  color: #ffffff;
 
     height: auto;
     margin-top: -32px;
@@ -208,7 +214,7 @@ background-color: #3AB0FF;
     font-weight: bolder
 }
 .foot_dowload_appLink span{
-  color: #3A1078;
+  color: #ffffff;
 
         margin-top: -10px;
 }
@@ -249,7 +255,7 @@ background-color: #3AB0FF;
  flex-direction: column;
  align-items: center;
  text-decoration: none;
- gap: 5px;
+ 
 }
 
 .foot_policyLink ul{
@@ -345,11 +351,7 @@ margin-left: -15px;
   }
  
   
-  .foot_logo {
-       width: 100%;
-    margin-left: 21px;
-    margin-top: -24px;
-  }
+  
   
   .foot_about h1 {
     margin-top: -4rem;
@@ -410,7 +412,7 @@ width: 119%;
   }
 
   .foot_menu li a:hover {
-    color: #FF6D28;
+    color: #FF7700;
   }
 
   /* Grid container for all menu sections */
@@ -493,6 +495,7 @@ width: 119%;
 
   .foot_menu_container {
     margin-left: 0;
+    margin-top: 50px;
   }
 
   .foot_subs p {

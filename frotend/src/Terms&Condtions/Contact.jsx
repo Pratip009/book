@@ -237,7 +237,7 @@ const ContactForm = () => {
                 }}
                 onClick={handleCall}
               >
-                900702228
+                9007022228
               </strong>
               .
             </Typography>

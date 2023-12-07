@@ -1,0 +1,110 @@
+import React from "react";
+import Particles from "react-tsparticles";
+import "./ParticleBackground.css"; // Import your CSS file for styling
+
+const ParticleBackground = () => {
+  return (
+    <div className="particle-container">
+      <Particles
+        params={{
+          particles: {
+            number: {
+              value: 100, // Number of particles
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+            },
+            shape: {
+              type: "circle", // Shape of the particles
+              stroke: {
+                width: 0,
+                color: "#000000",
+              },
+              polygon: {
+                nb_sides: 5,
+              },
+            },
+            color: {
+              value: "#ffffff", // Color of the particles
+            },
+            size: {
+              value: 3, // Size of the particles
+              random: true,
+              anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false,
+              },
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff", // Color of the particle lines
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6, // Speed of the particles
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse", // Interaction mode on hover
+              },
+              onclick: {
+                enable: true,
+                mode: "push", // Interaction mode on click
+              },
+              resize: true,
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 1,
+                },
+              },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+              push: {
+                particles_nb: 4,
+              },
+              remove: {
+                particles_nb: 2,
+              },
+            },
+          },
+          retina_detect: true,
+        }}
+        className="particles"
+      />
+    </div>
+  );
+};
+
+export default ParticleBackground;

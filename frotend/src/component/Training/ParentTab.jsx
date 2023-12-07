@@ -67,7 +67,7 @@ export default function ParentTab() {
           textColor="black"
           variant="fullWidth"
           aria-label="full width tabs example"
-          style={{ backgroundColor: "#FF6D28" }}
+          style={{ backgroundColor: "#FF7700" }}
         >
           <Tab label="Parenting Workshop" {...a11yProps(0)} />
           <Tab label="Education Issues" {...a11yProps(1)} />
@@ -614,7 +614,7 @@ export default function ParentTab() {
               </p>
             </Grid>
           </Grid> */}
-          <img src={require("../../Image/play.png")} alt="" />
+          <img src={require("../../Image/playy.png")} alt="" />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
           {/* <Grid

@@ -1,0 +1,63 @@
+.educate{
+    width: 100%;
+    margin-top:auto;
+    margin-bottom:auto;
+    text-align:start;
+}
+.app_heading{
+    font-family: 'Roboto', sans-serif;
+font-size: 30px; 
+margin: 0;
+}
+.app_subheading{
+   margin-top: 20px;
+   margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    
+
+}
+.app_desc{
+    font-size:15px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(49, 49, 49);
+    text-align: justify;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.app_links1{
+    width: 20%;
+    
+}
+/* .googlePlayStore_link img{
+    margin-top: 2rem;
+} */
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}

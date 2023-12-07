@@ -22,10 +22,13 @@ export default function TeamMessage() {
       sx={{
         p: 2,
         marginBottom: "5rem",
-        backgroundColor: "#3AB0FF",
-        // borderRadius: "25px",
+        background: "transparent",
+        borderRadius: "10px",
+
         maxWidth: "100%",
         flexGrow: 1,
+        boxShadow: "none",
+        border: "4px solid #ffffff",
 
         // backgroundColor: (theme) =>
         //   theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -47,8 +50,16 @@ export default function TeamMessage() {
             className="message_section"
           >
             <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div" data-aos="fade-left">
-                <h1 className="Team_text" style={{ color: "white" }}>
+              <Typography
+                gutterBottom
+                variant="subtitle1"
+                component="div"
+                data-aos="fade-left"
+              >
+                <h1
+                  className="Team_text"
+                  style={{ color: "white", fontSize: 35 }}
+                >
                   Team Message
                 </h1>
               </Typography>
@@ -59,6 +70,8 @@ export default function TeamMessage() {
                     fontFamily: "'Montserrat', sans-serif",
                     fontWeight: "300",
                     color: "white",
+                    textAlign: "justify",
+                    fontSize: 16,
                   }}
                   data-aos="fade-left"
                 >
@@ -83,6 +96,7 @@ export default function TeamMessage() {
                   cursor: "pointer",
                   fontFamily: "'Montserrat', sans-serif",
                   color: "white",
+                  fontSize: 16,
                 }}
                 variant="body2"
                 className="bottom_team_text"

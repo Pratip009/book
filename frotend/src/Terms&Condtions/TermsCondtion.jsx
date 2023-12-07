@@ -26,7 +26,10 @@ const TermsAndConditionsPage = () => {
       </div>
       <div className="terms-content">
         <h2 className="headings">Training</h2>
-        <p className="sub_headings1">
+        <p
+          className="sub_headings1"
+          style={{ textAlign: "justify", display: "inline-block" }}
+        >
           "Soft skills’ Behavioural Shift training is essential because we do
           not have it in our academic curricula. However it can be developed
           through continuous training." Our skill based training programs are
@@ -49,7 +52,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Effective Communication
@@ -59,7 +62,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Success with Change
@@ -69,7 +72,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Anger Management
@@ -79,7 +82,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Assertiveness in Action
@@ -92,7 +95,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Peak Performance
@@ -102,7 +105,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Complaint Handling
@@ -112,7 +115,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Dealing with Difficult Situations
@@ -122,7 +125,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Listening Skills
@@ -135,7 +138,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Leadership Innovation
@@ -145,7 +148,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Questioning Skills
@@ -155,7 +158,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Presentation Skills
@@ -165,7 +168,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Team Building
@@ -178,7 +181,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Multipurpose Theme
@@ -188,7 +191,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Public Speaking
@@ -198,7 +201,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Time Management
@@ -208,7 +211,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Effective Meetings
@@ -221,7 +224,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Power of Influence
@@ -231,7 +234,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Customer Service Excellence
@@ -241,7 +244,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Multipurpose Theme
@@ -251,7 +254,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={3}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <StarIcon fontSize="large" style={{ color: "#FF6D28" }} />
+                <StarIcon fontSize="large" style={{ color: "#FF7700" }} />
               </Grid>
               <Grid item className="programm_name">
                 Think Your Way to Success
@@ -281,7 +284,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">
@@ -293,7 +296,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">
@@ -311,7 +314,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">
@@ -322,7 +325,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">
@@ -340,7 +343,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">
@@ -352,7 +355,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">
@@ -370,7 +373,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">
@@ -381,7 +384,7 @@ const TermsAndConditionsPage = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <VerifiedIcon fontSize="large" style={{ color: "#3AB0FF" }} />
+                <VerifiedIcon fontSize="large" style={{ color: "#003E90" }} />
               </Grid>
               &nbsp;
               <Grid item className="programm_name1">

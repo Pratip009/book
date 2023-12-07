@@ -27,10 +27,12 @@ const useStyles = makeStyles((theme) => ({
     // borderRadius:"20px",
     margin: theme.spacing(4),
     backgroundColor: "white",
+    border:"1px solid grey",
+    
     currsor: "pointer",
     boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
     "&:hover": {
-      boxShadow: "-1px 10px 29px 0px #3AB0FF",
+      boxShadow: "-1px 10px 29px 0px #003E90",
     },
   },
   media: {
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
   button: {
     marginTop: -15,
-    // backgroundColor: "#3AB0FF",
+    // backgroundColor: "#003E90",
     background: "linear-gradient(90deg, #3f51b5, transparent) #2196f3;",
     color: "white",
     transition: "background-color 1s",
@@ -50,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: 45,
     "&:hover": {
-      backgroundColor: "#FF6D28",
+      backgroundColor: "#FF7700",
       color: "white",
       fontWeight: "bold",
     },
@@ -109,7 +111,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Card className={classes.root} data-aos="flip-left">
+    <Card className={classes.root} data-aos="flip-left" elevation={6}>
       <Link
         className="productCard"
         to={`/product/${product._id}`}
@@ -126,7 +128,7 @@ const ProductCard = ({ product }) => {
             >
               {nameTruncated}
             </Typography>
-            
+
             <Typography
               variant="body2"
               color="textSecondary"
@@ -148,7 +150,7 @@ const ProductCard = ({ product }) => {
                 ({product.numOfReviews})
               </Typography>
             </Box>
-            
+
             <Box display="flex" alignItems="center" marginTop="1rem">
               <Typography variant="body1" className={classes.oldPrice}>
                 {oldPrice}

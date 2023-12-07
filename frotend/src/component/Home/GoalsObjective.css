@@ -8,30 +8,32 @@
     border: 1px solid rgb(221, 221, 221);
     padding: .5rem;
     background-color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .educate_desc{
-    font-family: 'Tinos', serif;
+    font-family: 'Roboto', sans-serif;
     color: rgb(49, 49, 49);
+    font-size: 14px;
+    text-align: justify;
 }
 .app_heading{
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
         font-size: 20px; 
 margin: 0;
-background-color: #3AB0FF;
+background: linear-gradient(120deg, #003E90, #3B90FF);
 padding: .5rem;
 color: white;
 }
 .app_subheading{
     margin-bottom: 20px;
     margin-top: 10px;
-    font-family: 'Tinos', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
 
 }
 .app_desc{
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: rgb(49, 49, 49);
 }
 .app_links1{

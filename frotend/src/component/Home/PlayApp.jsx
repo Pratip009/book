@@ -35,8 +35,8 @@ export default function MediaControlCard() {
             <h5 className="app_subheading">
               Books and resources for better learning
             </h5>
-            <p className="app_desc">
-              Learning Needs is a pioneer organization dedicated and committed
+            <p className="app_desc" style={{}}>
+              Learning Needs is a pioneer organization dedicated and committed 
               to bring out the best in you. We know all you need is an
               opportunity to prove yourself. However, without the right skills
               your possibilities are severely limited. If your life is not

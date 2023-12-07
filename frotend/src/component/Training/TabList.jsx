@@ -52,17 +52,20 @@ export default function TabList() {
     <Box sx={{ width: "100%", backgroundColor: "white" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
-          abIndicatorProps={{style: {background:'primary'}}}
-          indicatorColor="primary"
-          color="primary"
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          indicatorColor="secondary"
+          textColor="black"
+          variant="fullWidth"
+          aria-label="full width tabs example"
+          style={{ backgroundColor: "#FF7700" }}
+          
         >
           <Tab label="Soft Skills Workshop" {...a11yProps(0)} />
           <Tab label="Students Workshop" {...a11yProps(1)} />
           <Tab label="Parenting Workshop" {...a11yProps(2)} />
         </Tabs>
+        
       </Box>
       <CustomTabPanel value={value} index={0}>
         <SoftSkill />

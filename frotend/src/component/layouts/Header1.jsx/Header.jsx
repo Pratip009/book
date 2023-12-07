@@ -67,7 +67,7 @@ function Header() {
             <span>
               <CallIcon className="headerRetailer_Svg" data-aos="fade" />
             </span>
-            <span data-aos="fade" style={{ fontWeight: "600" }}>
+            <span data-aos="fade" style={{ fontWeight: "400" }}>
               9007022228 , 8240554890
             </span>
           </div>
@@ -79,7 +79,7 @@ function Header() {
                   data-aos="fade"
                 />
               </span>
-              <span data-aos="fade" style={{ fontWeight: "600" }}>
+              <span data-aos="fade" style={{ fontWeight: "400" }}>
                 info@learningneeds.in
               </span>
             </div>
@@ -98,7 +98,7 @@ function Header() {
                 >
                   <button
                     className="account_box"
-                    style={{ backgroundColor: "#FF6D28" }}
+                    style={{ backgroundColor: "#FF7700" }}
                   >
                     <LockPersonIcon
                       className="headerRetailer_Svg2"
@@ -121,7 +121,7 @@ function Header() {
                 >
                   <button
                     className="account_box"
-                    style={{ backgroundColor: "#FF6D28" }}
+                    style={{ backgroundColor: "#FF7700" }}
                   >
                     <LockPersonIcon
                       className="headerRetailer_Svg2"
@@ -153,7 +153,7 @@ function Header() {
                     fontSize: 29,
                     color: "black",
                     "&:hover": {
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       cursor: "pointer",
                     },
                   }}
@@ -197,14 +197,14 @@ function Header() {
             <div className="headerBottom_navMenu" data-aos="fade">
               <ul>
                 <li>
-                  <Link to="/" >Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/about_us" >About</Link>
+                  <Link to="/about_us">About Us</Link>
                 </li>
 
                 <li>
-                  <Link to="/products" >Product</Link>
+                  <Link to="/products">Product</Link>
                 </li>
                 <li>
                   <Link to="/training">Training</Link>
@@ -217,6 +217,9 @@ function Header() {
                 </li>
                 <li>
                   <Link to="/gallery">Gallery</Link>
+                </li>
+                <li>
+                  <Link to="/blog">Blog</Link>
                 </li>
                 <li>
                   <Link to="/contact">Contact</Link>

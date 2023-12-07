@@ -1,8 +1,8 @@
 
 .header {
   background-color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
+font-family: 'Roboto', sans-serif; 
+ font-size: 0.75rem;
   padding: 0;
   position: fixed;
   top: 0;
@@ -19,13 +19,13 @@
 .headerTop {
   width: 100%;
 
-  background-color: #3AB0FF;
-  /* background-image: linear-gradient(to right,#3AB0FF5a, #3AB0FF ); */
+  background-color: #003E90;
+  /* background-image: linear-gradient(to right,#3AB0FF5a, #003E90 ); */
   color: #040D12;
   display: grid;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+font-family: 'Roboto', sans-serif;  
+font-size: 12px;
   grid-template-columns: 1fr minmax(465px, 1fr);
   height: 33px;
   margin: 0px auto;
@@ -40,31 +40,33 @@ font-weight: normal;
 
 .headerTopLeft {
   height: fit-content;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px !important;
+font-family: 'Roboto', sans-serif;
+color: #fcfcfc;
+font-size: 15px !important;
   margin-left: 2.5rem;
+ 
 margin-top: 5px;
 }
+
 .headerTopLeft > p {
  position: absolute;
     top: -9px;
+    
 }
 .headerRetailer_Svg{
-  color: #040D12;
-  transform: scale(1.2);
+  color: #fcfcfc;
 }
 .headerRetailer_Svg2{
-  color: black;
+  color: #fcfcfc;
   transform: scale(1.4);
 }
 .headerTopRight {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 400;
+  color: #fcfcfc;
   font-size: 15px !important;
-  font-family: 'Montserrat', sans-serif;
-}
+font-family: 'Roboto', sans-serif;}
 
 .headerRetailer {
   display: flex;
@@ -85,25 +87,25 @@ margin-top: 5px;
  
 }
 .My_account{
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-color: black;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+color: #fcfcfc;
   font-size: 13px;
 
 }
 .headerLogin {
   width: 130px;
  cursor: pointer;
-  background-color: #FF6D28;
+  background-color: #FF7700;
   padding-right: 5px;
   padding-left: 30px;
 }
 .headerLogin button {
-  font-family: 'Montserrat', sans-serif;
-  height: 33px;
+font-family: 'Roboto', sans-serif; 
+ height: 33px;
   border: none;
   text-align: center;
-  color: #3AB0FF;
+  color: #003E90;
   background-color: rgb(255, 255, 255);
   font-weight: 400;
   font-size: 15px;
@@ -165,16 +167,18 @@ list-style: none;
 .headerBottom_navMenu ul li a{
    color: #121212;
    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
-  }
+  font-family: 'Roboto', sans-serif;  }
 
 .headerBottom_navMenu ul li a:hover{
-  color: #FF6D28;
+  color: #FF7700;
   transition: .5s ease-in-out;
+
 }
+
+
 
 .headerBotttom_icons{
   display: flex;
@@ -186,7 +190,7 @@ list-style: none;
 }
 
 .headerBotttom_icons>*:hover{
-  color: #FF6D28;
+  color: #FF7700;
   transition: .5s ease-in-out;
 
 

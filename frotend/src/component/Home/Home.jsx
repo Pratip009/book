@@ -13,8 +13,6 @@ import AOS from "aos";
 import List from "@mui/material/List";
 import Avatar from "@mui/material/Avatar";
 import { useState, useEffect } from "react";
-import { Parallax } from "react-parallax";
-
 import "aos/dist/aos.css";
 import Button from "@mui/material/Button";
 import TeamMessage from "./TeamMessage";
@@ -30,6 +28,7 @@ import GoalsObjective from "./GoalsObjective";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
 import NoticeBoard from "../Admin/NoticeBoard";
+import Welcome from "./Welcome";
 
 function Home() {
   // we provided all parameter for react-alert at index.js
@@ -65,21 +64,42 @@ function Home() {
           <>
             <MataData title="Learning Needs" />
             <div className="Home_Page">
-              <div className="heroSlider_Home" style={{marginBottom:"-20px"}}>
+              <div
+                className="heroSlider_Home"
+                style={{ marginBottom: "-20px" }}
+              >
                 <HeroSlider />;
               </div>
-              
-                <div className="background_image" style={{backgroundColor:"transparent"}}>
+
+              <div
+                className="background_image"
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "100vh",
+                  overflow: "hidden",
+                }}
+              >
+                <div className="bg_yellows"> </div>
+                <div className="main_content">
                   <div
                     className="text_container"
-                    style={{ backgroundColor: "transparent", padding: "20px", marginTop:"20px" }}
+                    style={{
+                      backgroundColor: "transparent",
+                      padding: "20px",
+                      marginTop: "20px",
+                    }}
                   >
                     <Grid
                       container
                       rowSpacing={2}
                       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                     >
-                      <Grid xs={12} md={6}>
+                      <Grid
+                        xs={12}
+                        md={6}
+                        style={{ padding: "0px 30px 30px 30px" }}
+                      >
                         <p
                           className="container_element_large_text"
                           data-aos="zoom-in"
@@ -90,10 +110,11 @@ function Home() {
                         <p
                           className="container_element_small_text"
                           style={{
-                            padding: "0 30px 0 0",
                             fontSize: "15px",
-                            // lineHeight: "35px",
+
                             fontWeight: "400",
+                            textAlign: "justify",
+                            display: "inline-block",
                           }}
                           data-aos="slide-up"
                         >
@@ -107,9 +128,20 @@ function Home() {
                           success of our clients and their individual.
                         </p>
                         <Button
-                          style={{ color: "#fff", backgroundColor: "#FF6D28" }}
+                          style={{
+                            border: "1px solid white",
+                            color: "#fff",
+                            background:
+                              "linear-gradient(45deg, #ff5f6d, #ffc371)",
+                            position: "relative",
+                            overflow: "hidden",
+                            transition: "0.3s",
+                            outline: "none",
+                            cursor: "pointer",
+                            marginTop: "10px",
+                          }}
                           variant="contained"
-                          data-aos="zoom-in-right"
+                          data-aos="slide-right"
                         >
                           Read More..
                         </Button>
@@ -117,7 +149,8 @@ function Home() {
                       <Grid xs={12} md={6} data-aos="zoom-in">
                         <Card
                           style={{
-                            backgroundColor: "#272829",
+                            background:
+                              "linear-gradient(120deg, #ff5f6d, #ffc371)",
                             minWidth: "100%",
                             display: "flex",
                             flexDirection: "column",
@@ -131,7 +164,7 @@ function Home() {
                               alignItems: "center",
                               justifyContent: "center",
                               color: "white",
-                              textShadow:"0 0 10px red",
+                              textShadow: "0 0 10px red",
                               padding: "10px 0 0 0 ",
                             }}
                           >
@@ -214,7 +247,10 @@ function Home() {
                             >
                               <div className="overlay_section">
                                 <Avatar
-                                  style={{ backgroundColor: "#FF6D28",border:"1px solid #D44300" }}
+                                  style={{
+                                    backgroundColor: "#FF7700",
+                                    border: "1px solid #D44300",
+                                  }}
                                   // variant="rounded"
                                   sx={{ width: 56, height: 56 }}
                                 >
@@ -262,14 +298,16 @@ function Home() {
                             >
                               <div className="overlay_section">
                                 <Avatar
-                                  style={{ backgroundColor: "#3AB0FF",border:"1px solid #1879BA"  }}
-                                  
+                                  style={{
+                                    backgroundColor: "#003E90",
+                                    border: "1px solid #1879BA",
+                                  }}
                                   // variant="rounded"
                                   sx={{ width: 56, height: 56 }}
                                 >
                                   <HailIcon fontSize="large" />
                                 </Avatar>
-                                <Typography variant="h5" className="training" >
+                                <Typography variant="h5" className="training">
                                   Training And Development Program
                                 </Typography>
                                 <IconButton
@@ -292,8 +330,116 @@ function Home() {
                     </Grid>
                   </div>
                 </div>
-            
-              {/* <div className="feature" style={{ marginTop: "3.7rem" }}>
+              </div>
+
+              <div className="wrappeeer">
+                <div className="content">
+                  <div className="circle_text">
+                    <p className="non_important" data-aos="fade-left">
+                      Find the{" "}
+                      <span class="circle-sketch-highlight">right product</span>{" "}
+                      for you{" "}
+                    </p>
+                  </div>
+                  <span
+                    className="sub_headings"
+                    data-aos="slide-right"
+                    style={{
+                      fontSize: "16px",
+                      fontFamily: "'Roboto', sans-serif",
+                    }}
+                  >
+                    you don't have to struggle alone,you have got our assistance
+                    and help
+                  </span>
+
+                  <div className="trending-products">
+                    {products &&
+                      products.map((product) => (
+                        <ProductCard key={product._id} product={product} />
+                      ))}
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="text_container1"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  className="bg_team"
+                  style={{
+                    width: "75%",
+                    marginTop: "70px",
+                  }}
+                >
+                  <TeamMessage />
+                </div>
+
+                {/* Team Message section */}
+
+                {/* goals and objective */}
+
+                {/* <h2 className="headings" >
+                  our goals and objective
+                </h2> */}
+
+                {/* Learning needs traits */}
+
+                {/* <Traits /> */}
+              </div>
+
+              <div
+                className="goal"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  className="inner_goal"
+                  style={{
+                    width: "75%",
+                  }}
+                >
+                  <div className="circle_text">
+                    <p className="non_important" data-aos="fade-left">
+                      our{" "}
+                      <span class="circle-sketch-highlight">
+                        goals and objective
+                      </span>{" "}
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      marginBottom: "3rem",
+                      paddingTop: 0,
+                    }}
+                  >
+                    <GoalsObjective />
+                  </div>
+                  <div
+                    style={{
+                      marginBottom: "3rem",
+                      paddingTop: 0,
+                    }}
+                  >
+                    <Welcome />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <div className="feature" style={{ marginTop: "3.7rem" }}>
                 <h2 className="headings"  = "fade-right"
                   
                 >
@@ -308,80 +454,13 @@ function Home() {
               
               </div> */}
 
-              {/* <h2 className="headings" >
+            {/* <h2 className="headings" >
                 Find the right product for you
               </h2> */}
-              <Parallax
-                bgImage="/path/to/another/image"
-                renderLayer={(percentage) => (
-                  <div
-                    style={{
-                      position: "absolute",
-                      background: `rgba(239, 239, 240, ${percentage*40})`,
-                      opacity:0.5,
-                      left: "0",
-                      top: "0%",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  />
-                )}
-              >
-                <div className="product_back">
-                  <div className="circle_text">
-                    <p className="non_important" data-aos="fade-left" >
-                      Find the{" "}
-                      <span class="circle-sketch-highlight">right product</span>{" "}
-                      for you{" "}
-                    </p>
-                  </div>
-                  <span className="sub_headings" data-aos="slide-right">
-                    you don't have to struggle alone,you have got our assistance
-                    and help
-                  </span>
 
-                  <div className="trending-products">
-                    {products &&
-                      products.map((product) => (
-                        <ProductCard key={product._id} product={product} />
-                      ))}
-                  </div>
-                </div>
-              </Parallax>
-
-              
-              <div className="text_container" style={{ marginTop: "10vh" }}>
-                {/* Team Message section */}
-                <TeamMessage />
+            {/* <div className="background_image" style={{marginTop:"20px"}}>
                 
-                {/* goals and objective */}
-
-                {/* <h2 className="headings" >
-                  our goals and objective
-                </h2> */}
-                <div className="circle_text">
-                  <p className="non_important" data-aos="fade-left">
-                    our{" "}
-                    <span class="circle-sketch-highlight">
-                      goals and objective
-                    </span>{" "}
-                  </p>
-                </div>
-                <div
-                  style={{
-                    marginBottom: "3rem",
-                    paddingTop: 0,
-                  }}
-                >
-                  <GoalsObjective />
-                </div>
-
-                {/* Learning needs traits */}
-
-                {/* <Traits /> */}
-              </div>
-              
-            </div>
+              </div> */}
           </>
         </>
       )}

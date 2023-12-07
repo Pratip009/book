@@ -16,9 +16,9 @@ const Student = () => {
   return (
     <div className="content">
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
-        <img src={require("../../Image/sdworkshop1.png")} alt="" />
+        <img src={require("../../Image/sdworkshop1new.png")} alt="" />
       </div>
-      <span style={{ display: "flex", textAlign: "start" }}>
+      <span style={{textAlign: "justify", display: "inline-block"}}>
         We offer educative workshops for children, parents and teachers.
         Children’s workshops target different dimensions of the child’s
         personality. Which are essential for global development. Some of these
@@ -66,7 +66,7 @@ const Student = () => {
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#FF6D28",
+          backgroundColor: "#FF7700",
           display: "flex",
         }}
         variant="contained"

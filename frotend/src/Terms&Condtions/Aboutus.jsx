@@ -172,7 +172,7 @@ const About_UsPage = () => {
               <Button
                 style={{
                   color: "#fff",
-                  backgroundColor: "#FF6D28",
+                  backgroundColor: "#FF7700",
                   display: "flex",
                 }}
                 variant="contained"
@@ -226,7 +226,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -260,7 +260,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -294,7 +294,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -328,7 +328,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -362,7 +362,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -396,7 +396,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -437,7 +437,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -471,7 +471,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -505,7 +505,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -539,7 +539,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -573,7 +573,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -607,7 +607,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -648,7 +648,7 @@ const About_UsPage = () => {
 
                   <Typography
                     style={{
-                      color: "#FF6D28",
+                      color: "#FF7700",
                       fontSize: "25px",
                       fontFamily: "'Poppins', sans-serif",
 
@@ -684,7 +684,7 @@ const About_UsPage = () => {
               <span class="circle-sketch-highlight">Our Team</span>
             </p>
           </div>
-          <span className="sub_headings" data-aos="slide-down">
+          <span className="sub_headings" data-aos="slide-down" style={{fontFamily:"'Roboto', sans-serif", fontSize:"15px"}}>
             Learning Needs dedicated leadership team is focused on delivering
             quality service and leadership development programs that exceed our
             clients’ expectations and help them achieve their goals.
@@ -692,7 +692,6 @@ const About_UsPage = () => {
           <Container
             className={classes.container_12}
             style={{ marginTop: "3rem" }}
-            
           >
             <Grid container spacing={4} justifyContent="center">
               <Grid item xs={12} sm={6} data-aos="slide-right">
@@ -700,10 +699,10 @@ const About_UsPage = () => {
                   style={{
                     textAlign: "Start",
                     marginTop: "0",
-                    marginBottom:"10px",
+                    marginBottom: "10px",
                     fontFamily: "'Poppins', sans-serif",
                     fontSize: "16px",
-                    fontWeight:"900",
+                    fontWeight: "900",
                   }}
                 >
                   With us , you can build yourself to achieve your goals
@@ -727,12 +726,11 @@ const About_UsPage = () => {
                 <Button
                   style={{
                     color: "#fff",
-                    backgroundColor: "#FF6D28",
+                    backgroundColor: "#FF7700",
                     display: "flex",
-                    marginTop:"-10px"
+                    marginTop: "-10px",
                   }}
                   variant="contained"
-                  
                 >
                   Read More..
                 </Button>
@@ -767,8 +765,8 @@ const About_UsPage = () => {
             style={{ marginTop: "3rem" }}
           >
             {/* testimonials */}
-            <span className="sub_headings" data-aos="fade-down">
-              Pride of Pride of Learning Needs
+            <span className="sub_headings" data-aos="fade-down" style={{fontSize:"16px"}}>
+              Pride of Learning Needs
             </span>
             {/* <h2 className="clients_headings" >
               Clients sharing their experience
@@ -811,7 +809,7 @@ const About_UsPage = () => {
               >
                 About Learning Needs
               </h1> */}
-                <div className="circle_text" data-aos="fade-down" >
+                <div className="circle_text" data-aos="fade-down">
                   <p className="non_important" style={{ textAlign: "Start" }}>
                     {" "}
                     <span class="circle-sketch-highlight">
@@ -874,7 +872,7 @@ const About_UsPage = () => {
                 competitive prices.
               </Typography> */}
               </Grid>
-              <Grid item xs={12} sm={6} data-aos="slide-left">
+              <Grid item xs={12} sm={6} data-aos="slide-left" className="founder">
                 <img
                   src={require("../Image/founder.jpg")}
                   style={{ width: 400, height: 400 }}

@@ -13,10 +13,10 @@ const SoftSkill = () => {
   return (
     <div className="content">
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
-        <img src={require("../../Image/ssworkshop.png")} alt="" />
+        <img src={require("../../Image/ssworkshopnew.png")} alt="" />
       </div>
 
-      <span style={{ display: "flex", textAlign: "start" }}>
+      <span style={{ textAlign: "justify", display: "inline-block" }}>
         The term “soft skills” is a common buzzword that employers and upper
         management often use when it comes to enhancing workplace efficiency and
         hiring new job candidates. But what does it really mean? People aren’t
@@ -29,13 +29,13 @@ const SoftSkill = () => {
         style={{
           display: "flex",
           alignItems: "flex-start",
-          fontSize: "20px",
-          fontWeight: "500",
+          fontSize: "23px",
+          fontWeight: "600",
         }}
       >
         Our Soft Skills Workshop
       </p>
-      <span style={{ display: "flex", textAlign: "start" }}>
+      <span style={{ textAlign: "justify", display: "inline-block" }}>
         Our soft skills workshops are custom-tailored to the needs of your
         company. We can help you identify specific areas of improvement and work
         with your team to enhance their personal, interpersonal, communication,
@@ -103,7 +103,7 @@ const SoftSkill = () => {
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#FF6D28",
+          backgroundColor: "#FF7700",
           display: "flex",
         }}
         variant="contained"

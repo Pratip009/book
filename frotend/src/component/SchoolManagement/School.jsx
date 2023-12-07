@@ -10,7 +10,10 @@ const School = () => {
   }, []);
   return (
     <div className="content1" style={{ overflowX: "hidden" }}>
-      <div style={{ marginTop: "110px", overflowX: "hidden" }} data-aos="fade-down">
+      <div
+        style={{ marginTop: "110px", overflowX: "hidden" }}
+        data-aos="fade-down"
+      >
         <img
           src={require("../../Image/breadcrumbnew/school-management.jpg")}
           alt=""
@@ -23,8 +26,22 @@ const School = () => {
         {/* <MetaData title={"Training"} /> */}
         <div className="container___">
           <div style={{ marginTop: "-5rem" }} data-aos="fade-down">
-            <h3>School Management Service</h3>
-            <span>
+            <h3
+              style={{
+                fontSize: "23px",
+                fontWeight: "700",
+                fontFamily: "'Roboto', sans-serif",
+              }}
+            >
+              School Management Service
+            </h3>
+            <p
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+              }}
+            >
               The Learning Needs team has expansive expertise on school
               management issues and can provide all necessary support in various
               ways. Our executives are all well-respected figures in the
@@ -48,7 +65,7 @@ const School = () => {
               improvement advisor over time, sometimes a fresh pair of eyes or
               another expert with a particular set of skills or experience, can
               supplement the support of that improvement partner.
-            </span>
+            </p>
             <p
               style={{
                 display: "flex",
@@ -68,7 +85,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#3AB0FF",
+                    backgroundColor: "#003E90",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -86,6 +103,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
                         }}
                       >
                         NO FRANCHISEE FEE
@@ -105,7 +123,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#3AB0FF",
+                    backgroundColor: "#003E90",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -123,6 +141,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
                         }}
                       >
                         NO ROYALTY
@@ -156,7 +175,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#3AB0FF",
+                    backgroundColor: "#003E90",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -174,6 +193,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
                         }}
                       >
                         NO LOCK IN PERIOD
@@ -193,7 +213,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#3AB0FF",
+                    backgroundColor: "#003E90",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -211,6 +231,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
                         }}
                       >
                         YOU’RE SCHOOL
@@ -240,7 +261,7 @@ const School = () => {
                 <Card
                   sx={{
                     display: "flex",
-                    backgroundColor: "#3AB0FF",
+                    backgroundColor: "#003E90",
                     // boxShadow: "none",
                     // border: "1px solid black",
                     padding: "5px 5px",
@@ -258,6 +279,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
                         }}
                       >
                         YOU’RE BRAND
@@ -273,9 +295,124 @@ const School = () => {
                   </Grid>
                 </Card>
               </Grid>
+              <Grid item xs={3}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    backgroundColor: "#003E90",
+                    // boxShadow: "none",
+                    // border: "1px solid black",
+                    padding: "5px 5px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <Grid container spacing={2}>
+                    <Grid item xs={8}>
+                      <p
+                        style={{
+                          padding: "15px 5px",
+                          borderRadius: "10px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "#fff",
+                          fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
+                        }}
+                      >
+                        FREEDOM
+                      </p>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <img
+                        src={require("../../Image/freedom.png")}
+                        alt="React"
+                        style={{ height: 100 }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Card>
+              </Grid>
+              <Grid item xs={3}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    backgroundColor: "#003E90",
+                    // boxShadow: "none",
+                    // border: "1px solid black",
+                    padding: "5px 5px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <Grid container spacing={2}>
+                    <Grid item xs={8}>
+                      <p
+                        style={{
+                          padding: "15px 5px",
+                          borderRadius: "10px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "#fff",
+                          fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
+                          
+                        }}
+                      >
+                        END TO END SUPPORT
+                      </p>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <img
+                        src={require("../../Image/support.png")}
+                        alt="React"
+                        style={{ height: 100 }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Card>
+              </Grid>
+              <Grid item xs={3}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    backgroundColor: "#003E90",
+                    // boxShadow: "none",
+                    // border: "1px solid black",
+                    padding: "5px 5px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <Grid container spacing={2}>
+                    <Grid item xs={8}>
+                      <p
+                        style={{
+                          padding: "15px 5px",
+                          borderRadius: "10px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "#fff",
+                          fontWeight: "600",
+                          fontFamily: "'Roboto', sans-serif",
+                        }}
+                      >
+                        LOW SETUP COST
+                      </p>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <img
+                        src={require("../../Image/low-cost.png")}
+                        alt="React"
+                        style={{ height: 100 }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Card>
+              </Grid>
             </Grid>
 
-            <h1 style={{ display: "flex", alignItems: "flex-start" }}>
+            <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"70px"}}>
               Starting a new school!
             </h1>
             <span>
@@ -349,7 +486,7 @@ const School = () => {
               </Grid>
             </div>
 
-            <h1 style={{ display: "flex", alignItems: "flex-start" }}>
+            <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"50px" }}>
               New Start-up School
             </h1>
 
@@ -447,7 +584,7 @@ const School = () => {
               </Grid>
             </Grid>
 
-            <h1 style={{ display: "flex", alignItems: "flex-start" }}>
+            <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"50px" }}>
               For Existing Schools...
             </h1>
             <p style={{ display: "flex", alignItems: "flex-start" }}>
@@ -504,15 +641,15 @@ const School = () => {
               </Grid>
             </Grid>
 
-            <h1 style={{ display: "flex", alignItems: "flex-start" }}>
+            <h1 style={{display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"50px" }}>
               Additional support...
             </h1>
 
-            <p style={{ display: "flex", alignItems: "flex-start" }}>
+            <p style={{ display: "flex", alignItems: "flex-start",fontFamily: "'Roboto', sans-serif" }}>
               Team can also assist with:
             </p>
             <div>
-              <span>
+              <span style={{fontFamily: "'Roboto', sans-serif"}}>
                 1. The quality of teaching (teachers and non-teaching staff)
               </span>
               <br />

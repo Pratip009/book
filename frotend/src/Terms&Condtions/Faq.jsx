@@ -14,10 +14,7 @@ export default function Faq() {
   return (
     <div className="FAq_image">
       {/* 1,2 */}
-      <Accordion
-        sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}
-     
-      >
+      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -26,9 +23,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             1.
@@ -36,8 +33,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -63,9 +60,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             2.
@@ -73,8 +70,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -97,9 +94,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             3.
@@ -107,8 +104,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -132,9 +129,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             4.
@@ -142,8 +139,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -169,9 +166,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             5.
@@ -179,8 +176,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -206,9 +203,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             6.
@@ -216,8 +213,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -243,9 +240,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             7.
@@ -253,8 +250,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -281,9 +278,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             8.
@@ -291,8 +288,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -321,9 +318,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             9.
@@ -331,8 +328,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -358,9 +355,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             10.
@@ -368,8 +365,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -395,9 +392,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             11.
@@ -405,8 +402,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -431,9 +428,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             12.
@@ -441,8 +438,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -470,9 +467,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             13.
@@ -480,8 +477,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -505,9 +502,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             14.
@@ -515,8 +512,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -544,9 +541,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             15.
@@ -554,8 +551,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -582,9 +579,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             16.
@@ -592,8 +589,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -620,9 +617,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             17.
@@ -630,8 +627,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -655,9 +652,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             18.
@@ -665,8 +662,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}
@@ -694,9 +691,9 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF6D28",
+              color: "#FF7700",
             }}
           >
             19.
@@ -704,8 +701,8 @@ export default function Faq() {
           &nbsp;
           <Typography
             style={{
-              color: "#3AB0FF",
-              fontFamily: "'Poppins', sans-serif",
+              color: "#003E90",
+              fontFamily: "'Roboto', sans-serif",
 
               fontWeight: 600,
             }}

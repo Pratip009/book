@@ -32,13 +32,13 @@
 #model1 .description h1
 {
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 #model1 .description h2
 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
             text-align: center;
     color: #ffffff;
     font-weight: 400;
@@ -51,7 +51,7 @@
     color: #fff;
     text-align: justify;
     padding: 0 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 #model1 .description .social-media svg

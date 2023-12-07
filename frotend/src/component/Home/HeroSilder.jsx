@@ -8,7 +8,6 @@ import Typed from "react-typed";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-
 const useStyles = makeStyles((theme) => ({
   slide: {
     marginTop: "40px",
@@ -35,9 +34,9 @@ const useStyles = makeStyles((theme) => ({
   },
   quote: {
     fontSize: "17px",
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Roboto', sans-serif",
     width: "60vw",
-    color: "white",
+    color: "#003E90",
     fontWeight: 600,
     marginBottom: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
@@ -51,9 +50,9 @@ const useStyles = makeStyles((theme) => ({
   },
   saleText: {
     fontSize: "25px",
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Roboto', sans-serif",
     fontWeight: "800",
-    color: "#ffffff",
+    color: "#003E90",
     width: "80vw",
     marginBottom: theme.spacing(6),
     [theme.breakpoints.down("sm")]: {
@@ -66,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   productButton: {
-    backgroundColor: "#FF6D28",
+    backgroundColor: "#FF7700",
     color: "#fff",
     border: `1px solid ${theme.palette.common.white}`,
     borderRadius: theme.shape.borderRadius,
@@ -74,8 +73,8 @@ const useStyles = makeStyles((theme) => ({
     transition: "background-color 0.3s ease-in-out",
     "&:hover": {
       backgroundColor: theme.palette.common.white,
-      color: "#FF6D28",
-      border: "1px solid #FF6D28",
+      color: "#FF7700",
+      border: "1px solid #FF7700",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
@@ -96,21 +95,22 @@ const useStyles = makeStyles((theme) => ({
 
 const slides = [
   {
-    image: require("../../Image/des61.png"),
+    image: require("../../Image/bn1.png"),
     quote: "Training & Management Consulting",
     saleText: "We Deliver Transformation",
     productText: "Explore More",
   },
 
   {
-    image: require("../../Image/des11.png"),
+    image: require("../../Image/bn2.png"),
     quote: "Elevate Your Performance and Unleash Your True Potential",
     saleText: "New Arrivals: Enhance your skills and excel on the field",
     productText: "Explore More",
   },
   {
-    image: require("../../Image/des9.png"),
+    image: require("../../Image/bn4.png"),
     quote: "Training & Management Consulting",
+
     saleText: "We Deliver Transformation",
     productText: "Explore More",
   },

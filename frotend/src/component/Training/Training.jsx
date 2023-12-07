@@ -23,12 +23,27 @@ const Training = () => {
         </Grid>
         <Grid item xs={12}>
           <div className="container___">
-            <p style={{fontWeight:"600",fontStyle:"italic"}} data-aos="fade-down">
+            <p
+              style={{
+                fontWeight: "600",
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+              }}
+              data-aos="fade-down"
+            >
               "Soft skills’ Behavioural Shift training is essential because we
               do not have it in our academic curricula. However it can be
               developed through continuous training."
             </p>
-            <p data-aos="slide-right">
+            <p
+              data-aos="slide-right"
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+              }}
+            >
               Our skill based training programs are designed to encourage
               ‘awareness’ in one’s behavioural patterns. Learning Needs
               international quality Training & Development Programs are designed
@@ -55,7 +70,13 @@ const Training = () => {
               }}
               data-aos="fade-up"
             >
-              <p>
+              <p
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  textAlign: "justify",
+                  display: "inline-block",
+                }}
+              >
                 There are many different programs offered by Learning Needs that
                 will enhance your career in a positive way
               </p>
@@ -64,7 +85,7 @@ const Training = () => {
               container
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{marginTop:"1rem"}}
+              style={{ marginTop: "1rem" }}
               data-aos="fade-up"
             >
               <Grid item xs={3}>
@@ -75,8 +96,16 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Effective Communication</span>
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Effective Communication
+                  </span>
                 </div>
               </Grid>
               <Grid item xs={3}>
@@ -87,8 +116,16 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Success with Change</span>
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Success with Change
+                  </span>
                 </div>
               </Grid>
               <Grid item xs={3}>
@@ -99,8 +136,16 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Anger Management</span>
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Anger Management
+                  </span>
                 </div>
               </Grid>
               <Grid item xs={3}>
@@ -111,253 +156,397 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Assertiveness in Action</span>
-                </div>
-              </Grid>
-              </Grid>
-              {/* 2nd row */}
-              <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{marginTop:"1rem"}}
-              data-aos="fade-up"
-            >
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Peak Performance</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Complaint Handling</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Dealing with Difficult Situations</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Listening Skills</span>
-                </div>
-              </Grid>
-              </Grid>
-              {/* 3rd row */}
-              <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{marginTop:"1rem"}}
-              data-aos="fade-up"
-            >
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Leadership Innovation</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Questioning Skills</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Presentation Skills</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Team Building</span>
-                </div>
-              </Grid>
-              </Grid>
-              {/* th row */}
-              <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{marginTop:"1rem"}}
-              data-aos="fade-up"
-            >
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Multipurpose Theme</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Public Speaking</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Time Management</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Effective Meetings</span>
-                </div>
-              </Grid>
-              </Grid>
-              {/* 5th row */}
-              <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{marginTop:"1rem"}}
-              data-aos="fade-up"
-            >
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Power of Influence</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Customer Service Excellence</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Multipurpose Theme</span>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <StarIcon style={{color:"orange"}}/>
-                  <span>Think Your Way to Success</span>
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Assertiveness in Action
+                  </span>
                 </div>
               </Grid>
             </Grid>
-            <Grid item xs={12}  data-aos="fade-up">
-          <div style={{ marginTop: "7rem" }}>
-            <img
-              src={require("../../Image/Challenges2.jpg")}
-              alt=""
-            />
-          </div>
-        </Grid>
+            {/* 2nd row */}
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "1rem" }}
+              data-aos="fade-up"
+            >
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Peak Performance
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Complaint Handling
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Dealing with Difficult Situations
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    {" "}
+                    Listening Skills
+                  </span>
+                </div>
+              </Grid>
+            </Grid>
+            {/* 3rd row */}
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "1rem" }}
+              data-aos="fade-up"
+            >
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Leadership Innovation
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Questioning Skills
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Presentation Skills
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Team Building
+                  </span>
+                </div>
+              </Grid>
+            </Grid>
+            {/* th row */}
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "1rem" }}
+              data-aos="fade-up"
+            >
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Multipurpose Theme
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Public Speaking
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Time Management
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Effective Meetings
+                  </span>
+                </div>
+              </Grid>
+            </Grid>
+            {/* 5th row */}
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "1rem" }}
+              data-aos="fade-up"
+            >
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Power of Influence
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                    }}
+                  >
+                    Customer Service Excellence
+                  </span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span style={{
+                
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+              }}>Multipurpose Theme</span>
+                </div>
+              </Grid>
+              <Grid item xs={3}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <StarIcon style={{ color: "orange" }} />
+                  <span style={{
+                
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+              }}>Think Your Way to Success</span>
+                </div>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} data-aos="fade-up">
+              <div style={{ marginTop: "7rem" }}>
+                <img src={require("../../Image/Challenges1neww.png")} alt="" />
+              </div>
+            </Grid>
+
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop:"2rem"
+              }}
+            >
+              <p className="non_important" data-aos="slide-right">
+                Our <span class="circle-sketch-highlight"> Strengths </span>{" "}
+              </p>
+            </div>
+
+            <div>
+              <TabList />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "2rem",
               }}
               data-aos="slide-right"
             >
@@ -375,25 +564,9 @@ const Training = () => {
               }}
               data-aos="slide-left"
             >
-              <img src={require("../../Image/inb3.jpg")} alt="" />
+              <img src={require("../../Image/inb3new.png")} alt="" />
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              
-              }}
-            >
-              <p className="non_important" data-aos="slide-right">
-                Our <span class="circle-sketch-highlight"> Strengths </span>{" "}
-              
-              </p>
-            </div>
-
-            <div>
-              <TabList />
-            </div>
+            
           </div>
         </Grid>
       </Grid>
