@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Grid } from "@material-ui/core";
-import { Button } from "@mui/material";
-
+import { Box, Button, Card, Paper } from "@mui/material";
+import FooterHover from "./FooterHover";
+import Services from "../../../Terms&Condtions/Service";
 import "./Footer.css";
+import {
+  LocalShipping,
+  Security,
+  LocalOffer,
+  CreditCard,
+} from "@mui/icons-material";
 const footMenu = [
   {
     id: 1,
@@ -123,76 +130,19 @@ const Footer = () => {
           background: "#ffffff",
         }}
       >
-        <div
+        <Box
+          elevation={16}
           style={{
             width: "60%",
-            height: "230px",
-            background: "linear-gradient(to right, #FF7700, #FF4E00)",
-            marginBottom: "-100px",
+            height: "270px",
+
             borderRadius: "10px",
             zIndex: 1,
           }}
         >
-          <Grid container spacing={2}>
-            <Grid
-              item
-              xs={8}
-              style={{
-                padding: "40px",
-              }}
-            >
-              <h1
-                style={{
-                  fontSize: "23px",
-                  fontFamily: "'Roboto', sans-serif",
-                  color: "#ffffff",
-                }}
-              >
-                Let’s Change, Learn, Grow, and Transform!
-              </h1>
-              <p
-                style={{
-                  fontSize: "15px",
-                  fontFamily: "'Roboto', sans-serif",
-                  textAlign: "justify",
-                  display: "inline-block",
-                  color: "#ffffff",
-                }}
-              >
-                Learning Needs offers a variety of boutique services, tailored
-                to each clients need. Our specialized expertise allows the
-                Individual, Institution, Schools and Organizations to achieve
-                their objectives{" "}
-              </p>
-            </Grid>
-            <Grid
-              item
-              xs={4}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Button
-                style={{
-                  border: "1px solid white",
-                  color: "#fff",
-                  background: "linear-gradient(45deg, #003E90, #003E90A2)",
-                  position: "relative",
-                  overflow: "hidden",
-                  transition: "0.3s",
-                  outline: "none",
-                  cursor: "pointer",
-                  marginTop: "10px",
-                }}
-                variant="contained"
-              >
-                Get Started..
-              </Button>
-            </Grid>
-          </Grid>
-        </div>
+          <FooterHover />
+        </Box>
+
         <footer className="footer">
           <div className="container" style={{ height: "300px" }}>
             <div className="wrapper_footer footer_wrapper ">
@@ -222,6 +172,121 @@ const Footer = () => {
                   their objectives
                 </span>
               </div> */}
+                <div
+                  style={{
+                    marginTop: "5px",
+                    marginLeft: "27px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div>
+                    <Grid container spacing={1}>
+                      <Grid item xs={6} style={{ marginTop: "5px" }}>
+                      <Paper
+                          elevation={3}
+                          style={{
+                            backgroundColor: "#FF7700",
+                            height: "auto",
+                            padding: "2px 1px",
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            width:"100%"
+                          }}
+                        >
+                          <div>
+                            <LocalShipping fontSize="large" style={{color:"#FFFFFF"}}/>
+                          </div>
+                          <div style={{}}>
+                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Express Delivery</p>
+                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                            Ships in 24 Hours
+                            </p>
+                          </div>
+                        </Paper>
+                      </Grid>
+                      <Grid item xs={6} style={{ marginTop: "5px" }}>
+                      <Paper
+                          elevation={3}
+                          style={{
+                            backgroundColor: "#FF7700",
+                            height: "auto",
+                            padding: "2px 1px",
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            width:"100%"
+                          }}
+                        >
+                          <div>
+                          <Security fontSize="large" style={{color:"#FFFFFF"}}/>
+                          </div>
+                          <div>
+                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Brand Warranty</p>
+                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                            Original products
+                            </p>
+                          </div>
+                        </Paper>
+                      </Grid>
+                      <Grid item xs={6}>
+                      <Paper
+                          elevation={3}
+                          style={{
+                            backgroundColor: "#FF7700",
+                            height: "auto",
+                            padding: "2px 1px",
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            width:"100%"
+                          }}
+                        >
+                          <div>
+                          <LocalOffer fontSize="large" style={{color:"#FFFFFF"}}/>
+                          </div>
+                          <div>
+                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Exciting Deals</p>
+                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                              On all prepaid orders
+                            </p>
+                          </div>
+                        </Paper>
+                      </Grid>
+                      <Grid item xs={6}>
+                        <Paper
+                          elevation={3}
+                          style={{
+                            backgroundColor: "#FF7700",
+                            height: "auto",
+                            padding: "2px 1px",
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            width:"100%"
+                          }}
+                        >
+                          <div>
+                          <CreditCard fontSize="large" style={{color:"#FFFFFF"}}/>
+                          </div>
+                          <div>
+                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Secure Payments</p>
+                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                            Secure сertificate
+                            </p>
+                          </div>
+                        </Paper>
+                      </Grid>
+                    </Grid>
+                  </div>
+                </div>
               </div>
 
               <div class="foot_menu_container">
@@ -270,7 +335,7 @@ const Footer = () => {
                 })}
               </div> */}
                 <div className="foot_subs" style={{ marginTop: "120px" }}>
-                  <h5>Newslatter</h5>
+                  <h5>Newsletter</h5>
                   <form onSubmit={handleSubmit} className="foot_form">
                     <input
                       type="email"
@@ -280,7 +345,7 @@ const Footer = () => {
                       value={subValue}
                       onChange={(e) => setSubValue(e.target.value)}
                     />
-                    <p>
+                    <p style={{ color: "white" }}>
                       By submitting your email address you agree to the{" "}
                       <Link to="/terms/conditions" className="foot_subs_text">
                         Terms & Conditions

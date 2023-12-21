@@ -10,7 +10,9 @@ export default function Welcome() {
   }, []);
   return (
     <Grid container spacing={2} style={{ width: "100%" }}>
-      <Grid item xs={12} md={12} data-aos="fade-left">
+      <Grid item xs={12} md={12} 
+      // data-aos="fade-left"
+      >
         <Box
           sx={{
             display: "flex",
@@ -19,11 +21,11 @@ export default function Welcome() {
           }}
         >
           <div className="educate">
-            <h3 className="app_heading">Welcome to Learning Needs</h3>
+            <h3 className="app_heading" style={{fontSize:"36px"}}>Welcome to Learning Needs</h3>
 
             <p
               className="app_desc"
-              style={{ fontSize: "18px", fontFamily: "'Roboto', sans-serif" }}
+              style={{ fontSize: "15px", fontFamily: "'Roboto', sans-serif" }}
             >
               Necessity is the Mother of Invention, and this proverb perfectly
               defines the inception of Learning Needs. We believe all companies

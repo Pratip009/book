@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./TeamMessage.css";
 const Img = styled("img")({
   margin: "auto",
   display: "block",
@@ -19,23 +20,25 @@ export default function TeamMessage() {
   }, []);
   return (
     <Paper
+    className="teamback"
       sx={{
         p: 2,
-        marginBottom: "5rem",
-        background: "transparent",
+        marginTop: "4.25rem",
+
         borderRadius: "10px",
 
         maxWidth: "100%",
         flexGrow: 1,
         boxShadow: "none",
-        border: "4px solid #ffffff",
 
         // backgroundColor: (theme) =>
         //   theme.palette.mode === "dark" ? "#1A2027" : "#fff",
       }}
     >
       <Grid container spacing={2}>
-        <Grid item xs={12} md={4} sm container data-aos="fade-right">
+        <Grid item xs={12} md={4} sm container 
+        // data-aos="fade-right"
+        >
           <ButtonBase xs={{ width: 128, height: 128 }}>
             <Img src={require("../../Image/discussion.png")} alt="complex" />
           </ButtonBase>
@@ -54,11 +57,16 @@ export default function TeamMessage() {
                 gutterBottom
                 variant="subtitle1"
                 component="div"
-                data-aos="fade-left"
+                // data-aos="fade-left"
               >
                 <h1
                   className="Team_text"
-                  style={{ color: "white", fontSize: 35 }}
+                  style={{
+                    color: "white",
+                    fontSize: "36px",
+                    fontWeight: "700",
+                    fontFamily: "'Roboto', sans-serif",
+                  }}
                 >
                   Team Message
                 </h1>
@@ -67,13 +75,13 @@ export default function TeamMessage() {
                 <p
                   className="team_message"
                   style={{
-                    fontFamily: "'Montserrat', sans-serif",
+                    fontFamily: "'Roboto', sans-serif",
                     fontWeight: "300",
                     color: "white",
                     textAlign: "justify",
-                    fontSize: 16,
+                    fontSize: "15px",
                   }}
-                  data-aos="fade-left"
+                  // data-aos="fade-left"
                 >
                   We share an enthusiasm for the kind of great learning made
                   possible by skilful and committed training. Specializing in
@@ -93,14 +101,13 @@ export default function TeamMessage() {
             <Grid item>
               <Typography
                 sx={{
-                  cursor: "pointer",
-                  fontFamily: "'Montserrat', sans-serif",
+                  fontFamily: "'Roboto', sans-serif",
                   color: "white",
-                  fontSize: 16,
+                  fontWeight: "500",
+                  fontSize: "15px",
                 }}
                 variant="body2"
                 className="bottom_team_text"
-                data-aos="fade-left"
               >
                 Team Learning Needs- we deliver transformation
               </Typography>

@@ -18,7 +18,7 @@ export default function OurTeam() {
         <div className="member" data-aos="fade-down">
           <img width={300} height={300} src={Member1} alt="ceo" />
           <div className="description">
-            <h1>Mr. PQR </h1>
+            <h1 style={{fontFamily: "'Roboto', sans-serif",}}>Mr. PQR </h1>
             <h2>Writter</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.

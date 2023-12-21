@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "17px",
     fontFamily: "'Roboto', sans-serif",
     width: "60vw",
-    color: "#003E90",
+    color: "#FFFFFF",
     fontWeight: 600,
     marginBottom: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "25px",
     fontFamily: "'Roboto', sans-serif",
     fontWeight: "800",
-    color: "#003E90",
+    color: "#FFFFFF",
     width: "80vw",
     marginBottom: theme.spacing(6),
     [theme.breakpoints.down("sm")]: {
@@ -95,20 +95,20 @@ const useStyles = makeStyles((theme) => ({
 
 const slides = [
   {
-    image: require("../../Image/bn1.png"),
+    image: require("../../Image/bes.png"),
     quote: "Training & Management Consulting",
     saleText: "We Deliver Transformation",
     productText: "Explore More",
   },
 
   {
-    image: require("../../Image/bn2.png"),
+    image: require("../../Image/bes11.png"),
     quote: "Elevate Your Performance and Unleash Your True Potential",
     saleText: "New Arrivals: Enhance your skills and excel on the field",
     productText: "Explore More",
   },
   {
-    image: require("../../Image/bn4.png"),
+    image: require("../../Image/des9.png"),
     quote: "Training & Management Consulting",
 
     saleText: "We Deliver Transformation",

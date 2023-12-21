@@ -13,4 +13,45 @@
     font-family: 'Roboto', sans-serif;
 
   }
-  
+  .product_back{
+    background-image: url("../Image/lntraits5.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .about_ln{
+    background-image: url("../Image/aboutln1.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .ourteam_back{
+    background-image: url("../Image/ourteam.png");
+    position: relative;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .Our_Team{
+    background-image: url("../Image/foundermmm.png");
+    position: relative;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .play{
+    background-image: url("../Image/foundermmm.png");
+    position: relative;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .founder{
+    background-image: url("../Image/dddd.png");
+    position: relative;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

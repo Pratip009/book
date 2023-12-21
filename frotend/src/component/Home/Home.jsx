@@ -63,7 +63,7 @@ function Home() {
         <>
           <>
             <MataData title="Learning Needs" />
-            <div className="Home_Page">
+            <div className="Home_Page" style={{ overflow: "hidden" }}>
               <div
                 className="heroSlider_Home"
                 style={{ marginBottom: "-20px" }}
@@ -80,13 +80,10 @@ function Home() {
                   overflow: "hidden",
                 }}
               >
-                <div className="bg_yellows"> </div>
                 <div className="main_content">
                   <div
                     className="text_container"
                     style={{
-                      backgroundColor: "transparent",
-                      padding: "20px",
                       marginTop: "20px",
                     }}
                   >
@@ -95,6 +92,9 @@ function Home() {
                       rowSpacing={2}
                       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                     >
+                      <Grid xs={12} md={6}>
+                        <Welcome />
+                      </Grid>
                       <Grid
                         xs={12}
                         md={6}
@@ -102,21 +102,26 @@ function Home() {
                       >
                         <p
                           className="container_element_large_text"
-                          data-aos="zoom-in"
+                          // data-aos="zoom-in"
+                          style={{
+                            fontSize: "36px",
+                            fontFamily: "'Roboto', sans-serif",
+                          }}
                         >
-                          Our services help you succeed in business
+                          Our Services Help You Succeed in Business
                         </p>
 
                         <p
                           className="container_element_small_text"
                           style={{
                             fontSize: "15px",
-
+                            marginTop: "14px",
                             fontWeight: "400",
                             textAlign: "justify",
                             display: "inline-block",
+                            fontFamily: "'Roboto', sans-serif",
                           }}
-                          data-aos="slide-up"
+                          // data-aos="slide-up"
                         >
                           Learning Needs is a training & management consulting
                           company based in Kolkata in the lap of nature beside
@@ -138,87 +143,32 @@ function Home() {
                             transition: "0.3s",
                             outline: "none",
                             cursor: "pointer",
-                            marginTop: "10px",
+                            marginTop: "23px",
                           }}
                           variant="contained"
-                          data-aos="slide-right"
+                          // data-aos="slide-right"
                         >
                           Read More..
                         </Button>
                       </Grid>
-                      <Grid xs={12} md={6} data-aos="zoom-in">
-                        <Card
-                          style={{
-                            background:
-                              "linear-gradient(120deg, #ff5f6d, #ffc371)",
-                            minWidth: "100%",
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <p
-                            className="container_element_large_text"
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              color: "white",
-                              textShadow: "0 0 10px red",
-                              padding: "10px 0 0 0 ",
-                            }}
-                          >
-                            Notice Board
-                          </p>
-                          <Card
-                            style={{
-                              maxHeight: "180px",
-                              marginTop: "20px",
-                              border: "1px solid #D8D9DA",
-                            }}
-                          >
-                            <div className="container3 blur">
-                              <List
-                                sx={{
-                                  width: "100%",
-                                  maxWidth: "100%",
-                                  bgcolor: "white",
-                                  padding: "3px 0",
-                                }}
-                                className="slider"
-                              >
-                                <Box
-                                  component="ul"
-                                  sx={{
-                                    padding: "0 0",
-                                    listStyle: "none",
-                                    display: "grid",
-                                    gap: "30px",
-                                    gridTemplateColumns: "repeat(1, 1fr)",
-                                  }}
-                                >
-                                  {task.map((task) => (
-                                    <NoticeBoard
-                                      key={task._id}
-                                      id={task._id}
-                                      task={task.task}
-                                    />
-                                  ))}
-                                </Box>
-                              </List>
-                            </div>
-                          </Card>
-                        </Card>
-                      </Grid>
+                      
                     </Grid>
-
+                  </div>
+                  <div
+                    className="text_container_new"
+                    style={{
+                      marginTop: "20px",
+                    }}
+                  >
                     <Grid
                       container
                       rowSpacing={1}
                       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-                      sx={{ marginTop: "3rem" }}
+                      sx={{ marginTop: "20px" }}
                     >
-                      <Grid item xs={12} md={6} data-aos="flip-left">
+                      <Grid item xs={12} md={6}
+                      //  data-aos="flip-left"
+                       >
                         <Card
                           sx={{
                             maxWidth: 345,
@@ -276,7 +226,9 @@ function Home() {
                           </Box>
                         </Card>
                       </Grid>
-                      <Grid item xs={12} md={6} data-aos="flip-right">
+                      <Grid item xs={12} md={6} 
+                      // data-aos="flip-right"
+                      >
                         <Card sx={{ maxWidth: 345, height: 200 }}>
                           <Box sx={{ position: "relative" }}>
                             <CardMedia
@@ -335,21 +287,29 @@ function Home() {
               <div className="wrappeeer">
                 <div className="content">
                   <div className="circle_text">
-                    <p className="non_important" data-aos="fade-left">
-                      Find the{" "}
-                      <span class="circle-sketch-highlight">right product</span>{" "}
-                      for you{" "}
-                    </p>
+                    <h1
+                      style={{
+                        textAlign: "center",
+                        fontSize: "36px",
+                        marginTop: "20px",
+                        
+                      }}
+                     
+                    >
+                      Find The <span className="highlight" >Right Product</span> For You
+                    </h1>
+                    
                   </div>
                   <span
                     className="sub_headings"
-                    data-aos="slide-right"
+                    // data-aos="slide-right"
                     style={{
-                      fontSize: "16px",
+                      fontSize: "17px",
                       fontFamily: "'Roboto', sans-serif",
+                      fontWeight: "500",
                     }}
                   >
-                    you don't have to struggle alone,you have got our assistance
+                    You don't have to struggle alone,you have got our assistance
                     and help
                   </span>
 
@@ -360,39 +320,6 @@ function Home() {
                       ))}
                   </div>
                 </div>
-              </div>
-
-              <div
-                className="text_container1"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <div
-                  className="bg_team"
-                  style={{
-                    width: "75%",
-                    marginTop: "70px",
-                  }}
-                >
-                  <TeamMessage />
-                </div>
-
-                {/* Team Message section */}
-
-                {/* goals and objective */}
-
-                {/* <h2 className="headings" >
-                  our goals and objective
-                </h2> */}
-
-                {/* Learning needs traits */}
-
-                {/* <Traits /> */}
               </div>
 
               <div
@@ -411,30 +338,90 @@ function Home() {
                     width: "75%",
                   }}
                 >
+                  <TeamMessage />
                   <div className="circle_text">
-                    <p className="non_important" data-aos="fade-left">
-                      our{" "}
-                      <span class="circle-sketch-highlight">
-                        goals and objective
-                      </span>{" "}
-                    </p>
+                  <h1
+                      style={{
+                        textAlign: "center",
+                        fontSize: "36px",
+                        marginTop: "20px",
+                        
+                      }}
+                     
+                    >
+                      Our <span className="highlight" >Goals And Objective</span> 
+                    </h1>
                   </div>
-                  <div
-                    style={{
-                      marginBottom: "3rem",
-                      paddingTop: 0,
-                    }}
-                  >
-                    <GoalsObjective />
-                  </div>
-                  <div
-                    style={{
-                      marginBottom: "3rem",
-                      paddingTop: 0,
-                    }}
-                  >
-                    <Welcome />
-                  </div>
+
+                  <Grid container spacing={2} style={{}}>
+                    <Grid item xs={9}>
+                      <GoalsObjective />
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Card
+                        style={{
+                          background:
+                            "linear-gradient(120deg, #ff5f6d, #ffc371)",
+                          minWidth: "100%",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <p
+                          className="container_element_large_text"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            color: "white",
+                            textShadow: "0 0 10px red",
+                            padding: "10px 0 0 0 ",
+                          }}
+                        >
+                          Updates
+                        </p>
+                        <Card
+                          style={{
+                            maxHeight: "220px",
+                            marginTop: "20px",
+                            border: "1px solid #D8D9DA",
+                          }}
+                        >
+                          <div className="container3 blur">
+                            <List
+                              sx={{
+                                width: "100%",
+                                maxWidth: "100%",
+                                bgcolor: "white",
+                                padding: "3px 0",
+                              }}
+                              className="slider"
+                            >
+                              <Box
+                                component="ul"
+                                sx={{
+                                  padding: "0 0",
+                                  listStyle: "none",
+                                  display: "grid",
+                                  gap: "30px",
+                                  gridTemplateColumns: "repeat(1, 1fr)",
+                                }}
+                              >
+                                {task.map((task) => (
+                                  <NoticeBoard
+                                    key={task._id}
+                                    id={task._id}
+                                    task={task.task}
+                                  />
+                                ))}
+                              </Box>
+                            </List>
+                          </div>
+                        </Card>
+                      </Card>
+                    </Grid>
+                  </Grid>
                 </div>
               </div>
             </div>

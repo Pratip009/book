@@ -10,9 +10,10 @@ import PlayApp from "../component/Home/PlayApp.jsx";
 import "aos/dist/aos.css";
 import "./Aboutus.css";
 import AOS from "aos";
-
 import OurTeam from "../component/Home/OurTeam";
 import Faq from "./Faq";
+import TestimonialSlider from "../component/Home/TestimonialSlider.jsx";
+
 const useStyles = makeStyles((theme) => ({
   about_us: {
     paddingTop: "8rem",
@@ -32,15 +33,15 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
   },
   image_about: {
-    width: "100%",
-    height: "auto",
-    marginTop: "-2rem",
+    width: "80%",
+    height: "80%",
+
     marginBottom: "2rem",
     borderRadius: "10px",
   },
   title_about: {
     color: "#414141",
-    fontSize: "25px",
+    fontSize: "36px",
     textAlign: "start",
     padding: "2rem 1rem 2rem",
     fontFamily: "Roboto",
@@ -93,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1rem",
   },
   button1_about: {
-    backgroundColor: "#000000 !important",
+    backgroundColor: "#003E90 !important",
     color: "white !important",
     width: "fit-content !important",
     padding: "0.8rem 2rem   !important",
@@ -105,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button2_about: {
-    backgroundColor: "#292929 !important",
+    backgroundColor: "#003E90 !important",
     color: "white   !important",
     width: "fit-content     !important",
     padding: "0.8rem 2rem   !important",
@@ -128,73 +129,105 @@ const About_UsPage = () => {
     <>
       <div className={classes.about_us}>
         <div style={{ marginTop: "-15px" }} data-aos="slide-down">
-          <img src={require("../Image/breadcrumbnew/About-us.jpg")} alt="" />
+          <img src={require("../Image/learninabout.jpg")} alt="" />
         </div>
         <MetaData title={"About Us"} />
-        <Container
-          className={classes.container_12}
+        {/* <Container
+          className="about_ln"
           style={{ marginTop: "2rem" }}
         >
-          <Grid container spacing={4} justifyContent="center">
-            <Grid item xs={12} sm={6} data-aos="slide-right">
-              <img
-                src={require("../Image/about/abb.png")}
-                alt="Learning needs"
-                className={classes.image_about}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} data-aos="slide-left">
-              {/* <h1
-                style={{
-                  textAlign: "Start",
-                  marginTop: "3rem",
-                  fontFamily: "'Courgette', cursive",
-                }}
-              >
-                About Learning Needs
-              </h1> */}
-              <div className="circle_text">
-                <p className="non_important" style={{ textAlign: "Start" }}>
-                  About{" "}
-                  <span class="circle-sketch-highlight">Learning Needs</span>
+         
+        
+        </Container> */}
+        <div
+          className="about_ln"
+          style={{
+            maxWidth: "100%",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "20px",
+          }}
+        >
+          <div style={{ maxWidth: "85%" }}>
+            <Grid container spacing={1} justifyContent="center">
+              <Grid item xs={12} sm={6} data-aos="slide-right">
+                <img
+                  src={require("../Image/about/abb.png")}
+                  alt="Learning needs"
+                  className={classes.image_about}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} data-aos="slide-left">
+                {/* <h1
+        style={{
+          textAlign: "Start",
+          marginTop: "3rem",
+          fontFamily: "'Courgette', cursive",
+        }}
+      >
+        About Learning Needs
+      </h1> */}
+                <div className="circle_text">
+                  <h1
+                    style={{
+                      textAlign: "start",
+                      fontSize: "36px",
+                      marginTop: "20px",
+                    }}
+                  >
+                    About <span className="highlight">Learning Needs</span>
+                  </h1>
+                </div>
+                <p
+                  variant="body1"
+                  className=""
+                  style={{
+                    fontSize: "15px",
+                    marginTop: "14px",
+                    fontWeight: "400",
+                    textAlign: "justify",
+                    display: "inline-block",
+                    fontFamily: "'Roboto', sans-serif",
+                  }}
+                >
+                  Learning Needs is a training & management consulting company
+                  based in Kolkata in the lap of nature beside river Ganges,
+                  India. Learning Needs offers a variety of boutique services,
+                  tailored to each clients need. Our specialized expertise
+                  allows the Individual, Institution, Schools and Organizations
+                  to achieve their objectives; we are very much committed to the
+                  success of our clients and their individual
                 </p>
-              </div>
-              <p variant="body1" className={classes.introText_about}>
-                Learning Needs is a training & management consulting company
-                based in Kolkata in the lap of nature beside river Ganges,
-                India. Learning Needs offers a variety of boutique services,
-                tailored to each clients need. Our specialized expertise allows
-                the Individual, Institution, Schools and Organizations to
-                achieve their objectives; we are very much committed to the
-                success of our clients and their individual
-              </p>
 
-              <Button
-                style={{
-                  color: "#fff",
-                  backgroundColor: "#FF7700",
-                  display: "flex",
-                }}
-                variant="contained"
-              >
-                Read More..
-              </Button>
-              {/* <Typography variant="body1" className={classes.introText_about}>
-                Learning Needs was founded by Lokesh Samant, a talented cricket
-                player who has represented the Under 16 and Under 19 teams.
-                Lokesh started this business to support his expenses and
-                received an overwhelming response. He has sold cricket equipment
-                to more than 20,000 customers till date. Now, he aims to expand
-                his business to an international level by launching his own
-                website and introducing new and genuine cricket products at
-                competitive prices.
-              </Typography> */}
+                <Button
+                  style={{
+                    color: "#fff",
+                    backgroundColor: "#FF7700",
+                    display: "flex",
+                  }}
+                  variant="contained"
+                >
+                  Read More..
+                </Button>
+                {/* <Typography variant="body1" className={classes.introText_about}>
+        Learning Needs was founded by Lokesh Samant, a talented cricket
+        player who has represented the Under 16 and Under 19 teams.
+        Lokesh started this business to support his expenses and
+        received an overwhelming response. He has sold cricket equipment
+        to more than 20,000 customers till date. Now, he aims to expand
+        his business to an international level by launching his own
+        website and introducing new and genuine cricket products at
+        competitive prices.
+      </Typography> */}
+              </Grid>
             </Grid>
-          </Grid>
-        </Container>
+          </div>
+        </div>
         <div
           className="product_back"
-          style={{ backgroundColor: "#F4F6F9", width: "100%" }}
+          style={{ backgroundColor: "#FFFFFF", width: "100%" }}
         >
           <Container className={classes.container_12}>
             {/* Learning needs traits */}
@@ -202,12 +235,21 @@ const About_UsPage = () => {
             {/* <Traits /> */}
 
             <div className="circle_text" data-aos="slide-down">
-              <p className="non_important" style={{ textAlign: "Start" }}>
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                <span className="highlight">Learning Needs Traits</span>
+              </h1>
+              {/* <p className="non_important" style={{ textAlign: "Start" }}>
                 {" "}
                 <span class="circle-sketch-highlight">
                   Learning Needs Traits
                 </span>
-              </p>
+              </p> */}
             </div>
             <Grid
               container
@@ -227,8 +269,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -239,8 +281,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -261,8 +303,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -273,8 +315,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -295,8 +337,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -307,8 +349,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -329,8 +371,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -341,8 +383,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -363,8 +405,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -375,8 +417,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -397,8 +439,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -409,8 +451,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -438,8 +480,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -450,8 +492,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -472,8 +514,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -484,8 +526,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -506,8 +548,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -518,8 +560,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -540,8 +582,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -552,8 +594,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -574,8 +616,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -586,8 +628,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -608,8 +650,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -620,8 +662,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -631,12 +673,27 @@ const About_UsPage = () => {
                 </Card>
               </Grid>
             </Grid>
+
             <Grid
               container
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{ marginTop: "2rem", marginBottom: "2rem" }}
+              style={{
+                marginTop: "2rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "2rem",
+              }}
             >
+              <Grid item xs={4} md={2} data-aos="fade-left">
+                <img
+                  src={require("../Image/growin.png")}
+                  alt="Learning needs"
+                  className={classes.image_about}
+                />
+              </Grid>
+              <Grid item xs={4} md={1} data-aos="fade-left"></Grid>
               <Grid item xs={4} md={2} data-aos="fade-left">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
@@ -649,8 +706,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#FF7700",
-                      fontSize: "25px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "36px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -661,8 +718,8 @@ const About_UsPage = () => {
                   <Typography
                     style={{
                       color: "#61677A",
-                      fontSize: "12px",
-                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "15px",
+                      fontFamily: "'Roboto', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -671,70 +728,103 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
+              <Grid item xs={4} md={1} data-aos="fade-left"></Grid>
+              <Grid item xs={4} md={2} data-aos="fade-left">
+              <img
+                  src={require("../Image/dreambig.png")}
+                  alt="Learning needs"
+                  className={classes.image_about}
+                />
+              </Grid>
             </Grid>
           </Container>
         </div>
-        <Container
-          className={classes.container_12}
-          style={{ maxWidth: "100%" }}
-        >
-          <div className="circle_text" data-aos="slide-down">
-            <p className="non_important" style={{ textAlign: "Start" }}>
-              {" "}
-              <span class="circle-sketch-highlight">Our Team</span>
-            </p>
+        <Container className={classes.container_12} style={{ width: "90%" }}>
+          <div className="circle_text" data-aos="slide-left">
+            <h1
+              style={{
+                textAlign: "center",
+                fontSize: "36px",
+                marginTop: "20px",
+              }}
+            >
+              <span className="highlight">Our Team</span>
+            </h1>
           </div>
-          <span className="sub_headings" data-aos="slide-down" style={{fontFamily:"'Roboto', sans-serif", fontSize:"15px"}}>
-            Learning Needs dedicated leadership team is focused on delivering
-            quality service and leadership development programs that exceed our
-            clients’ expectations and help them achieve their goals.
-          </span>
-          <Container
-            className={classes.container_12}
-            style={{ marginTop: "3rem" }}
+          <span
+            className="sub_headings"
+            data-aos="slide-down"
+            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "15px" }}
           >
-            <Grid container spacing={4} justifyContent="center">
-              <Grid item xs={12} sm={6} data-aos="slide-right">
-                <h2
-                  style={{
-                    textAlign: "Start",
-                    marginTop: "0",
-                    marginBottom: "10px",
-                    fontFamily: "'Poppins', sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "900",
-                  }}
-                >
-                  With us , you can build yourself to achieve your goals
-                </h2>
-                <p variant="body1" className={classes.introText_about2}>
-                  Learning Needs is committed to help its clients reach their
-                  goals. By providing an innovative environment, which makes a
-                  difference. Our strong sense of identification with client
-                  projects means that we are constantly striving to provide
-                  solutions, even for issues they aren’t yet aware of. To this
-                  end, we adopt a progressive approach to technology and
-                  marketing techniques. This sense of identification also means
-                  we value and promote seamless interaction with clients’ own
-                  teams, and ensure the best value is obtained from their
-                  budget. Our long experience at the top of the education and
-                  training business means we have expertise which reaches across
-                  a number of sectors and schools. But we know that things
-                  change, and we are constantly striving to adapt and improve.
-                </p>
+            Learning Needs dedicated leadership team is focused on delivering
+            quality service and leadership development
+          </span>
+          <span
+            className="sub_headings"
+            data-aos="slide-down"
+            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "15px" }}
+          >
+            programs that exceed our clients’ expectations and help them achieve
+            their goals.
+          </span>
+          <div className="ourteam_back">
+            <div
+              style={{
+                maxWidth: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Grid
+                container
+                spacing={4}
+                justifyContent="center"
+                style={{ marginTop: "20px" }}
+              >
+                <Grid item xs={12} sm={6} data-aos="slide-right">
+                  <h2
+                    style={{
+                      textAlign: "Start",
+                      marginTop: "0",
+                      marginBottom: "10px",
+                      fontFamily: "'Roboto', sans-serif",
+                      fontSize: "36px",
+                      fontWeight: "700",
+                      color: "#FF7700",
+                    }}
+                  >
+                    With us , you can build yourself to achieve your goals
+                  </h2>
+                  <p variant="body1" className={classes.introText_about2}>
+                    Learning Needs is committed to help its clients reach their
+                    goals. By providing an innovative environment, which makes a
+                    difference. Our strong sense of identification with client
+                    projects means that we are constantly striving to provide
+                    solutions, even for issues they aren’t yet aware of. To this
+                    end, we adopt a progressive approach to technology and
+                    marketing techniques. This sense of identification also
+                    means we value and promote seamless interaction with
+                    clients’ own teams, and ensure the best value is obtained
+                    from their budget. Our long experience at the top of the
+                    education and training business means we have expertise
+                    which reaches across a number of sectors and schools. But we
+                    know that things change, and we are constantly striving to
+                    adapt and improve.
+                  </p>
 
-                <Button
-                  style={{
-                    color: "#fff",
-                    backgroundColor: "#FF7700",
-                    display: "flex",
-                    marginTop: "-10px",
-                  }}
-                  variant="contained"
-                >
-                  Read More..
-                </Button>
-                {/* <Typography variant="body1" className={classes.introText_about}>
+                  <Button
+                    style={{
+                      color: "#fff",
+                      backgroundColor: "#FF7700",
+                      display: "flex",
+                      marginTop: "-10px",
+                    }}
+                    variant="contained"
+                  >
+                    Read More..
+                  </Button>
+                  {/* <Typography variant="body1" className={classes.introText_about}>
                 Learning Needs was founded by Lokesh Samant, a talented cricket
                 player who has represented the Under 16 and Under 19 teams.
                 Lokesh started this business to support his expenses and
@@ -744,17 +834,18 @@ const About_UsPage = () => {
                 website and introducing new and genuine cricket products at
                 competitive prices.
               </Typography> */}
-              </Grid>
+                </Grid>
 
-              <Grid item xs={12} sm={6} data-aos="slide-left">
-                <img
-                  src={require("../Image/teeam.png")}
-                  alt="Learning needs"
-                  className={classes.image_about}
-                />
+                <Grid item xs={12} sm={6} data-aos="slide-left">
+                  <img
+                    src={require("../Image/teeam.png")}
+                    alt="Learning needs"
+                    className={classes.image_about}
+                  />
+                </Grid>
               </Grid>
-            </Grid>
-          </Container>
+            </div>
+          </div>
 
           <div className="Our_Team">
             <OurTeam />
@@ -765,39 +856,63 @@ const About_UsPage = () => {
             style={{ marginTop: "3rem" }}
           >
             {/* testimonials */}
-            <span className="sub_headings" data-aos="fade-down" style={{fontSize:"16px"}}>
-              Pride of Learning Needs
-            </span>
+            <h1
+              style={{
+                textAlign: "center",
+                fontSize: "36px",
+                marginTop: "20px",
+              }}
+            >
+              <span className="highlight">Pride of Learning Needs</span>
+            </h1>
             {/* <h2 className="clients_headings" >
               Clients sharing their experience
             </h2> */}
             <div className="circle_text" data-aos="fade-up">
-              <p className="non_important" style={{ textAlign: "Start" }}>
+              {/* <p className="non_important" style={{ textAlign: "Start" }}>
                 Clients sharing their{" "}
                 <span class="circle-sketch-highlight">experience</span>
-              </p>
+              </p> */}
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                Clients sharing their
+                <span className="highlight"> experience</span>
+              </h1>
             </div>
-            <div style={{ marginTop: "2rem" }}>
+            <div>
+              <TestimonialSlider />
+            </div>
+
+            <div style={{ marginTop: "6rem" }} className="play">
               <PlayApp />
             </div>
           </Container>
-          <Container
-            className={classes.container_12}
-            style={{ marginTop: "3rem" }}
-          >
+          <Container className="faq" style={{ marginTop: "3rem" }}>
             <div className="circle_text" data-aos="fade-down">
-              <p className="non_important" style={{ textAlign: "Start" }}>
+              {/* <p className="non_important" style={{ textAlign: "Start" }}>
                 Frequently Asked{" "}
                 <span class="circle-sketch-highlight">Questions</span>
-              </p>
+              </p> */}
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                Frequently Asked
+                <span className="highlight"> Questions</span>
+              </h1>
             </div>
 
             <Faq />
           </Container>
-          <Container
-            className={classes.container_12}
-            style={{ marginTop: "3rem" }}
-          >
+          <Container className="founder" style={{ marginTop: "3rem" }}>
             <Grid container spacing={4} justifyContent="center">
               <Grid item xs={12} sm={6}>
                 {/* <h1
@@ -810,12 +925,15 @@ const About_UsPage = () => {
                 About Learning Needs
               </h1> */}
                 <div className="circle_text" data-aos="fade-down">
-                  <p className="non_important" style={{ textAlign: "Start" }}>
-                    {" "}
-                    <span class="circle-sketch-highlight">
-                      Founder's Message
-                    </span>
-                  </p>
+                  <h1
+                    style={{
+                      textAlign: "start",
+                      fontSize: "36px",
+                      marginTop: "20px",
+                    }}
+                  >
+                    <span className="highlight"> Founder's Message</span>
+                  </h1>
                 </div>
                 <p
                   variant="body1"
@@ -872,7 +990,13 @@ const About_UsPage = () => {
                 competitive prices.
               </Typography> */}
               </Grid>
-              <Grid item xs={12} sm={6} data-aos="slide-left" className="founder">
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                data-aos="slide-left"
+                className="founder"
+              >
                 <img
                   src={require("../Image/founder.jpg")}
                   style={{ width: 400, height: 400 }}

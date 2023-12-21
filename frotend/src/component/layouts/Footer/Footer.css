@@ -9,7 +9,13 @@ background-color: #003E90;
   font-family: 'Roboto', sans-serif;
 
 }
-
+.footerback{
+  background-image: url("../../../Image/footer.png");
+    position: relative;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Wrapper for the footer content */
 .wrapper_footer {
     height: fit-content;
@@ -36,7 +42,7 @@ background-color: #003E90;
 }
 
 .foot_logo{
-     width: 700px;
+     width: 630px;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -360,6 +366,14 @@ margin-left: -15px;
 .foot_subs {
     width: 95%;
  margin-top: -13px;
+}
+.footer_bg
+{
+  background-image: url("../../../Image/footer.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .input_field_footer {
 width: 111%;

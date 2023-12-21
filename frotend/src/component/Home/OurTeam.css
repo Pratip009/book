@@ -3,7 +3,7 @@
     width: 300px;
     height: 300px;
     position: relative;
-    background-color: #3AB0FFc3;
+    background-color: #003e90;
     transform: translateY(0);
     /* border-radius: 15px; */
     transition: all 1s;
@@ -52,6 +52,7 @@
     text-align: justify;
     padding: 0 15px;
     font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
 
 #model1 .description .social-media svg

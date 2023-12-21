@@ -111,7 +111,9 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Card className={classes.root} data-aos="flip-left" elevation={6}>
+    <Card className={classes.root} 
+    // data-aos="flip-left"
+     elevation={6}>
       <Link
         className="productCard"
         to={`/product/${product._id}`}

@@ -30,11 +30,24 @@ export default function MediaControlCard() {
           }}
         >
           <div className="educate">
-            <h3 className="app_heading">Educate yourself</h3>
+            <h3 className="app_heading">Educate Yourself</h3>
 
-            <h5 className="app_subheading">
+            {/* <h5 className="app_subheading">
               Books and resources for better learning
-            </h5>
+            </h5> */}
+            <h2
+                  style={{
+                    textAlign: "Start",
+                    marginTop: "20px",
+                    marginBottom: "10px",
+                    fontFamily: "'Roboto', sans-serif",
+                    fontSize: "26px",
+                    fontWeight: "700",
+                    color:"#000000"
+                  }}
+                >
+                   Books and resources for better learning
+                </h2>
             <p className="app_desc" style={{}}>
               Learning Needs is a pioneer organization dedicated and committed 
               to bring out the best in you. We know all you need is an

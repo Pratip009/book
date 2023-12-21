@@ -1,0 +1,7 @@
+.teamback{
+    background-image: url("../../Image/teammessage.png");
+    position: relative;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

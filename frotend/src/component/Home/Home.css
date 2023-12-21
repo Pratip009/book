@@ -1,4 +1,12 @@
+
+
+
 .text_container{
+  margin: auto;
+  width: 70%;
+ 
+}
+.text_container_new{
   margin: auto;
   width: 70%;
  
@@ -11,7 +19,6 @@
   background: #ffffff;
   position: relative;
 }
-
 
 
 .bg_yellows{
@@ -60,16 +67,32 @@
 
 .wrappeeer{
  
-  background-image: url('../../Image/abu.jpg');
+  background-image: url('../../Image/bbbbb.png');
   background-attachment: fixed;
   /* Other background properties */
   background-size: cover; /* Adjust as needed */
   background-position: center; 
   filter: brightness(100%)
+  
   /* Adjust as needed */
 
 }
-
+.highlight{
+  position: relative;
+}
+.highlight::after{
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-image: url(https://www.beyondcss.dev/underline.svg);
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .slider {
   top: 1em;
   position: relative;
@@ -117,8 +140,8 @@
 p {
 font-family: helvetica, arial, sans serif;
 }
-/* .background_image{
-  background-image: url("../../Image/bookhd.avif");
+.background_image{
+  background-image: url("../../Image/welcomepage5.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
@@ -134,7 +157,7 @@ font-family: helvetica, arial, sans serif;
   bottom: 0px;
   left: 0px;
   opacity:0.35;
-} */
+}
 
 .training{
   display: flex;
@@ -213,36 +236,17 @@ font-size: 30px;
         margin: -2px -6px;
         padding:  2px  6px; */
         
-        background-image: linear-gradient(
-          -225deg,
-          #231557 0%,
-          #44107a 29%,
-          #ff1361 67%,
-          #fff800 100%
-        );
-        background-size: auto auto;
-        background-clip: border-box;
-        background-size: 200% auto;
-        font-weight: 900;
-        color: #fff;
-        background-clip: text;
-        text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textclip 2s linear infinite;
-        font-family: 'Roboto', sans-serif;
 
-        display: inline-block;
-            font-size: 45px;
-}
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
 .non_important{
   font-size: 45px;
   font-family: 'Roboto', sans-serif;
+}
+.goal{
+  background-image: url("../../Image/ourteamd.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .clients_headings{
   display: flex;

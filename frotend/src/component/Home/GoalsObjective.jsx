@@ -21,10 +21,10 @@ export default function GoalsObjective() {
             image={appp}
           /> */}
           <img
-            src={require("../../Image/Cricket-wepon/aboutus1.jpg")}
+            src={require("../../Image/budget.png")}
             alt="App"
-            style={{ height: "auto" }}
-            data-aos="fade-right"
+            style={{ width: "100%", height: "100%" }}
+            // data-aos="fade-right"
           />
         </Box>
       </Grid>
@@ -35,17 +35,20 @@ export default function GoalsObjective() {
             flexDirection: "column",
             alignItems: "center",
           }}
-          data-aos="fade-left"
+          // data-aos="fade-left"
         >
           <div className="educate">
             <h3
               className="app_heading"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
+              style={{ fontFamily: "'Roboto', sans-serif", fontSize: "36px" }}
             >
-              ABOUT OUR FUTURE TARGET
+              About Our Future Target
             </h3>
             <div className="educate_desc_div">
-              <span className="educate_desc">
+              <span
+                className="educate_desc"
+                style={{ fontSize: "15px", fontFamily: "'Roboto', sans-serif" }}
+              >
                 Our future target is to provide training, information,
                 resources, support and guidance for a variety of groups
                 including: school owners, businessman, young people who are at
@@ -64,10 +67,10 @@ export default function GoalsObjective() {
                 title={
                   <span
                     style={{
-                      fontSize: 16,
+                      fontSize: 15,
                       color: "#1B1A1A",
                       fontWeight: "600",
-                      fontFamily: "'Saira Condensed', sans-serif",
+                      fontFamily: "'Roboto', sans-serif",
                     }}
                   >
                     WHAT DO WE HAVE TO DO
@@ -97,10 +100,10 @@ export default function GoalsObjective() {
                 title={
                   <span
                     style={{
-                      fontSize: 16,
+                      fontSize: 15,
                       color: "#1B1A1A",
                       fontWeight: "600",
-                      fontFamily: "'Saira Condensed', sans-serif",
+                      fontFamily: "'Roboto', sans-serif",
                     }}
                   >
                     AND DO WE DO THIS
