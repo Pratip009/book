@@ -89,7 +89,7 @@ display: flex;
 }
 .prod_details_title{
   color: #003E90;
-  font-family: 'Saira Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .prod_details_tabs .tabs_item {
     border: 2px solid;

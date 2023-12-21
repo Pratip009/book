@@ -22,21 +22,4 @@
   transform-origin: center center;
 }
 
-/* @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
-@media (max-width: 799px) {
-  .cricket-ball-loader {
-    margin: 12rem auto;
-  }
-
-  .spinner {
-    height: 7rem;
-  }
-} */

@@ -15,7 +15,6 @@
   transition: color 0.2s ease-in-out;
 }
 
-/* Apply the hover effect on the CloseOutlined icon */
 .closeIcon:hover {
   color: #e30605;
 }

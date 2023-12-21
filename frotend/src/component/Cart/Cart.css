@@ -128,7 +128,7 @@ align-items: center;
  
 }
 
-/* Set the scrollbar width and background color */
+
  ::-webkit-scrollbar {
   width: 10px;
   background-color: #f5f5f5;

@@ -1,4 +1,4 @@
-/* Container for the footer */
+
 .footer {
 background-color: #003E90;
   color: #fff;
@@ -16,7 +16,7 @@ background-color: #003E90;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* Wrapper for the footer content */
+
 .wrapper_footer {
     height: fit-content;
   display: flex;

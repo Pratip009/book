@@ -20,7 +20,6 @@ font-family: 'Roboto', sans-serif;
   width: 100%;
 
   background-color: #003E90;
-  /* background-image: linear-gradient(to right,#3AB0FF5a, #003E90 ); */
   color: #040D12;
   display: grid;
   font-weight: 600;
@@ -208,7 +207,7 @@ list-style: none;
 }
 .css-6hp17o-MuiList-root-MuiMenu-list{
   background-color: rgb(29, 28, 28);
-  /* border: none !important; */
+  
 }
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover{
   background-color: #E30605 !important;
