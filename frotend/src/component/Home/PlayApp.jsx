@@ -48,7 +48,7 @@ export default function MediaControlCard() {
                 >
                    Books and resources for better learning
                 </h2>
-            <p className="app_desc" style={{}}>
+            <p className="app_desc" >
               Learning Needs is a pioneer organization dedicated and committed 
               to bring out the best in you. We know all you need is an
               opportunity to prove yourself. However, without the right skills

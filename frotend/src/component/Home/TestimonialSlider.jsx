@@ -65,7 +65,7 @@ const CardOne = ({ img }) => {
         style={{
           fontSize: "15px",
           fontFamily: "'Roboto', sans-serif",
-          
+
           display: "inline-block",
         }}
       >
@@ -114,7 +114,7 @@ const CardTwo = ({ img }) => {
         style={{
           fontSize: "15px",
           fontFamily: "'Roboto', sans-serif",
-          
+
           display: "inline-block",
         }}
       >
@@ -163,7 +163,7 @@ const CardThree = ({ img }) => {
         style={{
           fontSize: "15px",
           fontFamily: "'Roboto', sans-serif",
-         
+
           display: "inline-block",
         }}
       >

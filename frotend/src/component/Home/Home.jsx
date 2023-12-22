@@ -353,7 +353,7 @@ function Home() {
                     </h1>
                   </div>
 
-                  <Grid container spacing={2} style={{}}>
+                  <Grid container spacing={2} >
                     <Grid item xs={9}>
                       <GoalsObjective />
                     </Grid>
@@ -426,28 +426,7 @@ function Home() {
               </div>
             </div>
 
-            {/* <div className="feature" style={{ marginTop: "3.7rem" }}>
-                <h2 className="headings"  = "fade-right"
-                  
-                >
-                  Featured Products
-                </h2>
-                {products &&
-             
-                
-                       <FeaturedSlider  products ={products}/> }
-                  
-                 
-              
-              </div> */}
-
-            {/* <h2 className="headings" >
-                Find the right product for you
-              </h2> */}
-
-            {/* <div className="background_image" style={{marginTop:"20px"}}>
-                
-              </div> */}
+           
           </>
         </>
       )}

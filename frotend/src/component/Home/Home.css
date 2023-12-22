@@ -84,7 +84,7 @@
   content: "";
   width: 100%;
   height: 5px;
-  background-image: url(https://www.beyondcss.dev/underline.svg);
+  background-image: url("https://www.beyondcss.dev/underline.svg");
   
   background-position: center;
   background-size: cover;
@@ -146,20 +146,22 @@ font-family: helvetica, arial, sans serif;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-} */
+} 
 
         
 
-.non_important{
-  font-size: 45px;
-  font-family: 'Roboto', sans-serif;
-}
+
 .goal{
   background-image: url("../../Image/ourteamd.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.non_important{
+  font-size: 45px;
+  font-family: 'Roboto', sans-serif;
 }
 .clients_headings{
   display: flex;
