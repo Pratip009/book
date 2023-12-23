@@ -63,16 +63,16 @@ export default function ParentTab() {
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="secondary"
+          indicatorColor=""
           textColor="black"
           variant="fullWidth"
           aria-label="full width tabs example"
-          style={{ backgroundColor: "#FF7700" }}
+          style={{ backgroundColor: "#003E90" }}
         >
-          <Tab label="Parenting Workshop" {...a11yProps(0)} />
-          <Tab label="Education Issues" {...a11yProps(1)} />
-          <Tab label="Play" {...a11yProps(2)} />
-          <Tab label="Other Issues" {...a11yProps(3)} />
+          <Tab label="Parenting Workshop" {...a11yProps(0)}  style={{color:"white", fontWeight:"600"}}/>
+          <Tab label="Education Issues" {...a11yProps(1)}  style={{color:"white", fontWeight:"600"}}/>
+          <Tab label="Play" {...a11yProps(2)}  style={{color:"white", fontWeight:"600"}}/>
+          <Tab label="Other Issues" {...a11yProps(3)}  style={{color:"white", fontWeight:"600"}}/>
         </Tabs>
       </AppBar>
       <SwipeableViews

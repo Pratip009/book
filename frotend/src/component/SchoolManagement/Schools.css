@@ -1,7 +1,7 @@
 .content1{
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 2rem;
+    max-width: 100%;
+ 
+
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
 
@@ -19,4 +19,19 @@
 }
 .expand1{
 max-height: 50rem;
+}
+.schoolbg{
+    background-image: url("../../Image/ourteam.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.additional{
+    background-image: url("../../Image/welcomepage5.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -12,13 +12,32 @@ export default function Blog() {
       }}
     >
       <div className="container___">
-        <h1 style={{ fontSize: "26px", fontFamily: "'Roboto', sans-serif",fontWeight:"700" }}>
-          Our Blog
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "36px",
+            marginTop: "20px",
+          }}
+        >
+          <span className="highlight">Our Blog</span>
         </h1>
         <Box sx={{ width: "auto", height: "100%", overflowY: "hidden" }}>
           <div className="blog-container">
-            <h1 className="blog-title">Title of the Blog Post</h1>
-            <p className="blog-description">
+            <h1
+              className="blog-title"
+              style={{ fontSize: "36px", fontWeight: "500", color: "#FF7700" }}
+            >
+              Title of the Blog Post
+            </h1>
+            <p
+              className="blog-description"
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
+            >
               This is a brief description or summary of the blog post content.
               It can be a few lines long, providing an overview of what the blog
               post is about.

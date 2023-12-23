@@ -2,8 +2,9 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { Card } from "@mui/material";
 import AOS from "aos";
-
+import VerifiedIcon from "@mui/icons-material/Verified";
 import "aos/dist/aos.css";
+import "./Schools.css"
 const School = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -26,7 +27,7 @@ const School = () => {
         {/* <MetaData title={"Training"} /> */}
         <div className="container___">
           <div style={{ marginTop: "-5rem" }} data-aos="fade-down">
-            <h3
+            {/* <h3
               style={{
                 fontSize: "23px",
                 fontWeight: "700",
@@ -34,12 +35,23 @@ const School = () => {
               }}
             >
               School Management Service
-            </h3>
+            </h3> */}
+<div className="schoolbg">
+<h1
+              style={{
+                textAlign: "start",
+                fontSize: "36px",
+                marginTop: "20px",
+              }}
+            >
+              <span className="highlight">School Management Service</span>
+            </h1>
             <p
               style={{
                 fontFamily: "'Roboto', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
+                fontSize: "17px",
               }}
             >
               The Learning Needs team has expansive expertise on school
@@ -55,18 +67,31 @@ const School = () => {
               architecture, affiliation, curriculum, activity books and lesson
               plans, develop activities for students, staff recruitment and
               training workshop. It is important to gain a clear understanding
-              of exactly what is required. We can then develop the project
-              methodology and main delivery. We offer a full range of services,
-              spanning organizational structure, project planning and
-              development. At Learning Needs we value the relationships that we
-              foster with our educational leaders of the schools we collaborate,
-              sometimes over several years. While the knowledge of a school, its
-              context and its strengths and challenges are built up by a single
-              improvement advisor over time, sometimes a fresh pair of eyes or
-              another expert with a particular set of skills or experience, can
-              supplement the support of that improvement partner.
+              of exactly what is required.
             </p>
             <p
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
+            >
+              We can then develop the project methodology and main delivery. We
+              offer a full range of services, spanning organizational structure,
+              project planning and development. At Learning Needs we value the
+              relationships that we foster with our educational leaders of the
+              schools we collaborate, sometimes over several years. While the
+              knowledge of a school, its context and its strengths and
+              challenges are built up by a single improvement advisor over time,
+              sometimes a fresh pair of eyes or another expert with a particular
+              set of skills or experience, can supplement the support of that
+              improvement partner.
+            </p>
+</div>
+            
+
+            {/* <p
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -75,11 +100,22 @@ const School = () => {
               }}
             >
               We help people to start their own school
-            </p>
+            </p> */}
+            <h1
+              style={{
+                textAlign: "start",
+                fontSize: "36px",
+                marginTop: "20px",
+              }}
+            >
+              We Help People to
+              <span className="highlight"> Start Their Own School</span>
+            </h1>
             <Grid
               container
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              style={{ marginTop: "2rem" }}
             >
               <Grid item xs={3}>
                 <Card
@@ -166,7 +202,7 @@ const School = () => {
                   alignItems: "center",
                   justifyContent: "center",
                   color: "black",
-                  backgroundColor: "orange",
+                  backgroundColor: "blue",
                   fontWeight: "500",
                 }}
               >
@@ -356,7 +392,6 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontFamily: "'Roboto', sans-serif",
-                          
                         }}
                       >
                         END TO END SUPPORT
@@ -412,10 +447,26 @@ const School = () => {
               </Grid>
             </Grid>
 
-            <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"70px"}}>
+            {/* <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"70px"}}>
               Starting a new school!
+            </h1> */}
+            <h1
+              style={{
+                textAlign: "start",
+                fontSize: "36px",
+                marginTop: "2rem",
+              }}
+            >
+              Starting a<span className="highlight"> New School!</span>
             </h1>
-            <span>
+            <span
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
+            >
               Our team has experience of developing and managing new schools
               from the very outset. We can advise on:
             </span>
@@ -486,8 +537,25 @@ const School = () => {
               </Grid>
             </div>
 
-            <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"50px" }}>
+            {/* <h1
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "23px",
+                marginTop: "50px",
+              }}
+            >
               New Start-up School
+            </h1> */}
+            <h1
+              style={{
+                textAlign: "start",
+                fontSize: "36px",
+                marginTop: "2rem",
+              }}
+            >
+              <span className="highlight"> New Start-up School</span>
             </h1>
 
             <Grid
@@ -584,11 +652,35 @@ const School = () => {
               </Grid>
             </Grid>
 
-            <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"50px" }}>
+            {/* <h1
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "23px",
+                marginTop: "50px",
+              }}
+            >
               For Existing Schools...
+            </h1> */}
+            <h1
+              style={{
+                textAlign: "start",
+                fontSize: "36px",
+                marginTop: "2rem",
+              }}
+            >
+              <span className="highlight">For Existing Schools</span>
             </h1>
-            <p style={{ display: "flex", alignItems: "flex-start" }}>
-              LEARNING NEEDS provides all levels of support for schools leading
+            <p
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
+            >
+              Learning Needs provides all levels of support for schools leading
               up to their inspections, observations and preparations for
               affiliation networks and collaborations.
             </p>
@@ -641,55 +733,347 @@ const School = () => {
               </Grid>
             </Grid>
 
-            <h1 style={{display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"50px" }}>
+            {/* <h1
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "23px",
+                marginTop: "50px",
+              }}
+            >
               Additional support...
+            </h1> */}
+            <div className="additional">
+            <h1
+              style={{
+                textAlign: "start",
+                fontSize: "36px",
+                marginTop: "2rem",
+              }}
+            >
+              <span className="highlight">Additional support</span>
             </h1>
 
-            <p style={{ display: "flex", alignItems: "flex-start",fontFamily: "'Roboto', sans-serif" }}>
+            <p
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+                fontWeight: "600",
+              }}
+            >
               Team can also assist with:
             </p>
-            <div>
-              <span style={{fontFamily: "'Roboto', sans-serif"}}>
-                1. The quality of teaching (teachers and non-teaching staff)
-              </span>
-              <br />
-              <span>2. Teacher performance evaluation</span>
-              <br />
-              <span>
-                3. Curriculum management including resources and equipment
-              </span>
-              <br />
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            >
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    The quality of teaching (teachers and non-teaching staff)
+                  </p>
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Teacher performance evaluation
+                  </p>
+                </div>
+              </Grid>
 
-              <span>
-                4. Student assessment and evaluation system, educational
-                standards achieved by pupils
-              </span>
-              <br />
-              <span>
-                5. The quality of pupils’ learning, attitudes and behaviour
-              </span>
-              <br />
-              <span>6. Professional development</span>
-              <br />
-              <span>7. Marketing</span>
-              <br />
-              <span>
-                8. Development offices, fundraising, foundations and alumni
-                relations
-              </span>
-              <br />
-              <span>9. Parental services</span>
-              <br />
-              <span>10. Links with parents and the community</span>
-              <br />
-              <span>11. Formation of a parent association or subcommittee</span>
-              <br />
-              <span>12. Higher education</span>
-              <br />
-              <span>13. Staff pay structure</span>
-              <br />
-              <span>14. Health and safety audit</span>
-              <br />
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Curriculum management including resources and equipment
+                  </p>
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Student assessment and evaluation system, educational
+                    standards achieved by pupils
+                  </p>
+                </div>
+              </Grid>
+
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    The quality of pupils’ learning, attitudes and behaviour
+                  </p>
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Professional development
+                  </p>
+                </div>
+              </Grid>
+
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Marketing
+                  </p>
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Development offices, fundraising, foundations and alumni
+                    relations
+                  </p>
+                </div>
+              </Grid>
+
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Parental services
+                  </p>
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Links with parents and the community
+                  </p>
+                </div>
+              </Grid>
+
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Formation of a parent association or subcommittee
+                  </p>
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Higher education{" "}
+                  </p>
+                </div>
+              </Grid>
+
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Staff pay structure
+                  </p>
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <VerifiedIcon style={{ color: "blue" }} />
+                  <p
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Health and safety audit
+                  </p>
+                </div>
+              </Grid>
+            </Grid>
             </div>
           </div>
         </div>

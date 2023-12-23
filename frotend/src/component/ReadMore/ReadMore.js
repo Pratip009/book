@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./ReadMore.css";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -14,19 +14,69 @@ const ReadMore = ({ header, shortContent, longContent }) => {
   const [collapse, setCollapse] = useState(false);
   return (
     <div className="content">
-      <p className="non_important">
+      {/* <p className="non_important">
         Why <span class="circle-sketch-highlight">book Reading</span> is
         important{" "}
-      </p>
+      </p> */}
+      <h1
+        style={{
+          textAlign: "start",
+          fontSize: "36px",
+          marginTop: "20px",
+        }}
+      >
+        Why <span className="highlight">Book Reading </span>is Important
+      </h1>
+      <span
+        style={{
+          fontSize: "17px",
+          marginTop: "14px",
+          fontWeight: "400",
+          textAlign: "justify",
+          display: "inline-block",
+          fontFamily: "'Roboto', sans-serif",
+          lineHeight: "22px",
+        }}
+      >
+        {shortContent}
+      </span>
 
-      {shortContent}
-      <span className={`long-text ${collapse ? "expand" : ""}`}>
+      <span
+        className={`long-text ${collapse ? "expand" : ""}`}
+        style={{
+          fontSize: "17px",
+          marginTop: "14px",
+          fontWeight: "400",
+          textAlign: "justify",
+          display: "inline-block",
+          fontFamily: "'Roboto', sans-serif",
+          lineHeight: "22px",
+        }}
+      >
         {longContent}
 
-        <p className="non_important">
+        {/* <p className="non_important">
           Benefits of <span class="circle-sketch-highlight">Reading Books</span>{" "}
-        </p>
-        <span>
+        </p> */}
+        <h1
+          style={{
+            textAlign: "start",
+            fontSize: "36px",
+            marginTop: "20px",
+          }}
+        >
+          Benefits of <span className="highlight">Reading Books</span>
+        </h1>
+        <span
+          style={{
+            fontSize: "17px",
+            marginTop: "14px",
+            fontWeight: "400",
+            textAlign: "justify",
+            display: "inline-block",
+            fontFamily: "'Roboto', sans-serif",
+          }}
+        >
           Here are few good benefits of reading books. When you read every day
           you:
         </span>
@@ -37,25 +87,89 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />{" "}
                 </ListItemAvatar>
-                <ListItemText primary="Gain valuable knowledge" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Gain valuable knowledge
+                    </Typography>
+                  }
+                />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />{" "}
                 </ListItemAvatar>
-                <ListItemText primary="Exercise your brain" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Exercise your brain
+                    </Typography>
+                  }
+                />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Improve your focus" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Improve your focus{" "}
+                    </Typography>
+                  }
+                />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Improve your memory" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Improve your memory
+                    </Typography>
+                  }
+                />
               </ListItem>
             </List>
           </Grid>
@@ -65,20 +179,68 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Enjoy entertainment" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Enjoy entertainment
+                    </Typography>
+                  }
+                />
               </ListItem>
 
               <ListItem>
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Improve your ability to empathize" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Improve your ability to empathize
+                    </Typography>
+                  }
+                />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Improve your communication skills" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Improve your communication skills
+                    </Typography>
+                  }
+                />
               </ListItem>
             </List>
           </Grid>
@@ -88,19 +250,67 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Reduce stress" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Reduce stress
+                    </Typography>
+                  }
+                />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Improve your mental health" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Improve your mental health
+                    </Typography>
+                  }
+                />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
                   <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
                 </ListItemAvatar>
-                <ListItemText primary="Live longer" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "17px",
+
+                        fontWeight: "400",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontFamily: "'Roboto', sans-serif",
+                      }}
+                    >
+                      Live longer
+                    </Typography>
+                  }
+                />
               </ListItem>
             </List>
           </Grid>

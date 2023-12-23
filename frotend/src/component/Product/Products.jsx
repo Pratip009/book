@@ -123,7 +123,7 @@ function Products() {
                     alt=""
                   />
                 </div>
-                <div>
+                <div className="productBack">
                   <ReadMore
                     header="Why book Reading is important"
                     shortContent="One of the great reasons that signify the importance of book reading in our

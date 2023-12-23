@@ -15,7 +15,13 @@ gap: 0.2rem;
 
 }
 
-
+.productBack{
+  background-image: url("../../Image/teamaaa.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 .products {

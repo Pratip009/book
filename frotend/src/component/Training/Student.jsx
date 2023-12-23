@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../ReadMore/ReadMore.css";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -16,9 +16,15 @@ const Student = () => {
   return (
     <div className="content">
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
-        <img src={require("../../Image/sdworkshop1new.png")} alt="" />
+        <img src={require("../../Image/sdworkshop1neww.png")} alt="" />
       </div>
-      <span style={{textAlign: "justify", display: "inline-block"}}>
+      <span
+        style={{
+          textAlign: "justify",
+          display: "inline-block",
+          fontSize: "17px",
+        }}
+      >
         We offer educative workshops for children, parents and teachers.
         Children’s workshops target different dimensions of the child’s
         personality. Which are essential for global development. Some of these
@@ -32,7 +38,13 @@ const Student = () => {
       </span>
 
       <span className={`long-text ${collapse ? "expand" : ""}`}>
-        <span style={{ display: "flex", textAlign: "start" }}>
+        <span
+          style={{
+            textAlign: "justify",
+            display: "inline-block",
+            fontSize: "17px",
+          }}
+        >
           Learning Needs regularly arrange student workshops in various fields
           to impart practical approach and experiential learning in our
           students, This Workshop is designed to assist students in better
@@ -41,24 +53,111 @@ const Student = () => {
 
         <List sx={{ width: "100%", margin: 0 }}>
           <ListItem>
-            <RadioButtonCheckedIcon fontSize="medium" />
-            <ListItemText primary="Enjoy entertainment" />
+            <RadioButtonCheckedIcon
+              fontSize="large"
+              style={{ color: "grey" }}
+            />
+            {/* <ListItemText primary="Enjoy entertainment" /> */}
+            <ListItemText
+              primary={
+                <Typography
+                  style={{
+                    textAlign: "justify",
+                    display: "inline-block",
+                    fontSize: "17px",
+                    marginLeft: "10px",
+                  }}
+                >
+                  Enjoy entertainment
+                </Typography>
+              }
+            />
           </ListItem>
           <ListItem>
-            <RadioButtonCheckedIcon fontSize="medium" />
-            <ListItemText primary="Make career aspirants to understand their Interest, Aptitude, and Potential." />
+            <RadioButtonCheckedIcon
+              fontSize="large"
+              style={{ color: "grey" }}
+            />
+            <ListItemText
+              primary={
+                <Typography
+                  style={{
+                    textAlign: "justify",
+                    display: "inline-block",
+                    fontSize: "17px",
+                    marginLeft: "10px",
+                  }}
+                >
+                  Make career aspirants to understand their Interest, Aptitude,
+                  and Potential.
+                </Typography>
+              }
+            />
           </ListItem>
           <ListItem>
-            <RadioButtonCheckedIcon fontSize="medium" />
-            <ListItemText primary="Help career aspirants to understand the world of the work (Job Market)." />
+            <RadioButtonCheckedIcon
+              fontSize="large"
+              style={{ color: "grey" }}
+            />
+            {/* <ListItemText primary="Help career aspirants to understand the world of the work (Job Market)." /> */}
+            <ListItemText
+              primary={
+                <Typography
+                  style={{
+                    textAlign: "justify",
+                    display: "inline-block",
+                    fontSize: "17px",
+                    marginLeft: "10px",
+                  }}
+                >
+                  Help career aspirants to understand the world of the work (Job
+                  Market).
+                </Typography>
+              }
+            />
           </ListItem>
           <ListItem>
-            <RadioButtonCheckedIcon fontSize="medium" />
-            <ListItemText primary="Assist career aspirants to develop career alternatives based on their potential." />
+            <RadioButtonCheckedIcon
+              fontSize="large"
+              style={{ color: "grey" }}
+            />
+            {/* <ListItemText primary="Assist career aspirants to develop career alternatives based on their potential." /> */}
+            <ListItemText
+              primary={
+                <Typography
+                  style={{
+                    textAlign: "justify",
+                    display: "inline-block",
+                    fontSize: "17px",
+                    marginLeft: "10px",
+                  }}
+                >
+                  Assist career aspirants to develop career alternatives based
+                  on their potential.
+                </Typography>
+              }
+            />
           </ListItem>
           <ListItem>
-            <RadioButtonCheckedIcon fontSize="medium" />
-            <ListItemText primary="Assist career aspirants in career preparation and development." />
+            <RadioButtonCheckedIcon
+              fontSize="large"
+              style={{ color: "grey" }}
+            />
+            {/* <ListItemText primary="Assist career aspirants in career preparation and development." /> */}
+            <ListItemText
+              primary={
+                <Typography
+                  style={{
+                    textAlign: "justify",
+                    display: "inline-block",
+                    fontSize: "17px",
+                    marginLeft: "10px",
+                  }}
+                >
+                  Assist career aspirants in career preparation and development.
+                </Typography>
+              }
+            />
           </ListItem>
         </List>
       </span>

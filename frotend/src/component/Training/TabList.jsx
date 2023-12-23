@@ -54,16 +54,16 @@ export default function TabList() {
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="secondary"
+          indicatorColor="black"
           textColor="black"
           variant="fullWidth"
           aria-label="full width tabs example"
-          style={{ backgroundColor: "#FF7700" }}
+          style={{ backgroundColor: "#003E90" }}
           
         >
-          <Tab label="Soft Skills Workshop" {...a11yProps(0)} />
-          <Tab label="Students Workshop" {...a11yProps(1)} />
-          <Tab label="Parenting Workshop" {...a11yProps(2)} />
+          <Tab label="Soft Skills Workshop" {...a11yProps(0)} style={{color:"white", fontWeight:"600"}}/>
+          <Tab label="Students Workshop" {...a11yProps(1)}  style={{color:"white", fontWeight:"600"}}/>
+          <Tab label="Parenting Workshop" {...a11yProps(2)}  style={{color:"white", fontWeight:"600"}}/>
         </Tabs>
         
       </Box>

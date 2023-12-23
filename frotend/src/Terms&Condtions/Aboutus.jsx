@@ -686,14 +686,14 @@ const About_UsPage = () => {
                 marginBottom: "2rem",
               }}
             >
-              <Grid item xs={4} md={2} data-aos="fade-left">
+              <Grid item xs={4} md={5} data-aos="fade-left">
                 <img
-                  src={require("../Image/growin.png")}
+                  src={require("../Image/LUN.png")}
                   alt="Learning needs"
                   className={classes.image_about}
                 />
               </Grid>
-              <Grid item xs={4} md={1} data-aos="fade-left"></Grid>
+              
               <Grid item xs={4} md={2} data-aos="fade-left">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
@@ -728,10 +728,10 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              <Grid item xs={4} md={1} data-aos="fade-left"></Grid>
-              <Grid item xs={4} md={2} data-aos="fade-left">
+              
+              <Grid item xs={4} md={5} data-aos="fade-left">
               <img
-                  src={require("../Image/dreambig.png")}
+                  src={require("../Image/LEAR.png")}
                   alt="Learning needs"
                   className={classes.image_about}
                 />

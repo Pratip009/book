@@ -21,6 +21,7 @@ const Parent = () => {
           fontFamily: "'Roboto', sans-serif",
           textAlign: "justify",
           display: "inline-block",
+          fontSize:"17px"
         }}
       >
         Most of the parents always worry about their children & don’t know how
@@ -44,7 +45,7 @@ const Parent = () => {
       </span>
 
       <span className={`long-text ${collapse ? "expand" : ""}`}>
-        <div style={{ marginTop: "2rem" }}>
+        <div style={{ marginTop: "2rem",width:"100%" }}>
           <ParentTab />
         </div>
       </span>

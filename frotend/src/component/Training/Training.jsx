@@ -1,6 +1,7 @@
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./Training.css";
 import { Grid } from "@material-ui/core";
 import TabList from "./TabList";
 import StarIcon from "@mui/icons-material/Star";
@@ -23,22 +24,26 @@ const Training = () => {
         </Grid>
         <Grid item xs={12}>
           <div className="container___">
+            <div>
             <p
               style={{
                 fontWeight: "600",
                 fontFamily: "'Roboto', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
+                fontSize: "17px",
               }}
               data-aos="fade-down"
             >
-              "Soft skills’ Behavioural Shift training is essential because we
-              do not have it in our academic curricula. However it can be
-              developed through continuous training."
+              Soft skills’ Behavioural Shift training is essential because we do
+              not have it in our academic curricula. However it can be developed
+              through continuous training.
             </p>
             <p
               data-aos="slide-right"
               style={{
+                fontSize: "17px",
+                fontWeight: "400",
                 fontFamily: "'Roboto', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
@@ -50,17 +55,29 @@ const Training = () => {
               to help today’s aspiring professionals to succeed in an ever
               increasing competitive and diverse business environment.
             </p>
+            </div>
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+            
               }}
               data-aos="fade-down"
+           
             >
-              <p className="non_important">
+              {/* <p className="non_important">
                 List of <span class="circle-sketch-highlight"> programs </span>
-              </p>
+              </p> */}
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                List of <span className="highlight">Programs</span>
+              </h1>
             </div>
             <div
               style={{
@@ -72,6 +89,7 @@ const Training = () => {
             >
               <p
                 style={{
+                  fontSize: "17px",
                   fontFamily: "'Roboto', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
@@ -102,6 +120,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Effective Communication
@@ -122,6 +141,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Success with Change
@@ -142,6 +162,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Anger Management
@@ -162,6 +183,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Assertiveness in Action
@@ -191,6 +213,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Peak Performance
@@ -211,6 +234,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Complaint Handling
@@ -231,6 +255,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Dealing with Difficult Situations
@@ -251,6 +276,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     {" "}
@@ -281,6 +307,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Leadership Innovation
@@ -301,6 +328,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Questioning Skills
@@ -321,6 +349,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Presentation Skills
@@ -340,6 +369,7 @@ const Training = () => {
                     style={{
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
+                      fontSize: "17px",
                       display: "inline-block",
                     }}
                   >
@@ -370,6 +400,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Multipurpose Theme
@@ -390,6 +421,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Public Speaking
@@ -410,6 +442,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Time Management
@@ -430,6 +463,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Effective Meetings
@@ -459,6 +493,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Power of Influence
@@ -479,6 +514,7 @@ const Training = () => {
                       fontFamily: "'Roboto', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
+                      fontSize: "17px",
                     }}
                   >
                     Customer Service Excellence
@@ -494,12 +530,16 @@ const Training = () => {
                   }}
                 >
                   <StarIcon style={{ color: "orange" }} />
-                  <span style={{
-                
-                fontFamily: "'Roboto', sans-serif",
-                textAlign: "justify",
-                display: "inline-block",
-              }}>Multipurpose Theme</span>
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "17px",
+                    }}
+                  >
+                    Multipurpose Theme
+                  </span>
                 </div>
               </Grid>
               <Grid item xs={3}>
@@ -511,18 +551,22 @@ const Training = () => {
                   }}
                 >
                   <StarIcon style={{ color: "orange" }} />
-                  <span style={{
-                
-                fontFamily: "'Roboto', sans-serif",
-                textAlign: "justify",
-                display: "inline-block",
-              }}>Think Your Way to Success</span>
+                  <span
+                    style={{
+                      fontFamily: "'Roboto', sans-serif",
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "17px",
+                    }}
+                  >
+                    Think Your Way to Success
+                  </span>
                 </div>
               </Grid>
             </Grid>
             <Grid item xs={12} data-aos="fade-up">
-              <div style={{ marginTop: "7rem" }}>
-                <img src={require("../../Image/Challenges1neww.png")} alt="" />
+              <div style={{ marginTop: "2rem" }}>
+                <img src={require("../../Image/train1.png")} alt="" />
               </div>
             </Grid>
 
@@ -533,9 +577,18 @@ const Training = () => {
                 justifyContent: "center",
               }}
             >
-              <p className="non_important" data-aos="slide-right">
+              {/* <p className="non_important" data-aos="slide-right">
                 Our <span class="circle-sketch-highlight"> Strengths </span>{" "}
-              </p>
+              </p> */}
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                Our <span className="highlight">Strength</span>
+              </h1>
             </div>
 
             <div>
@@ -546,14 +599,24 @@ const Training = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop: "2rem",
+                marginTop: "-2rem",
               }}
               data-aos="slide-right"
             >
-              <p className="non_important">
+              {/* <p className="non_important">
                 Way we <span class="circle-sketch-highlight"> deliver </span>{" "}
                 our session
-              </p>
+              </p> */}
+
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                Way we <span className="highlight">deliver </span>our session
+              </h1>
             </div>
 
             <div
@@ -561,12 +624,12 @@ const Training = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                
               }}
               data-aos="slide-left"
             >
-              <img src={require("../../Image/inb3new.png")} alt="" />
+              <img src={require("../../Image/sdworkshop1newwW.png")} alt="" />
             </div>
-            
           </div>
         </Grid>
       </Grid>

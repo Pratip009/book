@@ -1,0 +1,7 @@
+.trainbg{
+    background-image: url("../../Image/welcomepage5.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

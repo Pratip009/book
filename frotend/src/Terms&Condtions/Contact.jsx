@@ -79,10 +79,11 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
       alignItems: "center",
       gap: "1rem",
+     
     },
   },
   supportButton: {
-    backgroundColor: "#292929 !important",
+    backgroundColor: "#003E90 !important",
     color: "white !important",
     width: "fit-content !important",
     padding: "0.8rem 2rem   !important",
@@ -97,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   callButton: {
-    backgroundColor: "#292929 !important",
+    backgroundColor: "#003E90 !important",
     color: "white   !important",
     width: "fit-content     !important",
     padding: "0.8rem 2rem   !important",
@@ -123,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submitButtons: {
     alignSelf: "flex-start",
-    backgroundColor: "#292929 !important",
+    backgroundColor: "#003E90 !important",
     color: "white   !important",
     width: "fit-content     !important",
     padding: "1rem 3rem   !important",
@@ -197,22 +198,69 @@ const ContactForm = () => {
       <div className={classes.contact_Container_contactus}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
-            <Typography variant="h2" className={classes.title_contact_us}>
-              Contact Us
+            <Typography
+              variant="h2"
+              className={classes.title_contact_us}
+              style={{}}
+            >
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                <span className="highlight">Contact Us</span>
+              </h1>
             </Typography>
 
             <Divider className={classes.divider_contact} />
 
             <Typography variant="h4" className={classes.helpTitle_contact_us}>
-              Need Help?
+              <h1
+                className="blog-title"
+                style={{
+                  fontSize: "36px",
+                  fontWeight: "500",
+                  color: "#FF7700",
+                }}
+              >
+                Need Help?
+              </h1>
             </Typography>
             <Typography variant="body2" className={classes.para_contact}>
-              Catch us anytime you want? Fill out our support form below, and
-              we'll be in touch shortly.
+              <p
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  textAlign: "justify",
+                  display: "inline-block",
+                  fontSize: "17px",
+                }}
+              >
+                Catch us anytime you want? Fill out our support form below, and
+                we'll be in touch shortly.
+              </p>
             </Typography>
 
-            <Typography variant="body2" className={classes.address_contacts}>
-              <span style={{ fontWeight: "500", paddingBottom: "0.5rem" }}>
+            <Typography
+              variant="body2"
+              className={classes.address_contacts}
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  textAlign: "justify",
+                  display: "inline-block",
+                  fontSize: "17px",
+                  fontWeight: "600",
+                }}
+              >
                 Learning Needs River Side Road
               </span>
               <br />
@@ -225,7 +273,13 @@ const ContactForm = () => {
             <Typography
               variant="body2"
               className={classes.para_contact}
-              style={{ marginTop: "2rem" }}
+              style={{
+                marginTop: "2rem",
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
             >
               We have live chat available, look for the chat icon in the lower
               right hand corner of this page. If it isn’t there, then give us a
@@ -241,9 +295,9 @@ const ContactForm = () => {
               </strong>
               .
             </Typography>
-            <div className={classes.buttonGroup}>
+            <div className={classes.buttonGroup} >
               <a href="#issue-select" style={{ textDecoration: "none" }}>
-                <Button variant="contained" className={classes.supportButton}>
+                <Button variant="contained" className={classes.supportButton} style={{backgroundColor:"#003E90"}}>
                   Support Form
                 </Button>
               </a>
@@ -266,12 +320,32 @@ const ContactForm = () => {
                 className={classes.title_contact_us}
                 style={{ paddingBottom: "1rem" }}
               >
-                Support Form
+                <h1
+              style={{
+                textAlign: "center",
+                fontSize: "36px",
+                marginTop: "20px",
+              }}
+            >
+              <span className="highlight">Support Form </span>
+             
+            </h1>
               </Typography>
 
               <Typography variant="body2" className={classes.para_contact}>
-                Need a quicker answer? Look for our chat icon on the right hand
+                {/* Need a quicker answer? Look for our chat icon on the right hand
+                side of this page. */}
+                 <p
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
+            >
+              Need a quicker answer? Look for our chat icon on the right hand
                 side of this page.
+            </p>
               </Typography>
 
               <form
@@ -393,6 +467,7 @@ const ContactForm = () => {
                   type="submit"
                   variant="contained"
                   className={classes.submitButtons}
+                
                 >
                   Submit
                 </Button>

@@ -14,7 +14,16 @@ export default function Gallery() {
       }}
     >
       <div className="container___">
-        <h1>Our Gallery</h1>
+      <h1
+              style={{
+                textAlign: "center",
+                fontSize: "36px",
+                marginTop: "20px",
+              }}
+            >
+              <span className="highlight">Our Gallery </span>
+             
+            </h1>
         <Box sx={{ width: "auto", height: "100%", overflowY: "scroll" }}>
           <ImageList variant="masonry" cols={3} gap={8}>
             {itemData.map((item) => (
