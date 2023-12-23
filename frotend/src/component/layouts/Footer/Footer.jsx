@@ -202,8 +202,8 @@ const Footer = () => {
                             <LocalShipping fontSize="large" style={{color:"#FFFFFF"}}/>
                           </div>
                           <div style={{}}>
-                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Express Delivery</p>
-                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Express Delivery</p>
+                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
                             Ships in 24 Hours
                             </p>
                           </div>
@@ -227,8 +227,8 @@ const Footer = () => {
                           <Security fontSize="large" style={{color:"#FFFFFF"}}/>
                           </div>
                           <div>
-                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Brand Warranty</p>
-                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Brand Warranty</p>
+                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
                             Original products
                             </p>
                           </div>
@@ -252,8 +252,8 @@ const Footer = () => {
                           <LocalOffer fontSize="large" style={{color:"#FFFFFF"}}/>
                           </div>
                           <div>
-                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Exciting Deals</p>
-                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Exciting Deals</p>
+                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
                               On all prepaid orders
                             </p>
                           </div>
@@ -277,8 +277,8 @@ const Footer = () => {
                           <CreditCard fontSize="large" style={{color:"#FFFFFF"}}/>
                           </div>
                           <div>
-                            <p style={{ fontSize: "14px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Secure Payments</p>
-                            <p style={{ fontSize: "12px",color:"#ffffff" }}>
+                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Secure Payments</p>
+                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
                             Secure сertificate
                             </p>
                           </div>
