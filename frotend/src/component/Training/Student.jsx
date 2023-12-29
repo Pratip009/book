@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../ReadMore/ReadMore.css";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography ,Collapse} from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -12,7 +12,11 @@ const Student = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-  const [collapse, setCollapse] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className="content">
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
@@ -36,8 +40,8 @@ const Student = () => {
         skills while those for teachers target optimal teacher-student
         relationships and ways for teachers to deal with children better.
       </span>
-
-      <span className={`long-text ${collapse ? "expand" : ""}`}>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <span >
         <span
           style={{
             textAlign: "justify",
@@ -161,17 +165,20 @@ const Student = () => {
           </ListItem>
         </List>
       </span>
+      </Collapse>
+      
 
       <Button
         style={{
           color: "#fff",
           backgroundColor: "#FF7700",
           display: "flex",
+          marginTop:"10px"
         }}
         variant="contained"
-        onClick={() => setCollapse((prev) => !prev)}
+        onClick={handleExpandClick}
       >
-        Read More..
+        {expanded ? 'Read Less' : 'Read More'}
       </Button>
     </div>
   );

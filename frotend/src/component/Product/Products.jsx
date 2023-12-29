@@ -12,21 +12,24 @@ import { clearErrors, getProduct } from "../../actions/productAction";
 import ProductCard from "../Home/ProductCard";
 import Pagination from "react-js-pagination";
 import Slider from "@mui/material/Slider";
-import { Typography } from "@mui/material";
+import { Typography,Collapse } from "@mui/material";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import InventoryIcon from "@mui/icons-material/Inventory";
-import ReadMore from "../ReadMore/ReadMore";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-
+import { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-const categories = ["Level 1", "Level 2", "Level 3", "Level 4"];
+const categories = ["Books", "PDF", "Toys"];
 
 function Products() {
+  const [expanded, setExpanded] = useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   const match = useRouteMatch();
   let keyword = match.params.keyword;
   const dispatch = useDispatch();
@@ -124,23 +127,71 @@ function Products() {
                   />
                 </div>
                 <div className="productBack">
-                  <ReadMore
-                    header="Why book Reading is important"
-                    shortContent="One of the great reasons that signify the importance of book reading in our
-life is that books act as our best friends. Friends are one of the most
-important parts of our life. We can’t imagine our life without the
-companionship of a good friend. Similarly, a book is like a best friend that
-constantly inspires us to become the best versions of ourselves. Books enrich
-our minds with knowledge just like a good friend. We can learn a lot from
-books and they can help us in overcoming our failures as well as shape our
-minds."
-                    longContent="A variety of tasks in daily life require reading and understanding written instructions. If children do
-not learn to read, they cannot read to learn.
-Children should be encouraged to pick up a book they prefer. Children may not have much reading
-time at school but parents can encourage their children to pick up books at home. Reading books
-helps in cognitive mental stimulation and brain exercising, enhancing the child’s imagination
-amongst many other benefits."
-                  />
+                  <div style={{ padding: "20px 70px" }}>
+                    <h1
+                      style={{
+                        textAlign: "start",
+                        fontSize: "36px",
+                        marginTop: "20px",
+                      }}
+                    >
+                      Why <span className="highlight">book Reading</span> is
+                      important
+                    </h1>
+                    <span
+                      style={{
+                        fontFamily: "'Roboto', sans-serif",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontSize: "17px",
+                      }}
+                    >
+                      One of the great reasons that signify the importance of
+                      book reading in our life is that books act as our best
+                      friends. Friends are one of the most important parts of
+                      our life. We can’t imagine our life without the
+                      companionship of a good friend. Similarly, a book is like
+                      a best friend that constantly inspires us to become the
+                      best versions of ourselves. Books enrich our minds with
+                      knowledge just like a good friend. We can learn a lot from
+                      books and they can help us in overcoming our failures as
+                      well as shape our minds.
+                    </span>
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <span
+                      style={{
+                        fontFamily: "'Roboto', sans-serif",
+                        textAlign: "justify",
+                        display: "inline-block",
+                        fontSize: "17px",
+                        marginTop: "2rem",
+                      }}
+                    >
+                      A variety of tasks in daily life require reading and
+                      understanding written instructions. If children do not
+                      learn to read, they cannot read to learn. Children should
+                      be encouraged to pick up a book they prefer. Children may
+                      not have much reading time at school but parents can
+                      encourage their children to pick up books at home. Reading
+                      books helps in cognitive mental stimulation and brain
+                      exercising, enhancing the child’s imagination amongst many
+                      other benefits.
+                    </span>
+                    </Collapse>
+                   
+                    <Button
+        style={{
+          color: "#fff",
+          backgroundColor: "#FF7700",
+          display: "flex",
+          marginTop:"10px"
+        }}
+        variant="contained"
+        onClick={handleExpandClick}
+      >
+        {expanded ? 'Read Less' : 'Read More'}
+      </Button>
+                  </div>
                 </div>
 
                 <div className="prodcutPageTop">

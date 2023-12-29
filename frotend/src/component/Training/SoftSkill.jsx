@@ -3,13 +3,16 @@ import React from "react";
 import "../ReadMore/ReadMore.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { Button } from "@mui/material";
+import { Button,Collapse } from "@mui/material";
 
 const SoftSkill = () => {
+  const [expanded, setExpanded] = useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-  const [collapse, setCollapse] = useState(false);
   return (
     <div className="content">
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
@@ -57,8 +60,8 @@ const SoftSkill = () => {
         designed to highlight those unique traits and put them to work for the
         greater good of your employees and your business.
       </span>
-
-      <span className={`long-text ${collapse ? "expand" : ""}`}>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <span>
         <p
           style={{
             display: "flex",
@@ -99,17 +102,18 @@ const SoftSkill = () => {
           the strength of your employees’ soft skills.
         </span>
       </span>
-
+      </Collapse>
       <Button
         style={{
           color: "#fff",
           backgroundColor: "#FF7700",
           display: "flex",
+          marginTop:"10px"
         }}
         variant="contained"
-        onClick={() => setCollapse((prev) => !prev)}
+        onClick={handleExpandClick}
       >
-        Read More..
+        {expanded ? 'Read Less' : 'Read More'}
       </Button>
     </div>
   );

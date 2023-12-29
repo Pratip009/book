@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../ReadMore/ReadMore.css";
-import { Button } from "@mui/material";
+import { Button ,Collapse} from "@mui/material";
 import ParentTab from "./ParentTab";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -10,7 +10,10 @@ const Parent = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-  const [collapse, setCollapse] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   return (
     <div className="content">
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
@@ -43,23 +46,26 @@ const Parent = () => {
         Needs reveal the secrets of raising happy, confident & well-adjusted
         children.
       </span>
-
-      <span className={`long-text ${collapse ? "expand" : ""}`}>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <span >
         <div style={{ marginTop: "2rem",width:"100%" }}>
           <ParentTab />
         </div>
       </span>
+      </Collapse>
+      
 
       <Button
         style={{
           color: "#fff",
           backgroundColor: "#FF7700",
           display: "flex",
+          marginTop:"10px"
         }}
         variant="contained"
-        onClick={() => setCollapse((prev) => !prev)}
+        onClick={handleExpandClick}
       >
-        Read More..
+        {expanded ? 'Read Less' : 'Read More'}
       </Button>
     </div>
   );
