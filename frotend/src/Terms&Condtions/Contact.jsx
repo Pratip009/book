@@ -79,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
       alignItems: "center",
       gap: "1rem",
-     
     },
   },
   supportButton: {
@@ -222,7 +221,7 @@ const ContactForm = () => {
                 style={{
                   fontSize: "36px",
                   fontWeight: "500",
-                  color: "#FF7700",
+                  color: "#FF4E00",
                 }}
               >
                 Need Help?
@@ -295,9 +294,13 @@ const ContactForm = () => {
               </strong>
               .
             </Typography>
-            <div className={classes.buttonGroup} >
+            <div className={classes.buttonGroup}>
               <a href="#issue-select" style={{ textDecoration: "none" }}>
-                <Button variant="contained" className={classes.supportButton} style={{backgroundColor:"#003E90"}}>
+                <Button
+                  variant="contained"
+                  className={classes.supportButton}
+                  style={{ backgroundColor: "#003E90" }}
+                >
                   Support Form
                 </Button>
               </a>
@@ -321,31 +324,30 @@ const ContactForm = () => {
                 style={{ paddingBottom: "1rem" }}
               >
                 <h1
-              style={{
-                textAlign: "center",
-                fontSize: "36px",
-                marginTop: "20px",
-              }}
-            >
-              <span className="highlight">Support Form </span>
-             
-            </h1>
+                  style={{
+                    textAlign: "center",
+                    fontSize: "36px",
+                    marginTop: "20px",
+                  }}
+                >
+                  <span className="highlight">Support Form </span>
+                </h1>
               </Typography>
 
               <Typography variant="body2" className={classes.para_contact}>
                 {/* Need a quicker answer? Look for our chat icon on the right hand
                 side of this page. */}
-                 <p
-              style={{
-                fontFamily: "'Roboto', sans-serif",
-                textAlign: "justify",
-                display: "inline-block",
-                fontSize: "17px",
-              }}
-            >
-              Need a quicker answer? Look for our chat icon on the right hand
-                side of this page.
-            </p>
+                <p
+                  style={{
+                    fontFamily: "'Roboto', sans-serif",
+                    textAlign: "justify",
+                    display: "inline-block",
+                    fontSize: "17px",
+                  }}
+                >
+                  Need a quicker answer? Look for our chat icon on the right
+                  hand side of this page.
+                </p>
               </Typography>
 
               <form
@@ -467,7 +469,6 @@ const ContactForm = () => {
                   type="submit"
                   variant="contained"
                   className={classes.submitButtons}
-                
                 >
                   Submit
                 </Button>

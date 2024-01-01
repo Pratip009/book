@@ -95,7 +95,7 @@ color: #fcfcfc;
 .headerLogin {
   width: 130px;
  cursor: pointer;
-  background-color: #FF7700;
+  background-color: #FF4E00;
   padding-right: 5px;
   padding-left: 30px;
 }
@@ -172,7 +172,7 @@ list-style: none;
   font-family: 'Roboto', sans-serif;  }
 
 .headerBottom_navMenu ul li a:hover{
-  color: #FF7700;
+  color: #FF4E00;
   transition: .5s ease-in-out;
 
 }
@@ -189,7 +189,7 @@ list-style: none;
 }
 
 .headerBotttom_icons>*:hover{
-  color: #FF7700;
+  color: #FF4E00;
   transition: .5s ease-in-out;
 
 

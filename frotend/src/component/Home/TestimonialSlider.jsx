@@ -56,7 +56,7 @@ const CardOne = ({ img }) => {
         style={{
           width: 120,
           height: 120,
-          border: "1px solid #FF7700",
+          border: "1px solid #FF4E00",
           padding: 7,
           marginBottom: 20,
         }}
@@ -105,7 +105,7 @@ const CardTwo = ({ img }) => {
         style={{
           width: 120,
           height: 120,
-          border: "1px solid #FF7700",
+          border: "1px solid #FF4E00",
           padding: 7,
           marginBottom: 20,
         }}
@@ -154,7 +154,7 @@ const CardThree = ({ img }) => {
         style={{
           width: 120,
           height: 120,
-          border: "1px solid #FF7700",
+          border: "1px solid #FF4E00",
           padding: 7,
           marginBottom: 20,
         }}

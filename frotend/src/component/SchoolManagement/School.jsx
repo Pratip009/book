@@ -565,7 +565,7 @@ const School = () => {
             >
               <Grid item xs={4}>
                 <img
-                  src={require("../../Image/sm1.png")}
+                  src={require("../../Image/sservice1234.png")}
                   alt=""
                   style={{ width: "400px" }}
                 />
@@ -601,7 +601,7 @@ const School = () => {
               </Grid>
               <Grid item xs={4}>
                 <img
-                  src={require("../../Image/sm6.png")}
+                  src={require("../../Image/ssm6.png")}
                   alt=""
                   style={{ width: "400px" }}
                 />
@@ -609,7 +609,7 @@ const School = () => {
               {/* 3rd row */}
               <Grid item xs={4}>
                 <img
-                  src={require("../../Image/sm7.png")}
+                  src={require("../../Image/ssm7.png")}
                   alt=""
                   style={{ width: "400px" }}
                 />

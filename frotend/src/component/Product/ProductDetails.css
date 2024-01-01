@@ -251,7 +251,7 @@ del {
     font-weight: 600;
     font-size: 16px;
     font-family: 'Tinos', serif;
-  color :#FF7700
+  color :#FF4E00
  
 }
 
@@ -315,7 +315,7 @@ ul {
 
 
 .prod_details_addtocart_btn:hover{
-     background: #FF7700 !important;; 
+     background: #FF4E00 !important;; 
   transform: scale(1.05) !important;
  border: none !important;
      transition: transform 0.3s ease 0s !important;
@@ -408,7 +408,7 @@ margin-left: 2px;
 font-family: 'Tinos', serif;
 margin-bottom: 0px;
 padding: 0px;
-  color :#FF7700
+  color :#FF4E00
 
 }
 .productDiscriptiopn_text {

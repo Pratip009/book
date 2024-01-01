@@ -85,7 +85,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
             <List sx={{ width: "100%" }}>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />{" "}
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />{" "}
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -107,7 +107,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />{" "}
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />{" "}
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -129,7 +129,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -151,7 +151,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -177,7 +177,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
             <List sx={{ width: "100%" }}>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -200,7 +200,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
 
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -222,7 +222,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -248,7 +248,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
             <List sx={{ width: "100%" }}>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -270,7 +270,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -292,7 +292,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <MenuBookIcon fontSize="large" style={{ color: "#FF7700" }} />
+                  <MenuBookIcon fontSize="large" style={{ color: "#FF4E00" }} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={
@@ -327,7 +327,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#FF7700",
+          backgroundColor: "#FF4E00",
           display: "flex",
         }}
         variant="contained"

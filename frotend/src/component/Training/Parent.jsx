@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../ReadMore/ReadMore.css";
-import { Button ,Collapse} from "@mui/material";
+import { Button, Collapse } from "@mui/material";
 import ParentTab from "./ParentTab";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -24,7 +24,7 @@ const Parent = () => {
           fontFamily: "'Roboto', sans-serif",
           textAlign: "justify",
           display: "inline-block",
-          fontSize:"17px"
+          fontSize: "17px",
         }}
       >
         Most of the parents always worry about their children & don’t know how
@@ -47,25 +47,24 @@ const Parent = () => {
         children.
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <span >
-        <div style={{ marginTop: "2rem",width:"100%" }}>
-          <ParentTab />
-        </div>
-      </span>
+        <span>
+          <div style={{ marginTop: "2rem", width: "100%" }}>
+            <ParentTab />
+          </div>
+        </span>
       </Collapse>
-      
 
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#FF7700",
+          backgroundColor: "#FF4E00",
           display: "flex",
-          marginTop:"10px"
+          marginTop: "10px",
         }}
         variant="contained"
         onClick={handleExpandClick}
       >
-        {expanded ? 'Read Less' : 'Read More'}
+        {expanded ? "Read Less" : "Read More"}
       </Button>
     </div>
   );

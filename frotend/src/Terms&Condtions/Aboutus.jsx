@@ -204,7 +204,7 @@ const About_UsPage = () => {
                 <Button
                   style={{
                     color: "#fff",
-                    backgroundColor: "#FF7700",
+                    backgroundColor: "#FF4E00",
                     display: "flex",
                   }}
                   variant="contained"
@@ -261,14 +261,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/teamm1.png")}
+                    src={require("../Image/increase.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -295,14 +295,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/effective.png")}
+                    src={require("../Image/bear.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -329,14 +329,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/attitude.png")}
+                    src={require("../Image/best.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -363,14 +363,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/relation.png")}
+                    src={require("../Image/family.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -397,14 +397,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/negotiation.png")}
+                    src={require("../Image/nego.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -431,14 +431,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/innovation.png")}
+                    src={require("../Image/creative-brain.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -472,14 +472,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/nurture.png")}
+                    src={require("../Image/you-can.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -506,14 +506,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/goal.png")}
+                    src={require("../Image/tar.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -540,14 +540,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/needful.png")}
+                    src={require("../Image/inventory.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -574,14 +574,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/essential.png")}
+                    src={require("../Image/warning.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -608,14 +608,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/expectation.png")}
+                    src={require("../Image/dream.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -642,14 +642,14 @@ const About_UsPage = () => {
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/development.png")}
+                    src={require("../Image/developer.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -693,19 +693,19 @@ const About_UsPage = () => {
                   className={classes.image_about}
                 />
               </Grid>
-              
+
               <Grid item xs={4} md={2} data-aos="fade-left">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
-                    src={require("../Image/service.png")}
+                    src={require("../Image/24-hours-support.png")}
                     alt=""
                     style={{ height: "100px" }}
                   />
 
                   <Typography
                     style={{
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       fontSize: "36px",
                       fontFamily: "'Roboto', sans-serif",
 
@@ -728,9 +728,9 @@ const About_UsPage = () => {
                   </Typography>
                 </Card>
               </Grid>
-              
+
               <Grid item xs={4} md={5} data-aos="fade-left">
-              <img
+                <img
                   src={require("../Image/LEAR.png")}
                   alt="Learning needs"
                   className={classes.image_about}
@@ -754,7 +754,7 @@ const About_UsPage = () => {
           <span
             className="sub_headings"
             data-aos="slide-down"
-            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "15px" }}
+            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "17px" }}
           >
             Learning Needs dedicated leadership team is focused on delivering
             quality service and leadership development
@@ -762,7 +762,7 @@ const About_UsPage = () => {
           <span
             className="sub_headings"
             data-aos="slide-down"
-            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "15px" }}
+            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "17px" }}
           >
             programs that exceed our clients’ expectations and help them achieve
             their goals.
@@ -791,7 +791,7 @@ const About_UsPage = () => {
                       fontFamily: "'Roboto', sans-serif",
                       fontSize: "36px",
                       fontWeight: "700",
-                      color: "#FF7700",
+                      color: "#FF4E00",
                     }}
                   >
                     With us , you can build yourself to achieve your goals
@@ -816,7 +816,7 @@ const About_UsPage = () => {
                   <Button
                     style={{
                       color: "#fff",
-                      backgroundColor: "#FF7700",
+                      backgroundColor: "#FF4E00",
                       display: "flex",
                       marginTop: "-10px",
                     }}
@@ -838,7 +838,7 @@ const About_UsPage = () => {
 
                 <Grid item xs={12} sm={6} data-aos="slide-left">
                   <img
-                    src={require("../Image/teeam.png")}
+                    src={require("../Image/join-our-team.png")}
                     alt="Learning needs"
                     className={classes.image_about}
                   />

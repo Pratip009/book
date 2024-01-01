@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../ReadMore/ReadMore.css";
-import { Button, Typography ,Collapse} from "@mui/material";
+import { Button, Typography, Collapse } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -41,144 +41,144 @@ const Student = () => {
         relationships and ways for teachers to deal with children better.
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <span >
-        <span
-          style={{
-            textAlign: "justify",
-            display: "inline-block",
-            fontSize: "17px",
-          }}
-        >
-          Learning Needs regularly arrange student workshops in various fields
-          to impart practical approach and experiential learning in our
-          students, This Workshop is designed to assist students in better
-          career decision making by identifying their potential.
-        </span>
+        <span>
+          <span
+            style={{
+              textAlign: "justify",
+              display: "inline-block",
+              fontSize: "17px",
+            }}
+          >
+            Learning Needs regularly arrange student workshops in various fields
+            to impart practical approach and experiential learning in our
+            students, This Workshop is designed to assist students in better
+            career decision making by identifying their potential.
+          </span>
 
-        <List sx={{ width: "100%", margin: 0 }}>
-          <ListItem>
-            <RadioButtonCheckedIcon
-              fontSize="large"
-              style={{ color: "grey" }}
-            />
-            {/* <ListItemText primary="Enjoy entertainment" /> */}
-            <ListItemText
-              primary={
-                <Typography
-                  style={{
-                    textAlign: "justify",
-                    display: "inline-block",
-                    fontSize: "17px",
-                    marginLeft: "10px",
-                  }}
-                >
-                  Enjoy entertainment
-                </Typography>
-              }
-            />
-          </ListItem>
-          <ListItem>
-            <RadioButtonCheckedIcon
-              fontSize="large"
-              style={{ color: "grey" }}
-            />
-            <ListItemText
-              primary={
-                <Typography
-                  style={{
-                    textAlign: "justify",
-                    display: "inline-block",
-                    fontSize: "17px",
-                    marginLeft: "10px",
-                  }}
-                >
-                  Make career aspirants to understand their Interest, Aptitude,
-                  and Potential.
-                </Typography>
-              }
-            />
-          </ListItem>
-          <ListItem>
-            <RadioButtonCheckedIcon
-              fontSize="large"
-              style={{ color: "grey" }}
-            />
-            {/* <ListItemText primary="Help career aspirants to understand the world of the work (Job Market)." /> */}
-            <ListItemText
-              primary={
-                <Typography
-                  style={{
-                    textAlign: "justify",
-                    display: "inline-block",
-                    fontSize: "17px",
-                    marginLeft: "10px",
-                  }}
-                >
-                  Help career aspirants to understand the world of the work (Job
-                  Market).
-                </Typography>
-              }
-            />
-          </ListItem>
-          <ListItem>
-            <RadioButtonCheckedIcon
-              fontSize="large"
-              style={{ color: "grey" }}
-            />
-            {/* <ListItemText primary="Assist career aspirants to develop career alternatives based on their potential." /> */}
-            <ListItemText
-              primary={
-                <Typography
-                  style={{
-                    textAlign: "justify",
-                    display: "inline-block",
-                    fontSize: "17px",
-                    marginLeft: "10px",
-                  }}
-                >
-                  Assist career aspirants to develop career alternatives based
-                  on their potential.
-                </Typography>
-              }
-            />
-          </ListItem>
-          <ListItem>
-            <RadioButtonCheckedIcon
-              fontSize="large"
-              style={{ color: "grey" }}
-            />
-            {/* <ListItemText primary="Assist career aspirants in career preparation and development." /> */}
-            <ListItemText
-              primary={
-                <Typography
-                  style={{
-                    textAlign: "justify",
-                    display: "inline-block",
-                    fontSize: "17px",
-                    marginLeft: "10px",
-                  }}
-                >
-                  Assist career aspirants in career preparation and development.
-                </Typography>
-              }
-            />
-          </ListItem>
-        </List>
-      </span>
+          <List sx={{ width: "100%", margin: 0 }}>
+            <ListItem>
+              <RadioButtonCheckedIcon
+                fontSize="large"
+                style={{ color: "grey" }}
+              />
+              {/* <ListItemText primary="Enjoy entertainment" /> */}
+              <ListItemText
+                primary={
+                  <Typography
+                    style={{
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "17px",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Enjoy entertainment
+                  </Typography>
+                }
+              />
+            </ListItem>
+            <ListItem>
+              <RadioButtonCheckedIcon
+                fontSize="large"
+                style={{ color: "grey" }}
+              />
+              <ListItemText
+                primary={
+                  <Typography
+                    style={{
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "17px",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Make career aspirants to understand their Interest,
+                    Aptitude, and Potential.
+                  </Typography>
+                }
+              />
+            </ListItem>
+            <ListItem>
+              <RadioButtonCheckedIcon
+                fontSize="large"
+                style={{ color: "grey" }}
+              />
+              {/* <ListItemText primary="Help career aspirants to understand the world of the work (Job Market)." /> */}
+              <ListItemText
+                primary={
+                  <Typography
+                    style={{
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "17px",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Help career aspirants to understand the world of the work
+                    (Job Market).
+                  </Typography>
+                }
+              />
+            </ListItem>
+            <ListItem>
+              <RadioButtonCheckedIcon
+                fontSize="large"
+                style={{ color: "grey" }}
+              />
+              {/* <ListItemText primary="Assist career aspirants to develop career alternatives based on their potential." /> */}
+              <ListItemText
+                primary={
+                  <Typography
+                    style={{
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "17px",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Assist career aspirants to develop career alternatives based
+                    on their potential.
+                  </Typography>
+                }
+              />
+            </ListItem>
+            <ListItem>
+              <RadioButtonCheckedIcon
+                fontSize="large"
+                style={{ color: "grey" }}
+              />
+              {/* <ListItemText primary="Assist career aspirants in career preparation and development." /> */}
+              <ListItemText
+                primary={
+                  <Typography
+                    style={{
+                      textAlign: "justify",
+                      display: "inline-block",
+                      fontSize: "17px",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Assist career aspirants in career preparation and
+                    development.
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </List>
+        </span>
       </Collapse>
-      
 
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#FF7700",
+          backgroundColor: "#FF4E00",
           display: "flex",
-          marginTop:"10px"
+          marginTop: "10px",
         }}
         variant="contained"
         onClick={handleExpandClick}
       >
-        {expanded ? 'Read Less' : 'Read More'}
+        {expanded ? "Read Less" : "Read More"}
       </Button>
     </div>
   );

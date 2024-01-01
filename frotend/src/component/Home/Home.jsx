@@ -84,7 +84,7 @@ function Home() {
                   <div
                     className="text_container"
                     style={{
-                      marginTop: "20px",
+                      marginTop: "60px",
                     }}
                   >
                     <Grid
@@ -151,7 +151,6 @@ function Home() {
                           Read More..
                         </Button>
                       </Grid>
-                      
                     </Grid>
                   </div>
                   <div
@@ -166,9 +165,12 @@ function Home() {
                       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                       sx={{ marginTop: "20px" }}
                     >
-                      <Grid item xs={12} md={6}
-                      //  data-aos="flip-left"
-                       >
+                      <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        //  data-aos="flip-left"
+                      >
                         <Card
                           sx={{
                             maxWidth: 345,
@@ -198,7 +200,7 @@ function Home() {
                               <div className="overlay_section">
                                 <Avatar
                                   style={{
-                                    backgroundColor: "#FF7700",
+                                    backgroundColor: "#FF4E00",
                                     border: "1px solid #D44300",
                                   }}
                                   // variant="rounded"
@@ -226,8 +228,11 @@ function Home() {
                           </Box>
                         </Card>
                       </Grid>
-                      <Grid item xs={12} md={6} 
-                      // data-aos="flip-right"
+                      <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        // data-aos="flip-right"
                       >
                         <Card sx={{ maxWidth: 345, height: 200 }}>
                           <Box sx={{ position: "relative" }}>
@@ -291,20 +296,18 @@ function Home() {
                       style={{
                         textAlign: "center",
                         fontSize: "36px",
-                        marginTop: "20px",
-                        
+                        marginTop: "10px",
                       }}
-                     
                     >
-                      Find The <span className="highlight" >Right Product</span> For You
+                      Find The <span className="highlight">Right Product</span>{" "}
+                      For You
                     </h1>
-                    
                   </div>
                   <span
                     className="sub_headings"
                     // data-aos="slide-right"
                     style={{
-                      fontSize: "17px",
+                      fontSize: "19px",
                       fontFamily: "'Roboto', sans-serif",
                       fontWeight: "500",
                     }}
@@ -340,20 +343,18 @@ function Home() {
                 >
                   <TeamMessage />
                   <div className="circle_text">
-                  <h1
+                    <h1
                       style={{
                         textAlign: "center",
                         fontSize: "36px",
-                        marginTop: "20px",
-                        
+                        marginTop: "60px",
                       }}
-                     
                     >
-                      Our <span className="highlight" >Goals And Objective</span> 
+                      Our <span className="highlight">Goals And Objective</span>
                     </h1>
                   </div>
 
-                  <Grid container spacing={2} >
+                  <Grid container spacing={1}>
                     <Grid item xs={9}>
                       <GoalsObjective />
                     </Grid>
@@ -425,8 +426,6 @@ function Home() {
                 </div>
               </div>
             </div>
-
-           
           </>
         </>
       )}

@@ -53,26 +53,13 @@ const Service = () => {
          
 
          
+         
          <p
            style={{
              fontFamily: "'Roboto', sans-serif",
              textAlign: "justify",
              display: "inline-block",
-           }}
-         >
-           Learning Needs is a training & management consulting company based
-           in Kolkata in the lap of nature beside river Ganges, India. Learning
-           Needs offers a variety of boutique services, tailored to each
-           clients need. Our specialized expertise allows the Individual,
-           Institution, Schools and Organizations to achieve their objectives;
-           we are very much committed to the success of our clients and their
-           individual.
-         </p>
-         <p
-           style={{
-             fontFamily: "'Roboto', sans-serif",
-             textAlign: "justify",
-             display: "inline-block",
+             fontSize:"17px"
            }}
          >
            Learning Needs actively works with various reliable preferred

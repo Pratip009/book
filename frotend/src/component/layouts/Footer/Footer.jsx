@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Grid } from "@material-ui/core";
-import { Box, Button, Card, Paper } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 import FooterHover from "./FooterHover";
-import Services from "../../../Terms&Condtions/Service";
 import "./Footer.css";
 import {
   LocalShipping,
@@ -133,9 +132,9 @@ const Footer = () => {
         <Box
           elevation={16}
           style={{
-            width: "60%",
-            height: "270px",
-
+            width: "65%",
+            height: "220px",
+           
             borderRadius: "10px",
             zIndex: 1,
           }}
@@ -185,75 +184,111 @@ const Footer = () => {
                   <div>
                     <Grid container spacing={1}>
                       <Grid item xs={6} style={{ marginTop: "5px" }}>
-                      <Paper
+                        <Paper
                           elevation={3}
                           style={{
-                            backgroundColor: "#FF7700",
+                            backgroundColor: "#FF4E00",
                             height: "auto",
                             padding: "2px 1px",
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
                             justifyContent: "space-around",
-                            width:"100%"
+                            width: "100%",
                           }}
                         >
                           <div>
-                            <LocalShipping fontSize="large" style={{color:"#FFFFFF"}}/>
+                            <LocalShipping
+                              fontSize="large"
+                              style={{ color: "#FFFFFF" }}
+                            />
                           </div>
                           <div style={{}}>
-                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Express Delivery</p>
-                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
-                            Ships in 24 Hours
+                            <p
+                              style={{
+                                fontSize: "13px",
+                                fontWeight: "600",
+                                color: "#ffffff",
+                                marginBottom: "-5px",
+                              }}
+                            >
+                              Express Delivery
+                            </p>
+                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
+                              Ships in 24 Hours
                             </p>
                           </div>
                         </Paper>
                       </Grid>
                       <Grid item xs={6} style={{ marginTop: "5px" }}>
-                      <Paper
+                        <Paper
                           elevation={3}
                           style={{
-                            backgroundColor: "#FF7700",
+                            backgroundColor: "#FF4E00",
                             height: "auto",
                             padding: "2px 1px",
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
                             justifyContent: "space-around",
-                            width:"100%"
+                            width: "100%",
                           }}
                         >
                           <div>
-                          <Security fontSize="large" style={{color:"#FFFFFF"}}/>
+                            <Security
+                              fontSize="large"
+                              style={{ color: "#FFFFFF" }}
+                            />
                           </div>
                           <div>
-                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Brand Warranty</p>
-                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
-                            Original products
+                            <p
+                              style={{
+                                fontSize: "13px",
+                                fontWeight: "600",
+                                color: "#ffffff",
+                                marginBottom: "-5px",
+                              }}
+                            >
+                              Brand Warranty
+                            </p>
+                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
+                              Original products
                             </p>
                           </div>
                         </Paper>
                       </Grid>
                       <Grid item xs={6}>
-                      <Paper
+                        <Paper
                           elevation={3}
                           style={{
-                            backgroundColor: "#FF7700",
+                            backgroundColor: "#FF4E00",
                             height: "auto",
                             padding: "2px 1px",
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
                             justifyContent: "space-around",
-                            width:"100%"
+                            width: "100%",
                           }}
                         >
                           <div>
-                          <LocalOffer fontSize="large" style={{color:"#FFFFFF"}}/>
+                            <LocalOffer
+                              fontSize="large"
+                              style={{ color: "#FFFFFF" }}
+                            />
                           </div>
                           <div>
-                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Exciting Deals</p>
-                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
+                            <p
+                              style={{
+                                fontSize: "13px",
+                                fontWeight: "600",
+                                color: "#ffffff",
+                                marginBottom: "-5px",
+                              }}
+                            >
+                              Exciting Deals
+                            </p>
+                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
                               On all prepaid orders
                             </p>
                           </div>
@@ -263,23 +298,35 @@ const Footer = () => {
                         <Paper
                           elevation={3}
                           style={{
-                            backgroundColor: "#FF7700",
+                            backgroundColor: "#FF4E00",
                             height: "auto",
                             padding: "2px 1px",
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
                             justifyContent: "space-around",
-                            width:"100%"
+                            width: "100%",
                           }}
                         >
                           <div>
-                          <CreditCard fontSize="large" style={{color:"#FFFFFF"}}/>
+                            <CreditCard
+                              fontSize="large"
+                              style={{ color: "#FFFFFF" }}
+                            />
                           </div>
                           <div>
-                            <p style={{ fontSize: "13px",fontWeight:"600",color:"#ffffff",marginBottom:"-5px" }}>Secure Payments</p>
-                            <p style={{ fontSize: "11px",color:"#ffffff" }}>
-                            Secure сertificate
+                            <p
+                              style={{
+                                fontSize: "13px",
+                                fontWeight: "600",
+                                color: "#ffffff",
+                                marginBottom: "-5px",
+                              }}
+                            >
+                              Secure Payments
+                            </p>
+                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
+                              Secure сertificate
                             </p>
                           </div>
                         </Paper>

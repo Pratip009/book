@@ -59,6 +59,7 @@ export default function FooterHover() {
               textAlign: "justify",
               display: "inline-block",
               color: "#FFFFFF",
+              marginTop:"-10px"
             }}
           >
             Learning Needs offers a variety of boutique services, tailored to

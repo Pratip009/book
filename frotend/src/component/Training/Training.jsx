@@ -25,46 +25,54 @@ const Training = () => {
         <Grid item xs={12}>
           <div className="container___">
             <div>
-            <p
-              style={{
-                fontWeight: "600",
-                fontFamily: "'Roboto', sans-serif",
-                textAlign: "justify",
-                display: "inline-block",
-                fontSize: "17px",
-              }}
-              data-aos="fade-down"
-            >
-              Soft skills’ Behavioural Shift training is essential because we do
-              not have it in our academic curricula. However it can be developed
-              through continuous training.
-            </p>
-            <p
-              data-aos="slide-right"
-              style={{
-                fontSize: "17px",
-                fontWeight: "400",
-                fontFamily: "'Roboto', sans-serif",
-                textAlign: "justify",
-                display: "inline-block",
-              }}
-            >
-              Our skill based training programs are designed to encourage
-              ‘awareness’ in one’s behavioural patterns. Learning Needs
-              international quality Training & Development Programs are designed
-              to help today’s aspiring professionals to succeed in an ever
-              increasing competitive and diverse business environment.
-            </p>
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontFamily: "'Roboto', sans-serif",
+                  textAlign: "center",
+
+                  fontSize: "17px",
+                }}
+                data-aos="fade-down"
+              >
+                Soft skills’ Behavioural Shift training is essential because we
+                do not have it in our academic curricula.
+              </p>
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontFamily: "'Roboto', sans-serif",
+                  textAlign: "center",
+                  fontSize: "17px",
+                }}
+                data-aos="fade-down"
+              >
+                However it can be developed through continuous training.
+              </p>
+              <p
+                data-aos="slide-right"
+                style={{
+                  fontSize: "17px",
+                  fontWeight: "400",
+                  fontFamily: "'Roboto', sans-serif",
+                  textAlign: "justify",
+                  display: "inline-block",
+                }}
+              >
+                Our skill based training programs are designed to encourage
+                ‘awareness’ in one’s behavioural patterns. Learning Needs
+                international quality Training & Development Programs are
+                designed to help today’s aspiring professionals to succeed in an
+                ever increasing competitive and diverse business environment.
+              </p>
             </div>
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-            
               }}
               data-aos="fade-down"
-           
             >
               {/* <p className="non_important">
                 List of <span class="circle-sketch-highlight"> programs </span>
@@ -624,11 +632,10 @@ const Training = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                
               }}
               data-aos="slide-left"
             >
-              <img src={require("../../Image/sdworkshop1newwW.png")} alt="" />
+              <img src={require("../../Image/sdworkshop1newwd.png")} alt="" />
             </div>
           </div>
         </Grid>

@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
     // borderRadius:"20px",
     margin: theme.spacing(4),
     backgroundColor: "white",
-    border:"1px solid grey",
-    
+    border: "1px solid grey",
+
     currsor: "pointer",
     boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
     "&:hover": {
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: 45,
     "&:hover": {
-      backgroundColor: "#FF7700",
+      backgroundColor: "#FF4E00",
       color: "white",
       fontWeight: "bold",
     },
@@ -111,9 +111,11 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Card className={classes.root} 
-    // data-aos="flip-left"
-     elevation={6}>
+    <Card
+      className={classes.root}
+      // data-aos="flip-left"
+      elevation={6}
+    >
       <Link
         className="productCard"
         to={`/product/${product._id}`}

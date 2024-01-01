@@ -98,7 +98,7 @@ function Header() {
                 >
                   <button
                     className="account_box"
-                    style={{ backgroundColor: "#FF7700" }}
+                    style={{ backgroundColor: "#FF4E00" }}
                   >
                     <LockPersonIcon
                       className="headerRetailer_Svg2"
@@ -121,7 +121,7 @@ function Header() {
                 >
                   <button
                     className="account_box"
-                    style={{ backgroundColor: "#FF7700" }}
+                    style={{ backgroundColor: "#FF4E00" }}
                   >
                     <LockPersonIcon
                       className="headerRetailer_Svg2"
@@ -153,7 +153,7 @@ function Header() {
                     fontSize: 29,
                     color: "black",
                     "&:hover": {
-                      color: "#FF7700",
+                      color: "#FF4E00",
                       cursor: "pointer",
                     },
                   }}

@@ -21,7 +21,7 @@ export default function GoalsObjective() {
             image={appp}
           /> */}
           <img
-            src={require("../../Image/budget.png")}
+            src={require("../../Image/dart.png")}
             alt="App"
             style={{ width: "100%", height: "100%" }}
             // data-aos="fade-right"
@@ -93,7 +93,7 @@ export default function GoalsObjective() {
             <Card style={{ boxShadow: "none", backgroundColor: "transparent" }}>
               <CardHeader
                 avatar={
-                  <Avatar style={{ backgroundColor: "#FF7700" }}>
+                  <Avatar style={{ backgroundColor: "#FF4E00" }}>
                     <MarkUnreadChatAltIcon fontSize="large" />
                   </Avatar>
                 }

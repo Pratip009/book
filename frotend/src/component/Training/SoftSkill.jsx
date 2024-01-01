@@ -3,7 +3,7 @@ import React from "react";
 import "../ReadMore/ReadMore.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { Button,Collapse } from "@mui/material";
+import { Button, Collapse } from "@mui/material";
 
 const SoftSkill = () => {
   const [expanded, setExpanded] = useState(false);
@@ -19,7 +19,13 @@ const SoftSkill = () => {
         <img src={require("../../Image/ssworkshopnew.png")} alt="" />
       </div>
 
-      <span style={{ textAlign: "justify", display: "inline-block",fontSize:"17px" }}>
+      <span
+        style={{
+          textAlign: "justify",
+          display: "inline-block",
+          fontSize: "17px",
+        }}
+      >
         The term “soft skills” is a common buzzword that employers and upper
         management often use when it comes to enhancing workplace efficiency and
         hiring new job candidates. But what does it really mean? People aren’t
@@ -38,7 +44,13 @@ const SoftSkill = () => {
       >
         Our Soft Skills Workshop
       </p>
-      <span style={{ textAlign: "justify", display: "inline-block",fontSize:"17px"  }}>
+      <span
+        style={{
+          textAlign: "justify",
+          display: "inline-block",
+          fontSize: "17px",
+        }}
+      >
         Our soft skills workshops are custom-tailored to the needs of your
         company. We can help you identify specific areas of improvement and work
         with your team to enhance their personal, interpersonal, communication,
@@ -61,59 +73,71 @@ const SoftSkill = () => {
         greater good of your employees and your business.
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <span>
-        <p
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            fontSize: "23px",
-            fontWeight: "600",
-          }}
-        >
-          Our Customized Soft Skills Training Workshops
-        </p>
-        <span style={{ textAlign: "justify", display: "inline-block",fontSize:"17px" }}>
-          We keep up with the times at Learning Needs. Online soft skills
-          training is pivotal for the modern workforce because it provides
-          easily accessible resources and tools to engage remote employees and
-          keep them up to date on practical changes that are going on in your
-          organization. We offer custom-tailored and specialized soft skills
-          training solutions designed to engage your team and generate and
-          encourage creativity and give each person an opportunity to showcase
-          their natural talents. At the same time, our esteemed soft skills
-          consultants can teach your team members how to harness the full
-          potential of their existing soft skills while developing other soft
-          skills that may not come as naturally to them.
+        <span>
+          <p
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              fontSize: "23px",
+              fontWeight: "600",
+            }}
+          >
+            Our Customized Soft Skills Training Workshops
+          </p>
+          <span
+            style={{
+              textAlign: "justify",
+              display: "inline-block",
+              fontSize: "17px",
+            }}
+          >
+            We keep up with the times at Learning Needs. Online soft skills
+            training is pivotal for the modern workforce because it provides
+            easily accessible resources and tools to engage remote employees and
+            keep them up to date on practical changes that are going on in your
+            organization. We offer custom-tailored and specialized soft skills
+            training solutions designed to engage your team and generate and
+            encourage creativity and give each person an opportunity to showcase
+            their natural talents. At the same time, our esteemed soft skills
+            consultants can teach your team members how to harness the full
+            potential of their existing soft skills while developing other soft
+            skills that may not come as naturally to them.
+          </span>
+          <p
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              fontSize: "23px",
+              fontWeight: "600",
+            }}
+          >
+            Participate in Our Soft Skills Training Programs
+          </p>
+          <span
+            style={{
+              textAlign: "justify",
+              display: "inline-block",
+              fontSize: "17px",
+            }}
+          >
+            The Learning Needs caters to companies across all industries and
+            sizes. Whether you’re a new or established business, our goal is to
+            help you take your organization to the next level by fully
+            harnessing the strength of your employees’ soft skills.
+          </span>
         </span>
-        <p
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            fontSize: "23px",
-            fontWeight: "600",
-          }}
-        >
-          Participate in Our Soft Skills Training Programs
-        </p>
-        <span style={{ textAlign: "justify", display: "inline-block",fontSize:"17px" }}>
-          The Learning Needs caters to companies across all industries and
-          sizes. Whether you’re a new or established business, our goal is to
-          help you take your organization to the next level by fully harnessing
-          the strength of your employees’ soft skills.
-        </span>
-      </span>
       </Collapse>
       <Button
         style={{
           color: "#fff",
-          backgroundColor: "#FF7700",
+          backgroundColor: "#FF4E00",
           display: "flex",
-          marginTop:"10px"
+          marginTop: "10px",
         }}
         variant="contained"
         onClick={handleExpandClick}
       >
-        {expanded ? 'Read Less' : 'Read More'}
+        {expanded ? "Read Less" : "Read More"}
       </Button>
     </div>
   );

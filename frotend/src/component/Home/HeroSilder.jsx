@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   productButton: {
-    backgroundColor: "#FF7700",
+    backgroundColor: "#FF4E00",
     color: "#fff",
     border: `1px solid ${theme.palette.common.white}`,
     borderRadius: theme.shape.borderRadius,
@@ -73,8 +73,8 @@ const useStyles = makeStyles((theme) => ({
     transition: "background-color 0.3s ease-in-out",
     "&:hover": {
       backgroundColor: theme.palette.common.white,
-      color: "#FF7700",
-      border: "1px solid #FF7700",
+      color: "#FF4E00",
+      border: "1px solid #FF4E00",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",

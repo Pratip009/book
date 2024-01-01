@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./Products.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";
@@ -12,7 +11,7 @@ import { clearErrors, getProduct } from "../../actions/productAction";
 import ProductCard from "../Home/ProductCard";
 import Pagination from "react-js-pagination";
 import Slider from "@mui/material/Slider";
-import { Typography,Collapse } from "@mui/material";
+import { Typography, Collapse } from "@mui/material";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
@@ -22,6 +21,12 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import Grid from "@mui/material/Grid";
+import ListItem from "@mui/material/ListItem";
+import List from "@mui/material/List";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 const categories = ["Books", "PDF", "Toys"];
 
@@ -158,39 +163,331 @@ function Products() {
                       well as shape our minds.
                     </span>
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <span
-                      style={{
-                        fontFamily: "'Roboto', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "17px",
-                        marginTop: "2rem",
-                      }}
-                    >
-                      A variety of tasks in daily life require reading and
-                      understanding written instructions. If children do not
-                      learn to read, they cannot read to learn. Children should
-                      be encouraged to pick up a book they prefer. Children may
-                      not have much reading time at school but parents can
-                      encourage their children to pick up books at home. Reading
-                      books helps in cognitive mental stimulation and brain
-                      exercising, enhancing the child’s imagination amongst many
-                      other benefits.
-                    </span>
+                      <span
+                        style={{
+                          fontFamily: "'Roboto', sans-serif",
+                          textAlign: "justify",
+                          display: "inline-block",
+                          fontSize: "17px",
+                          marginTop: "2rem",
+                        }}
+                      >
+                        A variety of tasks in daily life require reading and
+                        understanding written instructions. If children do not
+                        learn to read, they cannot read to learn. Children
+                        should be encouraged to pick up a book they prefer.
+                        Children may not have much reading time at school but
+                        parents can encourage their children to pick up books at
+                        home. Reading books helps in cognitive mental
+                        stimulation and brain exercising, enhancing the child’s
+                        imagination amongst many other benefits.
+                      </span>
+                      <h1
+                        style={{
+                          textAlign: "start",
+                          fontSize: "36px",
+                          marginTop: "20px",
+                        }}
+                      >
+                        Benefits of{" "}
+                        <span className="highlight">Reading Books</span>
+                      </h1>
+                      <span
+                        style={{
+                          fontSize: "17px",
+                          marginTop: "14px",
+                          fontWeight: "400",
+                          textAlign: "justify",
+                          display: "inline-block",
+                          fontFamily: "'Roboto', sans-serif",
+                        }}
+                      >
+                        Here are few good benefits of reading books. When you
+                        read every day you:
+                      </span>
+                      <Grid
+                        container
+                        rowSpacing={1}
+                        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                      >
+                        <Grid item xs={4}>
+                          <List sx={{ width: "100%" }}>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />{" "}
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Gain valuable knowledge
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />{" "}
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Exercise your brain
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Improve your focus{" "}
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Improve your memory
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                          </List>
+                        </Grid>
+                        <Grid item xs={4}>
+                          <List sx={{ width: "100%" }}>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Enjoy entertainment
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Improve your ability to empathize
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Improve your communication skills
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                          </List>
+                        </Grid>
+                        <Grid item xs={4}>
+                          <List sx={{ width: "100%" }}>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Reduce stress
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Improve your mental health
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Live longer
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                          </List>
+                        </Grid>
+                      </Grid>
                     </Collapse>
-                   
+
                     <Button
-        style={{
-          color: "#fff",
-          backgroundColor: "#FF7700",
-          display: "flex",
-          marginTop:"10px"
-        }}
-        variant="contained"
-        onClick={handleExpandClick}
-      >
-        {expanded ? 'Read Less' : 'Read More'}
-      </Button>
+                      style={{
+                        color: "#fff",
+                        backgroundColor: "#FF4E00",
+                        display: "flex",
+                        marginTop: "10px",
+                      }}
+                      variant="contained"
+                      onClick={handleExpandClick}
+                    >
+                      {expanded ? "Read Less" : "Read More"}
+                    </Button>
                   </div>
                 </div>
 

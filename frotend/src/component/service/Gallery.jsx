@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 // import { ImageListItemBar } from "@mui/material/ImageListItemBar";
+
 export default function Gallery() {
   return (
     <div
@@ -14,31 +15,28 @@ export default function Gallery() {
       }}
     >
       <div className="container___">
-      <h1
-              style={{
-                textAlign: "center",
-                fontSize: "36px",
-                marginTop: "20px",
-              }}
-            >
-              <span className="highlight">Our Gallery </span>
-             
-            </h1>
-        <Box sx={{ width: "auto", height: "100%", overflowY: "scroll" }}>
-          <ImageList variant="masonry" cols={3} gap={8}>
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  src={`${item.img}?w=248&fit=crop&auto=format`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-
-                {/* <ImageListItemBar position="below" title={item.title} /> */}
-              </ImageListItem>
-            ))}
-          </ImageList>
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "36px",
+            marginTop: "20px",
+          }}
+        >
+          <span className="highlight">Our Gallery </span>
+        </h1>
+        <Box sx={{ width: "auto", height: "100%", overflowY: "hidden" }}>
+        <ImageList sx={{ width: "auto", height: "100%", }} cols={3} rowHeight={450}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+            alt={item.title}
+            loading="lazy"
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
         </Box>
       </div>
     </div>
@@ -47,64 +45,51 @@ export default function Gallery() {
 
 const itemData = [
   {
-    img: "https://images.pexels.com/photos/5896836/pexels-photo-5896836.jpeg?auto=compress&cs=tinysrgb&w=600",
-
-    title: "Bed",
-    author: "swabdesign",
+    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+    title: 'Breakfast',
   },
   {
-    img: "https://images.pexels.com/photos/3042432/pexels-photo-3042432.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Books",
-    author: "Pavel Nekoranec",
+    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+    title: 'Burger',
   },
   {
-    img: "https://images.pexels.com/photos/4260314/pexels-photo-4260314.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Sink",
-    author: "Charles Deluvio",
+    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+    title: 'Camera',
   },
   {
-    img: "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "Kitchen",
-    author: "Christian Mackie",
+    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+    title: 'Coffee',
   },
   {
-    img: "https://images.pexels.com/photos/3184658/pexels-photo-3184658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "Blinds",
-    author: "Darren Richardson",
+    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+    title: 'Hats',
   },
   {
-    img: "https://images.pexels.com/photos/5212335/pexels-photo-5212335.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Chairs",
-    author: "Taylor Simpson",
+    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+    title: 'Honey',
   },
   {
-    img: "https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Laptop",
-    author: "Ben Kolde",
+    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+    title: 'Basketball',
   },
   {
-    img: "https://images.pexels.com/photos/8363771/pexels-photo-8363771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "Doors",
-    author: "Philipp Berndt",
+    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+    title: 'Fern',
   },
   {
-    img: "https://images.pexels.com/photos/2675047/pexels-photo-2675047.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Coffee",
-    author: "Jen P.",
+    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+    title: 'Mushrooms',
   },
   {
-    img: "https://images.pexels.com/photos/256491/pexels-photo-256491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "Storage",
-    author: "Douglas Sheppard",
+    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+    title: 'Tomato basil',
   },
   {
-    img: "https://images.pexels.com/photos/3401403/pexels-photo-3401403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "Candle",
-    author: "Fi Bell",
+    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+    title: 'Sea star',
   },
   {
-    img: "https://images.pexels.com/photos/5428258/pexels-photo-5428258.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Coffee table",
-    author: "Hutomo Abrianto",
+    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+    title: 'Bike',
   },
 ];

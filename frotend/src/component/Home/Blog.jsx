@@ -25,7 +25,7 @@ export default function Blog() {
           <div className="blog-container">
             <h1
               className="blog-title"
-              style={{ fontSize: "36px", fontWeight: "500", color: "#FF7700" }}
+              style={{ fontSize: "36px", fontWeight: "500", color: "#FF4E00" }}
             >
               Title of the Blog Post
             </h1>

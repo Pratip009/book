@@ -25,7 +25,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             1.
@@ -62,7 +62,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             2.
@@ -96,7 +96,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             3.
@@ -131,7 +131,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             4.
@@ -168,7 +168,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             5.
@@ -205,7 +205,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             6.
@@ -242,7 +242,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             7.
@@ -280,7 +280,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             8.
@@ -320,7 +320,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             9.
@@ -357,7 +357,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             10.
@@ -394,7 +394,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             11.
@@ -430,7 +430,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             12.
@@ -469,7 +469,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             13.
@@ -504,7 +504,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             14.
@@ -543,7 +543,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             15.
@@ -581,7 +581,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             16.
@@ -619,7 +619,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             17.
@@ -654,7 +654,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             18.
@@ -693,7 +693,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
 
-              color: "#FF7700",
+              color: "#FF4E00",
             }}
           >
             19.
