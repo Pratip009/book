@@ -97,7 +97,8 @@ function NewProduct() {
   }, [dispatch, alert, error, history, success]);
 
   const createProductSubmitHandler = (e) => {
-    e.preventDefault();
+    try {
+      e.preventDefault();
     const myForm = new FormData();
     myForm.set("name", name);
     myForm.set("price", price);
@@ -110,6 +111,10 @@ function NewProduct() {
     });
 
     dispatch(createProduct(myForm));
+    } catch (error) {
+      console.log(error);
+    }
+    
   };
 
   const createProductImagesChange = (e) => {

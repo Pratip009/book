@@ -18,10 +18,7 @@ const productSchema = mongoose.Schema({
     type: String,
     required: [true, "Please Enter product info"],
   },
-  file: {
-    type: String,
-    required: [true, "Please Enter product file link "],
-  },
+
   ratings: {
     type: Number,
     default: 0,

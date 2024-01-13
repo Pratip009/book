@@ -1,7 +1,7 @@
 import "./OurTeam.css";
-import Member1 from "../../Image/teamm3.png";
-import Member2 from "../../Image/teamm6.png";
-import Member3 from "../../Image/teamm7.png";
+import Member1 from "../../Image/w.png";
+import Member2 from "../../Image/m1.png";
+import Member3 from "../../Image/m2.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
