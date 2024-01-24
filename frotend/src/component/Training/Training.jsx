@@ -114,7 +114,7 @@ const Training = () => {
               style={{ marginTop: "1rem" }}
               data-aos="fade-up"
             >
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -135,7 +135,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -156,7 +156,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -177,7 +177,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -207,7 +207,7 @@ const Training = () => {
               style={{ marginTop: "1rem" }}
               data-aos="fade-up"
             >
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -228,7 +228,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -249,7 +249,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -270,7 +270,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -301,7 +301,7 @@ const Training = () => {
               style={{ marginTop: "1rem" }}
               data-aos="fade-up"
             >
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -322,7 +322,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -343,7 +343,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -364,7 +364,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -394,7 +394,7 @@ const Training = () => {
               style={{ marginTop: "1rem" }}
               data-aos="fade-up"
             >
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -415,7 +415,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -436,7 +436,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -457,7 +457,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -487,7 +487,7 @@ const Training = () => {
               style={{ marginTop: "1rem" }}
               data-aos="fade-up"
             >
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -508,7 +508,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -529,7 +529,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -550,7 +550,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",

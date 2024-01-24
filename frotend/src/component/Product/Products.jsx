@@ -28,7 +28,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 
-const categories = ["Books", "PDF", "Toys"];
+const categories = ["Books", "PDF", "Learning Aid"];
 
 function Products() {
   const [expanded, setExpanded] = useState(false);
@@ -210,7 +210,7 @@ function Products() {
                         rowSpacing={1}
                         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                       >
-                        <Grid item xs={4}>
+                        <Grid item md={4} xs={12}>
                           <List sx={{ width: "100%" }}>
                             <ListItem>
                               <ListItemAvatar>
@@ -314,7 +314,7 @@ function Products() {
                             </ListItem>
                           </List>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item md={4} xs={12}>
                           <List sx={{ width: "100%" }}>
                             <ListItem>
                               <ListItemAvatar>
@@ -394,7 +394,7 @@ function Products() {
                             </ListItem>
                           </List>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item md={4} xs={12}>
                           <List sx={{ width: "100%" }}>
                             <ListItem>
                               <ListItemAvatar>

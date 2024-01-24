@@ -355,10 +355,10 @@ function Home() {
                   </div>
 
                   <Grid container spacing={1}>
-                    <Grid item xs={9}>
+                    <Grid item md={9}>
                       <GoalsObjective />
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item md={3} xs={12}>
                       <Card
                         style={{
                           background:

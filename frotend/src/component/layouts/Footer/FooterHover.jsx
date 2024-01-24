@@ -37,7 +37,7 @@ export default function FooterHover() {
       <Grid container spacing={2}>
         <Grid
           item
-          xs={9}
+          xs={12} md={9}
           style={{
             padding: "20px 40px",
           }}
@@ -69,7 +69,7 @@ export default function FooterHover() {
         </Grid>
         <Grid
           item
-          xs={3}
+          xs={12} md={3}
           style={{
             display: "flex",
             alignItems: "center",

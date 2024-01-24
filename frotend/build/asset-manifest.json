@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.254ae815.css",
-    "main.js": "/static/js/main.2b0a3f9a.js",
+    "main.js": "/static/js/main.187ff908.js",
     "static/js/24.e5eb600a.chunk.js": "/static/js/24.e5eb600a.chunk.js",
     "static/css/189.c85d8299.chunk.css": "/static/css/189.c85d8299.chunk.css",
     "static/js/189.a4242e44.chunk.js": "/static/js/189.a4242e44.chunk.js",
@@ -59,22 +59,22 @@
     "static/media/aws.png": "/static/media/aws.e39115aa8192ef4f40b1.png",
     "static/media/teammessage.png": "/static/media/teammessage.4283078f0b83cd48b4be.png",
     "static/media/bes.png": "/static/media/bes.3e087b11a2669565412f.png",
+    "static/media/00008.png": "/static/media/00008.b370a88e38ef00f73cc8.png",
     "static/media/smmm11.png": "/static/media/smmm11.c6e7e9bb8a4552592cd0.png",
     "static/media/family.png": "/static/media/family.5c3cb54dbf3d4d48e88b.png",
     "static/media/school.png": "/static/media/school.eecf20f5be6f104ab96e.png",
     "static/media/blackboard.png": "/static/media/blackboard.c57861c8cbe77b54d5b6.png",
-    "static/media/008.png": "/static/media/008.322e4788a51f838a8b42.png",
     "static/media/low-cost.png": "/static/media/low-cost.1520c01483e3336ec8dc.png",
-    "static/media/4445.png": "/static/media/4445.581cc045ed85cee5e987.png",
     "static/media/pw1.png": "/static/media/pw1.02a5829a253671e278cc.png",
     "static/media/designnn.png": "/static/media/designnn.62909b5b9e33f79ee40e.png",
-    "static/media/443.png": "/static/media/443.246b9b09015936319f7f.png",
     "static/media/money-bag.png": "/static/media/money-bag.df21a3442a3a33303272.png",
     "static/media/terms.jpeg": "/static/media/terms.89a1d1887d8d12cd4af7.jpeg",
     "static/media/teach.png": "/static/media/teach.22852f841ebef0f548bc.png",
     "static/media/bear.png": "/static/media/bear.ea0a8081c118246b7fb8.png",
+    "static/media/learning2.png": "/static/media/learning2.9363fdf2a0bb9fac18c4.png",
     "static/media/big4.png": "/static/media/big4.bfa72449fe11ef9d814c.png",
     "static/media/big3.png": "/static/media/big3.bde8bd216af4882f6846.png",
+    "static/media/all.png": "/static/media/all.9aa81534fb8608cb56ff.png",
     "static/media/w.png": "/static/media/w.1ed5b4d559282e63d089.png",
     "static/media/resource.png": "/static/media/resource.09152c64d566bcd4c169.png",
     "static/media/tar.png": "/static/media/tar.b3e1ac1e6b867b11f9ee.png",
@@ -125,7 +125,7 @@
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
     "main.254ae815.css.map": "/static/css/main.254ae815.css.map",
-    "main.2b0a3f9a.js.map": "/static/js/main.2b0a3f9a.js.map",
+    "main.187ff908.js.map": "/static/js/main.187ff908.js.map",
     "24.e5eb600a.chunk.js.map": "/static/js/24.e5eb600a.chunk.js.map",
     "189.c85d8299.chunk.css.map": "/static/css/189.c85d8299.chunk.css.map",
     "189.a4242e44.chunk.js.map": "/static/js/189.a4242e44.chunk.js.map",
@@ -147,6 +147,6 @@
   },
   "entrypoints": [
     "static/css/main.254ae815.css",
-    "static/js/main.2b0a3f9a.js"
+    "static/js/main.187ff908.js"
   ]
 }

@@ -688,7 +688,7 @@ const About_UsPage = () => {
             >
               <Grid item xs={4} md={5} data-aos="fade-left">
                 <img
-                  src={require("../Image/443.png")}
+                  src={require("../Image/learning2.png")}
                   alt="Learning needs"
                   className={classes.image_about}
                 />
@@ -731,7 +731,7 @@ const About_UsPage = () => {
 
               <Grid item xs={4} md={5} data-aos="fade-left">
                 <img
-                  src={require("../Image/4445.png")}
+                  src={require("../Image/all.png")}
                   alt="Learning needs"
                   className={classes.image_about}
                 />
@@ -838,7 +838,7 @@ const About_UsPage = () => {
 
                 <Grid item xs={12} sm={6} data-aos="slide-left">
                   <img
-                    src={require("../Image/008.png")}
+                    src={require("../Image/00008.png")}
                     alt="Learning needs"
                     className={classes.image_about}
                   />
