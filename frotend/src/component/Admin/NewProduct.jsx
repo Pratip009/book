@@ -41,6 +41,7 @@ function NewProduct() {
   );
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
+
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [Stock, setStock] = useState(0);
@@ -50,7 +51,6 @@ function NewProduct() {
   const [isCategory, setIsCategory] = useState(false);
   const fileInputRef = useRef();
   const [toggle, setToggle] = useState(false);
-  
 
   const classes = useStyles();
   // togle handler =>
@@ -67,6 +67,7 @@ function NewProduct() {
   const handleImageUpload = () => {
     fileInputRef.current.click();
   };
+
   const categories = [
     //  "Cricket Kits",
     //  "Batting Gloves",
@@ -81,7 +82,7 @@ function NewProduct() {
     //  "Accessories",
     "Books",
     "PDF",
-    "Toys"
+    "Learning Aid",
   ];
   useEffect(() => {
     if (error) {
@@ -99,22 +100,22 @@ function NewProduct() {
   const createProductSubmitHandler = (e) => {
     try {
       e.preventDefault();
-    const myForm = new FormData();
-    myForm.set("name", name);
-    myForm.set("price", price);
-    myForm.set("description", description);
-    myForm.set("category", category);
-    myForm.set("Stock", Stock);
-    myForm.set("info", info);
-    images.forEach((currImg) => {
-      myForm.append("images", currImg);
-    });
+      const myForm = new FormData();
+      myForm.set("name", name);
+      myForm.set("price", price);
+      myForm.set("description", description);
+      myForm.set("category", category);
+      myForm.set("Stock", Stock);
+      myForm.set("info", info);
+      images.forEach((currImg) => {
+        myForm.append("images", currImg);
+      });
+     
 
-    dispatch(createProduct(myForm));
+      dispatch(createProduct(myForm));
     } catch (error) {
       console.log(error);
     }
-    
   };
 
   const createProductImagesChange = (e) => {
@@ -133,7 +134,6 @@ function NewProduct() {
       reader.readAsDataURL(file);
     });
   };
- 
 
   return (
     <>
@@ -376,7 +376,9 @@ function NewProduct() {
                         />
                       ))}
                   </Box>
+
                   
+
                   <Button
                     variant="contained"
                     className={classes.loginButton}

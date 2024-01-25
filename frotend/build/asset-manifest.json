@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.254ae815.css",
-    "main.js": "/static/js/main.187ff908.js",
+    "main.js": "/static/js/main.0814c713.js",
     "static/js/24.e5eb600a.chunk.js": "/static/js/24.e5eb600a.chunk.js",
     "static/css/189.c85d8299.chunk.css": "/static/css/189.c85d8299.chunk.css",
     "static/js/189.a4242e44.chunk.js": "/static/js/189.a4242e44.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/360.193dd2f6.chunk.js": "/static/js/360.193dd2f6.chunk.js",
     "static/js/528.72665d36.chunk.js": "/static/js/528.72665d36.chunk.js",
     "static/js/241.ef249346.chunk.js": "/static/js/241.ef249346.chunk.js",
-    "static/js/213.36e944c3.chunk.js": "/static/js/213.36e944c3.chunk.js",
+    "static/js/213.d46b5f30.chunk.js": "/static/js/213.d46b5f30.chunk.js",
     "static/css/693.c85d8299.chunk.css": "/static/css/693.c85d8299.chunk.css",
     "static/js/693.de03d7ec.chunk.js": "/static/js/693.de03d7ec.chunk.js",
     "static/js/449.375abea0.chunk.js": "/static/js/449.375abea0.chunk.js",
@@ -74,13 +74,13 @@
     "static/media/learning2.png": "/static/media/learning2.9363fdf2a0bb9fac18c4.png",
     "static/media/big4.png": "/static/media/big4.bfa72449fe11ef9d814c.png",
     "static/media/big3.png": "/static/media/big3.bde8bd216af4882f6846.png",
-    "static/media/all.png": "/static/media/all.9aa81534fb8608cb56ff.png",
     "static/media/w.png": "/static/media/w.1ed5b4d559282e63d089.png",
     "static/media/resource.png": "/static/media/resource.09152c64d566bcd4c169.png",
     "static/media/tar.png": "/static/media/tar.b3e1ac1e6b867b11f9ee.png",
     "static/media/cropped.png": "/static/media/cropped.42977f946efd34a0c8e1.png",
     "static/media/school-management.jpg": "/static/media/school-management.35383d6bd5e5ce6294ea.jpg",
     "static/media/big2.png": "/static/media/big2.2b25d9f63e712864b826.png",
+    "static/media/need2.png": "/static/media/need2.a6c0db5c5855616f1442.png",
     "static/media/24-hours-support.png": "/static/media/24-hours-support.f7738c2212d11ce5113f.png",
     "static/media/creative-brain.png": "/static/media/creative-brain.cbda2b695bffec08927c.png",
     "static/media/branding.png": "/static/media/branding.3418d71f5546fd1f5598.png",
@@ -125,7 +125,7 @@
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
     "main.254ae815.css.map": "/static/css/main.254ae815.css.map",
-    "main.187ff908.js.map": "/static/js/main.187ff908.js.map",
+    "main.0814c713.js.map": "/static/js/main.0814c713.js.map",
     "24.e5eb600a.chunk.js.map": "/static/js/24.e5eb600a.chunk.js.map",
     "189.c85d8299.chunk.css.map": "/static/css/189.c85d8299.chunk.css.map",
     "189.a4242e44.chunk.js.map": "/static/js/189.a4242e44.chunk.js.map",
@@ -138,7 +138,7 @@
     "360.193dd2f6.chunk.js.map": "/static/js/360.193dd2f6.chunk.js.map",
     "528.72665d36.chunk.js.map": "/static/js/528.72665d36.chunk.js.map",
     "241.ef249346.chunk.js.map": "/static/js/241.ef249346.chunk.js.map",
-    "213.36e944c3.chunk.js.map": "/static/js/213.36e944c3.chunk.js.map",
+    "213.d46b5f30.chunk.js.map": "/static/js/213.d46b5f30.chunk.js.map",
     "693.c85d8299.chunk.css.map": "/static/css/693.c85d8299.chunk.css.map",
     "693.de03d7ec.chunk.js.map": "/static/js/693.de03d7ec.chunk.js.map",
     "449.375abea0.chunk.js.map": "/static/js/449.375abea0.chunk.js.map",
@@ -147,6 +147,6 @@
   },
   "entrypoints": [
     "static/css/main.254ae815.css",
-    "static/js/main.187ff908.js"
+    "static/js/main.0814c713.js"
   ]
 }
