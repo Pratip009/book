@@ -88,21 +88,20 @@ export const orderDetialsReducer = (state = { order: {} }, action) => {
     case ORDER_DETAILS_REQUEST:
       return {
         loading: true,
-        success : false
+        success: false,
       };
 
     case ORDER_DETAILS_SUCCESS:
       return {
         loading: false,
         order: action.payload,
-        success : true
+        success: true,
       };
 
     case ORDER_DETAILS_FAIL:
       return {
         loading: false,
         error: action.payload,
-  
       };
     case CLEAR_ERRORS:
       return {
@@ -149,7 +148,6 @@ export const allOrdersReducer = (state = { orders: [] }, action) => {
 export const deletUpdateOrderReducer = (state = {}, action) => {
   switch (action.type) {
     case DELETE_ORDER_REQUEST:
-    case UPDATE_ORDER_REQUEST:
       return {
         ...state,
         loading: true,
@@ -182,7 +180,7 @@ export const deletUpdateOrderReducer = (state = {}, action) => {
         ...state,
         isDeleted: false,
       };
-      
+
     case UPDATE_ORDER_RESET:
       return {
         ...state,
@@ -230,4 +228,3 @@ export const cancelOrderReducer = (state = {}, action) => {
       return state;
   }
 };
-

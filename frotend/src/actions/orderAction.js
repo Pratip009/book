@@ -24,7 +24,6 @@ import {
 } from "../constants/orderConstant";
 import axios from "axios";
 
-
 export const createOrder = (order) => async (dispatch) => {
   try {
     dispatch({ type: CREATE_ORDER_REQUEST });
@@ -77,7 +76,6 @@ export const getAllOrders = () => async (dispatch) => {
   }
 };
 
-
 // delet Order --> admin
 export const deleteOrder = (id) => async (dispatch) => {
   try {
@@ -91,7 +89,7 @@ export const deleteOrder = (id) => async (dispatch) => {
   }
 };
 
-// update order --> admin (status update) 
+// update order --> admin (status update)
 export const updateOrder = (id, productData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_ORDER_REQUEST });
@@ -113,23 +111,23 @@ export const clearErrors = () => async (dispatch) => {
   dispatch({ type: CLEAR_ERRORS });
 };
 
-
 //cancel order
 
-export const cancelOrder = (orderId) => async (dispatch) => {
+// Action for canceling an order
+export const cancelOrder = (Id) => async (dispatch) => {
   try {
     dispatch({ type: CANCEL_ORDER_REQUEST });
 
-    const { data } = await axios.post(`/api/v1/order/cancel/${orderId}`);
+    const { data } = await axios.delete(`/api/orders/${Id}`);
 
     dispatch({
       type: CANCEL_ORDER_SUCCESS,
-      payload: data,
+      payload: data.success,
     });
   } catch (error) {
     dispatch({
       type: CANCEL_ORDER_FAIL,
-      payload: error.response && error.response.data.message ? error.response.data.message : error.message,
+      payload: error.response.data.message,
     });
   }
 };

@@ -151,7 +151,7 @@ const alert = useAlert();
                   className={classes.value}
                   onClick={() => handleValueCopy("12/23")}
                 >
-                  12/23
+                  12/26
                 </div>
               </div>
               <div>

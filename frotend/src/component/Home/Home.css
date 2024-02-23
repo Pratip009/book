@@ -80,6 +80,17 @@
 .highlight{
   position: relative;
 }
+@keyframes slideAndFadeIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
 .highlight::after{
   content: "";
   width: 100%;
@@ -92,6 +103,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  opacity: 0; /* Start with the element fully transparent */
+  animation: slideAndFadeIn 3s linear forwards;
 }
 .slider {
   top: 1em;

@@ -19,7 +19,13 @@ import { useHistory } from "react-router-dom";
 import DialogBox from "../Product/DialogBox";
 import axios from "axios";
 import { cancelOrder } from "../../actions/orderAction";
-
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@mui/material";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "1rem",
@@ -271,7 +277,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 const createdAt = (user) => {
   const createdAt = new Date(user.createdAt);
   const options = {
@@ -290,12 +295,28 @@ const createdAt = (user) => {
 };
 
 const OrderCard = ({ item, user }) => {
- 
+  const [cancelDialogOpen, setCancelDialogOpen] = useState(false);
+  const [selectedOrderId, setSelectedOrderId] = useState(null);
   const dispatch = useDispatch();
   const history = useHistory();
   const alert = useAlert();
   const [open, setOpen] = useState(false);
+  const handleCancelClick = (orderId) => {
+    setSelectedOrderId(orderId);
+    setCancelDialogOpen(true);
+  };
 
+  const handleCancelOrder = () => {
+    // Dispatch cancel order action here using selectedOrderId
+    console.log("Cancelling order with ID:", selectedOrderId);
+    // Close dialog
+    setCancelDialogOpen(false);
+    // Update UI based on the result
+  };
+
+  const handleCloseDialog = () => {
+    setCancelDialogOpen(false);
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -330,14 +351,7 @@ const OrderCard = ({ item, user }) => {
     alert.success("Item Added to Cart");
     history.push("/cart");
   };
-  const handleCancelOrder = async (orderId) => {
-    // Dispatch the cancelOrder action
-    await dispatch(cancelOrder(orderId));
-  
-    // Optionally, refresh the user's orders or provide feedback
-    alert.success('Order cancelled successfully');
-    // If you need to refresh the user's orders list, you might need to dispatch another action here
-  };
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -346,7 +360,12 @@ const OrderCard = ({ item, user }) => {
     console.log("called");
     setOpen(false);
   };
-
+  const handleCancelOrders = (orderId) => {
+    // Confirm before cancellation
+    if (window.confirm("Are you sure you want to cancel this order?")) {
+      dispatch(cancelOrder(orderId));
+    }
+  };
   return (
     <div className={classes.root}>
       {orderItems.map((product) => (
@@ -455,76 +474,31 @@ const OrderCard = ({ item, user }) => {
                       <Button
                         variant="contained"
                         className={classes.cancelButton}
-                        onClick={() => handleCancelOrder(item._id)}
+                        onClick={() => handleCancelOrders(item._id)}
                       >
                         Cancel Order & Refund
                       </Button>
-                      {/* <Modal
-                        open={opend}
-                        onClose={handleClosed}
-                        aria-labelledby="modal-modal-title"
-                        aria-describedby="modal-modal-description"
+                      <Dialog
+                        open={cancelDialogOpen}
+                        onClose={handleCloseDialog}
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert-dialog-description"
                       >
-                        <Box
-                          sx={{
-                            position: "absolute",
-                            top: "50%",
-                            left: "50%",
-                            transform: "translate(-50%, -50%)",
-                            width: 400,
-                            bgcolor: "white",
-                            border: "2px solid #000",
-                            boxShadow: 24,
-                            p: 4,
-                          }}
-                        >
-                          <Typography
-                            id="modal-modal-description"
-                            sx={{ mt: 2 }}
-                          >
-                            <form onSubmit={handleSubmit}>
-                              <input
-                                type="text"
-                                placeholder="Your Full Name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                              />
-                              <input
-                                type="email"
-                                placeholder="Email Address"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                              />
-                              <textarea
-                                name="message"
-                                value={formData.message}
-                                placeholder="Order Id"
-                                onChange={handleChange}
-                              ></textarea>
-                              <textarea
-                                name="number"
-                                value={formData.number}
-                                placeholder="Mobile Number"
-                                onChange={handleChange}
-                              ></textarea>
-                              <textarea
-                                name="bank"
-                                value={formData.bank}
-                                placeholder="Bank Account Number"
-                                onChange={handleChange}
-                              ></textarea>
-                              <button
-                                type="submit"
-                                onclick={alerts}
-                              >
-                                Submit
-                              </button>
-                            </form>
-                          </Typography>
-                        </Box>
-                      </Modal> */}
+                        <DialogTitle id="alert-dialog-title">
+                          {"Cancel Order"}
+                        </DialogTitle>
+                        <DialogContent>
+                          <DialogContentText id="alert-dialog-description">
+                            Are you sure you want to cancel this order?
+                          </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                          <Button onClick={handleCloseDialog}>Disagree</Button>
+                          <Button onClick={handleCancelOrder} autoFocus>
+                            Agree
+                          </Button>
+                        </DialogActions>
+                      </Dialog>
                     </CardActions>
                   </div>
                 </div>
