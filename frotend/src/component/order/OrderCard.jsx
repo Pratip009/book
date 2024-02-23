@@ -18,6 +18,7 @@ import { addItemToCart } from "../../actions/cartAction";
 import { useHistory } from "react-router-dom";
 import DialogBox from "../Product/DialogBox";
 import axios from "axios";
+import { cancelOrder } from "../../actions/orderAction";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -270,6 +271,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 const createdAt = (user) => {
   const createdAt = new Date(user.createdAt);
   const options = {
@@ -288,16 +290,12 @@ const createdAt = (user) => {
 };
 
 const OrderCard = ({ item, user }) => {
+ 
   const dispatch = useDispatch();
   const history = useHistory();
   const alert = useAlert();
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
 
-  const [opend, setOpend] = useState(false);
-  const handleOpend = () => setOpend(true);
-
-  const handleClosed = () => setOpend(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -332,7 +330,14 @@ const OrderCard = ({ item, user }) => {
     alert.success("Item Added to Cart");
     history.push("/cart");
   };
-
+  const handleCancelOrder = async (orderId) => {
+    // Dispatch the cancelOrder action
+    await dispatch(cancelOrder(orderId));
+  
+    // Optionally, refresh the user's orders or provide feedback
+    alert.success('Order cancelled successfully');
+    // If you need to refresh the user's orders list, you might need to dispatch another action here
+  };
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -450,11 +455,11 @@ const OrderCard = ({ item, user }) => {
                       <Button
                         variant="contained"
                         className={classes.cancelButton}
-                        onClick={handleOpend}
+                        onClick={() => handleCancelOrder(item._id)}
                       >
                         Cancel Order & Refund
                       </Button>
-                      <Modal
+                      {/* <Modal
                         open={opend}
                         onClose={handleClosed}
                         aria-labelledby="modal-modal-title"
@@ -519,7 +524,7 @@ const OrderCard = ({ item, user }) => {
                             </form>
                           </Typography>
                         </Box>
-                      </Modal>
+                      </Modal> */}
                     </CardActions>
                   </div>
                 </div>

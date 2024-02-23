@@ -33,6 +33,32 @@ exports.newOrder = asyncWrapper(async (req, res, next) => {
     order,
   });
 });
+//>>>>>>>cancel order>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// In controller/orderController.js
+
+exports.cancelOrder = async (req, res, next) => {
+  try {
+      const order = await Order.findById(req.params.id);
+
+      if (!order) {
+          return res.status(404).json({ success: false, message: "Order not found" });
+      }
+
+      // Check if the order belongs to the user or if the user is an admin
+      if (order.user.toString() !== req.user._id.toString() && req.user.role !== "admin") {
+          return res.status(403).json({ success: false, message: "Not authorized to cancel this order" });
+      }
+
+      order.status = "Cancelled"; // Assuming "Cancelled" is a valid status in your order model
+      await order.save();
+
+      res.status(200).json({ success: true, message: "Order cancelled successfully" });
+  } catch (error) {
+      return res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+
 
 //>>>>>>>>>>>> getSingleOrder >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.getSingleOrder = asyncWrapper(async (req, res, next) => {

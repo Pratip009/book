@@ -18,7 +18,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRouteMatch } from "react-router-dom";
 import useActive from "../hook/useActive";
 import ReviewCard from "./ReviewCard";
-import { clearErrors, getProductDetails } from "../../actions/productAction";
+import {
+  clearErrors,
+  getProductDetails,
+} from "../../actions/productAction";
 import { useAlert } from "react-alert";
 import MetaData from "../layouts/MataData/MataData";
 import { addItemToCart } from "../../actions/cartAction";
@@ -33,36 +36,53 @@ const ProductDetails = () => {
 
   const [quantity, setQuantity] = useState(1);
 
+
+
   const [previewImg, setPreviewImg] = useState("");
   const { handleActive, activeClass } = useActive(0);
 
-  const { product, loading, error, success } = useSelector(
+  const { product, loading, error , success  } = useSelector(
     (state) => state.productDetails
   );
 
-  useEffect(() => {
-    if (error) {
-      alert.error(error);
-      dispatch(clearErrors);
-    }
-    if (success) {
-      setPreviewImg(product.images[0].url);
 
-      handleActive(0);
-      dispatch({ type: PRODUCT_DETAILS_RESET });
-    }
-    dispatch(getProductDetails(match.params.id));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, error, alert, success, match.params.id]);
+useEffect(() => {
+  if (error) {
+    alert.error(error);
+    dispatch(clearErrors);
+  }
+  if (success) {
+    setPreviewImg(product.images[0].url);
+
+    handleActive(0);
+    dispatch({ type: PRODUCT_DETAILS_RESET });
+  }
+  dispatch(getProductDetails(match.params.id));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [
+  dispatch,
+  error,
+  alert,
+  success,
+  match.params.id,
+
+]);
+
 
   // handling Add-to-cart
   const handleAddItem = () => {
+
     dispatch(addItemToCart(match.params.id, quantity));
     alert.success("Item Added To Cart");
   };
 
+
+
+
+
   // handling Preview image
   const handlePreviewImg = (images, i) => {
+   
     setPreviewImg(images[i].url);
     handleActive(i);
   };

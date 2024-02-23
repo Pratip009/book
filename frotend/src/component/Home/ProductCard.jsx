@@ -94,8 +94,9 @@ const useStyles = makeStyles((theme) => ({
 
 const ProductCard = ({ product }) => {
   React.useEffect(() => {
+    console.log(product);
     AOS.init({ duration: 2000 });
-  }, []);
+  }, [product]);
   const dispatch = useDispatch();
   const classes = useStyles();
   let discountPrice = generateDiscountedPrice(product.price);

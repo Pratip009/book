@@ -20,6 +20,9 @@ import {
   UPDATE_ORDER_SUCCESS,
   UPDATE_ORDER_RESET,
   UPDATE_ORDER_FAIL,
+  CANCEL_ORDER_FAIL,
+  CANCEL_ORDER_REQUEST,
+  CANCEL_ORDER_SUCCESS,
 } from "../constants/orderConstant";
 
 export const newOrderReducer = (state = {}, action) => {
@@ -196,3 +199,35 @@ export const deletUpdateOrderReducer = (state = {}, action) => {
       return state;
   }
 };
+
+//cancel
+
+export const cancelOrderReducer = (state = {}, action) => {
+  switch (action.type) {
+    case CANCEL_ORDER_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case CANCEL_ORDER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isCancelled: true,
+      };
+    case CANCEL_ORDER_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    case CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+    default:
+      return state;
+  }
+};
+
