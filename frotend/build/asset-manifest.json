@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.254ae815.css",
-    "main.js": "/static/js/main.0814c713.js",
+    "main.js": "/static/js/main.7766a3dc.js",
     "static/js/24.e5eb600a.chunk.js": "/static/js/24.e5eb600a.chunk.js",
     "static/css/189.c85d8299.chunk.css": "/static/css/189.c85d8299.chunk.css",
     "static/js/189.a4242e44.chunk.js": "/static/js/189.a4242e44.chunk.js",
@@ -125,7 +125,7 @@
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
     "main.254ae815.css.map": "/static/css/main.254ae815.css.map",
-    "main.0814c713.js.map": "/static/js/main.0814c713.js.map",
+    "main.7766a3dc.js.map": "/static/js/main.7766a3dc.js.map",
     "24.e5eb600a.chunk.js.map": "/static/js/24.e5eb600a.chunk.js.map",
     "189.c85d8299.chunk.css.map": "/static/css/189.c85d8299.chunk.css.map",
     "189.a4242e44.chunk.js.map": "/static/js/189.a4242e44.chunk.js.map",
@@ -147,6 +147,6 @@
   },
   "entrypoints": [
     "static/css/main.254ae815.css",
-    "static/js/main.0814c713.js"
+    "static/js/main.7766a3dc.js"
   ]
 }
