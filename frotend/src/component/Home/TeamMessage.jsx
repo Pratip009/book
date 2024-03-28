@@ -109,7 +109,7 @@ export default function TeamMessage() {
                 variant="body2"
                 className="bottom_team_text"
               >
-                Team Learning Needs- we deliver transformation
+                Team Learning Needs- We facilitate transformation
               </Typography>
             </Grid>
           </Grid>

@@ -337,11 +337,7 @@ function NewProduct() {
                     </label>
                   </div>
                   {/* PDF upload section */}
-                  <input
-                    type="file"
-                    accept=".pdf"
-                    onChange={handlePdfUpload}
-                  />
+                  <input type="file" accept=".pdf" onChange={handlePdfUpload} />
                   {/* Submit button */}
                   <Button
                     variant="contained"

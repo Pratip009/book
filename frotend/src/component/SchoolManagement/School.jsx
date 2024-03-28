@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { Card } from "@mui/material";
 import AOS from "aos";
-import VerifiedIcon from "@mui/icons-material/Verified";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import "aos/dist/aos.css";
 import "./Schools.css"
 const School = () => {
@@ -759,7 +759,7 @@ const School = () => {
                 fontFamily: "'Roboto', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
-                fontSize: "17px",
+                fontSize: "19px",
                 fontWeight: "600",
               }}
             >
@@ -778,7 +778,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -799,7 +799,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -821,7 +821,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -842,7 +842,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -865,7 +865,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -886,7 +886,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -908,7 +908,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -929,7 +929,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -952,7 +952,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -973,7 +973,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -995,7 +995,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -1016,7 +1016,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -1038,7 +1038,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",
@@ -1059,7 +1059,7 @@ const School = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <VerifiedIcon style={{ color: "blue" }} />
+                  <CheckBoxIcon style={{ color: "blue" }} fontSize="19px"/>
                   <p
                     style={{
                       fontFamily: "'Roboto', sans-serif",

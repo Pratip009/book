@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   quote: {
-    fontSize: "17px",
+    fontSize: "25px",
     fontFamily: "'Roboto', sans-serif",
     color: "#000000",
     fontWeight: 600,
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   saleText: {
-    fontSize: "25px",
+    fontSize: "35px",
     fontFamily: "'Roboto', sans-serif",
     fontWeight: "800",
     color: "#2B2B2B",
@@ -82,7 +82,7 @@ const slides = [
   {
     image: require("../../Image/bes.png"),
     quote: "Training & Management Consulting",
-    saleText: "We Deliver Transformation",
+    saleText: "We Facilitate Transformation",
     productText: "Explore More",
   },
   {
@@ -94,7 +94,7 @@ const slides = [
   {
     image: require("../../Image/des9.png"),
     quote: "Training & Management Consulting",
-    saleText: "We Deliver Transformation",
+    saleText: "We Facilitate Transformation",
     productText: "Explore More",
   },
 ];

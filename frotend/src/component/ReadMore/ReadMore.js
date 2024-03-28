@@ -263,7 +263,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontFamily: "'Roboto', sans-serif",
                       }}
                     >
-                      Reduce stress
+                      Stronger Analytical Thinking Skills
                     </Typography>
                   }
                 />
@@ -307,7 +307,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontFamily: "'Roboto', sans-serif",
                       }}
                     >
-                      Live longer
+                      Vocabulary Expansion{" "}
                     </Typography>
                   }
                 />

@@ -119,7 +119,6 @@ function DashboardStaffAddProduct() {
       images.forEach((currImg) => {
         myForm.append("images", currImg);
       });
-     
 
       dispatch(createProduct(myForm));
     } catch (error) {
@@ -385,8 +384,6 @@ function DashboardStaffAddProduct() {
                         />
                       ))}
                   </Box>
-
-                  
 
                   <Button
                     variant="contained"

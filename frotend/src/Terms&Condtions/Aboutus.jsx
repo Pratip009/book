@@ -838,7 +838,7 @@ const About_UsPage = () => {
 
                 <Grid item xs={12} sm={6} data-aos="slide-left">
                   <img
-                    src={require("../Image/0009.png")}
+                    src={require("../Image/team-spirit.png")}
                     alt="Learning needs"
                     className={classes.image_about}
                   />
@@ -850,68 +850,6 @@ const About_UsPage = () => {
           <div className="Our_Team">
             <OurTeam />
           </div>
-
-          <Container
-            className={classes.container_12}
-            style={{ marginTop: "3rem" }}
-          >
-            {/* testimonials */}
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "36px",
-                marginTop: "20px",
-              }}
-            >
-              <span className="highlight">Pride of Learning Needs</span>
-            </h1>
-            {/* <h2 className="clients_headings" >
-              Clients sharing their experience
-            </h2> */}
-            <div className="circle_text" data-aos="fade-up">
-              {/* <p className="non_important" style={{ textAlign: "Start" }}>
-                Clients sharing their{" "}
-                <span class="circle-sketch-highlight">experience</span>
-              </p> */}
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-              >
-                Clients sharing their
-                <span className="highlight"> experience</span>
-              </h1>
-            </div>
-            <div>
-              <TestimonialSlider />
-            </div>
-
-            <div style={{ marginTop: "6rem" }} className="play">
-              <PlayApp />
-            </div>
-          </Container>
-          <Container className="faq" style={{ marginTop: "3rem" }}>
-            <div className="circle_text" data-aos="fade-down">
-              {/* <p className="non_important" style={{ textAlign: "Start" }}>
-                Frequently Asked{" "}
-                <span class="circle-sketch-highlight">Questions</span>
-              </p> */}
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-              >
-                Frequently Asked
-                <span className="highlight"> Questions</span>
-              </h1>
-            </div>
-
-            <Faq />
-          </Container>
           <Container className="founder" style={{ marginTop: "3rem" }}>
             <Grid container spacing={4} justifyContent="center">
               <Grid item xs={12} sm={6}>
@@ -924,7 +862,7 @@ const About_UsPage = () => {
               >
                 About Learning Needs
               </h1> */}
-                <div className="circle_text" data-aos="fade-down">
+                <div className="circle_text" data-aos="fade-left">
                   <h1
                     style={{
                       textAlign: "start",
@@ -1005,6 +943,68 @@ const About_UsPage = () => {
                 />
               </Grid>
             </Grid>
+          </Container>
+          <Container
+            className={classes.container_12}
+            style={{ marginTop: "3rem" }}
+          >
+            {/* testimonials */}
+
+            <h1
+              style={{
+                textAlign: "center",
+                fontSize: "36px",
+                marginTop: "20px",
+              }}
+            >
+              <span className="highlight">Pride of Learning Needs</span>
+            </h1>
+            {/* <h2 className="clients_headings" >
+              Clients sharing their experience
+            </h2> */}
+            <div className="circle_text" data-aos="fade-up">
+              {/* <p className="non_important" style={{ textAlign: "Start" }}>
+                Clients sharing their{" "}
+                <span class="circle-sketch-highlight">experience</span>
+              </p> */}
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                Clients sharing their
+                <span className="highlight"> experience</span>
+              </h1>
+            </div>
+            <div>
+              <TestimonialSlider />
+            </div>
+
+            <div style={{ marginTop: "6rem" }} className="play">
+              <PlayApp />
+            </div>
+          </Container>
+          <Container className="faq" style={{ marginTop: "3rem" }}>
+            <div className="circle_text" data-aos="fade-down">
+              {/* <p className="non_important" style={{ textAlign: "Start" }}>
+                Frequently Asked{" "}
+                <span class="circle-sketch-highlight">Questions</span>
+              </p> */}
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                Frequently Asked
+                <span className="highlight"> Questions</span>
+              </h1>
+            </div>
+
+            <Faq />
           </Container>
 
           <div className={classes.buttonContainer_about}>

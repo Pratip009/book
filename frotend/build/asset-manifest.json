@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.80cf8662.css",
-    "main.js": "/static/js/main.a2536b83.js",
+    "main.css": "/static/css/main.83aaf138.css",
+    "main.js": "/static/js/main.759887c6.js",
     "static/js/24.e5eb600a.chunk.js": "/static/js/24.e5eb600a.chunk.js",
     "static/js/189.0b4173a4.chunk.js": "/static/js/189.0b4173a4.chunk.js",
     "static/js/649.fca3d079.chunk.js": "/static/js/649.fca3d079.chunk.js",
@@ -22,7 +22,6 @@
     "static/media/off.jpg": "/static/media/off.f25e2cba145c4d334da8.jpg",
     "static/media/products.png": "/static/media/products.e0f41533dcc4e92ed743.png",
     "static/media/st2.png": "/static/media/st2.45ff4244807379712831.png",
-    "static/media/sdworkshop1newwd.png": "/static/media/sdworkshop1newwd.d1b7621290ff3ab7c8f0.png",
     "static/media/sdworkshop1neww.png": "/static/media/sdworkshop1neww.56a67ea1f237a07db544.png",
     "static/media/ssworkshopneww.png": "/static/media/ssworkshopneww.bcbcd01540408321e3d0.png",
     "static/media/servicessss.png": "/static/media/servicessss.9318b3723d6aafe9fb69.png",
@@ -32,6 +31,7 @@
     "static/media/rossse.webp": "/static/media/rossse.84571293c913cb39c17d.webp",
     "static/media/founder.jpg": "/static/media/founder.2c89e9820b3b5f22a699.jpg",
     "static/media/des9.png": "/static/media/des9.7eff2f3cd81d3fd700d9.png",
+    "static/media/sssa.png": "/static/media/sssa.4b321eb49235ce9fd84c.png",
     "static/media/sservice1234.png": "/static/media/sservice1234.a802be10700db6b68ea4.png",
     "static/media/ssm7.png": "/static/media/ssm7.2da5a472cc2a0d5aff4b.png",
     "static/media/sm3.png": "/static/media/sm3.e0f4fb8a3bf81bed60b4.png",
@@ -53,7 +53,6 @@
     "static/media/aws.png": "/static/media/aws.e39115aa8192ef4f40b1.png",
     "static/media/teammessage.png": "/static/media/teammessage.4283078f0b83cd48b4be.png",
     "static/media/bes.png": "/static/media/bes.3e087b11a2669565412f.png",
-    "static/media/0009.png": "/static/media/0009.e21df7a803b0f1a8a330.png",
     "static/media/smmm11.png": "/static/media/smmm11.c6e7e9bb8a4552592cd0.png",
     "static/media/family.png": "/static/media/family.5c3cb54dbf3d4d48e88b.png",
     "static/media/school.png": "/static/media/school.eecf20f5be6f104ab96e.png",
@@ -66,6 +65,7 @@
     "static/media/teach.png": "/static/media/teach.22852f841ebef0f548bc.png",
     "static/media/bear.png": "/static/media/bear.ea0a8081c118246b7fb8.png",
     "static/media/learning2.png": "/static/media/learning2.9363fdf2a0bb9fac18c4.png",
+    "static/media/team-spirit.png": "/static/media/team-spirit.5005e82226d2731ec2a3.png",
     "static/media/big4.png": "/static/media/big4.bfa72449fe11ef9d814c.png",
     "static/media/big3.png": "/static/media/big3.bde8bd216af4882f6846.png",
     "static/media/w.png": "/static/media/w.1ed5b4d559282e63d089.png",
@@ -118,8 +118,8 @@
     "static/media/ball.svg": "/static/media/ball.b3919a97ec86bd8bd217d5fecd6e904d.svg",
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
-    "main.80cf8662.css.map": "/static/css/main.80cf8662.css.map",
-    "main.a2536b83.js.map": "/static/js/main.a2536b83.js.map",
+    "main.83aaf138.css.map": "/static/css/main.83aaf138.css.map",
+    "main.759887c6.js.map": "/static/js/main.759887c6.js.map",
     "24.e5eb600a.chunk.js.map": "/static/js/24.e5eb600a.chunk.js.map",
     "189.0b4173a4.chunk.js.map": "/static/js/189.0b4173a4.chunk.js.map",
     "649.fca3d079.chunk.js.map": "/static/js/649.fca3d079.chunk.js.map",
@@ -134,7 +134,7 @@
     "825.cf8e7df5.chunk.js.map": "/static/js/825.cf8e7df5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80cf8662.css",
-    "static/js/main.a2536b83.js"
+    "static/css/main.83aaf138.css",
+    "static/js/main.759887c6.js"
   ]
 }

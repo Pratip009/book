@@ -29,7 +29,7 @@ export default function Welcome() {
             >
               Necessity is the Mother of Invention, and this proverb perfectly
               defines the inception of Learning Needs. We believe all companies
-              have one thing in common - they survive and thrive by creating and
+              have one thing in common they survive and thrive by creating and
               maintaining satisfied customers through their people. The Learning
               Needs understands the importance of awakening, developing, and
               rewarding the greatness of a company's people through

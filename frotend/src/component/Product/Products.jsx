@@ -282,7 +282,7 @@ function Products() {
                                       fontFamily: "'Roboto', sans-serif",
                                     }}
                                   >
-                                    Improve your focus{" "}
+                                    Improve your focus and concentration
                                   </Typography>
                                 }
                               />
@@ -392,6 +392,31 @@ function Products() {
                                 }
                               />
                             </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Mental Stimulation
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
                           </List>
                         </Grid>
                         <Grid item md={4} xs={12}>
@@ -416,7 +441,7 @@ function Products() {
                                       fontFamily: "'Roboto', sans-serif",
                                     }}
                                   >
-                                    Reduce stress
+                                    Stronger Analytical Thinking Skills
                                   </Typography>
                                 }
                               />
@@ -466,7 +491,32 @@ function Products() {
                                       fontFamily: "'Roboto', sans-serif",
                                     }}
                                   >
-                                    Live longer
+                                    Vocabulary Expansion
+                                  </Typography>
+                                }
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <ListItemAvatar>
+                                <MenuBookIcon
+                                  fontSize="large"
+                                  style={{ color: "#FF4E00" }}
+                                />
+                              </ListItemAvatar>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    variant="body2"
+                                    style={{
+                                      fontSize: "17px",
+
+                                      fontWeight: "400",
+                                      textAlign: "justify",
+                                      display: "inline-block",
+                                      fontFamily: "'Roboto', sans-serif",
+                                    }}
+                                  >
+                                    Free Entertainment
                                   </Typography>
                                 }
                               />

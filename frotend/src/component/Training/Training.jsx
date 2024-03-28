@@ -33,7 +33,7 @@ const Training = () => {
 
                   fontSize: "17px",
                 }}
-                data-aos="fade-down"
+                
               >
                 Soft skills’ Behavioural Shift training is essential because we
                 do not have it in our academic curricula.
@@ -45,12 +45,12 @@ const Training = () => {
                   textAlign: "center",
                   fontSize: "17px",
                 }}
-                data-aos="fade-down"
+               
               >
                 However it can be developed through continuous training.
               </p>
               <p
-                data-aos="slide-right"
+                
                 style={{
                   fontSize: "17px",
                   fontWeight: "400",
@@ -72,7 +72,7 @@ const Training = () => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              data-aos="fade-down"
+              data-aos="fade-up"
             >
               {/* <p className="non_important">
                 List of <span class="circle-sketch-highlight"> programs </span>
@@ -635,7 +635,7 @@ const Training = () => {
               }}
               data-aos="slide-left"
             >
-              <img src={require("../../Image/sdworkshop1newwd.png")} alt="" />
+              <img src={require("../../Image/sssa.png")} alt="" />
             </div>
           </div>
         </Grid>
