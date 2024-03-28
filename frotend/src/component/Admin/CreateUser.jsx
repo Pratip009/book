@@ -1,149 +1,50 @@
-import React, { useState, useEffect } from "react";
-import MetaData from "../layouts/MataData/MataData";
-import Sidebar from "./Siderbar";
-import Navbar from "./Navbar";
-import useStyles from "../User/LoginFromStyle";
-import { TextField, Button } from "@mui/material";
-import axios from "axios";
-import { baseURL } from "../utils/constant";
-import { useRef } from "react";
-import AdminMessageList from "./adminMessageList";
-import { Input } from "@material-ui/core";
+import React, { useState, useEffect, useRef } from 'react';
 
-function CreateUser() {
-  const [toggle, setToggle] = useState(false);
-  const [input, setInput] = useState("");
-  const [secondInput, setSecondInput] = useState("");
+export default function AdminChat() {
+  const [messages, setMessages] = useState([]);
+  const [replyText, setReplyText] = useState('');
+  const [replyFile, setReplyFile] = useState(null);
+  const chatContainerRef = useRef(null);
 
-  const [images, setImages] = useState([]);
-  const [imagesPreview, setImagesPreview] = useState([]);
-  const [tasksz, setTasksz] = useState([]);
-  const [updateUI, setUpdateUI] = useState(false);
-  const [updateId, setUpdateId] = useState(null);
-  const fileInputRef = useRef();
-
-  const classes = useStyles();
-  // togle handler =>
-  const toggleHandler = () => {
-    console.log("toggle");
-    setToggle(!toggle);
+  // Function to handle sending a reply to the special user
+  const sendReply = () => {
+    // Here you would send the reply text and/or file to the special user
+    // For simplicity, I'm just updating the messages state with the reply
+    const newMessage = {
+      sender: 'admin',
+      message: replyText,
+      file: replyFile,
+    };
+    setMessages([...messages, newMessage]);
+    setReplyText(''); // Clearing the reply text input field
+    setReplyFile(null); // Clearing the reply file input field
   };
-  const createProductImagesChange = (e) => {
-    const files = Array.from(e.target.files);
-    setImages([]);
-    setImagesPreview([]);
 
-    files.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setImagesPreview((old) => [...old, reader.result]);
-          setImages((old) => [...old, reader.result]);
-        }
-      };
-      reader.readAsDataURL(file);
-    });
-  };
+  // Automatically scroll to the bottom of the chat container when messages change
   useEffect(() => {
-    axios.get(`${baseURL}/get`).then((res) => {
-      console.log(res.data);
-      setTasksz(res.data);
-    });
-  }, [updateUI]);
-
-  
-
-  const addTasks = () => {
-    axios
-      .post(`${baseURL}/save`, { task: input, secondtasks: secondInput })
-      .then((res) => {
-        console.log(res.data);
-        setSecondInput("");
-        setUpdateUI((prevState) => !prevState);
-      });
-  };
-  const updateMode = (id, text) => {
-    setSecondInput(text);
-    setUpdateId(id);
-  };
-
-  const updateTasks = () => {
-    axios
-      .put(`${baseURL}/update/${updateId}`, {
-        task: input,
-        secondtasks: secondInput,
-      })
-      .then((res) => {
-        console.log(res.data);
-        setUpdateUI((prevState) => !prevState);
-        setUpdateId(null);
-        setSecondInput("");
-      });
-  };
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   return (
-    <>
-      <>
-        <MetaData title={"Notice"} />
-        <div className={classes.updateProduct}>
-          <div
-            className={
-              !toggle ? `${classes.firstBox1}` : `${classes.toggleBox1}`
-            }
-          >
-            <Sidebar />
-          </div>
-
-          <div className={classes.secondBox1}>
-            <div className={classes.navBar1}>
-              <Navbar toggleHandler={toggleHandler} />
+    <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: 'auto', marginTop: '50px' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Admin Chat</h1>
+      <div style={{ maxHeight: '300px', overflowY: 'scroll', border: '1px solid #ccc', marginBottom: '20px', padding: '10px' }} ref={chatContainerRef}>
+        {messages.map((msg, index) => (
+          <div key={index} style={{ marginBottom: '10px' }}>
+            <div style={{ textAlign: msg.sender === 'admin' ? 'right' : 'left' }}>
+              <div style={{ backgroundColor: msg.sender === 'admin' ? '#e6f2ff' : '#f2f2f2', padding: '10px', borderRadius: '10px', display: 'inline-block', maxWidth: '70%' }}>
+                {msg.message}
+                {msg.file && <img src={URL.createObjectURL(msg.file)} alt="Uploaded" style={{ maxWidth: '100%', marginTop: '5px' }} />}
+              </div>
             </div>
-
-            <div
-              className={`${classes.formContainer} ${classes.formContainer2}`}
-            >
-              <main>
-                <div className="heading">
-                  <h1>Reply</h1>
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Reply"
-                    multiline
-                    rows={1}
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                  />
-                  
-                  
-                  <Button
-                    variant="contained"
-                    className={classes.loginButton}
-                    fullWidth
-                    type="submit"
-                    onClick={updateId ? updateTasks : addTasks}
-                  >
-                    {updateId ? "Update Message" : "Send Message"}
-                  </Button>
-                </div>
-              </main>
-            </div>
-            <ul>
-              {tasksz.map((task) => (
-                <AdminMessageList
-                  key={task._id}
-                  id={task._id}
-                  task={task.task}
-                  secondtasks={task.secondtasks}
-                  setUpdateUI={setUpdateUI}
-                  updateMode={updateMode}
-                />
-              ))}
-            </ul>
           </div>
-        </div>
-      </>
-    </>
+        ))}
+      </div>
+      <input type="text" value={replyText} onChange={(e) => setReplyText(e.target.value)} placeholder="Type your reply..." style={{ width: '100%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} />
+      <input type="file" onChange={(e) => setReplyFile(e.target.files[0])} style={{ width: '100%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} />
+      <button onClick={sendReply} style={{ padding: '10px', width: '100%', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Send Reply</button>
+    </div>
   );
 }
-export default CreateUser;

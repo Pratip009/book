@@ -56,8 +56,7 @@ const School = () => {
             >
               The Learning Needs team has expansive expertise on school
               management issues and can provide all necessary support in various
-              ways. Our executives are all well-respected figures in the
-              education sector, along with our team, are here to advise you on
+              ways. Our team member can advise you on
               any issues which your school may have. This could be staff
               performance issues, appointing a new governance structure, or even
               a new school build. Learning Needs subject matter experts will

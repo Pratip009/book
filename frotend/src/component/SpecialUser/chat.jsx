@@ -1,139 +1,117 @@
-import React, { useState, useEffect } from "react";
-import MetaData from "../layouts/MataData/MataData";
-import UserDashboard from "./userDashboard";
-import Navbar from "./userDashboardNavbar";
-import useStyles from "../User/LoginFromStyle";
-import { TextField, Button } from "@mui/material";
-import axios from "axios";
-import { baseURL } from "../utils/constant";
-import { useRef } from "react";
-import MessageList from "./messageList";
-function Chat() {
-  const [toggle, setToggle] = useState(false);
-  const [input, setInput] = useState("");
-  const [secondInput, setSecondInput] = useState("");
+import React, { useState, useEffect, useRef } from "react";
 
-  const [images, setImages] = useState([]);
-  const [imagesPreview, setImagesPreview] = useState([]);
-  const [taskss, setTaskss] = useState([]);
-  const [updateUI, setUpdateUI] = useState(false);
-  const [updateId, setUpdateId] = useState(null);
-  const fileInputRef = useRef();
+export default function Chat() {
+  const [queryText, setQueryText] = useState("");
+  const [queryFile, setQueryFile] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const chatContainerRef = useRef(null);
 
-  const classes = useStyles();
-  // togle handler =>
-  const toggleHandler = () => {
-    console.log("toggle");
-    setToggle(!toggle);
+  // Function to handle sending the query to the admin
+  const sendQuery = () => {
+    // Here you would send the message and file to the backend
+    // For simplicity, I'm just updating the messages state with the query
+    const newMessage = {
+      sender: "specialUser",
+      message: queryText,
+      file: queryFile,
+    };
+    setMessages([...messages, newMessage]);
+    setQueryText(""); // Clearing the text input field
+    setQueryFile(null); // Clearing the file input field
   };
-  const createProductImagesChange = (e) => {
-    const files = Array.from(e.target.files);
-    setImages([]);
-    setImagesPreview([]);
 
-    files.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setImagesPreview((old) => [...old, reader.result]);
-          setImages((old) => [...old, reader.result]);
-        }
-      };
-      reader.readAsDataURL(file);
-    });
-  };
+  // Automatically scroll to the bottom of the chat container when messages change
   useEffect(() => {
-    axios.get(`${baseURL}/get`).then((res) => {
-      console.log(res.data);
-      setTaskss(res.data);
-    });
-  }, [updateUI]);
-
-  const addTasks = () => {
-    axios.post(`${baseURL}/save`, { task: input }).then((res) => {
-      console.log(res.data);
-      setInput("");
-      setUpdateUI((prevState) => !prevState);
-    });
-  };
-  const updateMode = (id, text) => {
-    setInput(text);
-    setUpdateId(id);
-  };
-
-  const updateTasks = () => {
-    axios.put(`${baseURL}/update/${updateId}`, { task: input }).then((res) => {
-      console.log(res.data);
-      setUpdateUI((prevState) => !prevState);
-      setUpdateId(null);
-      setInput("");
-    });
-  };
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   return (
-    <>
-      <>
-        <MetaData title={"Notice"} />
-        <div className={classes.updateProduct}>
-          <div
-            className={
-              !toggle ? `${classes.firstBox1}` : `${classes.toggleBox1}`
-            }
-          >
-            <UserDashboard />
-          </div>
-
-          <div className={classes.secondBox1}>
-            <div className={classes.navBar1}>
-              <Navbar toggleHandler={toggleHandler} />
-            </div>
-
-            <div
-              className={`${classes.formContainer} ${classes.formContainer2}`}
-            >
-              <main>
-                <div className="heading">
-                  <h1>Ask your Question</h1>
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Question"
-                    multiline
-                    rows={1}
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
+    <div
+      style={{
+        fontFamily: "Arial, sans-serif",
+        maxWidth: "600px",
+        margin: "auto",
+        marginTop: "150px",
+      }}
+    >
+      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+        Special User Chat
+      </h1>
+      <div
+        ref={chatContainerRef}
+        style={{
+          maxHeight: "300px",
+          overflowY: "scroll",
+          border: "1px solid #ccc",
+          marginBottom: "20px",
+          padding: "10px",
+        }}
+      >
+        {messages.map((msg, index) => (
+          <div key={index} style={{ marginBottom: "10px" }}>
+            <div style={{ textAlign: msg.sender === "specialUser" ? "right" : "left" }}>
+              <div
+                style={{
+                  backgroundColor: msg.sender === "specialUser" ? "#e6f2ff" : "#f2f2f2",
+                  padding: "10px",
+                  borderRadius: "10px",
+                  display: "inline-block",
+                  maxWidth: "70%",
+                }}
+              >
+                {msg.message}
+                {msg.file && (
+                  <img
+                    src={URL.createObjectURL(msg.file)}
+                    alt="Uploaded"
+                    style={{ maxWidth: "100%", marginTop: "5px" }}
                   />
-
-                 <br/><br/><br/><br/>
-                  <Button
-                    variant="contained"
-                    className={classes.loginButton}
-                    fullWidth
-                    type="submit"
-                    onClick={updateId ? updateTasks : addTasks}
-                  >
-                    {updateId ? "Update Message" : "Send Message"}
-                  </Button>
-                </div>
-              </main>
+                )}
+              </div>
             </div>
-            <ul>
-              {taskss.map((task) => (
-                <MessageList
-                  key={task._id}
-                  id={task._id}
-                  task={task.task}
-                  secondtasks={task.secondtasks}
-                  
-                  setUpdateUI={setUpdateUI}
-                  updateMode={updateMode}
-                />
-              ))}
-            </ul>
           </div>
-        </div>
-      </>
-    </>
+        ))}
+      </div>
+      <input
+        type="text"
+        value={queryText}
+        onChange={(e) => setQueryText(e.target.value)}
+        placeholder="Type your query..."
+        style={{
+          width: "100%",
+          padding: "10px",
+          marginBottom: "10px",
+          borderRadius: "5px",
+          border: "1px solid #ccc",
+        }}
+      />
+      <input
+        type="file"
+        onChange={(e) => setQueryFile(e.target.files[0])}
+        style={{
+          width: "100%",
+          padding: "10px",
+          marginBottom: "10px",
+          borderRadius: "5px",
+          border: "1px solid #ccc",
+        }}
+      />
+      <button
+        onClick={sendQuery}
+        style={{
+          padding: "10px",
+          width: "100%",
+          backgroundColor: "#4CAF50",
+          color: "white",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
+        Send Query
+      </button>
+    </div>
   );
 }
-export default Chat;

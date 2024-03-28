@@ -16,7 +16,7 @@ const SoftSkill = () => {
   return (
     <div className="content">
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
-        <img src={require("../../Image/ssworkshopnew.png")} alt="" />
+        <img src={require("../../Image/ssworkshopneww.png")} alt="" />
       </div>
 
       <span
@@ -99,7 +99,7 @@ const SoftSkill = () => {
             training solutions designed to engage your team and generate and
             encourage creativity and give each person an opportunity to showcase
             their natural talents. At the same time, our esteemed soft skills
-            consultants can teach your team members how to harness the full
+            trainers can teach your team members how to harness the full
             potential of their existing soft skills while developing other soft
             skills that may not come as naturally to them.
           </span>

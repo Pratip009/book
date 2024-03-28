@@ -838,7 +838,7 @@ const About_UsPage = () => {
 
                 <Grid item xs={12} sm={6} data-aos="slide-left">
                   <img
-                    src={require("../Image/00008.png")}
+                    src={require("../Image/0009.png")}
                     alt="Learning needs"
                     className={classes.image_about}
                   />
