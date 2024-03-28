@@ -8,7 +8,7 @@ exports.processPayment = asyncWrapper(async (req, res, next) => {
   // ); // asigning key as well
 
   const myPayment = await stripe.paymentIntents.create({
-    amount: req.body.ammount,
+    amount: req.body.amount,
     currency: "inr",
     metadata: {
       company: "Ecommerce", // not mandatory

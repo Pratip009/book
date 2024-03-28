@@ -74,6 +74,8 @@ exports.logoutUser = asyncWrapper(async (req, res) => {
   });
 });
 
+
+
 //// Forgot Password >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.forgotPassword = asyncWrapper(async (req, res, next) => {
   const user = await userModel.findOne({ email: req.body.email });

@@ -14,7 +14,6 @@ import Header from "./component/layouts/Header1.jsx/Header";
 import Service from "./component/service/Service";
 import Payment from "./component/Cart/Payment";
 import Home from "./component/Home/Home";
-import Services from "./Terms&Condtions/Service";
 import Footer from "./component/layouts/Footer/Footer";
 import ProductDetails from "./component/Product/ProductDetails";
 import Gallery from "./component/service/Gallery";
@@ -43,13 +42,21 @@ import School from "./component/SchoolManagement/School.jsx";
 import DashboardUser from "./component/SpecialUser/DashboardSpecial.jsx";
 import Packages from "./component/SpecialUser/Packages.jsx";
 import Chat from "./component/SpecialUser/chat";
-
+import DashboardStaff from "./component/Staff/DashboardStaff.jsx";
+import DashboardStaffAddProduct from "./component/Staff/DashboardStaffAddProduct.jsx";
+import DashboardStaffOrders from "./component/Staff/DashboardStaffOrders";
+import StaffProcessOrder from "./component/Staff/StaffProcessOrder.jsx";
+import StaffUserList from "./component/Staff/StaffUserList.jsx";
+import StaffProductList from "./component/Staff/StaffProductsList.jsx";
+import StaffUpdateProduct from "./component/Staff/StaffUpdateProductList.jsx";
+import AddImage from "./component/Admin/AddImage.jsx";
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
 const LazyProductList = React.lazy(() =>
   import("./component/Admin/ProductList")
 );
 const LazyOrderList = React.lazy(() => import("./component/Admin/OrderList"));
+const LazyAddImage = React.lazy(()=>import("./component/Admin/AddImage.jsx"));
 const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
 const LazyUpdateProduct = React.lazy(() =>
   import("./component/Admin/UpdateProduct")
@@ -111,6 +118,37 @@ function App() {
     <>
       <Router>
         <Switch>
+          <Route
+            exact
+            path="/staff/dashboardstaff"
+            render={() => (
+              <>
+                <PrivateRoute
+                  exact
+                  path="/staff/dashboardstaff"
+                  component={DashboardStaff}
+                />
+              </>
+            )}
+          />
+          <Route path="/staff/addproduct">
+            <DashboardStaffAddProduct />
+          </Route>
+          <Route path="/staff/orders">
+            <DashboardStaffOrders />
+          </Route>
+          <Route path="/staff/order/:id">
+            <StaffProcessOrder />
+          </Route>
+          <Route path="/staff/users">
+            <StaffUserList />
+          </Route>
+          <Route path="/staff/products">
+            <StaffProductList />
+          </Route>
+          <Route path="/staff/product/:id">
+            <StaffUpdateProduct />
+          </Route>
           <Route
             exact
             path="/"
@@ -545,6 +583,11 @@ function App() {
               exact
               path="/admin/dashboard"
               component={LazyDashboard}
+            />
+            <PrivateRoute
+            isAdmin={true}
+            path="/admin/addimage"
+            component={LazyAddImage}
             />
             <PrivateRoute
               isAdmin={true}

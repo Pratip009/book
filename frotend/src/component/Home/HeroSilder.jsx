@@ -8,6 +8,7 @@ import Typed from "react-typed";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+
 const useStyles = makeStyles((theme) => ({
   slide: {
     marginTop: "40px",
@@ -15,53 +16,41 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     position: "relative",
     [theme.breakpoints.down("sm")]: {
-      // // height: "50vh",
-      // marginTop : "5rem",
+      height: "50vh",
+      marginTop: "5rem",
     },
   },
   slideContent: {
     position: "absolute",
     top: "50%",
-    left: "10%",
-    transform: "translateY(-50%)",
-    textAlign: "left",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    textAlign: "center",
     color: "#fff",
     zIndex: 1,
+    width: "80%", // Adjust as needed
     [theme.breakpoints.down("sm")]: {
-      left: "50%",
-      transform: "translate(-50%, -50%)",
+      width: "90%",
     },
   },
   quote: {
     fontSize: "17px",
     fontFamily: "'Roboto', sans-serif",
-    width: "60vw",
-    color: "#FFFFFF",
+    color: "#000000",
     fontWeight: 600,
     marginBottom: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
-      width: "80vw",
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "12px",
-      width: "90vw",
     },
   },
   saleText: {
     fontSize: "25px",
     fontFamily: "'Roboto', sans-serif",
     fontWeight: "800",
-    color: "#FFFFFF",
-    width: "80vw",
+    color: "#2B2B2B",
     marginBottom: theme.spacing(6),
     [theme.breakpoints.down("sm")]: {
       fontSize: "24px",
-      width: "80vw",
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "20px",
-      width: "90vw",
     },
   },
   productButton: {
@@ -80,10 +69,6 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "16px",
       padding: theme.spacing(0.5, 2),
     },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "14px",
-      padding: theme.spacing(0.5, 1.5),
-    },
   },
   slideImage: {
     width: "100%",
@@ -100,7 +85,6 @@ const slides = [
     saleText: "We Deliver Transformation",
     productText: "Explore More",
   },
-
   {
     image: require("../../Image/bes11.png"),
     quote: "Elevate Your Performance and Unleash Your True Potential",
@@ -110,7 +94,6 @@ const slides = [
   {
     image: require("../../Image/des9.png"),
     quote: "Training & Management Consulting",
-
     saleText: "We Deliver Transformation",
     productText: "Explore More",
   },
@@ -135,69 +118,67 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <>
-      <Carousel
-        autoPlay={true}
-        navButtonsAlwaysVisible
-        indicators={false}
-        animation="slide"
-        interval={10000}
-        timeout={500}
-        cycleNavigation={true}
-        navButtonsProps={{
-          style: {
-            backgroundColor: "#5E17EB",
-            borderRadius: 0,
-            padding: 0,
-            margin: 0,
-            height: "100%",
-          },
-        }}
-        prevButton={
-          <Button
-            className="slider-nav-btn prev"
-            onClick={handleBack}
-            startIcon={<ArrowBackIosIcon />}
+    <Carousel
+      autoPlay={true}
+      navButtonsAlwaysVisible
+      indicators={false}
+      animation="slide"
+      interval={10000}
+      timeout={500}
+      cycleNavigation={true}
+      navButtonsProps={{
+        style: {
+          backgroundColor: "#FF0000",
+          borderRadius: 0,
+          padding: 0,
+          margin: 0,
+          height: "100%",
+        },
+      }}
+      prevButton={
+        <Button
+          className="slider-nav-btn prev"
+          onClick={handleBack}
+          startIcon={<ArrowBackIosIcon />}
+        />
+      }
+      nextButton={
+        <Button
+          className="slider-nav-btn next"
+          onClick={handleNext}
+          endIcon={<ArrowForwardIosIcon />}
+        />
+      }
+      fullHeightHover={false}
+      className={classes.slide}
+      index={activeStep}
+      onChangeIndex={setActiveStep}
+    >
+      {slides.map((slide, index) => (
+        <div key={index} className={classes.slide}>
+          <img
+            src={slide.image}
+            alt="slider"
+            className={classes.slideImage}
           />
-        }
-        nextButton={
-          <Button
-            className="slider-nav-btn next"
-            onClick={handleNext}
-            endIcon={<ArrowForwardIosIcon />}
-          />
-        }
-        fullHeightHover={false}
-        className={classes.slide}
-        index={activeStep}
-        onChangeIndex={setActiveStep}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className={classes.slide}>
-            <img
-              src={slide.image}
-              alt="slider"
-              className={classes.slideImage}
-            />
-            <div className={classes.slideContent}>
-              <h2 className={classes.quote}>
-                <Typed
-                  strings={[slide.quote]}
-                  typeSpeed={350}
-                  backSpeed={200}
-                  loop
-                />
-              </h2>
-              <h3 className={classes.saleText}>{slide.saleText}</h3>
-              <Link to="/products">
-                <Button className={classes.productButton}>
-                  {slide.productText}
-                </Button>
-              </Link>
-            </div>
+          <div className={classes.slideContent}>
+            <h2 className={classes.quote}>
+              <Typed
+                strings={[slide.quote]}
+                typeSpeed={350}
+                backSpeed={200}
+                loop
+              />
+            </h2>
+            <h3 className={classes.saleText}>{slide.saleText}</h3>
+            <Link to="/products">
+              <Button className={classes.productButton}>
+                {slide.productText}
+              </Button>
+            </Link>
           </div>
-        ))}
-      </Carousel>
-    </>
+        </div>
+      ))}
+    </Carousel>
   );
 }

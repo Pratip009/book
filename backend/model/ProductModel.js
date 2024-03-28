@@ -1,13 +1,14 @@
-const mongoose  = require("mongoose");
+const mongoose = require("mongoose");
+
 const productSchema = mongoose.Schema({
   name: {
     type: String,
-    required: [true, "Please Enter prodcut name"],
+    required: [true, "Please Enter product name"],
     trim: true,
   },
   description: {
     type: String,
-    required: [true, "Please Enter prodcut description"],
+    required: [true, "Please Enter product description"],
   },
   price: {
     type: Number,
@@ -18,7 +19,6 @@ const productSchema = mongoose.Schema({
     type: String,
     required: [true, "Please Enter product info"],
   },
-
   ratings: {
     type: Number,
     default: 0,
@@ -35,9 +35,19 @@ const productSchema = mongoose.Schema({
       },
     },
   ],
+  pdfFiles: [ // PDF field is not mandatory
+    {
+      pdf_id: {
+        type: String,
+      },
+      pdf_url: {
+        type: String,
+      },
+    },
+  ],
   category: {
     type: String,
-    required: [true, "Please eneter Product Category"],
+    required: [true, "Please enter Product Category"],
   },
   Stock: {
     type: Number,
@@ -86,9 +96,8 @@ const productSchema = mongoose.Schema({
       },
     },
   ],
-  // when two admins are there. tab ye pta chalgea kiss admin ne product add kiya hai
   user: {
-    type: mongoose.Schema.ObjectId, //  this is for admin who will add the prduct to the db
+    type: mongoose.Schema.ObjectId,
     ref: "userModel",
     required: true,
   },
@@ -98,5 +107,6 @@ const productSchema = mongoose.Schema({
   },
 });
 
-const ProductModel  = mongoose.model("ProductModel" , productSchema);
-module.exports =ProductModel
+const ProductModel = mongoose.model("ProductModel", productSchema);
+
+module.exports = ProductModel;

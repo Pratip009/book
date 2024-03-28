@@ -261,3 +261,53 @@ list-style: none;
 }
 
 
+@media (max-width: 899px) {
+  .headerTop {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .headerTopLeft, .headerTopRight {
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .headerTopLeft > p {
+    position: relative;
+    top: 0;
+  }
+
+  .headerRetailer, .headerLogin {
+    display: none;
+  }
+
+  .headerBottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headerBottom__logo_main {
+    margin-top: 1rem;
+  }
+
+  .header_mobile_menu, .search_Bar {
+    display: flex;
+  }
+
+  .headerBottom_navMenu {
+    display: none;
+  }
+
+  /* Additional styles to fix UI issues */
+  .headerBotttom_icons {
+    gap: 0.8rem; /* Adjusted gap */
+  }
+
+  .headerBottom_navMenu ul li {
+    padding: 0.5rem 0.8rem; /* Adjusted padding */
+  }
+}
