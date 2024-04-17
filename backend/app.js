@@ -16,7 +16,7 @@ const payment = require("./route/paymentRoute");
 const task = require("./route/taskRoute");
 const usermessage = require("./route/userMessageRoute");
 const adminMessage = require("./route/adminMessageRoute");
-const itemsRouter  = require('./route/items');
+
 // const image = require("./route/imageRoutes");
 
 // for req.cookie to get token while authentication
