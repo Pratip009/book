@@ -409,13 +409,14 @@ function Home() {
                                   gridTemplateColumns: "repeat(1, 1fr)",
                                 }}
                               >
-                                {task.map((task) => (
-                                  <NoticeBoard
-                                    key={task._id}
-                                    id={task._id}
-                                    task={task.task}
-                                  />
-                                ))}
+                                {Array.isArray(task) &&
+                                  task.map((task) => (
+                                    <NoticeBoard
+                                      key={task._id}
+                                      id={task._id}
+                                      task={task.task}
+                                    />
+                                  ))}
                               </Box>
                             </List>
                           </div>

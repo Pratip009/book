@@ -560,3 +560,101 @@ width: 119%;
  
 }
 
+
+/* Added responsive styles */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Adjustments for larger screens if necessary */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrapper_footer, .foot_menu_container {
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  .foot_about, .foot_subs, .foot_menu, .foot_links {
+      width: auto; /* Adjust based on preference */
+      margin: 10px;
+  }
+  .foot_menu_container {
+      grid-template-columns: repeat(2, 1fr); /* Change to 2 columns for medium screens */
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .wrapper_footer {
+      flex-direction: column;
+      align-items: center;
+  }
+  .foot_menu_container {
+      grid-template-columns: 1fr; /* Stack menus vertically on small devices */
+      grid-gap: 15px;
+  }
+  .foot_about, .foot_subs, .foot_menu, .foot_links {
+      width: 90%; /* Increase width for smaller screens */
+      margin: 10px auto; /* Center content */
+  }
+  .foot_menu h4, .foot_subs h5, .foot_links h5 {
+      font-size: smaller; /* Adjust font sizes for readability */
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+  .footer, .wrapper_footer {
+      padding: 15px;
+      margin-left: 0; /* Adjust margins for XS devices */
+  }
+  .foot_about, .foot_subs, .foot_menu, .foot_links {
+      width: 100%; /* Use full width for extra small screens */
+  }
+  .input_field_footer, .btnFooter {
+      width: 100%; /* Full width for form inputs and buttons */
+  }
+  .foot_menu_container {
+      grid-gap: 10px;
+  }
+  .foot_menu h4, .foot_subs h5, .foot_links h5, .foot_menu li a, .foot_policyLink ul li>* {
+      font-size: smaller; /* Further adjust font sizes */
+  }
+  .foot_logo, .logo_text, .logo_span, .Foot_heading, .foot_about img {
+      display: none; /* Optional: Hide certain elements on very small screens */
+  }
+}
+@media (max-width: 600px) {
+  .paper-container {
+    flex-direction: "column";
+    align-items: "center";
+    padding: "20px";
+  }
+
+  .paper-container .icon {
+    margin-bottom: "10px";
+  }
+
+  .paper-container p {
+    text-align: "center";
+  }
+}
+
+@media (max-width: 600px) {
+  .responsive-container {
+    display: none !important;
+  }
+}
+
+.container_Footer {
+  margin-top: auto !important; /* Pushes the footer to the bottom */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+  .container_Footer {
+    display: none !important;
+  
+    /* Add some padding around */
+  }
+}

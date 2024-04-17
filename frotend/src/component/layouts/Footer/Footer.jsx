@@ -4,12 +4,24 @@ import { Grid } from "@material-ui/core";
 import { Box, Paper } from "@mui/material";
 import FooterHover from "./FooterHover";
 import "./Footer.css";
+import { styled } from "@mui/material/styles";
 import {
   LocalShipping,
   Security,
   LocalOffer,
   CreditCard,
 } from "@mui/icons-material";
+const ResponsiveBox = styled(Box)(({ theme }) => ({
+  width: "65%",
+  height: "220px",
+  borderRadius: "10px",
+  zIndex: 1,
+  position: "relative",
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
+}));
+
 const footMenu = [
   {
     id: 1,
@@ -129,19 +141,10 @@ const Footer = () => {
           background: "#ffffff",
         }}
       >
-        <Box
-          elevation={16}
-          style={{
-            width: "65%",
-            height: "220px",
-           
-            borderRadius: "10px",
-            zIndex: 1,
-          }}
-        >
+        <ResponsiveBox elevation={16}>
           <FooterHover />
-        </Box>
-
+        </ResponsiveBox>
+        ;
         <footer className="footer">
           <div className="container" style={{ height: "300px" }}>
             <div className="wrapper_footer footer_wrapper ">
@@ -172,6 +175,7 @@ const Footer = () => {
                 </span>
               </div> */}
                 <div
+                 className="responsive-container"
                   style={{
                     marginTop: "5px",
                     marginLeft: "27px",
@@ -183,7 +187,7 @@ const Footer = () => {
                 >
                   <div>
                     <Grid container spacing={1}>
-                      <Grid item xs={6} style={{ marginTop: "5px" }}>
+                      <Grid item xs={12} sm={6} style={{ marginTop: "5px" }}>
                         <Paper
                           elevation={3}
                           style={{
@@ -220,7 +224,7 @@ const Footer = () => {
                           </div>
                         </Paper>
                       </Grid>
-                      <Grid item xs={6} style={{ marginTop: "5px" }}>
+                      <Grid item xs={12} sm={6} style={{ marginTop: "5px" }}>
                         <Paper
                           elevation={3}
                           style={{
@@ -257,7 +261,7 @@ const Footer = () => {
                           </div>
                         </Paper>
                       </Grid>
-                      <Grid item xs={6}>
+                      <Grid item xs={12} sm={6}>
                         <Paper
                           elevation={3}
                           style={{
@@ -294,7 +298,7 @@ const Footer = () => {
                           </div>
                         </Paper>
                       </Grid>
-                      <Grid item xs={6}>
+                      <Grid item xs={12} sm={6}>
                         <Paper
                           elevation={3}
                           style={{

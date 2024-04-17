@@ -13,6 +13,16 @@ export default function Faq() {
   }, []);
   return (
     <div className="FAq_image">
+      
+      <h1
+        style={{
+          textAlign: "start",
+          color:"#FF4E00"
+        }}
+      >
+        FAQ - Training
+      </h1>
+     
       {/* 1,2 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
@@ -194,6 +204,12 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
+      <h1
+        style={{
+          textAlign: "start",
+          color:"#FF4E00"
+        }}
+      >FAQ- School</h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -493,6 +509,12 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
+      <h1
+        style={{
+          textAlign: "start",
+          color:"#FF4E00"
+        }}
+      >FAQ- Products</h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

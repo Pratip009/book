@@ -12,52 +12,59 @@ const cloudinary = require("cloudinary");
 // >>>>>>>>>>>>>>>>>>>>> createProduct Admin route  >>>>>>>>>>>>>>>>>>>>>>>>
 // >>>>>>>>>>>>>>>>>>>>> createProduct Admin route  >>>>>>>>>>>>>>>>>>>>>>>>
 exports.createProduct = asyncWrapper(async (req, res) => {
-  let images = []; 
-  let pdfFiles = []; // Initialize array to store PDF file information
+  let images = [];
+  let pdfFiles = [];
 
+  // Handling images (unchanged)
   if (req.body.images) {
-    if (typeof req.body.images === "string") {
-      images.push(req.body.images);
-    } else {
-      images = req.body.images;
-    }
+    images = typeof req.body.images === "string" ? [req.body.images] : req.body.images;
+  }
 
-    // Handle PDF files
-    if (req.body.pdfFiles) {
-      if (typeof req.body.pdfFiles === "string") {
-        pdfFiles.push(req.body.pdfFiles);
-      } else {
-        pdfFiles = req.body.pdfFiles;
-      }
-    }
+  // Log to verify if PDF files are received
+  console.log("Received files:", req.files);
 
-    const imagesLinks = [];
-    const pdfLinks = []; // Array to store PDF file URLs
+  // Handling PDF files
+  if (req.files && req.files.pdfFiles) {
+    const files = req.files.pdfFiles instanceof Array ? req.files.pdfFiles : [req.files.pdfFiles];
+    pdfFiles = files; // Ensure pdfFiles is always an array
+  }
 
-    // Handle image uploads (similar to existing code)
-    // ...
+  const imagesLinks = []; // Placeholder for your image handling logic
+  const pdfLinks = []; // Array to store PDF file URLs
 
-    // Handle PDF file uploads
-    for (let pdf of pdfFiles) {
-      const pdfResult = await cloudinary.v2.uploader.upload(pdf, {
+  // Upload PDF files to Cloudinary
+  for (let pdf of pdfFiles) {
+    try {
+      const pdfResult = await cloudinary.v2.uploader.upload(pdf.path, {
         folder: "Products",
+        resource_type: 'raw' // Specify 'raw' for PDF files
       });
 
       pdfLinks.push({
         pdf_id: pdfResult.public_id,
         pdf_url: pdfResult.secure_url,
       });
+    } catch (error) {
+      console.error("Error uploading PDF to Cloudinary:", error);
+      return res.status(500).json({ success: false, message: "Server Error: Failed to upload PDF." });
     }
-
-    req.body.user = req.user.id;
-    req.body.images = imagesLinks;
-    req.body.pdfFiles = pdfLinks; // Add PDF file information to the request body
   }
 
-  const data = await ProductModel.create(req.body);
+  req.body.user = req.user.id;
+  req.body.images = imagesLinks; // Assuming images are handled similarly
+  req.body.pdfFiles = pdfLinks; // Add PDF file information to the request body
 
-  res.status(200).json({ success: true, data: data });
+  // Create product with image and PDF file information
+  try {
+    const product = await ProductModel.create(req.body);
+    res.status(200).json({ success: true, product });
+  } catch (error) {
+    console.error("Database creation error:", error);
+    res.status(500).json({ success: false, message: "Failed to create product in database." });
+  }
 });
+
+
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> get all product >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Other controller functions remain unchanged
@@ -314,3 +321,4 @@ exports.deleteReview = asyncWrapper(async (req, res, next) => {
     success: true,
   });
 });
+

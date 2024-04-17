@@ -16,6 +16,7 @@ const payment = require("./route/paymentRoute");
 const task = require("./route/taskRoute");
 const usermessage = require("./route/userMessageRoute");
 const adminMessage = require("./route/adminMessageRoute");
+const itemsRouter  = require('./route/items');
 // const image = require("./route/imageRoutes");
 
 // for req.cookie to get token while authentication
@@ -35,6 +36,8 @@ app.use("/api/v1", payment);
 app.use("/api/v1", task);
 app.use("/api/v1", usermessage);
 app.use("/api/v1", adminMessage);
+app.use("/api/v1/items", itemsRouter);
+
 // app.use("/api/v1", image); // Add the image route here
 
 // Serve static files from the frontend build directory

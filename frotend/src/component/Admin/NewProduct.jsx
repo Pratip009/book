@@ -35,25 +35,26 @@ function NewProduct() {
   const dispatch = useDispatch();
   const history = useHistory();
   const alert = useAlert();
-
+  const pdfInputRef = useRef(null);
   const { loading, error, success } = useSelector(
     (state) => state.addNewProduct
   );
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
-
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
-  const [stock, setStock] = useState(0);
+  const [Stock, setStock] = useState(0);
   const [info, setInfo] = useState("");
   const [images, setImages] = useState([]);
   const [imagesPreview, setImagesPreview] = useState([]);
-  const [pdf, setPdf] = useState(null);
+  const [isCategory, setIsCategory] = useState(false);
   const fileInputRef = useRef();
   const [toggle, setToggle] = useState(false);
+  const [pdf, setPdf] = useState(null);
+  const [pdfPreview, setPdfPreview] = useState(null);
 
   const classes = useStyles();
-  // toggle handler
+  // togle handler =>
   const toggleHandler = () => {
     console.log("toggle");
     setToggle(!toggle);
@@ -61,14 +62,13 @@ function NewProduct() {
 
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
+    setIsCategory(true);
   };
 
   const handleImageUpload = () => {
     fileInputRef.current.click();
   };
-
   const categories = ["Books", "PDF", "Learning Aid"];
-
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -82,29 +82,6 @@ function NewProduct() {
     }
   }, [dispatch, alert, error, history, success]);
 
-  const createProductSubmitHandler = (e) => {
-    try {
-      e.preventDefault();
-      const formData = new FormData();
-      formData.append("name", name);
-      formData.append("price", price);
-      formData.append("description", description);
-      formData.append("category", category);
-      formData.append("stock", stock);
-      formData.append("info", info);
-      images.forEach((image) => {
-        formData.append("images", image);
-      });
-      if (pdf) {
-        formData.append("pdf", pdf);
-      }
-
-      dispatch(createProduct(formData));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   const createProductImagesChange = (e) => {
     const files = Array.from(e.target.files);
     setImages([]);
@@ -115,15 +92,45 @@ function NewProduct() {
       reader.onload = () => {
         if (reader.readyState === 2) {
           setImagesPreview((old) => [...old, reader.result]);
-          setImages((old) => [...old, file]);
+          setImages((old) => [...old, reader.result]);
         }
       };
       reader.readAsDataURL(file);
     });
   };
+  const createProductSubmitHandler = (e) => {
+    e.preventDefault();
+    console.log("Form submitted");
+    const myForm = new FormData();
+    myForm.set("name", name);
+    myForm.set("price", price);
+    myForm.set("description", description);
+    myForm.set("category", category);
+    myForm.set("Stock", Stock);
+    myForm.set("info", info);
+    images.forEach((currImg) => {
+      myForm.append("images", currImg);
+    });
 
-  const handlePdfUpload = (e) => {
-    setPdf(e.target.files[0]);
+    // // Check if a PDF has been selected and append it
+    if (category !== "PDF") {
+      images.forEach((file) => {
+        myForm.append("images", file);
+      });
+    } else if (pdf) {
+      myForm.append("pdf", pdf);
+    }
+
+    dispatch(createProduct(myForm));
+  };
+
+  const handlePdfChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setPdf(file);
+      setPdfPreview(URL.createObjectURL(file)); // Create a URL for the PDF preview
+      console.log("PDF Selected:", file.name); // Debugging - Log the selected PDF file name
+    }
   };
 
   return (
@@ -186,159 +193,234 @@ function NewProduct() {
                       ),
                     }}
                   />
+
                   <TextField
                     variant="outlined"
-                    fullWidth
-                    className={`${classes.priceInput} ${classes.textField}`}
                     label="Price"
-                    required
                     value={price}
+                    required
+                    fullWidth
+                    className={`${classes.passwordInput} ${classes.textField}`}
                     onChange={(e) => setPrice(e.target.value)}
                     InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <AttachMoneyIcon
-                            style={{
-                              fontSize: 20,
-                              color: "#414141",
-                            }}
-                          />
+                      endAdornment: (
+                        <InputAdornment
+                          position="end"
+                          style={{
+                            fontSize: 20,
+                            color: "#414141",
+                          }}
+                        >
+                          <AttachMoneyIcon />
                         </InputAdornment>
                       ),
                     }}
                   />
                   <TextField
                     variant="outlined"
-                    fullWidth
-                    className={`${classes.descriptionInput} ${classes.textField}`}
-                    label="Description"
+                    label="Stock"
+                    value={Stock}
                     required
+                    className={`${classes.passwordInput} ${classes.textField}`}
+                    onChange={(e) => setStock(e.target.value)}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment
+                          position="end"
+                          style={{
+                            fontSize: 20,
+                            color: "#414141",
+                          }}
+                        >
+                          <StorageIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                  <TextField
+                    variant="outlined"
+                    label="Product info"
+                    value={info}
+                    required
+                    className={`${classes.passwordInput} ${classes.textField}`}
+                    onChange={(e) => setInfo(e.target.value)}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment
+                          position="end"
+                          style={{
+                            fontSize: 20,
+                            color: "#414141",
+                          }}
+                        >
+                          <InfoIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+
+                  <div className={classes.selectOption}>
+                    {!isCategory && (
+                      <Typography variant="body2" className={classes.labelText}>
+                        Choose Category
+                      </Typography>
+                    )}
+                    <FormControl className={classes.formControl}>
+                      <Select
+                        variant="outlined"
+                        fullWidth
+                        value={category}
+                        onChange={handleCategoryChange}
+                        className={classes.select}
+                        inputProps={{
+                          name: "category",
+                          id: "category-select",
+                        }}
+                        MenuProps={{
+                          classes: {
+                            paper: classes.menu,
+                          },
+                          anchorOrigin: {
+                            vertical: "bottom",
+                            horizontal: "left",
+                          },
+                          transformOrigin: {
+                            vertical: "top",
+                            horizontal: "left",
+                          },
+                          getContentAnchorEl: null,
+                        }}
+                      >
+                        {!category && (
+                          <MenuItem value="">
+                            <em>Choose Category</em>
+                          </MenuItem>
+                        )}
+                        {categories.map((cate) => (
+                          <MenuItem key={cate} value={cate}>
+                            {cate}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                  </div>
+                  <TextField
+                    variant="outlined"
+                    fullWidth
+                    className={classes.descriptionInput}
+                    label="Product Description"
+                    multiline
+                    rows={1}
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
+                      endAdornment: (
+                        <InputAdornment position="end">
                           <DescriptionIcon
-                            style={{
-                              fontSize: 20,
-                              color: "#414141",
-                            }}
+                            className={classes.descriptionIcon}
                           />
                         </InputAdornment>
                       ),
                     }}
                   />
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    className={`${classes.categoryInput} ${classes.textField}`}
-                    label="Category"
-                    required
-                    select
-                    value={category}
-                    onChange={handleCategoryChange}
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <StorageIcon
-                            style={{
-                              fontSize: 20,
-                              color: "#414141",
-                            }}
-                          />
-                        </InputAdornment>
-                      ),
-                    }}
-                  >
-                    {categories.map((category) => (
-                      <MenuItem key={category} value={category}>
-                        {category}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    className={`${classes.stockInput} ${classes.textField}`}
-                    label="Stock"
-                    required
-                    value={stock}
-                    onChange={(e) => setStock(e.target.value)}
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <StorageIcon
-                            style={{
-                              fontSize: 20,
-                              color: "#414141",
-                            }}
-                          />
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    className={`${classes.infoInput} ${classes.textField}`}
-                    label="Info"
-                    required
-                    value={info}
-                    onChange={(e) => setInfo(e.target.value)}
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <InfoIcon
-                            style={{
-                              fontSize: 20,
-                              color: "#414141",
-                            }}
-                          />
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  {/* Image upload section */}
+
                   <div className={classes.root}>
-                    <div className={classes.imgIcon}>
-                      <CollectionsIcon
-                        fontSize="large"
-                        style={{ fontSize: 40 }}
-                      />
-                    </div>
-                    <input
-                      type="file"
-                      name="avatar"
-                      className={classes.input}
-                      accept="image/*"
-                      onChange={createProductImagesChange}
-                      multiple
-                      style={{ display: "none" }}
-                      ref={fileInputRef}
-                    />
-                    <label htmlFor="avatar-input">
-                      <Button
-                        variant="contained"
-                        color="default"
-                        className={classes.uploadAvatarButton}
-                        startIcon={
-                          <CloudUploadIcon
-                            style={{
-                              color: "#FFFFFF",
-                            }}
+                    {category !== "PDF" ? (
+                      // Display image upload when category is not "PDF"
+                      <>
+                        <div className={classes.imgIcon}>
+                          <CollectionsIcon
+                            fontSize="large"
+                            style={{ fontSize: 40 }}
                           />
-                        }
-                        onClick={handleImageUpload}
-                      >
-                        <p className={classes.uploadAvatarText}>
-                          Upload Images
-                        </p>
-                      </Button>
-                    </label>
+                        </div>
+                        <input
+                          type="file"
+                          name="avatar"
+                          className={classes.input}
+                          accept="image/*"
+                          onChange={createProductImagesChange}
+                          multiple
+                          style={{ display: "none" }}
+                          ref={fileInputRef}
+                        />
+                        <label htmlFor="avatar-input">
+                          <Button
+                            variant="contained"
+                            color="default"
+                            className={classes.uploadAvatarButton}
+                            startIcon={
+                              <CloudUploadIcon style={{ color: "#FFFFFF" }} />
+                            }
+                            onClick={handleImageUpload}
+                          >
+                            <p className={classes.uploadAvatarText}>
+                              Upload Images
+                            </p>
+                          </Button>
+                        </label>
+                        <Box className={classes.imageArea}>
+                          {imagesPreview &&
+                            imagesPreview.map((image, index) => (
+                              <img
+                                key={index}
+                                src={image}
+                                alt="Product Preview"
+                                className={classes.image}
+                              />
+                            ))}
+                        </Box>
+                      </>
+                    ) : (
+                      // Display PDF upload when category is "PDF"
+                      <>
+                        <input
+                          type="file"
+                          name="pdf"
+                          className={classes.input}
+                          accept="application/pdf"
+                          onChange={handlePdfChange}
+                          style={{ display: "none" }}
+                          ref={pdfInputRef}
+                        />
+                        <label htmlFor="pdf-input">
+                          <Button
+                            variant="contained"
+                            color="default"
+                            className={classes.uploadPdfButton}
+                            startIcon={
+                              <CloudUploadIcon style={{ color: "#FFFFFF" }} />
+                            }
+                            onClick={() => pdfInputRef.current.click()}
+                          >
+                            Upload PDF
+                          </Button>
+                        </label>
+                        {pdfPreview && (
+                          <div className={classes.pdfPreview}>
+                            <iframe
+                              src={pdfPreview}
+                              title="PDF Preview"
+                              className={classes.pdfIframe}
+                            ></iframe>
+                          </div>
+                        )}
+                      </>
+                    )}
                   </div>
-                  {/* PDF upload section */}
-                  <input type="file" accept=".pdf" onChange={handlePdfUpload} />
-                  {/* Submit button */}
+
+                  <Box className={classes.imageArea}>
+                    {imagesPreview &&
+                      imagesPreview.map((image, index) => (
+                        <img
+                          key={index}
+                          src={image}
+                          alt="Product Preview"
+                          className={classes.image}
+                        />
+                      ))}
+                  </Box>
+
                   <Button
                     variant="contained"
                     className={classes.loginButton}
@@ -357,5 +439,4 @@ function NewProduct() {
     </>
   );
 }
-
 export default NewProduct;

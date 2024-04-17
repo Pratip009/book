@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 function AddImage() {
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState("");
   const [image, setImage] = useState(null);
-  const [previewURL, setPreviewURL] = useState('');
-  const [filePath, setFilePath] = useState('');
+  const [previewURL, setPreviewURL] = useState("");
+  const [filePath, setFilePath] = useState("");
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('title', title);
-    formData.append('image', image);
+    formData.append("title", title);
+    formData.append("image", image);
 
     try {
-      const response = await axios.post('/api/v1/images', formData, {
+      const response = await axios.post("/api/v1", formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       });
-      console.log('Image uploaded successfully:', response.data);
+      console.log("Image uploaded successfully:", response.data);
       // Display success message to the admin
     } catch (error) {
-      console.error('Error uploading image:', error);
+      console.error("Error uploading image:", error);
       // Display error message to the admin
     }
   };
@@ -38,7 +38,7 @@ function AddImage() {
       };
       reader.readAsDataURL(selectedImage);
     } else {
-      setPreviewURL('');
+      setPreviewURL("");
     }
   };
 
@@ -48,15 +48,28 @@ function AddImage() {
       <form onSubmit={handleFormSubmit}>
         <div>
           <label>Title:</label>
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
         </div>
         <div>
-          <label>Image:</label>
-          <input type="file" accept="image/*" onChange={handleImageChange} />
+          <label htmlFor="imageInput">Image:</label>
+          <input
+            id="imageInput"
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+          />
         </div>
         {previewURL && (
           <div>
-            <img src={previewURL} alt="Preview" style={{ maxWidth: '200px', maxHeight: '200px' }} />
+            <img
+              src={previewURL}
+              alt="Preview"
+              style={{ maxWidth: "200px", maxHeight: "200px" }}
+            />
           </div>
         )}
         {filePath && (

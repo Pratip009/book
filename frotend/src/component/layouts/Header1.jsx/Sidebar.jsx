@@ -74,6 +74,51 @@ const Sidebar = ({ handleSideBarMenu, isAuthenticated, user }) => {
           </li>
         </Link>
         <Link
+          to="/training"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <li className="sidebar-menu-item">
+            <InfoIcon fontSize="large" />
+            <span className="sidebar-menu-item-text">Training</span>
+          </li>
+        </Link>
+        <Link
+          to="/school"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <li className="sidebar-menu-item">
+            <InfoIcon fontSize="large" />
+            <span className="sidebar-menu-item-text">School Management</span>
+          </li>
+        </Link>
+        <Link
+          to="/service"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <li className="sidebar-menu-item">
+            <InfoIcon fontSize="large" />
+            <span className="sidebar-menu-item-text">Service</span>
+          </li>
+        </Link>
+        <Link
+          to="/gallery"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <li className="sidebar-menu-item">
+            <InfoIcon fontSize="large" />
+            <span className="sidebar-menu-item-text">Gallery</span>
+          </li>
+        </Link>
+        <Link
+          to="/blog"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <li className="sidebar-menu-item">
+            <InfoIcon fontSize="large" />
+            <span className="sidebar-menu-item-text">Blog</span>
+          </li>
+        </Link>
+        <Link
           to="/account"
           style={{ color: "inherit", textDecoration: "none" }}
         >

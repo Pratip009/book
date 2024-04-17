@@ -260,7 +260,6 @@ list-style: none;
  }
 }
 
-
 @media (max-width: 899px) {
   .headerTop {
     grid-template-columns: 1fr;
@@ -285,9 +284,37 @@ list-style: none;
   }
 
   .headerBottom {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .headerBottom__logo {
+    flex: 1;
+    display: flex;
     justify-content: center;
+    margin: 0 10px; /* Margin adjustment for more space around the logo */
+  }
+  
+  .headerBottom__logo_main {
+    max-width: 200px; /* Adjust logo width for small screens */
+  }
+
+  .header_mobile_menu, .headerBotttom_icons {
+    flex: 0 1 auto; /* Take up only as much space as needed */
+    display: flex;
+    align-items: center;
+  }
+
+  /* Style adjustment for icons to reduce size */
+  .header_mobile_menu svg, .headerBotttom_icons svg {
+    width: 18px; /* Slightly smaller icons */
+    height: 18px;
+  }
+
+  .header_mobile_menu, .search_Bar {
+    gap: 8px; /* Reduce gap between icons */
   }
 
   .headerBottom__logo_main {
@@ -302,12 +329,43 @@ list-style: none;
     display: none;
   }
 
-  /* Additional styles to fix UI issues */
+  /* Additional styles to adjust icons */
   .headerBotttom_icons {
-    gap: 0.8rem; /* Adjusted gap */
+    gap: 0.5rem; /* Reduced gap */
+    justify-content: center;
+  }
+
+  /* Adjust icon size */
+  .headerBotttom_icons svg {
+    width: 20px; /* New icon width */
+    height: 20px; /* New icon height */
   }
 
   .headerBottom_navMenu ul li {
-    padding: 0.5rem 0.8rem; /* Adjusted padding */
+    padding: 0.5rem 0.8rem;
   }
 }
+
+/* General Styles */
+.headerBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.headerBottom__logo, .headerBotttom_icons {
+  flex: 1;
+}
+
+.headerBottom_navMenu ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.headerBottom_navMenu li {
+  padding: 0 10px;
+}
+

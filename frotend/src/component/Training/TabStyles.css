@@ -1,0 +1,18 @@
+.tabRoot {
+    color: white !important; /* Default color for unselected tabs */
+    font-weight: 600 !important; /* Normal font weight for unselected tabs */
+  }
+  
+  
+  
+  .tabSelected {
+    color: white !important; /* White color for selected tab */
+    background-color: #FF4E00 !important; /* Background for selected tab */
+    font-weight: 600 !important; /* Bold font weight for selected tab */
+  }
+  
+  .tabSelected:hover {
+    color: white !important;
+    /* Keep the background color the same */
+  }
+  

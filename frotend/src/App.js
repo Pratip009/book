@@ -49,12 +49,13 @@ import StaffProcessOrder from "./component/Staff/StaffProcessOrder.jsx";
 import StaffUserList from "./component/Staff/StaffUserList.jsx";
 import StaffProductList from "./component/Staff/StaffProductsList.jsx";
 import StaffUpdateProduct from "./component/Staff/StaffUpdateProductList.jsx";
-import AddImage from "./component/Admin/AddImage.jsx";
+
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
 const LazyProductList = React.lazy(() =>
   import("./component/Admin/ProductList")
 );
+const LazyBlogPost = React.lazy(()=>import ("./component/Admin/BlogPost"));
 const LazyOrderList = React.lazy(() => import("./component/Admin/OrderList"));
 const LazyAddImage = React.lazy(()=>import("./component/Admin/AddImage.jsx"));
 const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
@@ -586,8 +587,8 @@ function App() {
             />
             <PrivateRoute
             isAdmin={true}
-            path="/admin/addimage"
-            component={LazyAddImage}
+            path="/admin/blog"
+            component={LazyBlogPost}
             />
             <PrivateRoute
               isAdmin={true}

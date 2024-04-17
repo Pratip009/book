@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import SoftSkill from "./SoftSkill";
 import Student from "./Student";
-
+import "./TabStyles.css";
 import Parent from "./Parent";
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,18 +54,30 @@ export default function TabList() {
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="black"
-          textColor="black"
-          variant="fullWidth"
           aria-label="full width tabs example"
+          variant="fullWidth"
+          TabIndicatorProps={{ style: { backgroundColor: "#003E90" } }}
           style={{ backgroundColor: "#003E90" }}
-          
         >
-          <Tab label="Soft Skills Workshop" {...a11yProps(0)} style={{color:"white", fontWeight:"600"}}/>
-          <Tab label="Students Workshop" {...a11yProps(1)}  style={{color:"white", fontWeight:"600"}}/>
-          <Tab label="Parenting Workshop" {...a11yProps(2)}  style={{color:"white", fontWeight:"600"}}/>
+          <Tab
+            label="Soft Skills Workshop"
+            {...a11yProps(0)}
+            className="tabRoot"
+            classes={{ selected: "tabSelected" }}
+          />
+          <Tab
+            label="Students Workshop"
+            {...a11yProps(1)}
+            className="tabRoot"
+            classes={{ selected: "tabSelected" }}
+          />
+          <Tab
+            label="Parenting Workshop"
+            {...a11yProps(2)}
+            className="tabRoot"
+            classes={{ selected: "tabSelected" }}
+          />
         </Tabs>
-        
       </Box>
       <CustomTabPanel value={value} index={0}>
         <SoftSkill />

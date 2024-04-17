@@ -225,17 +225,17 @@ function Sidebar() {
                   </span>
                 </li>
               </Link>
-              {/* <Link
-                to="/admin/addimage"
+              <Link
+                to="/admin/blog"
                 style={{ color: "inherit", textDecoration: "none" }}
               >
                 <li className={classes.sideBarMenuItem}>
                   <SchoolIcon fontSize="large" />
                   <span className={classes.sideBarMenuItem_text}>
-                  Gallery
+                  Blog
                   </span>
                 </li>
-              </Link> */}
+              </Link>
             </ul>
             <div className={classes.divider} />
 
