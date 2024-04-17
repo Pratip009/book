@@ -36,7 +36,6 @@ app.use("/api/v1", payment);
 app.use("/api/v1", task);
 app.use("/api/v1", usermessage);
 app.use("/api/v1", adminMessage);
-app.use("/api/v1/items", itemsRouter);
 
 // app.use("/api/v1", image); // Add the image route here
 
