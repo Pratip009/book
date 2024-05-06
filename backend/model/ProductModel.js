@@ -23,16 +23,6 @@ const productSchema = mongoose.Schema({
     type: Number,
     default: 0,
   },
-  filename: {
-    type: String,
-    required: [true, "Please provide a name"],
-    trim: true,
-    maxlength: [20, "Name cannot be more than 20 characters"],
-  },
-  file: {
-    type: String,
-    required: [true, "Please provide a file"],
-  },
   images: [
     {
       product_id: {
@@ -45,7 +35,19 @@ const productSchema = mongoose.Schema({
       },
     },
   ],
-
+  pdfs: [
+    // New field for PDF documents
+    {
+      pdf_id: {
+        type: String,
+        required: true,
+      },
+      url: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
   category: {
     type: String,
     required: [true, "Please enter Product Category"],

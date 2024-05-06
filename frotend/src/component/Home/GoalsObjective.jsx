@@ -35,28 +35,8 @@ export default function GoalsObjective() {
             flexDirection: "column",
             alignItems: "center",
           }}
-          // data-aos="fade-left"
         >
           <div className="educate">
-            <h3
-              className="app_heading"
-              style={{ fontFamily: "'Roboto', sans-serif", fontSize: "36px" }}
-            >
-              About Our Future Target
-            </h3>
-            <div className="educate_desc_div">
-              <span
-                className="educate_desc"
-                style={{ fontSize: "15px", fontFamily: "'Roboto', sans-serif" }}
-              >
-                Our future target is to provide training, information,
-                resources, support and guidance for a variety of groups
-                including: school owners, businessman, young people who are at
-                or have recently left school, adults looking to expand their
-                skills, educators, employers, and parents.
-              </span>
-            </div>
-
             <Card style={{ boxShadow: "none", backgroundColor: "transparent" }}>
               <CardHeader
                 avatar={
@@ -73,22 +53,12 @@ export default function GoalsObjective() {
                       fontFamily: "'Roboto', sans-serif",
                     }}
                   >
-                    WHAT DO WE HAVE TO DO
+                    VISION
                   </span>
                 }
-                subheader="Performance improvement in terms of a personal mission."
+                subheader="To provide the best quality service and products to our customer and clients."
                 action={<IconButton>{/* <ThumbUpIcon/> */}</IconButton>}
               />
-              {/* <CardContent>
-                    <Typography variant="body2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Nisi, reiciendis sapiente. Ratione nobis aliquid magni 
-                        consequuntur mollitia iure nesciunt nam perspiciatis nulla 
-                        molestias sint ipsam sed, nihil doloribus dolore facere
-                        architecto 
-                        minima!
-                    </Typography>
-                </CardContent> */}
             </Card>
             <Card style={{ boxShadow: "none", backgroundColor: "transparent" }}>
               <CardHeader
@@ -106,24 +76,30 @@ export default function GoalsObjective() {
                       fontFamily: "'Roboto', sans-serif",
                     }}
                   >
-                    AND DO WE DO THIS
+                    MISSION
                   </span>
                 }
-                subheader="For the success of our clients and their individual.
+                subheader="Integrity – Conducting ourselves with honesty and responsibility.
                 "
-                // action={<IconButton>{<MarkUnreadChatAltIcon />}</IconButton>}
               />
-              {/* <CardContent>
-                    <Typography variant="body2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Nisi, reiciendis sapiente. Ratione nobis aliquid magni 
-                        consequuntur mollitia iure nesciunt nam perspiciatis nulla 
-                        molestias sint ipsam sed, nihil doloribus dolore facere
-                        architecto 
-                        minima!
-                    </Typography>
-                </CardContent> */}
             </Card>
+            <h3
+              className="app_heading"
+              style={{ fontFamily: "'Roboto', sans-serif", fontSize: "36px" }}
+            >
+              Future Target Innovation{" "}
+            </h3>
+            <div className="educate_desc_div">
+              <span
+                className="educate_desc"
+                style={{ fontSize: "15px", fontFamily: "'Roboto', sans-serif" }}
+              >
+                Challenging ourselves to create unique ideas and innovative
+                solutions in a technology rich environment to develop the human
+                potentials to achieve different opportunities in future to
+                enhance the new learning process.
+              </span>
+            </div>
           </div>
         </Box>
       </Grid>

@@ -133,9 +133,15 @@ align-self: center;
 
 .headerBottom__logo_main{
     height: 4rem;
-    align-self: center;
-    padding-left: 25px;
+   
     margin-top: 7px;
+}
+@media (max-width: 768px) {
+  .headerBottom__logo_main {
+      height: 3rem; 
+       align-self: center;
+      margin-top: 5px;
+  }
 }
 .header_mobile_menu{
   display: none;

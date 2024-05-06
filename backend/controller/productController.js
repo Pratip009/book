@@ -1,8 +1,3 @@
-
-
-
-
-
 const ProductModel = require("../model/ProductModel");
 const ErrorHandler = require("../utils/errorHandler");
 const asyncWrapper = require("../middleWare/asyncWrapper");
@@ -10,65 +5,53 @@ const ApiFeatures = require("../utils/apiFeatures");
 const cloudinary = require("cloudinary");
 
 // >>>>>>>>>>>>>>>>>>>>> createProduct Admin route  >>>>>>>>>>>>>>>>>>>>>>>>
-// >>>>>>>>>>>>>>>>>>>>> createProduct Admin route  >>>>>>>>>>>>>>>>>>>>>>>>
 exports.createProduct = asyncWrapper(async (req, res) => {
-  let images = [];
-  let pdfFiles = [];
+  // Assuming images and pdfs are sent in the request as URLs or file paths
+  let { images, pdfs } = req.body;
 
-  // Handling images (unchanged)
-  if (req.body.images) {
-    images = typeof req.body.images === "string" ? [req.body.images] : req.body.images;
-  }
-
-  // Log to verify if PDF files are received
-  console.log("Received files:", req.files);
-
-  // Handling PDF files
-  if (req.files && req.files.pdfFiles) {
-    const files = req.files.pdfFiles instanceof Array ? req.files.pdfFiles : [req.files.pdfFiles];
-    pdfFiles = files; // Ensure pdfFiles is always an array
-  }
-
-  const imagesLinks = []; // Placeholder for your image handling logic
-  const pdfLinks = []; // Array to store PDF file URLs
-
-  // Upload PDF files to Cloudinary
-  for (let pdf of pdfFiles) {
-    try {
-      const pdfResult = await cloudinary.v2.uploader.upload(pdf.path, {
-        folder: "Products",
-        resource_type: 'raw' // Specify 'raw' for PDF files
+  const uploadImage = async (img) => {
+      const result = await cloudinary.uploader.upload(img, {
+          folder: "Products/Images",
+          resource_type: "image"
       });
+      return {
+          product_id: result.public_id,
+          url: result.secure_url,
+      };
+  };
 
-      pdfLinks.push({
-        pdf_id: pdfResult.public_id,
-        pdf_url: pdfResult.secure_url,
+  const uploadPdf = async (pdf) => {
+      const result = await cloudinary.uploader.upload(pdf, {
+          folder: "Products/PDFs",
+          resource_type: "raw" // specifying raw because it's not an image
       });
-    } catch (error) {
-      console.error("Error uploading PDF to Cloudinary:", error);
-      return res.status(500).json({ success: false, message: "Server Error: Failed to upload PDF." });
-    }
-  }
+      return {
+          pdf_id: result.public_id,
+          url: result.secure_url,
+      };
+  };
 
-  req.body.user = req.user.id;
-  req.body.images = imagesLinks; // Assuming images are handled similarly
-  req.body.pdfFiles = pdfLinks; // Add PDF file information to the request body
+  // Handle image uploads
+  const imageLinks = images ? await Promise.all(images.map(uploadImage)) : [];
 
-  // Create product with image and PDF file information
-  try {
-    const product = await ProductModel.create(req.body);
-    res.status(200).json({ success: true, product });
-  } catch (error) {
-    console.error("Database creation error:", error);
-    res.status(500).json({ success: false, message: "Failed to create product in database." });
-  }
+  // Handle PDF uploads
+  const pdfLinks = pdfs ? await Promise.all(pdfs.map(uploadPdf)) : [];
+
+  // Add the user ID and uploaded file information to the request body
+  const newProductData = {
+      ...req.body,
+      user: req.user.id, // assuming user id is in req.user
+      images: imageLinks,
+      pdfs: pdfLinks
+  };
+
+  const newProduct = await ProductModel.create(newProductData);
+
+  res.status(201).json({
+      success: true,
+      data: newProduct
+  });
 });
-
-
-
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> get all product >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Other controller functions remain unchanged
-
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> get all product >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.getAllProducts = asyncWrapper(async (req, res) => {
@@ -321,4 +304,3 @@ exports.deleteReview = asyncWrapper(async (req, res, next) => {
     success: true,
   });
 });
-

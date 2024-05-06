@@ -29,7 +29,7 @@ import axios from "axios";
 import { baseURL } from "../utils/constant";
 import NoticeBoard from "../Admin/NoticeBoard";
 import Welcome from "./Welcome";
-
+import { Link } from "react-router-dom";
 function Home() {
   // we provided all parameter for react-alert at index.js
   const alert = useAlert();
@@ -132,24 +132,26 @@ function Home() {
                           their objectives; we are very much committed to the
                           success of our clients and their individual.
                         </p>
-                        <Button
-                          style={{
-                            border: "1px solid white",
-                            color: "#fff",
-                            background:
-                              "linear-gradient(45deg, #ff5f6d, #ffc371)",
-                            position: "relative",
-                            overflow: "hidden",
-                            transition: "0.3s",
-                            outline: "none",
-                            cursor: "pointer",
-                            marginTop: "23px",
-                          }}
-                          variant="contained"
-                          // data-aos="slide-right"
-                        >
-                          Read More..
-                        </Button>
+                        <Link to="/about_us">
+                          <Button
+                            style={{
+                              border: "1px solid white",
+                              color: "#fff",
+                              background:
+                                "linear-gradient(45deg, #ff5f6d, #ffc371)",
+                              position: "relative",
+                              overflow: "hidden",
+                              transition: "0.3s",
+                              outline: "none",
+                              cursor: "pointer",
+                              marginTop: "23px",
+                            }}
+                            variant="contained"
+                            // data-aos="slide-right"
+                          >
+                            Read More..
+                          </Button>
+                        </Link>
                       </Grid>
                     </Grid>
                   </div>
@@ -211,18 +213,20 @@ function Home() {
                                 <Typography variant="h5" className="training">
                                   School Management Service
                                 </Typography>
-                                <IconButton
-                                  disableRipple={true}
-                                  style={{
-                                    color: "white",
-                                    width: "35px",
-                                    height: "35px",
-                                    // backgroundColor: "#FFFFFF",
-                                    // boxShadow: "3px 3px 10px rgba(0, 0, 0, 0.2)",
-                                  }}
-                                >
-                                  <ArrowForwardIcon />
-                                </IconButton>
+                                <Link to="/school">
+                                  <IconButton
+                                    disableRipple={true}
+                                    style={{
+                                      color: "white",
+                                      width: "35px",
+                                      height: "35px",
+                                      // backgroundColor: "#FFFFFF",
+                                      // boxShadow: "3px 3px 10px rgba(0, 0, 0, 0.2)",
+                                    }}
+                                  >
+                                    <ArrowForwardIcon />
+                                  </IconButton>
+                                </Link>
                               </div>
                             </Box>
                           </Box>
@@ -267,18 +271,20 @@ function Home() {
                                 <Typography variant="h5" className="training">
                                   Training And Development Program
                                 </Typography>
-                                <IconButton
-                                  disableRipple={true}
-                                  style={{
-                                    color: "white",
-                                    width: "35px",
-                                    height: "35px",
-                                    // backgroundColor: "#FFFFFF",
-                                    // boxShadow: "3px 3px 10px rgba(0, 0, 0, 0.2)",
-                                  }}
-                                >
-                                  <ArrowForwardIcon />
-                                </IconButton>
+                                <Link to="/training">
+                                  <IconButton
+                                    disableRipple={true}
+                                    style={{
+                                      color: "white",
+                                      width: "35px",
+                                      height: "35px",
+                                      // backgroundColor: "#FFFFFF",
+                                      // boxShadow: "3px 3px 10px rgba(0, 0, 0, 0.2)",
+                                    }}
+                                  >
+                                    <ArrowForwardIcon />
+                                  </IconButton>
+                                </Link>
                               </div>
                             </Box>
                           </Box>
@@ -411,11 +417,17 @@ function Home() {
                               >
                                 {Array.isArray(task) &&
                                   task.map((task) => (
-                                    <NoticeBoard
-                                      key={task._id}
-                                      id={task._id}
-                                      task={task.task}
-                                    />
+                                    <Box
+                                      sx={{
+                                        borderBottom: "1px solid #ccc",
+                                      }}
+                                    >
+                                      <NoticeBoard
+                                        key={task._id}
+                                        id={task._id}
+                                        task={task.task}
+                                      />
+                                    </Box>
                                   ))}
                               </Box>
                             </List>

@@ -55,6 +55,8 @@ function UpdateProduct() {
   const [isCategory, setIsCategory] = useState(false);
   const [Stock, setStock] = useState(0);
   const [images, setImages] = useState([]);
+  const [pdfFiles, setpdfFiles] = useState([]);
+
   const [info, setInfo] = useState("");
   const [imagesPreview, setImagesPreview] = useState([]);
   const [oldImages, setOldImages] = useState([]);
@@ -77,6 +79,7 @@ function UpdateProduct() {
       setInfo(product.info);
       setStock(product.Stock);
       setOldImages(product.images);
+      setpdfFiles(product.pdfFiles)
     }
 
     if (error) {
@@ -117,6 +120,9 @@ function UpdateProduct() {
     images.forEach((currImg) => {
       myForm.append("images", currImg);
     });
+    pdfFiles.forEach((currPdf) => {
+      myForm.append("pdfFiles", currPdf);
+    });
 
     dispatch(updateProduct(productId, myForm));
   };
@@ -126,21 +132,31 @@ function UpdateProduct() {
   };
 
   const updateProductImagesChange = (e) => {
+    
     const files = Array.from(e.target.files);
+    console.log("Files selected:", files); 
     setImages([]);
     setImagesPreview([]);
     setOldImages([]);
+    setpdfFiles([]);
+
     files.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setImagesPreview((prev) => [...prev, reader.result]);
-          setImages((prev) => [...prev, reader.result]);
-        }
-      };
-      reader.readAsDataURL(file);
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          if (reader.readyState === 2) {
+            setImagesPreview((prev) => [...prev, reader.result]);
+            setImages((prev) => [...prev, file]); // Store the file, not the data URL
+          }
+        };
+        reader.readAsDataURL(file);
+      } else if (file.type === 'application/pdf') {
+        setpdfFiles((prevPdfs) => [...prevPdfs, file]); // Add the PDF file to the state
+        console.log(`PDF Selected: ${file.name}, Size: ${file.size} bytes`); // Log PDF details
+      }
     });
-  };
+};
+
   // togle handler =>
   const toggleHandler = () => {
     console.log("toggle");
@@ -354,7 +370,7 @@ function UpdateProduct() {
                         type="file"
                         name="avatar"
                         className={classes.input}
-                        accept="image/*"
+                        accept="image/*,application/pdf"
                         onChange={updateProductImagesChange}
                         multiple
                         style={{ display: "none" }}

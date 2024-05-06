@@ -5,6 +5,7 @@ import AOS from "aos";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import "aos/dist/aos.css";
 import "./Schools.css";
+
 const School = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });

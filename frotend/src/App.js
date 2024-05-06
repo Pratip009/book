@@ -49,6 +49,7 @@ import StaffProcessOrder from "./component/Staff/StaffProcessOrder.jsx";
 import StaffUserList from "./component/Staff/StaffUserList.jsx";
 import StaffProductList from "./component/Staff/StaffProductsList.jsx";
 import StaffUpdateProduct from "./component/Staff/StaffUpdateProductList.jsx";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
@@ -118,6 +119,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop/>
         <Switch>
           <Route
             exact
