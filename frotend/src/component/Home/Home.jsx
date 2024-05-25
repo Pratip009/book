@@ -1,6 +1,8 @@
 import React from "react";
 import "./Home.css";
 import ProductCard from "./ProductCard";
+import StarIcon from "@mui/icons-material/Star";
+
 import MataData from "../layouts/MataData/MataData";
 import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
@@ -418,12 +420,19 @@ function Home() {
                                 {Array.isArray(task) &&
                                   task.map((task) => (
                                     <Box
+                                      key={task._id}
                                       sx={{
                                         borderBottom: "1px solid #ccc",
+                                        display: "flex",
+                                        alignItems: "center",
                                       }}
                                     >
+                                      <StarIcon
+                                        
+                                        sx={{  color: '#ff5722',marginRight: 0 }}
+                                      />{" "}
+                                      
                                       <NoticeBoard
-                                        key={task._id}
                                         id={task._id}
                                         task={task.task}
                                       />

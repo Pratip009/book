@@ -1,19 +1,63 @@
-const BlogPost = require('../model/blogModel');
+const BlogModel = require("../model/blogModel");
 
-exports.createPost = async (req, res) => {
+module.exports.getBlogs = async (req, res) => {
   try {
-    const newPost = await BlogPost.create(req.body);
-    res.status(201).json(newPost);
+    const blogs = await BlogModel.find();
+    res.send(blogs);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ error: err, msg: "Failed to fetch blogs" });
+  }
+};
+exports.saveBlogPost = async (req, res) => {
+  const { title, description } = req.body;
+  // const imageUrl = req.file.path; // Path where the image is saved
+
+  try {
+    const blog = new BlogModel({
+      title,
+      description,
+      // imageUrl
+    });
+
+    await blog.save();
+    res.status(201).json(blog);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    console.log(error);
+    res.status(500).json({ message: "Error saving the blog post" });
+  }
+};
+module.exports.saveBlogs = async (req, res) => {
+  const { title, description, imageUrl } = req.body;
+  try {
+    const blog = await BlogModel.create({ title, description, imageUrl });
+    console.log("Blog saved successfully...");
+    res.status(201).send(blog);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ error: err, msg: "Failed to save blog" });
   }
 };
 
-exports.getAllPosts = async (req, res) => {
+module.exports.updateBlogs = async (req, res) => {
+  const { id } = req.params;
+  const { title, description } = req.body;
   try {
-    const posts = await BlogPost.find();
-    res.status(200).json(posts);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
+    await BlogModel.findByIdAndUpdate(id, { title, description });
+    res.send("Blog updated successfully");
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ error: err, msg: "Failed to update blog" });
+  }
+};
+
+module.exports.deleteBlogs = async (req, res) => {
+  const { id } = req.params;
+  try {
+    await BlogModel.findByIdAndDelete(id);
+    res.send("Blog deleted successfully");
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ error: err, msg: "Failed to delete blog" });
   }
 };

@@ -61,6 +61,7 @@ function StaffUpdateProduct() {
   const fileInputRef = useRef();
   const [toggle, setToggle] = useState(false);
   const categories = ["Books", "PDF", "Learning Aid"];
+  // PDF
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
     setIsCategory(true);

@@ -1,66 +1,68 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // Ensure you've installed axios
+import axios from 'axios';
+import { Button, TextField, Typography } from '@material-ui/core';
 
-export default function BlogPostAdmin() {
-  const [post, setPost] = useState({
-    title: '',
-    description: '',
-    imageUrl: '', // Assuming you're using a URL for the image
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setPost(prevState => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+function BlogPost() {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  // const [file, setFile] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    // formData.append('image', file);
+
+    // Client-side logging of FormData contents
+    for (let pair of formData.entries()) {
+      console.log(`${pair[0]}: ${pair[1]}`);
+    }
+
     try {
-      const response = await axios.post('http://localhost:5000/api/v1/posts', post);
-      alert('Post created successfully!');
-      console.log(response.data);
-      // Clear form fields or redirect as needed
+      const response = await axios.post('http://localhost:5000', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log('Blog post uploaded successfully:', response.data);
+      setTitle('');
+      setDescription('');
+      // setFile(null);
     } catch (error) {
-      console.error("There was an error creating the post:", error);
-      alert('Failed to create post');
+      console.error('Error uploading blog post:', error.response ? error.response.data : "Network Error");
     }
   };
 
   return (
     <div>
-      <h2>Add New Blog Post</h2>
+      <Typography variant="h4">Create a Blog Post</Typography>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title</label>
-          <input
-            type="text"
-            name="title"
-            value={post.title}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Description</label>
-          <textarea
-            name="description"
-            value={post.description}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Image URL</label>
-          <input
-            type="text"
-            name="imageUrl"
-            value={post.imageUrl}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Submit</button>
+        <TextField
+          label="Title"
+          fullWidth
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
+        <TextField
+          label="Description"
+          fullWidth
+          multiline
+          rows={4}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+        />
+        {/* <input
+          type="file"
+          onChange={(e) => setFile(e.target.files[0])}
+          required
+        /> */}
+        <Button type="submit" color="primary" variant="contained">Upload</Button>
       </form>
     </div>
   );
 }
+
+export default BlogPost;

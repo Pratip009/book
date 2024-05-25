@@ -16,15 +16,20 @@ const payment = require("./route/paymentRoute");
 const task = require("./route/taskRoute");
 const usermessage = require("./route/userMessageRoute");
 const adminMessage = require("./route/adminMessageRoute");
+const blog = require("./route/blogRoutes")
 
-// const image = require("./route/imageRoutes");
 
 // for req.cookie to get token while authentication
 app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
-app.use(fileUpload());
+app.use(
+  fileUpload({
+    createParentPath: true, // This option auto-creates the directory path if it doesn't exist
+    limits: { fileSize: 50 * 1024 * 1024 },
+  })
+);
 app.use(errorMiddleware);
 app.use(cors());
 
@@ -36,8 +41,7 @@ app.use("/api/v1", payment);
 app.use("/api/v1", task);
 app.use("/api/v1", usermessage);
 app.use("/api/v1", adminMessage);
-
-// app.use("/api/v1", image); // Add the image route here
+app.use("/api/v1",blog)
 
 // Serve static files from the frontend build directory
 const __dirname1 = path.resolve();

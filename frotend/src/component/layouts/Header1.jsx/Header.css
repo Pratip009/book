@@ -132,15 +132,16 @@ align-self: center;
 
 
 .headerBottom__logo_main{
-    height: 4rem;
+  height: 4rem;
+   align-items: center;
    
-    margin-top: 7px;
+
 }
 @media (max-width: 768px) {
   .headerBottom__logo_main {
-      height: 3rem; 
-       align-self: center;
-      margin-top: 5px;
+    height: 40px;
+    align-items: center;
+  width: 200px;
   }
 }
 .header_mobile_menu{

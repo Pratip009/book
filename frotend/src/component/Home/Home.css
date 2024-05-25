@@ -78,7 +78,8 @@
 
 }
 .highlight{
-  position: relative;
+  position: relative; /* Needed to properly position and stack the pseudo-element */
+  z-index: 2;
 }
 @keyframes slideAndFadeIn {
   from {
@@ -87,16 +88,15 @@
   }
   to {
     width: 100%;
-    opacity: 1;
+    opacity: 0.75;
   }
 }
 
-.highlight::after{
+.highlight::after {
   content: "";
   width: 100%;
-  height: 5px;
-  background-image: url("https://www.beyondcss.dev/underline.svg");
-  
+  height: 7px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='255' height='36' viewBox='0 0 255 36' fill='none'%3E%3Cpath d='M2.99975 17.6351C116.771 12.3405 178.178 12.7036 252 18.0966' stroke='%23FF4E00' stroke-width='5.75696' stroke-linecap='round' /%3E%3C/svg%3E");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -104,7 +104,8 @@
   bottom: 0;
   left: 0;
   opacity: 0; /* Start with the element fully transparent */
-  animation: slideAndFadeIn 3s linear forwards;
+  animation: slideAndFadeIn 6s ease-in-out infinite;
+  z-index: 1;
 }
 .slider {
   top: 1em;

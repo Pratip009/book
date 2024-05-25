@@ -28,11 +28,11 @@ const TestimonialSlider = () => {
       className="testimonial"
       style={{ display: "flex", justifyContent: "center", marginTop: 50 }}
     >
-      <div style={{ width: "50%", textAlign: "center" }}>
+      <div style={{ width: "85%", textAlign: "center" }}>
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
-          <CardOne img="https://e0.pxfuel.com/wallpapers/289/267/desktop-wallpaper-tirolzinho-cute-cartoon-cartoon-cute-cartoon-boy-cute-cartoon-boys.jpg" />
-          <CardTwo img="https://cdn.pixabay.com/photo/2023/04/06/05/33/cute-boy-cartoon-7902892_1280.jpg" />
-          <CardThree img="https://us.123rf.com/450wm/aberrantrealities/aberrantrealities2309/aberrantrealities230925384/213543610-a-cartoon-girl-with-brown-hair-and-a-yellow-bow-in-her-hair.jpg?ver=6" />
+          <CardOne img={require("../../Image/testimonial1.jpg")} />
+          <CardTwo img={require("../../Image/testimonial2.jpg")} />
+          <CardThree img={require("../../Image/testimonial3.jpg")} />
         </Slider>
       </div>
     </div>
@@ -69,11 +69,16 @@ const CardOne = ({ img }) => {
           display: "inline-block",
         }}
       >
-        Having natural conversations on social media about your work is
-        authentic and adds another layer of credibility to your company. The
-        main difference between these and other testimonials is that the other
-        types are usually requested, whereas social recommendations are mostly
-        spontaneous.
+        Learning Needs is indeed true to its name when it comes to service. It
+        is indeed the best program on teachers training which I have come
+        across. Mr.Rahul is a thorough professional who creates tailor made
+        sessions according to the client's need. This was a very interactive
+        workshop compared to those available from other providers which feel
+        more like lectures. The day really fine-tuned my skills and the updates
+        I have received since mean I can continue my learning into the future.
+        Maharishi Vidya Mandir school has been immensely benefitted by the
+        training program. The performance of the teachers has also shown
+        remarkable difference after the training session.
       </p>
       <p
         style={{
@@ -82,8 +87,10 @@ const CardOne = ({ img }) => {
           marginTop: 25,
         }}
       >
-        <span style={{ fontWeight: 500, color: "green" }}>ABC</span> , CTO of
-        BVN Company
+        <span style={{ fontWeight: 500, color: "green" }}>
+          Neha Aswin B.ED, M.A (In American and Indian Literature), MBA.
+        </span>{" "}
+        Principal, Maharishi Vidya Mandir Senior Secondary School, Jolarpettai
       </p>
     </div>
   );
@@ -118,11 +125,14 @@ const CardTwo = ({ img }) => {
           display: "inline-block",
         }}
       >
-        Having natural conversations on social media about your work is
-        authentic and adds another layer of credibility to your company. The
-        main difference between these and other testimonials is that the other
-        types are usually requested, whereas social recommendations are mostly
-        spontaneous.
+        I recently completed the teacher training program and I must say it was
+        a truly transformative Experience. The Program provided me with a deeper
+        understanding of Effective Teaching practices. I gained a wealth of
+        Knowledge and Skills that I can apply in my classroom. It was
+        particularly helpful as it allowed me to explore new approaches and
+        strategies that I can use to engage and motivate my students. I really
+        wanted to thank Mr.RAHUL ,a best educator who guided and educated me all
+        through the teacher training program.
       </p>
       <p
         style={{
@@ -131,8 +141,11 @@ const CardTwo = ({ img }) => {
           marginTop: 25,
         }}
       >
-        <span style={{ fontWeight: 500, color: "green" }}>PQR</span> , CEO of
-        XYZ Company
+        <span style={{ fontWeight: 500, color: "green" }}>
+          S.Swathika. BBA.,MBA
+        </span>{" "}
+        , Coordinator Primary Wing Maharishi Vidya Mandir.Pudur, Jolarpettai
+        Tirupattur dt.
       </p>
     </div>
   );
@@ -167,11 +180,17 @@ const CardThree = ({ img }) => {
           display: "inline-block",
         }}
       >
-        Having natural conversations on social media about your work is
-        authentic and adds another layer of credibility to your company. The
-        main difference between these and other testimonials is that the other
-        types are usually requested, whereas social recommendations are mostly
-        spontaneous.
+        I recently attended the teacher training program, and I was thoroughly
+        impressed with the training session led by Learning Needs. The Teacher
+        Training program was engaging, informative, and demonstrated exceptional
+        knowledge and expertise in the field, and their passion for teaching was
+        truly remarkable. The session was packed with valuable resources,
+        including practical tips, templates, and tools that I can apply
+        immediately. I appreciated the emphasis on technology integration,
+        project-based learning, and how it can enhance student engagement and
+        learning outcomes. The training session made me inspired, motivated, and
+        equipped with new ideas to transform my teaching practice and make a
+        positive impact on their students learning experiences.
       </p>
       <p
         style={{
@@ -187,9 +206,10 @@ const CardThree = ({ img }) => {
             fontFamily: "'Roboto', sans-serif",
           }}
         >
-          XYZ
+          M.Sudhakar BE.,B.Ed
         </span>{" "}
-        , Media Analyst
+        , HOD Computer Science of Maharishi Vidya Mandir School. Anna Street,
+        Jolarpettai, Tirupattur District.
       </p>
     </div>
   );

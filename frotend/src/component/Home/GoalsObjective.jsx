@@ -37,7 +37,13 @@ export default function GoalsObjective() {
           }}
         >
           <div className="educate">
-            <Card style={{ boxShadow: "none", backgroundColor: "transparent" }}>
+            <Card
+              style={{
+                boxShadow: "none",
+                backgroundColor: "transparent",
+                marginBottom: "-18px",
+              }}
+            >
               <CardHeader
                 avatar={
                   <Avatar style={{ backgroundColor: "#003E90" }}>
@@ -79,7 +85,7 @@ export default function GoalsObjective() {
                     MISSION
                   </span>
                 }
-                subheader="Integrity – Conducting ourselves with honesty and responsibility.
+                subheader="Conducting ourselves with honesty and responsibility.
                 "
               />
             </Card>
@@ -92,7 +98,11 @@ export default function GoalsObjective() {
             <div className="educate_desc_div">
               <span
                 className="educate_desc"
-                style={{ fontSize: "15px", fontFamily: "'Roboto', sans-serif" }}
+                style={{
+                  fontSize: "15px",
+                  fontFamily: "'Roboto', sans-serif",
+                  textAlign: "justify",
+                }}
               >
                 Challenging ourselves to create unique ideas and innovative
                 solutions in a technology rich environment to develop the human
