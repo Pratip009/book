@@ -2,7 +2,11 @@ import React from "react";
 import "./Home.css";
 import ProductCard from "./ProductCard";
 import StarIcon from "@mui/icons-material/Star";
-
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Icon from "@mui/material/Icon";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
 import MataData from "../layouts/MataData/MataData";
 import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
@@ -29,10 +33,24 @@ import HailIcon from "@mui/icons-material/Hail";
 import GoalsObjective from "./GoalsObjective";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
-import NoticeBoard from "../Admin/NoticeBoard";
 import Welcome from "./Welcome";
 import { Link } from "react-router-dom";
+import { getNotice } from "../../GlobalApi";
 function Home() {
+  const [notices, setNotices] = useState([]);
+
+  useEffect(() => {
+    const fetchNotices = async () => {
+      try {
+        const response = await getNotice();
+        setNotices(response.data.data);
+      } catch (error) {
+        console.error("Error fetching notices:", error);
+      }
+    };
+
+    fetchNotices();
+  }, []);
   // we provided all parameter for react-alert at index.js
   const alert = useAlert();
   const [task, setTask] = useState([]);
@@ -107,7 +125,7 @@ function Home() {
                           // data-aos="zoom-in"
                           style={{
                             fontSize: "36px",
-                            fontFamily: "'Roboto', sans-serif",
+                            fontFamily: "'Outfit', sans-serif",
                           }}
                         >
                           Our Services Help You Succeed in Business
@@ -121,7 +139,8 @@ function Home() {
                             fontWeight: "400",
                             textAlign: "justify",
                             display: "inline-block",
-                            fontFamily: "'Roboto', sans-serif",
+                            fontFamily: "'Outfit', sans-serif",
+                            color: "black",
                           }}
                           // data-aos="slide-up"
                         >
@@ -212,7 +231,11 @@ function Home() {
                                 >
                                   <MenuBookIcon fontSize="large" />
                                 </Avatar>
-                                <Typography variant="h5" className="training">
+                                <Typography
+                                  variant="h5"
+                                  className="training"
+                                  style={{ fontFamily: "'Outfit',sans-serif" }}
+                                >
                                   School Management Service
                                 </Typography>
                                 <Link to="/school">
@@ -270,7 +293,11 @@ function Home() {
                                 >
                                   <HailIcon fontSize="large" />
                                 </Avatar>
-                                <Typography variant="h5" className="training">
+                                <Typography
+                                  variant="h5"
+                                  className="training"
+                                  style={{ fontFamily: "'Outfit',sans-serif" }}
+                                >
                                   Training And Development Program
                                 </Typography>
                                 <Link to="/training">
@@ -305,6 +332,7 @@ function Home() {
                         textAlign: "center",
                         fontSize: "36px",
                         marginTop: "10px",
+                        fontFamily: "'Outfit', sans-serif",
                       }}
                     >
                       Find The <span className="highlight">Right Product</span>{" "}
@@ -316,7 +344,7 @@ function Home() {
                     // data-aos="slide-right"
                     style={{
                       fontSize: "19px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       fontWeight: "500",
                     }}
                   >
@@ -356,6 +384,7 @@ function Home() {
                         textAlign: "center",
                         fontSize: "36px",
                         marginTop: "60px",
+                        fontFamily: "'Outfit', sans-serif",
                       }}
                     >
                       Our <span className="highlight">Goals And Objective</span>
@@ -386,6 +415,7 @@ function Home() {
                             color: "white",
                             textShadow: "0 0 10px red",
                             padding: "10px 0 0 0 ",
+                            fontFamily: "Outfit, sans-serif" 
                           }}
                         >
                           Updates
@@ -407,38 +437,26 @@ function Home() {
                               }}
                               className="slider"
                             >
-                              <Box
-                                component="ul"
-                                sx={{
-                                  padding: "0 0",
-                                  listStyle: "none",
-                                  display: "grid",
-                                  gap: "30px",
-                                  gridTemplateColumns: "repeat(1, 1fr)",
-                                }}
-                              >
-                                {Array.isArray(task) &&
-                                  task.map((task) => (
-                                    <Box
-                                      key={task._id}
-                                      sx={{
-                                        borderBottom: "1px solid #ccc",
-                                        display: "flex",
-                                        alignItems: "center",
-                                      }}
-                                    >
-                                      <StarIcon
-                                        
-                                        sx={{  color: '#ff5722',marginRight: 0 }}
-                                      />{" "}
-                                      
-                                      <NoticeBoard
-                                        id={task._id}
-                                        task={task.task}
-                                      />
-                                    </Box>
-                                  ))}
-                              </Box>
+                              {notices.map((notice) => (
+                                <React.Fragment key={notice.id}>
+                                  <ListItem
+                                    sx={{
+                                      borderBottom: "1px solid #ccc",
+                                    }}
+                                  >
+                                    <ListItemIcon sx={{ minWidth: 32 }}>
+                                      <StarIcon fontSize="small" sx={{ color: "#FF4E00" }}/>
+                                   
+                                    </ListItemIcon>
+                                    <ListItemText
+                                      primary={notice.attributes.notices}
+                                      primaryTypographyProps={{ style: { fontFamily: "Outfit, sans-serif" } }}
+                                      sx={{ marginLeft: 0 }}
+                                    />
+                                  </ListItem>
+                                  <Divider />
+                                </React.Fragment>
+                              ))}
                             </List>
                           </div>
                         </Card>

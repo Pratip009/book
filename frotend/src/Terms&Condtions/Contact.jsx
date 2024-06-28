@@ -230,7 +230,7 @@ const ContactForm = () => {
             <Typography variant="body2" className={classes.para_contact}>
               <p
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
                   fontSize: "17px",
@@ -245,7 +245,7 @@ const ContactForm = () => {
               variant="body2"
               className={classes.address_contacts}
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
                 fontSize: "17px",
@@ -253,7 +253,7 @@ const ContactForm = () => {
             >
               <span
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
                   fontSize: "17px",
@@ -274,7 +274,7 @@ const ContactForm = () => {
               className={classes.para_contact}
               style={{
                 marginTop: "2rem",
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
                 fontSize: "17px",
@@ -339,7 +339,7 @@ const ContactForm = () => {
                 side of this page. */}
                 <p
                   style={{
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     textAlign: "justify",
                     display: "inline-block",
                     fontSize: "17px",

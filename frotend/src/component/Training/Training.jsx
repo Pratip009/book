@@ -28,12 +28,11 @@ const Training = () => {
               <p
                 style={{
                   fontWeight: "600",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "center",
 
                   fontSize: "17px",
                 }}
-                
               >
                 Soft skills’ Behavioural Shift training is essential because we
                 do not have it in our academic curricula.
@@ -41,20 +40,18 @@ const Training = () => {
               <p
                 style={{
                   fontWeight: "600",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "center",
                   fontSize: "17px",
                 }}
-               
               >
                 However it can be developed through continuous training.
               </p>
               <p
-                
                 style={{
                   fontSize: "17px",
                   fontWeight: "400",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
                 }}
@@ -98,7 +95,7 @@ const Training = () => {
               <p
                 style={{
                   fontSize: "17px",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
                 }}
@@ -125,7 +122,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -146,7 +143,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -167,7 +164,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -188,7 +185,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -218,7 +215,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -239,7 +236,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -260,7 +257,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -281,7 +278,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -312,7 +309,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -333,7 +330,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -354,7 +351,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -375,7 +372,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       fontSize: "17px",
                       display: "inline-block",
@@ -405,7 +402,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -426,7 +423,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -447,7 +444,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -468,7 +465,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -498,7 +495,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -519,7 +516,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -540,7 +537,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -561,7 +558,7 @@ const Training = () => {
                   <StarIcon style={{ color: "orange" }} />
                   <span
                     style={{
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "17px",
@@ -609,7 +606,7 @@ const Training = () => {
                 justifyContent: "center",
                 marginTop: "-2rem",
               }}
-              data-aos="slide-right"
+             
             >
               {/* <p className="non_important">
                 Way we <span class="circle-sketch-highlight"> deliver </span>{" "}

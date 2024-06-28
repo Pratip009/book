@@ -21,7 +21,7 @@ const Parent = () => {
       </div>
       <span
         style={{
-          fontFamily: "'Roboto', sans-serif",
+          fontFamily: "'Outfit', sans-serif",
           textAlign: "justify",
           display: "inline-block",
           fontSize: "17px",

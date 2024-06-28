@@ -13,16 +13,14 @@ export default function Faq() {
   }, []);
   return (
     <div className="FAq_image">
-      
       <h1
         style={{
           textAlign: "start",
-          color:"#FF4E00"
+          color: "#FF4E00",
         }}
       >
         FAQ - Training
       </h1>
-     
       {/* 1,2 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
@@ -33,7 +31,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -44,7 +42,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -70,7 +68,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -81,7 +79,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -104,7 +102,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -115,7 +113,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -139,7 +137,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -150,7 +148,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -176,7 +174,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -187,7 +185,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -207,9 +205,11 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
-          color:"#FF4E00"
+          color: "#FF4E00",
         }}
-      >FAQ- School</h1>
+      >
+        FAQ- School
+      </h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -219,7 +219,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -230,7 +230,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -256,7 +256,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -267,7 +267,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -294,7 +294,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -305,7 +305,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -334,7 +334,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -345,7 +345,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -371,7 +371,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -382,7 +382,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -408,7 +408,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -419,7 +419,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -444,7 +444,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -455,7 +455,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -483,7 +483,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -494,7 +494,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -512,9 +512,11 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
-          color:"#FF4E00"
+          color: "#FF4E00",
         }}
-      >FAQ- Products</h1>
+      >
+        FAQ- Products
+      </h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -524,7 +526,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -535,7 +537,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -563,7 +565,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -574,7 +576,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -601,7 +603,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -612,7 +614,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -639,7 +641,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -650,7 +652,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -674,7 +676,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -685,7 +687,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}
@@ -713,7 +715,7 @@ export default function Faq() {
           <Typography
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               color: "#FF4E00",
             }}
@@ -724,7 +726,7 @@ export default function Faq() {
           <Typography
             style={{
               color: "#003E90",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
 
               fontWeight: 600,
             }}

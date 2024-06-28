@@ -56,7 +56,7 @@ export default function GoalsObjective() {
                       fontSize: 15,
                       color: "#1B1A1A",
                       fontWeight: "600",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                     }}
                   >
                     VISION
@@ -79,7 +79,7 @@ export default function GoalsObjective() {
                       fontSize: 15,
                       color: "#1B1A1A",
                       fontWeight: "600",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                     }}
                   >
                     MISSION
@@ -91,7 +91,7 @@ export default function GoalsObjective() {
             </Card>
             <h3
               className="app_heading"
-              style={{ fontFamily: "'Roboto', sans-serif", fontSize: "36px" }}
+              style={{ fontFamily: "'Outfit', sans-serif", fontSize: "36px" }}
             >
               Future Target Innovation{" "}
             </h3>
@@ -100,7 +100,7 @@ export default function GoalsObjective() {
                 className="educate_desc"
                 style={{
                   fontSize: "15px",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                 }}
               >

@@ -56,15 +56,16 @@ export default function FooterHover() {
           <h1
             style={{
               fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               color: "#FFFFFF",
+              fontSize:"35px"
             }}
           >
             Let’s Change, Learn, Grow, and Transform!
           </h1>
           <p
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               textAlign: "justify",
               display: "inline-block",
               color: "#FFFFFF",

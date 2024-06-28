@@ -65,7 +65,7 @@ export default function TeamMessage() {
                     color: "white",
                     fontSize: "36px",
                     fontWeight: "700",
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                   }}
                 >
                   Team Message
@@ -75,7 +75,7 @@ export default function TeamMessage() {
                 <p
                   className="team_message"
                   style={{
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontWeight: "300",
                     color: "white",
                     textAlign: "justify",
@@ -101,7 +101,7 @@ export default function TeamMessage() {
             <Grid item>
               <Typography
                 sx={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   color: "white",
                   fontWeight: "500",
                   fontSize: "15px",

@@ -1,127 +1,75 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
+import React, { useState, useEffect } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-// import { ImageListItemBar } from "@mui/material/ImageListItemBar";
-function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { getGallery } from "../../../src/GlobalApi.js"; // Import your Axios API functions
 
 export default function Gallery() {
+  const [galleryData, setGalleryData] = useState([]);
+  const [error, setError] = useState(null); // Add error state
+
+  useEffect(() => {
+    // Fetch gallery data when component mounts
+    const fetchGallery = async () => {
+      try {
+        const response = await getGallery();
+        console.log("Gallery API response:", response.data); // Log the API response
+        setGalleryData(response.data.data); // Update state with fetched data
+      } catch (error) {
+        setError(error); // Set error state if there's an error
+        console.error("Error fetching gallery data:", error);
+      }
+    };
+
+    fetchGallery();
+
+    // Cleanup function
+    return () => {
+      // Any cleanup code, if necessary
+    };
+  }, []);
+
+  if (error) {
+    return <div>Error fetching data: {error.message}</div>; // Render error message
+  }
+
   return (
-    <div
-      style={{
-        width: "100%",
-        backgroundColor: "white",
-        overflowX: "hidden",
-        marginTop: "100px",
-      }}
-    >
-      <div className="container___">
-        <h1
-          style={{
-            textAlign: "center",
-            fontSize: "36px",
-            marginTop: "20px",
+    <div className="container___" style={{ backgroundColor: "white",width:"100%" }}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <ImageList
+          sx={{
+            width: "80%",
+            height: "auto",
+            margin: "auto",
+            marginTop: "150px",
+            backgroundColor: "white"
           }}
         >
-          <span className="highlight">Our Gallery </span>
-        </h1>
-        <Box sx={{ width: "100%", height: "100%", overflowY: "hidden" }}>
-          <ImageList
-            sx={{ width: "100%", height: "auto" }}
-            variant="quilted"
-            cols={4}
-            rowHeight={121}
-          >
-            {itemData.map((item) => (
-              <ImageListItem
-                key={item.img}
-                cols={item.cols || 1}
-                rows={item.rows || 1}
-                style={{ overflow: "hidden" }}
-              >
-                <div
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    backgroundImage: `url(${item.img})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat:"no-repeat"
-                  }}
-                ></div>
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </Box>
+          {galleryData.map((item) => (
+            <ImageListItem key={item.id}>
+              {item.attributes.images.data.attributes.url ? ( // Check if URL exists before rendering
+                <img
+                  srcSet={`${item.attributes.images.data.attributes.url}`}
+                  src={`${item.attributes.images.data.attributes.url}`}
+                  alt={item.attributes.description || "Image"} // Provide fallback alt text
+                  loading="lazy"
+                />
+              ) : (
+                <span>Image URL not found</span>
+              )}
+              <ImageListItemBar
+                title={item.attributes.description}
+                position="below"
+                titleStyle={{ // Add custom styles to the title
+                  fontSize: "16px", // Custom font size
+                  fontWeight: "bold", // Custom font weight
+                  color: "black" // Custom color
+                }}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
       </div>
     </div>
   );
 }
-
-const itemData = [
-  {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
-    cols: 2,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
-    cols: 2,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-    author: "@arwinneil",
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-    title: "Mushrooms",
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-    title: "Tomato basil",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    title: "Sea star",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-    cols: 2,
-  },
-];

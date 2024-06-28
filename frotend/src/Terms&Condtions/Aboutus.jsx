@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "36px",
     textAlign: "start",
     padding: "2rem 1rem 2rem",
-    fontFamily: "Roboto",
+    fontFamily: "'Outfit', sans-serif",
     fontWeight: "500 !important",
   },
   heading12_about: {
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   introText_about: {
-    fontFamily: "Roboto",
+    fontFamily: "'Outfit', sans-serif",
     maxWidth: "800px",
     lineHeight: "1.5",
     // margin: "1.5rem 0",
@@ -76,12 +76,12 @@ const useStyles = makeStyles((theme) => ({
   },
   introText_about2: {
     lineHeight: "1.5",
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Outfit', sans-serif",
 
     marginTop: "-20px",
     color: "#292929",
     fontSize: "0.9rem",
-    fontWeight: "300 !important",
+    fontWeight: "400 !important",
     textAlign: "justify",
     padding: "0.8rem 0",
   },
@@ -128,7 +128,7 @@ const About_UsPage = () => {
   return (
     <>
       <div className={classes.about_us}>
-        <div style={{ marginTop: "-15px" }} data-aos="slide-down">
+        <div style={{ marginTop: "-15px" }}>
           <img src={require("../Image/learninabout.jpg")} alt="" />
         </div>
         <MetaData title={"About Us"} />
@@ -152,14 +152,14 @@ const About_UsPage = () => {
         >
           <div style={{ maxWidth: "85%" }}>
             <Grid container spacing={1} justifyContent="center">
-              <Grid item xs={12} sm={6} data-aos="slide-right">
+              <Grid item xs={12} sm={6}>
                 <img
                   src={require("../Image/about/abb.png")}
                   alt="Learning needs"
                   className={classes.image_about}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} data-aos="slide-left">
+              <Grid item xs={12} sm={6}>
                 {/* <h1
         style={{
           textAlign: "Start",
@@ -189,7 +189,7 @@ const About_UsPage = () => {
                     fontWeight: "400",
                     textAlign: "justify",
                     display: "inline-block",
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                   }}
                 >
                   Learning Needs is a training & management consulting company
@@ -270,7 +270,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -282,7 +282,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -304,7 +304,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -316,7 +316,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -338,7 +338,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -350,7 +350,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -372,7 +372,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -384,7 +384,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -406,7 +406,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -418,7 +418,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -440,7 +440,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -452,7 +452,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -481,7 +481,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -493,7 +493,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -515,7 +515,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -527,7 +527,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -549,7 +549,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -561,7 +561,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -583,7 +583,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -595,7 +595,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -617,7 +617,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -629,7 +629,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -651,7 +651,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -663,7 +663,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -686,7 +686,7 @@ const About_UsPage = () => {
                 marginBottom: "2rem",
               }}
             >
-              <Grid item xs={4} md={5} data-aos="fade-left">
+              <Grid item xs={4} md={5} >
                 <img
                   src={require("../Image/learning2.png")}
                   alt="Learning needs"
@@ -694,7 +694,7 @@ const About_UsPage = () => {
                 />
               </Grid>
 
-              <Grid item xs={4} md={2} data-aos="fade-left">
+              <Grid item xs={4} md={2} data-aos="fade-down">
                 <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
                   {/* <Groups3Icon fontSize="large" /> */}
                   <img
@@ -707,7 +707,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#FF4E00",
                       fontSize: "36px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -719,7 +719,7 @@ const About_UsPage = () => {
                     style={{
                       color: "#61677A",
                       fontSize: "15px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
 
                       fontWeight: "600",
                     }}
@@ -729,7 +729,7 @@ const About_UsPage = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={4} md={5} data-aos="fade-left">
+              <Grid item xs={4} md={5} >
                 <img
                   src={require("../Image/need2.png")}
                   alt="Learning needs"
@@ -740,7 +740,7 @@ const About_UsPage = () => {
           </Container>
         </div>
         <Container className={classes.container_12} style={{ width: "90%" }}>
-          <div className="circle_text" data-aos="slide-left">
+          <div className="circle_text">
             <h1
               style={{
                 textAlign: "center",
@@ -753,16 +753,14 @@ const About_UsPage = () => {
           </div>
           <span
             className="sub_headings"
-            data-aos="slide-down"
-            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "17px" }}
+            style={{ fontFamily: "'Outfit', sans-serif", fontSize: "17px" }}
           >
             Learning Needs dedicated leadership team is focused on delivering
             quality service and leadership development
           </span>
           <span
             className="sub_headings"
-            data-aos="slide-down"
-            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "17px" }}
+            style={{ fontFamily: "'Outfit', sans-serif", fontSize: "17px" }}
           >
             programs that exceed our clients’ expectations and help them achieve
             their goals.
@@ -782,13 +780,13 @@ const About_UsPage = () => {
                 justifyContent="center"
                 style={{ marginTop: "20px" }}
               >
-                <Grid item xs={12} sm={6} data-aos="slide-right">
+                <Grid item xs={12} sm={6}>
                   <h2
                     style={{
                       textAlign: "Start",
                       marginTop: "0",
                       marginBottom: "10px",
-                      fontFamily: "'Roboto', sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       fontSize: "36px",
                       fontWeight: "700",
                       color: "#FF4E00",
@@ -836,7 +834,7 @@ const About_UsPage = () => {
               </Typography> */}
                 </Grid>
 
-                <Grid item xs={12} sm={6} data-aos="slide-left">
+                <Grid item xs={12} sm={6}>
                   <img
                     src={require("../Image/team-spirit.png")}
                     alt="Learning needs"
@@ -862,7 +860,7 @@ const About_UsPage = () => {
               >
                 About Learning Needs
               </h1> */}
-                <div className="circle_text" data-aos="fade-left">
+                <div className="circle_text">
                   <h1
                     style={{
                       textAlign: "start",
@@ -877,7 +875,6 @@ const About_UsPage = () => {
                   variant="body1"
                   className={classes.introText_about}
                   style={{ fontSize: "15px" }}
-                  data-aos="slide-right"
                 >
                   Consulting means different things to different people. For us,
                   it is about being a trusted advisor that helps clients chart
@@ -899,7 +896,6 @@ const About_UsPage = () => {
                     margin: "0",
                     padding: "0",
                   }}
-                  data-aos="slide-right"
                 >
                   With all the best wishes!
                 </p>
@@ -912,7 +908,6 @@ const About_UsPage = () => {
                     padding: "0",
                     color: "orange",
                   }}
-                  data-aos="slide-right"
                 >
                   Rahul Singh
                 </p>
@@ -928,13 +923,7 @@ const About_UsPage = () => {
                 competitive prices.
               </Typography> */}
               </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                data-aos="slide-left"
-                className="founder"
-              >
+              <Grid item xs={12} sm={6} className="founder">
                 <img
                   src={require("../Image/founder.jpg")}
                   style={{ width: 400, height: 400 }}
@@ -962,7 +951,7 @@ const About_UsPage = () => {
             {/* <h2 className="clients_headings" >
               Clients sharing their experience
             </h2> */}
-            <div className="circle_text" data-aos="fade-up">
+            <div className="circle_text">
               {/* <p className="non_important" style={{ textAlign: "Start" }}>
                 Clients sharing their{" "}
                 <span class="circle-sketch-highlight">experience</span>
@@ -987,7 +976,7 @@ const About_UsPage = () => {
             </div>
           </Container>
           <Container className="faq" style={{ marginTop: "3rem" }}>
-            <div className="circle_text" data-aos="fade-down">
+            <div className="circle_text">
               {/* <p className="non_important" style={{ textAlign: "Start" }}>
                 Frequently Asked{" "}
                 <span class="circle-sketch-highlight">Questions</span>

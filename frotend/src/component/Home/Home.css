@@ -175,12 +175,12 @@ font-family: helvetica, arial, sans serif;
 
 .non_important{
   font-size: 45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 .clients_headings{
   display: flex;
 justify-content: center;
-font-family: 'Roboto', sans-serif;
+font-family: 'Outfit', sans-serif;
 font-size: 30px;
 margin-top: 0;
 }
@@ -197,7 +197,7 @@ margin-top: 0;
   display: flex;
 justify-content: center;
 font-size: 16px;
-font-family: 'Roboto', sans-serif;
+font-family: 'Outfit', sans-serif;
 }
 
 .container_element_large_text{
@@ -205,14 +205,14 @@ font-family: 'Roboto', sans-serif;
   font-size: 30px;
   color: #FF4E00;
   /* #FF4E00 */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 600;
   line-height: 1.9rem;
 }
 .container_element_small_text{
   margin: 0 auto;
   text-align: start;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 15px;
   color: black;
   font-weight: 200;

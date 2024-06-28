@@ -3,7 +3,7 @@ import AOS from "aos";
 import { Grid } from "@material-ui/core";
 import "aos/dist/aos.css";
 import Pricing from "../pricing/pricing";
-import "./Service.css"
+import "./Service.css";
 const Service = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -25,71 +25,76 @@ const Service = () => {
         {/* <Grid item xs={12}></Grid> */}
         <div className="container___">
           <div className="servicebg">
+            <div className="circle_text">
+              <h1
+                style={{
+                  textAlign: "start",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
+              >
+                <span className="highlight">Services </span>
+                of Learning Needs
+              </h1>
+            </div>
+            <p
+              style={{
+                fontSize: "23px",
+                fontWeight: "600",
+                fontFamily: "'Outfit', sans-serif",
+              }}
+            >
+              {" "}
+              Our services help you succeed in business
+            </p>
 
-          <div className="circle_text">
-            
-            <h1
-             style={{
-               textAlign: "start",
-               fontSize: "36px",
-               marginTop: "20px",
-             }}
-           >
-             <span className="highlight">Services </span>
-             of Learning
-             Needs
-           </h1>
-         </div>
-         <p
-           style={{
-             fontSize: "23px",
-             fontWeight: "600",
-             fontFamily: "'Roboto', sans-serif",
-           }}
-         >
-           {" "}
-           Our services help you succeed in business
-         </p>
-         
-
-         
-         
-         <p
-           style={{
-             fontFamily: "'Roboto', sans-serif",
-             textAlign: "justify",
-             display: "inline-block",
-             fontSize:"17px"
-           }}
-         >
-           Learning Needs actively works with various reliable preferred
-           associates from different walks of life. This exercise ensures
-           durable, timely and quality supply of school needs at reasonable
-           price. Vendor management includes activities such as selecting the
-           right partners, negotiating contracts, controlling costs, reducing
-           vendor-related risks and ensuring smooth service delivery. We
-           provide the school consultancy services needed to streamline and
-           systematize various tasks, from period accounting to complex and
-           sensitive whole-school projects, guidance on the best software
-           solutions for your administration or a project manager to lead a
-           school’s digital transformation. The Learning Needs team has worked
-           with hundreds of schools, and we have a deep respect for how ethos
-           and values impact the day-to-day operations within a school. We
-           understand that there are many moving parts, roles, and
-           responsibilities to running a successful school operation. If you
-           feel like you’ve gotten off track, why not trust the experts to help
-           you get back on the road to success?
-         </p>
+            <p
+              style={{
+                fontFamily: "'Outfit', sans-serif",
+                textAlign: "justify",
+                display: "inline-block",
+                fontSize: "17px",
+              }}
+            >
+              Learning Needs actively works with various reliable preferred
+              associates from different walks of life. This exercise ensures
+              durable, timely and quality supply of school needs at reasonable
+              price. Vendor management includes activities such as selecting the
+              right partners, negotiating contracts, controlling costs, reducing
+              vendor-related risks and ensuring smooth service delivery. We
+              provide the school consultancy services needed to streamline and
+              systematize various tasks, from period accounting to complex and
+              sensitive whole-school projects, guidance on the best software
+              solutions for your administration or a project manager to lead a
+              school’s digital transformation. The Learning Needs team has
+              worked with hundreds of schools, and we have a deep respect for
+              how ethos and values impact the day-to-day operations within a
+              school. We understand that there are many moving parts, roles, and
+              responsibilities to running a successful school operation. If you
+              feel like you’ve gotten off track, why not trust the experts to
+              help you get back on the road to success?
+            </p>
           </div>
-         
+
           <div style={{ marginTop: "3rem" }}>
             {/* <Price /> */}
             <img src={require("../../Image/servicessss.png")} alt="" />
           </div>
-         <div>
-          <h1 style={{fontFamily: "'Roboto', sans-serif",fontSize:"23px"}}>Our Pricing</h1>
-         <Pricing />
-         </div>
+          <div>
+            <h1
+              style={{
+                textAlign: "start",
+                fontSize: "36px",
+                marginTop: "20px",
+                fontFamily: "'Outfit', sans-serif",
+              }}
+            >
+              <span className="highlight">
+                Learning Needs Core Serve Solutions{" "}
+              </span>
+            </h1>
+            <Pricing />
+          </div>
         </div>
       </Grid>
       {/* <MetaData title={"Service"} /> */}

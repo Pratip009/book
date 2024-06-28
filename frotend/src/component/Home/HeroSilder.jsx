@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "react-material-ui-carousel";
 import Button from "@material-ui/core/Button";
@@ -8,6 +8,7 @@ import Typed from "react-typed";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import { getBanner } from "../../GlobalApi" // Ensure you have the correct path to your API functions
 
 const useStyles = makeStyles((theme) => ({
   slide: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   quote: {
     fontSize: "25px",
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Outfit', sans-serif",
     color: "#000000",
     fontWeight: 600,
     marginBottom: theme.spacing(1),
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   saleText: {
     fontSize: "35px",
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Outfit', sans-serif",
     fontWeight: "800",
     color: "#2B2B2B",
     marginBottom: theme.spacing(6),
@@ -78,30 +79,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const slides = [
-  {
-    image: require("../../Image/bes.png"),
-    quote: "Training & Management Consulting",
-    saleText: "We Facilitate Transformation",
-    productText: "Explore More",
-  },
-  {
-    image: require("../../Image/bes11.png"),
-    quote: "Elevate Your Performance and Unleash Your True Potential",
-    saleText: "New Arrivals: Enhance your skills and excel on the field",
-    productText: "Explore More",
-  },
-  {
-    image: require("../../Image/des9.png"),
-    quote: "Training & Management Consulting",
-    saleText: "We Facilitate Transformation",
-    productText: "Explore More",
-  },
-];
-
 export default function HeroSlider() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
+  const [slides, setSlides] = useState([]);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => (prevActiveStep + 1) % slides.length);
@@ -113,8 +94,23 @@ export default function HeroSlider() {
     );
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     AOS.init({ duration: 2000 });
+    const fetchBanners = async () => {
+      try {
+        const response = await getBanner();
+        const bannerData = response.data.data.map((item) => ({
+          image: item.attributes.images.data.attributes.url,
+          quote: item.attributes.quote,
+          saleText: item.attributes.description,
+          productText: "Explore More",
+        }));
+        setSlides(bannerData);
+      } catch (error) {
+        console.error("Error fetching banner data", error);
+      }
+    };
+    fetchBanners();
   }, []);
 
   return (
@@ -156,11 +152,7 @@ export default function HeroSlider() {
     >
       {slides.map((slide, index) => (
         <div key={index} className={classes.slide}>
-          <img
-            src={slide.image}
-            alt="slider"
-            className={classes.slideImage}
-          />
+          <img src={slide.image} alt="slider" className={classes.slideImage} />
           <div className={classes.slideContent}>
             <h2 className={classes.quote}>
               <Typed

@@ -11,7 +11,7 @@ export default function MediaControlCard() {
   }, []);
   return (
     <Grid container spacing={2} style={{ width: "100%" }}>
-      <Grid item xs={12} md={4} data-aos="fade-right">
+      <Grid item xs={12} md={4} >
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           {/* <CardMedia
             component="img"
@@ -21,7 +21,7 @@ export default function MediaControlCard() {
           <img src={require("../../Image/appp.png")} alt="App" />
         </Box>
       </Grid>
-      <Grid item xs={12} md={8} data-aos="fade-left">
+      <Grid item xs={12} md={8} >
         <Box
           sx={{
             display: "flex",
@@ -36,20 +36,20 @@ export default function MediaControlCard() {
               Books and resources for better learning
             </h5> */}
             <h2
-                  style={{
-                    textAlign: "Start",
-                    marginTop: "20px",
-                    marginBottom: "10px",
-                    fontFamily: "'Roboto', sans-serif",
-                    fontSize: "26px",
-                    fontWeight: "700",
-                    color:"#000000"
-                  }}
-                >
-                   Books and resources for better learning
-                </h2>
-            <p className="app_desc" >
-              Learning Needs is a pioneer organization dedicated and committed 
+              style={{
+                textAlign: "Start",
+                marginTop: "20px",
+                marginBottom: "10px",
+                fontFamily: "'Outfit', sans-serif",
+                fontSize: "26px",
+                fontWeight: "700",
+                color: "#000000",
+              }}
+            >
+              Books and resources for better learning
+            </h2>
+            <p className="app_desc">
+              Learning Needs is a pioneer organization dedicated and committed
               to bring out the best in you. We know all you need is an
               opportunity to prove yourself. However, without the right skills
               your possibilities are severely limited. If your life is not

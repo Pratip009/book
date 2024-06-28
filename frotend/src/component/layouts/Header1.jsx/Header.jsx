@@ -1,49 +1,62 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReorderIcon from "@mui/icons-material/Reorder";
 import SearchBar from "./Searchbar";
 import "./Header.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-
-import CartIcon from "./CartIcon";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LockPersonIcon from "@mui/icons-material/LockPerson";
-import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux";
 import ProfileModal from "./ProfileModel";
-
+import axios from "axios";
+import CartIcon from "./CartIcon";
 function Header() {
   const history = useHistory();
   const { isAuthenticated, user } = useSelector((state) => state.userData);
 
   const [searchBarActive, setSearchBarActive] = useState(false);
-
   const [sideMenu, setSideMenu] = useState(false);
   const [searchValue, setSearchValue] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
-  // this is for handle sideBar
+  // Fetch phone and email data from API
+  useEffect(() => {
+    axios
+      .get("https://learningneeds-strapi-1.onrender.com/api/phoneand-emails")
+      .then((response) => {
+        const data = response.data?.data[0]?.attributes;
+        if (data) {
+          setPhone(data.phone);
+          setEmail(data.email);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching phone and email data:", error);
+      });
+
+    AOS.init({ duration: 2000 });
+  }, []);
+
+  // Handle sideBar Toggle Button
   const handleSideBarMenu = () => {
     setSideMenu(!sideMenu);
   };
-  React.useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
-  // this is for country selection
 
-  // this is for Search Button toggle
+  // Handle Search Button toggle
   const handleSearchButtonClick = () => {
     setSearchBarActive(!searchBarActive);
   };
 
-  // this is for input value of Search bar.
+  // Handle input value of Search bar.
   const handleSearchInputChange = (event) => {
     setSearchValue(event.target.value);
   };
 
-  // this is for handle searching ...
+  // Handle searching
   const handleSearchFormSubmit = (event) => {
     event.preventDefault();
     if (searchValue.trim()) {
@@ -53,7 +66,7 @@ function Header() {
     }
   };
 
-  // this is for sideBar Toggle Button
+  // Handle sideBar Toggle Button
   const handleCrossButtonClick = () => {
     setSearchValue("");
     setSearchBarActive(!searchBarActive);
@@ -65,10 +78,10 @@ function Header() {
         <div className="headerTop">
           <div className="headerTopLeft">
             <span>
-              <CallIcon className="headerRetailer_Svg" data-aos="fade" />
+              <CallIcon className="headerRetailer_Svg" />
             </span>
             <span data-aos="fade" style={{ fontWeight: "400" }}>
-              9007022228 , 8240554890
+              {phone} {/* Display fetched phone number */}
             </span>
           </div>
           <div className="headerTopRight">
@@ -80,15 +93,9 @@ function Header() {
                 />
               </span>
               <span data-aos="fade" style={{ fontWeight: "400" }}>
-                info@learningneeds.in
+                {email} {/* Display fetched email */}
               </span>
             </div>
-
-            {/* <div className="headerFlag">
-              <span>
-                <FlagSelect value={country} onChange={handleCountryChange} />
-              </span>
-            </div> */}
 
             <div className="headerLogin">
               {isAuthenticated ? (
@@ -100,10 +107,7 @@ function Header() {
                     className="account_box"
                     style={{ backgroundColor: "#FF4E00" }}
                   >
-                    <LockPersonIcon
-                      className="headerRetailer_Svg2"
-                      data-aos="slide-right"
-                    />
+                    <LockPersonIcon className="headerRetailer_Svg2" />
                     <span
                       className="My_account"
                       data-aos="slide-left"
@@ -123,15 +127,8 @@ function Header() {
                     className="account_box"
                     style={{ backgroundColor: "#FF4E00" }}
                   >
-                    <LockPersonIcon
-                      className="headerRetailer_Svg2"
-                      data-aos="slide-right"
-                    />
-                    <span
-                      className="My_account"
-                      data-aos="slide-left"
-                      style={{ fontWeight: "600" }}
-                    >
+                    <LockPersonIcon className="headerRetailer_Svg2" />
+                    <span className="My_account" style={{ fontWeight: "600" }}>
                       Sign Up
                     </span>
                     <span></span>
@@ -142,7 +139,6 @@ function Header() {
           </div>
         </div>
 
-        {/* nav */}
         <div className="headerBottom">
           <div className="headerBottom__logo">
             <div className="header_mobile_menu">
@@ -184,17 +180,12 @@ function Header() {
                 src={require("../../../Image/LN.png")}
                 alt="logo"
                 className="headerBottom__logo_main"
-                data-aos="slide-right"
-                data-aos-easing="ease-in-cubic"
-                // data-aos-duration="100"
               />
             </Link>
           )}
 
-          {/* navmenu */}
-
           {!searchBarActive && (
-            <div className="headerBottom_navMenu" data-aos="fade">
+            <div className="headerBottom_navMenu">
               <ul>
                 <li>
                   <Link to="/">Home</Link>
@@ -227,8 +218,6 @@ function Header() {
               </ul>
             </div>
           )}
-
-          {/* icons */}
 
           <div className="headerBotttom_icons" data-aos="slide-left">
             <div className="search_Bar">

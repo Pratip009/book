@@ -125,7 +125,7 @@ function Products() {
           ) : (
             <>
               <div className="productPage">
-                <div style={{ marginTop: "-15px" }} data-aos="fade-down">
+                <div style={{ marginTop: "-15px" }}>
                   <img
                     src={require("../../Image/breadcrumbnew/product.jpg")}
                     alt=""
@@ -145,7 +145,7 @@ function Products() {
                     </h1>
                     <span
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "17px",
@@ -165,7 +165,7 @@ function Products() {
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                       <span
                         style={{
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                           textAlign: "justify",
                           display: "inline-block",
                           fontSize: "17px",
@@ -199,7 +199,7 @@ function Products() {
                           fontWeight: "400",
                           textAlign: "justify",
                           display: "inline-block",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         Here are few good benefits of reading books. When you
@@ -229,7 +229,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Gain valuable knowledge
@@ -254,7 +254,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Exercise your brain
@@ -279,7 +279,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Improve your focus and concentration
@@ -304,7 +304,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Improve your memory
@@ -333,7 +333,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Enjoy entertainment
@@ -359,7 +359,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Improve your ability to empathize
@@ -384,7 +384,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Improve your communication skills
@@ -409,7 +409,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Mental Stimulation
@@ -438,7 +438,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Stronger Analytical Thinking Skills
@@ -463,7 +463,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Improve your mental health
@@ -488,7 +488,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Vocabulary Expansion
@@ -513,7 +513,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Roboto', sans-serif",
+                                      fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
                                     Free Entertainment

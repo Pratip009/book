@@ -9,7 +9,6 @@ import DummyCard from "./DummyCard";
 import { clearErrors, createOrder } from "../../actions/orderAction";
 import CheckoutSteps from "./CheckoutSteps ";
 
-// for cardDetails for card detials input section and hooks for accessing strip and element from App.js route
 import {
   CardNumberElement,
   CardCvcElement,

@@ -30,7 +30,7 @@ const footMenu = [
       {
         id: 1,
         link: "Track Order",
-        path: "/orders",
+        // path: "/orders",
       },
       {
         id: 2,
@@ -93,27 +93,27 @@ const footMenu = [
       {
         id: 1,
         link: "About Us",
-        path: "/about",
+        // path: "/about",
       },
       {
         id: 2,
         link: "Contact Us",
-        path: "/contact",
+        // path: "/contact",
       },
       {
         id: 3,
         link: "Service Centres",
-        path: "/",
+        // path: "/",
       },
       {
         id: 4,
         link: "Careers",
-        path: "/",
+        // path: "/",
       },
       {
         id: 5,
         link: "Courses",
-        path: "/terms/conditions",
+        // path: "/terms/conditions",
       },
     ],
   },

@@ -32,7 +32,7 @@ const School = () => {
               style={{
                 fontSize: "23px",
                 fontWeight: "700",
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
               }}
             >
               School Management Service
@@ -49,7 +49,7 @@ const School = () => {
               </h1>
               <p
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
                   fontSize: "17px",
@@ -71,7 +71,7 @@ const School = () => {
               </p>
               <p
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
                   fontSize: "17px",
@@ -138,7 +138,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         NO FRANCHISEE
@@ -176,7 +176,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         NO ROYALTY
@@ -228,7 +228,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         NO LOCK PERIOD
@@ -266,7 +266,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         YOU’RE SCHOOL
@@ -314,7 +314,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         YOU’RE BRAND
@@ -352,7 +352,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         FREEDOM
@@ -390,7 +390,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         END TO END SUPPORT
@@ -428,7 +428,7 @@ const School = () => {
                           justifyContent: "center",
                           color: "#fff",
                           fontWeight: "600",
-                          fontFamily: "'Roboto', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                         }}
                       >
                         LOW SETUP COST
@@ -446,7 +446,7 @@ const School = () => {
               </Grid>
             </Grid>
 
-            {/* <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Roboto', sans-serif",fontSize:"23px", marginTop:"70px"}}>
+            {/* <h1 style={{ display: "flex", alignItems: "flex-start" , fontFamily: "'Outfit', sans-serif",fontSize:"23px", marginTop:"70px"}}>
               Starting a new school!
             </h1> */}
             <h1
@@ -460,7 +460,7 @@ const School = () => {
             </h1>
             <span
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
                 fontSize: "17px",
@@ -540,7 +540,7 @@ const School = () => {
               style={{
                 display: "flex",
                 alignItems: "flex-start",
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 fontSize: "23px",
                 marginTop: "50px",
               }}
@@ -655,7 +655,7 @@ const School = () => {
               style={{
                 display: "flex",
                 alignItems: "flex-start",
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 fontSize: "23px",
                 marginTop: "50px",
               }}
@@ -673,7 +673,7 @@ const School = () => {
             </h1>
             <p
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
                 fontSize: "17px",
@@ -736,7 +736,7 @@ const School = () => {
               style={{
                 display: "flex",
                 alignItems: "flex-start",
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 fontSize: "23px",
                 marginTop: "50px",
               }}
@@ -756,7 +756,7 @@ const School = () => {
 
               <p
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
                   fontSize: "19px",
@@ -781,7 +781,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -802,7 +802,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -824,7 +824,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -845,7 +845,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -868,7 +868,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -889,7 +889,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -911,7 +911,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -932,7 +932,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -955,7 +955,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -976,7 +976,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -998,7 +998,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -1019,7 +1019,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -1041,7 +1041,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",
@@ -1062,7 +1062,7 @@ const School = () => {
                     <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
                     <p
                       style={{
-                        fontFamily: "'Roboto', sans-serif",
+                        fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "15px",

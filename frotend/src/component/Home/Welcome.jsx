@@ -21,11 +21,11 @@ export default function Welcome() {
           }}
         >
           <div className="educate">
-            <h3 className="app_heading" style={{fontSize:"36px"}}>Welcome to Learning Needs</h3>
+            <h3 className="app_heading" style={{fontSize:"36px" ,fontFamily: "'Outfit', sans-serif" }}>Welcome to Learning Needs</h3>
 
             <p
               className="app_desc"
-              style={{ fontSize: "15px", fontFamily: "'Roboto', sans-serif" }}
+              style={{ fontSize: "15px", fontFamily: "'Outfit', sans-serif",color: "black" }}
             >
               Necessity is the Mother of Invention, and this proverb perfectly
               defines the inception of Learning Needs. We believe all companies
