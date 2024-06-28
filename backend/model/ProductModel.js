@@ -24,6 +24,7 @@ const productSchema = mongoose.Schema({
     default: 0,
   },
   images: [
+  
     {
       product_id: {
         type: String,
@@ -38,14 +39,22 @@ const productSchema = mongoose.Schema({
   pdfs: [
     // New field for PDF documents
     {
-      pdf_id: {
-        type: String,
-        required: true,
-      },
       url: {
         type: String,
         required: true,
       },
+      product_id: {
+        type: String,
+        required: true,
+      },
+      _id: {
+        type: String,
+        required: true,
+      },
+      image_url:{
+        type:String,
+        required:true,
+      }
     },
   ],
   category: {
