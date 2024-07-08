@@ -21,54 +21,64 @@ import { addItemToCart } from "../../actions/cartAction";
 import { useDispatch } from "react-redux";
 
 // Placeholder image import
-import placeholderImage from "../../Image/pdf.svg"; // Replace with your placeholder image path
+import placeholderImage from "../../Image/pdf.svg";
+// Exclusive icon import
+import exclusiveIcon from "../../Image/stars.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "280px",
+    width: "300px",
     height: "fit-content",
-    margin: theme.spacing(4),
-    backgroundColor: "white",
-    border: "1px solid grey",
+    margin: theme.spacing(2),
+    backgroundColor: "#ffffff",
+    border: "1px solid #E3E3E3",
+    borderRadius: "12px",
     cursor: "pointer",
-    boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    transition: "transform 0.3s, box-shadow 0.3s, border 0.3s",
+    position: "relative",
     "&:hover": {
-      boxShadow: "-1px 10px 29px 0px #003E90",
+      transform: "translateY(-8px)",
+      boxShadow:
+        "0 8px 16px rgba(0, 62, 144, 0.4), 0 8px 16px rgba(255, 78, 0, 0.4)",
     },
   },
   media: {
     height: 200,
     width: "100%",
     objectFit: "cover",
+    borderTopLeftRadius: "12px",
+    borderTopRightRadius: "12px",
   },
   button: {
-    marginTop: -15,
-    background: "linear-gradient(90deg, #3f51b5, transparent) #2196f3;",
+    marginTop: -10,
+    backgroundColor: "#007BFF",
     color: "white",
-    transition: "background-color 1s",
-    borderRadius: 0,
+    transition: "background-color 0.3s",
+    borderRadius: "0 0 12px 12px",
+    fontFamily: "'Outfit', sans-serif",
     fontWeight: "bold",
     width: "100%",
     height: 45,
     "&:hover": {
-      backgroundColor: "#FF4E00",
-      color: "white",
-      fontWeight: "bold",
+      backgroundColor: "#0056b3",
     },
   },
   oldPrice: {
     textDecoration: "line-through",
+    fontFamily: "'Outfit', sans-serif",
     fontWeight: "normal",
     borderRadius: "5px",
     padding: "0 8px",
     fontSize: "1rem",
-    background: "linear-gradient(90deg, #ed1c24, transparent) #9D0006;",
+    backgroundColor: "#ff4e00",
     color: "#fff",
-    marginRight: theme.spacing(17),
+    marginRight: theme.spacing(1),
   },
   finalPrice: {
     color: "#fff",
-    background: "linear-gradient(90deg, #03C988, transparent) #008F2D;",
+    backgroundColor: "#28a745",
+    fontFamily: "'Outfit', sans-serif",
     borderRadius: "5px",
     padding: "0 8px",
     fontWeight: "normal",
@@ -76,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     fontSize: "0.9rem",
-    fontFamily: "'Outfit' sans-serif",
+    fontFamily: "'Outfit', sans-serif",
     fontWeight: 500,
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
@@ -85,6 +95,17 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis",
     WebkitLineClamp: 3,
     WebkitBoxOrient: "vertical",
+  },
+  exclusiveIcon: {
+    position: "absolute",
+    top: "8px",
+    left: "8px",
+    width: "50px",
+    height: "50px",
+    backgroundImage: `url(${exclusiveIcon})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    zIndex: 1,
   },
 }));
 
@@ -96,14 +117,11 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
-  // Conditional check to handle loading state or undefined product
   if (!product) {
-    // Render a placeholder UI or loading state
     return (
       <Card className={classes.root} elevation={6}>
         <CardContent>
           <Typography variant="body1">Loading...</Typography>
-          {/* Placeholder UI */}
           <CardMedia
             className={classes.media}
             image={placeholderImage}
@@ -129,8 +147,8 @@ const ProductCard = ({ product }) => {
   const oldPrice = dispalyMoney(product.price);
 
   const truncated =
-    product.description.split(" ").slice(0, 5).join(" ") + "...";
-  const nameTruncated = product.name.split(" ").slice(0, 4).join(" ") + "...";
+    product.description.split(" ").slice(0, 6).join(" ") + "...";
+  const nameTruncated = product.name.split(" ").slice(0, 6).join(" ") + "...";
 
   const addTocartHandler = (id, qty) => {
     dispatch(addItemToCart(id, qty));
@@ -138,13 +156,18 @@ const ProductCard = ({ product }) => {
 
   return (
     <Card className={classes.root} elevation={6}>
+      <div className={classes.exclusiveIcon} />
       <Link
         className="productCard"
         to={`/product/${product._id}`}
         style={{ textDecoration: "none", color: "inherit" }}
       >
         <CardActionArea>
-          <CardMedia className={classes.media} image={imageUrl} title={product.name} />
+          <CardMedia
+            className={classes.media}
+            image={imageUrl}
+            title={product.name}
+          />
           <CardContent>
             <Typography
               gutterBottom
@@ -152,7 +175,7 @@ const ProductCard = ({ product }) => {
               fontWeight="bold"
               style={{
                 fontWeight: "700",
-                fontFamily: "'Outfit' sans-serif",
+                fontFamily: "'Outfit', sans-serif",
               }}
             >
               {nameTruncated}

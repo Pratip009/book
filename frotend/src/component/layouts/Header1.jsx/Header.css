@@ -146,7 +146,9 @@
 
 .headerBottom_navMenu {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .headerBottom_navMenu ul {
@@ -157,19 +159,25 @@
 }
 
 .headerBottom_navMenu ul li {
-  padding: 20px;
-  position: relative; /* Add position relative for pseudo-element */
+  margin: 0 15px;/* Add position relative for pseudo-element */
 }
 
 .headerBottom_navMenu ul li a {
   color: #121212;
   text-decoration: none;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   font-family: 'Outfit', sans-serif;
   position: relative; /* Ensure pseudo-element is positioned correctly */
 }
+@media (max-width: 768px) {
+ 
 
+  .headerBottom_navMenu li {
+    font-size: 10px;
+    margin: 10px 0; /* Adjust spacing for vertical layout */
+  }
+}
 .headerBottom_navMenu ul li a::before {
   content: '';
   position: absolute;

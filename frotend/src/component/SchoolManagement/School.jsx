@@ -116,7 +116,7 @@ const School = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "2rem" }}
             >
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 <Card
                   sx={{
                     display: "flex",
@@ -154,7 +154,7 @@ const School = () => {
                   </Grid>
                 </Card>
               </Grid>
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 <Card
                   sx={{
                     display: "flex",
@@ -192,7 +192,7 @@ const School = () => {
                   </Grid>
                 </Card>
               </Grid>
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 {/* <p
                 style={{
                   padding: "5px",
@@ -244,7 +244,7 @@ const School = () => {
                   </Grid>
                 </Card>
               </Grid>
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 <Card
                   sx={{
                     display: "flex",
@@ -292,7 +292,7 @@ const School = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               sx={{ marginTop: "2rem" }}
             >
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 <Card
                   sx={{
                     display: "flex",
@@ -330,7 +330,7 @@ const School = () => {
                   </Grid>
                 </Card>
               </Grid>
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 <Card
                   sx={{
                     display: "flex",
@@ -368,7 +368,7 @@ const School = () => {
                   </Grid>
                 </Card>
               </Grid>
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 <Card
                   sx={{
                     display: "flex",
@@ -406,7 +406,7 @@ const School = () => {
                   </Grid>
                 </Card>
               </Grid>
-              <Grid item xs={6} md={3}>
+              <Grid item xs={12} md={3}>
                 <Card
                   sx={{
                     display: "flex",
