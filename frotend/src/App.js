@@ -18,6 +18,7 @@ import Footer from "./component/layouts/Footer/Footer";
 import ProductDetails from "./component/Product/ProductDetails";
 import Gallery from "./component/service/Gallery";
 import Blog from "./component/Home/Blog.jsx";
+import Career from "./component/Home/Career.jsx";
 import Products from "./component/Product/Products";
 import Signup from "./component/User/SignUp";
 import Login from "./component/User/Login";
@@ -220,6 +221,18 @@ function App() {
               <>
                 {<Header />}
                 <Blog />
+
+                {<Footer />}
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/career"
+            render={() => (
+              <>
+                {<Header />}
+                <Career />
 
                 {<Footer />}
               </>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.81b29331.css",
-    "main.js": "/static/js/main.7674a848.js",
+    "main.js": "/static/js/main.bfb7143d.js",
     "static/js/24.ceb90125.chunk.js": "/static/js/24.ceb90125.chunk.js",
     "static/js/189.2dde6031.chunk.js": "/static/js/189.2dde6031.chunk.js",
     "static/js/205.4806322d.chunk.js": "/static/js/205.4806322d.chunk.js",
@@ -116,7 +116,7 @@
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
     "main.81b29331.css.map": "/static/css/main.81b29331.css.map",
-    "main.7674a848.js.map": "/static/js/main.7674a848.js.map",
+    "main.bfb7143d.js.map": "/static/js/main.bfb7143d.js.map",
     "24.ceb90125.chunk.js.map": "/static/js/24.ceb90125.chunk.js.map",
     "189.2dde6031.chunk.js.map": "/static/js/189.2dde6031.chunk.js.map",
     "205.4806322d.chunk.js.map": "/static/js/205.4806322d.chunk.js.map",
@@ -134,6 +134,6 @@
   },
   "entrypoints": [
     "static/css/main.81b29331.css",
-    "static/js/main.7674a848.js"
+    "static/js/main.bfb7143d.js"
   ]
 }

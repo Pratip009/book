@@ -93,22 +93,22 @@ const footMenu = [
       {
         id: 1,
         link: "About Us",
-        // path: "/about",
+        path: "/about",
       },
       {
         id: 2,
         link: "Contact Us",
-        // path: "/contact",
+        path: "/contact",
       },
       {
         id: 3,
         link: "Service Centres",
-        // path: "/",
+        path: "/",
       },
       {
         id: 4,
         link: "Careers",
-        // path: "/",
+        path: "/career",
       },
       {
         id: 5,
