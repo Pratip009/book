@@ -21,7 +21,7 @@ const School = () => {
             }}
           >
             <img
-              src={require("../../Image/schoolnew1.png")}
+              src='/schoolnew1.png'
               alt="School"
               style={{
                 width: "100%",

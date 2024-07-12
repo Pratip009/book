@@ -199,7 +199,7 @@ const ContactForm = () => {
             }}
           >
             <img
-              src={require("../../src/Image/cont1211.png")}
+              src='/cont1211.png'
               alt="contact"
               style={{
                 width: "100%",

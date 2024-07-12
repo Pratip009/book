@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { getBlogs } from "../../../src/GlobalApi.js"; // Import getBlogs as a named import
 import Grid from "@mui/material/Grid";
-
+import {blogImage} from "../../Image/blog112.png";
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -46,7 +46,7 @@ export default function Blog() {
                 }}
               >
                 <img
-                  src={require("../../Image/blog112.png")}
+                  src="/blog112.png"
                   alt="Blog"
                   style={{
                     width: "100%",
