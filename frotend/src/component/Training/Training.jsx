@@ -24,7 +24,7 @@ const Training = () => {
             }}
           >
             <img
-              src={require("../../Image/training144.png")}
+              src={require("../../Image/trA011.png")}
               alt="About"
               style={{
                 width: "100%",
