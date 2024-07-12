@@ -128,9 +128,26 @@ const About_UsPage = () => {
   return (
     <>
       <div className={classes.about_us}>
-        <div style={{ marginTop: "-15px" }}>
-          <img src={require("../Image/learninabout.jpg")} alt="" />
+        <div
+          style={{
+            marginTop: "-15px",
+            width: "100%",
+            height: "300px",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src={require("../Image/abnew11.png")}
+            alt="About"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
         </div>
+
         <MetaData title={"About Us"} />
         {/* <Container
           className="about_ln"
@@ -686,7 +703,7 @@ const About_UsPage = () => {
                 marginBottom: "2rem",
               }}
             >
-              <Grid item xs={4} md={5} >
+              <Grid item xs={4} md={5}>
                 <img
                   src={require("../Image/learning2.png")}
                   alt="Learning needs"
@@ -729,7 +746,7 @@ const About_UsPage = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={4} md={5} >
+              <Grid item xs={4} md={5}>
                 <img
                   src={require("../Image/need2.png")}
                   alt="Learning needs"
@@ -850,6 +867,14 @@ const About_UsPage = () => {
           </div>
           <Container className="founder" style={{ marginTop: "3rem" }}>
             <Grid container spacing={4} justifyContent="center">
+              <Grid item xs={12} sm={6} className="founder">
+                <img
+                  src={require("../Image/founder1.png")}
+                  style={{ width: 400, height: 400, marginTop: -50 }}
+                  alt="Learning needs"
+                  className={classes.image_about}
+                />
+              </Grid>
               <Grid item xs={12} sm={6}>
                 {/* <h1
                 style={{
@@ -922,14 +947,6 @@ const About_UsPage = () => {
                 website and introducing new and genuine cricket products at
                 competitive prices.
               </Typography> */}
-              </Grid>
-              <Grid item xs={12} sm={6} className="founder">
-                <img
-                  src={require("../Image/founder.jpg")}
-                  style={{ width: 400, height: 400 }}
-                  alt="Learning needs"
-                  className={classes.image_about}
-                />
               </Grid>
             </Grid>
           </Container>

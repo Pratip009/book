@@ -492,7 +492,7 @@ width: 119%;
   }
 
   .foot_form .btnFooter {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -521,7 +521,7 @@ width: 119%;
 }
 
 .foot_form .btnFooter {
-  width: 100%;
+  width: 50%;
 }
   .foot_menu {
     margin-left: 3px;
@@ -612,7 +612,7 @@ width: 119%;
       width: 100%; /* Use full width for extra small screens */
   }
   .input_field_footer, .btnFooter {
-      width: 100%; /* Full width for form inputs and buttons */
+      width: 50%; /* Full width for form inputs and buttons */
   }
   .foot_menu_container {
       grid-gap: 10px;
@@ -656,5 +656,26 @@ width: 119%;
     display: none !important;
   
     /* Add some padding around */
+  }
+}
+
+/* Add this CSS to your stylesheet */
+@media only screen and (max-width: 600px) {
+  .btnFooter {
+    font-size: 14px; /* Adjust the font size */
+    padding: 8px 16px; /* Adjust the padding */
+    width: 50%; /* Adjust the width if needed */
+  }
+
+  .input_field_footer {
+    font-size: 14px; /* Adjust input field font size for consistency */
+    padding: 8px; /* Adjust padding if needed */
+    width: 50%; /* Adjust width if needed */
+  }
+
+  .foot_form {
+    display: flex;
+    flex-direction: column; /* Stack the form elements vertically */
+    align-items: center; /* Center the form elements */
   }
 }

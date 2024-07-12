@@ -110,7 +110,7 @@ function Header() {
                     <LockPersonIcon className="headerRetailer_Svg2" />
                     <span
                       className="My_account"
-                      data-aos="slide-left"
+                      
                       style={{ fontWeight: "600" }}
                     >
                       My Account

@@ -3,6 +3,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { getGallery } from "../../../src/GlobalApi.js"; // Import your Axios API functions
+import Grid from "@mui/material/Grid";
 
 export default function Gallery() {
   const [galleryData, setGalleryData] = useState([]);
@@ -34,15 +35,52 @@ export default function Gallery() {
   }
 
   return (
-    <div className="container___" style={{ backgroundColor: "white",width:"100%" }}>
+    <div
+      className="container___"
+      style={{ backgroundColor: "white", width: "100%" }}
+    >
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12}>
+          <div
+            style={{
+              marginTop: "110px",
+              width: "100%",
+              height: "300px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={require("../../Image/gal11.png")}
+              alt="About"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
+        </Grid>
+      </Grid>
+      <div className="circle_text">
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "36px",
+            marginTop: "20px",
+          }}
+        >
+          <span className="highlight">Gallery</span>
+        </h1>
+      </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <ImageList
           sx={{
             width: "80%",
             height: "auto",
             margin: "auto",
-            marginTop: "150px",
-            backgroundColor: "white"
+            marginTop: "50px",
+            backgroundColor: "white",
           }}
         >
           {galleryData.map((item) => (
@@ -60,10 +98,11 @@ export default function Gallery() {
               <ImageListItemBar
                 title={item.attributes.description}
                 position="below"
-                titleStyle={{ // Add custom styles to the title
+                titleStyle={{
+                  // Add custom styles to the title
                   fontSize: "16px", // Custom font size
                   fontWeight: "bold", // Custom font weight
-                  color: "black" // Custom color
+                  color: "black", // Custom color
                 }}
               />
             </ImageListItem>

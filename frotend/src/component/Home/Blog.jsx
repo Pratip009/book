@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useState } from "react";
 import { getBlogs } from "../../../src/GlobalApi.js"; // Import getBlogs as a named import
-import { BorderBottom } from "@mui/icons-material";
+import Grid from "@mui/material/Grid";
 
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
@@ -31,7 +31,33 @@ export default function Blog() {
       ) : error ? (
         <div>Error: {error.message}</div>
       ) : (
-        <div className="container___">
+        <div className="container___" style={{ backgroundColor: "white", width: "100%" }}>
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          >
+            <Grid item xs={12}>
+              <div
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  src={require("../../Image/blog112.png")}
+                  alt="Blog"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              </div>
+            </Grid>
+          </Grid>
           <h1
             style={{
               textAlign: "center",
@@ -89,6 +115,6 @@ const subheadingStyle = {
 };
 
 const imageStyle = {
-  maxWidth: "100%",
+  maxWidth: "50%",
   height: "auto",
 };

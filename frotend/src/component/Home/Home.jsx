@@ -374,7 +374,7 @@ function Home() {
                 <div
                   className="inner_goal"
                   style={{
-                    width: "75%",
+                    width: "68%",
                   }}
                 >
                   <TeamMessage />

@@ -42,13 +42,23 @@ const useStyles = makeStyles((theme) => ({
       boxShadow:
         "0 8px 16px rgba(0, 62, 144, 0.4), 0 8px 16px rgba(255, 78, 0, 0.4)",
     },
+    [theme.breakpoints.down('sm')]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
   },
   media: {
-    height: 200,
+    height: "190px",
     width: "100%",
-    objectFit: "cover",
     borderTopLeftRadius: "12px",
     borderTopRightRadius: "12px",
+    overflow: "hidden",
+    position: "relative",
+  },
+  mediaImg: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
   },
   button: {
     marginTop: -10,
@@ -95,6 +105,18 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis",
     WebkitLineClamp: 3,
     WebkitBoxOrient: "vertical",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "0.8rem",
+      WebkitLineClamp: 2,
+    },
+  },
+  title: {
+    fontWeight: "700",
+    fontFamily: "'Outfit', sans-serif",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "1rem",
+      WebkitLineClamp: 1,
+    },
   },
   exclusiveIcon: {
     position: "absolute",
@@ -122,11 +144,13 @@ const ProductCard = ({ product }) => {
       <Card className={classes.root} elevation={6}>
         <CardContent>
           <Typography variant="body1">Loading...</Typography>
-          <CardMedia
-            className={classes.media}
-            image={placeholderImage}
-            title="Placeholder"
-          />
+          <CardMedia className={classes.media}>
+            <img
+              className={classes.mediaImg}
+              src={placeholderImage}
+              alt="Placeholder"
+            />
+          </CardMedia>
           <CardContent>
             <Typography variant="body2">Product details loading...</Typography>
           </CardContent>
@@ -163,21 +187,15 @@ const ProductCard = ({ product }) => {
         style={{ textDecoration: "none", color: "inherit" }}
       >
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={imageUrl}
-            title={product.name}
-          />
+          <CardMedia className={classes.media}>
+            <img
+              className={classes.mediaImg}
+              src={imageUrl}
+              alt={product.name}
+            />
+          </CardMedia>
           <CardContent>
-            <Typography
-              gutterBottom
-              color="black"
-              fontWeight="bold"
-              style={{
-                fontWeight: "700",
-                fontFamily: "'Outfit', sans-serif",
-              }}
-            >
+            <Typography gutterBottom color="black" className={classes.title}>
               {nameTruncated}
             </Typography>
 
@@ -189,31 +207,39 @@ const ProductCard = ({ product }) => {
             >
               {truncated}
             </Typography>
-            <Box display="flex" alignItems="center">
-              <Rating
-                name="rating"
-                value={product.ratings}
-                precision={0.1}
-                readOnly
-                size="small"
+            <Box display="flex" alignItems="center" justifyContent="space-between">
+              <Box display="flex" alignItems="center" marginTop="1rem">
+                <Typography variant="body1" className={classes.oldPrice}>
+                  {oldPrice}
+                </Typography>
+                <Typography variant="body1" className={classes.finalPrice}>
+                  {discountPrice}
+                </Typography>
+              </Box>
+              <div
                 style={{
-                  color: "#ed1c24",
-                  marginRight: 8,
-                  fontWeight: "400",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-around",
+                  marginTop: "10px",
                 }}
-              />
-              <Typography variant="body2" color="textSecondary">
-                ({product.numOfReviews})
-              </Typography>
-            </Box>
-
-            <Box display="flex" alignItems="center" marginTop="1rem">
-              <Typography variant="body1" className={classes.oldPrice}>
-                {oldPrice}
-              </Typography>
-              <Typography variant="body1" className={classes.finalPrice}>
-                {discountPrice}
-              </Typography>
+              >
+                <Rating
+                  name="rating"
+                  value={product.ratings}
+                  precision={0.1}
+                  readOnly
+                  size="small"
+                  style={{
+                    color: "#ed1c24",
+                    marginRight: 8,
+                    fontWeight: "400",
+                  }}
+                />
+                <Typography variant="body2" color="textSecondary">
+                  ({product.numOfReviews})
+                </Typography>
+              </div>
             </Box>
           </CardContent>
         </CardActionArea>
@@ -232,3 +258,4 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
+

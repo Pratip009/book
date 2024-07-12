@@ -125,10 +125,23 @@ function Products() {
           ) : (
             <>
               <div className="productPage">
-                <div style={{ marginTop: "-15px" }}>
+                <div
+                  style={{
+                    marginTop: "-15px",
+                    width: "100%",
+                    height: "300px",
+                    overflow: "hidden",
+                  }}
+                >
                   <img
-                    src={require("../../Image/breadcrumbnew/product.jpg")}
-                    alt=""
+                    src={require("../../Image/PRODNEW111.png")}
+                    alt="About"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
                   />
                 </div>
                 <div className="productBack">

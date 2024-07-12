@@ -15,10 +15,23 @@ const Training = () => {
     >
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={12}>
-          <div style={{ marginTop: "7rem" }}>
+          <div
+            style={{
+              marginTop: "110px",
+              width: "100%",
+              height: "300px",
+              overflow: "hidden",
+            }}
+          >
             <img
-              src={require("../../Image/breadcrumbnew/training.jpg")}
-              alt=""
+              src={require("../../Image/training144.png")}
+              alt="About"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
             />
           </div>
         </Grid>
@@ -606,7 +619,6 @@ const Training = () => {
                 justifyContent: "center",
                 marginTop: "-2rem",
               }}
-             
             >
               {/* <p className="non_important">
                 Way we <span class="circle-sketch-highlight"> deliver </span>{" "}

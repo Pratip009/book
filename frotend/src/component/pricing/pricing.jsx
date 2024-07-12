@@ -162,11 +162,13 @@ const Pricing = () => {
           </Grid>
         ))}
       </Grid>
-      <Dialog open={open} onClose={handleClose} maxWidth="sm"> {/* Adjusted maxWidth */}
+      <Dialog open={open} onClose={handleClose} maxWidth="sm">
+        {" "}
+        {/* Adjusted maxWidth */}
         <StyledDialogTitle>Contact Us</StyledDialogTitle>
         <StyledDialogContent>
           <StyledDialogContentText>
-            For more information, please contact us at: 9007022228 , 8240560000
+            For more information, please contact us at: 8240554890 , 8240560000
           </StyledDialogContentText>
           <StyledDialogContentText>
             Email: info@learningneeds.in

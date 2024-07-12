@@ -30,27 +30,32 @@ const footMenu = [
       {
         id: 1,
         link: "Track Order",
+        path:"/"
         // path: "/orders",
       },
       {
         id: 2,
         link: "FAQs",
+        path:"/"
         // path: "/terms/conditions",
       },
 
       {
         id: 3,
         link: "Cancel Order",
+        path:"/"
         // path: "/policy/return",
       },
       {
         id: 4,
         link: "Return Order",
+        path:"/"
         // path: "/policy/return",
       },
       {
         id: 5,
         link: "Warranty Info",
+        path:"/"
         // path: "/policy/Terms",
       },
     ],
@@ -62,26 +67,31 @@ const footMenu = [
       {
         id: 1,
         link: "Return Policy",
+        path:"/"
         // path: "/policy/return",
       },
       {
         id: 2,
         link: "Security",
+        path:"/"
         // path: "/policy/privacy",
       },
       {
         id: 3,
         link: "Sitemap",
+        path:"/contact"
         // path: "/policy/Terms",
       },
       {
         id: 4,
         link: "Privacy Policy",
+        path:"/"
         // path: "/policy/privacy",
       },
       {
         id: 5,
         link: "T&C",
+        path:"/"
         // path: "/terms/conditions",
       },
     ],
@@ -114,6 +124,7 @@ const footMenu = [
         id: 5,
         link: "Courses",
         // path: "/terms/conditions",
+        path:"/"
       },
     ],
   },
@@ -414,34 +425,13 @@ const Footer = () => {
           <div className="sub_footer_root">
             <div className="container_Footer">
               <div className="sub_footer_wrapper">
-                <div className="foot_policyLink">
-                  <ul>
-                    <li className="subfoot_link_text1">
-                      <Link to="/policy/privacy">
-                        <p className="foot_policyLink_p">Privacy Policy</p>
-                      </Link>
-                    </li>
-                    <li className="subfoot_link_text2">
-                      <Link to="/terms/conditions">
-                        <p className="foot_policyLink_p">Terms & Conditions</p>
-                      </Link>
-                    </li>
-                    <li className="subfoot_link_text3">
-                      <Link to="/policy/Terms">
-                        <p className="foot_policyLink_p">Terms of Use</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+               
 
                 <div className="foot_copyright">
                   <p>
                     &copy; {currYear} | Learning Needs, All Rights Reserved.
                     <span>
-                      <a href="https://www.gospeedy.co.in/">
-                        {" "}
-                        | GoSpeedy Developer
-                      </a>
+                      
                     </span>
                   </p>
                 </div>

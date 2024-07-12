@@ -13,14 +13,24 @@ const School = () => {
   return (
     <div className="content1" style={{ overflowX: "hidden" }}>
       <div
-        style={{ marginTop: "110px", overflowX: "hidden" }}
-        data-aos="fade-down"
-      >
-        <img
-          src={require("../../Image/breadcrumbnew/school-management.jpg")}
-          alt=""
-        />
-      </div>
+            style={{
+              marginTop: "110px",
+              width: "100%",
+              height: "300px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={require("../../Image/schoolnew1.png")}
+              alt="About"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
       <div
         className="privacy-policy-container"
         style={{ display: "flex", width: "100%" }}

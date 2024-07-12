@@ -190,9 +190,25 @@ const ContactForm = () => {
 
   return (
     <Box className={classes.root_contactus}>
-      <div style={{ marginTop: "-15px" }}>
-        <img src={require("../Image/breadcrumbnew/contact-us.jpg")} alt="" />
-      </div>
+      <div
+            style={{
+              marginTop: "-10px",
+              width: "100%",
+              height: "300px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={require("../../src/Image/cont1211.png")}
+              alt="contact"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
       <MetaData title={"Contact Us"} />
       <div className={classes.contact_Container_contactus}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -260,12 +276,12 @@ const ContactForm = () => {
                   fontWeight: "600",
                 }}
               >
-                Learning Needs River Side Road
+                Learning Needs
               </span>
               <br />
-              Dakshinpara 24 Paraganas North Kolkata
+              Kolkata
               <br />
-              West Bengal , Pin 743133
+              West Bengal
               <br />
               India
             </Typography>
@@ -290,7 +306,7 @@ const ContactForm = () => {
                 }}
                 onClick={handleCall}
               >
-                9007022228
+                8240554890
               </strong>
               .
             </Typography>
@@ -477,20 +493,12 @@ const ContactForm = () => {
           </Grid>
         </Grid>
 
-        {/* <Typography variant="body2" className={classes.para_contact}>
-          <span className={classes.para2}>7:00-6:00 MST Monday-Friday</span>
-          <br />
-          <span className={classes.para2}>9:00-4:00 MST Saturday</span>
-          <br />
-          <span className={classes.para2}>Closed Sunday</span>
-        </Typography> */}
-
         <div className="map" style={{ marginTop: "5rem" }}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <iframe
                 title="Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7357.968950458062!2d88.34003244148784!3d22.765957410437817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89ae7d9e2af4d%3A0xc1c528ba5408617!2sLearning%20Needs!5e0!3m2!1sen!2sin!4v1693437333599!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235850.64012325197!2d88.03548933303698!3d22.53544413842691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1720683033483!5m2!1sen!2sin"
                 width="100%"
                 height="450"
                 style={{ border: "0" }}

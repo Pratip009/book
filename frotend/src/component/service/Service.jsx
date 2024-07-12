@@ -14,10 +14,23 @@ const Service = () => {
     >
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={12}>
-          <div style={{ marginTop: "7rem" }}>
+        <div
+            style={{
+              marginTop: "120px",
+              width: "100%",
+              height: "300px",
+              overflow: "hidden",
+            }}
+          >
             <img
-              src={require("../../Image/breadcrumbnew/Service.jpg")}
-              alt=""
+              src={require("../../Image/SER1211.png")}
+              alt="About"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
             />
           </div>
         </Grid>
