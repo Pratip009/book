@@ -22,6 +22,7 @@ const School = () => {
           >
             <img
               src='/schoolnew1.png'
+              
               alt="School"
               style={{
                 width: "100%",

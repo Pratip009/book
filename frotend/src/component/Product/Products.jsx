@@ -134,7 +134,7 @@ function Products() {
                   }}
                 >
                   <img
-                    src={require("../../Image/PRODNEW111.png")}
+                    src={require("../../Image/schoolnew1.png")}
                     alt="About"
                     style={{
                       width: "100%",

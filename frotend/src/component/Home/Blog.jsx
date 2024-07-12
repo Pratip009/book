@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { getBlogs } from "../../../src/GlobalApi.js"; // Import getBlogs as a named import
 import Grid from "@mui/material/Grid";
-import {blogImage} from "../../Image/blog112.png";
+import { blogImage } from "../../Image/blog112.png";
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,7 +31,10 @@ export default function Blog() {
       ) : error ? (
         <div>Error: {error.message}</div>
       ) : (
-        <div className="container___" style={{ backgroundColor: "white", width: "100%" }}>
+        <div
+          className="container___"
+          style={{ backgroundColor: "white", width: "100%" }}
+        >
           <Grid
             container
             rowSpacing={1}
@@ -46,7 +49,7 @@ export default function Blog() {
                 }}
               >
                 <img
-                  src="/blog112.png"
+                  src={require("../../Image/blog112.png")}
                   alt="Blog"
                   style={{
                     width: "100%",
