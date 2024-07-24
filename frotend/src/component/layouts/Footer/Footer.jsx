@@ -30,32 +30,31 @@ const footMenu = [
       {
         id: 1,
         link: "Track Order",
-        path:"/"
-        // path: "/orders",
+        path: "/",
+        disabled: true,
       },
       {
         id: 2,
         link: "FAQs",
-        path:"/"
-        // path: "/terms/conditions",
+        path: "/about_us",
       },
 
       {
         id: 3,
         link: "Cancel Order",
-        path:"/"
-        // path: "/policy/return",
+        path: "/policy/return",
       },
       {
         id: 4,
         link: "Return Order",
-        path:"/"
+        path: "/policy/return",
         // path: "/policy/return",
       },
       {
         id: 5,
         link: "Warranty Info",
-        path:"/"
+        path: "/",
+        disabled: true,
         // path: "/policy/Terms",
       },
     ],
@@ -67,32 +66,34 @@ const footMenu = [
       {
         id: 1,
         link: "Return Policy",
-        path:"/"
+        path: "/policy/return",
         // path: "/policy/return",
       },
       {
         id: 2,
         link: "Security",
-        path:"/"
+        path: "/",
+        disabled: true,
         // path: "/policy/privacy",
       },
       {
         id: 3,
         link: "Sitemap",
-        path:"/contact"
+        path: "/",
+        disabled: true,
         // path: "/policy/Terms",
       },
       {
         id: 4,
         link: "Privacy Policy",
-        path:"/"
-        // path: "/policy/privacy",
+
+        path: "/policy/privacy",
       },
       {
         id: 5,
         link: "T&C",
-        path:"/"
-        // path: "/terms/conditions",
+
+        path: "/terms/conditions",
       },
     ],
   },
@@ -114,17 +115,18 @@ const footMenu = [
         id: 3,
         link: "Service Centres",
         path: "/",
+        disabled: true,
       },
       {
         id: 4,
-        link: "Careers",
+        link: "Work With Us",
         path: "/career",
       },
       {
         id: 5,
         link: "Courses",
-        // path: "/terms/conditions",
-        path:"/"
+        disabled: true,
+   
       },
     ],
   },
@@ -186,7 +188,7 @@ const Footer = () => {
                 </span>
               </div> */}
                 <div
-                 className="responsive-container"
+                  className="responsive-container"
                   style={{
                     marginTop: "5px",
                     marginLeft: "27px",
@@ -425,14 +427,10 @@ const Footer = () => {
           <div className="sub_footer_root">
             <div className="container_Footer">
               <div className="sub_footer_wrapper">
-               
-
                 <div className="foot_copyright">
                   <p>
                     &copy; {currYear} | Learning Needs, All Rights Reserved.
-                    <span>
-                      
-                    </span>
+                    <span></span>
                   </p>
                 </div>
               </div>

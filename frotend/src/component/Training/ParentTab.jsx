@@ -109,7 +109,7 @@ export default function ParentTab() {
           <img src={require("../../Image/st2.png")} alt="" />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <img src={require("../../Image/playy.png")} alt="" />
+          <img src={require("../../Image/playyyyy.png")} alt="" />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
           <img src={require("../../Image/ei.png")} alt="" />

@@ -1,83 +1,107 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Return.css"
+import "./Return.css";
 import MetaData from "../component/layouts/MataData/MataData";
 // import TermsImage from "../Image/about/tc.jpg";
 const ReturnPolicyPage = () => {
   return (
     <div className="container__0">
       <MetaData title="Return Policy" />
-      <div className="image-container">
-        <img
-          src={require('../Image/about/terms.jpeg')}
-          alt="Background"
-        />
-        <h1 className="policy-text">RETURN POLICY</h1>
-      </div>
+
       <div className="content-container">
-        <p>
-          Thank you for shopping with Learning Needs! We want to ensure your
-          satisfaction with every purchase. If you are not completely satisfied
-          with your purchase, we offer a return policy of 30 days for most
-          products and 7 days for select products.
-        </p>
-        <p>
-          To be eligible for a return, the item must be unused, in its original
-          packaging, and in the same condition as you received it. You will also
-          need to provide proof of purchase. Please note that certain items,
-          such as personalized or custom-made products, may not be eligible for
-          return unless there is a defect or error on our part.
-        </p>
-        <p>
-          If you would like to initiate a return, please contact our Customer
-          Service Department within the specified return period. Our team will
-          guide you through the return process and provide you with the
-          necessary instructions and return address.
-        </p>
-        <p>
-          Once we receive your returned item and verify its condition, we will
-          process the refund to the original payment method used for the
-          purchase. Please allow up to [number of days] for the refund to be
-          reflected in your account.
-        </p>
-        <p>
-          Please note that return shipping costs are the responsibility of the
-          customer, unless the return is due to a defect or error on our part.
-          We recommend using a trackable shipping method to ensure the safe and
-          timely delivery of your return.
-        </p>
-        <p>
-          If you have any questions or need further assistance regarding our
-          return policy, please feel free to contact our Customer Service
-          Department. We are here to help!
-        </p>
-        <h2>Contact Information:</h2>
-        <p>
-          Customer Service Department
-          <br />
-          <span style={{ fontWeight: "500" }}>Email </span>: 
-          info@learningneeds.in
-          <br />
-          <span style={{ fontWeight: "500" }}>Phone  </span>:  900702228 - Whatsapp, 8240554890 - call 
-          <br />
-      {/* <span style={{ fontWeight: "500" }}>    Hours of Operation: Monday to Friday, 9:00 AM to 5:00 PM (GMT) </span> */}
-        </p>
-        <p>
-          Please reach out to us if you have any concerns or require any
-          clarifications regarding our{" "}
-          <Link
-            to="/policy/return"
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-              fontWeight: "500",
-            }}
-          >
-            return policy
-          </Link>
-          . We strive to provide excellent customer service and ensure your
-          satisfaction.
-        </p>
+        <h1>Cancellation and Refund Policy</h1>
+        <span>
+          At Learning Needs, we strive to provide high-quality books, PDF
+          Worksheets and educational products that spark creativity and
+          encourage exploration in children. We want you to be completely
+          satisfied with your purchase. Please read our cancellation and refund
+          policy carefully to understand your rights and obligations when
+          purchasing from Learning Needs.
+        </span>
+        <h2>Cancellations</h2>
+        <h3>Order Cancellation by Customer</h3>
+        <span>
+          Digital Products: Due to the nature of digital products, orders for
+          digital activity books, PDF Worksheets busy books, and other digital
+          educational resources are not eligible for cancellation once the order
+          has been processed and the download link has been provided. Physical
+          Products: If you wish to cancel an order for physical products, please
+          contact us immediately at infolearningneeds@gmail.com If the order has
+          not yet been shipped, we will process the cancellation and issue a
+          full refund. If the order has already been shipped you need to contact
+          us on the given number. Order Cancellation by LearningNeeds We reserve
+          the right to cancel any order for any reason, including but not
+          limited to:
+        </span>
+        <ul>
+          <li>Fraudulent or unauthorized transactions</li>
+          <li>Errors in product description or pricing</li>
+
+          <li>Product unavailability</li>
+
+          <li>
+            If we cancel your order, you will be notified via email and receive
+            a full refund.
+          </li>
+        </ul>
+        <h2>Digital Products</h2>
+        <span>
+          Due to the immediate and irrevocable nature of digital downloads, all
+          sales of digital products are final. We do not accept returns or offer
+          refunds for digital products once the order has been processed and the
+          download link has been provided. Or Downloaded. If you experience any
+          issues with your digital product, please contact us at
+          infolearningneeds@gmail.com, and we will work with you to resolve the
+          issue.
+        </span>
+        <h2>Physical Products</h2>
+        <span>
+          For physical product , If you have received defective or incorrect
+          product you purchased from www.lerningneeds.in, you may return it
+          under the following conditions: Eligibility: If for any reason you
+          have received defective or incorrect product Items must be returned
+          within 3 days of receipt. Condition: Items must be in their original
+          condition, unused, and in their original packaging. Return Process: To
+          initiate a return, please contact us at infolearningneeds@gmail.com
+          with your order number and reason for the return. We will provide you
+          with return instructions. We recommend using a trackable shipping
+          service and purchasing shipping insurance, as we cannot guarantee that
+          we will receive your returned item.
+        </span>
+        <h2>Refunds for Physical Products</h2>
+        <span>
+          Once we receive and inspect your returned item, we will notify you of
+          the approval or rejection of your refund.
+        </span>
+        <ul>
+          <li>
+            <b>Approved Refunds:</b> If approved, your refund will be processed,
+            and a credit will automatically be applied to your original method
+            of payment within a certain number of days.
+          </li>
+          <li>
+            <b>Partial Refunds:</b> Partial refunds may be granted in certain
+            situations, such as when items are not in their original condition,
+            damaged, or missing parts not due to our error.
+          </li>
+        </ul>
+        <h2>Exchanges</h2>
+        <span>
+          We only replace items if they are defective or damaged. If you need to
+          exchange a defective or damaged item for the same item, please contact
+          us at infolearningneeds.in@gmail.com.
+        </span>
+        <h2>Contact Us</h2>
+        <span>
+          If you have any questions or concerns about our cancellation and
+          refund policy, please contact us at: Learning Needs Email:
+          learningneeds.in@gmail.com Phone: 8240554890
+        </span>
+        <h3>Effective Date: 01-01-2024</h3>
+        <span>
+          Thank you for shopping with Learning Needs! We appreciate your
+          business and
+        </span>
       </div>
     </div>
   );

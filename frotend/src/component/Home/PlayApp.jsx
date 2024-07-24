@@ -54,7 +54,7 @@ export default function MediaControlCard() {
               opportunity to prove yourself. However, without the right skills
               your possibilities are severely limited. If your life is not
               presently what you want it to be, you must consider education as a
-              solution. You can change your life today! Fast, simple &
+              solution. You can change your life today! Fast, Simple &
               Delightful.
             </p>
             <div className="app_links1">

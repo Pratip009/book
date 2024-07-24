@@ -137,7 +137,7 @@ const About_UsPage = () => {
           }}
         >
           <img
-            src={require("../Image/abnew11.png")}
+            src={require("../Image/abnew11nw1.png")}
             alt="About"
             style={{
               width: "100%",
@@ -950,29 +950,16 @@ const About_UsPage = () => {
               </Grid>
             </Grid>
           </Container>
-          <Container
-            className={classes.container_12}
-            style={{ marginTop: "3rem" }}
+          <div
+            className="android_back"
+            style={{ backgroundColor: "#FFFFFF", width: "100%" }}
           >
-            {/* testimonials */}
-
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "36px",
-                marginTop: "20px",
-              }}
+            <Container
+              className={classes.container_12}
+              style={{ marginTop: "3rem", width: "100%" }}
             >
-              <span className="highlight">Pride of Learning Needs</span>
-            </h1>
-            {/* <h2 className="clients_headings" >
-              Clients sharing their experience
-            </h2> */}
-            <div className="circle_text">
-              {/* <p className="non_important" style={{ textAlign: "Start" }}>
-                Clients sharing their{" "}
-                <span class="circle-sketch-highlight">experience</span>
-              </p> */}
+              {/* testimonials */}
+
               <h1
                 style={{
                   textAlign: "center",
@@ -980,18 +967,37 @@ const About_UsPage = () => {
                   marginTop: "20px",
                 }}
               >
-                Clients sharing their
-                <span className="highlight"> experience</span>
+                <span className="highlight">Pride of Learning Needs</span>
               </h1>
-            </div>
-            <div>
-              <TestimonialSlider />
-            </div>
+              {/* <h2 className="clients_headings" >
+              Clients sharing their experience
+            </h2> */}
+              <div className="circle_text">
+                {/* <p className="non_important" style={{ textAlign: "Start" }}>
+                Clients sharing their{" "}
+                <span class="circle-sketch-highlight">experience</span>
+              </p> */}
+                <h1
+                  style={{
+                    textAlign: "center",
+                    fontSize: "36px",
+                    marginTop: "20px",
+                  }}
+                >
+                  Clients sharing their
+                  <span className="highlight"> experience</span>
+                </h1>
+              </div>
+              <div>
+                <TestimonialSlider />
+              </div>
 
-            <div style={{ marginTop: "6rem" }} className="play">
-              <PlayApp />
-            </div>
-          </Container>
+              <div style={{ marginTop: "6rem" }} className="play">
+                <PlayApp />
+              </div>
+            </Container>
+          </div>
+
           <Container className="faq" style={{ marginTop: "3rem" }}>
             <div className="circle_text">
               {/* <p className="non_important" style={{ textAlign: "Start" }}>
@@ -1009,8 +1015,9 @@ const About_UsPage = () => {
                 <span className="highlight"> Questions</span>
               </h1>
             </div>
-
-            <Faq />
+            
+              <Faq />
+          
           </Container>
 
           <div className={classes.buttonContainer_about}>

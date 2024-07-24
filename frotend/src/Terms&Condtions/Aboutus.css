@@ -20,6 +20,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   }
+  .android_back{
+    background-image: url("../Image/newbackand.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
   .about_ln{
     background-image: url("../Image/aboutln1.png");
   position: relative;

@@ -13,25 +13,24 @@ const School = () => {
   return (
     <div className="content1" style={{ overflowX: "hidden" }}>
       <div
-            style={{
-              marginTop: "110px",
-              width: "100%",
-              height: "300px",
-              overflow: "hidden",
-            }}
-          >
-            <img
-              src='/schoolnew1.png'
-              
-              alt="School"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-          </div>
+        style={{
+          marginTop: "110px",
+          width: "100%",
+          height: "300px",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src="/schoolnew1.png"
+          alt="School"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
+      </div>
       <div
         className="privacy-policy-container"
         style={{ display: "flex", width: "100%" }}
@@ -356,11 +355,11 @@ const School = () => {
                     <Grid item md={8} xs={6}>
                       <p
                         style={{
-                          padding: "15px 5px",
+                          padding: "15px 35px",
                           borderRadius: "10px",
                           display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
+                          alignItems: "flex-start",
+                          justifyContent: "flex-start",
                           color: "#fff",
                           fontWeight: "600",
                           fontFamily: "'Outfit', sans-serif",
@@ -394,7 +393,7 @@ const School = () => {
                     <Grid item xs={6} md={8}>
                       <p
                         style={{
-                          padding: "15px 5px",
+                          padding: "13px 17px",
                           borderRadius: "10px",
                           display: "flex",
                           alignItems: "center",
@@ -411,7 +410,9 @@ const School = () => {
                       <img
                         src={require("../../Image/support.png")}
                         alt="React"
-                        style={{ height: 100 }}
+                        style={{
+                        height:'100%'
+                        }}
                       />
                     </Grid>
                   </Grid>
@@ -539,7 +540,7 @@ const School = () => {
                 </Grid>
                 <Grid item md={3}>
                   <img
-                    src={require("../../Image/teach.png")}
+                    src={require("../../Image/teach11.png")}
                     alt=""
                     style={{ width: "400px" }}
                   />

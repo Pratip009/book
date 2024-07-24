@@ -13,6 +13,8 @@ import { useSelector } from "react-redux";
 import ProfileModal from "./ProfileModel";
 import axios from "axios";
 import CartIcon from "./CartIcon";
+import ScrollingTextHeader from "./ScrollingTextHeader";
+
 function Header() {
   const history = useHistory();
   const { isAuthenticated, user } = useSelector((state) => state.userData);
@@ -74,6 +76,7 @@ function Header() {
 
   return (
     <>
+      {/* Add the scrolling text header here */}
       <div className="header">
         <div className="headerTop">
           <div className="headerTopLeft">
@@ -110,7 +113,6 @@ function Header() {
                     <LockPersonIcon className="headerRetailer_Svg2" />
                     <span
                       className="My_account"
-                      
                       style={{ fontWeight: "600" }}
                     >
                       My Account
@@ -243,6 +245,7 @@ function Header() {
             </span>
           </div>
         </div>
+        <ScrollingTextHeader />
       </div>
     </>
   );

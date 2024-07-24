@@ -149,7 +149,7 @@ const Pricing = () => {
                         <CircleIcon style={{ fontSize: 10 }} />
                       </ListItemIcon>
                       <ListItemText
-                        primary={<StyledTypography>{item}</StyledTypography>}
+                        primary={<StyledTypography style={{fontSize:20 ,fontWeight:'bold'}}>{item}</StyledTypography>}
                       />
                     </ListItem>
                   ))}
@@ -168,7 +168,7 @@ const Pricing = () => {
         <StyledDialogTitle>Contact Us</StyledDialogTitle>
         <StyledDialogContent>
           <StyledDialogContentText>
-            For more information, please contact us at: 8240554890 , 8240560000
+            For more information, please contact us at: 8240554890
           </StyledDialogContentText>
           <StyledDialogContentText>
             Email: info@learningneeds.in

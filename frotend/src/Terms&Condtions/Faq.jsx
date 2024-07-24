@@ -12,7 +12,7 @@ export default function Faq() {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="FAq_image">
+    <div className="FAq_image" >
       <h1
         style={{
           textAlign: "start",

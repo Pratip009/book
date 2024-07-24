@@ -5,7 +5,6 @@ import AddIcon from "@material-ui/icons/Add";
 import { IconButton, Input } from "@material-ui/core";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
-
 import {
   generateDiscountedPrice,
   calculateDiscount,
@@ -29,61 +28,47 @@ import CricketBallLoader from "../layouts/loader/Loader";
 import Button from "@mui/material/Button";
 import { PRODUCT_DETAILS_RESET } from "../../constants/productsConstatns";
 
+// Import the default image for pdf products
+import pdfDefaultImage from "../../Image/pdfplaceholder.png"; // Default image for pdf products
+
 const ProductDetails = () => {
   const match = useRouteMatch();
   const dispatch = useDispatch();
   const alert = useAlert();
 
   const [quantity, setQuantity] = useState(1);
-
-
-
   const [previewImg, setPreviewImg] = useState("");
   const { handleActive, activeClass } = useActive(0);
 
-  const { product, loading, error , success  } = useSelector(
+  const { product, loading, error, success } = useSelector(
     (state) => state.productDetails
   );
 
-
-useEffect(() => {
-  if (error) {
-    alert.error(error);
-    dispatch(clearErrors);
-  }
-  if (success) {
-    setPreviewImg(product.images[0].url);
-
-    handleActive(0);
-    dispatch({ type: PRODUCT_DETAILS_RESET });
-  }
-  dispatch(getProductDetails(match.params.id));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [
-  dispatch,
-  error,
-  alert,
-  success,
-  match.params.id,
-
-]);
-
+  useEffect(() => {
+    if (error) {
+      alert.error(error);
+      dispatch(clearErrors());
+    }
+    if (success) {
+      const initialImage = product.category === "pdf" ? pdfDefaultImage : (product.images[0]?.url || "");
+      setPreviewImg(initialImage);
+      handleActive(0);
+      dispatch({ type: PRODUCT_DETAILS_RESET });
+    }
+    dispatch(getProductDetails(match.params.id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, error, alert, success, match.params.id]);
 
   // handling Add-to-cart
   const handleAddItem = () => {
-
     dispatch(addItemToCart(match.params.id, quantity));
     alert.success("Item Added To Cart");
   };
 
-
-
-
-
   // handling Preview image
   const handlePreviewImg = (images, i) => {
-   
-    setPreviewImg(images[i].url);
+    const selectedImage = images[i]?.url || (product.category === "pdf" ? pdfDefaultImage : "");
+    setPreviewImg(selectedImage);
     handleActive(i);
   };
 
@@ -91,15 +76,14 @@ useEffect(() => {
     if (product.Stock <= quantity) {
       return;
     }
-
-    setQuantity((prv) => prv + 1);
+    setQuantity((prev) => prev + 1);
   }
 
   function deceraseQuantityHandler() {
     if (quantity <= 1) {
       return;
     }
-    setQuantity((prv) => prv - 1);
+    setQuantity((prev) => prev - 1);
   }
 
   // calculating Prices
@@ -131,12 +115,12 @@ useEffect(() => {
                             className={`tabs_item ${activeClass(i)}`}
                             onClick={() => handlePreviewImg(product.images, i)}
                           >
-                            <img src={img.url} alt="product-img" />
+                            <img src={img.url || pdfDefaultImage} alt="product-img" />
                           </div>
                         ))}
                     </div>
                     <figure className="prod_details_img">
-                      <img src={previewImg} alt="product-img" />
+                      <img src={previewImg || pdfDefaultImage} alt="product-img" />
                     </figure>
                   </div>
 

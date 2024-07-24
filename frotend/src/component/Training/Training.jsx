@@ -642,9 +642,9 @@ const Training = () => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              data-aos="slide-left"
+             
             >
-              <img src={require("../../Image/sssa.png")} alt="" />
+              <img src={require("../../Image/sssa1233.png")} alt="" />
             </div>
           </div>
         </Grid>

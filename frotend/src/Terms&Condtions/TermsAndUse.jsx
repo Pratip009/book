@@ -6,20 +6,32 @@ const TermsAndConditions = () => {
     <div className="privacy-policy-container">
       <MetaData title="Terms And Conditions" />
       <div className="container___">
-        <h1>Terms and Conditions of Sale</h1>
+        <h1>Privacy Policy</h1>
         <p>
-          Thank you for shopping with us! We really appreciate your business and
-          your interest in our products. We want to make sure you have a good
-          experience purchasing from our webstore, Learning Needs.com.
+          At Learning Needs, we are committed to protecting your privacy. This
+          Privacy Policy outlines how we collect, use, and safeguard your
+          personal information when you visit our website, www.learningneeds.in,
+          and purchase our products.
         </p>
+        <h3>Information We Collect</h3>
+        <h5>Personal Information</h5>
         <p>
-          As with any shopping experience, there are certain terms and
-          conditions that apply. By placing an order and purchasing a product
-          from our website, you agree to the terms below along with other terms
-          on our website, such as return and warranty policies, our privacy
-          policy, and terms of use. Please make sure to review everything fully
-          and carefully so you are informed about your rights and obligations.
+        When you make a purchase or register an account on our website, we may
+        collect the following personal information:
         </p>
+        <ul>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Shipping and billing address</li>
+          <li>Phone number</li>
+          <li>Payment information (processed securely through our payment
+            processors)</li>
+
+          <li>Non-Personal Information
+We may also collect non-personal information about your visit to our website,
+including:</li>
+         
+        </ul>
         <h2>Acceptance of These Terms</h2>
         <p>
           You (“Customer”) may place orders for Products with Learning Needs
