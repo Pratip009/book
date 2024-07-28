@@ -1,0 +1,111 @@
+/* Global Styles for HeroSlider */
+.heroSlider_Home {
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Prevent horizontal overflow */
+  }
+  
+  /* Slide Styles */
+  .slide {
+    height: calc(80vh); /* Responsive height */
+    position: relative;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .slideImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    filter: brightness(100%);
+  }
+  
+  .slideContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    width: 80%;
+  }
+  
+  .quote {
+    font-size: 25px;
+    font-family: 'Outfit', sans-serif;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 16px; /* Adjust based on theme.spacing(1) */
+  }
+  
+  .saleText {
+    font-size: 35px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    color: #2B2B2B;
+    margin-bottom: 48px; /* Adjust based on theme.spacing(6) */
+  }
+  
+  .productButton {
+    background-color: #FF4E00;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px; /* Adjust based on theme.shape.borderRadius */
+    padding: 8px 24px; /* Adjust based on theme.spacing(1, 3) */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .productButton:hover {
+    background-color: #fff;
+    color: #FF4E00;
+    border: 1px solid #FF4E00;
+  }
+  
+  /* Navigation Button Styles */
+  .slider-nav-btn {
+    background-color: #FF0000;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slider-nav-btn svg {
+    color: #fff;
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .slide {
+      height: 50vh; /* Reduced height for small screens */
+    }
+  
+    .slideContent {
+      width: 90%;
+      padding: 8px; /* Padding for mobile */
+    }
+  
+    .quote {
+      font-size: 18px; /* Reduced font size for mobile */
+    }
+  
+    .saleText {
+      font-size: 20px; /* Reduced font size for mobile */
+      margin-bottom: 24px; /* Adjust margin for mobile */
+    }
+  
+    .productButton {
+      font-size: 14px; /* Reduced font size for mobile */
+      padding: 4px 16px; /* Adjust padding for mobile */
+    }
+  
+    .slideImage {
+      object-fit: contain; /* Ensure the image scales properly on small screens */
+    }
+  }
+  
