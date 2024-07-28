@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 5000;
 const server = app.listen(PORT, () => {
-  console.log(`Server is listening on PORT ${PORT}`);
+  
 });
 
 // Payment route
@@ -54,7 +54,7 @@ app.post("/payment", async (req, res) => {
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err) => {
   console.error(`Error: ${err.message}`);
-  console.log("Shutting down the server due to Unhandled Promise Rejection");
+ 
   server.close(() => {
     process.exit(1);
   });

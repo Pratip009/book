@@ -5,7 +5,7 @@ module.exports.getBlogs = async (req, res) => {
     const blogs = await BlogModel.find();
     res.send(blogs);
   } catch (err) {
-    console.log(err);
+    
     res.status(500).send({ error: err, msg: "Failed to fetch blogs" });
   }
 };
@@ -23,7 +23,7 @@ exports.saveBlogPost = async (req, res) => {
     await blog.save();
     res.status(201).json(blog);
   } catch (error) {
-    console.log(error);
+    
     res.status(500).json({ message: "Error saving the blog post" });
   }
 };
@@ -31,10 +31,10 @@ module.exports.saveBlogs = async (req, res) => {
   const { title, description, imageUrl } = req.body;
   try {
     const blog = await BlogModel.create({ title, description, imageUrl });
-    console.log("Blog saved successfully...");
+    
     res.status(201).send(blog);
   } catch (err) {
-    console.log(err);
+   
     res.status(500).send({ error: err, msg: "Failed to save blog" });
   }
 };
@@ -46,7 +46,7 @@ module.exports.updateBlogs = async (req, res) => {
     await BlogModel.findByIdAndUpdate(id, { title, description });
     res.send("Blog updated successfully");
   } catch (err) {
-    console.log(err);
+    
     res.status(500).send({ error: err, msg: "Failed to update blog" });
   }
 };
@@ -57,7 +57,7 @@ module.exports.deleteBlogs = async (req, res) => {
     await BlogModel.findByIdAndDelete(id);
     res.send("Blog deleted successfully");
   } catch (err) {
-    console.log(err);
+   
     res.status(500).send({ error: err, msg: "Failed to delete blog" });
   }
 };

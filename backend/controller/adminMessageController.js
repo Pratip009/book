@@ -10,11 +10,11 @@ module.exports.saveTask = (req, res) => {
   adminMessageController
     .create({ task,secondtasks })
     .then((data) => {
-      console.log("saved successfully...");
+      
       res.status(201).send(data);
     })
     .catch((err) => {
-      console.log(err);
+      
       res.send({ error: err, msg: "Something went wrong" });
     });
 };
@@ -27,7 +27,7 @@ module.exports.updateTask = (req, res) => {
     .findByIdAndUpdate(id, { task,secondtasks })
     .then(() => res.send("Updated Successfully"))
     .catch((err) => {
-      console.log(err);
+     
       res.send({ error: err, msg: "Something went wrong" });
     });
 };
@@ -40,7 +40,7 @@ module.exports.deleteTask = (req, res) => {
     .findByIdAndDelete(id)
     .then(() => res.send("Deleted Successfully"))
     .catch((err) => {
-      console.log(err);
+      
       res.send({ error: err, msg: "Something went wrong" });
     });
 };
