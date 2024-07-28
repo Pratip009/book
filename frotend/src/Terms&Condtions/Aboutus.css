@@ -1,64 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Outfit', sans-serif;
+}
 .aboutus_image::before {    
-    content: "";
-    background-image: url("../Image/gate.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.275;
-  }
-  .sub_headings{
-    font-family: 'Outfit', sans-serif;
+  content: "";
+  background-image: url("../Image/gate.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.275;
+}
 
-  }
-  .product_back{
-    background-image: url("../Image/lntraits5.png");
+.sub_headings {
+  font-family: 'Outfit', sans-serif;
+}
+
+.product_back {
+  background-image: url("../Image/lntraits5.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  }
-  .android_back{
-    background-image: url("../Image/newbackand.png");
+}
+
+.android_back {
+  background-image: url("../Image/newbackand.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  }
-  .about_ln{
-    background-image: url("../Image/aboutln1.png");
+}
+
+.about_ln {
+  background-image: url("../Image/aboutln1.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.ourteam_back {
+  background-image: url("../Image/ourteam.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Our_Team {
+  background-image: url("../Image/foundermmm.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.play {
+  background-image: url("../Image/foundermmm.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.founder {
+  background-image: url("../Image/dddd.png");
+  position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-container-about {
+  margin-top: -15px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.imageAbout {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 899px) {
+  .image-container-about {
+    height: 250px; /* Adjust height for medium screens */
   }
-  .ourteam_back{
-    background-image: url("../Image/ourteam.png");
-    position: relative;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .about_ln {
+    height: auto;
+    padding: 5px;
+    background-size: contain;
+    margin-left: 30px;
   }
-  .Our_Team{
-    background-image: url("../Image/foundermmm.png");
-    position: relative;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .circle_text h1 {
+    text-align: center;
+    font-size: 30px;
   }
-  .play{
-    background-image: url("../Image/foundermmm.png");
-    position: relative;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .circle_text p {
+    font-size: 14px;
+    text-align: center;
   }
-  .founder{
-    background-image: url("../Image/dddd.png");
-    position: relative;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .about_ln Button {
+    margin-top: 10px;
+    width: 100%;
   }
+}
+
+@media (max-width: 499px) {
+  .image-container-about {
+    height: 200px; /* Adjust height for small screens */
+  }
+
+  .about_ln {
+    height: auto;
+    padding: 5px;
+    background-size: contain;
+    margin-left: 40px;
+  }
+
+  .circle_text h1 {
+    font-size: 24px;
+  }
+
+  .circle_text p {
+    font-size: 13px;
+  }
+
+  .about_ln Button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

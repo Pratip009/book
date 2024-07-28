@@ -14,6 +14,9 @@ import ProfileModal from "./ProfileModel";
 import axios from "axios";
 import CartIcon from "./CartIcon";
 import ScrollingTextHeader from "./ScrollingTextHeader";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Header() {
   const history = useHistory();
@@ -79,23 +82,24 @@ function Header() {
       {/* Add the scrolling text header here */}
       <div className="header">
         <div className="headerTop">
-          <div className="headerTopLeft">
-            <span>
+          <div class="headerTopLeft">
+            <div class="headerPhone">
               <CallIcon className="headerRetailer_Svg" />
-            </span>
-            <span data-aos="fade" style={{ fontWeight: "400" }}>
-              {phone} {/* Display fetched phone number */}
-            </span>
+              <span>{phone}</span>
+            </div>
+            <div class="headerTopSocialIcons">
+              <FacebookIcon style={{color:"#1E5ADB"}}/>
+              <InstagramIcon style={{color:"#CD0972"}}/>
+              <YouTubeIcon style={{color:"red"}}/>
+            </div>
           </div>
+
+       
+
           <div className="headerTopRight">
             <div className="headerRetailer">
-              <span>
-                <LocationOnIcon
-                  className="headerRetailer_Svg"
-                  data-aos="fade"
-                />
-              </span>
-              <span data-aos="fade" style={{ fontWeight: "400" }}>
+              <LocationOnIcon className="headerRetailer_Svg" data-aos="fade" />
+              <span data-aos="fade" style={{ fontWeight: "400", marginRight:"20px" }}>
                 {email} {/* Display fetched email */}
               </span>
             </div>
@@ -111,13 +115,9 @@ function Header() {
                     style={{ backgroundColor: "#FF4E00" }}
                   >
                     <LockPersonIcon className="headerRetailer_Svg2" />
-                    <span
-                      className="My_account"
-                      style={{ fontWeight: "600" }}
-                    >
+                    <span className="My_account" style={{ fontWeight: "600" }}>
                       My Account
                     </span>
-                    <span></span>
                   </button>
                 </Link>
               ) : (
@@ -133,7 +133,6 @@ function Header() {
                     <span className="My_account" style={{ fontWeight: "600" }}>
                       Sign Up
                     </span>
-                    <span></span>
                   </button>
                 </Link>
               )}
@@ -144,36 +143,32 @@ function Header() {
         <div className="headerBottom">
           <div className="headerBottom__logo">
             <div className="header_mobile_menu">
-              <span>
-                <ReorderIcon
-                  onClick={() => setSideMenu(!sideMenu)}
-                  sx={{
-                    fontSize: 29,
-                    color: "black",
-                    "&:hover": {
-                      color: "#FF4E00",
-                      cursor: "pointer",
-                    },
-                  }}
+              <ReorderIcon
+                onClick={() => setSideMenu(!sideMenu)}
+                sx={{
+                  fontSize: 29,
+                  color: "black",
+                  "&:hover": {
+                    color: "#FF4E00",
+                    cursor: "pointer",
+                  },
+                }}
+              />
+              {sideMenu && (
+                <Sidebar
+                  handleSideBarMenu={handleSideBarMenu}
+                  isAuthenticated={isAuthenticated}
+                  user={user}
                 />
-                {sideMenu && (
-                  <Sidebar
-                    handleSideBarMenu={handleSideBarMenu}
-                    isAuthenticated={isAuthenticated}
-                    user={user}
-                  />
-                )}
-              </span>
-              <span>
-                <SearchBar
-                  searchBarActive={searchBarActive}
-                  searchValue={searchValue}
-                  handleCrossButtonClick={handleCrossButtonClick}
-                  handleSearchButtonClick={handleSearchButtonClick}
-                  handleSearchInputChange={handleSearchInputChange}
-                  handleSearchFormSubmit={handleSearchFormSubmit}
-                />
-              </span>
+              )}
+              {/* <SearchBar
+                searchBarActive={searchBarActive}
+                searchValue={searchValue}
+                handleCrossButtonClick={handleCrossButtonClick}
+                handleSearchButtonClick={handleSearchButtonClick}
+                handleSearchInputChange={handleSearchInputChange}
+                handleSearchFormSubmit={handleSearchFormSubmit}
+              /> */}
             </div>
           </div>
           {!searchBarActive && (
@@ -195,7 +190,6 @@ function Header() {
                 <li>
                   <Link to="/about_us">About Us</Link>
                 </li>
-
                 <li>
                   <Link to="/products">Products</Link>
                 </li>
@@ -232,17 +226,10 @@ function Header() {
                 handleSearchFormSubmit={handleSearchFormSubmit}
               />
             </div>
-            <span>
-              <Link
-                to="/cart"
-                style={{ color: "none", textDecoration: "none" }}
-              >
-                <CartIcon />
-              </Link>
-            </span>
-            <span>
-              <ProfileModal user={user} isAuthenticated={isAuthenticated} />
-            </span>
+            <Link to="/cart" style={{ color: "none", textDecoration: "none" }}>
+              <CartIcon />
+            </Link>
+            <ProfileModal user={user} isAuthenticated={isAuthenticated} />
           </div>
         </div>
         <ScrollingTextHeader />

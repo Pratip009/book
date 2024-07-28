@@ -7,19 +7,89 @@ import { Link } from "react-router-dom";
 import { Card } from "@mui/material";
 import PlayApp from "../component/Home/PlayApp.jsx";
 // import FeaturedSlider from "./FeatureSlider";
-import "aos/dist/aos.css";
+
 import "./Aboutus.css";
-import AOS from "aos";
+
 import OurTeam from "../component/Home/OurTeam";
 import Faq from "./Faq";
 import TestimonialSlider from "../component/Home/TestimonialSlider.jsx";
-
+import increaseImg from "../Image/increase.png";
+import bearImg from "../Image/bear.png";
+import bestImg from "../Image/best.png";
+import familyImg from "../Image/family.png";
+import negoImg from "../Image/nego.png";
+import creativeBrainImg from "../Image/creative-brain.png";
+import youCanImg from "../Image/you-can.png";
+import tarImg from "../Image/tar.png";
+import inventoryImg from "../Image/inventory.png";
+import warningImg from "../Image/warning.png";
+import dreamImg from "../Image/dream.png";
+import developerImg from "../Image/developer.png";
+import supportImg from "../Image/24-hours-support.png";
+import learning2Img from "../Image/learning2.png";
+import need2Img from "../Image/need2.png";
+import teamSpiritImg from "../Image/team-spirit.png";
 const useStyles = makeStyles((theme) => ({
+  image_about1: {
+    width: "100%",
+    height: "auto",
+    marginTop: "-50px",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      height: "auto",
+      marginTop: "0",
+    },
+  },
+  introText_about1: {
+    fontSize: "16px",
+    lineHeight: "1.6",
+    textAlign: "justify",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "15px",
+      lineHeight: "1.5",
+      padding: "0 1rem",
+    },
+  },
+  founderMessage: {
+    textAlign: "start",
+    fontSize: "36px",
+    marginTop: "20px",
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "center",
+      fontSize: "28px",
+      marginTop: "10px",
+    },
+  },
+  wishes: {
+    display: "flex",
+    alignItems: "flex-start",
+    fontWeight: "500",
+    margin: "0",
+    padding: "0",
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "center",
+      textAlign: "center",
+    },
+  },
+  founderName: {
+    display: "flex",
+    alignItems: "flex-start",
+    fontWeight: "600",
+    margin: "0",
+    padding: "0",
+    color: "orange",
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "center",
+      textAlign: "center",
+    },
+  },
+  container: {
+    marginTop: "3rem",
+  },
   about_us: {
     paddingTop: "8rem",
     paddingBottom: "4rem",
     backgroundColor: "white !important",
-    // background:`url(${"../Image/Cricket-wepon/hero1.jpg"})`,
     width: "100%",
     display: "flex",
     flexDirection: "column",
@@ -27,15 +97,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   container_12: {
-    // padding: "2rem",
     textAlign: "center",
     maxWidth: "80%",
     overflow: "hidden",
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   image_about: {
-    width: "80%",
-    height: "80%",
-
+    width: "100%",
+    height: "auto",
     marginBottom: "2rem",
     borderRadius: "10px",
   },
@@ -58,12 +128,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Outfit', sans-serif",
     maxWidth: "800px",
     lineHeight: "1.5",
-    // margin: "1.5rem 0",
     color: "#292929",
     fontSize: "19px",
     fontWeight: "400 !important",
     textAlign: "justify",
-    // padding: "0.8rem 0",
   },
   infoText_about: {
     lineHeight: "1.5",
@@ -74,10 +142,21 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "justify",
     padding: "0.8rem 1rem",
   },
+  circleText: {
+    textAlign: "center",
+    fontSize: "36px",
+    marginTop: "20px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "28px",
+      marginTop: "10px",
+    },
+  },
+  highlight: {
+    color: "orange", // or any color you prefer
+  },
   introText_about2: {
     lineHeight: "1.5",
     fontFamily: "'Outfit', sans-serif",
-
     marginTop: "-20px",
     color: "#292929",
     fontSize: "0.9rem",
@@ -89,62 +168,102 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: "1rem 0",
-    width: "100%",
-    marginTop: "1rem",
+    gap: "20px", // Space between buttons
+    marginTop: "20px",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      gap: "10px", // Reduce space between buttons for smaller screens
+    },
   },
   button1_about: {
     backgroundColor: "#003E90 !important",
     color: "white !important",
     width: "fit-content !important",
-    padding: "0.8rem 2rem   !important",
+    padding: "0.8rem 2rem !important",
     marginLeft: "3.3rem !important",
     borderRadius: "5px !important",
     "&:hover": {
       backgroundColor: "#ed1c24 !important",
       color: "white !important",
     },
+    [theme.breakpoints.down("md")]: {
+      width: "80% !important", // Make buttons wider for better touch targets
+      fontSize: "14px !important", // Adjust font size
+      marginLeft: "0 !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100% !important", // Make buttons full width for mobile screens
+      fontSize: "12px !important", // Further adjust font size
+    },
   },
   button2_about: {
     backgroundColor: "#003E90 !important",
-    color: "white   !important",
-    width: "fit-content     !important",
-    padding: "0.8rem 2rem   !important",
+    color: "white !important",
+    width: "fit-content !important",
+    padding: "0.8rem 2rem !important",
     marginLeft: "1.3rem !important",
     borderRadius: "5px !important",
     "&:hover": {
       backgroundColor: "#ed1c24 !important",
       color: "white !important",
     },
+    [theme.breakpoints.down("md")]: {
+      width: "80% !important", // Make buttons wider for better touch targets
+      fontSize: "14px !important", // Adjust font size
+      marginLeft: "0 !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100% !important", // Make buttons full width for mobile screens
+      fontSize: "12px !important", // Further adjust font size
+    },
+  },
+
+  traitCard: {
+    borderRadius: "10px",
+    boxShadow: 3,
+    padding: theme.spacing(2),
+  },
+  traitImage: {
+    height: "100px",
+  },
+  traitLetter: {
+    color: "#FF4E00",
+    fontSize: "24px",
+    fontFamily: "'Outfit', sans-serif",
+    fontWeight: "600",
+  },
+  traitText: {
+    color: "#61677A",
+    fontSize: "12px",
+    fontFamily: "'Outfit', sans-serif",
+    fontWeight: "600",
   },
 }));
 
 const About_UsPage = () => {
-  React.useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
   const classes = useStyles();
-
+  const traits = [
+    { src: increaseImg, letter: "L-", text: "LEADERSHIP" },
+    { src: bearImg, letter: "E-", text: "EFFECTIVENESS" },
+    { src: bestImg, letter: "A-", text: "ATTITUDE" },
+    { src: familyImg, letter: "R-", text: "RELATION" },
+    { src: negoImg, letter: "N-", text: "NEGOTIATION" },
+    { src: creativeBrainImg, letter: "I-", text: "INNOVATION" },
+    { src: youCanImg, letter: "N-", text: "NURTURE" },
+    { src: tarImg, letter: "G-", text: "GOAL" },
+    { src: inventoryImg, letter: "N-", text: "NEEDFUL" },
+    { src: warningImg, letter: "E-", text: "ESSENTIAL" },
+    { src: dreamImg, letter: "E-", text: "EXPECTATIONAL" },
+    { src: developerImg, letter: "D-", text: "DEVELOPMENT" },
+  ];
   return (
     <>
       <div className={classes.about_us}>
-        <div
-          style={{
-            marginTop: "-15px",
-            width: "100%",
-            height: "300px",
-            overflow: "hidden",
-          }}
-        >
+        <div className="image-container-about">
           <img
             src={require("../Image/abnew11nw1.png")}
             alt="About"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
+            className="imageAbout"
           />
         </div>
 
@@ -156,17 +275,7 @@ const About_UsPage = () => {
          
         
         </Container> */}
-        <div
-          className="about_ln"
-          style={{
-            maxWidth: "100%",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "20px",
-          }}
-        >
+        <div className="about_ln">
           <div style={{ maxWidth: "85%" }}>
             <Grid container spacing={1} justifyContent="center">
               <Grid item xs={12} sm={6}>
@@ -177,23 +286,8 @@ const About_UsPage = () => {
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                {/* <h1
-        style={{
-          textAlign: "Start",
-          marginTop: "3rem",
-          fontFamily: "'Courgette', cursive",
-        }}
-      >
-        About Learning Needs
-      </h1> */}
                 <div className="circle_text">
-                  <h1
-                    style={{
-                      textAlign: "start",
-                      fontSize: "36px",
-                      marginTop: "20px",
-                    }}
-                  >
+                  <h1>
                     About <span className="highlight">Learning Needs</span>
                   </h1>
                 </div>
@@ -228,16 +322,6 @@ const About_UsPage = () => {
                 >
                   Read More..
                 </Button>
-                {/* <Typography variant="body1" className={classes.introText_about}>
-        Learning Needs was founded by Lokesh Samant, a talented cricket
-        player who has represented the Under 16 and Under 19 teams.
-        Lokesh started this business to support his expenses and
-        received an overwhelming response. He has sold cricket equipment
-        to more than 20,000 customers till date. Now, he aims to expand
-        his business to an international level by launching his own
-        website and introducing new and genuine cricket products at
-        competitive prices.
-      </Typography> */}
               </Grid>
             </Grid>
           </div>
@@ -247,11 +331,7 @@ const About_UsPage = () => {
           style={{ backgroundColor: "#FFFFFF", width: "100%" }}
         >
           <Container className={classes.container_12}>
-            {/* Learning needs traits */}
-
-            {/* <Traits /> */}
-
-            <div className="circle_text" data-aos="slide-down">
+            <div className="circle_text">
               <h1
                 style={{
                   textAlign: "center",
@@ -261,440 +341,31 @@ const About_UsPage = () => {
               >
                 <span className="highlight">Learning Needs Traits</span>
               </h1>
-              {/* <p className="non_important" style={{ textAlign: "Start" }}>
-                {" "}
-                <span class="circle-sketch-highlight">
-                  Learning Needs Traits
-                </span>
-              </p> */}
             </div>
-            <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{ marginTop: "2rem" }}
-            >
-              <Grid item xs={4} md={2} data-aos="fade-down">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/increase.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
 
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    L-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    LEADERSHIP
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-down">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/bear.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    E-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    EFFECTIVENESS
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-down">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/best.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    A-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    ATTITUDE
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-down">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/family.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    R-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    RELATION
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-down">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/nego.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    N-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    NEGOTIATION
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-down">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/creative-brain.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    I-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    INNOVATION
-                  </Typography>
-                </Card>
-              </Grid>
-            </Grid>
-            <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              style={{ marginTop: "2rem" }}
-            >
-              <Grid item xs={4} md={2} data-aos="fade-up">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/you-can.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    N-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    NURTURE
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-up">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/tar.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    G-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    GOAL
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-up">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/inventory.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    N-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    NEEDFUL
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-up">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/warning.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    E-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    ESSENTIAL
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-up">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/dream.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    E-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    EXPECTATIONAL
-                  </Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={4} md={2} data-aos="fade-up">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
-                  <img
-                    src={require("../Image/developer.png")}
-                    alt=""
-                    style={{ height: "100px" }}
-                  />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    D-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    DEVELOPMENT
-                  </Typography>
-                </Card>
-              </Grid>
+            <Grid container spacing={3} style={{ marginTop: "2rem" }}>
+              {traits.map((trait, index) => (
+                <Grid item xs={12} sm={4} md={2} key={index}>
+                  <Card className={classes.traitCard}>
+                    <img
+                      src={trait.src}
+                      alt={trait.text}
+                      className={classes.traitImage}
+                    />
+                    <Typography className={classes.traitLetter}>
+                      {trait.letter}
+                    </Typography>
+                    <Typography className={classes.traitText}>
+                      {trait.text}
+                    </Typography>
+                  </Card>
+                </Grid>
+              ))}
             </Grid>
 
             <Grid
               container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              spacing={3}
               style={{
                 marginTop: "2rem",
                 display: "flex",
@@ -703,52 +374,31 @@ const About_UsPage = () => {
                 marginBottom: "2rem",
               }}
             >
-              <Grid item xs={4} md={5}>
+              <Grid item xs={12} sm={6} md={5}>
                 <img
-                  src={require("../Image/learning2.png")}
+                  src={learning2Img}
                   alt="Learning needs"
                   className={classes.image_about}
                 />
               </Grid>
 
-              <Grid item xs={4} md={2} data-aos="fade-down">
-                <Card style={{ borderRadius: "10px", boxShadow: 3 }}>
-                  {/* <Groups3Icon fontSize="large" /> */}
+              <Grid item xs={12} sm={6} md={2}>
+                <Card className={classes.traitCard}>
                   <img
-                    src={require("../Image/24-hours-support.png")}
-                    alt=""
-                    style={{ height: "100px" }}
+                    src={supportImg}
+                    alt="SERVICES"
+                    className={classes.traitImage}
                   />
-
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "36px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
-                    S-
-                  </Typography>
-
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "15px",
-                      fontFamily: "'Outfit', sans-serif",
-
-                      fontWeight: "600",
-                    }}
-                  >
+                  <Typography className={classes.traitLetter}>S-</Typography>
+                  <Typography className={classes.traitText}>
                     SERVICES
                   </Typography>
                 </Card>
               </Grid>
 
-              <Grid item xs={4} md={5}>
+              <Grid item xs={12} sm={6} md={5}>
                 <img
-                  src={require("../Image/need2.png")}
+                  src={need2Img}
                   alt="Learning needs"
                   className={classes.image_about}
                 />
@@ -777,9 +427,9 @@ const About_UsPage = () => {
           </span>
           <span
             className="sub_headings"
-            style={{ fontFamily: "'Outfit', sans-serif", fontSize: "17px" }}
+            style={{ fontFamily: "'Outfit', sans-serif'", fontSize: "17px" }}
           >
-            programs that exceed our clients’ expectations and help them achieve
+            programs that exceed our clients expectations and help them achieve
             their goals.
           </span>
           <div className="ourteam_back">
@@ -800,18 +450,21 @@ const About_UsPage = () => {
                 <Grid item xs={12} sm={6}>
                   <h2
                     style={{
-                      textAlign: "Start",
+                      textAlign: "start",
                       marginTop: "0",
                       marginBottom: "10px",
                       fontFamily: "'Outfit', sans-serif",
-                      fontSize: "36px",
+                      fontSize: "24px", // Adjusted for responsiveness
                       fontWeight: "700",
                       color: "#FF4E00",
                     }}
                   >
-                    With us , you can build yourself to achieve your goals
+                    With us, you can build yourself to achieve your goals
                   </h2>
-                  <p variant="body1" className={classes.introText_about2}>
+                  <Typography
+                    variant="body1"
+                    className={classes.introText_about2}
+                  >
                     Learning Needs is committed to help its clients reach their
                     goals. By providing an innovative environment, which makes a
                     difference. Our strong sense of identification with client
@@ -826,34 +479,16 @@ const About_UsPage = () => {
                     which reaches across a number of sectors and schools. But we
                     know that things change, and we are constantly striving to
                     adapt and improve.
-                  </p>
+                  </Typography>
 
-                  <Button
-                    style={{
-                      color: "#fff",
-                      backgroundColor: "#FF4E00",
-                      display: "flex",
-                      marginTop: "-10px",
-                    }}
-                    variant="contained"
-                  >
+                  <Button className={classes.buttonStyle} variant="contained">
                     Read More..
                   </Button>
-                  {/* <Typography variant="body1" className={classes.introText_about}>
-                Learning Needs was founded by Lokesh Samant, a talented cricket
-                player who has represented the Under 16 and Under 19 teams.
-                Lokesh started this business to support his expenses and
-                received an overwhelming response. He has sold cricket equipment
-                to more than 20,000 customers till date. Now, he aims to expand
-                his business to an international level by launching his own
-                website and introducing new and genuine cricket products at
-                competitive prices.
-              </Typography> */}
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
                   <img
-                    src={require("../Image/team-spirit.png")}
+                    src={teamSpiritImg}
                     alt="Learning needs"
                     className={classes.image_about}
                   />
@@ -865,88 +500,36 @@ const About_UsPage = () => {
           <div className="Our_Team">
             <OurTeam />
           </div>
-          <Container className="founder" style={{ marginTop: "3rem" }}>
+          <Container className={classes.container}>
             <Grid container spacing={4} justifyContent="center">
-              <Grid item xs={12} sm={6} className="founder">
+              <Grid item xs={12} sm={6}>
                 <img
                   src={require("../Image/founder1.png")}
-                  style={{ width: 400, height: 400, marginTop: -50 }}
                   alt="Learning needs"
-                  className={classes.image_about}
+                  className={classes.image_about1}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                {/* <h1
-                style={{
-                  textAlign: "Start",
-                  marginTop: "3rem",
-                  fontFamily: "'Courgette', cursive",
-                }}
-              >
-                About Learning Needs
-              </h1> */}
                 <div className="circle_text">
-                  <h1
-                    style={{
-                      textAlign: "start",
-                      fontSize: "36px",
-                      marginTop: "20px",
-                    }}
-                  >
+                  <h1 className={classes.founderMessage}>
                     <span className="highlight"> Founder's Message</span>
                   </h1>
                 </div>
-                <p
-                  variant="body1"
-                  className={classes.introText_about}
-                  style={{ fontSize: "15px" }}
-                >
+                <p className={classes.introText_about1}>
                   Consulting means different things to different people. For us,
                   it is about being a trusted advisor that helps clients chart
                   and walk the path to sustained success. We are not a solution
-                  looking for a problem—we see every projects and situation as
+                  looking for a problem—we see every project and situation as
                   unique. Our custom-tailored consulting engagements are based
                   on deep listening and decades of experience across industries
                   and issues. The solutions we craft are practical, realistic,
                   and highly effective. We pride ourselves on having a seasoned
                   and multidisciplinary team that can thoughtfully guide,
-                  support, and motivate leaders, teachers and organizations to
+                  support, and motivate leaders, teachers, and organizations to
                   achieve levels of performance they never have before.
                 </p>
-                <p
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    fontWeight: "500",
-                    margin: "0",
-                    padding: "0",
-                  }}
-                >
-                  With all the best wishes!
-                </p>
-                <p
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    fontWeight: "600",
-                    margin: "0",
-                    padding: "0",
-                    color: "orange",
-                  }}
-                >
-                  Rahul Singh
-                </p>
-
-                {/* <Typography variant="body1" className={classes.introText_about}>
-                Learning Needs was founded by Lokesh Samant, a talented cricket
-                player who has represented the Under 16 and Under 19 teams.
-                Lokesh started this business to support his expenses and
-                received an overwhelming response. He has sold cricket equipment
-                to more than 20,000 customers till date. Now, he aims to expand
-                his business to an international level by launching his own
-                website and introducing new and genuine cricket products at
-                competitive prices.
-              </Typography> */}
+                <p className={classes.wishes}>With all the best wishes!</p>
+                <p className={classes.founderName}>Rahul Singh</p>
               </Grid>
             </Grid>
           </Container>
@@ -969,23 +552,11 @@ const About_UsPage = () => {
               >
                 <span className="highlight">Pride of Learning Needs</span>
               </h1>
-              {/* <h2 className="clients_headings" >
-              Clients sharing their experience
-            </h2> */}
+
               <div className="circle_text">
-                {/* <p className="non_important" style={{ textAlign: "Start" }}>
-                Clients sharing their{" "}
-                <span class="circle-sketch-highlight">experience</span>
-              </p> */}
-                <h1
-                  style={{
-                    textAlign: "center",
-                    fontSize: "36px",
-                    marginTop: "20px",
-                  }}
-                >
+                <h1 className={classes.circleText}>
                   Clients sharing their
-                  <span className="highlight"> experience</span>
+                  <span className={classes.highlight}> experience</span>
                 </h1>
               </div>
               <div>
@@ -1000,10 +571,6 @@ const About_UsPage = () => {
 
           <Container className="faq" style={{ marginTop: "3rem" }}>
             <div className="circle_text">
-              {/* <p className="non_important" style={{ textAlign: "Start" }}>
-                Frequently Asked{" "}
-                <span class="circle-sketch-highlight">Questions</span>
-              </p> */}
               <h1
                 style={{
                   textAlign: "center",
@@ -1015,9 +582,8 @@ const About_UsPage = () => {
                 <span className="highlight"> Questions</span>
               </h1>
             </div>
-            
-              <Faq />
-          
+
+            <Faq />
           </Container>
 
           <div className={classes.buttonContainer_about}>

@@ -1,75 +1,119 @@
 #model1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  #model1 .members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#model1 .members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#model1 .member {
+  cursor: pointer;
+  transition: all 1s;
+  margin: 10px;
+  flex: 1 1 300px; /* Ensure responsive layout */
+  max-width: 300px; /* Ensure responsive layout */
+}
+
+#model1 .member:hover {
+  transform: scale(1.01);
+}
+
+#model1 .member:hover .description {
+  transform: translateY(-100%);
+}
+
+#model1 .member-image {
+  width: 100%;
+  height: auto;
+}
+
+#model1 .description {
+  width: 100%; /* Adjusted for responsiveness */
+  height: auto; /* Adjusted for responsiveness */
+  position: relative;
+  background-color: #003e90b5;
+  transform: translateY(0);
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Added for padding */
+}
+
+#model1 .description h1,
+#model1 .description h2,
+#model1 .description p {
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  text-align: center; /* Center text for better readability */
+  margin-right: 10px; /* Added margin-right for better centering */
+}
+
+#model1 .description h1 {
+  font-size: 18px; /* Smaller font size */
+  margin: 5px 0; /* Adjusted margin for spacing */
+}
+
+#model1 .description h2 {
+  font-size: 14px; /* Smaller font size */
+  margin: 5px 0; /* Adjusted margin for spacing */
+  font-weight: 400;
+}
+
+#model1 .description p {
+  font-size: 12px; /* Smaller font size */
+  padding: 0 10px; /* Adjusted padding */
+}
+
+#model1 .description .social-media {
+  display: flex;
+  justify-content: center; /* Center social icons */
+}
+
+#model1 .description .social-media svg {
+  color: #fff;
+  font-size: 28px; /* Adjusted icon size */
+  margin: 0 8px; /* Adjusted margin for spacing */
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#model1 .description .social-media svg:hover {
+  transform: scale(1.1);
+  color: #F21B3F;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
   #model1 .member {
-    cursor: pointer;
-    transition: all 1s;
-    margin: 10px;
+    flex: 1 1 100%; /* Take full width on mobile */
+    max-width: 100%; /* Ensure it doesn't exceed screen width */
   }
-  
-  #model1 .member:hover {
-    transform: scale(1.01);
-  }
-  
-  #model1 .member:hover .description {
-    transform: translateY(-100%);
-  }
-  
+
   #model1 .description {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    background-color: #003e90b5;
-    transform: translateY(0);
-    transition: all 1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0; /* Adjust padding for smaller screens */
   }
-  
+
   #model1 .description h1 {
-    color: #ffffff;
-    font-family: 'Outfit', sans-serif;
+    font-size: 16px; /* Adjust font size for smaller screens */
   }
-  
+
   #model1 .description h2 {
-    font-family: 'Outfit', sans-serif;
-    text-align: center;
-    color: #ffffff;
-    font-weight: 400;
-    font-size: 18px;
+    font-size: 12px; /* Adjust font size for smaller screens */
   }
-  
+
   #model1 .description p {
-    color: #fff;
-    text-align: justify;
-    padding: 0 15px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px;
+    font-size: 10px; /* Adjust font size for smaller screens */
   }
-  
+
   #model1 .description .social-media svg {
-    color: #fff;
-    font-size: 35px;
-    margin-left: 8px;
-    cursor: pointer;
-    transition: all 0.5s;
+    font-size: 24px; /* Adjust icon size for smaller screens */
   }
-  
-  #model1 .description .social-media svg:hover {
-    transform: scale(1.1);
-    color: #F21B3F;
-  }
-  
+}

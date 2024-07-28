@@ -1,41 +1,74 @@
-.educate{
+.educate {
     width: 100%;
-    margin-top:auto;
-    margin-bottom:auto;
-    text-align:start;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: start;
 }
-.educate_desc_div{
+
+.educate_desc_div {
     border: 1px solid rgb(221, 221, 221);
-    padding: .5rem;
+    padding: 1rem; /* Increased padding for better readability on smaller screens */
     background-color: white;
     font-family: 'Outfit', sans-serif;
 }
-.educate_desc{
+
+.educate_desc {
     font-family: 'Outfit', sans-serif;
     color: rgb(49, 49, 49);
-    font-size: 14px;
+    font-size: 1rem; /* Responsive font size */
     text-align: justify;
 }
-.app_heading{
-    font-family: 'Outfit', sans-serif;
-        font-size: 20px; 
-margin: 0;
-background: linear-gradient(120deg, #003E90, #3B90FF);
-padding: .5rem;
-color: white;
-}
-.app_subheading{
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 17px;
 
+.app_heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem; /* Responsive font size */
+    margin: 0;
+    background: linear-gradient(120deg, #003E90, #3B90FF);
+    padding: 1rem; /* Increased padding for better appearance */
+    color: white;
 }
-.app_desc{
-    font-size: 20px;
+
+.app_subheading {
+    margin-bottom: 1rem; /* Adjust margin for smaller screens */
+    margin-top: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+.app_desc {
+    font-size: 1.25rem; /* Responsive font size */
     font-family: 'Outfit', sans-serif;
     color: rgb(49, 49, 49);
 }
-.app_links1{
-    width: 20%;
+
+.app_links1 {
+    width: 100%; /* Full width for mobile screens */
+}
+
+/* Media queries for smaller devices */
+@media (max-width: 600px) {
+    .app_heading {
+        font-size: 1.5rem; /* Smaller font size for mobile screens */
+        padding: 0.5rem;
+    }
+
+    .educate_desc_div {
+        padding: 0.5rem;
+    }
+
+    .educate_desc {
+        font-size: 0.875rem; /* Smaller font size for mobile screens */
+    }
+
+    .app_subheading {
+        font-size: 1.25rem;
+    }
+
+    .app_desc {
+        font-size: 1rem;
+    }
+
+    .app_links1 {
+        width: 100%;
+    }
 }

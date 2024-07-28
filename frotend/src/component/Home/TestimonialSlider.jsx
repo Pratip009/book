@@ -11,7 +11,7 @@ const PreviousBtn = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <ArrowBackIos style={{ color: "gray", fontSize: "45px" }} />
+      <ArrowBackIos className="slick-arrow-icon" />
     </div>
   );
 };
@@ -20,7 +20,7 @@ const NextBtn = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <ArrowForwardIos style={{ color: "gray", fontSize: "45px" }} />
+      <ArrowForwardIos className="slick-arrow-icon" />
     </div>
   );
 };
@@ -42,11 +42,8 @@ const TestimonialSlider = () => {
   }, []);
 
   return (
-    <div
-      className="testimonial"
-      style={{ display: "flex", justifyContent: "center", marginTop: 50 }}
-    >
-      <div style={{ width: "85%", textAlign: "center" }}>
+    <div className="testimonial">
+      <div className="testimonial-slider-container">
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
           {testimonials.map((testimonial) => (
             <TestimonialCard
@@ -65,43 +62,15 @@ const TestimonialSlider = () => {
 
 const TestimonialCard = ({ img, description, name, position }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        textAlign: "center",
-        color: "grey",
-      }}
-    >
+    <div className="testimonial-card">
       <Avatar
         imgProps={{ style: { borderRadius: "50%" } }}
         src={img}
-        style={{
-          width: 120,
-          height: 120,
-          border: "1px solid #FF4E00",
-          padding: 7,
-          marginBottom: 20,
-        }}
+        className="testimonial-avatar"
       />
-      <p
-        style={{
-          fontSize: "15px",
-          fontFamily: "'Outfit', sans-serif",
-          display: "inline-block",
-        }}
-      >
-        {description}
-      </p>
-      <p
-        style={{
-          fontFamily: "'Outfit', sans-serif",
-          fontWeight: "600",
-          marginTop: 25,
-        }}
-      >
-        <span style={{ fontWeight: 500, color: "green" }}>{name}</span> {position}
+      <p className="testimonial-description">{description}</p>
+      <p className="testimonial-name">
+        <span>{name}</span> {position}
       </p>
     </div>
   );

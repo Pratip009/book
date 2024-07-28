@@ -27,7 +27,7 @@ import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-
+import '../../Terms&Condtions/Aboutus.css';
 const categories = ["Books", "PDF", "Learning Aid"];
 
 function Products() {
@@ -125,23 +125,11 @@ function Products() {
           ) : (
             <>
               <div className="productPage">
-                <div
-                  style={{
-                    marginTop: "-15px",
-                    width: "100%",
-                    height: "300px",
-                    overflow: "hidden",
-                  }}
-                >
+                <div className="image-container-about">
                   <img
                     src={require("../../Image/PRODNEW111.png")}
-                    alt="About"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      objectPosition: "center",
-                    }}
+                    alt="Product"
+                    className="imageAbout"
                   />
                 </div>
                 <div className="productBack">

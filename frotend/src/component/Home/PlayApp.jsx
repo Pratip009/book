@@ -5,23 +5,24 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import GooglePlay from "../../Image/Footer/google-play-black.svg";
 import "../Home/PlayApp.css";
+
 export default function MediaControlCard() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
   return (
     <Grid container spacing={2} style={{ width: "100%" }}>
-      <Grid item xs={12} md={4} >
+      <Grid item xs={12} md={4}>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          {/* <CardMedia
-            component="img"
-            sx={{ width: 500, height: 500 }}
-            image={appp}
-          /> */}
-          <img src={require("../../Image/appp.png")} alt="App" />
+          <img
+            src={require("../../Image/appp.png")}
+            alt="App"
+            className="app_image"
+          />
         </Box>
       </Grid>
-      <Grid item xs={12} md={8} >
+      <Grid item xs={12} md={8}>
         <Box
           sx={{
             display: "flex",
@@ -31,21 +32,7 @@ export default function MediaControlCard() {
         >
           <div className="educate">
             <h3 className="app_heading">Educate Yourself</h3>
-
-            {/* <h5 className="app_subheading">
-              Books and resources for better learning
-            </h5> */}
-            <h2
-              style={{
-                textAlign: "Start",
-                marginTop: "20px",
-                marginBottom: "10px",
-                fontFamily: "'Outfit', sans-serif",
-                fontSize: "26px",
-                fontWeight: "700",
-                color: "#000000",
-              }}
-            >
+            <h2 className="app_subheading">
               Books and resources for better learning
             </h2>
             <p className="app_desc">
@@ -70,10 +57,3 @@ export default function MediaControlCard() {
     </Grid>
   );
 }
-
-// {/* <CardMedia
-//           component="img"
-//           sx={{ width: 500, height: 500 }}
-//           image={appp}
-//           alt="app"
-//         /> */}

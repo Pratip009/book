@@ -12,25 +12,12 @@ const School = () => {
   }, []);
   return (
     <div className="content1" style={{ overflowX: "hidden" }}>
-      <div
-        style={{
-          marginTop: "110px",
-          width: "100%",
-          height: "300px",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src="/schoolnew1.png"
-          alt="School"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
-      </div>
+      <div className="image-containerschool">
+      <img
+        src="/schoolnew1.png"
+        alt="School"
+      />
+    </div>
       <div
         className="privacy-policy-container"
         style={{ display: "flex", width: "100%" }}
@@ -744,348 +731,40 @@ const School = () => {
               </Grid>
             </Grid>
 
-            {/* <h1
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                fontFamily: "'Outfit', sans-serif",
-                fontSize: "23px",
-                marginTop: "50px",
-              }}
-            >
-              Additional support...
-            </h1> */}
+            
             <div className="additional">
-              <h1
-                style={{
-                  textAlign: "start",
-                  fontSize: "36px",
-                  marginTop: "2rem",
-                }}
-              >
-                <span className="highlight">Additional support</span>
-              </h1>
-
-              <p
-                style={{
-                  fontFamily: "'Outfit', sans-serif",
-                  textAlign: "justify",
-                  display: "inline-block",
-                  fontSize: "19px",
-                  fontWeight: "600",
-                }}
-              >
-                Team can also assist with:
-              </p>
-              <Grid
-                container
-                rowSpacing={1}
-                columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              >
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      The quality of teaching (teachers and non-teaching staff)
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Teacher performance evaluation
-                    </p>
-                  </div>
-                </Grid>
-
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Curriculum management including resources and equipment
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Student assessment and evaluation system, educational
-                      standards achieved by pupils
-                    </p>
-                  </div>
-                </Grid>
-
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      The quality of pupils’ learning, attitudes and behaviour
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Professional development
-                    </p>
-                  </div>
-                </Grid>
-
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Marketing
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Development offices, fundraising, foundations and alumni
-                      relations
-                    </p>
-                  </div>
-                </Grid>
-
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Parental services
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Links with parents and the community
-                    </p>
-                  </div>
-                </Grid>
-
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Formation of a parent association or subcommittee
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Higher education{" "}
-                    </p>
-                  </div>
-                </Grid>
-
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Staff pay structure
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckBoxIcon style={{ color: "blue" }} fontSize="19px" />
-                    <p
-                      style={{
-                        fontFamily: "'Outfit', sans-serif",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "15px",
-                      }}
-                    >
-                      Health and safety audit
-                    </p>
-                  </div>
-                </Grid>
-              </Grid>
+      <h1>
+        <span className="highlight">Additional support</span>
+      </h1>
+      <p>
+        Team can also assist with:
+      </p>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        {[
+          "The quality of teaching (teachers and non-teaching staff)",
+          "Teacher performance evaluation",
+          "Curriculum management including resources and equipment",
+          "Student assessment and evaluation system, educational standards achieved by pupils",
+          "The quality of pupils’ learning, attitudes and behaviour",
+          "Professional development",
+          "Marketing",
+          "Development offices, fundraising, foundations and alumni relations",
+          "Parental services",
+          "Links with parents and the community",
+          "Formation of a parent association or subcommittee",
+          "Higher education",
+          "Staff pay structure",
+          "Health and safety audit"
+        ].map((text, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <div className="support-item">
+              <CheckBoxIcon style={{ color: 'blue' }} fontSize="19px" />
+              <p>{text}</p>
             </div>
+          </Grid>
+        ))}
+      </Grid>
+    </div>
           </div>
         </div>
       </div>

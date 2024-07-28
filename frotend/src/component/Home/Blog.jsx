@@ -33,7 +33,7 @@ export default function Blog() {
       ) : (
         <div
           className="container___"
-          style={{ backgroundColor: "white", width: "100%" }}
+          style={{ backgroundColor: "white", width: "100%",margin:"0" , padding:'0' }}
         >
           <Grid
             container
@@ -59,6 +59,7 @@ export default function Blog() {
                   }}
                 />
               </div>
+              
             </Grid>
           </Grid>
           <h1

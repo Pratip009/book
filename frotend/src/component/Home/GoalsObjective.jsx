@@ -1,30 +1,34 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { Grid } from "@material-ui/core";
+import Grid from "@mui/material/Grid"; // Updated import for consistency
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./GoalsObjective.css";
 import { Card, CardHeader, Avatar, IconButton } from "@mui/material";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
+import dartImage from "../../Image/dart.png";
 export default function GoalsObjective() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
   return (
     <Grid container spacing={2} style={{ width: "100%" }}>
       <Grid item xs={12} md={4}>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          {/* <CardMedia
-            component="img"
-            sx={{ width: 500, height: 500 }}
-            image={appp}
-          /> */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%",
+            overflow: "hidden",
+          }}
+        >
           <img
-            src={require("../../Image/dart.png")}
+            src={dartImage}
             alt="App"
-            style={{ width: "100%", height: "100%" }}
-            // data-aos="fade-right"
+            style={{ width: "100%", height: "auto" }}
           />
         </Box>
       </Grid>
@@ -34,6 +38,8 @@ export default function GoalsObjective() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            height: "100%",
+            overflow: "hidden",
           }}
         >
           <div className="educate">
@@ -42,6 +48,7 @@ export default function GoalsObjective() {
                 boxShadow: "none",
                 backgroundColor: "transparent",
                 marginBottom: "-18px",
+                width: "100%", // Ensure the Card takes full width
               }}
             >
               <CardHeader
@@ -53,7 +60,7 @@ export default function GoalsObjective() {
                 title={
                   <span
                     style={{
-                      fontSize: 15,
+                      fontSize: "1rem", // Responsive font size
                       color: "#1B1A1A",
                       fontWeight: "600",
                       fontFamily: "'Outfit', sans-serif",
@@ -66,7 +73,13 @@ export default function GoalsObjective() {
                 action={<IconButton>{/* <ThumbUpIcon/> */}</IconButton>}
               />
             </Card>
-            <Card style={{ boxShadow: "none", backgroundColor: "transparent" }}>
+            <Card
+              style={{
+                boxShadow: "none",
+                backgroundColor: "transparent",
+                width: "100%", // Ensure the Card takes full width
+              }}
+            >
               <CardHeader
                 avatar={
                   <Avatar style={{ backgroundColor: "#FF4E00" }}>
@@ -76,7 +89,7 @@ export default function GoalsObjective() {
                 title={
                   <span
                     style={{
-                      fontSize: 15,
+                      fontSize: "1rem", // Responsive font size
                       color: "#1B1A1A",
                       fontWeight: "600",
                       fontFamily: "'Outfit', sans-serif",
@@ -85,21 +98,20 @@ export default function GoalsObjective() {
                     MISSION
                   </span>
                 }
-                subheader="Conducting ourselves with honesty and responsibility.
-                "
+                subheader="Conducting ourselves with honesty and responsibility."
               />
             </Card>
             <h3
               className="app_heading"
-              style={{ fontFamily: "'Outfit', sans-serif", fontSize: "36px" }}
+              style={{ fontFamily: "'Outfit', sans-serif", fontSize: "2rem" }} // Responsive font size
             >
-              Future Target Innovation{" "}
+              Future Target Innovation
             </h3>
             <div className="educate_desc_div">
               <span
                 className="educate_desc"
                 style={{
-                  fontSize: "15px",
+                  fontSize: "1rem", // Responsive font size
                   fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                 }}
@@ -116,10 +128,3 @@ export default function GoalsObjective() {
     </Grid>
   );
 }
-
-// {/* <CardMedia
-//           component="img"
-//           sx={{ width: 500, height: 500 }}
-//           image={appp}
-//           alt="app"
-//         /> */}

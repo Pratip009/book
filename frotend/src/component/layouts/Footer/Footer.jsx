@@ -162,7 +162,7 @@ const Footer = () => {
           <div className="container" style={{ height: "300px" }}>
             <div className="wrapper_footer footer_wrapper ">
               <div className="foot_about foot1">
-                <div className="foot_logo" style={{}}>
+                <div className="foot_logo">
                   <Link to="/" style={{ textDecoration: "none" }}>
                     <img
                       src={require("../../../Image/LN.png")}
@@ -173,20 +173,10 @@ const Footer = () => {
                         borderRadius: "10px",
                       }}
                     />
-                    {/* <h1 className="Foot_heading"></h1> */}
+                
                   </Link>
                 </div>
-                {/* <div className="logo_text">
-                <h1>Let's Change,Learn,Grow and Transform!</h1>
-              </div>
-              <div className="logo_span">
-                <span>
-                  Learning Needs offers a variety of boutique services, tailored
-                  to each clients need. Our specialized expertise allows the
-                  Individual, Institution, Schools and Organizations to achieve
-                  their objectives
-                </span>
-              </div> */}
+               
                 <div
                   className="responsive-container"
                   style={{
@@ -381,23 +371,6 @@ const Footer = () => {
               <div className="foot_links foot3">
                 <div className=""></div>
 
-                {/* socila media link */}
-
-                {/* <div className="foot_social">
-                {footSocial.map((item) => {
-                  const { id, icon, path } = item;
-                  return (
-                    <a
-                      href={path}
-                      key={id}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {icon}
-                    </a>
-                  );
-                })}
-              </div> */}
                 <div className="foot_subs" style={{ marginTop: "120px" }}>
                   <h5>Newsletter</h5>
                   <form onSubmit={handleSubmit} className="foot_form">

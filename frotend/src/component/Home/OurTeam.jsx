@@ -32,19 +32,13 @@ export default function OurTeam() {
         {teamMembers.map((member) => (
           <div className="member" key={member.id}>
             <img
-              width={300}
-              height={300}
               src={member.attributes.image.data.attributes.url}
               alt={member.attributes.Name}
+              className="member-image"
             />
             <div className="description">
-              <h1 style={{ fontFamily: "'Outfit', sans-serif" }}>
-                {member.attributes.Name}
-              </h1>
+              <h1>{member.attributes.Name}</h1>
               <h2>{member.attributes.designation}</h2>
-              <br />
-              <br />
-              <br />
               <div className="social-media">
                 <InstagramIcon />
                 <LinkedInIcon />

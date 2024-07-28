@@ -1,26 +1,85 @@
-.testimonial .slick-arrow.slick-prev,
-.testimonial .slick-arrow.slick-next {
-  width: 40px;
-  height: 40px;
+.testimonial {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.testimonial-slider-container {
+  width: 90%; /* Increased width */
+  max-width: 1200px; /* Added max-width */
+  text-align: center;
+}
+
+.slick-arrow-icon {
+  color: gray;
+  font-size: 45px;
+}
+
+.testimonial-card {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 1;
-  border-radius: 5px;
+  flex-direction: column;
+  text-align: center;
+  color: grey;
+  padding: 20px;
 }
-.testimonial .slick-prev::before,
-.testimonial .slick-next::before {
-  display: none;
+
+.testimonial-avatar {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #FF4E00;
+  padding: 7px;
+  margin-bottom: 20px;
 }
-.testimonial .slick-arrow.slick-next {
-  right: -70px;
-}
-.testimonial .slick-arrow.slick-prev {
-  left: -70px;
-}
-.testimonial .slick-dots li button:before {
+
+.testimonial-description {
   font-size: 15px;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
 }
-.testimonial .slick-dots li {
-  top: 15px;
+
+.testimonial-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.testimonial-name span {
+  font-weight: 500;
+  color: green;
+}
+
+@media (max-width: 899px) {
+  .slick-arrow-icon {
+    font-size: 35px;
+  }
+
+  .testimonial-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .testimonial-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 499px) {
+  .slick-arrow-icon {
+    font-size: 25px;
+  }
+
+  .testimonial-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .testimonial-description {
+    font-size: 13px;
+  }
+
+  .testimonial-name {
+    font-size: 14px;
+    margin-top: 20px;
+  }
 }

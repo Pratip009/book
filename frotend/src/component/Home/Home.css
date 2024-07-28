@@ -1,94 +1,106 @@
-
-
-
-.text_container{
-  margin: auto;
-  width: 70%;
- 
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Outfit', sans-serif;
 }
-.text_container_new{
+
+/* Container Styles */
+.text_container,
+.text_container_new {
   margin: auto;
-  width: 70%;
- 
+  padding: 0 1rem;
+  max-width: 80%;
+  box-sizing: border-box; /* Include padding in width calculations */
 }
+
 .container3 {
-  width: 100%;
-  height: 50em;
+  width: 80%;
+  height: auto;
   overflow: hidden;
   background: #ffffff;
   position: relative;
+  padding: 0 1rem; /* Padding for smaller screens */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
-
-.bg_yellows{
- 
+.bg_yellows {
   position: absolute;
   top: 50%;
-      left: 50%;
-  width:100%;
- height: 550px;
+  left: 50%;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
-  background: radial-gradient(circle at center, #ffff00 0%, #f89d002f 48%,#ffff0078 100% ) center/cover no-repeat;
+  background: radial-gradient(circle at center, #ffff00 0%, #f89d002f 48%, #ffff0078 100%);
   filter: blur(55px);
   transform: translate(-50%, -50%);
   z-index: -1;
   animation: radialGradientAnimation 5s ease infinite alternate;
 }
 
-.main_content{
+.main_content {
   position: relative;
   z-index: 1;
-  /* Your content styles */
   color: white;
-
   padding: 20px;
+  max-width: 90%;
+  margin: auto;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
 
+.text_container1 {
+  height: auto;
+  width: 90%;
+  background: linear-gradient(45deg, #003E90, #25d5ab, #FF4E00);
+  animation: color 12s ease-in-out infinite;
+  background-size: 300% 300%;
 }
-.text_container1{
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(45deg,#003E90,#25d5ab,#FF4E00); /* Initial background color */
-  animation: color 12s ease-in-out infinite; /* Animation properties */
-  background-size:300% 300%;
- 
-}
+
+/* Keyframe Animations */
 @keyframes color {
   0% {
-  background-position: 0 50%;
+    background-position: 0 50%;
   }
   50% {
- background-position: 100% 50%;
+    background-position: 100% 50%;
   }
-  10% {
-   background-position: 0 50%;
+  100% {
+    background-position: 0 50%;
   }
 }
 
-.wrappeeer{
- 
-  background-image: url('../../Image/dddd.png');
-  background-attachment: fixed;
-  
-  background-size: cover; 
-  background-position: center; 
-  filter: brightness(100%)
-  
-  /* Adjust as needed */
-
+@keyframes radialGradientAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.highlight{
-  position: relative; /* Needed to properly position and stack the pseudo-element */
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+@keyframes slider {
+  0% {
+    top: 10em;
+  }
+  100% {
+    top: -14em;
+  }
+}
+
+/* Highlight and Slider Styles */
+.highlight {
+  position: relative;
   z-index: 2;
-}
-@keyframes slideAndFadeIn {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-  to {
-    width: 100%;
-    opacity: 0.75;
-  }
 }
 
 .highlight::after {
@@ -102,10 +114,23 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  opacity: 0; /* Start with the element fully transparent */
+  opacity: 0;
   animation: slideAndFadeIn 6s ease-in-out infinite;
   z-index: 1;
 }
+
+@keyframes slideAndFadeIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 0.75;
+  }
+}
+
+/* Slider Styles */
 .slider {
   top: 1em;
   position: relative;
@@ -119,96 +144,100 @@
   animation-play-state: paused;
 }
 
-@keyframes slider {
-  0%   { top:   10em }
-  100% { top: -14em }
-}
-
 .blur .slider {
   margin: 0;
   padding: 0 1em;
   line-height: 1em;
 }
 
-.blur:before, .blur::before,
-.blur:after,  .blur::after {
+.blur:before,
+.blur::before,
+.blur:after,
+.blur::after {
   left: 0;
   z-index: 1;
   content: '';
   position: absolute;
-  width: 100%; 
-  /* height: 2em; */
-  background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
+  width: 100%;
+  background-image: linear-gradient(180deg, #FFF, rgba(255, 255, 255, 0));
 }
 
-.blur:after, .blur::after {
+.blur:after,
+.blur::after {
   bottom: 0;
   transform: rotate(180deg);
 }
 
-.blur:before, .blur::before {
+.blur:before,
+.blur::before {
   top: 0;
 }
 
-p {
-font-family: helvetica, arial, sans serif;
-}
-.background_image{
+/* Background and Goal Images */
+.background_image {
   background-image: url("../../Image/welcomepage5.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-} 
+  z-index: 0; /* Ensure it's behind other content */
+}
 
-        
-
-
-.goal{
+.goal {
   background-image: url("../../Image/ourteamd.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 0; /* Ensure it's behind other content */
 }
 
-.non_important{
+/* Wrapper Styles */
+.wrappeeer {
+  background-image: url('../../Image/dddd.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(100%);
+  position: relative; 
+}
+
+/* Text Styles */
+p {
+  font-family: helvetica, arial, sans-serif;
+}
+
+.non_important {
   font-size: 45px;
   font-family: 'Outfit', sans-serif;
 }
-.clients_headings{
+
+.clients_headings,
+.sub_headings {
   display: flex;
-justify-content: center;
-font-family: 'Outfit', sans-serif;
-font-size: 30px;
-margin-top: 0;
-}
-.Home_Page{
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
- background: #ffffff;
-  filter: brightness(100%);
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
 }
 
-
-.sub_headings{
-  display: flex;
-justify-content: center;
-font-size: 16px;
-font-family: 'Outfit', sans-serif;
+.clients_headings {
+  font-size: 30px;
+  margin-top: 0;
 }
 
-.container_element_large_text{
+.sub_headings {
+  font-size: 16px;
+}
+
+.container_element_large_text {
   margin: 0 auto;
   font-size: 30px;
   color: #FF4E00;
-  /* #FF4E00 */
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   line-height: 1.9rem;
 }
-.container_element_small_text{
+
+.container_element_small_text {
   margin: 0 auto;
   text-align: start;
   font-family: 'Outfit', sans-serif;
@@ -217,34 +246,8 @@ font-family: 'Outfit', sans-serif;
   font-weight: 200;
 }
 
-.text_style {
-  font-weight: 700;
-  text-align: center;
-  font-size: 40px;
-  font-family: Hack, sans-serif;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #000, #fff, #000);
-  letter-spacing: 5px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: shine 5s linear infinite;
-  position: relative;
-}
-
-@keyframes shine {
-  0% {
-    background-position-x: -500%;
-  }
-  100% {
-    background-position-x: 500%;
-  }
-}
-
+.text_style,
 .trending_heading {
-
   font-weight: 700;
   text-align: center;
   font-size: 40px;
@@ -261,31 +264,123 @@ font-family: 'Outfit', sans-serif;
   position: relative;
 }
 
+/* Trending Products */
 .trending-products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.8rem;
   margin: 0 1.8rem;
+  max-width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .text_container,
+  .text_container_new {
+    padding: 0 0.5rem; /* Provides padding on both sides for mobile view */
+    max-width: 100%;
+    margin-top: 1rem; /* Adjust spacing between sections */
+    align-items: center; /* Center items on smaller screens */
+  }
+
+  .container3 {
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box; /* Include padding in width calculations */
+  }
+
+  .main_content {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .highlight::after {
+    height: 5px;
+  }
+
   .trending-products {
-    max-width: 960px;
-    margin: 0 auto;
+    gap: 1rem;
+    margin: 0 1rem;
+  }
+
+  .background_image {
+    margin-bottom: 2rem; /* Add margin-bottom for mobile view */
   }
 }
 
-@media only screen and (min-width: 960px) {
-  .trending-products {
-    max-width: 1200px;
-    margin: 0 auto;
+@media only screen and (max-width: 480px) {
+  .non_important {
+    font-size: 30px;
+  }
+
+  .clients_headings,
+  .sub_headings {
+    font-size: 14px;
+  }
+
+  .container_element_large_text {
+    font-size: 24px;
+  }
+
+  .container_element_small_text {
+    font-size: 12px;
+  }
+
+  .text_style,
+  .trending_heading {
+    font-size: 30px;
+  }
+
+  .text_container,
+  .text_container_new {
+    padding: 0 0.5rem; /* Provides padding on both sides for mobile view */
+    max-width: 100%;
+    margin: 0; /* Reset margin to avoid overlap */
+  }
+
+  .text_container {
+    margin-top: 1rem; /* Adjust spacing for better layout */
+  }
+
+  .text_container_new {
+    margin-bottom: 1rem; /* Adjust spacing for better layout */
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .trending-products {
-    max-width: 1440px;
-    margin: 0 auto;
+/* Grid Layout Adjustments for Mobile */
+@media only screen and (max-width: 768px) {
+  .your-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .your-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+/* Card Component Adjustments */
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    max-width: 90%;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    padding: 0.5rem;
   }
 }

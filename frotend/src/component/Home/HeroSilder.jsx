@@ -8,7 +8,7 @@ import Typed from "react-typed";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import { getBanner } from "../../GlobalApi" // Ensure you have the correct path to your API functions
+import { getBanner } from "../../GlobalApi"; // Ensure you have the correct path to your API functions
 
 const useStyles = makeStyles((theme) => ({
   slide: {
@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     width: "80%", // Adjust as needed
     [theme.breakpoints.down("sm")]: {
       width: "90%",
+      padding: theme.spacing(1), // Add padding for mobile
     },
   },
   quote: {
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     marginBottom: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
-      fontSize: "14px",
+      fontSize: "18px", // Reduced font size for mobile
     },
   },
   saleText: {
@@ -51,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
     color: "#2B2B2B",
     marginBottom: theme.spacing(6),
     [theme.breakpoints.down("sm")]: {
-      fontSize: "24px",
+      fontSize: "20px", // Reduced font size for mobile
+      marginBottom: theme.spacing(3), // Adjust margin for mobile
     },
   },
   productButton: {
@@ -67,8 +69,8 @@ const useStyles = makeStyles((theme) => ({
       border: "1px solid #FF4E00",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "16px",
-      padding: theme.spacing(0.5, 2),
+      fontSize: "14px", // Reduced font size for mobile
+      padding: theme.spacing(0.5, 2), // Adjust padding for mobile
     },
   },
   slideImage: {

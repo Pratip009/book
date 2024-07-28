@@ -10,9 +10,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-   zIndex: 999,
+    zIndex: 999,
     background: "#ffffff",
-    
+
     width: "100%",
     padding: "1.5rem 1rem 1rem 1rem",
     boxShadow:
@@ -94,13 +94,12 @@ const useStyles = makeStyles((theme) => ({
     height: "3.5rem",
     alignSelf: "center",
     paddingLeft: "25px",
-  "& img": {
-    height: "100%",
-    width: "auto",
+    "& img": {
+      height: "100%",
+      width: "auto",
+    },
   },
-
-  },
-})); 
+}));
 
 const Navbar = ({ toggleHandler }) => {
   const classes = useStyles();
@@ -113,7 +112,12 @@ const Navbar = ({ toggleHandler }) => {
       <div className={classes.dashboardHead}>
         <Link
           to="/admin/dashboard"
-          style={{ textDecoration: "none", color: "none" , width: "100%" , height: "100%"}}
+          style={{
+            textDecoration: "none",
+            color: "none",
+            width: "100%",
+            height: "100%",
+          }}
         >
           <img
             src={require("../../Image/logo.png")}
@@ -122,10 +126,7 @@ const Navbar = ({ toggleHandler }) => {
           />
         </Link>
       </div>
-      <Link
-        to="/contact"
-        style={{ textDecoration: "none", color: "none" }}
-      >
+      <Link to="/contact" style={{ textDecoration: "none", color: "none" }}>
         <Button className={classes.contactButton}>Contact Us</Button>
       </Link>
     </nav>

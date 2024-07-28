@@ -4,7 +4,29 @@ import { Grid } from "@material-ui/core";
 import "aos/dist/aos.css";
 import Pricing from "../pricing/pricing";
 import "./Service.css";
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) => ({
+  imageContainer: {
+    marginTop: '110px',
+    width: '100%',
+    height: '300px',
+    overflow: 'hidden',
+    [theme.breakpoints.down('sm')]: {
+      height: '200px', // Adjust height for small screens
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '150px', // Adjust height for extra small screens
+    },
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    objectPosition: 'center',
+  },
+}));
 const Service = () => {
+  const classes = useStyles();
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -14,25 +36,14 @@ const Service = () => {
     >
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={12}>
-        <div
-            style={{
-              marginTop: "120px",
-              width: "100%",
-              height: "300px",
-              overflow: "hidden",
-            }}
-          >
-            <img
-              src={require("../../Image/SER1211.png")}
-              alt="About"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-          </div>
+        
+          <div className={classes.imageContainer}>
+      <img
+        src={require('../../Image/trA011.png')}
+        alt="About"
+        className={classes.image}
+      />
+    </div>
         </Grid>
 
         {/* <Grid item xs={12}></Grid> */}

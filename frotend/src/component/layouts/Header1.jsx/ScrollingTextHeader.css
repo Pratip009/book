@@ -1,13 +1,41 @@
+/* General Styles */
 .scrolling-header {
-    background-color: #ff0000; /* Background color */
-    color: rgb(255, 255, 255); /* Text color */
-    padding: 1px 0;
-    text-align: center; /* Center-align text */
+  background-color: #ff00007f; /* Background color */
+  color: rgb(255, 255, 255); /* Text color */
+  padding: 1px 0;
+  text-align: center; /* Center-align text */
+ /* Make header stick to the top */
+  width: 100%; /* Full width */
+  top: 0; /* Align to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.scrolling-text {
+  display: inline-block;
+  font-size: 16px; /* Default font size */
+  font-weight: bold;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .scrolling-header {
+    padding: 0.5rem 0; /* Reduce padding */
   }
-  
+
   .scrolling-text {
-    display: inline-block;
-    font-size: 16px; /* Adjust font size as needed */
-    font-weight: bold;
+    font-size: 14px; /* Reduce font size for tablets */
   }
-  
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .scrolling-header {
+    padding: 0.5rem 0; /* Ensure padding is sufficient but not too large */
+  }
+
+  .scrolling-text {
+    font-size: 12px; /* Further reduce font size for mobile devices */
+  }
+}
