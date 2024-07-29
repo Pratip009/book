@@ -127,15 +127,22 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: relative;
 }
 
 .headerBottom__logo {
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* Align logo to the left */
+  flex: 1; /* Ensure it takes available space */
+  margin-right: 10px; 
 }
 
 .headerBottom__logo_main {
   height: 4rem;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
 }
 
 @media (max-width: 768px) {
@@ -154,6 +161,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+ margin-right: 50px;
 }
 
 .headerBottom_navMenu ul {
@@ -164,7 +172,7 @@
 }
 
 .headerBottom_navMenu ul li {
-  margin: 0 15px; /* Add position relative for pseudo-element */
+  margin: 0 15px; 
 }
 
 .headerBottom_navMenu ul li a {
@@ -271,37 +279,37 @@
   .headerBottom {
     padding: 0.5rem;
     flex-direction: row;
+    justify-content: space-between; 
   }
 
   .headerBottom__logo {
     flex: 1;
-    justify-content: center;
-    margin: 0 10px;
+    justify-content: flex-start; /* Align logo to the left */
+    margin: 0 10px; /* Ensure spacing is consistent */
   }
 
   .headerBottom__logo_main {
-    max-width: 200px;
+    max-width: 300px;
     margin-top: 1rem;
+  
   }
 
-  .header_mobile_menu, .headerBotttom_icons {
+  .header_mobile_menu {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 1rem; /* Space between reorder icon and logo */
   }
 
-  .header_mobile_menu svg, .headerBotttom_icons svg {
+  .header_mobile_menu svg {
     width: 18px;
     height: 18px;
   }
 
-  .headerBottom_navMenu {
-    display: none;
-  }
-
   .headerBotttom_icons {
-    gap: 0.5rem;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 1rem; /* Space between icons and logo */
   }
 
   .headerBotttom_icons svg {
@@ -309,8 +317,8 @@
     height: 20px;
   }
 
-  .headerBottom_navMenu ul li {
-    padding: 0.5rem 0.8rem;
+  .headerBottom_navMenu {
+    display: none; /* Hide the nav menu in mobile view */
   }
 }
 
@@ -325,21 +333,24 @@
 
   .headerTopLeft {
     display: flex;
-    flex-direction: row; /* Changed to row */
-    justify-content: flex-start;
-    align-items: center; /* Changed to center */
-    gap: 100px; /* Added gap for spacing */
+    flex-direction: row; /* Row direction */
+    justify-content: space-between;
+    align-items: center; /* Center align items */
+    width: 100%;
+    padding: 0 20px;
   }
 
   .headerTopLeft .headerPhone {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 5px; /* Reduce gap */
+    gap: 5px;
+    margin-left: -20px;
   }
 
   .headerTopSocialIcons {
     display: flex;
-    gap: 3px; /* Reduce gap */
+    gap: 10px;
   }
 
   .headerLogin {
@@ -362,36 +373,37 @@
   .headerBottom {
     padding: 0.5rem;
     flex-direction: row;
+    justify-content: space-between; /* Distribute items evenly */
   }
 
   .headerBottom__logo {
     flex: 1;
-    justify-content: center;
-    margin: 0 10px;
+    justify-content: flex-start; /* Align logo to the left */
+    margin-right: 10px; /* Ensure spacing is consistent */
   }
 
   .headerBottom__logo_main {
-    max-width: 165px;
-    
+    max-width: 165px; /* Adjust size for very small screens */
+    margin-top: 1rem;
+    margin-right: 30px;
   }
 
-  .header_mobile_menu, .headerBotttom_icons {
+  .header_mobile_menu {
     display: flex;
     align-items: center;
+    gap: 0.5rem; /* Reduced gap for smaller screens */
   }
 
-  .header_mobile_menu svg, .headerBotttom_icons svg {
+  .header_mobile_menu svg {
     width: 18px;
     height: 18px;
   }
 
-  .headerBottom_navMenu {
-    display: none;
-  }
-
   .headerBotttom_icons {
-    gap: 0.5rem;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 0.5rem; /* Reduced gap for smaller screens */
   }
 
   .headerBotttom_icons svg {
@@ -399,44 +411,10 @@
     height: 20px;
   }
 
-  .headerBottom_navMenu ul li {
-    padding: 0.5rem 0.8rem;
+  .headerBottom_navMenu {
+    display: none;
   }
-}
-
-/* Desktop Styles */
-@media (min-width: 900px) {
-  .headerTopLeft {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    margin-right: auto;
-  }
-
-  .headerTopCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .headerTopSocialIcons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0 auto;
-  }
-
-  .headerTopRight {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: auto;
-  }
-
-  .headerBottom__logo_main {
-    height: 4rem; /* Increase the logo size for desktop view */
+  .profile-icon{
+    margin-bottom: 0;
   }
 }
