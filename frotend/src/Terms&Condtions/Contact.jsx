@@ -14,16 +14,29 @@ import { useAlert } from "react-alert";
 import { useHistory } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
+
 const useStyles = makeStyles((theme) => ({
   root_contactus: {
-    padding: "8rem 0",
+    padding: "8rem 2rem",
     backgroundColor: "white",
     width: "100%",
     overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+      padding: "4rem 1rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      padding: "2rem 0.5rem",
+    },
   },
   contact_Container_contactus: {
     width: "70%",
-    margin: "10px auto",
+    margin: "0 auto",
+    [theme.breakpoints.down("md")]: {
+      width: "90%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   title_contact_us: {
     color: "#414141",
@@ -33,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "700 !important",
     letterSpacing: "2px",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "14px ",
+      fontSize: "1rem",
       padding: "1rem 0",
     },
   },
@@ -41,41 +54,57 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     backgroundColor: "#b6b6b6",
     margin: "2rem 0 !important",
+    [theme.breakpoints.down("sm")]: {
+      margin: "1rem 0",
+    },
   },
   helpTitle_contact_us: {
-    fontSize: "18px",
+    fontSize: "1.5rem",
     color: "black",
-    padding: "2rem 0",
+    padding: "1rem 0", // Adjusted padding for better alignment
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.2rem",
+      padding: "0.5rem 0",
+    },
   },
   para_contact: {
-    paddingBottom: "3rem",
+    paddingBottom: "1rem",
+    paddingTop: "1rem",
     marginLeft: "0.5rem",
     marginTop: "0.5rem",
-
     color: "#414141",
     lineHeight: "1.5rem",
-    fontSize: "16px !important",
+    fontSize: "1rem !important",
     width: "90%",
     letterSpacing: "2px",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+      fontSize: "0.9rem",
+      paddingBottom: "0.5rem",
+      paddingTop: "0.5rem",
     },
   },
   address_contacts: {
-    paddingBottom: "3rem",
+    paddingBottom: "1rem",
     marginLeft: "0.5rem",
     color: "#414141",
     lineHeight: "1.5rem",
-    fontSize: "16px !important",
+    fontSize: "1rem !important",
     width: "90%",
     letterSpacing: "2px",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      fontSize: "0.9rem",
+      paddingBottom: "0.5rem",
+    },
   },
   buttonGroup: {
     "& > *": {
-      margin: theme.spacing(0),
+      margin: theme.spacing(1),
     },
+    display: "flex",
+    justifyContent: "center",
     [theme.breakpoints.down("sm")]: {
-      display: "flex",
       flexDirection: "column",
       alignItems: "center",
       gap: "1rem",
@@ -84,31 +113,27 @@ const useStyles = makeStyles((theme) => ({
   supportButton: {
     backgroundColor: "#003E90 !important",
     color: "white !important",
-    width: "fit-content !important",
-    padding: "0.8rem 2rem   !important",
-    marginLeft: "3.3rem !important",
+    padding: "0.8rem 2rem !important",
     borderRadius: "5px !important",
     "&:hover": {
       backgroundColor: "#ed1c24 !important",
       color: "white !important",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "15px !important",
+      padding: "0.8rem 1.5rem !important",
     },
   },
   callButton: {
     backgroundColor: "#003E90 !important",
-    color: "white   !important",
-    width: "fit-content     !important",
-    padding: "0.8rem 2rem   !important",
-    marginLeft: "1.3rem !important",
+    color: "white !important",
+    padding: "0.8rem 2rem !important",
     borderRadius: "5px !important",
     "&:hover": {
       backgroundColor: "#ed1c24 !important",
       color: "white !important",
     },
     [theme.breakpoints.down("sm")]: {
-      padding: "0.8rem 3.4rem   !important",
+      padding: "0.8rem 1.5rem !important",
     },
   },
   formContainer_container: {
@@ -117,45 +142,43 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   formField_contact: {
-    // marginBottom: "2rem",
     width: "100%",
-    color: "white",
+    marginBottom: "1rem",
   },
   submitButtons: {
-    alignSelf: "flex-start",
+    alignSelf: "center",
     backgroundColor: "#003E90 !important",
-    color: "white   !important",
-    width: "fit-content     !important",
-    padding: "1rem 3rem   !important",
+    color: "white !important",
+    padding: "1rem 3rem !important",
     borderRadius: "5px !important",
     "&:hover": {
       backgroundColor: "#ed1c24 !important",
       color: "white !important",
     },
+    [theme.breakpoints.down("sm")]: {
+      padding: "0.8rem 2rem !important",
+    },
   },
   SelectOption_contact: {
     width: "100%",
-    marginBottom: "2rem",
-    "& .MuiOutlinedInput-root_contactus": {
+    marginBottom: "1rem",
+    "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: "#fff",
         borderRadius: "none !important",
       },
       "&:hover fieldset": {
         borderColor: "#fff",
-        "&.Mui-focused fieldset": {
-          borderColor: "#fff",
-        },
       },
     },
-    "& .MuiSelect-root_contactus": {
+    "& .MuiSelect-root": {
       backgroundColor: "white",
       color: "black",
     },
     "& .MuiSelect-icon": {
       color: "black",
     },
-    "& .MuiList-root_contactus": {
+    "& .MuiList-root": {
       backgroundColor: "white",
       color: "black",
     },
@@ -167,10 +190,27 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
   },
   menu_contact: {
-    "& .MuiList-root_contactus": {
+    "& .MuiList-root": {
       backgroundColor: "white",
       color: "black",
     },
+  },
+  headcontainer: {
+    width: "100%",
+    height: "300px",
+    overflow: "hidden",
+    [theme.breakpoints.down("sm")]: {
+      height: "200px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "150px",
+    },
+  },
+  headimage: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
   },
 }));
 
@@ -190,35 +230,18 @@ const ContactForm = () => {
 
   return (
     <Box className={classes.root_contactus}>
-      <div
-            style={{
-              marginTop: "-10px",
-              width: "100%",
-              height: "300px",
-              overflow: "hidden",
-            }}
-          >
-            <img
-            src={require("../../src/Image/cont1211.png")}
-              
-              alt="contact"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-          </div>
+      <div className={classes.headcontainer}>
+        <img
+          src={require("../../src/Image/cont1211.png")}
+          alt="contact"
+          className={classes.headimage}
+        />
+      </div>
       <MetaData title={"Contact Us"} />
       <div className={classes.contact_Container_contactus}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={6}>
-            <Typography
-              variant="h2"
-              className={classes.title_contact_us}
-              style={{}}
-            >
+          <Grid item xs={12} md={6}>
+            <Typography variant="h2" className={classes.title_contact_us}>
               <h1
                 style={{
                   textAlign: "center",
@@ -245,40 +268,14 @@ const ContactForm = () => {
               </h1>
             </Typography>
             <Typography variant="body2" className={classes.para_contact}>
-              <p
-                style={{
-                  fontFamily: "'Outfit', sans-serif",
-                  textAlign: "justify",
-                  display: "inline-block",
-                  fontSize: "17px",
-                }}
-              >
+              <p>
                 Catch us anytime you want? Fill out our support form below, and
                 we'll be in touch shortly.
               </p>
             </Typography>
 
-            <Typography
-              variant="body2"
-              className={classes.address_contacts}
-              style={{
-                fontFamily: "'Outfit', sans-serif",
-                textAlign: "justify",
-                display: "inline-block",
-                fontSize: "17px",
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Outfit', sans-serif",
-                  textAlign: "justify",
-                  display: "inline-block",
-                  fontSize: "17px",
-                  fontWeight: "600",
-                }}
-              >
-                Learning Needs
-              </span>
+            <Typography variant="body2" className={classes.address_contacts}>
+              <span>Learning Needs</span>
               <br />
               Kolkata
               <br />
@@ -286,19 +283,9 @@ const ContactForm = () => {
               <br />
               India
             </Typography>
-            <Typography
-              variant="body2"
-              className={classes.para_contact}
-              style={{
-                marginTop: "2rem",
-                fontFamily: "'Outfit', sans-serif",
-                textAlign: "justify",
-                display: "inline-block",
-                fontSize: "17px",
-              }}
-            >
+            <Typography variant="body2" className={classes.para_contact}>
               We have live chat available, look for the chat icon in the lower
-              right hand corner of this page. If it isn’t there, then give us a
+              right-hand corner of this page. If it isn’t there, then give us a
               call at{" "}
               <strong
                 style={{
@@ -333,7 +320,7 @@ const ContactForm = () => {
 
             <Divider className={classes.divider_contact} />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <div className={classes.supportForm}>
               <Typography
                 variant="h4"
@@ -352,16 +339,7 @@ const ContactForm = () => {
               </Typography>
 
               <Typography variant="body2" className={classes.para_contact}>
-                {/* Need a quicker answer? Look for our chat icon on the right hand
-                side of this page. */}
-                <p
-                  style={{
-                    fontFamily: "'Outfit', sans-serif",
-                    textAlign: "justify",
-                    display: "inline-block",
-                    fontSize: "17px",
-                  }}
-                >
+                <p>
                   Need a quicker answer? Look for our chat icon on the right
                   hand side of this page.
                 </p>
@@ -452,7 +430,6 @@ const ContactForm = () => {
                     variant="body2"
                     className={classes.lableText_contact}
                   >
-                    {" "}
                     EMAIL *
                   </Typography>
                   <FormControl className={classes.formField_contact}>
@@ -469,7 +446,6 @@ const ContactForm = () => {
                     variant="body2"
                     className={classes.lableText_contact}
                   >
-                    {" "}
                     MESSAGE *
                   </Typography>
                   <FormControl className={classes.formField_contact}>
@@ -494,22 +470,41 @@ const ContactForm = () => {
           </Grid>
         </Grid>
 
-        <div className="map" style={{ marginTop: "5rem" }}>
+        <Box className="map" sx={{ marginTop: "5rem" }}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <iframe
-                title="Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235850.64012325197!2d88.03548933303698!3d22.53544413842691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1720683033483!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style={{ border: "0" }}
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <Box
+                sx={{
+                  position: "relative",
+                  paddingBottom: "56.25%", 
+                  height: 0,
+                  overflow: "hidden",
+                  maxWidth: "100%",
+                  borderRadius: "8px",
+                  "& iframe": {
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: "0",
+                  },
+                  "@media (max-width: 600px)": {
+                    paddingBottom: "75%", // 4:3 Aspect Ratio for smaller devices
+                  },
+                }}
+              >
+                <iframe
+                  title="Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235850.64012325197!2d88.03548933303698!3d22.53544413842691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1720683033483!5m2!1sen!2sin"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </Box>
             </Grid>
           </Grid>
-        </div>
+        </Box>
       </div>
     </Box>
   );
