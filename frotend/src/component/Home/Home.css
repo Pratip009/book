@@ -274,8 +274,24 @@ p {
   max-width: 100%;
 }
 
+/* Inner Goal Styles */
+.inner_goal {
+  width: 68%; /* Default width for large screens */
+  margin: auto;
+}
+
 /* Responsive Styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) { /* Adjust for larger tablets and small desktops */
+  .inner_goal {
+    width: 90%; /* Width for medium screens */
+  }
+}
+
+@media only screen and (max-width: 768px) { /* Adjust for tablets and smaller screens */
+  .inner_goal {
+    width: 90%; /* Ensure the width is suitable for tablets */
+  }
+
   .text_container,
   .text_container_new {
     padding: 0 0.5rem; /* Provides padding on both sides for mobile view */
@@ -309,7 +325,11 @@ p {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) { /* Adjust for mobile devices */
+  .inner_goal {
+    width: 90%; /* Ensure the width is suitable for mobile devices */
+  }
+
   .non_important {
     font-size: 30px;
   }

@@ -12,13 +12,13 @@ import { getBanner } from "../../GlobalApi"; // Ensure you have the correct path
 
 const useStyles = makeStyles((theme) => ({
   slide: {
-    marginTop: "40px",
+
     height: "calc(80vh)",
     width: "100%",
     position: "relative",
     [theme.breakpoints.down("sm")]: {
       height: "50vh",
-      marginTop: "5rem",
+    
     },
   },
   slideContent: {

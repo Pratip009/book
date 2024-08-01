@@ -13,12 +13,9 @@ import Rating from "@material-ui/lab/Rating";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import {
-  dispalyMoney,
-  generateDiscountedPrice,
-} from "../DisplayMoney/DisplayMoney";
-import { addItemToCart } from "../../actions/cartAction";
 import { useDispatch } from "react-redux";
+import { dispalyMoney, generateDiscountedPrice } from "../DisplayMoney/DisplayMoney";
+import { addItemToCart } from "../../actions/cartAction";
 
 // Placeholder image import
 import placeholderImage from "../../Image/pdf.svg";
@@ -39,10 +36,49 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     "&:hover": {
       transform: "translateY(-8px)",
-      boxShadow:
-        "0 8px 16px rgba(0, 62, 144, 0.4), 0 8px 16px rgba(255, 78, 0, 0.4)",
+      boxShadow: "0 8px 16px rgba(0, 62, 144, 0.4), 0 8px 16px rgba(255, 78, 0, 0.4)",
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down(767)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(721)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(600)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(540)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(480)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(440)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(420)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(412)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(393)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(360)]: {
+      width: "90%",
+      margin: theme.spacing(1),
+    },
+    [theme.breakpoints.down(320)]: {
       width: "90%",
       margin: theme.spacing(1),
     },
@@ -84,6 +120,39 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ff4e00",
     color: "#fff",
     marginRight: theme.spacing(1),
+    [theme.breakpoints.down(767)]: {
+      fontSize: "0.9rem",
+    },
+    [theme.breakpoints.down(721)]: {
+      fontSize: "0.8rem",
+    },
+    [theme.breakpoints.down(600)]: {
+      fontSize: "0.8rem",
+    },
+    [theme.breakpoints.down(540)]: {
+      fontSize: "0.7rem",
+    },
+    [theme.breakpoints.down(480)]: {
+      fontSize: "0.7rem",
+    },
+    [theme.breakpoints.down(440)]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.down(420)]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.down(412)]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.down(393)]: {
+      fontSize: "0.5rem",
+    },
+    [theme.breakpoints.down(360)]: {
+      fontSize: "0.5rem",
+    },
+    [theme.breakpoints.down(320)]: {
+      fontSize: "0.4rem",
+    },
   },
   finalPrice: {
     color: "#fff",
@@ -93,6 +162,39 @@ const useStyles = makeStyles((theme) => ({
     padding: "0 8px",
     fontWeight: "normal",
     fontSize: "1rem",
+    [theme.breakpoints.down(767)]: {
+      fontSize: "0.9rem",
+    },
+    [theme.breakpoints.down(721)]: {
+      fontSize: "0.8rem",
+    },
+    [theme.breakpoints.down(600)]: {
+      fontSize: "0.8rem",
+    },
+    [theme.breakpoints.down(540)]: {
+      fontSize: "0.7rem",
+    },
+    [theme.breakpoints.down(480)]: {
+      fontSize: "0.7rem",
+    },
+    [theme.breakpoints.down(440)]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.down(420)]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.down(412)]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.down(393)]: {
+      fontSize: "0.5rem",
+    },
+    [theme.breakpoints.down(360)]: {
+      fontSize: "0.5rem",
+    },
+    [theme.breakpoints.down(320)]: {
+      fontSize: "0.4rem",
+    },
   },
   description: {
     fontSize: "0.9rem",
@@ -105,16 +207,96 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis",
     WebkitLineClamp: 3,
     WebkitBoxOrient: "vertical",
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down(767)]: {
       fontSize: "0.8rem",
       WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(721)]: {
+      fontSize: "0.8rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(600)]: {
+      fontSize: "0.8rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(540)]: {
+      fontSize: "0.7rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(480)]: {
+      fontSize: "0.7rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(440)]: {
+      fontSize: "0.6rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(420)]: {
+      fontSize: "0.6rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(412)]: {
+      fontSize: "0.6rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(393)]: {
+      fontSize: "0.5rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(360)]: {
+      fontSize: "0.5rem",
+      WebkitLineClamp: 2,
+    },
+    [theme.breakpoints.down(320)]: {
+      fontSize: "0.4rem",
+      WebkitLineClamp: 1,
     },
   },
   title: {
     fontWeight: "700",
     fontFamily: "'Outfit', sans-serif",
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down(767)]: {
       fontSize: "1rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(721)]: {
+      fontSize: "1rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(600)]: {
+      fontSize: "0.9rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(540)]: {
+      fontSize: "0.9rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(480)]: {
+      fontSize: "0.9rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(440)]: {
+      fontSize: "0.8rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(420)]: {
+      fontSize: "0.8rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(412)]: {
+      fontSize: "0.8rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(393)]: {
+      fontSize: "0.7rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(360)]: {
+      fontSize: "0.7rem",
+      WebkitLineClamp: 1,
+    },
+    [theme.breakpoints.down(320)]: {
+      fontSize: "0.6rem",
       WebkitLineClamp: 1,
     },
   },
@@ -258,4 +440,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-

@@ -17,6 +17,7 @@ import ScrollingTextHeader from "./ScrollingTextHeader";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { Margin } from "@mui/icons-material";
 
 function Header() {
   const history = useHistory();
@@ -86,20 +87,12 @@ function Header() {
             <div class="headerPhone">
               <CallIcon className="headerRetailer_Svg" />
               <span>{phone}</span>
-            </div>
-            <div class="headerTopSocialIcons">
-              <FacebookIcon style={{color:"#1E5ADB"}}/>
-              <InstagramIcon style={{color:"#CD0972"}}/>
-              <YouTubeIcon style={{color:"red"}}/>
-            </div>
+            </div>        
           </div>
-
-       
-
           <div className="headerTopRight">
             <div className="headerRetailer">
               <LocationOnIcon className="headerRetailer_Svg" data-aos="fade" />
-              <span data-aos="fade" style={{ fontWeight: "400", marginRight:"20px" }}>
+              <span data-aos="fade" style={{ fontWeight: "400" }}>
                 {email} {/* Display fetched email */}
               </span>
             </div>
@@ -215,7 +208,7 @@ function Header() {
             </div>
           )}
 
-          <div className="headerBotttom_icons" data-aos="slide-left">
+          <div className="headerBotttom_icons">
             <div className="search_Bar">
               <SearchBar
                 searchBarActive={searchBarActive}
@@ -226,10 +219,10 @@ function Header() {
                 handleSearchFormSubmit={handleSearchFormSubmit}
               />
             </div>
-            <Link to="/cart" style={{ color: "none", textDecoration: "none" }}>
+            <Link to="/cart" style={{ color: "none", textDecoration: "none", marginRight:"10px" }}>
               <CartIcon />
             </Link>
-            <ProfileModal user={user} isAuthenticated={isAuthenticated} />
+            <ProfileModal user={user} isAuthenticated={isAuthenticated} className="profile-icon"/>
           </div>
         </div>
         <ScrollingTextHeader />

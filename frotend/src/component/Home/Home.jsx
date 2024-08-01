@@ -34,14 +34,27 @@ import Welcome from "./Welcome";
 import { Link } from "react-router-dom";
 import { getNotice } from "../../GlobalApi";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Wellcome2 from "./Wellcome2";
+
 function Home() {
+  const [width, setWidth] = useState(window.innerWidth);
   const isMobile = useMediaQuery("(max-width: 600px)");
   const [notices, setNotices] = useState([]);
   const alert = useAlert();
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.products);
   const [task, setTask] = useState([]);
-
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    
+    window.addEventListener('resize', handleResize);
+    
+    // Initial width check
+    handleResize();
+    
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   useEffect(() => {
     const fetchNotices = async () => {
       try {
@@ -72,6 +85,56 @@ function Home() {
       setTask(res.data);
     });
   }, []);
+  const getWidth = () => {
+    if (width <= 320) return '90%';
+    if (width <= 360) return '90%';
+    if (width <= 393) return '90%';
+    if (width <= 412) return '90%';
+    if (width <= 420) return '90%';
+    if (width <= 440) return '90%';
+    if (width <= 480) return '90%';
+    if (width <= 540) return '90%';
+    if (width <= 600) return '90%';
+    if (width <= 721) return '90%';
+    if (width <= 767) return '90%';
+    return '68%'; // For larger screens
+  };
+  const h1Style = {
+    textAlign: "center",
+    fontSize: "36px",
+    marginTop: "10px",
+    fontFamily: "'Outfit', sans-serif",
+    // Inline media queries
+    "@media (max-width: 767px)": { fontSize: "32px" },
+    "@media (max-width: 721px)": { fontSize: "30px" },
+    "@media (max-width: 600px)": { fontSize: "28px" },
+    "@media (max-width: 540px)": { fontSize: "26px" },
+    "@media (max-width: 480px)": { fontSize: "24px" },
+    "@media (max-width: 440px)": { fontSize: "22px" },
+    "@media (max-width: 420px)": { fontSize: "20px" },
+    "@media (max-width: 412px)": { fontSize: "18px" },
+    "@media (max-width: 393px)": { fontSize: "16px" },
+    "@media (max-width: 360px)": { fontSize: "14px" },
+    "@media (max-width: 320px)": { fontSize: "12px" },
+  };
+
+  const spanStyle = {
+    fontSize: "19px",
+    fontFamily: "'Outfit', sans-serif",
+    fontWeight: "500",
+    // Inline media queries
+    "@media (max-width: 767px)": { fontSize: "17px" },
+    "@media (max-width: 721px)": { fontSize: "16px" },
+    "@media (max-width: 600px)": { fontSize: "15px" },
+    "@media (max-width: 540px)": { fontSize: "14px" },
+    "@media (max-width: 480px)": { fontSize: "13px" },
+    "@media (max-width: 440px)": { fontSize: "12px" },
+    "@media (max-width: 420px)": { fontSize: "11px" },
+    "@media (max-width: 412px)": { fontSize: "10px" },
+    "@media (max-width: 393px)": { fontSize: "9px" },
+    "@media (max-width: 360px)": { fontSize: "8px" },
+    "@media (max-width: 320px)": { fontSize: "7px" },
+  };
 
   return (
     <>
@@ -98,87 +161,19 @@ function Home() {
               }}
             >
               <div className="main_content">
-                <div
-                  className="text_container"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginTop: "20px",
-                    padding: "0 20px", // Added padding for better spacing
-                  }}
-                >
+                <div className="text_container">
                   <Grid
                     container
                     rowSpacing={2}
                     columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                     style={{ width: "100%", maxWidth: "1200px" }}
+                    className="noMarginPadding"
                   >
                     <Grid item xs={12} md={6}>
                       <Welcome />
                     </Grid>
-                    <Grid
-                      item
-                      xs={12}
-                      md={6}
-                      style={{
-                        padding: "0 30px",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <p
-                        className="container_element_large_text"
-                        style={{
-                          fontSize: "36px",
-                          fontFamily: "'Outfit', sans-serif",
-                          marginTop: "10px",
-                        }}
-                      >
-                        Our Services Help You Succeed in Business
-                      </p>
-
-                      <p
-                        className="container_element_small_text"
-                        style={{
-                          fontSize: "15px",
-                          marginTop: "14px",
-                          fontWeight: "400",
-                          textAlign: "justify",
-                          fontFamily: "'Outfit', sans-serif",
-                          color: "black",
-                        }}
-                      >
-                        Learning Needs is a training & management consulting
-                        company based in Kolkata in the lap of nature beside
-                        river Ganges, India. Learning Needs offers a variety of
-                        boutique services, tailored to each client’s needs. Our
-                        specialized expertise allows the Individual,
-                        Institution, Schools, and Organizations to achieve their
-                        objectives; we are very much committed to the success of
-                        our clients and their individuals.
-                      </p>
-                      <Link to="/about_us">
-                        <Button
-                          style={{
-                            border: "1px solid white",
-                            color: "#fff",
-                            background:
-                              "linear-gradient(45deg, #ff5f6d, #ffc371)",
-                            position: "relative",
-                            overflow: "hidden",
-                            transition: "0.3s",
-                            outline: "none",
-                            cursor: "pointer",
-                            marginTop: "23px",
-                          }}
-                          variant="contained"
-                        >
-                          Read More..
-                        </Button>
-                      </Link>
+                    <Grid item xs={12} md={6}>
+                      <Wellcome2 />
                     </Grid>
                   </Grid>
                 </div>
@@ -186,7 +181,7 @@ function Home() {
                   className="text_container_new"
                   style={{
                     marginTop: "20px",
-                    padding: "0 20px",
+                    padding: "0 10px",
                   }}
                 >
                   <Grid
@@ -199,9 +194,7 @@ function Home() {
                       <Card
                         sx={{
                           maxWidth: 500,
-                          
                           margin: "0 auto",
-                         
                         }}
                       >
                         <Box sx={{ position: "relative" }}>
@@ -220,6 +213,9 @@ function Home() {
                               color: "white",
                               padding: "15px",
                               height: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
                             }}
                           >
                             <div className="overlay_section">
@@ -229,8 +225,8 @@ function Home() {
                                   border: "1px solid #D44300",
                                 }}
                                 sx={{
-                                  width: isMobile ? 30 : 60, // Adjusted size for mobile
-                                  height: isMobile ? 30 : 60, // Adjusted size for mobile
+                                  width: isMobile ? 30 : 60,
+                                  height: isMobile ? 30 : 60,
                                 }}
                               >
                                 <MenuBookIcon
@@ -238,11 +234,12 @@ function Home() {
                                 />
                               </Avatar>
                               <Typography
-                                variant="h6" // Changed from h5 to h6
+                                variant="h6"
                                 className="training"
                                 style={{
                                   fontFamily: "'Outfit', sans-serif",
-                                  fontSize: isMobile ? "0.8rem" : "1.5rem", // Adjusted font size for mobile
+                                  fontSize: isMobile ? "0.8rem" : "1.5rem",
+                                  marginTop: "10px", // Add some margin to separate text from avatar
                                 }}
                               >
                                 School Management Service
@@ -252,8 +249,9 @@ function Home() {
                                   disableRipple={true}
                                   style={{
                                     color: "white",
-                                    width: isMobile ? "25px" : "40px", // Adjusted size for mobile
-                                    height: isMobile ? "25px" : "40px", // Adjusted size for mobile
+                                    width: isMobile ? "25px" : "40px",
+                                    height: isMobile ? "25px" : "40px",
+                                    marginTop: "10px", // Add some margin to separate icon button from text
                                   }}
                                 >
                                   <ArrowForwardIcon
@@ -270,9 +268,7 @@ function Home() {
                       <Card
                         sx={{
                           maxWidth: 500,
-                          
                           margin: "0 auto",
-                          
                         }}
                       >
                         <Box sx={{ position: "relative" }}>
@@ -291,6 +287,9 @@ function Home() {
                               color: "white",
                               padding: "15px",
                               height: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
                             }}
                           >
                             <div className="overlay_section">
@@ -300,8 +299,8 @@ function Home() {
                                   border: "1px solid #1879BA",
                                 }}
                                 sx={{
-                                  width: isMobile ? 30 : 60, // Adjusted size for mobile
-                                  height: isMobile ? 30 : 60, // Adjusted size for mobile
+                                  width: isMobile ? 30 : 60,
+                                  height: isMobile ? 30 : 60,
                                 }}
                               >
                                 <HailIcon
@@ -309,11 +308,12 @@ function Home() {
                                 />
                               </Avatar>
                               <Typography
-                                variant="h6" // Changed from h5 to h6
+                                variant="h6"
                                 className="training"
                                 style={{
                                   fontFamily: "'Outfit', sans-serif",
-                                  fontSize: isMobile ? "0.8rem" : "1.5rem", // Adjusted font size for mobile
+                                  fontSize: isMobile ? "0.8rem" : "1.5rem",
+                                  marginTop: "10px", // Add some margin to separate text from avatar
                                 }}
                               >
                                 Training And Development Program
@@ -323,8 +323,9 @@ function Home() {
                                   disableRipple={true}
                                   style={{
                                     color: "white",
-                                    width: isMobile ? "25px" : "40px", // Adjusted size for mobile
-                                    height: isMobile ? "25px" : "40px", // Adjusted size for mobile
+                                    width: isMobile ? "25px" : "40px",
+                                    height: isMobile ? "25px" : "40px",
+                                    marginTop: "10px", // Add some margin to separate icon button from text
                                   }}
                                 >
                                   <ArrowForwardIcon
@@ -344,14 +345,7 @@ function Home() {
             <div className="wrappeeer">
               <div className="content">
                 <div className="circle_text">
-                  <h1
-                    style={{
-                      textAlign: "center",
-                      fontSize: "36px",
-                      marginTop: "10px",
-                      fontFamily: "'Outfit', sans-serif",
-                    }}
-                  >
+                  <h1 style={h1Style}>
                     Find The <span className="highlight">Right Product</span>{" "}
                     For You
                   </h1>
@@ -359,11 +353,7 @@ function Home() {
                 <span
                   className="sub_headings"
                   // data-aos="slide-right"
-                  style={{
-                    fontSize: "19px",
-                    fontFamily: "'Outfit', sans-serif",
-                    fontWeight: "500",
-                  }}
+                  style={spanStyle}
                 >
                   You don't have to struggle alone,you have got our assistance
                   and help
@@ -391,7 +381,7 @@ function Home() {
               <div
                 className="inner_goal"
                 style={{
-                  width: "68%",
+                  width: getWidth(),
                 }}
               >
                 <TeamMessage />

@@ -1,74 +1,322 @@
-.educate {
+.goals-objective-content {
     width: 100%;
     margin-top: auto;
     margin-bottom: auto;
     text-align: start;
-}
-
-.educate_desc_div {
-    border: 1px solid rgb(221, 221, 221);
-    padding: 1rem; /* Increased padding for better readability on smaller screens */
-    background-color: white;
-    font-family: 'Outfit', sans-serif;
-}
-
-.educate_desc {
-    font-family: 'Outfit', sans-serif;
-    color: rgb(49, 49, 49);
+  }
+  
+  .goals-objective-card {
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%; /* Ensure the Card takes full width */
+  }
+  
+  .goals-objective-title {
     font-size: 1rem; /* Responsive font size */
-    text-align: justify;
-}
-
-.app_heading {
+    color: #1B1A1A;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .goals-objective-heading {
     font-family: 'Outfit', sans-serif;
     font-size: 2rem; /* Responsive font size */
     margin: 0;
     background: linear-gradient(120deg, #003E90, #3B90FF);
     padding: 1rem; /* Increased padding for better appearance */
     color: white;
-}
-
-.app_subheading {
-    margin-bottom: 1rem; /* Adjust margin for smaller screens */
-    margin-top: 0.5rem;
+  }
+  
+  .goals-objective-desc-container {
+    border: 1px solid rgb(221, 221, 221);
+    padding: 1rem; /* Increased padding for better readability on smaller screens */
+    background-color: white;
     font-family: 'Outfit', sans-serif;
-    font-size: 1.5rem; /* Responsive font size */
-}
-
-.app_desc {
-    font-size: 1.25rem; /* Responsive font size */
+  }
+  
+  .goals-objective-desc {
     font-family: 'Outfit', sans-serif;
     color: rgb(49, 49, 49);
-}
-
-.app_links1 {
-    width: 100%; /* Full width for mobile screens */
-}
-
-/* Media queries for smaller devices */
-@media (max-width: 600px) {
-    .app_heading {
-        font-size: 1.5rem; /* Smaller font size for mobile screens */
-        padding: 0.5rem;
+    font-size: 1rem; /* Responsive font size */
+    text-align: justify;
+  }
+  
+  /* Media Queries for Smaller Devices */
+  
+  /* 767px and below */
+  @media (max-width: 767px) {
+    .goals-objective-heading {
+      font-size: 1.75rem; /* Adjust font size */
+      padding: 0.75rem;
     }
-
-    .educate_desc_div {
-        padding: 0.5rem;
+  
+    .goals-objective-desc-container {
+      padding: 0.75rem;
     }
-
-    .educate_desc {
-        font-size: 0.875rem; /* Smaller font size for mobile screens */
+  
+    .goals-objective-desc {
+      font-size: 0.9rem; /* Adjust font size */
     }
-
-    .app_subheading {
-        font-size: 1.25rem;
+  }
+  
+  /* 721px and below */
+  @media (max-width: 721px) {
+    .goals-objective-heading {
+      font-size: 1.7rem; /* Adjust font size */
     }
-
-    .app_desc {
-        font-size: 1rem;
+  
+    .goals-objective-desc-container {
+      padding: 0.7rem;
     }
-
-    .app_links1 {
-        width: 100%;
+  
+    .goals-objective-desc {
+      font-size: 0.875rem; /* Adjust font size */
     }
-}
+  }
+  
+  /* 600px and below */
+  @media (max-width: 600px) {
+    .goals-objective-heading {
+      font-size: 1.5rem; /* Smaller font size for mobile screens */
+      padding: 0.5rem;
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.5rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.875rem; /* Smaller font size for mobile screens */
+    }
+  }
+  
+  /* 540px and below */
+  @media (max-width: 540px) {
+    .goals-objective-heading {
+      font-size: 1.4rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.5rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.85rem; /* Adjust font size */
+    }
+  }
+  
+  /* 480px and below */
+  @media (max-width: 480px) {
+    .goals-objective-heading {
+      font-size: 1.3rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.4rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.8rem; /* Adjust font size */
+    }
+  }
+  
+  /* 440px and below */
+  @media (max-width: 440px) {
+    .goals-objective-heading {
+      font-size: 1.25rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.4rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.75rem; /* Adjust font size */
+    }
+  }
+  
+  /* 420px and below */
+  @media (max-width: 420px) {
+    .goals-objective-heading {
+      font-size: 1.2rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.3rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.7rem; /* Adjust font size */
+    }
+  }
+  
+  /* 412px and below */
+  @media (max-width: 412px) {
+    .goals-objective-heading {
+      font-size: 1.15rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.3rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.675rem; /* Adjust font size */
+    }
+  }
+  
+  /* 393px and below */
+  @media (max-width: 393px) {
+    .goals-objective-heading {
+      font-size: 1.1rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.3rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.65rem; /* Adjust font size */
+    }
+  }
+  
+  /* 360px and below */
+  @media (max-width: 360px) {
+    .goals-objective-heading {
+      font-size: 1.05rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.3rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.6rem; /* Adjust font size */
+    }
+  }
+  
+  /* 320px and below */
+  @media (max-width: 320px) {
+    .goals-objective-heading {
+      font-size: 1rem; /* Adjust font size */
+    }
+  
+    .goals-objective-desc-container {
+      padding: 0.3rem;
+    }
+  
+    .goals-objective-desc {
+      font-size: 0.575rem; /* Adjust font size */
+    }
+  }
+  .goals-objective-title {
+    font-size: 1rem;
+    color: #1B1A1A;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .goals-objective-subheader {
+    font-size: 0.875rem; /* Default size for subheader */
+    color: #555; /* Optional color for subheader */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 767px) {
+    .goals-objective-title {
+      font-size: 0.9rem; /* Adjust title size */
+    }
+    .goals-objective-subheader {
+      font-size: 0.75rem; /* Adjust subheader size */
+    }
+  }
+  
+  @media (max-width: 721px) {
+    .goals-objective-title {
+      font-size: 0.85rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.7rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .goals-objective-title {
+      font-size: 0.8rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.65rem;
+    }
+  }
+  
+  @media (max-width: 540px) {
+    .goals-objective-title {
+      font-size: 0.75rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.6rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .goals-objective-title {
+      font-size: 0.7rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.55rem;
+    }
+  }
+  
+  @media (max-width: 440px) {
+    .goals-objective-title {
+      font-size: 0.65rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .goals-objective-title {
+      font-size: 0.6rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.45rem;
+    }
+  }
+  
+  @media (max-width: 412px) {
+    .goals-objective-title {
+      font-size: 0.55rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.4rem;
+    }
+  }
+  
+  @media (max-width: 393px) {
+    .goals-objective-title {
+      font-size: 0.5rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.35rem;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .goals-objective-title {
+      font-size: 0.45rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.3rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .goals-objective-title {
+      font-size: 0.4rem;
+    }
+    .goals-objective-subheader {
+      font-size: 0.25rem;
+    }
+  }

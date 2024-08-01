@@ -10,8 +10,11 @@ export default function Welcome() {
   }, []);
   return (
     <Grid container spacing={2} style={{ width: "100%" }}>
-      <Grid item xs={12} md={12} 
-      // data-aos="fade-left"
+      <Grid
+        item
+        xs={12}
+        md={12}
+        // data-aos="fade-left"
       >
         <Box
           sx={{
@@ -21,11 +24,26 @@ export default function Welcome() {
           }}
         >
           <div className="educate">
-            <h3 className="app_heading" style={{fontSize:"36px" ,fontFamily: "'Outfit', sans-serif" }}>Welcome to Learning Needs</h3>
+            <h3
+              className="app_heading"
+              style={{
+                fontSize: "36px",
+                fontFamily: "'Outfit', sans-serif",
+                background: "linear-gradient(120deg, #003E90, #3B90FF)",
+                padding: "1rem",
+                color: "white",
+              }}
+            >
+              Welcome to Learning Needs
+            </h3>
 
             <p
               className="app_desc"
-              style={{ fontSize: "15px", fontFamily: "'Outfit', sans-serif",color: "black" }}
+              style={{
+                fontSize: "15px",
+                fontFamily: "'Outfit', sans-serif",
+                color: "black",
+              }}
             >
               Necessity is the Mother of Invention, and this proverb perfectly
               defines the inception of Learning Needs. We believe all companies
@@ -38,18 +56,9 @@ export default function Welcome() {
               and Learning Needs customized product, we help organization to
               achieve their goals.
             </p>
-            
-            
           </div>
         </Box>
       </Grid>
     </Grid>
   );
 }
-
-// {/* <CardMedia
-//           component="img"
-//           sx={{ width: 500, height: 500 }}
-//           image={appp}
-//           alt="app"
-//         /> */}

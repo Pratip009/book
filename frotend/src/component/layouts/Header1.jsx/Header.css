@@ -1,420 +1,260 @@
-/* General Styles */
+/* Base styles for the header */
 .header {
-  background-color: #fff;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.75rem;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
   display: flex;
-  flex-direction: column;
-  height: 7rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column; /* Stack headerTop and headerBottom vertically */
+}
+.noMarginPadding {
+  margin: 0;
+  padding: 0;
 }
 
 .headerTop {
-  width: 100%;
-  background-color: #003E90;
-  color: #040D12;
+  display: flex;
+  justify-content: space-between;
+  background-color: #003E90; /* Deep blue background color */
+  color: #ffffff; /* White text and icon color */
+  flex-direction: row;
+}
+
+.headerRetailer span {
+  margin-right: 10px;
+}
+
+.headerTopLeft,
+.headerTopRight {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  height: 33px;
-  margin: 0 auto;
-  padding: 0 10px;
-  position: relative;
-  z-index: 999;
-}
-
-.headerTop span {
-  font-weight: normal;
+  flex-direction: row; /* Ensure content is in a row */
 }
 
 .headerTopLeft {
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
-  color: #fcfcfc;
-  font-size: 15px !important;
-  gap: 10px;
-}
-
-.headerTopLeft > p {
-  margin: 0;
-}
-
-.headerRetailer_Svg, .headerRetailer_Svg2 {
-  color: #fcfcfc;
-}
-
-.headerRetailer_Svg2 {
-  transform: scale(1.4);
-}
-
-.headerTopCenter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .headerTopRight {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: #fcfcfc;
-  font-size: 15px !important;
-  font-family: 'Outfit', sans-serif;
+  justify-content: flex-end; /* Email address and button should be aligned to the end */
 }
 
-.headerRetailer {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+.headerTopLeft .headerPhone,
+.headerTopLeft .headerTopSocialIcons,
+.headerTopRight .headerRetailer,
+.headerTopRight .headerLogin {
+  color: #ffffff;
 }
 
-.headerFlag {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+.headerTopLeft .headerPhone span,
+.headerTopRight .headerRetailer span {
+  font-size: 12px; /* Default font size for smaller screens */
 }
 
-.account_box {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-.My_account {
-  font-weight: 400;
-  font-family: 'Outfit', sans-serif;
-  color: #fcfcfc;
-  font-size: 13px;
-}
-
-.headerLogin {
-  width: 130px;
-  cursor: pointer;
-  background-color: #FF4E00;
-  padding-right: 5px;
-  padding-left: 30px;
-}
-
-.headerLogin button {
-  font-family: 'Outfit', sans-serif;
-  height: 33px;
-  border: none;
-  text-align: center;
-  color: #003E90;
-  background-color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.headerLogin > button:hover {
-  color: #ed1c24;
-  transition: all 0.25s ease;
+.headerTopLeft .headerTopSocialIcons svg,
+.headerTopRight .headerLogin svg {
+  width: 12px; /* Match icon size */
+  height: 15px; /* Match icon size */
 }
 
 .headerBottom {
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  position: relative;
-}
-
-.headerBottom__logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align logo to the left */
-  flex: 1; /* Ensure it takes available space */
-  margin-right: 10px; 
+  background-color: #fff;
 }
 
 .headerBottom__logo_main {
-  height: 4rem;
-display: flex;
-align-items: flex-start;
-justify-content: flex-start;
-}
-
-@media (max-width: 768px) {
-  .headerBottom__logo_main {
-    height: 40px;
-    width: 200px;
-  }
-}
-
-.header_mobile_menu {
-  display: none;
-}
-
-.headerBottom_navMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
- margin-right: 50px;
+  width: 200px; /* Larger logo size for desktop */
 }
 
 .headerBottom_navMenu ul {
   display: flex;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .headerBottom_navMenu ul li {
-  margin: 0 15px; 
+  margin: 0 10px;
 }
 
 .headerBottom_navMenu ul li a {
-  color: #121212;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 400;
-  font-family: 'Outfit', sans-serif;
-  position: relative; /* Ensure pseudo-element is positioned correctly */
+  color: #000000; /* Black color for menu items */
+  text-decoration: none; /* Remove default underline */
 }
 
-@media (max-width: 768px) {
-  .headerBottom_navMenu li {
-    font-size: 10px;
-    margin: 10px 0; /* Adjust spacing for vertical layout */
-  }
-}
-
-.headerBottom_navMenu ul li a::before {
-  content: '';
-  position: absolute;
-  bottom: -2px; /* Adjust the position of the underline */
-  left: 0;
-  width: 100%;
-  height: 2px; /* Thickness of the underline */
-  background-color: transparent;
-  transition: background-color 0.3s ease; /* Transition for smooth color change */
-}
-
-.headerBottom_navMenu ul li a:hover::before {
-  background-color: #FF4E00; /* Color of the underline on hover */
+.headerBottom_navMenu ul li a:hover {
+  border-bottom: 2px solid orange; /* Orange underline on hover */
 }
 
 .headerBotttom_icons {
-  display: flex;
-  gap: 1.1rem;
-  align-items: center;
-  font-size: 14px;
+  display: flex; /* Align items in a row */
+  align-items: center; /* Center items vertically */
+  flex-direction: row; /* Ensure items are aligned in a row */
+  margin: 0; /* Remove any extra margin around the container */
 }
 
-.headerBotttom_icons > *:hover {
-  color: #FF4E00;
-  transition: 0.5s ease-in-out;
+.headerBotttom_icons > * {
+  margin-right: 10px; /* Space between icons */
 }
 
-.makeStyles-flagIcon-1 {
-  width: 16px !important;
-  height: 16px !important;
-  align-self: center !important;
-  padding-right: 2px !important;
-  margin-bottom: -4px;
+.headerBotttom_icons > *:last-child {
+  margin-right: 0; /* Remove margin from the last icon */
 }
 
-.css-i4bv87-MuiSvgIcon-root {
-  height: 18px !important;
+.headerBotttom_icons .profile-icon {
+  margin: 0; /* Remove margin if applied */
 }
 
-.css-6hp17o-MuiList-root-MuiMenu-list {
-  background-color: rgb(29, 28, 28);
-}
-
-.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
-  background-color: #E30605 !important;
-}
-
-@media (max-width: 899px) {
+/* Media queries for different screen sizes */
+@media (max-width: 767px) {
   .headerTop {
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    padding: 0.5rem;
   }
 
   .headerTopLeft {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .headerTopCenter {
-    display: none;
-  }
-
-  .headerTopRight {
-    justify-content: flex-end;
-    text-align: center;
-  }
-
-  .headerTopRight .headerRetailer {
-    display: none;
-  }
-
-  .headerLogin {
-    width: auto;
-    align-self: flex-end;
-  }
-
-  .headerLogin button {
-    font-size: 12px;
-    padding: 5px 10px;
-  }
-
-  .headerBottom {
-    padding: 0.5rem;
-    flex-direction: row;
-    justify-content: space-between; 
-  }
-
-  .headerBottom__logo {
-    flex: 1;
-    justify-content: flex-start; /* Align logo to the left */
-    margin: 0 10px; /* Ensure spacing is consistent */
-  }
-
-  .headerBottom__logo_main {
-    max-width: 300px;
-    margin-top: 1rem;
-  
-  }
-
-  .header_mobile_menu {
-    display: flex;
-    align-items: center;
-    gap: 1rem; /* Space between reorder icon and logo */
-  }
-
-  .header_mobile_menu svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .headerBotttom_icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Align icons to the right */
-    gap: 1rem; /* Space between icons and logo */
-  }
-
-  .headerBotttom_icons svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .headerBottom_navMenu {
-    display: none; /* Hide the nav menu in mobile view */
-  }
-}
-
-@media (max-width: 499px) {
-  .headerTop {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    padding: 0.5rem;
-  }
-
-  .headerTopLeft {
-    display: flex;
-    flex-direction: row; /* Row direction */
-    justify-content: space-between;
-    align-items: center; /* Center align items */
-    width: 100%;
-    padding: 0 20px;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0; /* Remove padding if present */
   }
 
   .headerTopLeft .headerPhone {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    margin-left: -20px;
+    margin-right: 0; /* Remove right margin to center the phone */
+  }
+
+  .headerTopRight {
+    justify-content: space-between; /* Space items between */
+    align-items: center; /* Center items vertically */
+    padding: 0; /* Remove padding if present */
   }
 
   .headerTopSocialIcons {
     display: flex;
-    gap: 10px;
-  }
-
-  .headerLogin {
-    display: none; /* Hide account button */
-  }
-
-  .headerTopCenter {
-    display: none;
-  }
-
-  .headerTopRight {
-    justify-content: flex-end;
-    text-align: center;
-  }
-
-  .headerTopRight .headerRetailer {
-    display: none;
-  }
-
-  .headerBottom {
-    padding: 0.5rem;
-    flex-direction: row;
-    justify-content: space-between; /* Distribute items evenly */
-  }
-
-  .headerBottom__logo {
-    flex: 1;
-    justify-content: flex-start; /* Align logo to the left */
-    margin-right: 10px; /* Ensure spacing is consistent */
+    justify-content: flex-start;
+    margin: 0; /* Remove any margin if present */
   }
 
   .headerBottom__logo_main {
-    max-width: 165px; /* Adjust size for very small screens */
-    margin-top: 1rem;
-    margin-right: 30px;
+    width: 120px; /* Adjust logo size for mobile view */
   }
 
-  .header_mobile_menu {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Reduced gap for smaller screens */
+  .headerBottom_navMenu ul {
+    display: none; /* Hide the nav links for mobile view */
   }
 
-  .header_mobile_menu svg {
-    width: 18px;
-    height: 18px;
+  .headerBottom_navMenu ul.show-mobile {
+    display: flex; /* Show the nav links when needed for mobile */
+    flex-direction: column; /* Stack nav links vertically on mobile */
+    align-items: flex-start;
+  }
+
+  .headerLogin .account_box {
+    padding: 2px 4px; /* Further reduce padding for mobile view */
+    font-size: 10px; /* Reduce font size for mobile view */
+  }
+
+  .headerTopRight .headerRetailer {
+    margin-right: 5px; /* Remove margin for the email address on mobile */
   }
 
   .headerBotttom_icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Align icons to the right */
-    gap: 0.5rem; /* Reduced gap for smaller screens */
+    flex-direction: row; /* Ensure icons are aligned in a row */
+    align-items: center; /* Center items vertically */
   }
 
-  .headerBotttom_icons svg {
-    width: 20px;
-    height: 20px;
+  .headerBotttom_icons > * {
+    margin-right: 5px; /* Adjust margin for mobile view */
   }
 
-  .headerBottom_navMenu {
-    display: none;
+  .headerBotttom_icons > *:last-child {
+    margin-right: 0; /* Remove margin from the last icon */
   }
-  .profile-icon{
-    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .headerLogin .account_box {
+    padding: 5px 10px; /* Add padding for desktop view */
+    font-size: 14px; /* Increase font size for desktop view */
   }
+
+  /* Increase font size for headerTop spans */
+  .headerTopLeft .headerPhone span,
+  .headerTopRight .headerRetailer span {
+    font-size: 16px; /* Larger font size for desktop */
+  }
+
+  .header_mobile_menu {
+    display: none; /* Hide ReorderIcon on larger screens */
+  }
+}
+
+/* Logo size adjustments for various screen widths */
+@media (max-width: 721px) {
+  .headerBottom__logo_main {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerBottom__logo_main {
+    width: 180px;
+  }
+}
+
+@media (max-width: 540px) {
+  .headerBottom__logo_main {
+    width: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerBottom__logo_main {
+    width: 160px;
+  }
+}
+
+@media (max-width: 440px) {
+  .headerBottom__logo_main {
+    width: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  .headerBottom__logo_main {
+    width: 145px;
+  }
+}
+
+@media (max-width: 412px) {
+  .headerBottom__logo_main {
+    width: 140px;
+  }
+}
+
+@media (max-width: 393px) {
+  .headerBottom__logo_main {
+    width: 135px;
+  }
+}
+
+@media (max-width: 360px) {
+  .headerBottom__logo_main {
+    width: 130px;
+  }
+}
+
+@media (max-width: 320px) {
+  .headerBottom__logo_main {
+    width: 125px;
+  }
+}
+
+/* Additional styles for specific elements */
+.headerBottom_navMenu ul li a {
+  font-size: 14px;
+}
+
+.search_Bar {
+  margin-bottom: 0; /* Remove bottom margin for consistency */
 }

@@ -198,7 +198,12 @@ const useStyles = makeStyles((theme) => ({
   headcontainer: {
     width: "100%",
     height: "300px",
+    margin: 0,
+    padding: 0,
     overflow: "hidden",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     [theme.breakpoints.down("sm")]: {
       height: "200px",
     },
@@ -211,6 +216,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     objectFit: "cover",
     objectPosition: "center",
+    boxSizing: "border-box",
   },
 }));
 
@@ -476,7 +482,7 @@ const ContactForm = () => {
               <Box
                 sx={{
                   position: "relative",
-                  paddingBottom: "56.25%", 
+                  paddingBottom: "56.25%",
                   height: 0,
                   overflow: "hidden",
                   maxWidth: "100%",
@@ -490,7 +496,7 @@ const ContactForm = () => {
                     border: "0",
                   },
                   "@media (max-width: 600px)": {
-                    paddingBottom: "75%", // 4:3 Aspect Ratio for smaller devices
+                    paddingBottom: "75%",
                   },
                 }}
               >

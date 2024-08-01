@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid"; // Updated import for consistency
+import Grid from "@mui/material/Grid";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./GoalsObjective.css";
@@ -8,6 +8,7 @@ import { Card, CardHeader, Avatar, IconButton } from "@mui/material";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
 import dartImage from "../../Image/dart.png";
+
 export default function GoalsObjective() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -42,13 +43,14 @@ export default function GoalsObjective() {
             overflow: "hidden",
           }}
         >
-          <div className="educate">
+          <div className="goals-objective-content">
             <Card
+              className="goals-objective-card"
               style={{
                 boxShadow: "none",
                 backgroundColor: "transparent",
                 marginBottom: "-18px",
-                width: "100%", // Ensure the Card takes full width
+                width: "100%",
               }}
             >
               <CardHeader
@@ -59,8 +61,9 @@ export default function GoalsObjective() {
                 }
                 title={
                   <span
+                    className="goals-objective-title"
                     style={{
-                      fontSize: "1rem", // Responsive font size
+                      fontSize: "1rem",
                       color: "#1B1A1A",
                       fontWeight: "600",
                       fontFamily: "'Outfit', sans-serif",
@@ -74,10 +77,11 @@ export default function GoalsObjective() {
               />
             </Card>
             <Card
+              className="goals-objective-card"
               style={{
                 boxShadow: "none",
                 backgroundColor: "transparent",
-                width: "100%", // Ensure the Card takes full width
+                width: "100%",
               }}
             >
               <CardHeader
@@ -88,8 +92,9 @@ export default function GoalsObjective() {
                 }
                 title={
                   <span
+                    className="goals-objective-title"
                     style={{
-                      fontSize: "1rem", // Responsive font size
+                      fontSize: "1rem",
                       color: "#1B1A1A",
                       fontWeight: "600",
                       fontFamily: "'Outfit', sans-serif",
@@ -102,16 +107,16 @@ export default function GoalsObjective() {
               />
             </Card>
             <h3
-              className="app_heading"
-              style={{ fontFamily: "'Outfit', sans-serif", fontSize: "2rem" }} // Responsive font size
+              className="goals-objective-heading"
+              style={{ fontFamily: "'Outfit', sans-serif", fontSize: "2rem" }}
             >
               Future Target Innovation
             </h3>
-            <div className="educate_desc_div">
+            <div className="goals-objective-desc-container">
               <span
-                className="educate_desc"
+                className="goals-objective-desc"
                 style={{
-                  fontSize: "1rem", // Responsive font size
+                  fontSize: "1rem",
                   fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                 }}
