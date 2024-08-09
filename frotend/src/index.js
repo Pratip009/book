@@ -7,6 +7,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import store from "./store";
 import App from "./App";
 import {BrowserRouter} from "react-router-dom"; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const theme = createTheme();
 const options = {

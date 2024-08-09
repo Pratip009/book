@@ -46,14 +46,14 @@ function Home() {
   const [task, setTask] = useState([]);
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
-    
-    window.addEventListener('resize', handleResize);
-    
+
+    window.addEventListener("resize", handleResize);
+
     // Initial width check
     handleResize();
-    
+
     // Cleanup listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   useEffect(() => {
     const fetchNotices = async () => {
@@ -86,18 +86,18 @@ function Home() {
     });
   }, []);
   const getWidth = () => {
-    if (width <= 320) return '90%';
-    if (width <= 360) return '90%';
-    if (width <= 393) return '90%';
-    if (width <= 412) return '90%';
-    if (width <= 420) return '90%';
-    if (width <= 440) return '90%';
-    if (width <= 480) return '90%';
-    if (width <= 540) return '90%';
-    if (width <= 600) return '90%';
-    if (width <= 721) return '90%';
-    if (width <= 767) return '90%';
-    return '68%'; // For larger screens
+    if (width <= 320) return "90%";
+    if (width <= 360) return "90%";
+    if (width <= 393) return "90%";
+    if (width <= 412) return "90%";
+    if (width <= 420) return "90%";
+    if (width <= 440) return "90%";
+    if (width <= 480) return "90%";
+    if (width <= 540) return "90%";
+    if (width <= 600) return "90%";
+    if (width <= 721) return "90%";
+    if (width <= 767) return "90%";
+    return "68%"; // For larger screens
   };
   const h1Style = {
     textAlign: "center",
@@ -156,7 +156,7 @@ function Home() {
               style={{
                 position: "relative",
                 width: "100%",
-                height: "auto", // Changed from 100vh to auto for responsiveness
+                height: "auto",
                 overflow: "hidden",
               }}
             >
@@ -165,14 +165,45 @@ function Home() {
                   <Grid
                     container
                     rowSpacing={2}
-                    columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-                    style={{ width: "100%", maxWidth: "1200px" }}
+                    columnSpacing={{ xs: 1, sm: 2, md: 4 }}
+                    style={{
+                      width: "100%",
+                      maxWidth: "1200px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "auto",
+                    }}
                     className="noMarginPadding"
                   >
-                    <Grid item xs={12} md={6}>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      className="noMarginPadding"
+                      style={{
+                        paddingRight: 0,
+                        margin: "0 2rem", 
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
                       <Welcome />
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      className="noMarginPadding"
+                      style={{
+                        paddingRight: 0,
+                        margin: "0 2rem", // Add horizontal margin for desktop screens
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
                       <Wellcome2 />
                     </Grid>
                   </Grid>

@@ -14,10 +14,7 @@ import ProfileModal from "./ProfileModel";
 import axios from "axios";
 import CartIcon from "./CartIcon";
 import ScrollingTextHeader from "./ScrollingTextHeader";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import { Margin } from "@mui/icons-material";
+
 
 function Header() {
   const history = useHistory();

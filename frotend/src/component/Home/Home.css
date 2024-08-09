@@ -38,12 +38,17 @@ body {
   z-index: -1;
   animation: radialGradientAnimation 5s ease infinite alternate;
 }
-
+.noMarginPadding{
+  margin-left: 0 !important; /* Override default margin-left */
+  margin-right: 0 !important; /* Ensure no margin on right as well */
+  padding-left: 0 !important; /* Remove padding if any */
+  padding-right: 0 !important; /* Remove padding if any */
+}
 .main_content {
   position: relative;
   z-index: 1;
   color: white;
-  padding: 20px;
+  
   max-width: 90%;
   margin: auto;
   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
@@ -294,7 +299,7 @@ p {
 
   .text_container,
   .text_container_new {
-    padding: 0 0.5rem; /* Provides padding on both sides for mobile view */
+    padding: 0 0.5rem; 
     max-width: 100%;
     margin-top: 1rem; /* Adjust spacing between sections */
     align-items: center; /* Center items on smaller screens */

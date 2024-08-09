@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { ShoppingCart } from "@material-ui/icons";
+import { IoCartOutline } from "react-icons/io5";
 import "./CartIcon.css"
 const CartIcon = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -9,7 +9,7 @@ const CartIcon = () => {
   return (
     <div className="cartIconWrapper">
       <span className="cartIcon">
-        <ShoppingCart className="icon" />
+        <IoCartOutline className="icon" />
         {cartItemCount > 0 && (
           <span className="cartItemCount">{cartItemCount}</span>
         )}

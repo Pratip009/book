@@ -146,14 +146,14 @@
     }
   
     .goals-objective-desc {
-      font-size: 0.7rem; /* Adjust font size */
+      font-size: 0.7rem;
     }
   }
   
   /* 412px and below */
   @media (max-width: 412px) {
     .goals-objective-heading {
-      font-size: 1.15rem; /* Adjust font size */
+      font-size: 1.15rem; 
     }
   
     .goals-objective-desc-container {

@@ -1,418 +1,125 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Grid } from "@material-ui/core";
-import { Box, Paper } from "@mui/material";
-import FooterHover from "./FooterHover";
-import "./Footer.css";
-import { styled } from "@mui/material/styles";
-import {
-  LocalShipping,
-  Security,
-  LocalOffer,
-  CreditCard,
-} from "@mui/icons-material";
-const ResponsiveBox = styled(Box)(({ theme }) => ({
-  width: "65%",
-  height: "220px",
-  borderRadius: "10px",
-  zIndex: 1,
-  position: "relative",
-  [theme.breakpoints.down("sm")]: {
-    display: "none",
-  },
-}));
+import React from 'react';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
-const footMenu = [
-  {
-    id: 1,
-    title: "Help",
-    menu: [
-      {
-        id: 1,
-        link: "Track Order",
-        path: "/",
-        disabled: true,
-      },
-      {
-        id: 2,
-        link: "FAQs",
-        path: "/about_us",
-      },
-
-      {
-        id: 3,
-        link: "Cancel Order",
-        path: "/policy/return",
-      },
-      {
-        id: 4,
-        link: "Return Order",
-        path: "/policy/return",
-        // path: "/policy/return",
-      },
-      {
-        id: 5,
-        link: "Warranty Info",
-        path: "/",
-        disabled: true,
-        // path: "/policy/Terms",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Policies",
-    menu: [
-      {
-        id: 1,
-        link: "Return Policy",
-        path: "/policy/return",
-        // path: "/policy/return",
-      },
-      {
-        id: 2,
-        link: "Security",
-        path: "/",
-        disabled: true,
-        // path: "/policy/privacy",
-      },
-      {
-        id: 3,
-        link: "Sitemap",
-        path: "/",
-        disabled: true,
-        // path: "/policy/Terms",
-      },
-      {
-        id: 4,
-        link: "Privacy Policy",
-
-        path: "/policy/privacy",
-      },
-      {
-        id: 5,
-        link: "T&C",
-
-        path: "/terms/conditions",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Company",
-    menu: [
-      {
-        id: 1,
-        link: "About Us",
-        path: "/about",
-      },
-      {
-        id: 2,
-        link: "Contact Us",
-        path: "/contact",
-      },
-      {
-        id: 3,
-        link: "Service Centres",
-        path: "/",
-        disabled: true,
-      },
-      {
-        id: 4,
-        link: "Work With Us",
-        path: "/career",
-      },
-      {
-        id: 5,
-        link: "Courses",
-        disabled: true,
-   
-      },
-    ],
-  },
-];
-
-const Footer = () => {
-  const [subValue, setSubValue] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubValue("");
-    alert("Thankyou, you are subscribed to receive our daily newsletter");
-  };
-
-  const currYear = new Date().getFullYear();
-
+export default function Footer() {
   return (
-    <>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          background: "#ffffff",
-        }}
-      >
-        <ResponsiveBox elevation={16}>
-          <FooterHover />
-        </ResponsiveBox>
-        ;
-        <footer className="footer">
-          <div className="container" style={{ height: "300px" }}>
-            <div className="wrapper_footer footer_wrapper ">
-              <div className="foot_about foot1">
-                <div className="foot_logo">
-                  <Link to="/" style={{ textDecoration: "none" }}>
-                    <img
-                      src={require("../../../Image/LN.png")}
-                      alt="cricekt weapon logo"
-                      style={{
-                        background: "white",
-                        padding: "10px",
-                        borderRadius: "10px",
-                      }}
-                    />
-                
-                  </Link>
-                </div>
-               
-                <div
-                  className="responsive-container"
-                  style={{
-                    marginTop: "5px",
-                    marginLeft: "27px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    width: "100%",
-                  }}
-                >
-                  <div>
-                    <Grid container spacing={1}>
-                      <Grid item xs={12} sm={6} style={{ marginTop: "5px" }}>
-                        <Paper
-                          elevation={3}
-                          style={{
-                            backgroundColor: "#FF4E00",
-                            height: "auto",
-                            padding: "2px 1px",
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "space-around",
-                            width: "100%",
-                          }}
-                        >
-                          <div>
-                            <LocalShipping
-                              fontSize="large"
-                              style={{ color: "#FFFFFF" }}
-                            />
-                          </div>
-                          <div style={{}}>
-                            <p
-                              style={{
-                                fontSize: "13px",
-                                fontWeight: "600",
-                                color: "#ffffff",
-                                marginBottom: "-5px",
-                              }}
-                            >
-                              Express Delivery
-                            </p>
-                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
-                              Ships in 24 Hours
-                            </p>
-                          </div>
-                        </Paper>
-                      </Grid>
-                      <Grid item xs={12} sm={6} style={{ marginTop: "5px" }}>
-                        <Paper
-                          elevation={3}
-                          style={{
-                            backgroundColor: "#FF4E00",
-                            height: "auto",
-                            padding: "2px 1px",
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "space-around",
-                            width: "100%",
-                          }}
-                        >
-                          <div>
-                            <Security
-                              fontSize="large"
-                              style={{ color: "#FFFFFF" }}
-                            />
-                          </div>
-                          <div>
-                            <p
-                              style={{
-                                fontSize: "13px",
-                                fontWeight: "600",
-                                color: "#ffffff",
-                                marginBottom: "-5px",
-                              }}
-                            >
-                              Brand Warranty
-                            </p>
-                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
-                              Original products
-                            </p>
-                          </div>
-                        </Paper>
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <Paper
-                          elevation={3}
-                          style={{
-                            backgroundColor: "#FF4E00",
-                            height: "auto",
-                            padding: "2px 1px",
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "space-around",
-                            width: "100%",
-                          }}
-                        >
-                          <div>
-                            <LocalOffer
-                              fontSize="large"
-                              style={{ color: "#FFFFFF" }}
-                            />
-                          </div>
-                          <div>
-                            <p
-                              style={{
-                                fontSize: "13px",
-                                fontWeight: "600",
-                                color: "#ffffff",
-                                marginBottom: "-5px",
-                              }}
-                            >
-                              Exciting Deals
-                            </p>
-                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
-                              On all prepaid orders
-                            </p>
-                          </div>
-                        </Paper>
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <Paper
-                          elevation={3}
-                          style={{
-                            backgroundColor: "#FF4E00",
-                            height: "auto",
-                            padding: "2px 1px",
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "space-around",
-                            width: "100%",
-                          }}
-                        >
-                          <div>
-                            <CreditCard
-                              fontSize="large"
-                              style={{ color: "#FFFFFF" }}
-                            />
-                          </div>
-                          <div>
-                            <p
-                              style={{
-                                fontSize: "13px",
-                                fontWeight: "600",
-                                color: "#ffffff",
-                                marginBottom: "-5px",
-                              }}
-                            >
-                              Secure Payments
-                            </p>
-                            <p style={{ fontSize: "11px", color: "#ffffff" }}>
-                              Secure сertificate
-                            </p>
-                          </div>
-                        </Paper>
-                      </Grid>
-                    </Grid>
-                  </div>
-                </div>
-              </div>
+    <MDBFooter className='text-center text-lg-start text-muted' style={{backgroundColor:"#003E90"}}>
+      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+        <div className='me-5 d-none d-lg-block'>
+          <span style={{color:"white"}}>Get connected with us on social networks:</span>
+        </div>
 
-              <div class="foot_menu_container">
-                {footMenu.map((item) => {
-                  const { id, title, menu } = item;
-                  return (
-                    <div
-                      class="foot_menu foot2"
-                      key={id}
-                      style={{ marginTop: "100px" }}
-                    >
-                      <h4>{title}</h4>
-                      <ul>
-                        {menu.map((item) => {
-                          const { id, link, path } = item;
-                          return (
-                            <li key={id}>
-                              <Link to={path}>{link}</Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  );
-                })}
-              </div>
+        <div>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon='facebook-f' />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon color='secondary' fab icon='twitter' />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon color='secondary' fab icon='google' />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon color='secondary' fab icon='instagram' />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon color='secondary' fab icon='linkedin' />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon color='secondary' fab icon='github' />
+          </a>
+        </div>
+      </section>
 
-              <div className="foot_links foot3">
-                <div className=""></div>
+      <section className=''>
+        <MDBContainer className='text-center text-md-start mt-5'>
+          <MDBRow className='mt-3'>
+            <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>
+                <MDBIcon color='secondary' icon='gem' className='me-3' />
+                Company name
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit.
+              </p>
+            </MDBCol>
 
-                <div className="foot_subs" style={{ marginTop: "120px" }}>
-                  <h5>Newsletter</h5>
-                  <form onSubmit={handleSubmit} className="foot_form">
-                    <input
-                      type="email"
-                      className="input_field_footer"
-                      placeholder="Email Address*"
-                      required
-                      value={subValue}
-                      onChange={(e) => setSubValue(e.target.value)}
-                    />
-                    <p style={{ color: "white" }}>
-                      By submitting your email address you agree to the{" "}
-                      <Link to="/terms/conditions" className="foot_subs_text">
-                        Terms & Conditions
-                      </Link>
-                    </p>
-                    <button type="submit" className="btnFooter">
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Angular
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  React
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Vue
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Laravel
+                </a>
+              </p>
+            </MDBCol>
 
-          <div className="sub_footer_root">
-            <div className="container_Footer">
-              <div className="sub_footer_wrapper">
-                <div className="foot_copyright">
-                  <p>
-                    &copy; {currYear} | Learning Needs, All Rights Reserved.
-                    <span></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Pricing
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Settings
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Orders
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Help
+                </a>
+              </p>
+            </MDBCol>
+
+            <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+              <p>
+                <MDBIcon color='secondary' icon='home' className='me-2' />
+                New York, NY 10012, US
+              </p>
+              <p>
+                <MDBIcon color='secondary' icon='envelope' className='me-3' />
+                info@example.com
+              </p>
+              <p>
+                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
+              </p>
+              <p>
+                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
+              </p>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
+
+      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+        © 2021 Copyright:
+        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
+          MDBootstrap.com
+        </a>
       </div>
-    </>
+    </MDBFooter>
   );
-};
-
-export default Footer;
+}

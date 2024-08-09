@@ -5,8 +5,6 @@
   position: relative;
   cursor: pointer;
   border: none;
-  margin-left: 2px;
-  margin-bottom: 7px;
 
 }
 
@@ -15,7 +13,7 @@
 }
 .arrow-icon{
   font-size: 20px !important;
-  
+  padding: 0;
 }
 .profile-icon > svg {
   font-size: 2rem;
