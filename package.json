@@ -33,6 +33,7 @@
         "http-proxy-middleware": "^2.0.6",
         "jsonwebtoken": "^9.0.0",
         "jwt-simple": "^0.5.6",
+        "major-project": "file:",
         "mongoose": "^6.9.0",
         "multer": "^1.4.5-lts.1",
         "multer-storage-cloudinary": "^4.0.0",
