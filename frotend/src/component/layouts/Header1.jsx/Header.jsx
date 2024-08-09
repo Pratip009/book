@@ -15,7 +15,6 @@ import axios from "axios";
 import CartIcon from "./CartIcon";
 import ScrollingTextHeader from "./ScrollingTextHeader";
 
-
 function Header() {
   const history = useHistory();
   const { isAuthenticated, user } = useSelector((state) => state.userData);
@@ -29,7 +28,9 @@ function Header() {
   // Fetch phone and email data from API
   useEffect(() => {
     axios
-      .get("https://learningneeds-strapi-1.onrender.com/api/phoneand-emails")
+      .get(
+        "https://learningneeds-strapi-1-r94y.onrender.com//api/phoneand-emails"
+      )
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
         if (data) {
@@ -84,7 +85,7 @@ function Header() {
             <div class="headerPhone">
               <CallIcon className="headerRetailer_Svg" />
               <span>{phone}</span>
-            </div>        
+            </div>
           </div>
           <div className="headerTopRight">
             <div className="headerRetailer">
@@ -216,10 +217,21 @@ function Header() {
                 handleSearchFormSubmit={handleSearchFormSubmit}
               />
             </div>
-            <Link to="/cart" style={{ color: "none", textDecoration: "none", marginRight:"10px" }}>
+            <Link
+              to="/cart"
+              style={{
+                color: "none",
+                textDecoration: "none",
+                marginRight: "10px",
+              }}
+            >
               <CartIcon />
             </Link>
-            <ProfileModal user={user} isAuthenticated={isAuthenticated} className="profile-icon"/>
+            <ProfileModal
+              user={user}
+              isAuthenticated={isAuthenticated}
+              className="profile-icon"
+            />
           </div>
         </div>
         <ScrollingTextHeader />

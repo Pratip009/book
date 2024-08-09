@@ -36,7 +36,9 @@ function BasicExample() {
 
   useEffect(() => {
     axios
-      .get("https://learningneeds-strapi-1.onrender.com/api/phoneand-emails")
+      .get(
+        "https://learningneeds-strapi-1-r94y.onrender.com/api/phoneand-emails"
+      )
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
         if (data) {
@@ -164,12 +166,7 @@ function BasicExample() {
       </Navbar>
 
       {/* Second Navbar Section */}
-      <Navbar
-        bg="light"
-        data-bs-theme="light"
-        className=""
-        expand="lg"
-      >
+      <Navbar bg="light" data-bs-theme="light" className="" expand="lg">
         <Container fluid>
           {/* Sidebar Icon */}
 
@@ -182,7 +179,6 @@ function BasicExample() {
                 width: "200px",
                 maxWidth: "100%",
                 height: "auto",
-            
               }}
             />
           </Navbar.Brand>
