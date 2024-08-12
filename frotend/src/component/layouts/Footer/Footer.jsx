@@ -1,125 +1,264 @@
-import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import React from "react";
+import {
+  MDBFooter,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBInput,
+  MDBNavbarBrand,
+  MDBBtn,
+} from "mdb-react-ui-kit";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import logo from "../../../Image/LN.png";
+import "./Footer.css";
+import { TbTruckDelivery } from "react-icons/tb";
+import { GiCheckedShield } from "react-icons/gi";
+import { RiExchangeBoxLine } from "react-icons/ri";
+import { GrSecure } from "react-icons/gr";
 
 export default function Footer() {
   return (
-    <MDBFooter className='text-center text-lg-start text-muted' style={{backgroundColor:"#003E90"}}>
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-        <div className='me-5 d-none d-lg-block'>
-          <span style={{color:"white"}}>Get connected with us on social networks:</span>
+    <div className="footer-wrapper">
+      <MDBFooter
+        className="text-center text-lg-start text-muted footer-custom"
+        style={{ backgroundColor: "#003E90", position: "relative" }}
+      >
+        <section className="d-flex justify-content-center justify-content-lg-between p-4 social-networks"></section>
+
+        <section
+          className="d-flex justify-content-center justify-content-lg-between p-4"
+          style={{ padding: 0, margin: 0 }}
+        >
+          <MDBContainer className="text-center text-md-start mt-1">
+            <MDBRow className="mt-3">
+              <MDBCol md="4" lg="4" xl="4" className="mx-auto mb-4">
+                <MDBContainer>
+                  <MDBNavbarBrand href="#">
+                    <img
+                      src={logo}
+                      height="30"
+                      alt="Logo"
+                      loading="lazy"
+                      style={{
+                        backgroundColor: "white",
+                        padding: "1rem",
+                        borderRadius: "0.5rem",
+                      }}
+                    />
+                  </MDBNavbarBrand>
+                  <MDBRow>
+                    <MDBCol md="6" xs="12" className="box-col">
+                      <div className="box">
+                        <MDBRow className="align-items-center">
+                          <MDBCol md="4" className="icon-col">
+                            <TbTruckDelivery className="icon" />
+                          </MDBCol>
+                          <MDBCol md="8" className="text-col">
+                            <span className="text">Express Delivery</span>
+                            <span className="text-two">Ships in 24 Hours</span>
+                          </MDBCol>
+                        </MDBRow>
+                      </div>
+                    </MDBCol>
+                    <MDBCol md="6" xs="12" className="box-col">
+                      <div className="box">
+                        <MDBRow className="align-items-center">
+                          <MDBCol md="4" className="icon-col">
+                            <GiCheckedShield className="icon" />
+                          </MDBCol>
+                          <MDBCol md="8" className="text-col">
+                            <span className="text">Brand Warranty</span>
+                            <span className="text-two">Original products</span>
+                          </MDBCol>
+                        </MDBRow>
+                      </div>
+                    </MDBCol>
+                    <MDBCol md="6" xs="12" className="box-col">
+                      <div className="box">
+                        <MDBRow className="align-items-center">
+                          <MDBCol md="4"className="icon-col">
+                            <RiExchangeBoxLine className="icon" />
+                          </MDBCol>
+                          <MDBCol md="8" className="text-col">
+                            <span className="text">Exciting Deals</span>
+                            <span className="text-two">All prepaid orders</span>
+                          </MDBCol>
+                        </MDBRow>
+                      </div>
+                    </MDBCol>
+                    <MDBCol md="6" xs="12" className="box-col">
+                      <div className="box">
+                        <MDBRow className="align-items-center">
+                          <MDBCol md="4" className="icon-col">
+                            <GrSecure className="icon" />
+                          </MDBCol>
+                          <MDBCol md="8" className="text-col">
+                            <span className="text">Secure Payment</span>
+                            <span className="text-two">Secure certificate</span>
+                          </MDBCol>
+                        </MDBRow>
+                      </div>
+                    </MDBCol>
+                  </MDBRow>
+                </MDBContainer>
+              </MDBCol>
+
+              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
+                <h6 className="fw-bold mb-4">Help</h6>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Track Order
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    FAQs
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Cancel Order
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Return Order
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Warranty Info
+                  </a>
+                </p>
+              </MDBCol>
+
+              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
+                <h6 className="fw-bold mb-4">Policies</h6>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Return Policy
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Security
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Sitemap
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Privacy Policy
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    T&C
+                  </a>
+                </p>
+              </MDBCol>
+
+              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
+                <h6 className="fw-bold mb-4">Company</h6>
+                <p>
+                  <a href="#!" className="footer_links">
+                    About Us
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Contact Us
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Service Centres
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Work With Us
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="footer_links">
+                    Courses
+                  </a>
+                </p>
+              </MDBCol>
+
+              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-md-0 mb-4">
+                <h6 className="fw-bold mb-4">Newsletter</h6>
+                <MDBInput
+                  contrast
+                  type="email"
+                  label="Email address"
+                  className="mb-4"
+                />
+                <p className="textt">
+                  By submitting your email address you agree to the Terms &
+                  Conditions
+                </p>
+                <MDBBtn
+                  color="light"
+                  type="submit"
+                  className="mb-4 custom-btn w-100"
+                >
+                  Subscribe
+                </MDBBtn>
+              </MDBCol>
+            </MDBRow>
+            <MDBRow className="d-flex justify-content-center align-items-center">
+              <MDBCol md="auto" className="text-center mb-3 mb-md-0">
+                <span className="textt">Get connected with us on social networks:</span>
+              </MDBCol>
+              <MDBCol md="auto" className="text-center">
+                <a href="/" className="me-4 text-reset">
+                  <FaFacebook />
+                </a>
+                <a href="/" className="me-4 text-reset">
+                  <FaTwitter />
+                </a>
+                <a href="/" className="me-4 text-reset">
+                  <FaInstagram />
+                </a>
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
+        </section>
+
+        <div
+          className="text-center p-4 footer-custom"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
+        >
+          © 2024|
+          <a href="https://learningneeds.in/" className="text-reset">
+            Learning Needs, All Rights Reserved.
+          </a>
         </div>
+      </MDBFooter>
 
-        <div>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon='facebook-f' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='twitter' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='google' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='instagram' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='linkedin' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='github' />
-          </a>
+      <div className="overlay-container">
+        <div className="overlay-content">
+          <MDBCol md="10" className="text-col-two">
+            <h1 className="overlay-heading">
+              Let’s Change, Learn, Grow, and Transform!
+            </h1>
+            <p className="overlay-text">
+              Learning Needs offers a variety of boutique services, tailored to
+              each client's need. Our specialized expertise allows the
+              Individual, Institution, Schools, and Organizations to achieve
+              their objectives.
+            </p>
+          </MDBCol>
+          <MDBCol md="2" className="button-col">
+            <button className="btn btn-primary">Get Started..</button>
+          </MDBCol>
         </div>
-      </section>
-
-      <section className=''>
-        <MDBContainer className='text-center text-md-start mt-5'>
-          <MDBRow className='mt-3'>
-            <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon color='secondary' icon='gem' className='me-3' />
-                Company name
-              </h6>
-              <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit.
-              </p>
-            </MDBCol>
-
-            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Angular
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  React
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Laravel
-                </a>
-              </p>
-            </MDBCol>
-
-            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Help
-                </a>
-              </p>
-            </MDBCol>
-
-            <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-              <p>
-                <MDBIcon color='secondary' icon='home' className='me-2' />
-                New York, NY 10012, US
-              </p>
-              <p>
-                <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                info@example.com
-              </p>
-              <p>
-                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
-              </p>
-              <p>
-                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
-              </p>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </section>
-
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright:
-        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
       </div>
-    </MDBFooter>
+    </div>
   );
 }

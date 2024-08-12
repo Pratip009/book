@@ -197,7 +197,7 @@ function BasicExample() {
                 />
               </Nav.Link>
               <Nav.Link href="/cart" className="me-3">
-                <CartIcon />
+                <CartIcon style={{color:"black"}}/>
               </Nav.Link>
               <Nav.Link href="/profile">
                 <ProfileModal user={user} isAuthenticated={isAuthenticated} />

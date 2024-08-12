@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "react-material-ui-carousel";
 import Button from "@material-ui/core/Button";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import Typed from "react-typed";
-import AOS from "aos";
+import slider1 from "../../Image/h1.png"
+import slider2 from "../../Image/h2.png"
+import slider3 from "../../Image/h3.png"
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import { getBanner } from "../../GlobalApi"; // Ensure you have the correct path to your API functions
 
 const useStyles = makeStyles((theme) => ({
   slide: {
-
     height: "calc(80vh)",
     width: "100%",
     position: "relative",
     [theme.breakpoints.down("sm")]: {
       height: "50vh",
-    
     },
   },
   slideContent: {
@@ -81,10 +80,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const staticSlides = [
+  {
+    image: slider1,
+    quote: "Welcome to Our Store!",
+    saleText: "Exclusive Deals for You",
+    productText: "Shop Now",
+  },
+  {
+    image: slider2,
+    quote: "Discover Amazing Products",
+    saleText: "Best Quality Guaranteed",
+    productText: "Explore More",
+  },
+  {
+    image: slider3,
+    quote: "Limited Time Offers",
+    saleText: "Up to 50% Off",
+    productText: "Grab Yours",
+  },
+];
+
 export default function HeroSlider() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
-  const [slides, setSlides] = useState([]);
+  const slides = staticSlides; // Use static data
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => (prevActiveStep + 1) % slides.length);
@@ -95,25 +115,6 @@ export default function HeroSlider() {
       (prevActiveStep) => (prevActiveStep - 1 + slides.length) % slides.length
     );
   };
-
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-    const fetchBanners = async () => {
-      try {
-        const response = await getBanner();
-        const bannerData = response.data.data.map((item) => ({
-          image: item.attributes.images.data.attributes.url,
-          quote: item.attributes.quote,
-          saleText: item.attributes.description,
-          productText: "Explore More",
-        }));
-        setSlides(bannerData);
-      } catch (error) {
-        console.error("Error fetching banner data", error);
-      }
-    };
-    fetchBanners();
-  }, []);
 
   return (
     <Carousel
