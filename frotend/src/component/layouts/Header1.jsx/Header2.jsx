@@ -9,20 +9,19 @@ import SearchBar from "./Searchbar";
 import CartIcon from "./CartIcon";
 import ProfileModal from "./ProfileModel";
 import ScrollingTextHeader from "./ScrollingTextHeader";
-// Import the logo image
-import logo from "../../../Image/LN.png"; // Adjust this path
-
+import logo from "../../../Image/LN.png";
+import "./Header.css";
 import "aos/dist/aos.css";
 
 const navLinkStyle = {
   fontFamily: "'Outfit', sans-serif",
   textDecoration: "none",
-  color: "#000000", // Default color
-  marginRight: "20px", // Adjust the value as needed
+  color: "#000000",
+  marginRight: "20px",
 };
 
 const navLinkHoverStyle = {
-  color: "#FF4E00", // Orange color on hover
+  color: "#FF4E00",
 };
 
 function BasicExample() {
@@ -165,20 +164,28 @@ function BasicExample() {
         </Container>
       </Navbar>
 
-      {/* Second Navbar Section */}
-      <Navbar bg="light" data-bs-theme="light" className="" expand="lg">
+      <Navbar bg="light" data-bs-theme="light" expand="lg">
         <Container fluid>
-          {/* Sidebar Icon */}
-
-          {/* Logo */}
           <Navbar.Brand href="/">
             <img
               src={logo}
               alt="Logo"
+              className="d-none d-md-block"
               style={{
                 width: "200px",
                 maxWidth: "100%",
                 height: "auto",
+              }}
+            />
+            <img
+              src={logo}
+              alt="Logo"
+              className="d-block d-md-none"
+              style={{
+                width: "150px",
+                maxWidth: "100%",
+                height: "auto",
+                margin:0
               }}
             />
           </Navbar.Brand>
@@ -186,7 +193,8 @@ function BasicExample() {
           {/* Icons for Mobile */}
           <Nav className="d-flex align-items-center ms-auto d-lg-none">
             <div className="d-flex align-items-center">
-              <Nav.Link href="#search" className="me-3">
+              {/* SearchBar hidden on xs screens */}
+              <Nav.Link href="#search" className="d-none d-lg-block me-3">
                 <SearchBar
                   searchBarActive={searchBarActive}
                   searchValue={searchValue}
@@ -197,7 +205,7 @@ function BasicExample() {
                 />
               </Nav.Link>
               <Nav.Link href="/cart" className="me-3">
-                <CartIcon style={{color:"black"}}/>
+                <CartIcon style={{ color: "black" }} />
               </Nav.Link>
               <Nav.Link href="/profile">
                 <ProfileModal user={user} isAuthenticated={isAuthenticated} />
@@ -210,7 +218,7 @@ function BasicExample() {
             </div>
           </Nav>
 
-          {/* Navigation Links */}
+          {/* Navigation Links and SearchBar for larger screens */}
           <Navbar.Collapse
             in={isNavbarCollapsed}
             className="d-lg-flex justify-content-center"
@@ -327,7 +335,6 @@ function BasicExample() {
             </Nav>
           </Navbar.Collapse>
 
-          {/* Icons for Large Screens */}
           <Nav className="d-none d-lg-flex align-items-center ms-auto">
             <Nav.Link href="#search" className="me-3">
               <SearchBar

@@ -3,6 +3,10 @@
   font-family: 'Outfit', sans-serif !important;
   color: white !important;
 }
+.text-start {
+  text-align: left;
+}
+/* Ensure the text is properly positioned */
 
 .footer-custom a {
   color: white !important;
@@ -10,13 +14,13 @@
 }
 
 .footer-custom h6 {
-  color: white !important;
+  color:#FF6D1C !important;
 }
 
 .footer_links {
   color: white;
   font-family: 'Outfit', sans-serif;
-  text-decoration: none;
+  text-decoration: none
 }
 
 /* Custom Button Styling */
@@ -29,7 +33,7 @@
 
 /* Box Styling */
 .box {
-  background-color: #FF4E00;
+  background-color: #FF6D1C;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
@@ -173,7 +177,7 @@
   }
 
   .button-col button {
-    background-color: #FF4E00;
+    background-color: #c01c1c;
     color: white;
     border: none;
     padding: 10px 10px;

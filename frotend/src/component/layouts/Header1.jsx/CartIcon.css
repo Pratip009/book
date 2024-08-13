@@ -7,11 +7,11 @@
 .cartIcon {
   font-size: 1.8rem;
   cursor: pointer;
-  color: #000; 
+  color: #000000 !important; 
   position: relative;
 }
 .cartIcon > svg {
-  font-size: 1.7rem;
+  font-size: 1.7rem
 }
 
 .cartIcon:hover {
@@ -22,7 +22,7 @@
   top: -2px;
   right: -8px;
   background-color: #ed1c24;
-  color: #fff;
+  color: #ffffff;
   font-size: 12px;
   line-height: 18px;
   border-radius: 50%;

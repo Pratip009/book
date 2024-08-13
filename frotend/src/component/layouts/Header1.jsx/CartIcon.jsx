@@ -9,7 +9,7 @@ const CartIcon = () => {
   return (
     <div className="cartIconWrapper">
       <span className="cartIcon">
-        <IoCartOutline className="icon" />
+        <IoCartOutline style={{fontSize:"1.8rem"}}/>
         {cartItemCount > 0 && (
           <span className="cartItemCount">{cartItemCount}</span>
         )}

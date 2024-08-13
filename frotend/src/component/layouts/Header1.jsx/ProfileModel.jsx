@@ -106,6 +106,7 @@ const ProfileModal = ({ user, isAuthenticated }) => {
         <PersonIcon
           className={`icon smaller ${isOpen ? "active" : ""}`}
           fontSize="large"
+          
         />
         {isOpen ? (
           <ArrowDropUpIcon className="arrow-icon" />

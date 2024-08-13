@@ -2,10 +2,10 @@
 .profile-icon {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Adjust as needed */
   position: relative;
   cursor: pointer;
   border: none;
-
 }
 
 .css-tzssek-MuiSvgIcon-root{
@@ -13,10 +13,13 @@
 }
 .arrow-icon{
   font-size: 20px !important;
-  padding: 0;
+  margin-left: 1px;
+ 
 }
 .profile-icon > svg {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: black !important;
+  margin-right: 1px;
 }
 
 .modal-container {

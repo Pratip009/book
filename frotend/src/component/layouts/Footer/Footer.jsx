@@ -31,7 +31,7 @@ export default function Footer() {
         >
           <MDBContainer className="text-center text-md-start mt-1">
             <MDBRow className="mt-3">
-              <MDBCol md="4" lg="4" xl="4" className="mx-auto mb-4">
+              <MDBCol md="4" lg="4" xl="4" xs="4" className="mx-auto mb-4">
                 <MDBContainer>
                   <MDBNavbarBrand href="#">
                     <img
@@ -76,7 +76,7 @@ export default function Footer() {
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
                         <MDBRow className="align-items-center">
-                          <MDBCol md="4"className="icon-col">
+                          <MDBCol md="4" className="icon-col">
                             <RiExchangeBoxLine className="icon" />
                           </MDBCol>
                           <MDBCol md="8" className="text-col">
@@ -103,94 +103,123 @@ export default function Footer() {
                 </MDBContainer>
               </MDBCol>
 
-              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h6 className="fw-bold mb-4">Help</h6>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Track Order
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    FAQs
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Cancel Order
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Return Order
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Warranty Info
-                  </a>
-                </p>
+              <MDBCol md="6" lg="6" xl="6" xs="6" className="mx-auto mb-4">
+                <MDBRow>
+                  <MDBCol>
+                    <h6
+                      className="fw-bold mb-4 text-start"
+                      style={{
+                        textDecoration: "underline",
+                        textDecorationColor: "#003E90",
+                      }}
+                    >
+                      Help
+                    </h6>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Track Order
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        FAQs
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Cancel Order
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Return Order
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Warranty Info
+                      </a>
+                    </p>
+                  </MDBCol>
+                  <MDBCol>
+                    <h6
+                      className="fw-bold mb-4 text-start"
+                      style={{
+                        textDecoration: "underline",
+                        textDecorationColor: "#003E90",
+                      }}
+                    >
+                      Policies
+                    </h6>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Return Policy
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Security
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Sitemap
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Privacy Policy
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        T&C
+                      </a>
+                    </p>
+                  </MDBCol>
+                  <MDBCol>
+                    <h6
+                      className="fw-bold mb-4 text-start"
+                     
+                    >
+                      Company
+                    </h6>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        About Us
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Contact Us
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Service Centres
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Work With Us
+                      </a>
+                    </p>
+                    <p class="text-start">
+                      <a href="#!" className="footer_links">
+                        Courses
+                      </a>
+                    </p>
+                  </MDBCol>
+                </MDBRow>
               </MDBCol>
 
-              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h6 className="fw-bold mb-4">Policies</h6>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Return Policy
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Security
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Sitemap
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Privacy Policy
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    T&C
-                  </a>
-                </p>
-              </MDBCol>
-
-              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h6 className="fw-bold mb-4">Company</h6>
-                <p>
-                  <a href="#!" className="footer_links">
-                    About Us
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Contact Us
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Service Centres
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Work With Us
-                  </a>
-                </p>
-                <p>
-                  <a href="#!" className="footer_links">
-                    Courses
-                  </a>
-                </p>
-              </MDBCol>
-
-              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-md-0 mb-4">
+              <MDBCol
+                md="2"
+                lg="2"
+                xl="2"
+                xs="2"
+                className="mx-auto mb-md-0 mb-4"
+              >
                 <h6 className="fw-bold mb-4">Newsletter</h6>
                 <MDBInput
                   contrast
@@ -213,7 +242,9 @@ export default function Footer() {
             </MDBRow>
             <MDBRow className="d-flex justify-content-center align-items-center">
               <MDBCol md="auto" className="text-center mb-3 mb-md-0">
-                <span className="textt">Get connected with us on social networks:</span>
+                <span className="textt">
+                  Get connected with us on social networks:
+                </span>
               </MDBCol>
               <MDBCol md="auto" className="text-center">
                 <a href="/" className="me-4 text-reset">

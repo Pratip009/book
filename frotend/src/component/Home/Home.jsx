@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
+import dartImage from "../../Image/dart.png";
 import ProductCard from "./ProductCard";
 import StarIcon from "@mui/icons-material/Star";
+import { Card, CardHeader, Avatar, IconButton } from "@mui/material";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Icon from "@mui/material/Icon";
 import Divider from "@mui/material/Divider";
@@ -16,11 +20,10 @@ import HeroSlider from "./HeroSilder";
 import Grid from "@mui/material/Grid";
 import AOS from "aos";
 import List from "@mui/material/List";
-import Avatar from "@mui/material/Avatar";
+
 import Button from "@mui/material/Button";
 import TeamMessage from "./TeamMessage";
-import Card from "@mui/material/Card";
-import IconButton from "@mui/material/IconButton";
+
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -35,7 +38,9 @@ import { Link } from "react-router-dom";
 import { getNotice } from "../../GlobalApi";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Wellcome2 from "./Wellcome2";
-
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 function Home() {
   const [width, setWidth] = useState(window.innerWidth);
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -85,20 +90,7 @@ function Home() {
       setTask(res.data);
     });
   }, []);
-  const getWidth = () => {
-    if (width <= 320) return "90%";
-    if (width <= 360) return "90%";
-    if (width <= 393) return "90%";
-    if (width <= 412) return "90%";
-    if (width <= 420) return "90%";
-    if (width <= 440) return "90%";
-    if (width <= 480) return "90%";
-    if (width <= 540) return "90%";
-    if (width <= 600) return "90%";
-    if (width <= 721) return "90%";
-    if (width <= 767) return "90%";
-    return "68%"; // For larger screens
-  };
+ 
   const h1Style = {
     textAlign: "center",
     fontSize: "36px",
@@ -144,12 +136,7 @@ function Home() {
         <>
           <MataData title="Learning Needs" />
           <div className="Home_Page" style={{ overflow: "hidden" }}>
-            <div
-              className="heroSlider_Home"
-              style={{ marginBottom: "0" }} // Adjusted to remove negative margin
-            >
-              <HeroSlider />
-            </div>
+            <HeroSlider />
 
             <div
               className="background_image"
@@ -160,244 +147,211 @@ function Home() {
                 overflow: "hidden",
               }}
             >
-              <div className="main_content">
-                <div className="text_container">
-                  <Grid
-                    container
-                    rowSpacing={2}
-                    columnSpacing={{ xs: 1, sm: 2, md: 4 }}
-                    style={{
-                      width: "100%",
-                      maxWidth: "1200px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      margin: "auto",
-                    }}
-                    className="noMarginPadding"
-                  >
-                    <Grid
-                      item
-                      xs={12}
-                      md={6}
-                      className="noMarginPadding"
-                      style={{
-                        paddingRight: 0,
-                        margin: "0 2rem", 
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Welcome />
-                    </Grid>
-                    <Grid
-                      item
-                      xs={12}
-                      md={6}
-                      className="noMarginPadding"
-                      style={{
-                        paddingRight: 0,
-                        margin: "0 2rem", // Add horizontal margin for desktop screens
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Wellcome2 />
-                    </Grid>
-                  </Grid>
-                </div>
-                <div
-                  className="text_container_new"
-                  style={{
-                    marginTop: "20px",
-                    padding: "0 10px",
-                  }}
-                >
-                  <Grid
-                    container
-                    rowSpacing={1}
-                    columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-                    style={{ width: "100%", maxWidth: "1200px" }}
-                  >
-                    <Grid item xs={12} md={6}>
-                      <Card
-                        sx={{
-                          maxWidth: 500,
-                          margin: "0 auto",
-                        }}
-                      >
-                        <Box sx={{ position: "relative" }}>
-                          <CardMedia
-                            component="img"
-                            height="300"
-                            image={require("../../Image/lap.jpg")}
-                          />
-                          <Box
-                            sx={{
-                              position: "absolute",
-                              top: 0,
-                              left: 0,
-                              width: "50%",
-                              bgcolor: "#FF6D28bc",
-                              color: "white",
-                              padding: "15px",
-                              height: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <div className="overlay_section">
-                              <Avatar
-                                style={{
-                                  backgroundColor: "#FF4E00",
-                                  border: "1px solid #D44300",
-                                }}
-                                sx={{
-                                  width: isMobile ? 30 : 60,
-                                  height: isMobile ? 30 : 60,
-                                }}
-                              >
-                                <MenuBookIcon
-                                  fontSize={isMobile ? "small" : "large"}
-                                />
-                              </Avatar>
-                              <Typography
-                                variant="h6"
-                                className="training"
-                                style={{
-                                  fontFamily: "'Outfit', sans-serif",
-                                  fontSize: isMobile ? "0.8rem" : "1.5rem",
-                                  marginTop: "10px", // Add some margin to separate text from avatar
-                                }}
-                              >
-                                School Management Service
-                              </Typography>
-                              <Link to="/school">
-                                <IconButton
-                                  disableRipple={true}
-                                  style={{
-                                    color: "white",
-                                    width: isMobile ? "25px" : "40px",
-                                    height: isMobile ? "25px" : "40px",
-                                    marginTop: "10px", // Add some margin to separate icon button from text
-                                  }}
-                                >
-                                  <ArrowForwardIcon
-                                    fontSize={isMobile ? "small" : "large"}
-                                  />
-                                </IconButton>
-                              </Link>
-                            </div>
-                          </Box>
-                        </Box>
-                      </Card>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <Card
-                        sx={{
-                          maxWidth: 500,
-                          margin: "0 auto",
-                        }}
-                      >
-                        <Box sx={{ position: "relative" }}>
-                          <CardMedia
-                            component="img"
-                            height="300"
-                            image={require("../../Image/off.jpg")}
-                          />
-                          <Box
-                            sx={{
-                              position: "absolute",
-                              top: 0,
-                              left: 0,
-                              width: "50%",
-                              bgcolor: "#3AB0FFaf",
-                              color: "white",
-                              padding: "15px",
-                              height: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <div className="overlay_section">
-                              <Avatar
-                                style={{
-                                  backgroundColor: "#003E90",
-                                  border: "1px solid #1879BA",
-                                }}
-                                sx={{
-                                  width: isMobile ? 30 : 60,
-                                  height: isMobile ? 30 : 60,
-                                }}
-                              >
-                                <HailIcon
-                                  fontSize={isMobile ? "small" : "large"}
-                                />
-                              </Avatar>
-                              <Typography
-                                variant="h6"
-                                className="training"
-                                style={{
-                                  fontFamily: "'Outfit', sans-serif",
-                                  fontSize: isMobile ? "0.8rem" : "1.5rem",
-                                  marginTop: "10px", // Add some margin to separate text from avatar
-                                }}
-                              >
-                                Training And Development Program
-                              </Typography>
-                              <Link to="/training">
-                                <IconButton
-                                  disableRipple={true}
-                                  style={{
-                                    color: "white",
-                                    width: isMobile ? "25px" : "40px",
-                                    height: isMobile ? "25px" : "40px",
-                                    marginTop: "10px", // Add some margin to separate icon button from text
-                                  }}
-                                >
-                                  <ArrowForwardIcon
-                                    fontSize={isMobile ? "small" : "large"}
-                                  />
-                                </IconButton>
-                              </Link>
-                            </div>
-                          </Box>
-                        </Box>
-                      </Card>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </div>
-            <div className="wrappeeer">
-              <div className="content">
-                <div className="circle_text">
-                  <h1 style={h1Style}>
-                    Find The <span className="highlight">Right Product</span>{" "}
-                    For You
-                  </h1>
-                </div>
-                <span
-                  className="sub_headings"
-                  // data-aos="slide-right"
-                  style={spanStyle}
-                >
-                  You don't have to struggle alone,you have got our assistance
-                  and help
-                </span>
+              <Container>
+                <Row style={{ marginTop: "2rem" }}>
+                  <Col xs={12} md={6} className="d-flex align-items-stretch">
+                    <Welcome />
+                  </Col>
+                  <Col xs={12} md={6}>
+                    <Wellcome2 />
+                  </Col>
+                </Row>
+              </Container>
 
-                <div className="trending-products">
-                  {products &&
-                    products.map((product) => (
-                      <ProductCard key={product._id} product={product} />
-                    ))}
-                </div>
-              </div>
+              <Container
+                style={{
+                  display:"flex",
+                  alignItems:"center",
+                  justifyContent:"center",
+                  marginTop: "20px",
+                }}
+              >
+                <Row>
+                  <Col xs={12} md={6} className="mb-4">
+                    
+                    <Card
+                      sx={{
+                        maxWidth: 650,
+                        margin: "0",
+                      }}
+                    >
+                      <Box sx={{ position: "relative" }}>
+                        <CardMedia
+                          component="img"
+                          height="300"
+                          image={require("../../Image/lap.jpg")}
+                        />
+                        <Box
+                          sx={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "50%",
+                            bgcolor: "#FF6D28bc",
+                            color: "white",
+                            padding: "15px",
+                            height: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div className="overlay_section">
+                            <Avatar
+                              style={{
+                                backgroundColor: "#FF4E00",
+                                border: "1px solid #D44300",
+                              }}
+                              sx={{
+                                width: isMobile ? 30 : 60,
+                                height: isMobile ? 30 : 60,
+                              }}
+                            >
+                              <MenuBookIcon
+                                fontSize={isMobile ? "small" : "large"}
+                              />
+                            </Avatar>
+                            <Typography
+                              variant="h6"
+                              className="training"
+                              style={{
+                                fontFamily: "'Outfit', sans-serif",
+                                fontSize: isMobile ? "0.8rem" : "1.5rem",
+                                marginTop: "10px", // Add margin to separate text from avatar
+                              }}
+                            >
+                              School Management Service
+                            </Typography>
+                            <Link to="/school">
+                              <IconButton
+                                disableRipple={true}
+                                style={{
+                                  color: "white",
+                                  width: isMobile ? "25px" : "40px",
+                                  height: isMobile ? "25px" : "40px",
+                                  marginTop: "10px", // Add margin to separate icon button from text
+                                }}
+                              >
+                                <ArrowForwardIcon
+                                  fontSize={isMobile ? "small" : "large"}
+                                />
+                              </IconButton>
+                            </Link>
+                          </div>
+                        </Box>
+                      </Box>
+                    </Card>
+                  </Col>
+
+                  <Col xs={12} md={6} className="mb-4">
+                    
+                    <Card
+                      sx={{
+                        maxWidth: 650,
+                        margin: "0",
+                      }}
+                    >
+                      <Box sx={{ position: "relative" }}>
+                        <CardMedia
+                          component="img"
+                          height="300"
+                          image={require("../../Image/off.jpg")}
+                        />
+                        <Box
+                          sx={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "50%",
+                            bgcolor: "#3AB0FFaf",
+                            color: "white",
+                            padding: "15px",
+                            height: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div className="overlay_section">
+                            <Avatar
+                              style={{
+                                backgroundColor: "#003E90",
+                                border: "1px solid #1879BA",
+                              }}
+                              sx={{
+                                width: isMobile ? 30 : 60,
+                                height: isMobile ? 30 : 60,
+                              }}
+                            >
+                              <HailIcon
+                                fontSize={isMobile ? "small" : "large"}
+                              />
+                            </Avatar>
+                            <Typography
+                              variant="h6"
+                              className="training"
+                              style={{
+                                fontFamily: "'Outfit', sans-serif",
+                                fontSize: isMobile ? "0.8rem" : "1.5rem",
+                                marginTop: "10px", // Add margin to separate text from avatar
+                              }}
+                            >
+                              Training And Development Program
+                            </Typography>
+                            <Link to="/training">
+                              <IconButton
+                                disableRipple={true}
+                                style={{
+                                  color: "white",
+                                  width: isMobile ? "25px" : "40px",
+                                  height: isMobile ? "25px" : "40px",
+                                  marginTop: "10px", // Add margin to separate icon button from text
+                                }}
+                              >
+                                <ArrowForwardIcon
+                                  fontSize={isMobile ? "small" : "large"}
+                                />
+                              </IconButton>
+                            </Link>
+                          </div>
+                        </Box>
+                      </Box>
+                    </Card>
+                  </Col>
+                </Row>
+              </Container>
             </div>
+            <Container className="wrappeeer">
+              <Row className="my-2">
+                <Col xs={12} className="text-center">
+                  <div className="circle_text">
+                    <h1 style={h1Style}>
+                      Find The <span className="highlight">Right Product</span>{" "}
+                      For You
+                    </h1>
+                  </div>
+                  <span className="sub_headings" style={spanStyle}>
+                    You don't have to struggle alone, you have got our
+                    assistance and help
+                  </span>
+                </Col>
+              </Row>
+              <Row className="justify-content-center">
+                {products &&
+                  products.map((product) => (
+                    <Col
+                      xs={12}
+                      sm={6} 
+                      md={4} 
+                      lg={4}
+                      key={product._id}
+                      className="mb-4 d-flex justify-content-center"
+                    >
+                      <ProductCard product={product} />
+                    </Col>
+                  ))}
+              </Row>
+            </Container>
 
             <div
               className="goal"
@@ -409,111 +363,205 @@ function Home() {
                 alignItems: "center",
               }}
             >
-              <div
-                className="inner_goal"
-                style={{
-                  width: getWidth(),
-                }}
+              <Container
+               
               >
                 <TeamMessage />
-                <div className="circle_text">
-                  <h1
-                    style={{
-                      textAlign: "center",
-                      fontSize: "36px",
-                      marginTop: "60px",
-                      fontFamily: "'Outfit', sans-serif",
-                    }}
-                  >
-                    Our <span className="highlight">Goals And Objective</span>
-                  </h1>
-                </div>
-
-                <Grid container spacing={1}>
-                  <Grid item md={9}>
-                    <GoalsObjective />
-                  </Grid>
-                  <Grid item md={3} xs={12}>
+              </Container>
+            </div>
+            <Container>
+              <div className="circle_text">
+                <h1
+                  style={{
+                    textAlign: "center",
+                    fontSize: "36px",
+                    marginTop: "60px",
+                    fontFamily: "'Outfit', sans-serif",
+                  }}
+                >
+                  Our <span className="highlight">Goals And Objective</span>
+                </h1>
+              </div>
+              <Row>
+                <Col md="3">
+                  <img
+                    src={dartImage}
+                    alt="App"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </Col>
+                <Col md="6">
+                  <Col>
                     <Card
+                      className=""
                       style={{
-                        background: "linear-gradient(120deg, #ff5f6d, #ffc371)",
-                        minWidth: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between", // Ensure the content is spaced correctly
-                        height: "100%", // Make sure the Card takes up full height of its container
+                        boxShadow: "none",
+                        backgroundColor: "transparent",
+                        padding: 0,
+                        width: "100%",
                       }}
                     >
-                      <p
-                        className="container_element_large_text"
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          color: "white",
-                          textShadow: "0 0 10px red",
-                          padding: "10px 0 0 0 ",
-                          fontFamily: "Outfit, sans-serif",
-                        }}
-                      >
-                        Updates
-                      </p>
-                      <Card
-                        style={{
-                          flex: 1, // Allow the inner Card to expand
-                          maxHeight: "100%", // Ensure it takes up the available height
-                          marginTop: "20px",
-                          border: "1px solid #D8D9DA",
-                        }}
-                      >
-                        <div
-                          className="container3 blur"
-                          style={{ height: "100%" }}
-                        >
-                          <List
-                            sx={{
-                              width: "100%",
-                              maxWidth: "100%",
-                              bgcolor: "white",
-                              padding: "3px 0",
-                              height: "100%", // Ensure the List takes up the full height of its parent
+                      <CardHeader
+                        avatar={
+                          <Avatar style={{ backgroundColor: "#003E90" }}>
+                            <PsychologyIcon fontSize="large" />
+                          </Avatar>
+                        }
+                        title={
+                          <span
+                            className="goals-objective-title"
+                            style={{
+                              fontSize: "1rem",
+                              color: "#1B1A1A",
+                              fontWeight: "600",
+                              fontFamily: "'Outfit', sans-serif",
                             }}
-                            className="slider"
                           >
-                            {notices.map((notice) => (
-                              <React.Fragment key={notice.id}>
-                                <ListItem
-                                  sx={{
-                                    borderBottom: "1px solid #ccc",
-                                  }}
-                                >
-                                  <ListItemIcon sx={{ minWidth: 32 }}>
-                                    <StarIcon
-                                      fontSize="small"
-                                      sx={{ color: "#FF4E00" }}
-                                    />
-                                  </ListItemIcon>
-                                  <ListItemText
-                                    primary={notice.attributes.notices}
-                                    primaryTypographyProps={{
-                                      style: {
-                                        fontFamily: "Outfit, sans-serif",
-                                      },
-                                    }}
-                                    sx={{ marginLeft: 0 }}
-                                  />
-                                </ListItem>
-                                <Divider />
-                              </React.Fragment>
-                            ))}
-                          </List>
-                        </div>
-                      </Card>
+                            VISION
+                          </span>
+                        }
+                        subheader="To provide the best quality service and products to our customer and clients."
+                        action={<IconButton>{/* <ThumbUpIcon/> */}</IconButton>}
+                      />
                     </Card>
-                  </Grid>
-                </Grid>
-              </div>
-            </div>
+                    <Card
+                      className=""
+                      style={{
+                        boxShadow: "none",
+                        backgroundColor: "transparent",
+                        width: "100%",
+                      }}
+                    >
+                      <CardHeader
+                        avatar={
+                          <Avatar style={{ backgroundColor: "#FF4E00" }}>
+                            <MarkUnreadChatAltIcon fontSize="large" />
+                          </Avatar>
+                        }
+                        title={
+                          <span
+                            className="goals-objective-title"
+                            style={{
+                              fontSize: "1rem",
+                              color: "#1B1A1A",
+                              fontWeight: "600",
+                              fontFamily: "'Outfit', sans-serif",
+                            }}
+                          >
+                            MISSION
+                          </span>
+                        }
+                        subheader="Conducting ourselves with honesty and responsibility."
+                      />
+                    </Card>
+                    <h3
+                      style={{
+                        fontFamily: "'Outfit', sans-serif",
+                        background: "linear-gradient(120deg, #003E90, #3B90FF)",
+                        fontSize: "2rem",
+                        padding: "1rem",
+                        color: "white",
+                      }}
+                    >
+                      Future Target Innovation
+                    </h3>
+                    <span
+                      className=""
+                      style={{
+                        fontSize: "1rem",
+                        fontFamily: "'Outfit', sans-serif",
+                        textAlign: "justify",
+                        
+                      }}
+                    >
+                      Challenging ourselves to create unique ideas and
+                      innovative solutions in a technology rich environment to
+                      develop the human potentials to achieve different
+                      opportunities in future to enhance the new learning
+                      process.
+                    </span>
+                  </Col>
+                </Col>
+                <Col md="3">
+                  <Card
+                    style={{
+                      background: "linear-gradient(120deg, #ff5f6d, #ffc371)",
+                      minWidth: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between", // Ensure the content is spaced correctly
+                      height: "100%", // Make sure the Card takes up full height of its container
+                    }}
+                  >
+                    <p
+                      className="container_element_large_text"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "white",
+                        textShadow: "0 0 10px red",
+                        padding: "10px 0 0 0 ",
+                        fontFamily: "Outfit, sans-serif",
+                      }}
+                    >
+                      Updates
+                    </p>
+                    <Card
+                      style={{
+                        flex: 1, // Allow the inner Card to expand
+                        maxHeight: "100%", // Ensure it takes up the available height
+                        marginTop: "20px",
+                        border: "1px solid #D8D9DA",
+                      }}
+                    >
+                      <div
+                        className="container3 blur"
+                        style={{ height: "100%" }}
+                      >
+                        <List
+                          sx={{
+                            width: "100%",
+                            maxWidth: "100%",
+                            bgcolor: "white",
+                            padding: "3px 0",
+                            height: "100%", // Ensure the List takes up the full height of its parent
+                          }}
+                          className="slider"
+                        >
+                          {notices.map((notice) => (
+                            <React.Fragment key={notice.id}>
+                              <ListItem
+                                sx={{
+                                  borderBottom: "1px solid #ccc",
+                                }}
+                              >
+                                <ListItemIcon sx={{ minWidth: 32 }}>
+                                  <StarIcon
+                                    fontSize="small"
+                                    sx={{ color: "#FF4E00" }}
+                                  />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={notice.attributes.notices}
+                                  primaryTypographyProps={{
+                                    style: {
+                                      fontFamily: "Outfit, sans-serif",
+                                    },
+                                  }}
+                                  sx={{ marginLeft: 0 }}
+                                />
+                              </ListItem>
+                              <Divider />
+                            </React.Fragment>
+                          ))}
+                        </List>
+                      </div>
+                    </Card>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
           </div>
         </>
       )}

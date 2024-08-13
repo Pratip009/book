@@ -25,13 +25,12 @@ export default function TeamMessage() {
       className="teamback"
       sx={{
         p: 2,
-        marginTop: "4.25rem",
+        
         borderRadius: "10px",
         maxWidth: "100%",
         flexGrow: 1,
         boxShadow: "none",
-        // backgroundColor: (theme) =>
-        //   theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+        
       }}
     >
       <Grid container spacing={2}>
@@ -56,20 +55,23 @@ export default function TeamMessage() {
                   color: "white",
                   fontWeight: "700",
                   fontFamily: "'Outfit', sans-serif",
-                  textAlign: { xs: "center", sm: "left" }, // Responsive text alignment
+                  textAlign: { xs: "center", sm: "left" },
                 }}
               >
                 Team Message
               </Typography>
               <Typography variant="body1" gutterBottom>
                 <p
-                  className="team_message"
+                  className=""
                   style={{
+                    display:"flex",
+                    alignItems:"center",
+                    justifyContent:"center",
                     fontFamily: "'Outfit', sans-serif",
                     fontWeight: "300",
                     color: "white",
                     textAlign: "justify",
-                    fontSize: { xs: "14px", sm: "15px" }, // Responsive font size
+                    fontSize: { xs: "14px", sm: "15px" },
                   }}
                 >
                   We share an enthusiasm for the kind of great learning made
