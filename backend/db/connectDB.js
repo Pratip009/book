@@ -1,19 +1,19 @@
-const mongoose = require("mongoose");
-require("dotenv").config({ path: "backend/config/.env" });
+require('dotenv').config({ path: './backend/config/.env' });
 
-function connectDB() {
-    console.log("DB_LINK:", process.env.DB_LINK); // Add this line to debug
+const mongoose = require('mongoose');
 
-    mongoose.set("strictQuery", false);
-
-    mongoose
-        .connect(process.env.DB_LINK)
-        .then(function () {
-            console.log("DB_connected");
-        })
-        .catch(function (err) {
-            console.log("error", err);
-        });
-}
+const connectDB = async () => {
+  try {
+    const dbURI = process.env.DB_LINK;
+    if (!dbURI) {
+      throw new Error('DB_LINK environment variable is not set');
+    }
+    await mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
+    console.log('MongoDB connected successfully');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error.message);
+    process.exit(1);
+  }
+};
 
 module.exports = connectDB;
