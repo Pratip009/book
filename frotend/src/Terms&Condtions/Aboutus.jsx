@@ -2,14 +2,12 @@ import React from "react";
 import { Typography, Container, Grid, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
-// import TermsImage from "../Image/about/terms.jpeg";
 import { Link } from "react-router-dom";
 import { Card } from "@mui/material";
 import PlayApp from "../component/Home/PlayApp.jsx";
-// import FeaturedSlider from "./FeatureSlider";
-
 import "./Aboutus.css";
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import OurTeam from "../component/Home/OurTeam";
 import Faq from "./Faq";
 import TestimonialSlider from "../component/Home/TestimonialSlider.jsx";
@@ -187,13 +185,13 @@ const useStyles = makeStyles((theme) => ({
       color: "white !important",
     },
     [theme.breakpoints.down("md")]: {
-      width: "80% !important", // Make buttons wider for better touch targets
-      fontSize: "14px !important", // Adjust font size
+      width: "80% !important",
+      fontSize: "14px !important",
       marginLeft: "0 !important",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "100% !important", // Make buttons full width for mobile screens
-      fontSize: "12px !important", // Further adjust font size
+      width: "100% !important",
+      fontSize: "12px !important",
     },
   },
   button2_about: {
@@ -258,74 +256,85 @@ const About_UsPage = () => {
   ];
   return (
     <>
-      <div className={classes.about_us}>
-        <div className="image-container-about">
+      <container-fluid>
+        <container-fluid>
           <img
             src={require("../Image/abnew11nw1.png")}
             alt="About"
-            className="imageAbout"
+            className="responsive-img"
           />
-        </div>
+        </container-fluid>
 
         <MetaData title={"About Us"} />
-        {/* <Container
-          className="about_ln"
-          style={{ marginTop: "2rem" }}
-        >
-         
-        
-        </Container> */}
-        <div className="about_ln">
-          <div style={{ maxWidth: "85%" }}>
-            <Grid container spacing={1} justifyContent="center">
-              <Grid item xs={12} sm={6}>
-                <img
-                  src={require("../Image/about/abb.png")}
-                  alt="Learning needs"
-                  className={classes.image_about}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <div className="circle_text">
-                  <h1>
-                    About <span className="highlight">Learning Needs</span>
-                  </h1>
-                </div>
-                <p
-                  variant="body1"
-                  className=""
-                  style={{
-                    fontSize: "15px",
-                    marginTop: "14px",
-                    fontWeight: "400",
-                    textAlign: "justify",
-                    display: "inline-block",
-                    fontFamily: "'Outfit', sans-serif",
-                  }}
-                >
-                  Learning Needs is a training & management consulting company
-                  based in Kolkata in the lap of nature beside river Ganges,
-                  India. Learning Needs offers a variety of boutique services,
-                  tailored to each clients need. Our specialized expertise
-                  allows the Individual, Institution, Schools and Organizations
-                  to achieve their objectives; we are very much committed to the
-                  success of our clients and their individual
-                </p>
 
-                <Button
-                  style={{
-                    color: "#fff",
-                    backgroundColor: "#FF4E00",
-                    display: "flex",
-                  }}
-                  variant="contained"
+        <container-fluid className="about_ln">
+         <Container>
+         <Row className="align-items-center justify-content-center">
+            <Col xs="12" sm="12" md="4" className="mb-3">
+              <img
+                src={require("../Image/about/abb.png")}
+                alt="Learning needs"
+                className={classes.image_about}
+                style={{
+                  width: "100%",
+                  maxHeight: "400px",
+                  objectFit: "cover",
+                }}
+              />
+            </Col>
+            <Col
+              xs="12"
+              sm="12"
+              md="8"
+              className="d-flex flex-column justify-content-center align-items-center"
+              style={{ textAlign: "flex-start" }}
+            >
+              <div className="circle_text">
+                <h1
+                style={{
+                  textAlign: "left",
+                  fontSize: "36px",
+                  marginTop: "20px",
+                }}
                 >
-                  Read More..
-                </Button>
-              </Grid>
-            </Grid>
-          </div>
-        </div>
+                  About <span className="highlight">Learning Needs</span>
+                </h1>
+              </div>
+              <p
+                variant="body1"
+                style={{
+                  fontSize: "15px",
+
+                  fontWeight: "400",
+                  textAlign: "justify",
+                  fontFamily: "'Outfit', sans-serif",
+                }}
+              >
+                Learning Needs is a training & management consulting company
+                based in Kolkata in the lap of nature beside river Ganges,
+                India. Learning Needs offers a variety of boutique services,
+                tailored to each client's need. Our specialized expertise allows
+                the Individual, Institution, Schools and Organizations to
+                achieve their objectives; we are very much committed to the
+                success of our clients and their individual
+              </p>
+              <Button
+                style={{
+                  color: "#fff",
+                  backgroundColor: "#FF4E00",
+                  
+                  display: "block",
+                  width: "fit-content",
+                }}
+                variant="contained"
+              >
+                Read More..
+              </Button>
+            </Col>
+          </Row>
+         </Container>
+        </container-fluid>
+
         <div
           className="product_back"
           style={{ backgroundColor: "#FFFFFF", width: "100%" }}
@@ -605,7 +614,7 @@ const About_UsPage = () => {
             </Link>
           </div>
         </Container>
-      </div>
+      </container-fluid>
     </>
   );
 };

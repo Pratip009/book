@@ -90,56 +90,14 @@ body {
   object-position: center;
 }
 
-@media (max-width: 899px) {
-  .image-container-about {
-    height: 250px; /* Adjust height for medium screens */
-  }
-
-  .about_ln {
-    height: auto;
-    padding: 5px;
-    background-size: contain;
-    margin-left: 30px;
-  }
-
-  .circle_text h1 {
-    text-align: center;
-    font-size: 30px;
-  }
-
-  .circle_text p {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .about_ln Button {
-    margin-top: 10px;
-    width: 100%;
-  }
+.responsive-img {
+  width: 100%;       /* Default width 100% */
+  max-height: 400px; /* Default max-height */
+  object-fit: cover; /* Maintain aspect ratio */
 }
 
-@media (max-width: 499px) {
-  .image-container-about {
-    height: 200px; /* Adjust height for small screens */
-  }
-
-  .about_ln {
-    height: auto;
-    padding: 5px;
-    background-size: contain;
-    margin-left: 40px;
-  }
-
-  .circle_text h1 {
-    font-size: 24px;
-  }
-
-  .circle_text p {
-    font-size: 13px;
-  }
-
-  .about_ln Button {
-    font-size: 14px;
-    padding: 8px;
+@media (max-width: 576px) { /* For xs screens */
+  .responsive-img {
+    max-height: 200px; /* Adjust this value for smaller screens */
   }
 }

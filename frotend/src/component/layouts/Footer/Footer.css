@@ -101,7 +101,7 @@
 
 /* Overlay Container Styling */
 .overlay-container {
-  background-image: url('../../../Image/cta.webp'); /* Update the path to your image */
+  background-image: url('../../../Image/ctanew.png'); /* Update the path to your image */
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -159,6 +159,8 @@
   }
   .overlay-text {
     font-size: 10px;
+    text-align : justify;
+    padding: 0 15px 0 0;
   }
   .box-col {
     flex: 1 0 50%;

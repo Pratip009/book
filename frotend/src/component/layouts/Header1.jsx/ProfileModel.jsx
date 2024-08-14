@@ -5,6 +5,7 @@ import AssignmentIcon from "@material-ui/icons/Assignment";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import PersonIcon from "@mui/icons-material/Person";
+import { FaUserAlt } from "react-icons/fa";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Modal, Avatar } from "@material-ui/core";
 import { AccountCircle as AccountCircleIcon } from "@material-ui/icons";
@@ -103,9 +104,9 @@ const ProfileModal = ({ user, isAuthenticated }) => {
   return (
     <>
       <div className="profile-icon" onClick={handleOpen}>
-        <PersonIcon
+        <FaUserAlt
           className={`icon smaller ${isOpen ? "active" : ""}`}
-          fontSize="large"
+          fontSize="medium"
           
         />
         {isOpen ? (
