@@ -29,7 +29,7 @@ function Header() {
   useEffect(() => {
     axios
       .get(
-        "https://learningneeds-strapi-1-r94y.onrender.com//api/phoneand-emails"
+        "https://learningneeds-strapi-3ylt.onrender.com//api/phoneand-emails"
       )
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
@@ -222,7 +222,7 @@ function Header() {
               style={{
                 color: "none",
                 textDecoration: "none",
-                marginRight: "10px"
+                marginRight: "10px",
               }}
             >
               <CartIcon />

@@ -35,9 +35,7 @@ function BasicExample() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://learningneeds-strapi-1-r94y.onrender.com/api/phoneand-emails"
-      )
+      .get("https://learningneeds-strapi-3ylt.onrender.com/api/phoneand-emails")
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
         if (data) {
@@ -185,7 +183,7 @@ function BasicExample() {
                 width: "150px",
                 maxWidth: "100%",
                 height: "auto",
-                margin:0
+                margin: 0,
               }}
             />
           </Navbar.Brand>
@@ -207,7 +205,7 @@ function BasicExample() {
               <Nav.Link href="/cart" className="me-3">
                 <CartIcon style={{ color: "black" }} />
               </Nav.Link>
-              <Nav.Link href="/profile">
+              <Nav.Link>
                 <ProfileModal user={user} isAuthenticated={isAuthenticated} />
               </Nav.Link>
               <Nav className="d-lg-none">
