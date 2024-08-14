@@ -7,20 +7,21 @@ import { Card, CardHeader, Avatar, IconButton } from "@mui/material";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
 import ListItemIcon from "@mui/material/ListItemIcon";
-
+import Icon from "@mui/material/Icon";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MataData from "../layouts/MataData/MataData";
 import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
-
+import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";
 import HeroSlider from "./HeroSilder";
-
+import Grid from "@mui/material/Grid";
 import AOS from "aos";
 import List from "@mui/material/List";
 
+import Button from "@mui/material/Button";
 import TeamMessage from "./TeamMessage";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -40,6 +41,11 @@ import Wellcome2 from "./Wellcome2";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
+import "./Home.css";
+// import FeaturedSlider from "./FeatureSlider";
+import "aos/dist/aos.css";
+
 function Home() {
   const [width, setWidth] = useState(window.innerWidth);
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -48,7 +54,7 @@ function Home() {
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.products);
   const [task, setTask] = useState([]);
- 
+
   useEffect(() => {
     const fetchNotices = async () => {
       try {
@@ -61,10 +67,10 @@ function Home() {
     fetchNotices();
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (error) {
       alert.error(error);
-      dispatch(clearErrors());
+      dispatch(clearErrors);
     }
     dispatch(getProduct());
   }, [dispatch, error, alert]);
@@ -79,7 +85,7 @@ function Home() {
       setTask(res.data);
     });
   }, []);
- 
+
   const h1Style = {
     textAlign: "center",
     fontSize: "36px",
@@ -119,7 +125,9 @@ function Home() {
 
   return (
     <>
-      
+      {loading ? (
+        <Loader />
+      ) : (
         <>
           <MataData title="Learning Needs" />
           <div className="Home_Page" style={{ overflow: "hidden" }}>
@@ -147,15 +155,14 @@ function Home() {
 
               <Container
                 style={{
-                  display:"flex",
-                  alignItems:"center",
-                  justifyContent:"center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   marginTop: "20px",
                 }}
               >
                 <Row>
                   <Col xs={12} md={6} className="mb-4">
-                    
                     <Card
                       sx={{
                         maxWidth: 650,
@@ -180,7 +187,7 @@ function Home() {
                             height: "100%",
                             display: "flex",
                             alignItems: "center",
-                            justifyContent: "center"
+                            justifyContent: "center",
                           }}
                         >
                           <div className="overlay_section">
@@ -231,7 +238,6 @@ function Home() {
                   </Col>
 
                   <Col xs={12} md={6} className="mb-4">
-                    
                     <Card
                       sx={{
                         maxWidth: 650,
@@ -323,21 +329,12 @@ function Home() {
                   </span>
                 </Col>
               </Row>
-              <Row className="justify-content-center">
+              <div className="trending-products">
                 {products &&
                   products.map((product) => (
-                    <Col
-                      xs={12}
-                      sm={6} 
-                      md={4} 
-                      lg={4}
-                      key={product._id}
-                      className="mb-4 d-flex justify-content-center"
-                    >
-                      <ProductCard key={product._id} product={product} />
-                    </Col>
+                    <ProductCard key={product._id} product={product} />
                   ))}
-              </Row>
+              </div>
             </Container>
 
             <div
@@ -350,9 +347,7 @@ function Home() {
                 alignItems: "center",
               }}
             >
-              <Container
-               
-              >
+              <Container>
                 <TeamMessage />
               </Container>
             </div>
@@ -458,7 +453,6 @@ function Home() {
                         fontSize: "1rem",
                         fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
-                        
                       }}
                     >
                       Challenging ourselves to create unique ideas and
@@ -551,7 +545,7 @@ function Home() {
             </Container>
           </div>
         </>
-      
+      )}
     </>
   );
 }
