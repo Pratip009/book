@@ -222,7 +222,7 @@ function Header() {
               style={{
                 color: "none",
                 textDecoration: "none",
-                marginRight: "10px",
+                marginRight: "10px"
               }}
             >
               <CartIcon />

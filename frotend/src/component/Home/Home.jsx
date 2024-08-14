@@ -49,17 +49,7 @@ function Home() {
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.products);
   const [task, setTask] = useState([]);
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-
-    // Initial width check
-    handleResize();
-
-    // Cleanup listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+ 
   useEffect(() => {
     const fetchNotices = async () => {
       try {
@@ -193,7 +183,7 @@ function Home() {
                             height: "100%",
                             display: "flex",
                             alignItems: "center",
-                            justifyContent: "center",
+                            justifyContent: "center"
                           }}
                         >
                           <div className="overlay_section">

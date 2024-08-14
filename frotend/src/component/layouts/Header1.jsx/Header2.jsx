@@ -336,7 +336,7 @@ function BasicExample() {
           </Navbar.Collapse>
 
           <Nav className="d-none d-lg-flex align-items-center ms-auto">
-            <Nav.Link href="#search" className="me-3">
+            <Nav.Link className="me-3">
               <SearchBar
                 searchBarActive={searchBarActive}
                 searchValue={searchValue}
@@ -349,7 +349,7 @@ function BasicExample() {
             <Nav.Link href="/cart" className="me-3">
               <CartIcon />
             </Nav.Link>
-            <Nav.Link href="/profile">
+            <Nav.Link>
               <ProfileModal user={user} isAuthenticated={isAuthenticated} />
             </Nav.Link>
           </Nav>
