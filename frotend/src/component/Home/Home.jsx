@@ -308,7 +308,7 @@ function Home() {
                 </Row>
               </Container>
             </div>
-            {/* <Container className="wrappeeer">
+            <Container className="wrappeeer">
               <Row className="my-2">
                 <Col xs={12} className="text-center">
                   <div className="circle_text">
@@ -334,11 +334,11 @@ function Home() {
                       key={product._id}
                       className="mb-4 d-flex justify-content-center"
                     >
-                      <ProductCard product={product} />
+                      <ProductCard key={product._id} product={product} />
                     </Col>
                   ))}
               </Row>
-            </Container> */}
+            </Container>
 
             <div
               className="goal"
