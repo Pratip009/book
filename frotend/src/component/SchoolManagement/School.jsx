@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 
 import Card from "react-bootstrap/Card";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import schoolImage from '../../Image/schoolne.png';
 
 import "./Schools.css";
 import { Col, Container, Row } from "react-bootstrap";
@@ -26,7 +27,10 @@ const School = () => {
   return (
     <container-fluid>
       <container-fluid>
-        <img src="/schoolnew1.png" alt="School" className="responsive-img" />
+        <img 
+         src={schoolImage}
+         alt="School"
+          className="responsive-img" />
       </container-fluid>
       <div
       

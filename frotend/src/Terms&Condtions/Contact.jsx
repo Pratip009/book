@@ -1,20 +1,11 @@
 import React from "react";
-import {
-  Divider,
-  Typography,
-  Box,
-  Button,
-  TextField,
-  FormControl,
-  Select,
-  MenuItem,
-  Grid,
-} from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import { useAlert } from "react-alert";
 import { useHistory } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
-
+import { Container, Row, Col, Form } from "react-bootstrap";
+import ContactImage from "../Image/cont1211.png";
 const useStyles = makeStyles((theme) => ({
   root_contactus: {
     padding: "8rem 2rem",
@@ -235,104 +226,16 @@ const ContactForm = () => {
   };
 
   return (
-    <Box className={classes.root_contactus}>
-      <div className={classes.headcontainer}>
-        <img
-          src={require("../../src/Image/cont1211.png")}
-          alt="contact"
-          className={classes.headimage}
-        />
-      </div>
+    <container-fluid>
+      <container-fluid>
+        <img src={ContactImage} alt="contact" className="responsive-img" />
+      </container-fluid>
       <MetaData title={"Contact Us"} />
       <div className={classes.contact_Container_contactus}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h2" className={classes.title_contact_us}>
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-              >
-                <span className="highlight">Contact Us</span>
-              </h1>
-            </Typography>
-
-            <Divider className={classes.divider_contact} />
-
-            <Typography variant="h4" className={classes.helpTitle_contact_us}>
-              <h1
-                className="blog-title"
-                style={{
-                  fontSize: "36px",
-                  fontWeight: "500",
-                  color: "#FF4E00",
-                }}
-              >
-                Need Help?
-              </h1>
-            </Typography>
-            <Typography variant="body2" className={classes.para_contact}>
-              <p>
-                Catch us anytime you want? Fill out our support form below, and
-                we'll be in touch shortly.
-              </p>
-            </Typography>
-
-            <Typography variant="body2" className={classes.address_contacts}>
-              <span>Learning Needs</span>
-              <br />
-              Kolkata
-              <br />
-              West Bengal
-              <br />
-              India
-            </Typography>
-            <Typography variant="body2" className={classes.para_contact}>
-              We have live chat available, look for the chat icon in the lower
-              right-hand corner of this page. If it isn’t there, then give us a
-              call at{" "}
-              <strong
-                style={{
-                  textDecoration: "underline",
-                  cursor: "pointer",
-                }}
-                onClick={handleCall}
-              >
-                8240554890
-              </strong>
-              .
-            </Typography>
-            <div className={classes.buttonGroup}>
-              <a href="#issue-select" style={{ textDecoration: "none" }}>
-                <Button
-                  variant="contained"
-                  className={classes.supportButton}
-                  style={{ backgroundColor: "#003E90" }}
-                >
-                  Support Form
-                </Button>
-              </a>
-
-              <Button
-                variant="contained"
-                className={classes.callButton}
-                onClick={handleCall}
-              >
-                Call Us
-              </Button>
-            </div>
-
-            <Divider className={classes.divider_contact} />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <div className={classes.supportForm}>
-              <Typography
-                variant="h4"
-                className={classes.title_contact_us}
-                style={{ paddingBottom: "1rem" }}
-              >
+          <Container>
+            <Row>
+              <Col xs={12} md={6} className="mx-auto">
                 <h1
                   style={{
                     textAlign: "center",
@@ -340,164 +243,199 @@ const ContactForm = () => {
                     marginTop: "20px",
                   }}
                 >
-                  <span className="highlight">Support Form </span>
+                  <span className="highlight">Contact Us</span>
                 </h1>
-              </Typography>
 
-              <Typography variant="body2" className={classes.para_contact}>
-                <p>
-                  Need a quicker answer? Look for our chat icon on the right
-                  hand side of this page.
-                </p>
-              </Typography>
+                <hr style={{ borderColor: "#FF4E00" }} />
 
-              <form
-                className={classes.formContainer_container}
-                onSubmit={handleSubmit}
-              >
-                <div className={classes.SelectOption_contact}>
-                  <Typography
-                    variant="body2"
-                    className={classes.lableText_contact}
-                  >
-                    ISSUE *
-                  </Typography>
-                  <FormControl className={classes.formField_contact}>
-                    <Select
-                      labelId="issue-label"
-                      id="issue-select"
-                      defaultValue="e-commerce"
-                      MenuProps={{
-                        classes: { paper: classes.menu_contact },
-                      }}
-                    >
-                      <MenuItem value="e-commerce">E-Commerce</MenuItem>
-                      <MenuItem value="app">App</MenuItem>
-                    </Select>
-                  </FormControl>
-                </div>
-
-                <div className={classes.SelectOption_contact}>
-                  <Typography
-                    variant="body2"
-                    className={classes.lableText_contact}
-                  >
-                    DETAIL *
-                  </Typography>
-                  <FormControl className={classes.formField_contact}>
-                    <Select
-                      labelId="detail-label"
-                      id="detail-select"
-                      defaultValue="others"
-                      MenuProps={{
-                        classes: { paper: classes.menu_contact },
-                      }}
-                    >
-                      <MenuItem value="availability">Availability</MenuItem>
-                      <MenuItem value="return/exchange">
-                        Return/Exchange
-                      </MenuItem>
-                      <MenuItem value="technical-support">
-                        Technical Support
-                      </MenuItem>
-                      <MenuItem value="invoicing">Invoicing</MenuItem>
-                      <MenuItem value="tracking-info">Tracking Info</MenuItem>
-                      <MenuItem value="others">Others</MenuItem>
-                    </Select>
-                  </FormControl>
-                </div>
-
-                <div className={classes.SelectOption_contact}>
-                  <Typography
-                    variant="body2"
-                    className={classes.lableText_contact}
-                  >
-                    Language *
-                  </Typography>
-                  <FormControl className={classes.formField_contact}>
-                    <Select
-                      labelId="language-label"
-                      id="language-select"
-                      defaultValue="english"
-                      MenuProps={{
-                        classes: { paper: classes.menu_contact },
-                      }}
-                    >
-                      <MenuItem value="english" className="menu_color">
-                        English
-                      </MenuItem>
-                      <MenuItem value="hindi">Hindi</MenuItem>
-                    </Select>
-                  </FormControl>
-                </div>
-
-                <div className={classes.SelectOption_contact}>
-                  <Typography
-                    variant="body2"
-                    className={classes.lableText_contact}
-                  >
-                    EMAIL *
-                  </Typography>
-                  <FormControl className={classes.formField_contact}>
-                    <TextField
-                      placeholder="Enter Your Email *"
-                      id="email-input"
-                      type="email"
-                    />
-                  </FormControl>
-                </div>
-
-                <div className={classes.SelectOption_contact}>
-                  <Typography
-                    variant="body2"
-                    className={classes.lableText_contact}
-                  >
-                    MESSAGE *
-                  </Typography>
-                  <FormControl className={classes.formField_contact}>
-                    <TextField
-                      id="message-textarea"
-                      multiline
-                      rows={6}
-                      variant="outlined"
-                      placeholder="Enter Your Message *"
-                    />
-                  </FormControl>
-                </div>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  className={classes.submitButtons}
+                <h2
+                  className="blog-title"
+                  style={{
+                    fontSize: "36px",
+                    fontWeight: "500",
+                    color: "#FF4E00",
+                  }}
                 >
-                  Submit
-                </Button>
-              </form>
-            </div>
-          </Grid>
+                  Need Help?
+                </h2>
+
+                <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                  Catch us anytime you want? Fill out our support form below,
+                  and we'll be in touch shortly.
+                </p>
+
+                <address>
+                  <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                    <strong>Learning Needs</strong>
+                    <br />
+                    Kolkata
+                    <br />
+                    West Bengal
+                    <br />
+                    India
+                  </p>
+                </address>
+
+                <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                  We have live chat available, look for the chat icon in the
+                  lower right-hand corner of this page. If it isn’t there, then
+                  give us a call at{" "}
+                  <strong
+                    style={{
+                      textDecoration: "underline",
+                      cursor: "pointer",
+                    }}
+                    onClick={handleCall}
+                  >
+                    8240554890
+                  </strong>
+                  .
+                </p>
+
+                <div className="d-flex justify-content-between mt-4">
+                  <a href="#issue-select" style={{ textDecoration: "none" }}>
+                    <Button
+                      variant="primary"
+                      style={{
+                        backgroundColor: "#003E90",
+                        color: "white",
+                        fontFamily: "'Outfit', sans-serif",
+                      }}
+                    >
+                      Support Form
+                    </Button>
+                  </a>
+
+                  <Button
+                    variant="primary"
+                    onClick={handleCall}
+                    style={{
+                      backgroundColor: "#FF4E00",
+                      color: "white",
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                  >
+                    Call Us
+                  </Button>
+                </div>
+
+                <hr style={{ borderColor: "#FF4E00" }} />
+              </Col>
+              <Col xs={12} md={6} className="mx-auto">
+                <div style={{ padding: "1rem" }}>
+                  <h1
+                    style={{
+                      textAlign: "center",
+                      fontSize: "36px",
+                      marginTop: "20px",
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                  >
+                    <span className="highlight">Support Form</span>
+                  </h1>
+                  <p
+                    style={{
+                      textAlign: "center",
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                  >
+                    Need a quicker answer? Look for our chat icon on the right
+                    hand side of this page.
+                  </p>
+
+                  <Form
+                    onSubmit={handleSubmit}
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                  >
+                    <Form.Group controlId="issue-select">
+                      <Form.Label style={{ fontWeight: "900" }}>
+                        ISSUE *
+                      </Form.Label>
+                      <Form.Control as="select" defaultValue="e-commerce">
+                        <option value="e-commerce">E-Commerce</option>
+                        <option value="app">App</option>
+                      </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="detail-select">
+                      <Form.Label style={{ fontWeight: "900" }}>
+                        DETAIL *
+                      </Form.Label>
+                      <Form.Control as="select" defaultValue="others">
+                        <option value="availability">Availability</option>
+                        <option value="return/exchange">Return/Exchange</option>
+                        <option value="technical-support">
+                          Technical Support
+                        </option>
+                        <option value="invoicing">Invoicing</option>
+                        <option value="tracking-info">Tracking Info</option>
+                        <option value="others">Others</option>
+                      </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="language-select">
+                      <Form.Label style={{ fontWeight: "900" }}>
+                        LANGUAGE *
+                      </Form.Label>
+                      <Form.Control as="select" defaultValue="english">
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                      </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="email-input">
+                      <Form.Label style={{ fontWeight: "900" }}>
+                        EMAIL *
+                      </Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter Your Email *"
+                        required
+                      />
+                    </Form.Group>
+
+                    <Form.Group controlId="message-textarea">
+                      <Form.Label style={{ fontWeight: "900" }}>
+                        MESSAGE *
+                      </Form.Label>
+                      <Form.Control
+                        as="textarea"
+                        rows={6}
+                        placeholder="Enter Your Message *"
+                        required
+                      />
+                    </Form.Group>
+
+                    <Button
+                      type="submit"
+                      variant="primary"
+                      style={{
+                        width: "100%",
+                        backgroundColor: "#003E90",
+                        color: "white",
+                        marginTop: "10px"
+                      }}
+                    >
+                      Submit
+                    </Button>
+                  </Form>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </Grid>
 
-        <Box className="map" sx={{ marginTop: "5rem" }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <Box
-                sx={{
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <div
+                style={{
                   position: "relative",
                   paddingBottom: "56.25%",
                   height: 0,
                   overflow: "hidden",
                   maxWidth: "100%",
                   borderRadius: "8px",
-                  "& iframe": {
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    border: "0",
-                  },
-                  "@media (max-width: 600px)": {
-                    paddingBottom: "75%",
-                  },
                 }}
               >
                 <iframe
@@ -506,13 +444,21 @@ const ContactForm = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
+                  }}
                 ></iframe>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
-    </Box>
+    </container-fluid>
   );
 };
 

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7812125f.css",
-    "main.js": "/static/js/main.d1c95ed8.js",
+    "main.js": "/static/js/main.c015ff7e.js",
     "static/js/37.2e38ce79.chunk.js": "/static/js/37.2e38ce79.chunk.js",
     "static/js/721.273e4098.chunk.js": "/static/js/721.273e4098.chunk.js",
     "static/js/128.85af6dad.chunk.js": "/static/js/128.85af6dad.chunk.js",
@@ -18,6 +18,7 @@
     "static/js/17.8aac8d64.chunk.js": "/static/js/17.8aac8d64.chunk.js",
     "static/media/blog112.png": "/static/media/blog112.da0a9e38e8774201fc57.png",
     "static/media/cont1211.png": "/static/media/cont1211.d873c5b6c22d35104a50.png",
+    "static/media/schoolne.png": "/static/media/schoolne.10ec4915746de95f6c8a.png",
     "static/media/abnew11nw1.png": "/static/media/abnew11nw1.55a0633479723b6e3fca.png",
     "static/media/PRODNEW111.png": "/static/media/PRODNEW111.5402af12e503762bcb95.png",
     "static/media/gate.jpg": "/static/media/gate.c761cb315326a1074f10.jpg",
@@ -118,7 +119,7 @@
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
     "main.7812125f.css.map": "/static/css/main.7812125f.css.map",
-    "main.d1c95ed8.js.map": "/static/js/main.d1c95ed8.js.map",
+    "main.c015ff7e.js.map": "/static/js/main.c015ff7e.js.map",
     "37.2e38ce79.chunk.js.map": "/static/js/37.2e38ce79.chunk.js.map",
     "721.273e4098.chunk.js.map": "/static/js/721.273e4098.chunk.js.map",
     "128.85af6dad.chunk.js.map": "/static/js/128.85af6dad.chunk.js.map",
@@ -136,6 +137,6 @@
   },
   "entrypoints": [
     "static/css/main.7812125f.css",
-    "static/js/main.d1c95ed8.js"
+    "static/js/main.c015ff7e.js"
   ]
 }
