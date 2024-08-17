@@ -1,120 +1,65 @@
-import * as React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import SwipeableViews from "react-swipeable-views";
-import { useTheme } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import Container from 'react-bootstrap/Container';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import "./TabStyles.css";
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+import "./TabStyles.css"; // Ensure custom CSS styles are applied
 
+function TabPanel({ children, eventKey }) {
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+    <div>
+      <div role="tabpanel" aria-labelledby={`tab-${eventKey}`}>
+        {children}
+      </div>
     </div>
   );
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
+  eventKey: PropTypes.string.isRequired,
 };
-
-function a11yProps(index) {
-  return {
-    id: `full-width-tab-${index}`,
-    "aria-controls": `full-width-tabpanel-${index}`,
-  };
-}
 
 export default function ParentTab() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
+  const [key, setKey] = useState('first');
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+  const handleSelect = (k) => setKey(k);
 
   return (
-    <Box sx={{ bgcolor: "#fff", width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor=""
-          textColor="black"
-          variant="fullWidth"
-          aria-label="full width tabs example"
-          TabIndicatorProps={{ style: { backgroundColor: "#003E90" } }}
-          style={{backgroundColor:"#003E90"}}
-        >
-          <Tab
-            label="Parenting Workshop"
-            {...a11yProps(0)}
-            className="tabRoot"
-            classes={{ selected: "tabSelected" }}
-          />
-          <Tab
-            label="Education Issues"
-            {...a11yProps(1)}
-            className="tabRoot"
-            classes={{ selected: "tabSelected" }}
-          />
-          <Tab
-            label="Play"
-            {...a11yProps(2)}
-            className="tabRoot"
-            classes={{ selected: "tabSelected" }}
-          />
-          <Tab
-            label="Other Issues"
-            {...a11yProps(3)}
-            className="tabRoot"
-            classes={{ selected: "tabSelected" }}
-          />
-        </Tabs>
-      </Box>
-      <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
+    <Container className="mt-4">
+      <Tabs
+        id="controlled-tab-example"
+        activeKey={key}
+        onSelect={handleSelect}
+        className="mb-3"
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <img src={require("../../Image/pw1.png")} alt="" />
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <img src={require("../../Image/st2.png")} alt="" />
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          <img src={require("../../Image/playyyyy.png")} alt="" />
-        </TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction}>
-          <img src={require("../../Image/ei.png")} alt="" />
-        </TabPanel>
-      </SwipeableViews>
-    </Box>
+        <Tab eventKey="first" title="Parenting Workshop" className={key === 'first' ? 'custom-tab-active' : 'custom-tab'}>
+          <TabPanel eventKey="first">
+            <img src={require("../../Image/pw1.png")} alt="Parenting Workshop" className="img-fluid" />
+          </TabPanel>
+        </Tab>
+        <Tab eventKey="second" title="Education Issues" className={key === 'second' ? 'custom-tab-active' : 'custom-tab'}>
+          <TabPanel eventKey="second">
+            <img src={require("../../Image/st2.png")} alt="Education Issues" className="img-fluid" />
+          </TabPanel>
+        </Tab>
+        <Tab eventKey="third" title="Play" className={key === 'third' ? 'custom-tab-active' : 'custom-tab'}>
+          <TabPanel eventKey="third">
+            <img src={require("../../Image/playyyyy.png")} alt="Play" className="img-fluid" />
+          </TabPanel>
+        </Tab>
+        <Tab eventKey="fourth" title="Other Issues" className={key === 'fourth' ? 'custom-tab-active' : 'custom-tab'}>
+          <TabPanel eventKey="fourth">
+            <img src={require("../../Image/ei.png")} alt="Other Issues" className="img-fluid" />
+          </TabPanel>
+        </Tab>
+      </Tabs>
+    </Container>
   );
 }

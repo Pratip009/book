@@ -1,41 +1,98 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import { Grid } from "@material-ui/core";
+import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GooglePlay from "../../Image/Footer/google-play-black.svg";
-import "../Home/PlayApp.css";
 
 export default function MediaControlCard() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
 
+  // Define styles for responsiveness
+  const commonStyles = {
+    appHeading: {
+      fontFamily: "'Outfit', sans-serif",
+      fontSize: "30px",
+      margin: "0",
+    },
+    appSubheading: {
+      marginTop: "20px",
+      marginBottom: "10px",
+      fontFamily: "'Outfit', sans-serif",
+      fontSize: "26px",
+      fontWeight: "700",
+      color: "#000000",
+    },
+    appDesc: {
+      fontSize: "15px",
+      fontFamily: "'Outfit', sans-serif",
+      color: "rgb(49, 49, 49)",
+      textAlign: "justify",
+      display: "inline-block",
+      marginBottom: "20px",
+    },
+    appLinks1: {
+      width: "20%",
+    },
+    googlePlayStoreLink: {
+      width: "100%",
+    },
+    appImage: {
+      width: "100%",
+      height: "auto",
+    },
+  };
+
+  // Define responsive styles
+  const responsiveStyles = {
+    "@media (max-width: 899px)": {
+      appHeading: {
+        fontSize: "26px",
+      },
+      appSubheading: {
+        fontSize: "22px",
+      },
+      appDesc: {
+        fontSize: "14px",
+      },
+      appLinks1: {
+        width: "30%",
+      },
+    },
+    "@media (max-width: 499px)": {
+      appHeading: {
+        fontSize: "22px",
+      },
+      appSubheading: {
+        fontSize: "18px",
+      },
+      appDesc: {
+        fontSize: "13px",
+      },
+      appLinks1: {
+        width: "40%",
+      },
+    },
+  };
+
   return (
-    <Grid container spacing={2} style={{ width: "100%" }}>
-      <Grid item xs={12} md={4}>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <Container style={{padding:0}}>
+      <Row>
+        <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
           <img
             src={require("../../Image/appp.png")}
             alt="App"
-            className="app_image"
+            style={commonStyles.appImage}
           />
-        </Box>
-      </Grid>
-      <Grid item xs={12} md={8}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <div className="educate">
-            <h3 className="app_heading">Educate Yourself</h3>
-            <h2 className="app_subheading">
+        </Col>
+        <Col xs={12} md={8} className="d-flex justify-content-center align-items-center" style={{ textAlign: "start",}}>
+          <div style={{ width: "100%", margin: "auto" }}>
+            <h3 style={commonStyles.appHeading}>Educate Yourself</h3>
+            <h2 style={commonStyles.appSubheading}>
               Books and resources for better learning
             </h2>
-            <p className="app_desc">
+            <p style={commonStyles.appDesc}>
               Learning Needs is a pioneer organization dedicated and committed
               to bring out the best in you. We know all you need is an
               opportunity to prove yourself. However, without the right skills
@@ -44,16 +101,18 @@ export default function MediaControlCard() {
               solution. You can change your life today! Fast, Simple &
               Delightful.
             </p>
-            <div className="app_links1">
-              <span className="googlePlayStore_link1">
-                <a href="/">
-                  <img src={GooglePlay} alt="play Store svg" />
-                </a>
-              </span>
+            <div style={commonStyles.appLinks1}>
+              <a href="/">
+                <img
+                  src={GooglePlay}
+                  alt="Play Store"
+                  style={commonStyles.googlePlayStoreLink}
+                />
+              </a>
             </div>
           </div>
-        </Box>
-      </Grid>
-    </Grid>
+        </Col>
+      </Row>
+    </Container>
   );
 }

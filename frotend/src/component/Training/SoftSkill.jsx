@@ -4,6 +4,7 @@ import "../ReadMore/ReadMore.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { Button, Collapse } from "@mui/material";
+import { Container } from "react-bootstrap";
 
 const SoftSkill = () => {
   const [expanded, setExpanded] = useState(false);
@@ -14,7 +15,7 @@ const SoftSkill = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="content">
+    <Container style={{margin:0,padding:0}}>
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
         <img src={require("../../Image/ssworkshopneww.png")} alt="" />
       </div>
@@ -139,7 +140,7 @@ const SoftSkill = () => {
       >
         {expanded ? "Read Less" : "Read More"}
       </Button>
-    </div>
+    </Container>
   );
 };
 export default SoftSkill;

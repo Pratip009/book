@@ -5,6 +5,7 @@ import ParentTab from "./ParentTab";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const Parent = () => {
   React.useEffect(() => {
@@ -15,7 +16,7 @@ const Parent = () => {
     setExpanded(!expanded);
   };
   return (
-    <div className="content">
+    <Container style={{margin:0,padding:0}}>
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
         <img src={require("../../Image/PW.png")} alt="" />
       </div>
@@ -66,7 +67,7 @@ const Parent = () => {
       >
         {expanded ? "Read Less" : "Read More"}
       </Button>
-    </div>
+    </Container>
   );
 };
 export default Parent;

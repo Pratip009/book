@@ -1,16 +1,15 @@
 import React from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Training.css";
 import { Grid } from "@material-ui/core";
 import TabList from "./TabList";
 import StarIcon from "@mui/icons-material/Star";
 import { makeStyles } from '@material-ui/core/styles';
+import { Container } from "react-bootstrap";
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
-    marginTop: '110px',
     width: '100%',
-    height: '300px',
+    height: '400px',
     overflow: 'hidden',
     [theme.breakpoints.down('sm')]: {
       height: '200px', // Adjust height for small screens
@@ -43,7 +42,7 @@ const Training = () => {
     </div>
         </Grid>
         <Grid item xs={12}>
-          <div className="container___">
+          <Container>
             <div>
               <p
                 style={{
@@ -139,7 +138,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -160,7 +159,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -181,7 +180,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -202,7 +201,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -232,7 +231,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -253,7 +252,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -274,7 +273,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -295,7 +294,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -326,7 +325,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -347,7 +346,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -368,7 +367,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -389,7 +388,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -419,7 +418,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -440,7 +439,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -461,7 +460,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -482,7 +481,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -512,7 +511,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -533,7 +532,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -554,7 +553,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -575,7 +574,7 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
@@ -589,11 +588,12 @@ const Training = () => {
                 </div>
               </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <div style={{ marginTop: "2rem" }}>
+            
+            <Container style={{padding:0,margin:0}}>
+            <div style={{ marginTop: "2rem" }}>
                 <img src={require("../../Image/train1.png")} alt="" />
               </div>
-            </Grid>
+            </Container>
 
             <div
               style={{
@@ -624,7 +624,7 @@ const Training = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop: "-2rem",
+              
               }}
             >
               {/* <p className="non_important">
@@ -653,7 +653,7 @@ const Training = () => {
             >
               <img src={require("../../Image/sssa1233.png")} alt="" />
             </div>
-          </div>
+          </Container>
         </Grid>
       </Grid>
 

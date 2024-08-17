@@ -2,9 +2,7 @@ import React from "react";
 import { Grid, Paper } from "@mui/material";
 import {
   LocalShipping,
-  Security,
-  LocalOffer,
-  CreditCard,
+ 
 } from "@mui/icons-material";
 
 

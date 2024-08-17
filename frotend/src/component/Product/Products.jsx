@@ -21,13 +21,13 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Grid from "@mui/material/Grid";
 import ListItem from "@mui/material/ListItem";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import '../../Terms&Condtions/Aboutus.css';
+import "../../Terms&Condtions/Aboutus.css";
+import { Container, Row, Col } from "react-bootstrap";
 const categories = ["Books", "PDF", "Learning Aid"];
 
 function Products() {
@@ -124,22 +124,23 @@ function Products() {
             </>
           ) : (
             <>
-              <div className="productPage">
-                <div className="image-container-about">
+              <container-fluid className="productPage">
+                <container-fluid>
                   <img
                     src={require("../../Image/PRODNEW111.png")}
-                    alt="Product"
-                    className="imageAbout"
+                    alt="About"
+                    className="responsive-img"
                   />
-                </div>
+                </container-fluid>
                 <div className="productBack">
-                  <div style={{ padding: "20px 70px" }}>
+                  <Container>
                     <h1
                       style={{
                         textAlign: "start",
                         fontSize: "36px",
                         marginTop: "20px",
                       }}
+                      className="responsive-heading"
                     >
                       Why <span className="highlight">book Reading</span> is
                       important
@@ -183,12 +184,14 @@ function Products() {
                         stimulation and brain exercising, enhancing the child’s
                         imagination amongst many other benefits.
                       </span>
+
                       <h1
                         style={{
                           textAlign: "start",
                           fontSize: "36px",
                           marginTop: "20px",
                         }}
+                        className="responsive-heading"
                       >
                         Benefits of{" "}
                         <span className="highlight">Reading Books</span>
@@ -203,22 +206,19 @@ function Products() {
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
-                        Here are few good benefits of reading books. When you
-                        read every day you:
+                        Here are a few good benefits of reading books. When you
+                        read every day, you:
                       </span>
-                      <Grid
-                        container
-                        rowSpacing={1}
-                        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-                      >
-                        <Grid item md={4} xs={12}>
-                          <List sx={{ width: "100%" }}>
+
+                      <Row>
+                        <Col md={4} sm={6} xs={12}>
+                          <List>
                             <ListItem>
                               <ListItemAvatar>
                                 <MenuBookIcon
                                   fontSize="large"
                                   style={{ color: "#FF4E00" }}
-                                />{" "}
+                                />
                               </ListItemAvatar>
                               <ListItemText
                                 primary={
@@ -226,7 +226,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -243,7 +242,7 @@ function Products() {
                                 <MenuBookIcon
                                   fontSize="large"
                                   style={{ color: "#FF4E00" }}
-                                />{" "}
+                                />
                               </ListItemAvatar>
                               <ListItemText
                                 primary={
@@ -251,7 +250,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -276,7 +274,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -301,7 +298,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -314,9 +310,10 @@ function Products() {
                               />
                             </ListItem>
                           </List>
-                        </Grid>
-                        <Grid item md={4} xs={12}>
-                          <List sx={{ width: "100%" }}>
+                        </Col>
+
+                        <Col md={4} sm={6} xs={12}>
+                          <List>
                             <ListItem>
                               <ListItemAvatar>
                                 <MenuBookIcon
@@ -330,7 +327,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -342,7 +338,6 @@ function Products() {
                                 }
                               />
                             </ListItem>
-
                             <ListItem>
                               <ListItemAvatar>
                                 <MenuBookIcon
@@ -356,7 +351,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -381,7 +375,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -406,7 +399,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -419,9 +411,10 @@ function Products() {
                               />
                             </ListItem>
                           </List>
-                        </Grid>
-                        <Grid item md={4} xs={12}>
-                          <List sx={{ width: "100%" }}>
+                        </Col>
+
+                        <Col md={4} sm={6} xs={12}>
+                          <List>
                             <ListItem>
                               <ListItemAvatar>
                                 <MenuBookIcon
@@ -435,7 +428,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -460,7 +452,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -485,7 +476,6 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -510,23 +500,21 @@ function Products() {
                                     variant="body2"
                                     style={{
                                       fontSize: "17px",
-
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
                                       fontFamily: "'Outfit', sans-serif",
                                     }}
                                   >
-                                    Free Entertainment
+                                    Stress Reduction
                                   </Typography>
                                 }
                               />
                             </ListItem>
                           </List>
-                        </Grid>
-                      </Grid>
+                        </Col>
+                      </Row>
                     </Collapse>
-
                     <Button
                       style={{
                         color: "#fff",
@@ -539,230 +527,199 @@ function Products() {
                     >
                       {expanded ? "Read Less" : "Read More"}
                     </Button>
-                  </div>
+                  </Container>
                 </div>
 
-                <div className="prodcutPageTop">
-                  <div className="filterBox">
-                    {/* Price */}
-                    <div className="priceFilter">
-                      <Typography
-                        style={{
-                          fontSize: "18px",
-                          padding: "5px",
-                          fontWeight: 700,
-                          color: "#414141",
-                        }}
-                      >
-                        Price
-                      </Typography>
-                      <div className="priceSlider">
-                        <Slider
-                          value={price}
-                          onChange={priceHandler}
-                          min={0}
-                          max={1000}
-                          step={700}
-                          valueLabelDisplay="auto"
-                          aria-labelledby="range-slider"
-                        />
-                      </div>
-                      <div className="priceSelectors">
-                        <div className="priceSelector">
-                          <Select
-                            value={price[0]}
-                            onChange={(e) =>
-                              setPrice([+e.target.value, price[1]])
-                            }
-                            className="priceOption"
-                            IconComponent={ArrowDropDownIcon}
-                            renderValue={(selected) =>
-                              selected !== "" ? selected : "min"
-                            } // Display "min" as default label
-                          >
-                            <MenuItem value={100} className="menu_item">
-                              100
-                            </MenuItem>
-                            <MenuItem value={200} className="menu_item">
-                              200
-                            </MenuItem>
-                            <MenuItem value={300} className="menu_item">
-                              300
-                            </MenuItem>
-                            <MenuItem value={400} className="menu_item">
-                              400
-                            </MenuItem>
-                            <MenuItem value={500} className="menu_item">
-                              500
-                            </MenuItem>
-                            <MenuItem value={600} className="menu_item">
-                              600
-                            </MenuItem>
-                            <MenuItem value={700} className="menu_item">
-                              700
-                            </MenuItem>
-                            <MenuItem value={800} className="menu_item">
-                              800
-                            </MenuItem>
-                            <MenuItem value={900} className="menu_item">
-                              900
-                            </MenuItem>
-                            <MenuItem value={1000} className="menu_item">
-                              1000
-                            </MenuItem>
-                            {/* Add more options as per your requirement */}
-                          </Select>
-                          <span className="toText">to</span>
-                          <Select
-                            value={price[1]}
-                            onChange={(e) =>
-                              setPrice([price[0], +e.target.value])
-                            }
-                            className="priceOption"
-                            IconComponent={ArrowDropDownIcon}
-                            renderValue={(selected) =>
-                              selected !== "" ? selected : "max"
-                            }
-                          >
-                            <MenuItem value={700} className="menu_item">
-                              700
-                            </MenuItem>
-                            <MenuItem value={200} className="menu_item">
-                              200
-                            </MenuItem>
-                            <MenuItem value={300} className="menu_item">
-                              300
-                            </MenuItem>
-                            <MenuItem value={400} className="menu_item">
-                              400
-                            </MenuItem>
-                            <MenuItem value={500} className="menu_item">
-                              500
-                            </MenuItem>
-                            <MenuItem value={600} className="menu_item">
-                              600
-                            </MenuItem>
-                            <MenuItem value={700} className="menu_item">
-                              700
-                            </MenuItem>
-                            <MenuItem value={800} className="menu_item">
-                              800
-                            </MenuItem>
-                            <MenuItem value={900} className="menu_item">
-                              900
-                            </MenuItem>
-
-                            {/* Add more options as per your requirement */}
-                          </Select>
+                <Container className="productPageTop">
+                  <Row>
+                    <Col md={3} sm={12} xs={12}>
+                      {/* Price Filter */}
+                      <div className="priceFilter">
+                        <Typography
+                          style={{
+                            fontSize: "18px",
+                            padding: "5px",
+                            fontWeight: 700,
+                            color: "#414141",
+                          }}
+                        >
+                          Price
+                        </Typography>
+                        <div className="priceSlider">
+                          <Slider
+                            value={price}
+                            onChange={priceHandler}
+                            min={0}
+                            max={1000}
+                            step={100}
+                            valueLabelDisplay="auto"
+                            aria-labelledby="range-slider"
+                          />
                         </div>
-                      </div>
-                    </div>
-
-                    <div className="filter_divider"></div>
-
-                    {/* Categories */}
-                    <div className="categoriesFilter">
-                      <Typography
-                        style={{
-                          fontSize: "18px",
-                          padding: "10px",
-                          fontWeight: 700,
-                          color: "#414141",
-                        }}
-                      >
-                        Categories
-                      </Typography>
-                      <ul className="categoryBox">
-                        {categories.map((category, index) => (
-                          <li className="category-link" key={index}>
-                            <label
-                              htmlFor={`category-${index}`}
-                              className="category-label"
+                        <Row className="priceSelectors">
+                          <Col xs={5}>
+                            <Select
+                              value={price[0]}
+                              onChange={(e) =>
+                                setPrice([+e.target.value, price[1]])
+                              }
+                              IconComponent={ArrowDropDownIcon}
+                              renderValue={(selected) =>
+                                selected !== "" ? selected : "min"
+                              }
                             >
-                              <input
-                                type="checkbox"
-                                id={`category-${index}`}
-                                className="category-checkbox"
-                                value={category}
-                                checked={category === selectedCategory}
-                                onChange={() => handleCategoryChange(category)}
-                              />
-                              {category}
-                            </label>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                              <MenuItem value={100}>100</MenuItem>
+                              <MenuItem value={200}>200</MenuItem>
+                              <MenuItem value={300}>300</MenuItem>
+                              <MenuItem value={400}>400</MenuItem>
+                              <MenuItem value={500}>500</MenuItem>
+                              <MenuItem value={600}>600</MenuItem>
+                              <MenuItem value={700}>700</MenuItem>
+                              <MenuItem value={800}>800</MenuItem>
+                              <MenuItem value={900}>900</MenuItem>
+                              <MenuItem value={1000}>1000</MenuItem>
+                            </Select>
+                          </Col>
+                          <Col xs={2} className="text-center">
+                            <span className="toText">to</span>
+                          </Col>
+                          <Col xs={5}>
+                            <Select
+                              value={price[1]}
+                              onChange={(e) =>
+                                setPrice([price[0], +e.target.value])
+                              }
+                              IconComponent={ArrowDropDownIcon}
+                              renderValue={(selected) =>
+                                selected !== "" ? selected : "max"
+                              }
+                            >
+                              <MenuItem value={200}>200</MenuItem>
+                              <MenuItem value={300}>300</MenuItem>
+                              <MenuItem value={400}>400</MenuItem>
+                              <MenuItem value={500}>500</MenuItem>
+                              <MenuItem value={600}>600</MenuItem>
+                              <MenuItem value={700}>700</MenuItem>
+                              <MenuItem value={800}>800</MenuItem>
+                              <MenuItem value={900}>900</MenuItem>
+                              <MenuItem value={1000}>1000</MenuItem>
+                            </Select>
+                          </Col>
+                        </Row>
+                      </div>
 
-                    <div className="filter_divider"></div>
-                    {/* Ratings */}
-                    <div className="ratingsFilter">
-                      <Typography
-                        style={{
-                          fontSize: "18px",
-                          padding: "10px",
-                          fontWeight: 700,
-                          color: "#414141",
-                        }}
-                      >
-                        Ratings Above
-                      </Typography>
-                      <RadioGroup
-                        value={selectedRating}
-                        onChange={handleRatingChange}
-                        row
-                        className="ratingsBox"
-                      >
-                        <FormControlLabel
-                          value="4"
-                          control={<Radio />}
-                          label="4★ & above"
-                        />
-                        <FormControlLabel
-                          value="3"
-                          control={<Radio />}
-                          label="3★ & above"
-                        />
-                        <FormControlLabel
-                          value="2"
-                          control={<Radio />}
-                          label="2★ & above"
-                        />
-                      </RadioGroup>
-                    </div>
-                    <div className="filter_divider"></div>
-                    {/* Clear Filters */}
-                  </div>
+                      <div className="filter_divider"></div>
 
-                  <div
-                    className={products.length < 2 ? "products1" : "products"}
-                  >
-                    {products &&
-                      products.map((product) => (
-                        <ProductCard key={product._id} product={product} />
-                      ))}
-                  </div>
-                </div>
+                      {/* Categories Filter */}
+                      <div className="categoriesFilter">
+                        <Typography
+                          style={{
+                            fontSize: "18px",
+                            padding: "10px",
+                            fontWeight: 700,
+                            color: "#414141",
+                          }}
+                        >
+                          Categories
+                        </Typography>
+                        <ul className="categoryBox">
+                          {categories.map((category, index) => (
+                            <li key={index}>
+                              <label
+                                htmlFor={`category-${index}`}
+                                className="category-label"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id={`category-${index}`}
+                                  value={category}
+                                  checked={category === selectedCategory}
+                                  onChange={() =>
+                                    handleCategoryChange(category)
+                                  }
+                                />
+                                {category}
+                              </label>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="filter_divider"></div>
+
+                      {/* Ratings Filter */}
+                      <div className="ratingsFilter">
+                        <Typography
+                          style={{
+                            fontSize: "18px",
+                            padding: "10px",
+                            fontWeight: 700,
+                            color: "#414141",
+                          }}
+                        >
+                          Ratings Above
+                        </Typography>
+                        <RadioGroup
+                          value={selectedRating}
+                          onChange={handleRatingChange}
+                          row
+                          className="ratingsBox"
+                        >
+                          <FormControlLabel
+                            value="4"
+                            control={<Radio />}
+                            label="4★ & above"
+                          />
+                          <FormControlLabel
+                            value="3"
+                            control={<Radio />}
+                            label="3★ & above"
+                          />
+                          <FormControlLabel
+                            value="2"
+                            control={<Radio />}
+                            label="2★ & above"
+                          />
+                        </RadioGroup>
+                      </div>
+                    </Col>
+
+                    <Col md={9} sm={12} xs={12}>
+                      <Row>
+                        {products &&
+                          products.map((product) => (
+                            <Col key={product._id} md={4} sm={12} xs={12}>
+                              <ProductCard product={product} />
+                            </Col>
+                          ))}
+                      </Row>
+                    </Col>
+                  </Row>
+                </Container>
 
                 {/* Pagination */}
 
-                <div className="paginationBox">
-                  <Pagination
-                    activePage={currentPage}
-                    itemsCountPerPage={resultPerPage}
-                    totalItemsCount={productsCount}
-                    onChange={setCurrentPageNoHandler}
-                    nextPageText="Next"
-                    prevPageText="Prev"
-                    firstPageText="First"
-                    lastPageText="Last"
-                    itemClass="page-item"
-                    linkClass="page-link"
-                    activeClass="pageItemActive"
-                    activeLinkClass="pageLinkActive"
-                  />
-                </div>
-              </div>
+                <Container className="paginationContainer">
+                  <Row>
+                    <Col xs={12} className="d-flex justify-content-center">
+                      <Pagination
+                        activePage={currentPage}
+                        itemsCountPerPage={resultPerPage}
+                        totalItemsCount={productsCount}
+                        onChange={setCurrentPageNoHandler}
+                        nextPageText="Next"
+                        prevPageText="Prev"
+                        firstPageText="First"
+                        lastPageText="Last"
+                        itemClass="page-item"
+                        linkClass="page-link"
+                        activeClass="pageItemActive"
+                        activeLinkClass="pageLinkActive"
+                      />
+                    </Col>
+                  </Row>
+                </Container>
+              </container-fluid>
             </>
           )}
         </>

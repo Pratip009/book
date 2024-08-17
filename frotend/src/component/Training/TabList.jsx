@@ -1,93 +1,120 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import SoftSkill from "./SoftSkill";
-import Student from "./Student";
-import "./TabStyles.css";
-import Parent from "./Parent";
-function CustomTabPanel(props) {
-  const { children, value, index, ...other } = props;
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is included
+import SoftSkill from './SoftSkill';
+import Student from './Student';
+import Parent from './Parent';
 
+function CustomTabPanel({ children, eventKey, activeKey }) {
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
+    <Tab.Pane eventKey={eventKey}>
+      {activeKey === eventKey && (
+        <div>
+          {children}
+        </div>
       )}
-    </div>
+    </Tab.Pane>
   );
 }
 
 CustomTabPanel.propTypes = {
   children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
+  eventKey: PropTypes.string.isRequired,
+  activeKey: PropTypes.string.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
 export default function TabList() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const [activeKey, setActiveKey] = useState('0');
 
   return (
-    <Box sx={{ width: "100%", backgroundColor: "white" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="full width tabs example"
-          variant="fullWidth"
-          TabIndicatorProps={{ style: { backgroundColor: "#003E90" } }}
-          style={{ backgroundColor: "#003E90" }}
-        >
-          <Tab
-            label="Soft Skills Workshop"
-            {...a11yProps(0)}
-            className="tabRoot"
-            classes={{ selected: "tabSelected" }}
-          />
-          <Tab
-            label="Students Workshop"
-            {...a11yProps(1)}
-            className="tabRoot"
-            classes={{ selected: "tabSelected" }}
-          />
-          <Tab
-            label="Parenting Workshop"
-            {...a11yProps(2)}
-            className="tabRoot"
-            classes={{ selected: "tabSelected" }}
-          />
-        </Tabs>
-      </Box>
-      <CustomTabPanel value={value} index={0}>
-        <SoftSkill />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <Student />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        <Parent />
-      </CustomTabPanel>
-    </Box>
+    <Container fluid>
+      <Row>
+        <Col>
+          <Tab.Container id="full-width-tabs" activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
+            <Nav
+              variant="tabs"
+              className="mb-3"
+              style={{
+                backgroundColor: '#003E90',
+                color: 'white',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-around', // Spread out the tabs evenly
+              }}
+            >
+              <Nav.Item>
+                <Nav.Link
+                  eventKey="0"
+                  style={{
+                    flex: 1,
+                    textAlign: 'center',
+                    color: activeKey === '0' ? 'white' : 'white',
+                    backgroundColor: activeKey === '0' ? 'orange' : '#003E90',
+                    border: 'none',
+                    borderRadius: '0',
+                    padding: '15px 12px',
+                    margin: '0 4px', // Margin between tabs
+                    textDecoration: activeKey === '0' ? 'none' : 'none', // No underline
+                    transition: 'background-color 0.3s, color 0.3s',
+                  }}
+                >
+                  Soft Skills Workshop
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  eventKey="1"
+                  style={{
+                    flex: 1,
+                    textAlign: 'center',
+                    color: activeKey === '1' ? 'white' : 'white',
+                    backgroundColor: activeKey === '1' ? 'orange' : '#003E90',
+                    border: 'none',
+                    borderRadius: '0',
+                    padding: '15px 12px',
+                    margin: '0 4px', 
+                    textDecoration: activeKey === '1' ? 'none' : 'none',
+                    transition: 'background-color 0.3s, color 0.3s',
+                  }}
+                >
+                  Students Workshop
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  eventKey="2"
+                  style={{
+                    flex: 1,
+                    textAlign: 'center',
+                    color: activeKey === '2' ? 'white' : 'white',
+                    backgroundColor: activeKey === '2' ? 'orange' : '#003E90',
+                    border: 'none',
+                    borderRadius: '0',
+                    padding: '15px 12px',
+                    margin: '0 4px', // Margin between tabs
+                    textDecoration: activeKey === '2' ? 'none' : 'none',
+                    transition: 'background-color 0.3s, color 0.3s',
+                  }}
+                >
+                  Parenting Workshop
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <Tab.Content>
+              <CustomTabPanel eventKey="0" activeKey={activeKey}>
+                <SoftSkill />
+              </CustomTabPanel>
+              <CustomTabPanel eventKey="1" activeKey={activeKey}>
+                <Student />
+              </CustomTabPanel>
+              <CustomTabPanel eventKey="2" activeKey={activeKey}>
+                <Parent />
+              </CustomTabPanel>
+            </Tab.Content>
+          </Tab.Container>
+        </Col>
+      </Row>
+    </Container>
   );
 }

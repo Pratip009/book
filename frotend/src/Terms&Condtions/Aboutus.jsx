@@ -26,12 +26,12 @@ import developerImg from "../Image/developer.png";
 import supportImg from "../Image/24-hours-support.png";
 import learning2Img from "../Image/learning2.png";
 import need2Img from "../Image/need2.png";
-import teamSpiritImg from "../Image/team-spirit.png";
+import teamSpiritImg from "../Image/team-spiri.png";
 const useStyles = makeStyles((theme) => ({
   image_about1: {
     width: "100%",
     height: "auto",
-    marginTop: "-50px",
+
     [theme.breakpoints.down("xs")]: {
       width: "100%",
       height: "auto",
@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     lineHeight: "1.6",
     textAlign: "justify",
+    fontFamily: "'Outfit', sans-serif",
     [theme.breakpoints.down("xs")]: {
       fontSize: "15px",
       lineHeight: "1.5",
@@ -61,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
   wishes: {
     display: "flex",
     alignItems: "flex-start",
+    fontFamily: "'Outfit', sans-serif",
     fontWeight: "500",
     margin: "0",
     padding: "0",
@@ -72,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
   founderName: {
     display: "flex",
     alignItems: "flex-start",
+    fontFamily: "'Outfit', sans-serif",
     fontWeight: "600",
     margin: "0",
     padding: "0",
@@ -81,9 +84,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
     },
   },
-  container: {
-    marginTop: "3rem",
-  },
+
   about_us: {
     paddingTop: "8rem",
     paddingBottom: "4rem",
@@ -96,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container_12: {
     textAlign: "center",
-    maxWidth: "80%",
+    maxWidth: "100%",
     overflow: "hidden",
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -218,23 +219,33 @@ const useStyles = makeStyles((theme) => ({
 
   traitCard: {
     borderRadius: "10px",
+    backgroundColor: "red",
     boxShadow: 3,
     padding: theme.spacing(2),
   },
   traitImage: {
     height: "100px",
+    [theme.breakpoints.down("xs")]: {
+      height: "70px !important", // Added !important
+    },
   },
   traitLetter: {
     color: "#FF4E00",
     fontSize: "24px",
     fontFamily: "'Outfit', sans-serif",
     fontWeight: "600",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "18px !important", // Added !important
+    },
   },
   traitText: {
     color: "#61677A",
     fontSize: "12px",
     fontFamily: "'Outfit', sans-serif",
     fontWeight: "600",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "10px !important",
+    },
   },
 }));
 
@@ -268,77 +279,74 @@ const About_UsPage = () => {
         <MetaData title={"About Us"} />
 
         <container-fluid className="about_ln">
-         <Container>
-         <Row className="align-items-center justify-content-center">
-            <Col xs="12" sm="12" md="4" className="mb-3">
-              <img
-                src={require("../Image/about/abb.png")}
-                alt="Learning needs"
-                className={classes.image_about}
-                style={{
-                  width: "100%",
-                  maxHeight: "400px",
-                  objectFit: "cover",
-                }}
-              />
-            </Col>
-            <Col
-              xs="12"
-              sm="12"
-              md="8"
-              className="d-flex flex-column justify-content-center align-items-center"
-              style={{ textAlign: "flex-start" }}
-            >
-              <div className="circle_text">
-                <h1
-                style={{
-                  textAlign: "left",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-                >
-                  About <span className="highlight">Learning Needs</span>
-                </h1>
-              </div>
-              <p
-                variant="body1"
-                style={{
-                  fontSize: "15px",
+          <Container>
+            <Row className="align-items-center justify-content-center">
+              <Col xs="12" sm="12" md="4" className="mb-3">
+                <img
+                  src={require("../Image/about/abb.png")}
+                  alt="Learning needs"
+                  className={classes.image_about}
+                  style={{
+                    width: "100%",
+                    maxHeight: "400px",
+                    objectFit: "cover",
+                  }}
+                />
+              </Col>
+              <Col
+                xs="12"
+                sm="12"
+                md="8"
+                className="d-flex flex-column justify-content-center align-items-center"
+                style={{ textAlign: "flex-start" }}
+              >
+                <div className="circle_text">
+                  <h1
+                    style={{
+                      textAlign: "left",
+                      fontSize: "36px",
+                      marginTop: "20px",
+                    }}
+                  >
+                    About <span className="highlight">Learning Needs</span>
+                  </h1>
+                </div>
+                <p
+                  variant="body1"
+                  style={{
+                    fontSize: "15px",
 
-                  fontWeight: "400",
-                  textAlign: "justify",
-                  fontFamily: "'Outfit', sans-serif",
-                }}
-              >
-                Learning Needs is a training & management consulting company
-                based in Kolkata in the lap of nature beside river Ganges,
-                India. Learning Needs offers a variety of boutique services,
-                tailored to each client's need. Our specialized expertise allows
-                the Individual, Institution, Schools and Organizations to
-                achieve their objectives; we are very much committed to the
-                success of our clients and their individual
-              </p>
-              <Button
-                style={{
-                  color: "#fff",
-                  backgroundColor: "#FF4E00",
-                  
-                  display: "block",
-                  width: "fit-content",
-                }}
-                variant="contained"
-              >
-                Read More..
-              </Button>
-            </Col>
-          </Row>
-         </Container>
+                    fontWeight: "400",
+                    textAlign: "justify",
+                    fontFamily: "'Outfit', sans-serif",
+                  }}
+                >
+                  Learning Needs is a training & management consulting company
+                  based in Kolkata in the lap of nature beside river Ganges,
+                  India. Learning Needs offers a variety of boutique services,
+                  tailored to each client's need. Our specialized expertise
+                  allows the Individual, Institution, Schools and Organizations
+                  to achieve their objectives; we are very much committed to the
+                  success of our clients and their individual
+                </p>
+                <Button
+                  style={{
+                    color: "#fff",
+                    backgroundColor: "#FF4E00",
+
+                    display: "block",
+                    width: "fit-content",
+                  }}
+                  variant="contained"
+                >
+                  Read More..
+                </Button>
+              </Col>
+            </Row>
+          </Container>
         </container-fluid>
 
-        <div
-          className="product_back"
-          style={{ backgroundColor: "#FFFFFF", width: "100%" }}
-        >
+        <div className="product_back" style={{ backgroundColor: "#FFFFFF" }}>
           <Container className={classes.container_12}>
             <div className="circle_text">
               <h1
@@ -354,7 +362,7 @@ const About_UsPage = () => {
 
             <Grid container spacing={3} style={{ marginTop: "2rem" }}>
               {traits.map((trait, index) => (
-                <Grid item xs={12} sm={4} md={2} key={index}>
+                <Grid item xs={6} sm={4} md={2} key={index}>
                   <Card className={classes.traitCard}>
                     <img
                       src={trait.src}
@@ -380,10 +388,9 @@ const About_UsPage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginBottom: "2rem",
               }}
             >
-              <Grid item xs={12} sm={6} md={5}>
+              <Grid item xs={4} sm={6} md={5}>
                 <img
                   src={learning2Img}
                   alt="Learning needs"
@@ -391,7 +398,7 @@ const About_UsPage = () => {
                 />
               </Grid>
 
-              <Grid item xs={12} sm={6} md={2}>
+              <Grid item xs={4} sm={6} md={2}>
                 <Card className={classes.traitCard}>
                   <img
                     src={supportImg}
@@ -405,7 +412,7 @@ const About_UsPage = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={12} sm={6} md={5}>
+              <Grid item xs={4} sm={6} md={5}>
                 <img
                   src={need2Img}
                   alt="Learning needs"
@@ -415,13 +422,12 @@ const About_UsPage = () => {
             </Grid>
           </Container>
         </div>
-        <Container className={classes.container_12} style={{ width: "90%" }}>
+        <Container className={classes.container_12}>
           <div className="circle_text">
             <h1
               style={{
                 textAlign: "center",
                 fontSize: "36px",
-                marginTop: "20px",
               }}
             >
               <span className="highlight">Our Team</span>
@@ -442,37 +448,38 @@ const About_UsPage = () => {
             their goals.
           </span>
           <div className="ourteam_back">
-            <div
-              style={{
-                maxWidth: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Grid
-                container
-                spacing={4}
-                justifyContent="center"
-                style={{ marginTop: "20px" }}
+            <Container>
+              <Row
+                className="g-4"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center", // This centers the text horizontally
+                  height: "100%", // Ensure the column takes full height if needed
+                }}
               >
-                <Grid item xs={12} sm={6}>
+                <Col md={8} sm={12} xs={12}>
                   <h2
                     style={{
                       textAlign: "start",
                       marginTop: "0",
                       marginBottom: "10px",
                       fontFamily: "'Outfit', sans-serif",
-                      fontSize: "24px", // Adjusted for responsiveness
+                      fontSize: "22px",
                       fontWeight: "700",
                       color: "#FF4E00",
                     }}
                   >
                     With us, you can build yourself to achieve your goals
                   </h2>
-                  <Typography
-                    variant="body1"
-                    className={classes.introText_about2}
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      fontFamily: "'Outfit', sans-serif",
+                      textAlign: "justify",
+                    }}
                   >
                     Learning Needs is committed to help its clients reach their
                     goals. By providing an innovative environment, which makes a
@@ -488,40 +495,53 @@ const About_UsPage = () => {
                     which reaches across a number of sectors and schools. But we
                     know that things change, and we are constantly striving to
                     adapt and improve.
-                  </Typography>
-
-                  <Button className={classes.buttonStyle} variant="contained">
+                  </p>
+                  <Button
+                    style={{
+                      textAlign: "start",
+                      backgroundColor: "#FF4E00",
+                      color: "#fff",
+                      fontFamily: "'Outfit', sans-serif",
+                      fontWeight: "600",
+                    }}
+                    variant="contained"
+                  >
                     Read More..
                   </Button>
-                </Grid>
+                </Col>
 
-                <Grid item xs={12} sm={6}>
+                <Col md={4} sm={12} xs={12}>
                   <img
                     src={teamSpiritImg}
                     alt="Learning needs"
                     className={classes.image_about}
                   />
-                </Grid>
-              </Grid>
-            </div>
+                </Col>
+              </Row>
+            </Container>
           </div>
 
           <div className="Our_Team">
             <OurTeam />
           </div>
-          <Container className={classes.container}>
-            <Grid container spacing={4} justifyContent="center">
-              <Grid item xs={12} sm={6}>
+          <Container>
+            <Row className="justify-content-center">
+              <Col
+                xs={12}
+                sm={6}
+                className="d-flex align-items-center justify-content-center"
+              >
                 <img
                   src={require("../Image/founder1.png")}
                   alt="Learning needs"
+                  style={{ height: "400px", width: "auto" }}
                   className={classes.image_about1}
                 />
-              </Grid>
-              <Grid item xs={12} sm={6}>
+              </Col>
+              <Col xs={12} sm={6}>
                 <div className="circle_text">
                   <h1 className={classes.founderMessage}>
-                    <span className="highlight"> Founder's Message</span>
+                    <span className="highlight">Founder's Message</span>
                   </h1>
                 </div>
                 <p className={classes.introText_about1}>
@@ -539,9 +559,10 @@ const About_UsPage = () => {
                 </p>
                 <p className={classes.wishes}>With all the best wishes!</p>
                 <p className={classes.founderName}>Rahul Singh</p>
-              </Grid>
-            </Grid>
+              </Col>
+            </Row>
           </Container>
+
           <div
             className="android_back"
             style={{ backgroundColor: "#FFFFFF", width: "100%" }}
@@ -572,7 +593,7 @@ const About_UsPage = () => {
                 <TestimonialSlider />
               </div>
 
-              <div style={{ marginTop: "6rem" }} className="play">
+              <div className="play">
                 <PlayApp />
               </div>
             </Container>
@@ -595,24 +616,24 @@ const About_UsPage = () => {
             <Faq />
           </Container>
 
-          <div className={classes.buttonContainer_about}>
-            <Link
-              to="/products"
-              style={{ textDecoration: "none", color: "none" }}
-            >
-              <Button variant="contained" className={classes.button1_about}>
-                Our Products
-              </Button>
-            </Link>
-            <Link
-              to="/contact"
-              style={{ textDecoration: "none", color: "none" }}
-            >
-              <Button variant="contained" className={classes.button2_about}>
-                Contact Us
-              </Button>
-            </Link>
-          </div>
+          <Container style={{marginTop:"1rem"}}>
+            <Row className="justify-content-center">
+              <Col xs="auto">
+                <Link to="/products" style={{ textDecoration: "none" }}>
+                  <Button variant="contained" className="button1_about">
+                    Our Products
+                  </Button>
+                </Link>
+              </Col>
+              <Col xs="auto">
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <Button variant="contained" className="button2_about">
+                    Contact Us
+                  </Button>
+                </Link>
+              </Col>
+            </Row>
+          </Container>
         </Container>
       </container-fluid>
     </>

@@ -6,13 +6,15 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Typography } from "@mui/material";
+import { Typography, Container } from "@mui/material";
+
 export default function Faq() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
   return (
-    <div className="FAq_image" >
+    <Container style={{padding:0,margin:0}}>
       <h1
         style={{
           textAlign: "start",
@@ -21,7 +23,6 @@ export default function Faq() {
       >
         FAQ - Training
       </h1>
-      {/* 1,2 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -32,7 +33,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -43,8 +43,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             What type of training and workshops do you provide?
@@ -69,7 +69,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -80,8 +79,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             Where and how do you deliver your training and workshop?
@@ -92,7 +91,6 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      {/* 3,4 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -103,7 +101,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -114,8 +111,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             Who can attend the training and workshop?
@@ -138,7 +135,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -149,8 +145,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             What are the topics covered in training and workshop?
@@ -164,7 +160,6 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      {/* 5,6 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -175,7 +170,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -186,8 +180,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             What is the cost involved during training and workshop? type of
@@ -208,7 +202,7 @@ export default function Faq() {
           color: "#FF4E00",
         }}
       >
-        FAQ- School
+        FAQ - School
       </h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
@@ -220,7 +214,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -231,8 +224,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             Who can open a school?
@@ -246,7 +239,6 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      {/* 7,8 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -257,7 +249,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -268,8 +259,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             Why choose Learning Needs?
@@ -295,7 +286,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -306,8 +296,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             How much area is required for opening a school?
@@ -317,14 +307,13 @@ export default function Faq() {
           <p className="Faq_desc">
             It's totally depended on your school model - Primary, Middle, or
             High School. Generally to open a Pre-schools you should have minimum
-            2000 to 25000 square feet space , for Primary school it's suggested
+            2000 to 25000 square feet space, for Primary school it's suggested
             5000 to 6000 square feet, and for High School according to the
             government affiliation norms.
           </p>
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      {/* 9,10 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -335,7 +324,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -346,8 +334,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             What is the investment to open a school?
@@ -372,7 +360,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -383,8 +370,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             How you will help in curriculum?
@@ -398,7 +385,14 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      {/* 11,12 */}
+      <h1
+        style={{
+          textAlign: "start",
+          color: "#FF4E00",
+        }}
+      >
+        FAQ - Products
+      </h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -409,7 +403,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -420,11 +413,11 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
-            Benefits of choosing Learning Needs for our School ?
+            Benefits of choosing Learning Needs for our School?
           </Typography>
         </AccordionSummary>
         <AccordionDetails className="desc_body">
@@ -445,7 +438,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -456,8 +448,8 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             Benefits for existing school?
@@ -473,7 +465,6 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      {/* 13,14 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -484,7 +475,6 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
@@ -495,28 +485,18 @@ export default function Faq() {
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             What is your consultancy fee?
           </Typography>
         </AccordionSummary>
         <AccordionDetails className="desc_body">
-          <p className="Faq_desc">
-            Discuss financials according to the project model.
-          </p>
+          <p className="Faq_desc">Discuss financials according to the project model.</p>
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <h1
-        style={{
-          textAlign: "start",
-          color: "#FF4E00",
-        }}
-      >
-        FAQ- Products
-      </h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -527,19 +507,18 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
             14.
-          </Typography>
+          </Typography>{" "}
           &nbsp;
           <Typography
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             What products you sell on Learning Needs Site?
@@ -555,7 +534,6 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      {/* 15,16 */}
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -566,19 +544,18 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
             15.
-          </Typography>
+          </Typography>{" "}
           &nbsp;
           <Typography
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             When will you ship my order?
@@ -604,19 +581,18 @@ export default function Faq() {
             style={{
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
-
               color: "#FF4E00",
             }}
           >
             16.
-          </Typography>
+          </Typography>{" "}
           &nbsp;
           <Typography
             style={{
               color: "#003E90",
               fontFamily: "'Outfit', sans-serif",
-
               fontWeight: 600,
+              textAlign:"justify",
             }}
           >
             Which carrier do you use to ship orders to your customers?
@@ -624,131 +600,10 @@ export default function Faq() {
         </AccordionSummary>
         <AccordionDetails className="desc_body">
           <p className="Faq_desc">
-            Orders are shipped via Fedex, DTDC, Speed Post. There are multiple
-            choices available in terms of courier service and speed post for
-            delivery options that are most convenient to you.
+            We use reliable carriers to ensure prompt and secure delivery.
           </p>
         </AccordionDetails>
       </Accordion>
-      &nbsp;
-      {/* 17,18 */}
-      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography
-            style={{
-              fontWeight: "600",
-              fontFamily: "'Outfit', sans-serif",
-
-              color: "#FF4E00",
-            }}
-          >
-            17.
-          </Typography>
-          &nbsp;
-          <Typography
-            style={{
-              color: "#003E90",
-              fontFamily: "'Outfit', sans-serif",
-
-              fontWeight: 600,
-            }}
-          >
-            Will you email me the corresponding package tracking number?
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails className="desc_body">
-          <p className="Faq_desc">
-            Yes, you will receive the tracking # after your order is shipped.
-          </p>
-        </AccordionDetails>
-      </Accordion>
-      &nbsp;
-      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography
-            style={{
-              fontWeight: "600",
-              fontFamily: "'Outfit', sans-serif",
-
-              color: "#FF4E00",
-            }}
-          >
-            18.
-          </Typography>
-          &nbsp;
-          <Typography
-            style={{
-              color: "#003E90",
-              fontFamily: "'Outfit', sans-serif",
-
-              fontWeight: 600,
-            }}
-          >
-            What are my payment options?
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails className="desc_body">
-          <p className="Faq_desc">
-            For the convenience of our customers, we have established
-            multi-options • Payment policy; which gives you the flexibility to
-            make a payment • We Accept all major credit cards such as, Visa,
-            Master Card, American Express, • Payment gateway, PayPal
-          </p>
-        </AccordionDetails>
-      </Accordion>
-      &nbsp;
-      {/* 19 */}
-      <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography
-            style={{
-              fontWeight: "600",
-              fontFamily: "'Outfit', sans-serif",
-
-              color: "#FF4E00",
-            }}
-          >
-            19.
-          </Typography>
-          &nbsp;
-          <Typography
-            style={{
-              color: "#003E90",
-              fontFamily: "'Outfit', sans-serif",
-
-              fontWeight: 600,
-            }}
-          >
-            What is your return/Refund policy?
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails className="desc_body">
-          <p className="Faq_desc">
-            We want you to be completely satisfied with your purchase. Hence, we
-            offer 30 days risk free full refund/replacement facility, in other
-            words you have 30 days privilege to examine the product and if for
-            any reason, you are not satisfied, a full refund of the merchandise
-            minus the shipping charges will be made to you, there will be no
-            questions asked or any lengthy procedure be followed. Customers have
-            30 days to return an item. Items on sale or special offers can be
-            returned only for exchange. After 30 days of your purchase, you can
-            return an item for replacement or exchange within 60 days of the
-            original date on the invoice.
-          </p>
-        </AccordionDetails>
-      </Accordion>
-    </div>
+    </Container>
   );
 }

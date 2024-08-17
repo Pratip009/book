@@ -1,18 +1,40 @@
-.tabRoot {
-    color: white !important; /* Default color for unselected tabs */
-    font-weight: 600 !important; /* Normal font weight for unselected tabs */
-  }
-  
-  
-  
-  .tabSelected {
-    color: white !important; /* White color for selected tab */
-    background-color: #FF4E00 !important; /* Background for selected tab */
-    font-weight: 600 !important; /* Bold font weight for selected tab */
-  }
-  
-  .tabSelected:hover {
-    color: white !important;
-    /* Keep the background color the same */
-  }
-  
+/* TabStyles.css */
+.custom-tabs {
+  background-color: #003E90; /* Deep blue background for tabs */
+  color: white;
+}
+
+.custom-tab {
+  flex: 1; /* Make tabs take up the full width */
+  text-align: center; /* Center text in tabs */
+  color: white; /* Default text color */
+  border: none; /* Remove border */
+  border-radius: 0; /* Remove border radius */
+  padding: 12px 0; /* Add padding for better spacing */
+  transition: background-color 0.3s, color 0.3s; /* Smooth color transitions */
+}
+
+.custom-tab.active-tab {
+  background-color: orange; /* Active tab color */
+  color: white; /* Text color for active tab */
+}
+
+.custom-tab:not(.active-tab):hover {
+  background-color: #002E6D; /* Darker blue for hover effect */
+  color: white; /* Text color on hover */
+}
+/* TabStyles.css */
+.custom-tab {
+  background-color: #003E90; /* Deep blue background for inactive tabs */
+  color: white; /* Font color for inactive tabs */
+  text-transform: none;
+}
+
+.custom-tab-active {
+  background-color: orange; /* Orange background for active tab */
+  color: white; /* Font color for active tab */
+}
+
+.tab-content img {
+  width: 100%; /* Ensure images are responsive */
+}
