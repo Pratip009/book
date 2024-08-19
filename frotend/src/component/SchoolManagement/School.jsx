@@ -104,7 +104,7 @@ const School = () => {
           </h1>
           <Container>
             <Row>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -148,7 +148,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -189,7 +189,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -233,7 +233,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -281,7 +281,7 @@ const School = () => {
           </Container>
           <Container style={{ marginTop: "1rem" }}>
             <Row>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -325,7 +325,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -369,7 +369,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -413,7 +413,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3">
+              <Col md="3" xs="6" className="mb-3 p-0">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -699,7 +699,7 @@ const School = () => {
             <Container>
       <Row>
         {supportItems.map((text, index) => (
-          <Col xs={12} md={6} key={index} className="mb-3">
+          <Col xs={12} md={6} key={index} className="mb-3 p-0">
             <div className="support-item d-flex align-items-start">
               <div className="icon-container">
                 <CheckBoxIcon className="custom-icon" />

@@ -111,14 +111,12 @@ box-shadow: rgb(255, 255, 255) !important;
 
 }
 
-.categoriesFilter{
-  width: 90%;
-}
+
 .categoryBox{
   display: flex;
   flex-direction: column;
   align-items:  flex-start;
-  width: 90%;
+  width: 100%;
 
 }
 .category-link {
@@ -159,7 +157,7 @@ box-shadow: rgb(255, 255, 255) !important;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 80%;
+  width: 100%;
 }
 .paginationBox {
   display: flex;
@@ -314,4 +312,98 @@ box-shadow: rgb(255, 255, 255) !important;
   .responsive-heading {
     font-size: 24px; /* Adjust this size as needed */
   }
+}
+
+
+/* Center the categoriesFilter container */
+.categoriesFilter {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+   /* Add padding for spacing */
+}
+
+/* Style for the list of categories */
+.categoryBox {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox to arrange items */
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Style individual category items */
+.category-item {
+  margin: 5px; /* Add margin between items */
+}
+
+/* Style the label and checkbox */
+.category-label {
+  display: flex;
+  align-items: center; /* Align checkbox and text vertically */
+}
+
+.category-label input {
+  margin-right: 5px; /* Add space between checkbox and label text */
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 576px) {
+  .categoriesFilter {
+    padding: 15px; /* Add padding for better spacing on small screens */
+  }
+
+  .categoryBox {
+    flex-direction: column; /* Stack items vertically on very small screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .category-item {
+    margin: 10px 0; /* Adjust margins for stacked items */
+  }
+}
+
+
+
+.paginationContainer {
+  padding: 0 15px; /* Add horizontal padding to prevent overflow */
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap if they don't fit */
+  justify-content: center; /* Center the pagination */
+}
+
+.page-item {
+  margin: 0 5px; /* Add a small margin between items */
+}
+
+.page-link {
+  padding: 0.5rem 0.75rem; /* Adjust padding for better spacing */
+}
+
+@media (max-width: 576px) { /* xs breakpoint */
+  .paginationContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .pagination {
+    font-size: 0.75rem; /* Reduce font size for small screens */
+  }
+
+  .page-item {
+    margin: 0 2px; /* Reduce margin for small screens */
+  }
+}
+.pageItemActive {
+  background-color: rgb(255, 255, 255); /* Set background color to black */
+  border-color: rgb(255, 255, 255); /* Ensure the border color matches */
+}
+
+.pageLinkActive {
+  color: white; /* Set the text color to white for contrast */
 }

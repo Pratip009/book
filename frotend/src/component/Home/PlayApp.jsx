@@ -44,37 +44,7 @@ export default function MediaControlCard() {
     },
   };
 
-  // Define responsive styles
-  const responsiveStyles = {
-    "@media (max-width: 899px)": {
-      appHeading: {
-        fontSize: "26px",
-      },
-      appSubheading: {
-        fontSize: "22px",
-      },
-      appDesc: {
-        fontSize: "14px",
-      },
-      appLinks1: {
-        width: "30%",
-      },
-    },
-    "@media (max-width: 499px)": {
-      appHeading: {
-        fontSize: "22px",
-      },
-      appSubheading: {
-        fontSize: "18px",
-      },
-      appDesc: {
-        fontSize: "13px",
-      },
-      appLinks1: {
-        width: "40%",
-      },
-    },
-  };
+ 
 
   return (
     <Container style={{padding:0}}>

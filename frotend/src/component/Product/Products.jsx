@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./Products.css";
 import "aos/dist/aos.css";
+
 import AOS from "aos";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layouts/loader/Loader";
@@ -624,7 +625,7 @@ function Products() {
                         </Typography>
                         <ul className="categoryBox">
                           {categories.map((category, index) => (
-                            <li key={index}>
+                            <li key={index} className="category-item">
                               <label
                                 htmlFor={`category-${index}`}
                                 className="category-label"
@@ -685,10 +686,16 @@ function Products() {
                     </Col>
 
                     <Col md={9} sm={12} xs={12}>
-                      <Row>
+                      <Row className="justify-content-center">
                         {products &&
                           products.map((product) => (
-                            <Col key={product._id} md={4} sm={12} xs={12}>
+                            <Col
+                              key={product._id}
+                              md={4}
+                              sm={6}
+                              xs={12}
+                              className="d-flex justify-content-center"
+                            >
                               <ProductCard product={product} />
                             </Col>
                           ))}
@@ -699,24 +706,23 @@ function Products() {
 
                 {/* Pagination */}
 
-                <Container className="paginationContainer">
-                  <Row>
-                    <Col xs={12} className="d-flex justify-content-center">
-                      <Pagination
-                        activePage={currentPage}
-                        itemsCountPerPage={resultPerPage}
-                        totalItemsCount={productsCount}
-                        onChange={setCurrentPageNoHandler}
-                        nextPageText="Next"
-                        prevPageText="Prev"
-                        firstPageText="First"
-                        lastPageText="Last"
-                        itemClass="page-item"
-                        linkClass="page-link"
-                        activeClass="pageItemActive"
-                        activeLinkClass="pageLinkActive"
-                      />
-                    </Col>
+                <Container fluid className="paginationContainer">
+                  <Row className="d-flex justify-content-center">
+                    <Pagination
+                      activePage={currentPage}
+                      itemsCountPerPage={resultPerPage}
+                      totalItemsCount={productsCount}
+                      onChange={setCurrentPageNoHandler}
+                      nextPageText="Next"
+                      prevPageText="Prev"
+                      firstPageText="First"
+                      lastPageText="Last"
+                      itemClass="page-item"
+                      linkClass="page-link"
+                      activeClass="pageItemActive"
+                      activeLinkClass="pageLinkActive"
+                      innerClass="pagination"
+                    />
                   </Row>
                 </Container>
               </container-fluid>

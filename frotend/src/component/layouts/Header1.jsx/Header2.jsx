@@ -32,7 +32,7 @@ function BasicExample() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-  const [navbarHeight, setNavbarHeight] = useState("3rem");
+  
   useEffect(() => {
     axios
       .get(
@@ -51,21 +51,7 @@ function BasicExample() {
 
     AOS.init({ duration: 2000 });
   }, []);
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 576) {
-        // Bootstrap xs breakpoint
-        setNavbarHeight("3rem"); // Reduced height for xs screens
-      } else {
-        setNavbarHeight("3rem"); // Default height for larger screens
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Call it once to set the initial height
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+ 
   const handleSearchButtonClick = () => {
     setSearchBarActive(!searchBarActive);
   };
@@ -100,7 +86,7 @@ function BasicExample() {
       style={{
         backgroundColor: "#003E90",
         fontFamily: "'Outfit', sans-serif",
-        height: navbarHeight,
+        
       }}
     >
       <Container fluid>

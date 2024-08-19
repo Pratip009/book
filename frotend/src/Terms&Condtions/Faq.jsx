@@ -14,7 +14,7 @@ export default function Faq() {
   }, []);
 
   return (
-    <Container style={{padding:0,margin:0}}>
+    <Container className="p-0">
       <h1
         style={{
           textAlign: "start",

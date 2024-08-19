@@ -448,7 +448,7 @@ const About_UsPage = () => {
             their goals.
           </span>
           <div className="ourteam_back">
-            <Container>
+            <Container className="p-0">
               <Row
                 className="g-4"
                 style={{
@@ -524,7 +524,7 @@ const About_UsPage = () => {
           <div className="Our_Team">
             <OurTeam />
           </div>
-          <Container>
+          <Container className="p-0">
             <Row className="justify-content-center">
               <Col
                 xs={12}
@@ -568,8 +568,8 @@ const About_UsPage = () => {
             style={{ backgroundColor: "#FFFFFF", width: "100%" }}
           >
             <Container
-              className={classes.container_12}
-              style={{ marginTop: "3rem", width: "100%" }}
+              
+              style={{ width: "100%",backgroundColor: "#FFFFFF" }}
             >
               {/* testimonials */}
 
@@ -589,23 +589,24 @@ const About_UsPage = () => {
                   <span className={classes.highlight}> experience</span>
                 </h1>
               </div>
-              <div>
+             
                 <TestimonialSlider />
-              </div>
+           
 
-              <div className="play">
+              
+            </Container>
+            <div className="play" >
                 <PlayApp />
               </div>
-            </Container>
           </div>
 
-          <Container className="faq" style={{ marginTop: "3rem" }}>
+          <Container className="faq p-0">
             <div className="circle_text">
               <h1
                 style={{
                   textAlign: "center",
                   fontSize: "36px",
-                  marginTop: "20px",
+                  marginTop: "20px"
                 }}
               >
                 Frequently Asked

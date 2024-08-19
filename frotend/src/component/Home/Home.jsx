@@ -7,7 +7,6 @@ import { Card, CardHeader, Avatar, IconButton } from "@mui/material";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import Icon from "@mui/material/Icon";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -17,11 +16,9 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";
 import HeroSlider from "./HeroSilder";
-import Grid from "@mui/material/Grid";
 import AOS from "aos";
 import List from "@mui/material/List";
 
-import Button from "@mui/material/Button";
 import TeamMessage from "./TeamMessage";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -30,7 +27,6 @@ import Box from "@mui/material/Box";
 import CardMedia from "@mui/material/CardMedia";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import HailIcon from "@mui/icons-material/Hail";
-import GoalsObjective from "./GoalsObjective";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
 import Welcome from "./Welcome";
@@ -47,7 +43,7 @@ import "./Home.css";
 import "aos/dist/aos.css";
 
 function Home() {
-  const [width, setWidth] = useState(window.innerWidth);
+ 
   const isMobile = useMediaQuery("(max-width: 600px)");
   const [notices, setNotices] = useState([]);
   const alert = useAlert();
@@ -345,6 +341,7 @@ function Home() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                marginTop:"2rem"
               }}
             >
               <Container>

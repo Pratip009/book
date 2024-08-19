@@ -30,7 +30,7 @@ export default function TabList() {
   return (
     <Container fluid>
       <Row>
-        <Col>
+        <Col className='p-0'>
           <Tab.Container id="full-width-tabs" activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
             <Nav
               variant="tabs"

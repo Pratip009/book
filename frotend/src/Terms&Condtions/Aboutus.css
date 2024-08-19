@@ -99,6 +99,7 @@ body {
 
 @media (max-width: 576px) { /* For xs screens */
   .responsive-img {
-    max-height: 200px; /* Adjust this value for smaller screens */
+    height: 150px; /* Adjust this value for smaller screens */
+    object-fit: cover;
   }
 }
