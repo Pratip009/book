@@ -25,15 +25,12 @@ export default function Footer() {
       >
         <section className="d-flex justify-content-center justify-content-lg-between p-4 social-networks"></section>
 
-        <section
-          className="d-flex justify-content-center justify-content-lg-between p-4"
-          style={{ padding: 0, margin: 0 }}
-        >
-          <MDBContainer className="text-center text-md-start mt-1">
-            <MDBRow className="mt-3">
-              <MDBCol md="4" lg="4" xl="4" xs="4" className="mx-auto mb-4">
-                <MDBContainer>
-                  <MDBNavbarBrand href="#">
+        <section className="d-flex justify-content-center justify-content-lg-between p-4">
+          <MDBContainer className="text-center text-md-center mt-1 p-0">
+            <MDBRow className="mt-3 p-0">
+              <MDBCol md="4" lg="4" xl="4" xs="4" className="mb-4 p-0">
+                <MDBContainer className="m-0 p-0">
+                  <MDBNavbarBrand href="/">
                     <img
                       src={logo}
                       height="30"
@@ -103,108 +100,116 @@ export default function Footer() {
                 </MDBContainer>
               </MDBCol>
 
-              <MDBCol md="6" lg="6" xl="6" xs="6" className="mx-auto mb-4">
+              <MDBCol md="6" lg="6" xl="6" xs="6" className="mb-4  p-0">
                 <MDBRow>
-                  <MDBCol>
+                  <MDBCol style={{ textAlign: "center" }}>
                     <h6
-                      className="fw-bold mb-4 text-start"
+                      className="fw-bold mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
+                        textAlign: "center",
                       }}
                     >
                       Help
                     </h6>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Track Order
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         FAQs
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Cancel Order
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Return Order
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Warranty Info
                       </a>
                     </p>
                   </MDBCol>
-                  <MDBCol>
+
+                  <MDBCol style={{ textAlign: "center" }}>
                     <h6
-                      className="fw-bold mb-4 text-start"
+                      className="fw-bold mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
+                        textAlign: "center",
                       }}
                     >
                       Policies
                     </h6>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Return Policy
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Security
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Sitemap
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Privacy Policy
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         T&C
                       </a>
                     </p>
                   </MDBCol>
-                  <MDBCol>
+
+                  <MDBCol style={{ textAlign: "center" }}>
                     <h6
-                      className="fw-bold mb-4 text-start"
-                     
+                      className="fw-bold mb-4"
+                      style={{
+                        textDecoration: "underline",
+                        textDecorationColor: "#003E90",
+                        textAlign: "center",
+                      }}
                     >
                       Company
                     </h6>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         About Us
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Contact Us
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Service Centres
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Work With Us
                       </a>
                     </p>
-                    <p class="text-start">
+                    <p>
                       <a href="#!" className="footer_links">
                         Courses
                       </a>
@@ -213,13 +218,7 @@ export default function Footer() {
                 </MDBRow>
               </MDBCol>
 
-              <MDBCol
-                md="2"
-                lg="2"
-                xl="2"
-                xs="2"
-                className="mx-auto mb-md-0 mb-4"
-              >
+              <MDBCol md="2" lg="2" xl="2" xs="2" className="mb-md-0 mb-4 p-0">
                 <h6 className="fw-bold mb-4">Newsletter</h6>
                 <MDBInput
                   contrast

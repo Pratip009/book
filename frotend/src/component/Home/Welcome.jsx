@@ -18,11 +18,12 @@ export default function Wellcome() {
       </h3>
 
       <p
-        className="app_desc"
+        
         style={{
           fontSize: "15px",
                  fontFamily: "'Outfit', sans-serif",
                  color: "black",
+                 textAlign:"justify"
         }}
       >
         Necessity is the Mother of Invention, and this proverb perfectly

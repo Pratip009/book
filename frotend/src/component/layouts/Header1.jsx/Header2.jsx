@@ -32,10 +32,12 @@ function BasicExample() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-
+  const [navbarHeight, setNavbarHeight] = useState("3rem");
   useEffect(() => {
     axios
-      .get("https://learningneeds-strapi-3ylt.onrender.com/api/phoneand-emails")
+      .get(
+        "https://heroku-learningneeds-strapi.onrender.com/api/phoneand-emails"
+      )
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
         if (data) {
@@ -49,7 +51,21 @@ function BasicExample() {
 
     AOS.init({ duration: 2000 });
   }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 576) {
+        // Bootstrap xs breakpoint
+        setNavbarHeight("3rem"); // Reduced height for xs screens
+      } else {
+        setNavbarHeight("3rem"); // Default height for larger screens
+      }
+    };
 
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call it once to set the initial height
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const handleSearchButtonClick = () => {
     setSearchBarActive(!searchBarActive);
   };
@@ -80,89 +96,90 @@ function BasicExample() {
     <>
       {/* First Navbar Section */}
       <Navbar
-        expand="lg"
-        style={{
-          backgroundColor: "#003E90",
-          fontFamily: "'Outfit', sans-serif",
-        }}
-      >
-        <Container fluid>
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="d-flex justify-content-between align-items-center"
-          >
-            <Nav className="d-flex align-items-center">
-              <Nav.Link
-                href="#"
-                className="d-flex align-items-center"
+      expand="lg"
+      style={{
+        backgroundColor: "#003E90",
+        fontFamily: "'Outfit', sans-serif",
+        height: navbarHeight,
+      }}
+    >
+      <Container fluid>
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className="d-flex justify-content-between align-items-center"
+        >
+          <Nav className="d-flex align-items-center">
+            <Nav.Link
+              href="#"
+              className="d-flex align-items-center"
+              style={{
+                color: "white",
+                fontFamily: "'Outfit', sans-serif",
+                textDecoration: "none",
+              }}
+            >
+              <FaPhoneAlt
                 style={{
                   color: "white",
-                  fontFamily: "'Outfit', sans-serif",
-                  textDecoration: "none",
+                  marginRight: "0.5rem",
+                  fontSize: "1.2rem",
                 }}
-              >
-                <FaPhoneAlt
-                  style={{
-                    color: "white",
-                    marginRight: "0.5rem",
-                    fontSize: "1.2rem",
-                  }}
-                />
-                <span>{phone}</span>
-              </Nav.Link>
-            </Nav>
-            <Nav className="d-flex align-items-center">
-              <Nav.Link
-                href="#"
-                className="d-flex align-items-center me-3 d-none d-lg-flex"
+              />
+              <span>{phone}</span>
+            </Nav.Link>
+          </Nav>
+          <Nav className="d-flex align-items-center">
+            <Nav.Link
+              href="#"
+              className="d-flex align-items-center me-3 d-none d-lg-flex"
+              style={{
+                color: "white",
+                fontFamily: "'Outfit', sans-serif",
+                textDecoration: "none",
+              }}
+            >
+              <FaEnvelope
                 style={{
                   color: "white",
-                  fontFamily: "'Outfit', sans-serif",
-                  textDecoration: "none",
+                  marginRight: "0.5rem",
+                  fontSize: "1.2rem",
                 }}
-              >
-                <FaEnvelope
+              />
+              <span>{email}</span>
+            </Nav.Link>
+            {isAuthenticated ? (
+              <Link to="/account">
+                <Button
                   style={{
+                    backgroundColor: "#FF4E00",
                     color: "white",
-                    marginRight: "0.5rem",
-                    fontSize: "1.2rem",
+                    fontFamily: "'Outfit', sans-serif",
                   }}
-                />
-                <span>{email}</span>
-              </Nav.Link>
-              {isAuthenticated ? (
-                <Link to="/account">
-                  <Button
-                    style={{
-                      backgroundColor: "#FF4E00",
-                      color: "white",
-                      fontFamily: "'Outfit', sans-serif",
-                    }}
-                    size="sm"
-                  >
-                    My Account
-                  </Button>
-                </Link>
-              ) : (
-                <Link to="/signup">
-                  <Button
-                    style={{
-                      backgroundColor: "#FF4E00",
-                      color: "white",
-                      fontFamily: "'Outfit', sans-serif",
-                    }}
-                    size="sm"
-                  >
-                    Sign Up
-                  </Button>
-                </Link>
-              )}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+                  size="sm"
+                >
+                  My Account
+                </Button>
+              </Link>
+            ) : (
+              <Link to="/signup">
+                <Button
+                  style={{
+                    backgroundColor: "#FF4E00",
+                    color: "white",
+                    fontFamily: "'Outfit', sans-serif",
+                  }}
+                  size="sm"
+                >
+                  Sign Up
+                </Button>
+              </Link>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
-      <Navbar bg="light" data-bs-theme="light" expand="lg">
+      <Navbar bg="light" data-bs-theme="light" expand="lg" style={{padding:0}}>
         <Container fluid>
           <Navbar.Brand href="/">
             <img
@@ -172,7 +189,7 @@ function BasicExample() {
               style={{
                 width: "200px",
                 maxWidth: "100%",
-                height: "auto",
+                height: "auto"
               }}
             />
             <img

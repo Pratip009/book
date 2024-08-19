@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
     height: "calc(80vh)",
     width: "100%",
     position: "relative",
-    [theme.breakpoints.down("sm")]: {
-      height: "50vh",
+    [theme.breakpoints.down("xs")]: {
+      height: "20vh",
     },
   },
   slideContent: {

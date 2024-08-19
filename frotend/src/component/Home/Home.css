@@ -275,7 +275,6 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.8rem;
-  margin: 0 1.8rem;
   max-width: 100%;
 }
 
@@ -320,10 +319,6 @@ p {
     height: 5px;
   }
 
-  .trending-products {
-    gap: 1rem;
-    margin: 0 1rem;
-  }
 
   .background_image {
     margin-bottom: 2rem; /* Add margin-bottom for mobile view */

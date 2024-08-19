@@ -26,18 +26,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "300px",
     height: "fit-content",
-    margin: theme.spacing(2),
+   
     backgroundColor: "#ffffff",
     border: "1px solid #E3E3E3",
     borderRadius: "12px",
     cursor: "pointer",
-    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+   
     transition: "transform 0.3s, box-shadow 0.3s, border 0.3s",
     position: "relative",
-    "&:hover": {
-      transform: "translateY(-8px)",
-      boxShadow: "0 8px 16px rgba(0, 62, 144, 0.4), 0 8px 16px rgba(255, 78, 0, 0.4)",
-    },
+    
     [theme.breakpoints.down(767)]: {
       width: "90%",
       margin: theme.spacing(1),
@@ -334,7 +331,7 @@ const ProductCard = ({ product }) => {
             />
           </CardMedia>
           <CardContent>
-            <Typography variant="body2">Product details loading...</Typography>
+            <Typography variant="body2">Product details loading..</Typography>
           </CardContent>
         </CardContent>
       </Card>

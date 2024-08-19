@@ -1,10 +1,9 @@
 import axios from "axios";
 
-const BASE_URL = "https://learningneeds-strapi-3ylt.onrender.com/api";
-// https://learningneeds-strapi-3ylt.onrender.com/
+const BASE_URL = "https://heroku-learningneeds-strapi.onrender.com/api";
 
 const API_KEY =
-  "78087e4cc1ed860b9c370df71538479f0261fb207a280bd8465165ebf7d60e1fec8ec9d0527f6fda6e1313fb3ff0489c1205ffca4783b4aa4d9975c1dc9b818b408a2cc7f5f0a2a68503e2e98d5721c885247beada154aa2eb89762e90e2689bfb43ffed80822bdb14675065f01d767dfd3a4e0485ff4489e2ce7cafbf6ee023";
+  "527b350af5c9db6a697d08ba90bca7a4d602b40f1a5ef5cb1b61bee9912e5d13c1350307c2b77bac04dfb020407f9d9cc5ec33c1d7f84f3f87910f68e23bd084ed39b1ce8144ca41406c1c2ab0cbb89122022de6f16def607d92914f29e2023db91d60eddcdf9c5e8dd8b8538fe9882f222541f5732e43f5287d2d05286a55f3";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -20,5 +19,5 @@ export const getPhoneEmail = () => axiosInstance.get("/phoneand-emails");
 export const getTeam = () => axiosInstance.get("/teams?populate=*");
 export const getTestimonal = () =>
   axiosInstance.get("/testimonials?populate=*");
-export const getNotice = () => axiosInstance.get("/noticeboards");
-export const getPdfs = () => axiosInstance.get("/pdfs?populate=*");
+export const getNotice = () => axiosInstance.get("/noticeboards")
+export const getPdfs = () => axiosInstance.get("/pdfs?populate=*")

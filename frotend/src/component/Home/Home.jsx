@@ -329,12 +329,12 @@ function Home() {
                   </span>
                 </Col>
               </Row>
-              <div className="trending-products">
+              <Container className="trending-products">
                 {products &&
                   products.map((product) => (
                     <ProductCard key={product._id} product={product} />
                   ))}
-              </div>
+              </Container>
             </Container>
 
             <div
