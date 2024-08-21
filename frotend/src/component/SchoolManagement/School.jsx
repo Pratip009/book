@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 
 import Card from "react-bootstrap/Card";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import schoolImage from '../../Image/schooln.jpeg';
+import schoolImage from "../../Image/schooln.jpeg";
 
 import "./Schools.css";
 import { Col, Container, Row } from "react-bootstrap";
@@ -27,27 +27,18 @@ const School = () => {
   return (
     <container-fluid>
       <container-fluid>
-        <img 
-         src={schoolImage}
-         alt="School"
-          className="responsive-img" />
+        <img src={schoolImage} alt="School" className="responsive-img" />
       </container-fluid>
-      <div
-      
-        style={{ display: "flex", width: "100%" }}
-      >
+      <div style={{ display: "flex", width: "100%" }}>
         {/* <MetaData title={"Training"} /> */}
 
         <Container>
           <div className="schoolbg">
-            <h1
-              style={{
-                textAlign: "start",
-                fontSize: "36px",
-              }}
-            >
-              <span className="highlight">School Management Service</span>
-            </h1>
+            <div className="circle_text">
+              <h1>
+                <span className="highlight">School Management Service</span>{" "}
+              </h1>
+            </div>
             <p
               style={{
                 fontFamily: "'Outfit', sans-serif",
@@ -91,20 +82,15 @@ const School = () => {
             </p>
           </div>
 
-        
-          <h1
-            style={{
-              textAlign: "start",
-              fontSize: "36px",
-              marginTop: "20px",
-            }}
-          >
-            We Help People to
-            <span className="highlight"> Start Their Own School</span>
-          </h1>
+          <div className="circle_text">
+            <h1>
+              We Help People to
+              <span className="highlight"> Start Their Own School</span>{" "}
+            </h1>
+          </div>
           <Container>
             <Row>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -148,7 +134,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -189,7 +175,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -233,7 +219,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -281,7 +267,7 @@ const School = () => {
           </Container>
           <Container style={{ marginTop: "1rem" }}>
             <Row>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -325,7 +311,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -369,7 +355,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -413,7 +399,7 @@ const School = () => {
                   </Row>
                 </Card>
               </Col>
-              <Col md="3" xs="6" className="mb-3 p-0">
+              <Col md="3" xs="6" className="mb-3 p-1">
                 <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
@@ -459,15 +445,12 @@ const School = () => {
               </Col>
             </Row>
           </Container>
-          <h1
-            style={{
-              textAlign: "start",
-              fontSize: "36px",
-              marginTop: "2rem",
-            }}
-          >
-            Starting a<span className="highlight"> New School!</span>
-          </h1>
+
+          <div className="circle_text">
+            <h1>
+              Starting a<span className="highlight"> New School!</span>{" "}
+            </h1>
+          </div>
           <span
             style={{
               fontFamily: "'Outfit', sans-serif",
@@ -517,16 +500,11 @@ const School = () => {
             </Grid>
           </div>
 
-          <h1
-            style={{
-              textAlign: "start",
-              fontSize: "36px",
-              marginTop: "2rem",
-            }}
-          >
-            <span className="highlight"> New Start-up School</span>
-          </h1>
-
+          <div className="circle_text">
+            <h1>
+              <span className="highlight"> New Start-up School</span>{" "}
+            </h1>
+          </div>
           <Grid
             container
             rowSpacing={1}
@@ -621,21 +599,18 @@ const School = () => {
             </Grid>
           </Grid>
 
-          <h1
-            style={{
-              textAlign: "start",
-              fontSize: "36px",
-              marginTop: "2rem",
-            }}
-          >
-            <span className="highlight">For Existing Schools</span>
-          </h1>
+         
+          <div className="circle_text">
+            <h1>
+              <span className="highlight">For Existing Schools</span>{" "}
+            </h1>
+          </div>
           <p
             style={{
               fontFamily: "'Outfit', sans-serif",
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "17px",
+              fontSize: "17px"
             }}
           >
             Learning Needs provides all levels of support for schools leading up
@@ -697,19 +672,19 @@ const School = () => {
             </h1>
             <p>Team can also assist with:</p>
             <Container>
-      <Row>
-        {supportItems.map((text, index) => (
-          <Col xs={12} md={6} key={index} className="mb-3 p-0">
-            <div className="support-item d-flex align-items-start">
-              <div className="icon-container">
-                <CheckBoxIcon className="custom-icon" />
-              </div>
-              <p style={{ margin: 0 }}>{text}</p>
-            </div>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+              <Row>
+                {supportItems.map((text, index) => (
+                  <Col xs={12} md={6} key={index} className="mb-3 p-0">
+                    <div className="support-item d-flex align-items-start">
+                      <div className="icon-container">
+                        <CheckBoxIcon className="custom-icon" />
+                      </div>
+                      <p style={{ margin: 0 }}>{text}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
           </Container>
         </Container>
       </div>

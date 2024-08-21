@@ -135,17 +135,12 @@ function Products() {
                 </container-fluid>
                 <div className="productBack">
                   <Container>
-                    <h1
-                      style={{
-                        textAlign: "start",
-                        fontSize: "36px",
-                        marginTop: "20px",
-                      }}
-                      className="responsive-heading"
-                    >
-                      Why <span className="highlight">book Reading</span> is
-                      important
-                    </h1>
+                    <div className="circle_text">
+                      <h1>
+                        Why <span className="highlight">book Reading</span> is
+                        important{" "}
+                      </h1>
+                    </div>
                     <span
                       style={{
                         fontFamily: "'Outfit', sans-serif",
@@ -186,17 +181,12 @@ function Products() {
                         imagination amongst many other benefits.
                       </span>
 
-                      <h1
-                        style={{
-                          textAlign: "start",
-                          fontSize: "36px",
-                          marginTop: "20px",
-                        }}
-                        className="responsive-heading"
-                      >
-                        Benefits of{" "}
-                        <span className="highlight">Reading Books</span>
-                      </h1>
+                      <div className="circle_text">
+                        <h1>
+                          Benefits of{" "}
+                          <span className="highlight">Reading Books</span>{" "}
+                        </h1>
+                      </div>
                       <span
                         style={{
                           fontSize: "17px",
@@ -535,6 +525,7 @@ function Products() {
                   <Row>
                     <Col md={3} sm={12} xs={12}>
                       {/* Price Filter */}
+                      <div className="filter_divider"></div>
                       <div className="priceFilter">
                         <Typography
                           style={{
@@ -683,6 +674,7 @@ function Products() {
                           />
                         </RadioGroup>
                       </div>
+                      <div className="filter_divider"></div>
                     </Col>
 
                     <Col md={9} sm={12} xs={12}>
@@ -694,8 +686,8 @@ function Products() {
                               md={4}
                               sm={6}
                               xs={12}
-                              className="d-flex justify-content-center"
-                            >
+                              className="d-flex justify-content-center p-3"
+                              >
                               <ProductCard product={product} />
                             </Col>
                           ))}

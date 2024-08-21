@@ -5,7 +5,8 @@ import { useHistory } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import ContactImage from "../Image/cont1211.png";
+import ContactImage from "../Image/cont12112.png";
+import "./Contact.css";
 const useStyles = makeStyles((theme) => ({
   root_contactus: {
     padding: "8rem 2rem",
@@ -236,107 +237,99 @@ const ContactForm = () => {
           <Container>
             <Row>
               <Col xs={12} md={6} className="mx-auto">
-                <h1
-                  style={{
-                    textAlign: "center",
-                    fontSize: "36px",
-                    marginTop: "20px",
-                  }}
-                >
-                  <span className="highlight">Contact Us</span>
-                </h1>
+                <div className="circle_text">
+                  <h1>
+                    <span className="highlight">Contact Us</span>{" "}
+                  </h1>
+                </div>
+                <div style={{ padding: ".5rem" }}>
+                
 
-                <hr style={{ borderColor: "#FF4E00" }} />
-
-                <h2
-                  className="blog-title"
-                  style={{
-                    fontSize: "36px",
-                    fontWeight: "500",
-                    color: "#FF4E00",
-                  }}
-                >
-                  Need Help?
-                </h2>
-
-                <p style={{ fontFamily: "'Outfit', sans-serif" }}>
-                  Catch us anytime you want? Fill out our support form below,
-                  and we'll be in touch shortly.
-                </p>
-
-                <address>
-                  <p style={{ fontFamily: "'Outfit', sans-serif" }}>
-                    <strong>Learning Needs</strong>
-                    <br />
-                    Kolkata
-                    <br />
-                    West Bengal
-                    <br />
-                    India
-                  </p>
-                </address>
-
-                <p style={{ fontFamily: "'Outfit', sans-serif" }}>
-                  We have live chat available, look for the chat icon in the
-                  lower right-hand corner of this page. If it isn’t there, then
-                  give us a call at{" "}
-                  <strong
+                  <h2
+                    className="blog-title"
                     style={{
-                      textDecoration: "underline",
-                      cursor: "pointer",
+                      fontSize: "23px",
+                      fontWeight: "500",
+                      color: "#FF4E00",
                     }}
-                    onClick={handleCall}
                   >
-                    8240554890
-                  </strong>
-                  .
-                </p>
+                    Need Help?
+                  </h2>
 
-                <div className="d-flex justify-content-between mt-4">
-                  <a href="#issue-select" style={{ textDecoration: "none" }}>
+                  <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                    Catch us anytime you want? Fill out our support form below,
+                    and we'll be in touch shortly.
+                  </p>
+
+                  <address>
+                    <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                      <strong>Learning Needs</strong>
+                      <br />
+                      Kolkata
+                      <br />
+                      West Bengal
+                      <br />
+                      India
+                    </p>
+                  </address>
+
+                  <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                    We have live chat available, look for the chat icon in the
+                    lower right-hand corner of this page. If it isn’t there,
+                    then give us a call at{" "}
+                    <strong
+                      style={{
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                      }}
+                      onClick={handleCall}
+                    >
+                      8240554890
+                    </strong>
+                    .
+                  </p>
+
+                  <div className="d-flex justify-content-between mt-4">
+                    <a href="#issue-select" style={{ textDecoration: "none" }}>
+                      <Button
+                        variant="primary"
+                        style={{
+                          backgroundColor: "#003E90",
+                          color: "white",
+                          fontFamily: "'Outfit', sans-serif",
+                        }}
+                      >
+                        Support Form
+                      </Button>
+                    </a>
+
                     <Button
                       variant="primary"
+                      onClick={handleCall}
                       style={{
-                        backgroundColor: "#003E90",
+                        backgroundColor: "#FF4E00",
                         color: "white",
                         fontFamily: "'Outfit', sans-serif",
                       }}
                     >
-                      Support Form
+                      Call Us
                     </Button>
-                  </a>
+                  </div>
 
-                  <Button
-                    variant="primary"
-                    onClick={handleCall}
-                    style={{
-                      backgroundColor: "#FF4E00",
-                      color: "white",
-                      fontFamily: "'Outfit', sans-serif",
-                    }}
-                  >
-                    Call Us
-                  </Button>
+                  <hr style={{ borderColor: "#FF4E00" }} />
                 </div>
-
-                <hr style={{ borderColor: "#FF4E00" }} />
               </Col>
               <Col xs={12} md={6} className="mx-auto">
-                <div style={{ padding: "1rem" }}>
-                  <h1
-                    style={{
-                      textAlign: "center",
-                      fontSize: "36px",
-                      marginTop: "20px",
-                      fontFamily: "'Outfit', sans-serif",
-                    }}
-                  >
-                    <span className="highlight">Support Form</span>
-                  </h1>
+                <div style={{ padding: ".5rem" }}>
+                  <div className="circle_text">
+                    <h1>
+                      <span className="highlight">Support Form</span>{" "}
+                    </h1>
+                  </div>
                   <p
                     style={{
                       textAlign: "center",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "'Outfit', sans-serif"
                     }}
                   >
                     Need a quicker answer? Look for our chat icon on the right
@@ -413,7 +406,7 @@ const ContactForm = () => {
                         width: "100%",
                         backgroundColor: "#003E90",
                         color: "white",
-                        marginTop: "10px"
+                        marginTop: "10px",
                       }}
                     >
                       Submit

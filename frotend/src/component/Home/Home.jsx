@@ -237,7 +237,7 @@ function Home() {
                     <Card
                       sx={{
                         maxWidth: 650,
-                        margin: "0",
+                        margin: "0"
                       }}
                     >
                       <Box sx={{ position: "relative" }}>

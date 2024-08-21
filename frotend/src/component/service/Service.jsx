@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    objectPosition: "center",
+    objectPosition: "center"
   },
 }));
 const Service = () => {
@@ -56,7 +56,7 @@ const Service = () => {
           </div>
           <p
             style={{
-              fontSize: "23px",
+              fontSize: {xs:"15px", sm:"23px"},
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
             }}

@@ -4,25 +4,25 @@ import "./Training.css";
 import { Grid } from "@material-ui/core";
 import TabList from "./TabList";
 import StarIcon from "@mui/icons-material/Star";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "react-bootstrap";
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
-    width: '100%',
-    height: '400px',
-    overflow: 'hidden',
-    [theme.breakpoints.down('sm')]: {
-      height: '200px', // Adjust height for small screens
+    width: "100%",
+    height: "400px",
+    overflow: "hidden",
+    [theme.breakpoints.down("sm")]: {
+      height: "200px", // Adjust height for small screens
     },
-    [theme.breakpoints.down('xs')]: {
-      height: '150px', // Adjust height for extra small screens
+    [theme.breakpoints.down("xs")]: {
+      height: "150px", // Adjust height for extra small screens
     },
   },
   image: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    objectPosition: 'center',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
   },
 }));
 const Training = () => {
@@ -33,13 +33,13 @@ const Training = () => {
     >
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={12}>
-        <div className={classes.imageContainer}>
-      <img
-        src={require('../../Image/trA011.png')}
-        alt="About"
-        className={classes.image}
-      />
-    </div>
+          <div className={classes.imageContainer}>
+            <img
+              src={require("../../Image/trA011.png")}
+              alt="About"
+              className={classes.image}
+            />
+          </div>
         </Grid>
         <Grid item xs={12}>
           <Container>
@@ -82,25 +82,10 @@ const Training = () => {
                 ever increasing competitive and diverse business environment.
               </p>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              
-            >
-              {/* <p className="non_important">
-                List of <span class="circle-sketch-highlight"> programs </span>
-              </p> */}
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-              >
-                List of <span className="highlight">Programs</span>
+
+            <div className="circle_text">
+              <h1>
+                List of <span className="highlight">Programs</span>{" "}
               </h1>
             </div>
             <div
@@ -109,7 +94,6 @@ const Training = () => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              
             >
               <p
                 style={{
@@ -128,7 +112,6 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
-              
             >
               <Grid item md={3} xs={12}>
                 <div
@@ -221,7 +204,6 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
-              
             >
               <Grid item md={3} xs={12}>
                 <div
@@ -315,7 +297,6 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
-              
             >
               <Grid item md={3} xs={12}>
                 <div
@@ -408,7 +389,6 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
-            
             >
               <Grid item md={3} xs={12}>
                 <div
@@ -501,7 +481,6 @@ const Training = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
-              
             >
               <Grid item md={3} xs={12}>
                 <div
@@ -588,68 +567,33 @@ const Training = () => {
                 </div>
               </Grid>
             </Grid>
-            
-            <Container style={{padding:0,margin:0}}>
-            <div style={{ marginTop: "2rem" }}>
+
+            <Container style={{ padding: 0, margin: 0 }}>
+              <div style={{ marginTop: "2rem" }}>
                 <img src={require("../../Image/train1.png")} alt="" />
               </div>
             </Container>
 
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              {/* <p className="non_important" data-aos="slide-right">
-                Our <span class="circle-sketch-highlight"> Strengths </span>{" "}
-              </p> */}
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-              >
-                Our <span className="highlight">Strength</span>
+            <div className="circle_text">
+              <h1>
+                Our <span className="highlight">Strength</span>{" "}
               </h1>
             </div>
-
             <div>
               <TabList />
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              
-              }}
-            >
-              {/* <p className="non_important">
-                Way we <span class="circle-sketch-highlight"> deliver </span>{" "}
-                our session
-              </p> */}
 
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-              >
-                Way we <span className="highlight">deliver </span>our session
+            <div className="circle_text">
+              <h1>
+                Way we <span className="highlight">deliver</span>our session{" "}
               </h1>
             </div>
-
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
-             
             >
               <img src={require("../../Image/sssa1233.png")} alt="" />
             </div>
