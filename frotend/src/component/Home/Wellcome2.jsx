@@ -1,27 +1,31 @@
 import React from "react";
 import { Link, Button } from "@mui/material";
+import { useMediaQuery } from "react-responsive";
+import { Container } from "react-bootstrap";
+
 export default function Wellcome2() {
+  const isXs = useMediaQuery({ maxWidth: 576 });
   return (
     <div>
-      <h3
-        className="app_heading1"
-        style={{
-          color: "#FF4E00",
-          fontSize: "36px",
-          fontFamily: "'Outfit', sans-serif",
-          marginTop: "10px",
-        }}
-      >
-        Our Services Help You Succeed in Business
-      </h3>
+      <Container fluid>
+        <h3
+          className="app_heading1"
+          style={{
+            fontFamily: "'Outfit', sans-serif",
 
+            color: "#FF4E00",
+            fontSize: isXs ? "24px" : "36px",
+          }}
+        >
+          Our Services Help You Succeed in Business
+        </h3>
+      </Container>
       <p
-   
         style={{
           fontSize: "15px",
           fontFamily: "'Outfit', sans-serif",
           color: "black",
-          textAlign:"justify"
+          textAlign: "justify",
         }}
       >
         Learning Needs is a training & management consulting company based in

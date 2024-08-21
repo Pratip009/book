@@ -102,7 +102,6 @@ body {
   }
 }
 
-/* Highlight and Slider Styles */
 .highlight {
   position: relative;
   z-index: 2;
@@ -336,7 +335,7 @@ p {
 
   .clients_headings,
   .sub_headings {
-    font-size: 14px;
+    font-size: 13px !important;
   }
 
   .container_element_large_text {
@@ -402,5 +401,19 @@ p {
   .card {
     max-width: 100%;
     padding: 0.5rem;
+  }
+}
+.circle_text h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 10px;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Media query for extra small screens (xs) */
+@media (max-width: 767px) {
+  .circle_text h1 {
+    font-size:25px !important;
+    font-weight:500 
   }
 }

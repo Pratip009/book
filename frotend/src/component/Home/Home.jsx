@@ -87,7 +87,7 @@ function Home() {
     fontSize: "36px",
     marginTop: "10px",
     fontFamily: "'Outfit', sans-serif",
-    // Inline media queries
+
     "@media (max-width: 767px)": { fontSize: "32px" },
     "@media (max-width: 721px)": { fontSize: "30px" },
     "@media (max-width: 600px)": { fontSize: "28px" },
@@ -311,7 +311,7 @@ function Home() {
               </Container>
             </div>
             <Container className="wrappeeer">
-              <Row className="my-2">
+              <Row className="my-1">
                 <Col xs={12} className="text-center">
                   <div className="circle_text">
                     <h1 style={h1Style}>
@@ -341,7 +341,7 @@ function Home() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop:"2rem"
+              
               }}
             >
               <Container>
@@ -354,7 +354,7 @@ function Home() {
                   style={{
                     textAlign: "center",
                     fontSize: "36px",
-                    marginTop: "60px",
+                  
                     fontFamily: "'Outfit', sans-serif",
                   }}
                 >
@@ -437,7 +437,7 @@ function Home() {
                       style={{
                         fontFamily: "'Outfit', sans-serif",
                         background: "linear-gradient(120deg, #003E90, #3B90FF)",
-                        fontSize: "2rem",
+                        fontSize:{xs:"20px" ,sm:"36px"},
                         padding: "1rem",
                         color: "white",
                       }}
@@ -447,7 +447,7 @@ function Home() {
                     <span
                       className=""
                       style={{
-                        fontSize: "1rem",
+                        fontSize:{xs:"13px" ,sm:"20px"},
                         fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                       }}

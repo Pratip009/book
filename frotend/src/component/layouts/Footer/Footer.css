@@ -45,6 +45,7 @@
 
 .box-text-two {
   font-size: 10px;
+  margin: 0 !important;
 }
 
 /* Icon and Text Column Styling */
@@ -74,7 +75,6 @@
 
 .text-two {
   font-size: 10px;
-  margin-top: 0.5rem;
   color: white;
 }
 
@@ -165,7 +165,7 @@
   .box-col {
     flex: 1 0 50%;
     box-sizing: border-box;
-    padding: 0.5rem;
+    
   }
   .button-col {
     display: flex;

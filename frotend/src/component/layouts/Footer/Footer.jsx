@@ -26,9 +26,9 @@ export default function Footer() {
         <section className="d-flex justify-content-center justify-content-lg-between p-4 social-networks"></section>
 
         <section className="d-flex justify-content-center justify-content-lg-between p-4">
-          <MDBContainer className="text-center text-md-center mt-1 p-0">
+          <MDBContainer fluid className="text-center text-md-center mt-1 p-0">
             <MDBRow className="mt-3 p-0">
-              <MDBCol md="4" lg="4" xl="4" xs="4" className="mb-4 p-0">
+              <MDBCol md="4" lg="4" xl="4" xs="4" className=" p-2">
                 <MDBContainer className="m-0 p-0">
                   <MDBNavbarBrand href="/">
                     <img
@@ -100,15 +100,15 @@ export default function Footer() {
                 </MDBContainer>
               </MDBCol>
 
-              <MDBCol md="6" lg="6" xl="6" xs="6" className="mb-4  p-0">
+              <MDBCol md="6" lg="6" xl="6" xs="6" className=" p-2">
                 <MDBRow>
-                  <MDBCol style={{ textAlign: "center" }}>
+                  <MDBCol style={{ textAlign: "start" }}>
                     <h6
                       className="fw-bold mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
-                        textAlign: "center",
+                        textAlign: "start",
                       }}
                     >
                       Help
@@ -140,13 +140,13 @@ export default function Footer() {
                     </p>
                   </MDBCol>
 
-                  <MDBCol style={{ textAlign: "center" }}>
+                  <MDBCol style={{ textAlign: "start" }}>
                     <h6
                       className="fw-bold mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
-                        textAlign: "center",
+                        textAlign: "start",
                       }}
                     >
                       Policies
@@ -178,13 +178,13 @@ export default function Footer() {
                     </p>
                   </MDBCol>
 
-                  <MDBCol style={{ textAlign: "center" }}>
+                  <MDBCol style={{ textAlign: "start" }}>
                     <h6
                       className="fw-bold mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
-                        textAlign: "center",
+                        textAlign: "start",
                       }}
                     >
                       Company

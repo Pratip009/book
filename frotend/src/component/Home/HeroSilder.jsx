@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "react-material-ui-carousel";
 import Button from "@material-ui/core/Button";
@@ -101,7 +101,21 @@ const staticSlides = [
   },
 ];
 
+
+const useWindowWidth = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowWidth;
+};
 export default function HeroSlider() {
+  const windowWidth = useWindowWidth();
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const slides = staticSlides; // Use static data
@@ -120,18 +134,18 @@ export default function HeroSlider() {
     <Carousel
       autoPlay={true}
       navButtonsAlwaysVisible
-      indicators={false}
+      indicators={true}
       animation="slide"
       interval={10000}
       timeout={500}
       cycleNavigation={true}
       navButtonsProps={{
         style: {
-          backgroundColor: "#FF0000",
+          backgroundColor: "#FFFFFF",
           borderRadius: 0,
           padding: 0,
           margin: 0,
-          height: "100%",
+          height: windowWidth <= 767 ? "50px" : "100%", 
         },
       }}
       prevButton={

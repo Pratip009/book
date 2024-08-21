@@ -53,10 +53,11 @@ export default function TeamMessage() {
             <Grid item xs>
               <Typography
                 gutterBottom
-                variant="h4" // Adjusted to be more responsive
+                variant="h4"
                 component="div"
                 sx={{
                   color: "white",
+                  fontSize:{xs:"20px" ,sm:"36px"},
                   fontWeight: "700",
                   fontFamily: "'Outfit', sans-serif",
                   textAlign: { xs: "center", sm: "left" },
@@ -73,9 +74,10 @@ export default function TeamMessage() {
                     justifyContent:"center",
                     fontFamily: "'Outfit', sans-serif",
                     fontWeight: "300",
+                    fontSize: { xs: "13px", sm: "15px" },
                     color: "white",
                     textAlign: "justify",
-                    fontSize: { xs: "14px", sm: "15px" },
+                   
                   }}
                 >
                   We share an enthusiasm for the kind of great learning made
@@ -99,8 +101,8 @@ export default function TeamMessage() {
                   fontFamily: "'Outfit', sans-serif",
                   color: "white",
                   fontWeight: "500",
-                  fontSize: { xs: "12px", sm: "15px" }, // Responsive font size
-                  textAlign: { xs: "center", sm: "left" }, // Responsive text alignment
+                  fontSize: { xs: "12px", sm: "15px" }, 
+                  textAlign: { xs: "center", sm: "left" },
                 }}
                 variant="body2"
                 className="bottom_team_text"
