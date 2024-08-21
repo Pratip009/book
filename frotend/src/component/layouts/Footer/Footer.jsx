@@ -273,7 +273,8 @@ export default function Footer() {
 
       <div className="overlay-container">
         <div className="overlay-content">
-          <MDBCol md="10" className="text-col-two">
+        <MDBRow>
+        <MDBCol md="10" xs="12" sm="12" className="text-col-two">
             <h1 className="overlay-heading">
               Let’s Change, Learn, Grow, and Transform!
             </h1>
@@ -284,9 +285,10 @@ export default function Footer() {
               their objectives.
             </p>
           </MDBCol>
-          <MDBCol md="2" className="button-col">
-            <button className="btn btn-primary">Get Started..</button>
+          <MDBCol md="2" xs="12" sm="12" className="button-col">
+            <button className="btn btn-primary btn-normal-case">Get Started...</button>
           </MDBCol>
+        </MDBRow>
         </div>
       </div>
     </div>

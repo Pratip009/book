@@ -30,7 +30,12 @@
   text-transform: none !important;
   font-family: 'Outfit', sans-serif !important;
 }
+.button-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
 /* Box Styling */
 .box {
   background-color: #FF6D1C;
@@ -169,8 +174,9 @@
   }
   .button-col {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+  
   }
   
   .overlay-heading {
@@ -184,6 +190,13 @@
     border: none;
     padding: 10px 10px;
     text-transform: none;
-    font-size: 8px
+    font-size: 8px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .btn-normal-case {
+    
+    text-transform: none; 
   }
 }
