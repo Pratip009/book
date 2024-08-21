@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 
 import Card from "react-bootstrap/Card";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import schoolImage from '../../Image/schoolne.png';
+import schoolImage from '../../Image/schooln.jpeg';
 
 import "./Schools.css";
 import { Col, Container, Row } from "react-bootstrap";
