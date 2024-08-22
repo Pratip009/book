@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { getTeam } from "../../GlobalApi"; // Adjust the path as necessary
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { CiInstagram } from "react-icons/ci";
+
+import { CiLinkedin } from "react-icons/ci";
+import { CiFacebook } from "react-icons/ci";
+
 import "./OurTeam.css";
 
 export default function OurTeam() {
   const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
-    AOS.init({ duration: 2000 });
-
-    // Fetch team members data from Strapi
     const fetchTeamMembers = async () => {
       try {
-        const response = await getTeam();
-        setTeamMembers(response.data.data);
+        const response = await fetch("https://heroku-learningneeds-strapi.onrender.com/api/teams?populate=*");
+        const data = await response.json();
+        setTeamMembers(data.data);
       } catch (error) {
         console.error("Error fetching team members:", error);
       }
@@ -40,9 +37,9 @@ export default function OurTeam() {
               <h1>{member.attributes.Name}</h1>
               <h2>{member.attributes.designation}</h2>
               <div className="social-media">
-                <InstagramIcon />
-                <LinkedInIcon />
-                <PinterestIcon />
+                <CiInstagram />
+                <CiLinkedin />
+                <CiFacebook />
               </div>
             </div>
           </div>

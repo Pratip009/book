@@ -1,86 +1,94 @@
+/* Layout and positioning */
 #model1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 #model1 .members {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute space between items */
+  flex-wrap: wrap; /* Allow wrapping */
   width: 100%;
+  max-width: 1200px; /* Max width for larger screens */
 }
 
 #model1 .member {
   cursor: pointer;
   transition: all 1s;
   margin: 10px;
-  flex: 1 1 300px; /* Ensure responsive layout */
-  max-width: 300px; /* Ensure responsive layout */
+  flex: 1 1 calc(50% - 20px); /* Two images in a row with space */
+  max-width: calc(50% - 20px); /* Ensure responsive layout */
+  position: relative; /* For overlay positioning */
+  overflow: hidden; /* Hide overflow */
 }
 
 #model1 .member:hover {
   transform: scale(1.01);
 }
 
+/* Overlay effect for larger screens */
 #model1 .member:hover .description {
-  transform: translateY(-100%);
+  transform: translateY(0); /* Show overlay on hover */
+  background-color: rgba(0, 62, 144, 0.71); /* Blue overlay with transparency */
 }
 
 #model1 .member-image {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
+/* Overlay description positioning for larger screens */
 #model1 .description {
   width: 100%; /* Adjusted for responsiveness */
-  height: auto; /* Adjusted for responsiveness */
-  position: relative;
-  background-color: #003e90b5;
-  transform: translateY(0);
-  transition: all 1s;
+  height: 100%; /* Full height for overlay */
+  position: absolute; /* Positioned absolutely to cover the image */
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 62, 144, 0.71); /* Blue overlay with transparency */
+  transform: translateY(100%); /* Initially hide the overlay */
+  transition: transform 1s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px; /* Added for padding */
+  box-sizing: border-box; /* Ensure padding doesn't increase height */
+  color: #ffffff; /* White text color for large screens */
 }
 
 #model1 .description h1,
 #model1 .description h2,
 #model1 .description p {
-  color: #ffffff;
   font-family: 'Outfit', sans-serif;
   text-align: center; /* Center text for better readability */
-  margin-right: 10px; /* Added margin-right for better centering */
+  margin: 5px 0; /* Adjusted margin for spacing */
 }
 
 #model1 .description h1 {
-  font-size: 18px; /* Smaller font size */
-  margin: 5px 0; /* Adjusted margin for spacing */
+  font-size: 18px; /* Adjusted font size */
 }
 
 #model1 .description h2 {
-  font-size: 14px; /* Smaller font size */
-  margin: 5px 0; /* Adjusted margin for spacing */
+  font-size: 14px; /* Adjusted font size */
   font-weight: 400;
 }
 
 #model1 .description p {
-  font-size: 12px; /* Smaller font size */
+  font-size: 12px; /* Adjusted font size */
   padding: 0 10px; /* Adjusted padding */
 }
 
 #model1 .description .social-media {
   display: flex;
   justify-content: center; /* Center social icons */
+  margin-top: 10px; /* Space above icons */
 }
 
 #model1 .description .social-media svg {
   color: #fff;
-  font-size: 28px; /* Adjusted icon size */
-  margin: 0 8px; /* Adjusted margin for spacing */
+  font-size: 36px; /* Increased icon size */
+  margin: 0 10px; /* Increased margin for spacing */
   cursor: pointer;
   transition: all 0.5s;
 }
@@ -90,15 +98,30 @@
   color: #F21B3F;
 }
 
-/* Responsive styles */
+/* Responsive styles for xs screens */
 @media (max-width: 600px) {
   #model1 .member {
     flex: 1 1 100%; /* Take full width on mobile */
     max-width: 100%; /* Ensure it doesn't exceed screen width */
+    position: relative; /* Positioning relative for overlay adjustments */
+  }
+
+  #model1 .member:hover .description {
+    transform: none; /* No transform on hover for touch devices */
+  }
+
+  #model1 .member-image {
+    width: 100%; /* Ensure image takes full width */
+    height: auto; /* Maintain aspect ratio */
   }
 
   #model1 .description {
-    padding: 0; /* Adjust padding for smaller screens */
+    position: static; /* Remove absolute positioning */
+    transform: none; /* No transform */
+    background-color: transparent; /* Remove background color */
+    display: block; /* Display block for layout */
+    padding: 10px; /* Adjust padding for smaller screens */
+    color: #000000; /* Black text color for xs screens */
   }
 
   #model1 .description h1 {
@@ -114,6 +137,7 @@
   }
 
   #model1 .description .social-media svg {
-    font-size: 24px; /* Adjust icon size for smaller screens */
+    color: #000000; /* Black icon color for xs screens */
+    font-size: 28px; /* Adjust icon size for smaller screens */
   }
 }

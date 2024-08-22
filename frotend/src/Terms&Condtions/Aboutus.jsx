@@ -447,6 +447,9 @@ const About_UsPage = () => {
             programs that exceed our clients expectations and help them achieve
             their goals.
           </span>
+          
+            <OurTeam />
+          
           <div className="ourteam_back">
             <Container className="p-0">
               <Row
@@ -521,9 +524,6 @@ const About_UsPage = () => {
             </Container>
           </div>
 
-          <div className="Our_Team">
-            <OurTeam />
-          </div>
           <Container className="p-0">
             <Row className="justify-content-center">
               <Col
@@ -567,37 +567,26 @@ const About_UsPage = () => {
             className="android_back"
             style={{ backgroundColor: "#FFFFFF", width: "100%" }}
           >
-            <Container
-              
-              style={{ width: "100%",backgroundColor: "#FFFFFF" }}
-            >
+            <Container style={{ width: "100%", backgroundColor: "#FFFFFF" }}>
               {/* testimonials */}
 
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "36px",
-                  marginTop: "20px",
-                }}
-              >
-                <span className="highlight">Pride of Learning Needs</span>
+              <div className="circle_text">
+              <h1>
+              <span className="highlight">Pride of Learning Needs</span>{" "}
               </h1>
-
+            </div>
               <div className="circle_text">
                 <h1 className={classes.circleText}>
                   Clients sharing their
                   <span className={classes.highlight}> experience</span>
                 </h1>
               </div>
-             
-                <TestimonialSlider />
-           
 
-              
+              <TestimonialSlider />
             </Container>
-            <div className="play" >
-                <PlayApp />
-              </div>
+            <div className="play">
+              <PlayApp />
+            </div>
           </div>
 
           <Container className="faq p-0">
@@ -606,7 +595,7 @@ const About_UsPage = () => {
                 style={{
                   textAlign: "center",
                   fontSize: "36px",
-                  marginTop: "20px"
+                  marginTop: "20px",
                 }}
               >
                 Frequently Asked
@@ -617,7 +606,7 @@ const About_UsPage = () => {
             <Faq />
           </Container>
 
-          <Container style={{marginTop:"1rem"}}>
+          <Container style={{ marginTop: "1rem" }}>
             <Row className="justify-content-center">
               <Col xs="auto">
                 <Link to="/products" style={{ textDecoration: "none" }}>
