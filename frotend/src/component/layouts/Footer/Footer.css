@@ -20,7 +20,7 @@
 .footer_links {
   color: white;
   font-family: 'Outfit', sans-serif;
-  text-decoration: none
+  text-decoration: none;
 }
 
 /* Custom Button Styling */
@@ -159,6 +159,11 @@
 
 
 @media (max-width: 576px) {
+  .navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .overlay-container{
     width: 94%;
   }

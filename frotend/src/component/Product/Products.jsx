@@ -137,8 +137,8 @@ function Products() {
                   <Container>
                     <div className="circle_text">
                       <h1>
-                        Why <span className="highlight">book Reading</span> is
-                        important{" "}
+                         <span className="highlight">Why book Reading is important</span>
+                        {" "}
                       </h1>
                     </div>
                     <span

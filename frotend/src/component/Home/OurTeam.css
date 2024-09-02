@@ -7,8 +7,9 @@
 
 #model1 .members {
   display: flex;
-  justify-content: space-between; /* Distribute space between items */
+  justify-content: center;
   flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Distribute space between items */
   width: 100%;
   max-width: 1200px; /* Max width for larger screens */
 }
@@ -17,8 +18,8 @@
   cursor: pointer;
   transition: all 1s;
   margin: 10px;
-  flex: 1 1 calc(50% - 20px); /* Two images in a row with space */
-  max-width: calc(50% - 20px); /* Ensure responsive layout */
+  flex: 1 1 calc(33.333% - 20px); /* Three images in a row with space */
+  max-width: calc(33.333% - 20px); /* Ensure responsive layout */
   position: relative; /* For overlay positioning */
   overflow: hidden; /* Hide overflow */
 }
@@ -98,11 +99,25 @@
   color: #F21B3F;
 }
 
-/* Responsive styles for xs screens */
+/* Center the 4th image if there are fewer than 5 images */
+#model1 .members::after {
+  content: '';
+  flex: 1 1 100%; /* Flex item to push the 4th image to the center if less than 5 images */
+}
+
+/* Responsive styles for medium screens (up to 900px) */
+@media (max-width: 900px) {
+  #model1 .member {
+    flex: 1 1 calc(50% - 20px); /* Two images in a row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Responsive styles for small screens (up to 600px) */
 @media (max-width: 600px) {
   #model1 .member {
-    flex: 1 1 100%; /* Take full width on mobile */
-    max-width: 100%; /* Ensure it doesn't exceed screen width */
+    flex: 1 1 100%; /* One image in a row */
+    max-width: 100%;
     position: relative; /* Positioning relative for overlay adjustments */
   }
 

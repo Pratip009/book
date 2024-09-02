@@ -42,7 +42,7 @@ const Training = () => {
           </div>
         </Grid>
         <Grid item xs={12}>
-          <Container>
+          <Container style={{ marginTop: "2rem" }}>
             <div>
               <p
                 style={{
@@ -55,17 +55,10 @@ const Training = () => {
               >
                 Soft skills’ Behavioural Shift training is essential because we
                 do not have it in our academic curricula.
-              </p>
-              <p
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "'Outfit', sans-serif",
-                  textAlign: "center",
-                  fontSize: "17px",
-                }}
-              >
+                <br />
                 However it can be developed through continuous training.
               </p>
+             
               <p
                 style={{
                   fontSize: "17px",
@@ -585,7 +578,7 @@ const Training = () => {
 
             <div className="circle_text">
               <h1>
-                Way we <span className="highlight">deliver</span>our session{" "}
+                <span className="highlight">Way we deliver our session</span> {" "}
               </h1>
             </div>
             <div

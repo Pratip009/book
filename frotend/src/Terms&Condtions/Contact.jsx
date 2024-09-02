@@ -250,7 +250,7 @@ const ContactForm = () => {
                     style={{
                       fontSize: "23px",
                       fontWeight: "500",
-                      color: "#FF4E00",
+                      color: "#FF4E00"
                     }}
                   >
                     Need Help?
@@ -341,7 +341,7 @@ const ContactForm = () => {
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     <Form.Group controlId="issue-select">
-                      <Form.Label style={{ fontWeight: "900" }}>
+                      <Form.Label>
                         ISSUE *
                       </Form.Label>
                       <Form.Control as="select" defaultValue="e-commerce">
@@ -351,7 +351,7 @@ const ContactForm = () => {
                     </Form.Group>
 
                     <Form.Group controlId="detail-select">
-                      <Form.Label style={{ fontWeight: "900" }}>
+                      <Form.Label>
                         DETAIL *
                       </Form.Label>
                       <Form.Control as="select" defaultValue="others">
@@ -367,7 +367,7 @@ const ContactForm = () => {
                     </Form.Group>
 
                     <Form.Group controlId="language-select">
-                      <Form.Label style={{ fontWeight: "900" }}>
+                      <Form.Label>
                         LANGUAGE *
                       </Form.Label>
                       <Form.Control as="select" defaultValue="english">
@@ -377,7 +377,7 @@ const ContactForm = () => {
                     </Form.Group>
 
                     <Form.Group controlId="email-input">
-                      <Form.Label style={{ fontWeight: "900" }}>
+                      <Form.Label>
                         EMAIL *
                       </Form.Label>
                       <Form.Control
@@ -388,7 +388,7 @@ const ContactForm = () => {
                     </Form.Group>
 
                     <Form.Group controlId="message-textarea">
-                      <Form.Label style={{ fontWeight: "900" }}>
+                      <Form.Label>
                         MESSAGE *
                       </Form.Label>
                       <Form.Control

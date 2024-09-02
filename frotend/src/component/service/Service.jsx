@@ -50,13 +50,13 @@ const Service = () => {
                 marginTop: "20px",
               }}
             >
-              <span className="highlight">Services </span>
-              of Learning Needs
+              <span className="highlight">Services of Learning Needs</span>
+              
             </h1>
           </div>
           <p
             style={{
-              fontSize: {xs:"15px", sm:"23px"},
+              fontSize: {xs:"15px",md:"36px"},
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
             }}

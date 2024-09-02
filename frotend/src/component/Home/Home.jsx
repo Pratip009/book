@@ -400,6 +400,14 @@ function Home() {
                           </span>
                         }
                         subheader="To provide the best quality service and products to our customer and clients."
+                        subheaderTypographyProps={{
+                          style: {
+                            color: "#000000", // Example color
+                            fontSize: "0.875rem", // Example font size
+                            fontFamily: "'Outfit', sans-serif", // Matching font family
+                            
+                          },
+                        }}
                         action={<IconButton>{/* <ThumbUpIcon/> */}</IconButton>}
                       />
                     </Card>
@@ -431,6 +439,14 @@ function Home() {
                           </span>
                         }
                         subheader="Conducting ourselves with honesty and responsibility."
+                        subheaderTypographyProps={{
+                          style: {
+                            color: "#000000", // Example color
+                            fontSize: "0.875rem", // Example font size
+                            fontFamily: "'Outfit', sans-serif", // Matching font family
+                            // Example font weight
+                          },
+                        }}
                       />
                     </Card>
                     <h3

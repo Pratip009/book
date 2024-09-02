@@ -14,7 +14,13 @@ import ProfileModal from "./ProfileModel";
 import axios from "axios";
 import CartIcon from "./CartIcon";
 import ScrollingTextHeader from "./ScrollingTextHeader";
+import {
+ 
+  MDBRow,
+  MDBCol,
 
+} from "mdb-react-ui-kit";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 function Header() {
   const history = useHistory();
   const { isAuthenticated, user } = useSelector((state) => state.userData);
@@ -85,6 +91,7 @@ function Header() {
             <div class="headerPhone">
               <CallIcon className="headerRetailer_Svg" />
               <span>{phone}</span>
+              
             </div>
           </div>
           <div className="headerTopRight">

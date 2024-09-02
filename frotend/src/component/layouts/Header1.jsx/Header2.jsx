@@ -12,7 +12,9 @@ import ScrollingTextHeader from "./ScrollingTextHeader";
 import logo from "../../../Image/LN.png";
 import "./Header.css";
 import "aos/dist/aos.css";
-
+import { MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 const navLinkStyle = {
   fontFamily: "'Outfit', sans-serif",
   textDecoration: "none",
@@ -32,7 +34,7 @@ function BasicExample() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-  
+
   useEffect(() => {
     axios
       .get(
@@ -51,7 +53,7 @@ function BasicExample() {
 
     AOS.init({ duration: 2000 });
   }, []);
- 
+
   const handleSearchButtonClick = () => {
     setSearchBarActive(!searchBarActive);
   };
@@ -82,90 +84,144 @@ function BasicExample() {
     <>
       {/* First Navbar Section */}
       <Navbar
-      expand="lg"
-      style={{
-        backgroundColor: "#003E90",
-        fontFamily: "'Outfit', sans-serif",
-        
-      }}
-    >
-      <Container fluid>
-        <Navbar.Collapse
-          id="basic-navbar-nav"
-          className="d-flex justify-content-between align-items-center"
-        >
-          <Nav className="d-flex align-items-center">
-            <Nav.Link
-              href="#"
-              className="d-flex align-items-center"
-              style={{
-                color: "white",
-                fontFamily: "'Outfit', sans-serif",
-                textDecoration: "none",
-              }}
-            >
-              <FaPhoneAlt
+        expand="lg"
+        style={{
+          backgroundColor: "#003E90",
+          fontFamily: "'Outfit', sans-serif",
+        }}
+      >
+        <Container fluid>
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="d-flex justify-content-between align-items-center"
+          >
+            <Nav className="d-flex align-items-center">
+              <Nav.Link
+                href="#"
+                className="d-flex align-items-center"
                 style={{
                   color: "white",
-                  marginRight: "0.5rem",
-                  fontSize: "1.2rem",
+                  fontFamily: "'Outfit', sans-serif",
+                  textDecoration: "none",
                 }}
-              />
-              <span>{phone}</span>
-            </Nav.Link>
-          </Nav>
-          <Nav className="d-flex align-items-center">
-            <Nav.Link
-              href="#"
-              className="d-flex align-items-center me-3 d-none d-lg-flex"
-              style={{
-                color: "white",
-                fontFamily: "'Outfit', sans-serif",
-                textDecoration: "none",
-              }}
-            >
-              <FaEnvelope
-                style={{
-                  color: "white",
-                  marginRight: "0.5rem",
-                  fontSize: "1.2rem",
-                }}
-              />
-              <span>{email}</span>
-            </Nav.Link>
-            {isAuthenticated ? (
-              <Link to="/account">
-                <Button
+              >
+                <FaPhoneAlt
                   style={{
-                    backgroundColor: "#FF4E00",
                     color: "white",
-                    fontFamily: "'Outfit', sans-serif",
+                    marginRight: "0.5rem",
+                    fontSize: "1.2rem"
                   }}
-                  size="sm"
-                >
-                  My Account
-                </Button>
-              </Link>
-            ) : (
-              <Link to="/signup">
-                <Button
-                  style={{
-                    backgroundColor: "#FF4E00",
-                    color: "white",
-                    fontFamily: "'Outfit', sans-serif",
-                  }}
-                  size="sm"
-                >
-                  Sign Up
-                </Button>
-              </Link>
-            )}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+                />
+                <span>{phone}</span>
+              </Nav.Link>
 
-      <Navbar bg="light" data-bs-theme="light" expand="lg" style={{padding:0}}>
+              {/* Add spacing between Nav.Link and MDBRow */}
+              <MDBRow className="d-none d-sm-flex justify-content-center align-items-center ms-4">
+                <MDBCol md="auto" className="text-center">
+                  {/* Social link with circular white background */}
+                  <a
+                    href="/"
+                    className="me-2 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.25rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <FaFacebook style={{ color: "#1877F2" }} />
+                  </a>
+                  <a
+                    href="/"
+                    className="me-2 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.25rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <RiInstagramFill style={{ color: "#C13584" }} />
+                  </a>
+                  <a
+                    href="/"
+                    className="me-2 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.25rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <FaTwitter style={{ color: "#1DA1F2" }} />
+                  </a>
+                </MDBCol>
+              </MDBRow>
+            </Nav>
+
+            <Nav className="d-flex align-items-center">
+              <Nav.Link
+                href="#"
+                className="d-flex align-items-center me-3 d-none d-lg-flex"
+                style={{
+                  color: "white",
+                  fontFamily: "'Outfit', sans-serif",
+                  textDecoration: "none",
+                }}
+              >
+                <FaEnvelope
+                  style={{
+                    color: "white",
+                    marginRight: "0.5rem",
+                    fontSize: "1.2rem",
+                  }}
+                />
+                <span>{email}</span>
+              </Nav.Link>
+              {isAuthenticated ? (
+                <Link to="/account">
+                  <Button
+                    style={{
+                      backgroundColor: "#FF4E00",
+                      color: "white",
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                    size="sm"
+                  >
+                    My Account
+                  </Button>
+                </Link>
+              ) : (
+                <Link to="/signup">
+                  <Button
+                    style={{
+                      backgroundColor: "#FF4E00",
+                      color: "white",
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                    size="sm"
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      <Navbar
+        bg="light"
+        data-bs-theme="light"
+        expand="lg"
+        style={{ padding: 0 }}
+      >
         <Container fluid>
           <Navbar.Brand href="/">
             <img
@@ -175,10 +231,10 @@ function BasicExample() {
               style={{
                 width: "200px",
                 maxWidth: "100%",
-                height: "auto"
+                height: "auto",
               }}
             />
-            <img
+            {/* <img
               src={logo}
               alt="Logo"
               className="d-block d-md-none"
@@ -188,7 +244,7 @@ function BasicExample() {
                 height: "auto",
                 margin: 0,
               }}
-            />
+            /> */}
           </Navbar.Brand>
 
           {/* Icons for Mobile */}

@@ -18,6 +18,7 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
+          fontSize:'36px',
           color: "#FF4E00",
         }}
       >
@@ -199,6 +200,7 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
+          fontSize:'36px',
           color: "#FF4E00",
         }}
       >
@@ -388,6 +390,7 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
+          fontSize:'36px',
           color: "#FF4E00",
         }}
       >

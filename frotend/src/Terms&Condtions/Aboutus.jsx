@@ -27,6 +27,7 @@ import supportImg from "../Image/24-hours-support.png";
 import learning2Img from "../Image/learning2.png";
 import need2Img from "../Image/need2.png";
 import teamSpiritImg from "../Image/team-spiri.png";
+import { MDBCol, MDBRow } from "mdb-react-ui-kit";
 const useStyles = makeStyles((theme) => ({
   image_about1: {
     width: "100%",
@@ -380,9 +381,7 @@ const About_UsPage = () => {
               ))}
             </Grid>
 
-            <Grid
-              container
-              spacing={3}
+            <Container
               style={{
                 marginTop: "2rem",
                 display: "flex",
@@ -390,47 +389,127 @@ const About_UsPage = () => {
                 justifyContent: "center",
               }}
             >
-              <Grid item xs={4} sm={6} md={5}>
-                <img
-                  src={learning2Img}
-                  alt="Learning needs"
-                  className={classes.image_about}
-                />
-              </Grid>
-
-              <Grid item xs={4} sm={6} md={2}>
-                <Card className={classes.traitCard}>
+              <MDBRow
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <MDBCol item xs={4} sm={6} md={2}>
                   <img
-                    src={supportImg}
-                    alt="SERVICES"
-                    className={classes.traitImage}
+                    src={learning2Img}
+                    alt="Learning needs"
+                    className={classes.image_about}
                   />
-                  <Typography className={classes.traitLetter}>S-</Typography>
-                  <Typography className={classes.traitText}>
-                    SERVICES
-                  </Typography>
-                </Card>
-              </Grid>
+                </MDBCol>
 
-              <Grid item xs={4} sm={6} md={5}>
+                <MDBCol item xs={4} sm={6} md={2}>
+                  <Card className={classes.traitCard}>
+                    <img
+                      src={supportImg}
+                      alt="SERVICES"
+                      className={classes.traitImage}
+                    />
+                    <Typography className={classes.traitLetter}>S-</Typography>
+                    <Typography className={classes.traitText}>
+                      SERVICES
+                    </Typography>
+                  </Card>
+                </MDBCol>
+
+                <MDBCol item xs={4} sm={6} md={2}>
+                  <img
+                    src={need2Img}
+                    alt="Learning needs"
+                    className={classes.image_about}
+                  />
+                </MDBCol>
+              </MDBRow>
+            </Container>
+          </Container>
+        </div>
+        <div className="ourteam_back">
+          <Container className="p-0">
+            <Row
+              className="g-4"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center", // This centers the text horizontally
+                height: "100%", // Ensure the column takes full height if needed
+              }}
+            >
+              <Col md={8} sm={12} xs={12}>
+                <h2
+                  style={{
+                    textAlign: "start",
+                    marginTop: "0",
+                    marginBottom: "10px",
+                    fontFamily: "'Outfit', sans-serif",
+                    fontSize: "22px",
+                    fontWeight: "700",
+                    color: "#FF4E00",
+                  }}
+                >
+                  With us, you can build yourself to achieve your goals
+                </h2>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    fontFamily: "'Outfit', sans-serif",
+                    textAlign: "justify",
+                  }}
+                >
+                  Learning Needs is committed to help its clients reach their
+                  goals. By providing an innovative environment, which makes a
+                  difference. Our strong sense of identification with client
+                  projects means that we are constantly striving to provide
+                  solutions, even for issues they aren’t yet aware of. To this
+                  end, we adopt a progressive approach to technology and
+                  marketing techniques. This sense of identification also means
+                  we value and promote seamless interaction with clients’ own
+                  teams, and ensure the best value is obtained from their
+                  budget. Our long experience at the top of the education and
+                  training business means we have expertise which reaches across
+                  a number of sectors and schools. But we know that things
+                  change, and we are constantly striving to adapt and improve.
+                </p>
+                <Button
+                  style={{
+                    textAlign: "start",
+                    backgroundColor: "#FF4E00",
+                    color: "#fff",
+                    fontFamily: "'Outfit', sans-serif",
+                    fontWeight: "600",
+                  }}
+                  variant="contained"
+                >
+                  Read More..
+                </Button>
+              </Col>
+
+              <Col md={4} sm={12} xs={12}>
                 <img
-                  src={need2Img}
+                  src={teamSpiritImg}
                   alt="Learning needs"
                   className={classes.image_about}
                 />
-              </Grid>
-            </Grid>
+              </Col>
+            </Row>
           </Container>
         </div>
         <Container className={classes.container_12}>
           <div className="circle_text">
-            <h1
+            <h1 className={classes.founderMessage}
               style={{
                 textAlign: "center",
                 fontSize: "36px",
               }}
             >
-              <span className="highlight">Our Team</span>
+              <span className="highlight">Our Team </span>
             </h1>
           </div>
           <span
@@ -447,82 +526,8 @@ const About_UsPage = () => {
             programs that exceed our clients expectations and help them achieve
             their goals.
           </span>
-          
-            <OurTeam />
-          
-          <div className="ourteam_back">
-            <Container className="p-0">
-              <Row
-                className="g-4"
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textAlign: "center", // This centers the text horizontally
-                  height: "100%", // Ensure the column takes full height if needed
-                }}
-              >
-                <Col md={8} sm={12} xs={12}>
-                  <h2
-                    style={{
-                      textAlign: "start",
-                      marginTop: "0",
-                      marginBottom: "10px",
-                      fontFamily: "'Outfit', sans-serif",
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      color: "#FF4E00",
-                    }}
-                  >
-                    With us, you can build yourself to achieve your goals
-                  </h2>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      fontFamily: "'Outfit', sans-serif",
-                      textAlign: "justify",
-                    }}
-                  >
-                    Learning Needs is committed to help its clients reach their
-                    goals. By providing an innovative environment, which makes a
-                    difference. Our strong sense of identification with client
-                    projects means that we are constantly striving to provide
-                    solutions, even for issues they aren’t yet aware of. To this
-                    end, we adopt a progressive approach to technology and
-                    marketing techniques. This sense of identification also
-                    means we value and promote seamless interaction with
-                    clients’ own teams, and ensure the best value is obtained
-                    from their budget. Our long experience at the top of the
-                    education and training business means we have expertise
-                    which reaches across a number of sectors and schools. But we
-                    know that things change, and we are constantly striving to
-                    adapt and improve.
-                  </p>
-                  <Button
-                    style={{
-                      textAlign: "start",
-                      backgroundColor: "#FF4E00",
-                      color: "#fff",
-                      fontFamily: "'Outfit', sans-serif",
-                      fontWeight: "600",
-                    }}
-                    variant="contained"
-                  >
-                    Read More..
-                  </Button>
-                </Col>
 
-                <Col md={4} sm={12} xs={12}>
-                  <img
-                    src={teamSpiritImg}
-                    alt="Learning needs"
-                    className={classes.image_about}
-                  />
-                </Col>
-              </Row>
-            </Container>
-          </div>
+          <OurTeam />
 
           <Container className="p-0">
             <Row className="justify-content-center">
@@ -534,7 +539,7 @@ const About_UsPage = () => {
                 <img
                   src={require("../Image/founder1.png")}
                   alt="Learning needs"
-                  style={{ height: "400px", width: "auto" }}
+                  style={{ height: "350px", width: "auto" }}
                   className={classes.image_about1}
                 />
               </Col>
@@ -571,10 +576,10 @@ const About_UsPage = () => {
               {/* testimonials */}
 
               <div className="circle_text">
-              <h1>
-              <span className="highlight">Pride of Learning Needs</span>{" "}
-              </h1>
-            </div>
+                <h1>
+                  <span className="highlight">Pride of Learning Needs</span>{" "}
+                </h1>
+              </div>
               <div className="circle_text">
                 <h1 className={classes.circleText}>
                   Clients sharing their
@@ -598,8 +603,8 @@ const About_UsPage = () => {
                   marginTop: "20px",
                 }}
               >
-                Frequently Asked
-                <span className="highlight"> Questions</span>
+                
+                <span className="highlight">Frequently Asked Questions</span>
               </h1>
             </div>
 

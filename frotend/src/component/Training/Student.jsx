@@ -21,7 +21,7 @@ const Student = () => {
   return (
     <Container style={{margin:0,padding:0}}>
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
-        <img src={require("../../Image/ssworkshopneww1.png")} alt="" />
+        <img src={require("../../Image/ssworkshopneww11.png")} alt="" />
       </div>
       <span
         style={{

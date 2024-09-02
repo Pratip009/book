@@ -33,7 +33,8 @@ export default function Footer() {
                   <MDBNavbarBrand href="/">
                     <img
                       src={logo}
-                      height="30"
+                     width={200}
+                  
                       alt="Logo"
                       loading="lazy"
                       style={{
@@ -42,6 +43,7 @@ export default function Footer() {
                         borderRadius: "0.5rem",
                       }}
                     />
+                    
                   </MDBNavbarBrand>
                   <MDBRow>
                     <MDBCol md="6" xs="12" className="box-col">

@@ -58,13 +58,15 @@ const TestimonialSlider = () => {
   }
 
   const settings = {
-   
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    prevArrow: <PreviousBtn />,
+    nextArrow: <NextBtn />,
   };
+
   return (
     <Container className="testimonial-container p-0" fluid>
       <Row>
@@ -93,6 +95,7 @@ const TestimonialCard = ({ img, description, name, position }) => {
         imgProps={{ style: { borderRadius: "50%" } }}
         src={img}
         className="testimonial-avatar mb-3"
+        style={{ width: '120px', height: '120px' }}
       />
       <p className="testimonial-description">{description}</p>
       <p className="testimonial-name">
@@ -102,4 +105,4 @@ const TestimonialCard = ({ img, description, name, position }) => {
   );
 };
 
-export default TestimonialSlider
+export default TestimonialSlider;
