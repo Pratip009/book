@@ -34,7 +34,6 @@ export default function Footer() {
                     <img
                       src={logo}
                      width={200}
-                  
                       alt="Logo"
                       loading="lazy"
                       style={{

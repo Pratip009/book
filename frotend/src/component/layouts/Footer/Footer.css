@@ -3,6 +3,11 @@
   font-family: 'Outfit', sans-serif !important;
   color: white !important;
 }
+.navbar-brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .text-start {
   text-align: left;
 }
