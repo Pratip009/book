@@ -1,8 +1,6 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useState } from "react";
-import { getBlogs } from "../../../src/GlobalApi.js"; // Import getBlogs as a named import
-
 import blogImage from '../../Image/blog1124.png';
+
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,9 +9,12 @@ export default function Blog() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await getBlogs();
-        console.log(response);
-        setBlogs(response.data.data); // Update to access the correct data array
+        const response = await fetch('https://heroku-learningneeds-strapi.onrender.com/api/blogs?populate=*');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setBlogs(data.data); // `data.data` should be an array of blog objects
       } catch (error) {
         setError(error);
       } finally {
@@ -31,7 +32,7 @@ export default function Blog() {
       ) : error ? (
         <div>Error: {error.message}</div>
       ) : (
-        <container-fluid
+        <div
           style={{
             backgroundColor: "white",
             width: "100%",
@@ -39,26 +40,24 @@ export default function Blog() {
             padding: "0",
           }}
         >
-          <container-fluid>
-            <div
+          <div
+            style={{
+              width: "100%",
+              height: "300px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={blogImage}
+              alt="Blog"
               style={{
                 width: "100%",
-                height: "300px",
-                overflow: "hidden",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
               }}
-            >
-              <img
-                src={blogImage}
-                alt="Blog"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-              />
-            </div>
-          </container-fluid>
+            />
+          </div>
 
           <h1
             style={{
@@ -69,22 +68,24 @@ export default function Blog() {
           >
             <span className="highlight">Our Blog</span>
           </h1>
-          {blogs.map((blog) => (
-            <div key={blog.id} style={blogStyle}>
-              <h2 style={headingStyle}>{blog.attributes.heading}</h2>
-              <p style={subheadingStyle}>{blog.attributes.subheading}</p>
-              {blog.attributes.images &&
-                blog.attributes.images.data &&
-                blog.attributes.images.data[0] && (
+          {blogs.length > 0 ? (
+            blogs.map((blog) => (
+              <div key={blog.id} style={blogStyle}>
+                <h2 style={headingStyle}>{blog.attributes.heading}</h2>
+                <p style={subheadingStyle}>{blog.attributes.subheading}</p>
+                {blog.attributes.images && blog.attributes.images.data && blog.attributes.images.data.length > 0 && (
                   <img
-                    src={blog.attributes.images.data[0].attributes.url}
-                    alt="Blog Image"
+                    src={blog.attributes.images.data[0].attributes.formats.medium.url}
+                    alt={blog.attributes.images.data[0].attributes.name || 'Blog Image'}
                     style={imageStyle}
                   />
                 )}
-            </div>
-          ))}
-        </container-fluid>
+              </div>
+            ))
+          ) : (
+            <div>No blogs available</div>
+          )}
+        </div>
       )}
     </div>
   );
@@ -117,5 +118,5 @@ const subheadingStyle = {
 
 const imageStyle = {
   maxWidth: "50%",
-  height: "auto",
+  height: "auto"
 };

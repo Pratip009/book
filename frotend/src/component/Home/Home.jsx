@@ -51,17 +51,26 @@ function Home() {
   const { loading, error, products } = useSelector((state) => state.products);
   const [task, setTask] = useState([]);
 
+
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const response = await getNotice();
-        setNotices(response.data.data);
+        const response = await fetch('https://heroku-learningneeds-strapi.onrender.com/api/noticeboards');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log("Notices API response:", data);
+        setNotices(data.data); // Extract `data` array from response
       } catch (error) {
+        
         console.error("Error fetching notices:", error);
       }
     };
+
     fetchNotices();
   }, []);
+
 
   React.useEffect(() => {
     if (error) {
@@ -69,7 +78,7 @@ function Home() {
       dispatch(clearErrors);
     }
     dispatch(getProduct());
-  }, [dispatch, error, alert]);
+  }, [dispatch, error, alert])
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -344,7 +353,7 @@ function Home() {
               
               }}
             >
-              <Container>
+              <Container style={{marginTop:"2rem"}}>
                 <TeamMessage />
               </Container>
             </div>

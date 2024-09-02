@@ -1,158 +1,34 @@
-/* Layout and positioning */
-#model1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#model1 .members {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Allow wrapping */
-  justify-content: space-between; /* Distribute space between items */
-  width: 100%;
-  max-width: 1200px; /* Max width for larger screens */
-}
-
-#model1 .member {
-  cursor: pointer;
-  transition: all 1s;
-  margin: 10px;
-  flex: 1 1 calc(33.333% - 20px); /* Three images in a row with space */
-  max-width: calc(33.333% - 20px); /* Ensure responsive layout */
-  position: relative; /* For overlay positioning */
-  overflow: hidden; /* Hide overflow */
-}
-
-#model1 .member:hover {
-  transform: scale(1.01);
-}
-
-/* Overlay effect for larger screens */
-#model1 .member:hover .description {
-  transform: translateY(0); /* Show overlay on hover */
-  background-color: rgba(0, 62, 144, 0.71); /* Blue overlay with transparency */
-}
-
-#model1 .member-image {
-  width: 100%;
-  height: 100%;
-}
-
-/* Overlay description positioning for larger screens */
-#model1 .description {
-  width: 100%; /* Adjusted for responsiveness */
-  height: 100%; /* Full height for overlay */
-  position: absolute; /* Positioned absolutely to cover the image */
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 62, 144, 0.71); /* Blue overlay with transparency */
-  transform: translateY(100%); /* Initially hide the overlay */
-  transition: transform 1s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px; /* Added for padding */
-  box-sizing: border-box; /* Ensure padding doesn't increase height */
-  color: #ffffff; /* White text color for large screens */
-}
-
-#model1 .description h1,
-#model1 .description h2,
-#model1 .description p {
+/* Ensure the Outfit font is applied to the entire container */
+body {
   font-family: 'Outfit', sans-serif;
-  text-align: center; /* Center text for better readability */
-  margin: 5px 0; /* Adjusted margin for spacing */
 }
 
-#model1 .description h1 {
-  font-size: 18px; /* Adjusted font size */
-}
-
-#model1 .description h2 {
-  font-size: 14px; /* Adjusted font size */
-  font-weight: 400;
-}
-
-#model1 .description p {
-  font-size: 12px; /* Adjusted font size */
-  padding: 0 10px; /* Adjusted padding */
-}
-
-#model1 .description .social-media {
+/* Specific styles for social media icons */
+.social-media {
   display: flex;
-  justify-content: center; /* Center social icons */
-  margin-top: 10px; /* Space above icons */
+  justify-content: center;
+  gap: 15px; /* Adjust the gap between icons as needed */
 }
 
-#model1 .description .social-media svg {
-  color: #fff;
-  font-size: 36px; /* Increased icon size */
-  margin: 0 10px; /* Increased margin for spacing */
-  cursor: pointer;
-  transition: all 0.5s;
+.social-icon {
+  font-size: 30px; /* Adjust the icon size as needed */
+  color: #000; /* Adjust the icon color as needed */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  font-family: 'Outfit', sans-serif; /* Apply Outfit font */
 }
 
-#model1 .description .social-media svg:hover {
-  transform: scale(1.1);
-  color: #F21B3F;
+.social-media {
+  display: flex;
+  gap: 10px; /* Adjust the gap between icons if needed */
 }
 
-/* Center the 4th image if there are fewer than 5 images */
-#model1 .members::after {
-  content: '';
-  flex: 1 1 100%; /* Flex item to push the 4th image to the center if less than 5 images */
+.social-icon {
+  font-size: 24px; /* Adjust the icon size if needed */
 }
 
-/* Responsive styles for medium screens (up to 900px) */
-@media (max-width: 900px) {
-  #model1 .member {
-    flex: 1 1 calc(50% - 20px); /* Two images in a row */
-    max-width: calc(50% - 20px);
-  }
-}
-
-/* Responsive styles for small screens (up to 600px) */
-@media (max-width: 600px) {
-  #model1 .member {
-    flex: 1 1 100%; /* One image in a row */
-    max-width: 100%;
-    position: relative; /* Positioning relative for overlay adjustments */
-  }
-
-  #model1 .member:hover .description {
-    transform: none; /* No transform on hover for touch devices */
-  }
-
-  #model1 .member-image {
-    width: 100%; /* Ensure image takes full width */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  #model1 .description {
-    position: static; /* Remove absolute positioning */
-    transform: none; /* No transform */
-    background-color: transparent; /* Remove background color */
-    display: block; /* Display block for layout */
-    padding: 10px; /* Adjust padding for smaller screens */
-    color: #000000; /* Black text color for xs screens */
-  }
-
-  #model1 .description h1 {
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-
-  #model1 .description h2 {
-    font-size: 12px; /* Adjust font size for smaller screens */
-  }
-
-  #model1 .description p {
-    font-size: 10px; /* Adjust font size for smaller screens */
-  }
-
-  #model1 .description .social-media svg {
-    color: #000000; /* Black icon color for xs screens */
-    font-size: 28px; /* Adjust icon size for smaller screens */
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .social-media {
+    margin-bottom: 1rem; /* Add margin-bottom for mobile view */
   }
 }

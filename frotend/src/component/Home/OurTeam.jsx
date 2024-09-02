@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { CiInstagram } from "react-icons/ci";
-
-import { CiLinkedin } from "react-icons/ci";
-import { CiFacebook } from "react-icons/ci";
-
+import {
+  MDBCol,
+  MDBContainer,
+  MDBIcon,
+  MDBRow,
+  MDBTypography,
+} from "mdb-react-ui-kit";
+import { CiInstagram, CiLinkedin, CiFacebook } from "react-icons/ci";
 import "./OurTeam.css";
-
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 export default function OurTeam() {
   const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch("https://heroku-learningneeds-strapi.onrender.com/api/teams?populate=*");
+        const response = await fetch(
+          "https://heroku-learningneeds-strapi.onrender.com/api/teams?populate=*"
+        );
         const data = await response.json();
         setTeamMembers(data.data);
       } catch (error) {
@@ -24,27 +31,64 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <div id="model1">
-      <div className="members">
+    <MDBContainer className="py-5">
+      <MDBRow className="d-flex justify-content-center"></MDBRow>
+      <MDBRow className="d-flex justify-content-center align-items-center">
         {teamMembers.map((member) => (
-          <div className="member" key={member.id}>
-            <img
-              src={member.attributes.image.data.attributes.url}
-              alt={member.attributes.Name}
-              className="member-image"
-            />
-            <div className="description">
-              <h1>{member.attributes.Name}</h1>
-              <h2>{member.attributes.designation}</h2>
-              <div className="social-media">
-                <CiInstagram />
-                <CiLinkedin />
-                <CiFacebook />
-              </div>
+          <MDBCol
+            md="3"
+            className="d-flex flex-column align-items-center"
+            key={member.id}
+          >
+            <div className="d-flex justify-content-center mb-4">
+              <img
+                src={member.attributes.image.data.attributes.url}
+                alt={member.attributes.Name}
+                className="rounded-circle shadow-1-strong"
+                width="150"
+                height="150"
+              />
             </div>
-          </div>
+            <h5 className="mb-3">{member.attributes.Name}</h5>
+            <h6 className="mb-2">{member.attributes.designation}</h6>
+
+            <MDBTypography
+              listUnStyled
+              className="d-flex justify-content-center mb-2"
+            >
+              <li>
+                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+              </li>
+              <li>
+                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+              </li>
+              <li>
+                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+              </li>
+              <li>
+                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+              </li>
+              <li>
+                <MDBIcon far icon="star" size="sm" className="text-warning" />
+              </li>
+            </MDBTypography>
+            <div className="social-media mt-3 mb-4">
+              <FaLinkedin
+                className="social-icon"
+                style={{ color: "#1DA1F2" }}
+              />
+              <FaSquareInstagram
+                className="social-icon"
+                style={{ color: "#E1306C" }}
+              />
+              <FaFacebookSquare
+                className="social-icon"
+                style={{ color: "#1877F2" }}
+              />
+            </div>
+          </MDBCol>
         ))}
-      </div>
-    </div>
+      </MDBRow>
+    </MDBContainer>
   );
 }
