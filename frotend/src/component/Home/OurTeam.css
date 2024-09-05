@@ -29,6 +29,6 @@ body {
 /* Add responsive styles */
 @media (max-width: 768px) {
   .social-media {
-    margin-bottom: 1rem; /* Add margin-bottom for mobile view */
+    margin-bottom: 1rem /* Add margin-bottom for mobile view */
   }
 }

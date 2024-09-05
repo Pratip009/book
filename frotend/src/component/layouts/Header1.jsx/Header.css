@@ -46,13 +46,13 @@
 
 .headerTopLeft .headerPhone span,
 .headerTopRight .headerRetailer span {
-  font-size: 12px; /* Default font size for smaller screens */
+  font-size: var(--font-size-span); /* Use dynamic font size */
 }
 
 .headerTopLeft .headerTopSocialIcons svg,
 .headerTopRight .headerLogin svg {
-  width: 12px; /* Match icon size */
-  height: 15px; /* Match icon size */
+  width: 12px; /* Default icon size */
+  height: 15px; /* Default icon size */
 }
 
 .headerBottom {
@@ -64,7 +64,7 @@
 }
 
 .headerBottom__logo_main {
-  width: 200px; /* Larger logo size for desktop */
+  width: var(--logo-width); /* Use dynamic width */
 }
 
 .headerBottom_navMenu ul {
@@ -81,6 +81,7 @@
 .headerBottom_navMenu ul li a {
   color: #000000; /* Black color for menu items */
   text-decoration: none; /* Remove default underline */
+  font-size: var(--font-size-nav-link); /* Use dynamic font size */
 }
 
 .headerBottom_navMenu ul li a:hover {
@@ -152,7 +153,7 @@
 
   .headerLogin .account_box {
     padding: 2px 4px; /* Further reduce padding for mobile view */
-    font-size: 10px; /* Reduce font size for mobile view */
+    font-size: var(--font-size-account-box); /* Use dynamic font size */
   }
 
   .headerTopRight .headerRetailer {
@@ -166,6 +167,8 @@
 
   .headerBotttom_icons > * {
     margin-right: 5px; /* Adjust margin for mobile view */
+    width: 10px; /* Reduce icon size for mobile */
+    height: 12px; /* Reduce icon size for mobile */
   }
 
   .headerBotttom_icons > *:last-child {
@@ -181,13 +184,13 @@
 @media (min-width: 768px) {
   .headerLogin .account_box {
     padding: 5px 10px; /* Add padding for desktop view */
-    font-size: 14px; /* Increase font size for desktop view */
+    font-size: var(--font-size-account-box); /* Use dynamic font size */
   }
 
   /* Increase font size for headerTop spans */
   .headerTopLeft .headerPhone span,
   .headerTopRight .headerRetailer span {
-    font-size: 16px; /* Larger font size for desktop */
+    font-size: var(--font-size-span); /* Use dynamic font size */
   }
 
   .header_mobile_menu {
@@ -258,9 +261,17 @@
 
 /* Additional styles for specific elements */
 .headerBottom_navMenu ul li a {
-  font-size: 14px;
+  font-size: var(--font-size-nav-link); /* Use dynamic font size */
 }
 
 .search_Bar {
   margin-bottom: 0; /* Remove bottom margin for consistency */
+}
+
+/* Font size variables for different screen sizes */
+:root {
+  --font-size-span: 1.8vw; /* Default font size for span, adjust as needed */
+  --font-size-nav-link: 14px; /* Font size for navigation links */
+  --font-size-account-box: 14px; /* Font size for account box */
+  --logo-width: 200px /* Default logo width */
 }

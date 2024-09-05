@@ -8,7 +8,7 @@
   /* Media query for extra small screens (xs) */
   @media (max-width: 767px) {
     .circle_text h1 {
-      font-size:25px !important;
+      font-size:25px;
       font-weight:500 
     }
   }

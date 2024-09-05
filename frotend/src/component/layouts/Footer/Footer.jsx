@@ -110,6 +110,7 @@ export default function Footer() {
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
                         textAlign: "start",
+                        fontSize:"var(--font-p)"
                       }}
                     >
                       Help
@@ -148,6 +149,7 @@ export default function Footer() {
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
                         textAlign: "start",
+                         fontSize:"var(--font-p)"
                       }}
                     >
                       Policies
@@ -186,6 +188,7 @@ export default function Footer() {
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
                         textAlign: "start",
+                         fontSize:"var(--font-p)"
                       }}
                     >
                       Company
@@ -220,7 +223,7 @@ export default function Footer() {
               </MDBCol>
 
               <MDBCol md="2" lg="2" xl="2" xs="2" className="mb-md-0 mb-4 p-0">
-                <h6 className="fw-bold mb-4">Newsletter</h6>
+                <h6 className="fw-bold mb-4" style={{fontSize:"var(--font-p)"}}>Newsletter</h6>
                 <MDBInput
                   contrast
                   type="email"
@@ -235,6 +238,7 @@ export default function Footer() {
                   color="light"
                   type="submit"
                   className="mb-4 custom-btn w-100"
+                  style={{  fontFamily:"'Outfit', sans-serif"}}
                 >
                   Subscribe
                 </MDBBtn>
@@ -265,9 +269,9 @@ export default function Footer() {
           className="text-center p-4 footer-custom"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         >
-          © 2024|
+          © 2024&nbsp; 
           <a href="https://learningneeds.in/" className="text-reset">
-            Learning Needs, All Rights Reserved.
+             Learning Needs, All Rights Reserved.
           </a>
         </div>
       </MDBFooter>

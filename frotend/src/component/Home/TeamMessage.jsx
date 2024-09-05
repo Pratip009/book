@@ -57,7 +57,7 @@ export default function TeamMessage() {
                 component="div"
                 sx={{
                   color: "white",
-                  fontSize:{xs:"20px" ,sm:"36px"},
+                  fontSize: 'var(--font-h2)',
                   fontWeight: "700",
                   fontFamily: "'Outfit', sans-serif",
                   textAlign: { xs: "center", sm: "left" },
@@ -74,7 +74,7 @@ export default function TeamMessage() {
                     justifyContent:"center",
                     fontFamily: "'Outfit', sans-serif",
                     fontWeight: "300",
-                    fontSize: { xs: "13px", sm: "15px" },
+                    fontSize: 'var(--font-span)',
                     color: "white",
                     textAlign: "justify",
                    
@@ -101,7 +101,7 @@ export default function TeamMessage() {
                   fontFamily: "'Outfit', sans-serif",
                   color: "white",
                   fontWeight: "500",
-                  fontSize: { xs: "12px", sm: "15px" }, 
+                  fontSize: 'var(--font-span)',
                   textAlign: { xs: "center", sm: "left" },
                 }}
                 variant="body2"

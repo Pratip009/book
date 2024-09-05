@@ -14,27 +14,29 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { dispalyMoney, generateDiscountedPrice } from "../DisplayMoney/DisplayMoney";
+import {
+  dispalyMoney,
+  generateDiscountedPrice,
+} from "../DisplayMoney/DisplayMoney";
 import { addItemToCart } from "../../actions/cartAction";
 
-// Placeholder image import
 import placeholderImage from "../../Image/pdf.svg";
-// Exclusive icon import
+
 import exclusiveIcon from "../../Image/stars.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "300px",
     height: "fit-content",
-   
+
     backgroundColor: "#ffffff",
     border: "1px solid #E3E3E3",
     borderRadius: "12px",
     cursor: "pointer",
-   
+
     transition: "transform 0.3s, box-shadow 0.3s, border 0.3s",
     position: "relative",
-    
+
     [theme.breakpoints.down(767)]: {
       width: "90%",
       margin: theme.spacing(1),
@@ -113,43 +115,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "normal",
     borderRadius: "5px",
     padding: "0 8px",
-    fontSize: "1rem",
+    fontSize: "var(--font-span)",
     backgroundColor: "#ff4e00",
     color: "#fff",
     marginRight: theme.spacing(1),
-    [theme.breakpoints.down(767)]: {
-      fontSize: "0.9rem",
-    },
-    [theme.breakpoints.down(721)]: {
-      fontSize: "0.8rem",
-    },
-    [theme.breakpoints.down(600)]: {
-      fontSize: "0.8rem",
-    },
-    [theme.breakpoints.down(540)]: {
-      fontSize: "0.7rem",
-    },
-    [theme.breakpoints.down(480)]: {
-      fontSize: "0.7rem",
-    },
-    [theme.breakpoints.down(440)]: {
-      fontSize: "0.6rem",
-    },
-    [theme.breakpoints.down(420)]: {
-      fontSize: "0.6rem",
-    },
-    [theme.breakpoints.down(412)]: {
-      fontSize: "0.6rem",
-    },
-    [theme.breakpoints.down(393)]: {
-      fontSize: "0.5rem",
-    },
-    [theme.breakpoints.down(360)]: {
-      fontSize: "0.5rem",
-    },
-    [theme.breakpoints.down(320)]: {
-      fontSize: "0.4rem",
-    },
+   
   },
   finalPrice: {
     color: "#fff",
@@ -158,43 +128,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "5px",
     padding: "0 8px",
     fontWeight: "normal",
-    fontSize: "1rem",
-    [theme.breakpoints.down(767)]: {
-      fontSize: "0.9rem",
-    },
-    [theme.breakpoints.down(721)]: {
-      fontSize: "0.8rem",
-    },
-    [theme.breakpoints.down(600)]: {
-      fontSize: "0.8rem",
-    },
-    [theme.breakpoints.down(540)]: {
-      fontSize: "0.7rem",
-    },
-    [theme.breakpoints.down(480)]: {
-      fontSize: "0.7rem",
-    },
-    [theme.breakpoints.down(440)]: {
-      fontSize: "0.6rem",
-    },
-    [theme.breakpoints.down(420)]: {
-      fontSize: "0.6rem",
-    },
-    [theme.breakpoints.down(412)]: {
-      fontSize: "0.6rem",
-    },
-    [theme.breakpoints.down(393)]: {
-      fontSize: "0.5rem",
-    },
-    [theme.breakpoints.down(360)]: {
-      fontSize: "0.5rem",
-    },
-    [theme.breakpoints.down(320)]: {
-      fontSize: "0.4rem",
-    },
+    fontSize: "var(--font-span)",
+   
   },
   description: {
-    fontSize: "0.9rem",
+    fontSize: "var(--font-p)",
     fontFamily: "'Outfit', sans-serif",
     fontWeight: 500,
     marginTop: theme.spacing(1),
@@ -204,98 +142,11 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis",
     WebkitLineClamp: 3,
     WebkitBoxOrient: "vertical",
-    [theme.breakpoints.down(767)]: {
-      fontSize: "0.8rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(721)]: {
-      fontSize: "0.8rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(600)]: {
-      fontSize: "0.8rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(540)]: {
-      fontSize: "0.7rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(480)]: {
-      fontSize: "0.7rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(440)]: {
-      fontSize: "0.6rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(420)]: {
-      fontSize: "0.6rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(412)]: {
-      fontSize: "0.6rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(393)]: {
-      fontSize: "0.5rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(360)]: {
-      fontSize: "0.5rem",
-      WebkitLineClamp: 2,
-    },
-    [theme.breakpoints.down(320)]: {
-      fontSize: "0.4rem",
-      WebkitLineClamp: 1,
-    },
   },
   title: {
     fontWeight: "700",
     fontFamily: "'Outfit', sans-serif",
-    [theme.breakpoints.down(767)]: {
-      fontSize: "1rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(721)]: {
-      fontSize: "1rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(600)]: {
-      fontSize: "0.9rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(540)]: {
-      fontSize: "0.9rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(480)]: {
-      fontSize: "0.9rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(440)]: {
-      fontSize: "0.8rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(420)]: {
-      fontSize: "0.8rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(412)]: {
-      fontSize: "0.8rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(393)]: {
-      fontSize: "0.7rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(360)]: {
-      fontSize: "0.7rem",
-      WebkitLineClamp: 1,
-    },
-    [theme.breakpoints.down(320)]: {
-      fontSize: "0.6rem",
-      WebkitLineClamp: 1,
-    },
+    fontSize: "var(--font-p)",
   },
   exclusiveIcon: {
     position: "absolute",
@@ -386,7 +237,11 @@ const ProductCard = ({ product }) => {
             >
               {truncated}
             </Typography>
-            <Box display="flex" alignItems="center" justifyContent="space-between">
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+            >
               <Box display="flex" alignItems="center" marginTop="1rem">
                 <Typography variant="body1" className={classes.oldPrice}>
                   {oldPrice}

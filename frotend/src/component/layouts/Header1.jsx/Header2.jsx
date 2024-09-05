@@ -5,7 +5,6 @@ import axios from "axios";
 import AOS from "aos";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
-import SearchBar from "./Searchbar";
 import CartIcon from "./CartIcon";
 import ProfileModal from "./ProfileModel";
 import ScrollingTextHeader from "./ScrollingTextHeader";
@@ -15,11 +14,13 @@ import "aos/dist/aos.css";
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+
 const navLinkStyle = {
   fontFamily: "'Outfit', sans-serif",
   textDecoration: "none",
   color: "#000000",
   marginRight: "20px",
+  fontSize: "var(--font-span)",
 };
 
 const navLinkHoverStyle = {
@@ -109,10 +110,10 @@ function BasicExample() {
                   style={{
                     color: "white",
                     marginRight: "0.5rem",
-                    fontSize: "1.2rem"
+                    fontSize: "var(--font-span)",
                   }}
                 />
-                <span>{phone}</span>
+                <span style={{ fontSize: "var(--font-span)" }}>{phone}</span>
               </Nav.Link>
 
               {/* Add spacing between Nav.Link and MDBRow */}
@@ -179,10 +180,10 @@ function BasicExample() {
                   style={{
                     color: "white",
                     marginRight: "0.5rem",
-                    fontSize: "1.2rem",
+                    fontSize: "var(--font-span)",
                   }}
                 />
-                <span>{email}</span>
+                <span style={{ fontSize: "var(--font-span)" }}>{email}</span>
               </Nav.Link>
               {isAuthenticated ? (
                 <Link to="/account">
@@ -191,6 +192,7 @@ function BasicExample() {
                       backgroundColor: "#FF4E00",
                       color: "white",
                       fontFamily: "'Outfit', sans-serif",
+                      fontSize: "var(--font-span)",
                     }}
                     size="sm"
                   >
@@ -204,6 +206,7 @@ function BasicExample() {
                       backgroundColor: "#FF4E00",
                       color: "white",
                       fontFamily: "'Outfit', sans-serif",
+                      fontSize: "var(--font-span)",
                     }}
                     size="sm"
                   >
@@ -234,7 +237,7 @@ function BasicExample() {
                 height: "auto",
               }}
             />
-            {/* <img
+            <img
               src={logo}
               alt="Logo"
               className="d-block d-md-none"
@@ -244,23 +247,12 @@ function BasicExample() {
                 height: "auto",
                 margin: 0,
               }}
-            /> */}
+            />
           </Navbar.Brand>
 
           {/* Icons for Mobile */}
           <Nav className="d-flex align-items-center ms-auto d-lg-none">
             <div className="d-flex align-items-center">
-              {/* SearchBar hidden on xs screens */}
-              <Nav.Link href="#search" className="d-none d-lg-block me-3">
-                <SearchBar
-                  searchBarActive={searchBarActive}
-                  searchValue={searchValue}
-                  handleCrossButtonClick={handleCrossButtonClick}
-                  handleSearchButtonClick={handleSearchButtonClick}
-                  handleSearchInputChange={handleSearchInputChange}
-                  handleSearchFormSubmit={handleSearchFormSubmit}
-                />
-              </Nav.Link>
               <Nav.Link href="/cart" className="me-3">
                 <CartIcon style={{ color: "black" }} />
               </Nav.Link>
@@ -275,12 +267,129 @@ function BasicExample() {
             </div>
           </Nav>
 
-          {/* Navigation Links and SearchBar for larger screens */}
           <Navbar.Collapse
             in={isNavbarCollapsed}
-            className="d-lg-flex justify-content-center"
+            className="d-lg-flex justify-content-start"
           >
-            <Nav className="mx-auto d-flex align-items-center">
+            <Nav
+              className="d-none d-lg-flex mx-auto align-items-start"
+              id="desktop-nav"
+            >
+              <Nav.Link
+                href="/"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                href="/about_us"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                About Us
+              </Nav.Link>
+              <Nav.Link
+                href="/products"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Products
+              </Nav.Link>
+              <Nav.Link
+                href="/training"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Training
+              </Nav.Link>
+              <Nav.Link
+                href="/school"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                School Management
+              </Nav.Link>
+              <Nav.Link
+                href="/service"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Service
+              </Nav.Link>
+              <Nav.Link
+                href="/gallery"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Gallery
+              </Nav.Link>
+              <Nav.Link
+                href="/blog"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Blog
+              </Nav.Link>
+              <Nav.Link
+                href="/contact"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Contact
+              </Nav.Link>
+            </Nav>
+
+            {/* Mobile View Navigation */}
+            <Nav
+              className="d-flex flex-column align-items-start d-lg-none mx-2"
+              id="mobile-nav"
+            >
               <Nav.Link
                 href="/"
                 style={navLinkStyle}
@@ -391,18 +500,7 @@ function BasicExample() {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-
           <Nav className="d-none d-lg-flex align-items-center ms-auto">
-            <Nav.Link className="me-3">
-              <SearchBar
-                searchBarActive={searchBarActive}
-                searchValue={searchValue}
-                handleCrossButtonClick={handleCrossButtonClick}
-                handleSearchButtonClick={handleSearchButtonClick}
-                handleSearchInputChange={handleSearchInputChange}
-                handleSearchFormSubmit={handleSearchFormSubmit}
-              />
-            </Nav.Link>
             <Nav.Link href="/cart" className="me-3">
               <CartIcon />
             </Nav.Link>
@@ -412,8 +510,6 @@ function BasicExample() {
           </Nav>
         </Container>
       </Navbar>
-
-      {/* Scrolling Text Header */}
       <ScrollingTextHeader />
     </>
   );

@@ -14,7 +14,7 @@ export default function Wellcome2() {
             fontFamily: "'Outfit', sans-serif",
 
             color: "#FF4E00",
-            fontSize: isXs ? "24px" : "36px",
+            fontSize:'var(--font-h3)',
           }}
         >
           Our Services Help You Succeed in Business
@@ -22,7 +22,7 @@ export default function Wellcome2() {
       </Container>
       <p
         style={{
-          fontSize: "15px",
+          fontSize: "var(--font-span)",
           fontFamily: "'Outfit', sans-serif",
           color: "black",
           textAlign: "justify",
@@ -47,6 +47,7 @@ export default function Wellcome2() {
             outline: "none",
             cursor: "pointer",
             marginTop: "23px",
+            fontSize:'var(--font-span)',
           }}
           variant="contained"
         >

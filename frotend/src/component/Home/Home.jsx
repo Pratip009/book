@@ -31,7 +31,7 @@ import axios from "axios";
 import { baseURL } from "../utils/constant";
 import Welcome from "./Welcome";
 import { Link } from "react-router-dom";
-import { getNotice } from "../../GlobalApi";
+
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Wellcome2 from "./Wellcome2";
 import Container from "react-bootstrap/Container";
@@ -39,7 +39,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import "./Home.css";
-// import FeaturedSlider from "./FeatureSlider";
+
 import "aos/dist/aos.css";
 
 function Home() {
@@ -93,39 +93,18 @@ function Home() {
 
   const h1Style = {
     textAlign: "center",
-    fontSize: "36px",
+    fontSize: 'var(--font-h2)',
+    fontWeight:700,
     marginTop: "10px",
     fontFamily: "'Outfit', sans-serif",
-
-    "@media (max-width: 767px)": { fontSize: "32px" },
-    "@media (max-width: 721px)": { fontSize: "30px" },
-    "@media (max-width: 600px)": { fontSize: "28px" },
-    "@media (max-width: 540px)": { fontSize: "26px" },
-    "@media (max-width: 480px)": { fontSize: "24px" },
-    "@media (max-width: 440px)": { fontSize: "22px" },
-    "@media (max-width: 420px)": { fontSize: "20px" },
-    "@media (max-width: 412px)": { fontSize: "18px" },
-    "@media (max-width: 393px)": { fontSize: "16px" },
-    "@media (max-width: 360px)": { fontSize: "14px" },
-    "@media (max-width: 320px)": { fontSize: "12px" },
   };
 
   const spanStyle = {
-    fontSize: "19px",
+    fontSize: "var(--font-span)",
     fontFamily: "'Outfit', sans-serif",
     fontWeight: "500",
-    // Inline media queries
-    "@media (max-width: 767px)": { fontSize: "17px" },
-    "@media (max-width: 721px)": { fontSize: "16px" },
-    "@media (max-width: 600px)": { fontSize: "15px" },
-    "@media (max-width: 540px)": { fontSize: "14px" },
-    "@media (max-width: 480px)": { fontSize: "13px" },
-    "@media (max-width: 440px)": { fontSize: "12px" },
-    "@media (max-width: 420px)": { fontSize: "11px" },
-    "@media (max-width: 412px)": { fontSize: "10px" },
-    "@media (max-width: 393px)": { fontSize: "9px" },
-    "@media (max-width: 360px)": { fontSize: "8px" },
-    "@media (max-width: 320px)": { fontSize: "7px" },
+
+    
   };
 
   return (
@@ -145,10 +124,11 @@ function Home() {
                 width: "100%",
                 height: "auto",
                 overflow: "hidden",
+                marginTop:"2rem"
               }}
             >
               <Container>
-                <Row style={{ marginTop: "2rem" }}>
+                <Row style={{ marginTop: "var(--global-margin)" }}>
                   <Col xs={12} md={6} className="d-flex align-items-stretch">
                     <Welcome />
                   </Col>
@@ -163,7 +143,7 @@ function Home() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "20px",
+                  marginTop: "var(--global-margin)",
                 }}
               >
                 <Row>
@@ -186,7 +166,7 @@ function Home() {
                             top: 0,
                             left: 0,
                             width: "50%",
-                            bgcolor: "#FF6D28bc",
+                            bgcolor: "#FF6C28CD",
                             color: "white",
                             padding: "15px",
                             height: "100%",
@@ -215,7 +195,7 @@ function Home() {
                               className="training"
                               style={{
                                 fontFamily: "'Outfit', sans-serif",
-                                fontSize: isMobile ? "0.8rem" : "1.5rem",
+                                fontSize: 'var(--font-h5)',
                                 marginTop: "10px", // Add margin to separate text from avatar
                               }}
                             >
@@ -261,7 +241,7 @@ function Home() {
                             top: 0,
                             left: 0,
                             width: "50%",
-                            bgcolor: "#3AB0FFaf",
+                            bgcolor: "#2885F7C8",
                             color: "white",
                             padding: "15px",
                             height: "100%",
@@ -290,7 +270,7 @@ function Home() {
                               className="training"
                               style={{
                                 fontFamily: "'Outfit', sans-serif",
-                                fontSize: isMobile ? "0.8rem" : "1.5rem",
+                                fontSize: 'var(--font-h5)',
                                 marginTop: "10px", // Add margin to separate text from avatar
                               }}
                             >
@@ -350,22 +330,17 @@ function Home() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-              
+              marginTop:"2rem"
               }}
             >
-              <Container style={{marginTop:"2rem"}}>
+              <Container>
                 <TeamMessage />
               </Container>
             </div>
-            <Container>
+            <Container style={{marginTop:"2rem"}}>
               <div className="circle_text">
                 <h1
-                  style={{
-                    textAlign: "center",
-                    fontSize: "36px",
-                  
-                    fontFamily: "'Outfit', sans-serif",
-                  }}
+                  style={h1Style}
                 >
                   Our <span className="highlight">Goals And Objective</span>
                 </h1>
@@ -399,7 +374,7 @@ function Home() {
                           <span
                             className="goals-objective-title"
                             style={{
-                              fontSize: "1rem",
+                              fontSize: 'var(--font-h4)',
                               color: "#1B1A1A",
                               fontWeight: "600",
                               fontFamily: "'Outfit', sans-serif",
@@ -412,7 +387,7 @@ function Home() {
                         subheaderTypographyProps={{
                           style: {
                             color: "#000000", // Example color
-                            fontSize: "0.875rem", // Example font size
+                            fontSize: 'var(--font-span)', // Example font size
                             fontFamily: "'Outfit', sans-serif", // Matching font family
                             
                           },
@@ -438,7 +413,7 @@ function Home() {
                           <span
                             className="goals-objective-title"
                             style={{
-                              fontSize: "1rem",
+                              fontSize: 'var(--font-h4)',
                               color: "#1B1A1A",
                               fontWeight: "600",
                               fontFamily: "'Outfit', sans-serif",
@@ -451,7 +426,7 @@ function Home() {
                         subheaderTypographyProps={{
                           style: {
                             color: "#000000", // Example color
-                            fontSize: "0.875rem", // Example font size
+                            fontSize: 'var(--font-span)', // Example font size
                             fontFamily: "'Outfit', sans-serif", // Matching font family
                             // Example font weight
                           },
@@ -462,7 +437,7 @@ function Home() {
                       style={{
                         fontFamily: "'Outfit', sans-serif",
                         background: "linear-gradient(120deg, #003E90, #3B90FF)",
-                        fontSize:{xs:"20px" ,sm:"36px"},
+                        fontSize:'var(--font-h3)',
                         padding: "1rem",
                         color: "white",
                       }}
@@ -472,7 +447,7 @@ function Home() {
                     <span
                       className=""
                       style={{
-                        fontSize:{xs:"13px" ,sm:"20px"},
+                        fontSize:'var(--font-span)',
                         fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                       }}
@@ -506,6 +481,7 @@ function Home() {
                         textShadow: "0 0 10px red",
                         padding: "10px 0 0 0 ",
                         fontFamily: "Outfit, sans-serif",
+                        fontSize:'var(--font-h3)',
                       }}
                     >
                       Updates

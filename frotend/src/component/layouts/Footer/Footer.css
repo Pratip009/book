@@ -24,17 +24,19 @@
 
 .footer_links {
   color: white;
+  font-size: var(--font-span);
   font-family: 'Outfit', sans-serif;
   text-decoration: none;
-  font-weight: 300
+  font-weight: 200;
 }
 
 /* Custom Button Styling */
 .custom-btn {
   background-color: #FF4E00 !important;
   color: white !important;
-  text-transform: none !important;
+  text-transform: none;
   font-family: 'Outfit', sans-serif !important;
+  
 }
 .button-col {
   display: flex;
@@ -51,11 +53,11 @@
 }
 
 .box-text {
-  font-size: 11px;
+  font-size: var(--font-span)
 }
 
 .box-text-two {
-  font-size: 10px;
+  font-size: var(--font-span);
   margin: 0 !important;
 }
 
@@ -67,7 +69,7 @@
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 2vw;
   color: white;
 }
 
@@ -79,13 +81,13 @@
 }
 
 .text {
-  font-size: 12px;
+  font-size: var(--font-p);
   font-weight: bold;
   color: white;
 }
 
 .text-two {
-  font-size: 10px;
+  font-size: var(--font-span);
   color: white;
 }
 
@@ -94,10 +96,10 @@
   .icon {
     font-size: 1.5rem;
   }
-
-  .text {
-    font-size: 10px;
-  }
+.navbar-brand{
+  margin-top: 1rem;
+}
+  
   
   .text-two {
     font-size: 8px;
@@ -128,22 +130,30 @@
   font-family: 'Outfit', sans-serif;
 }
 .textt{
+  font-size: var(--font-span);
   font-family: 'Outfit', sans-serif;
   color: white;
+}
+.text-reset{
+  font-size: var(--font-span);
+  font-family: 'Outfit', sans-serif;
 }
 .overlay-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fdfdfd;
+  margin-bottom: 1rem;
 }
 
 .overlay-content h1 {
+  font-size: var(--font-h2);
   margin: 0;
   font-family: 'Outfit', sans-serif;
 }
 
 .overlay-content p {
+  font-size: var(--font-span);
   margin: 0;
   font-family: 'Outfit', sans-serif;
 }
@@ -169,6 +179,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
   }
   .overlay-container{
     width: 94%;
@@ -210,4 +221,5 @@
     
     text-transform: none; 
   }
+ 
 }

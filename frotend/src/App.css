@@ -1,3 +1,102 @@
+/* src/styles/global.css */
+:root {
+  --font-h1: 2.441em;
+  --font-h2: 1.953em;
+  --font-h3: 1.563em;
+  --font-h4: 1.250em;
+  --font-h5: 1.250em;
+  --font-h6: 0.875em;
+  --font-p: 1em;
+  --font-span: 0.875em;
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 767px) {
+  :root {
+    --font-h1: 1.875em; /* Approximately 30px */
+    --font-h2: 1.625em; /* Approximately 26px */
+    --font-h3: 1.375em; /* Approximately 22px */
+    --font-h4: 1.125em; /* Approximately 18px */
+    --font-h5: 1em;     /* Approximately 16px */
+    --font-h6: 0.875em; /* Approximately 14px */
+    --font-p: 1em;      /* Approximately 16px */
+    --font-span: 0.875em; /* Approximately 14px */
+  }
+}
+
+/* Adjust for devices 721px and smaller */
+@media (max-width: 721px) {
+  :root {
+    --font-h1: 1.75em;  /* Approximately 28px */
+    --font-h2: 1.5em;   /* Approximately 24px */
+    --font-h3: 1.25em;  /* Approximately 20px */
+    --font-h4: 1em;     /* Approximately 16px */
+    --font-h5: 0.875em; /* Approximately 14px */
+    --font-h6: 0.75em;  /* Approximately 12px */
+    --font-p: 0.875em;  /* Approximately 14px */
+    --font-span: 0.75em; /* Approximately 12px */
+  }
+}
+
+
+:root {
+  /* Default values for larger screens */
+  --global-margin: 2vw;
+  --global-padding: 2vh;
+}
+
+/* Adjust for mobile devices (767px and smaller) */
+@media (max-width: 767px) {
+  :root {
+    --global-margin: 4vw;
+    --global-padding: 4vh;
+  }
+}
+
+/* Adjust for devices 721px and smaller */
+@media (max-width: 721px) {
+  :root {
+    --global-margin: 3.5vw;
+    --global-padding: 3.5vh;
+  }
+}
+
+/* Adjust for devices 600px and smaller */
+@media (max-width: 600px) {
+  :root {
+    --global-margin: 3vw;
+    --global-padding: 3vh;
+  }
+}
+
+/* Adjust for devices 480px and smaller */
+@media (max-width: 480px) {
+  :root {
+    --global-margin: 2.5vw;
+    --global-padding: 2.5vh;
+  }
+}
+
+/* Adjust for devices 360px and smaller */
+@media (max-width: 360px) {
+  :root {
+    --global-margin: 2vw;
+    --global-padding: 2vh;
+  }
+}
+
+/* Example usage */
+.some-class {
+  margin: var(--global-margin);
+  padding: var(--global-padding);
+}
+
+
+/* Continue similarly for other breakpoints... */
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 html,

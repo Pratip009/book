@@ -184,9 +184,25 @@ body {
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 0; /* Ensure it's behind other content */
+  z-index: -1;
+  /* Ensure it's behind other content */
 }
-
+.background_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.11); /* Add a dark overlay for readability */
+  z-index: -1; /* Ensure the overlay is behind the text but in front of the background image */
+}
+.content {
+  position: relative;
+  z-index: 1; /* Ensure text is in front of the background image */
+  color: white; /* Adjust the color of the text for readability */
+  padding: 20px; /* Add padding to keep the text away from edges */
+}
 .goal {
   background-image: url("../../Image/ourteamd.png");
   position: relative;
@@ -204,6 +220,7 @@ body {
   background-position: center;
   filter: brightness(100%);
   position: relative; 
+  margin-top: 2rem;
 }
 
 /* Text Styles */
@@ -273,8 +290,9 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.8rem;
+  gap: 4rem;
   max-width: 100%;
+  margin-top: 2rem;
 }
 
 /* Inner Goal Styles */
@@ -405,15 +423,16 @@ p {
 }
 .circle_text h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: var(--font-h3);
   margin-top: 10px;
-  font-family: 'Outfit', sans-serif;
+  font-weight:500 ;
+  font-family: 'Outfit', sans-serif
 }
 
 /* Media query for extra small screens (xs) */
 @media (max-width: 767px) {
   .circle_text h1 {
-    font-size:25px !important;
+    font-size: var(--font-h4);
     font-weight:500 
   }
 }

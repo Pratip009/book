@@ -14,7 +14,7 @@ export default function Wellcome() {
             
             padding: isXs ? "0.5rem" : "1rem",
             color: "white",
-            fontSize: isXs ? "24px" : "36px",
+            fontSize:'var(--font-h3)',
           }}
         >
           Welcome to Learning Needs
@@ -23,10 +23,12 @@ export default function Wellcome() {
 
       <p
         style={{
-          fontSize: "15px",
+          fontSize: "var(--font-span)",
           fontFamily: "'Outfit', sans-serif",
           color: "black",
           textAlign: "justify",
+          backgroundColor:"#FFFFFF34",
+
         }}
       >
         Necessity is the Mother of Invention, and this proverb perfectly defines
