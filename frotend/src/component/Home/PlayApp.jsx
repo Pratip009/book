@@ -13,19 +13,19 @@ export default function MediaControlCard() {
   const commonStyles = {
     appHeading: {
       fontFamily: "'Outfit', sans-serif",
-      fontSize: "30px",
+      fontSize: "var(--font-h2)",
       margin: "0",
     },
     appSubheading: {
       marginTop: "20px",
       marginBottom: "10px",
       fontFamily: "'Outfit', sans-serif",
-      fontSize: "26px",
+      fontSize: "var(--font-p)",
       fontWeight: "700",
       color: "#000000",
     },
     appDesc: {
-      fontSize: "15px",
+      fontSize: "var(--font-span)",
       fontFamily: "'Outfit', sans-serif",
       color: "rgb(49, 49, 49)",
       textAlign: "justify",

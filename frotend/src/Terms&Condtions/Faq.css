@@ -4,6 +4,7 @@
   font-weight: 600;
 }
 .Faq_desc{
+    font-size:var(--font-span);
     text-align: start;
     font-family: 'Outfit', sans-serif;
     color: white;

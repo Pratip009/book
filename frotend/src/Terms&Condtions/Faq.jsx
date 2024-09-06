@@ -18,8 +18,9 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
-          fontSize:'36px',
+          fontSize: "var(--font-h3)",
           color: "#FF4E00",
+          fontFamily: "'Outfit', sans-serif",
         }}
       >
         FAQ - Training
@@ -35,6 +36,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             1.
@@ -46,6 +48,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             What type of training and workshops do you provide?
@@ -71,6 +74,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             2.
@@ -82,6 +86,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             Where and how do you deliver your training and workshop?
@@ -103,6 +108,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             3.
@@ -114,6 +120,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             Who can attend the training and workshop?
@@ -137,6 +144,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             4.
@@ -148,6 +156,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             What are the topics covered in training and workshop?
@@ -172,6 +181,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             5.
@@ -183,6 +193,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             What is the cost involved during training and workshop? type of
@@ -200,8 +211,9 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
-          fontSize:'36px',
+          fontSize: "var(--font-h3)",
           color: "#FF4E00",
+          fontFamily: "'Outfit', sans-serif",
         }}
       >
         FAQ - School
@@ -217,6 +229,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             6.
@@ -228,6 +241,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             Who can open a school?
@@ -252,6 +266,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             7.
@@ -263,6 +278,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             Why choose Learning Needs?
@@ -289,6 +305,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             8.
@@ -300,6 +317,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             How much area is required for opening a school?
@@ -327,6 +345,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             9.
@@ -338,6 +357,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             What is the investment to open a school?
@@ -363,6 +383,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             10.
@@ -374,6 +395,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             How you will help in curriculum?
@@ -390,8 +412,9 @@ export default function Faq() {
       <h1
         style={{
           textAlign: "start",
-          fontSize:'36px',
+          fontSize: "var(--font-h3)",
           color: "#FF4E00",
+          fontFamily: "'Outfit', sans-serif",
         }}
       >
         FAQ - Products
@@ -407,6 +430,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             11.
@@ -418,6 +442,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             Benefits of choosing Learning Needs for our School?
@@ -442,6 +467,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             12.
@@ -453,6 +479,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             Benefits for existing school?
@@ -479,6 +506,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             13.
@@ -490,6 +518,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             What is your consultancy fee?
@@ -511,6 +540,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             14.
@@ -522,6 +552,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             What products you sell on Learning Needs Site?
@@ -548,6 +579,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             15.
@@ -559,6 +591,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             When will you ship my order?
@@ -585,6 +618,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
               color: "#FF4E00",
+              fontSize:"var(--font-span)"
             }}
           >
             16.
@@ -596,6 +630,7 @@ export default function Faq() {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 600,
               textAlign:"justify",
+              fontSize:"var(--font-span)"
             }}
           >
             Which carrier do you use to ship orders to your customers?

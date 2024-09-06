@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Container, Grid, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
-import { Link } from "react-router-dom";
+
 import { Card } from "@mui/material";
 import PlayApp from "../component/Home/PlayApp.jsx";
 import "./Aboutus.css";
@@ -40,23 +40,22 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   introText_about1: {
-    fontSize: "16px",
+    fontSize: "var(--font-span)",
     lineHeight: "1.6",
     textAlign: "justify",
     fontFamily: "'Outfit', sans-serif",
     [theme.breakpoints.down("xs")]: {
-      fontSize: "15px",
       lineHeight: "1.5",
       padding: "0 1rem",
     },
   },
   founderMessage: {
     textAlign: "start",
-    fontSize: "36px",
+    fontSize: "var(--font-h3)",
     marginTop: "20px",
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
-      fontSize: "28px",
+
       marginTop: "10px",
     },
   },
@@ -144,10 +143,9 @@ const useStyles = makeStyles((theme) => ({
   },
   circleText: {
     textAlign: "center",
-    fontSize: "36px",
+    fontSize: "var(--font-h3)",
     marginTop: "20px",
     [theme.breakpoints.down("xs")]: {
-      fontSize: "28px",
       marginTop: "10px",
     },
   },
@@ -166,17 +164,19 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonContainer_about: {
     display: "flex",
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    gap: "20px", // Space between buttons
+    gap: "20px",
     marginTop: "20px",
     [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
+      flexDirection: "row",
       gap: "10px", // Reduce space between buttons for smaller screens
     },
   },
   button1_about: {
     backgroundColor: "#003E90 !important",
+    fontSize: "var(--font-span)",
     color: "white !important",
     width: "fit-content !important",
     padding: "0.8rem 2rem !important",
@@ -188,12 +188,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       width: "80% !important",
-      fontSize: "14px !important",
+      fontSize: "var(--font-span) !important",
       marginLeft: "0 !important",
     },
     [theme.breakpoints.down("sm")]: {
       width: "100% !important",
-      fontSize: "12px !important",
     },
   },
   button2_about: {
@@ -209,12 +208,12 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       width: "80% !important", // Make buttons wider for better touch targets
-      fontSize: "14px !important", // Adjust font size
+      fontSize: "var(--font-span) !important", // Adjust font size
       marginLeft: "0 !important",
     },
     [theme.breakpoints.down("sm")]: {
       width: "100% !important", // Make buttons full width for mobile screens
-      fontSize: "12px !important", // Further adjust font size
+      // Further adjust font size
     },
   },
 
@@ -222,6 +221,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     backgroundColor: "red",
     boxShadow: 3,
+    height: "180px",
     padding: theme.spacing(2),
   },
   traitImage: {
@@ -232,46 +232,40 @@ const useStyles = makeStyles((theme) => ({
   },
   traitLetter: {
     color: "#FF4E00",
-    fontSize: "24px",
+    fontSize: "var(--font-h4)",
     fontFamily: "'Outfit', sans-serif",
     fontWeight: "600",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "18px !important", // Added !important
-    },
   },
   traitText: {
     color: "#61677A",
-    fontSize: "12px",
+    fontSize: "5px",
     fontFamily: "'Outfit', sans-serif",
     fontWeight: "600",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "10px !important",
-    },
   },
 }));
 
 const About_UsPage = () => {
   const classes = useStyles();
   const traits = [
-    { src: increaseImg, letter: "L-", text: "LEADERSHIP" },
-    { src: bearImg, letter: "E-", text: "EFFECTIVENESS" },
-    { src: bestImg, letter: "A-", text: "ATTITUDE" },
-    { src: familyImg, letter: "R-", text: "RELATION" },
-    { src: negoImg, letter: "N-", text: "NEGOTIATION" },
-    { src: creativeBrainImg, letter: "I-", text: "INNOVATION" },
-    { src: youCanImg, letter: "N-", text: "NURTURE" },
-    { src: tarImg, letter: "G-", text: "GOAL" },
-    { src: inventoryImg, letter: "N-", text: "NEEDFUL" },
-    { src: warningImg, letter: "E-", text: "ESSENTIAL" },
-    { src: dreamImg, letter: "E-", text: "EXPECTATIONAL" },
-    { src: developerImg, letter: "D-", text: "DEVELOPMENT" },
+    { src: increaseImg, letterr: "L-", textw: "LEADERSHIP" },
+    { src: bearImg, letterr: "E-", textw: "EFFECTIVENESS" },
+    { src: bestImg, letterr: "A-", textw: "ATTITUDE" },
+    { src: familyImg, letterr: "R-", textw: "RELATION" },
+    { src: negoImg, letterr: "N-", textw: "NEGOTIATION" },
+    { src: creativeBrainImg, letterr: "I-", textw: "INNOVATION" },
+    { src: youCanImg, letterr: "N-", textw: "NURTURE" },
+    { src: tarImg, letterr: "G-", textw: "GOAL" },
+    { src: inventoryImg, letterr: "N-", textw: "NEEDFUL" },
+    { src: warningImg, letterr: "E-", textw: "ESSENTIAL" },
+    { src: dreamImg, letterr: "E-", textw: "EXPECTATIONAL" },
+    { src: developerImg, letterr: "D-", textw: "DEVELOPMENT" },
   ];
   return (
     <>
       <container-fluid>
         <container-fluid>
           <img
-            src={require("../Image/abnew11nw1.png")}
+            src={require("../Image/about_top.webp")}
             alt="About"
             className="responsive-img"
           />
@@ -281,7 +275,7 @@ const About_UsPage = () => {
 
         <container-fluid className="about_ln">
           <Container>
-            <Row className="align-items-center justify-content-center">
+            <Row className="align-items-center justify-content-center mt-3">
               <Col xs="12" sm="12" md="4" className="mb-3">
                 <img
                   src={require("../Image/about/abb.png")}
@@ -298,14 +292,14 @@ const About_UsPage = () => {
                 xs="12"
                 sm="12"
                 md="8"
-                className="d-flex flex-column justify-content-center align-items-center"
+                className="d-flex flex-column justify-content-start align-items-start"
                 style={{ textAlign: "flex-start" }}
               >
                 <div className="circle_text">
                   <h1
                     style={{
                       textAlign: "left",
-                      fontSize: "36px",
+                      fontSize: "var(--font-h2)",
                       marginTop: "20px",
                     }}
                   >
@@ -315,7 +309,7 @@ const About_UsPage = () => {
                 <p
                   variant="body1"
                   style={{
-                    fontSize: "15px",
+                    fontSize: "var(--font-span)",
 
                     fontWeight: "400",
                     textAlign: "justify",
@@ -334,7 +328,7 @@ const About_UsPage = () => {
                   style={{
                     color: "#fff",
                     backgroundColor: "#FF4E00",
-
+                    fontSize: "var(--font-span)",
                     display: "block",
                     width: "fit-content",
                   }}
@@ -353,7 +347,7 @@ const About_UsPage = () => {
               <h1
                 style={{
                   textAlign: "center",
-                  fontSize: "36px",
+                  fontSize: "var(--font-h2)",
                   marginTop: "20px",
                 }}
               >
@@ -367,14 +361,28 @@ const About_UsPage = () => {
                   <Card className={classes.traitCard}>
                     <img
                       src={trait.src}
-                      alt={trait.text}
+                      alt={trait.textw}
                       className={classes.traitImage}
                     />
-                    <Typography className={classes.traitLetter}>
-                      {trait.letter}
+                    <Typography
+                      style={{
+                        color: "#FF4E00",
+                        fontSize: "var(--font-h4)",
+                        fontFamily: "'Outfit', sans-serif",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {trait.letterr}
                     </Typography>
-                    <Typography className={classes.traitText}>
-                      {trait.text}
+                    <Typography
+                      style={{
+                        color: "#61677A",
+                        fontSize: "var(--font-span)",
+                        fontFamily: "'Outfit', sans-serif",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {trait.textw}
                     </Typography>
                   </Card>
                 </Grid>
@@ -411,8 +419,24 @@ const About_UsPage = () => {
                       alt="SERVICES"
                       className={classes.traitImage}
                     />
-                    <Typography className={classes.traitLetter}>S-</Typography>
-                    <Typography className={classes.traitText}>
+                    <Typography
+                      style={{
+                        color: "#FF4E00",
+                        fontSize: "var(--font-h4)",
+                        fontFamily: "'Outfit', sans-serif",
+                        fontWeight: "600",
+                      }}
+                    >
+                      S-
+                    </Typography>
+                    <Typography
+                      style={{
+                        color: "#61677A",
+                        fontSize: "var(--font-span)",
+                        fontFamily: "'Outfit', sans-serif",
+                        fontWeight: "600",
+                      }}
+                    >
                       SERVICES
                     </Typography>
                   </Card>
@@ -430,7 +454,7 @@ const About_UsPage = () => {
           </Container>
         </div>
         <div className="ourteam_back">
-          <Container className="p-0">
+          <Container className="p-2">
             <Row
               className="g-4"
               style={{
@@ -449,7 +473,7 @@ const About_UsPage = () => {
                     marginTop: "0",
                     marginBottom: "10px",
                     fontFamily: "'Outfit', sans-serif",
-                    fontSize: "22px",
+                    fontSize: "var(--font-h3)",
                     fontWeight: "700",
                     color: "#FF4E00",
                   }}
@@ -458,7 +482,7 @@ const About_UsPage = () => {
                 </h2>
                 <p
                   style={{
-                    fontSize: "16px",
+                    fontSize: "var(--font-span)",
                     fontFamily: "'Outfit', sans-serif",
                     textAlign: "justify",
                   }}
@@ -479,6 +503,8 @@ const About_UsPage = () => {
                 </p>
                 <Button
                   style={{
+                    display: "flex",
+                    fontSize: "var(--font-span)",
                     textAlign: "start",
                     backgroundColor: "#FF4E00",
                     color: "#fff",
@@ -503,10 +529,11 @@ const About_UsPage = () => {
         </div>
         <Container className={classes.container_12}>
           <div className="circle_text">
-            <h1 className={classes.founderMessage}
+            <h1
+              className={classes.founderMessage}
               style={{
                 textAlign: "center",
-                fontSize: "36px",
+                fontSize: "var(--font-h2)",
               }}
             >
               <span className="highlight">Our Team </span>
@@ -514,14 +541,20 @@ const About_UsPage = () => {
           </div>
           <span
             className="sub_headings"
-            style={{ fontFamily: "'Outfit', sans-serif", fontSize: "17px" }}
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: "var(--font-span)",
+            }}
           >
             Learning Needs dedicated leadership team is focused on delivering
             quality service and leadership development
           </span>
           <span
             className="sub_headings"
-            style={{ fontFamily: "'Outfit', sans-serif'", fontSize: "17px" }}
+            style={{
+              fontFamily: "'Outfit', sans-serif'",
+              fontSize: "var(--font-span)",
+            }}
           >
             programs that exceed our clients expectations and help them achieve
             their goals.
@@ -539,7 +572,7 @@ const About_UsPage = () => {
                 <img
                   src={require("../Image/founder1.png")}
                   alt="Learning needs"
-                  style={{ height: "350px", width: "auto" }}
+                  style={{ height: "350px", width: "auto", objectFit: "cover" }}
                   className={classes.image_about1}
                 />
               </Col>
@@ -572,18 +605,23 @@ const About_UsPage = () => {
             className="android_back"
             style={{ backgroundColor: "#FFFFFF", width: "100%" }}
           >
-            <Container style={{ width: "100%", backgroundColor: "#FFFFFF" }}>
+            <Container
+              style={{
+                width: "100%",
+                backgroundColor: "#FFFFFF",
+                marginTop: "2rem",
+              }}
+            >
               {/* testimonials */}
 
               <div className="circle_text">
-                <h1>
+                <h1
+                  style={{
+                    textAlign: "center",
+                    fontSize: "var(--font-h2)",
+                  }}
+                >
                   <span className="highlight">Pride of Learning Needs</span>{" "}
-                </h1>
-              </div>
-              <div className="circle_text">
-                <h1 className={classes.circleText}>
-                  Clients sharing their
-                  <span className={classes.highlight}> experience</span>
                 </h1>
               </div>
 
@@ -594,16 +632,15 @@ const About_UsPage = () => {
             </div>
           </div>
 
-          <Container className="faq p-0">
+          <Container className="faq p-0 mb-5">
             <div className="circle_text">
               <h1
                 style={{
                   textAlign: "center",
-                  fontSize: "36px",
+                  fontSize: "var(--font-h2)",
                   marginTop: "20px",
                 }}
               >
-                
                 <span className="highlight">Frequently Asked Questions</span>
               </h1>
             </div>
@@ -611,8 +648,8 @@ const About_UsPage = () => {
             <Faq />
           </Container>
 
-          <Container style={{ marginTop: "1rem" }}>
-            <Row className="justify-content-center">
+          {/* <Container style={{ marginTop: "1rem" }}>
+            <Row className="justify-content-center align-items-center">
               <Col xs="auto">
                 <Link to="/products" style={{ textDecoration: "none" }}>
                   <Button variant="contained" className="button1_about">
@@ -628,7 +665,7 @@ const About_UsPage = () => {
                 </Link>
               </Col>
             </Row>
-          </Container>
+          </Container> */}
         </Container>
       </container-fluid>
     </>

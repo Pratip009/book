@@ -7,12 +7,14 @@ import axios from "axios";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { Avatar } from "@material-ui/core";
 import "./TestimonialSlider.css";
+import { BsArrowRightSquareFill } from "react-icons/bs";
+import { BsArrowLeftSquareFill } from "react-icons/bs";
 
 const PreviousBtn = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <ArrowBackIos className="slick-arrow-icon" />
+      <BsArrowLeftSquareFill className="slick-arrow-icon" />
     </div>
   );
 };
@@ -21,7 +23,7 @@ const NextBtn = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <ArrowForwardIos className="slick-arrow-icon" />
+      <BsArrowRightSquareFill className="slick-arrow-icon" />
     </div>
   );
 };
@@ -75,8 +77,14 @@ const TestimonialSlider = () => {
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
                 key={testimonial.id || index}
-                img={testimonial?.attributes?.image?.data?.[0]?.attributes?.url || ""}
-                description={testimonial?.attributes?.description || "No description provided"}
+                img={
+                  testimonial?.attributes?.image?.data?.[0]?.attributes?.url ||
+                  ""
+                }
+                description={
+                  testimonial?.attributes?.description ||
+                  "No description provided"
+                }
                 name={testimonial?.attributes?.name || "Anonymous"}
                 position={testimonial?.attributes?.position || ""}
               />
@@ -95,12 +103,12 @@ const TestimonialCard = ({ img, description, name, position }) => {
         imgProps={{ style: { borderRadius: "50%" } }}
         src={img}
         className="testimonial-avatar mb-3"
-        style={{ width: '120px', height: '120px' }}
+        style={{ width: "120px", height: "120px" }}
       />
-      <p className="testimonial-description">{description}</p>
       <p className="testimonial-name">
-        <span style={{color:"red"}}>{name}</span> {position}
+        <span style={{ color: "red" }}>{name}</span> {position}
       </p>
+      <p className="testimonial-description">{description}</p>
     </div>
   );
 };

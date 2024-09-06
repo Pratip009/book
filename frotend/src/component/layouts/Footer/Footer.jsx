@@ -28,9 +28,9 @@ export default function Footer() {
         <section className="d-flex justify-content-center justify-content-lg-between p-4">
           <MDBContainer fluid className="text-center text-md-center mt-1 p-0">
             <MDBRow className="mt-3 p-0">
-              <MDBCol md="4" lg="4" xl="4" xs="4" className=" p-2">
+              <MDBCol md="4" lg="4" xl="4" xs="4" className="mt-1 p-2">
                 <MDBContainer className="m-0 p-0">
-                  <MDBNavbarBrand href="/">
+                  <MDBNavbarBrand href="/" className="footer_logo">
                     <img
                       src={logo}
                      width={200}
@@ -105,7 +105,7 @@ export default function Footer() {
                 <MDBRow>
                   <MDBCol style={{ textAlign: "start" }}>
                     <h6
-                      className="fw-bold mb-4"
+                      className="mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
@@ -144,12 +144,12 @@ export default function Footer() {
 
                   <MDBCol style={{ textAlign: "start" }}>
                     <h6
-                      className="fw-bold mb-4"
+                      className="mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
                         textAlign: "start",
-                         fontSize:"var(--font-p)"
+                         fontSize:"var(--font-p)",
                       }}
                     >
                       Policies
@@ -183,7 +183,7 @@ export default function Footer() {
 
                   <MDBCol style={{ textAlign: "start" }}>
                     <h6
-                      className="fw-bold mb-4"
+                      className="mb-4"
                       style={{
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
@@ -223,7 +223,7 @@ export default function Footer() {
               </MDBCol>
 
               <MDBCol md="2" lg="2" xl="2" xs="2" className="mb-md-0 mb-4 p-0">
-                <h6 className="fw-bold mb-4" style={{fontSize:"var(--font-p)"}}>Newsletter</h6>
+                <h6 className="mb-4" style={{fontSize:"var(--font-p)"}}>Newsletter</h6>
                 <MDBInput
                   contrast
                   type="email"

@@ -226,39 +226,41 @@ function BasicExample() {
         style={{ padding: 0 }}
       >
         <Container fluid>
-          <Navbar.Brand href="/">
-            <img
-              src={logo}
-              alt="Logo"
-              className="d-none d-md-block"
-              style={{
-                width: "200px",
-                maxWidth: "100%",
-                height: "auto",
-              }}
-            />
-            <img
-              src={logo}
-              alt="Logo"
-              className="d-block d-md-none"
-              style={{
-                width: "150px",
-                maxWidth: "100%",
-                height: "auto",
-                margin: 0,
-              }}
-            />
-          </Navbar.Brand>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Navbar.Brand className="mx-auto my-auto">
+              <img
+                src={logo}
+                alt="Logo"
+                className="d-none d-md-block"
+                style={{
+                  width: "200px",
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
+              <img
+                src={logo}
+                alt="Logo"
+                className="d-block d-md-none"
+                style={{
+                  width: "150px",
+                  maxWidth: "100%",
+                  height: "auto",
+                  margin: 0,
+                }}
+              />
+            </Navbar.Brand>
+          </Link>
 
           {/* Icons for Mobile */}
           <Nav className="d-flex align-items-center ms-auto d-lg-none">
             <div className="d-flex align-items-center">
-              <Nav.Link href="/cart" className="me-3">
+              <Link to="/cart" className="me-3">
                 <CartIcon style={{ color: "black" }} />
-              </Nav.Link>
-              <Nav.Link>
+              </Link>
+              <Link>
                 <ProfileModal user={user} isAuthenticated={isAuthenticated} />
-              </Nav.Link>
+              </Link>
               <Nav className="d-lg-none">
                 <Nav.Link onClick={toggleNavbar}>
                   <FaBars size={24} />
@@ -275,8 +277,9 @@ function BasicExample() {
               className="d-none d-lg-flex mx-auto align-items-start"
               id="desktop-nav"
             >
-              <Nav.Link
-                href="/"
+              <Link
+                to="/"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -286,9 +289,10 @@ function BasicExample() {
                 }
               >
                 Home
-              </Nav.Link>
-              <Nav.Link
-                href="/about_us"
+              </Link>
+              <Link
+                to="/about_us"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -298,9 +302,10 @@ function BasicExample() {
                 }
               >
                 About Us
-              </Nav.Link>
-              <Nav.Link
-                href="/products"
+              </Link>
+              <Link
+                to="/products"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -310,9 +315,10 @@ function BasicExample() {
                 }
               >
                 Products
-              </Nav.Link>
-              <Nav.Link
-                href="/training"
+              </Link>
+              <Link
+                to="/training"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -322,9 +328,10 @@ function BasicExample() {
                 }
               >
                 Training
-              </Nav.Link>
-              <Nav.Link
-                href="/school"
+              </Link>
+              <Link
+                to="/school"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -334,9 +341,10 @@ function BasicExample() {
                 }
               >
                 School Management
-              </Nav.Link>
-              <Nav.Link
-                href="/service"
+              </Link>
+              <Link
+                to="/service"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -346,9 +354,10 @@ function BasicExample() {
                 }
               >
                 Service
-              </Nav.Link>
-              <Nav.Link
-                href="/gallery"
+              </Link>
+              <Link
+                to="/gallery"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -358,9 +367,10 @@ function BasicExample() {
                 }
               >
                 Gallery
-              </Nav.Link>
-              <Nav.Link
-                href="/blog"
+              </Link>
+              <Link
+                to="/blog"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -370,9 +380,10 @@ function BasicExample() {
                 }
               >
                 Blog
-              </Nav.Link>
-              <Nav.Link
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
+                className="desktop-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -382,7 +393,7 @@ function BasicExample() {
                 }
               >
                 Contact
-              </Nav.Link>
+              </Link>
             </Nav>
 
             {/* Mobile View Navigation */}
@@ -390,8 +401,9 @@ function BasicExample() {
               className="d-flex flex-column align-items-start d-lg-none mx-2"
               id="mobile-nav"
             >
-              <Nav.Link
-                href="/"
+              <Link
+                to="/"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -401,9 +413,10 @@ function BasicExample() {
                 }
               >
                 Home
-              </Nav.Link>
-              <Nav.Link
-                href="/about_us"
+              </Link>
+              <Link
+                to="/about_us"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -413,9 +426,10 @@ function BasicExample() {
                 }
               >
                 About Us
-              </Nav.Link>
-              <Nav.Link
-                href="/products"
+              </Link>
+              <Link
+                to="/products"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -425,9 +439,10 @@ function BasicExample() {
                 }
               >
                 Products
-              </Nav.Link>
-              <Nav.Link
-                href="/training"
+              </Link>
+              <Link
+                to="/training"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -437,9 +452,10 @@ function BasicExample() {
                 }
               >
                 Training
-              </Nav.Link>
-              <Nav.Link
-                href="/school"
+              </Link>
+              <Link
+                to="/school"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -449,9 +465,10 @@ function BasicExample() {
                 }
               >
                 School Management
-              </Nav.Link>
-              <Nav.Link
-                href="/service"
+              </Link>
+              <Link
+                to="/service"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -461,9 +478,10 @@ function BasicExample() {
                 }
               >
                 Service
-              </Nav.Link>
-              <Nav.Link
-                href="/gallery"
+              </Link>
+              <Link
+                to="/gallery"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -473,9 +491,10 @@ function BasicExample() {
                 }
               >
                 Gallery
-              </Nav.Link>
-              <Nav.Link
-                href="/blog"
+              </Link>
+              <Link
+                to="/blog"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -485,9 +504,10 @@ function BasicExample() {
                 }
               >
                 Blog
-              </Nav.Link>
-              <Nav.Link
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
+                className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -497,16 +517,17 @@ function BasicExample() {
                 }
               >
                 Contact
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
+
           <Nav className="d-none d-lg-flex align-items-center ms-auto">
-            <Nav.Link href="/cart" className="me-3">
+            <Link to="/cart" className="me-3">
               <CartIcon />
-            </Nav.Link>
-            <Nav.Link>
+            </Link>
+            <Link>
               <ProfileModal user={user} isAuthenticated={isAuthenticated} />
-            </Nav.Link>
+            </Link>
           </Nav>
         </Container>
       </Navbar>

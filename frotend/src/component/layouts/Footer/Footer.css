@@ -50,6 +50,10 @@
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box-text {
@@ -81,14 +85,14 @@
 }
 
 .text {
-  font-size: var(--font-p);
-  font-weight: bold;
+  font-size: var(--font-span);
+font-weight: 500;
   color: white;
 }
 
 .text-two {
   font-size: var(--font-span);
-  color: white;
+  color: rgb(222, 222, 222);
 }
 
 /* Responsive Adjustments */
@@ -128,11 +132,12 @@
   z-index: 10;
   color: white;
   font-family: 'Outfit', sans-serif;
+
 }
 .textt{
   font-size: var(--font-span);
   font-family: 'Outfit', sans-serif;
-  color: white;
+  color: white
 }
 .text-reset{
   font-size: var(--font-span);
@@ -179,7 +184,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .overlay-container{
     width: 94%;
@@ -223,3 +228,39 @@
   }
  
 }
+/* Wrapper for custom styling */
+.custom-input-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.custom-input {
+  width: 100%;
+}
+
+.form-label{
+  color: black;
+}
+
+/* Adjust label when input is focused */
+.custom-input .form-control:focus ~ .form-label,
+.custom-input .form-control:not(:placeholder-shown) ~ .form-label {
+  top: -0.75rem; /* Adjust position */
+  left: 0.75rem; /* Adjust position */
+  color: #007bff; /* Change to match your theme */
+  padding: 0 0.25rem; /* Add padding to prevent overlap */
+  font-size: 0.65rem; /* Adjust font size */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 767px) {
+  .custom-input .form-label {
+    font-size: 0.65rem; /* Adjust font size for mobile */
+    top: -0.5rem; /* Adjust position for mobile */
+  }
+
+  .custom-input .form-control {
+    padding-top: 1.5rem; /* Ensure enough space for the label */
+  }
+}
+

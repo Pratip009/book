@@ -337,7 +337,7 @@ function Home() {
                 <TeamMessage />
               </Container>
             </div>
-            <Container style={{marginTop:"2rem"}}>
+            <Container style={{marginTop:"2rem", marginBottom:"2rem"}}>
               <div className="circle_text">
                 <h1
                   style={h1Style}

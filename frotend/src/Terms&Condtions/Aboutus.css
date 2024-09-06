@@ -63,11 +63,16 @@ body {
 
 .play {
   background-image: url("../Image/foundermmm.png");
-  position: relative;
+  position: relative; /* Ensures child elements are positioned relative to this */
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
+ 
+  display: flex; 
+  align-items: center;
 }
+
+
 
 .founder {
   background-image: url("../Image/dddd.png");

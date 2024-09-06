@@ -8,6 +8,25 @@
   margin: 0;
   padding: 0;
 }
+/* Link spacing for desktop */
+.desktop-nav-link {
+  margin-right: 1rem; /* Adjust spacing between links */
+}
+
+/* Remove margin for the last link in the desktop view */
+.desktop-nav-link:last-child {
+  margin-right: 0;
+}
+
+/* Link spacing for mobile */
+.mobile-nav-link {
+  margin-bottom: 1rem; /* Adjust spacing between links */
+}
+
+/* Remove margin for the last link in the mobile view */
+.mobile-nav-link:last-child {
+  margin-bottom: 0;
+}
 
 .headerTop {
   display: flex;
