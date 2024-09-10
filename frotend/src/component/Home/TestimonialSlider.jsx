@@ -37,7 +37,7 @@ const TestimonialSlider = () => {
     const fetchTestimonials = async () => {
       try {
         const response = await axios.get(
-          "https://heroku-learningneeds-strapi.onrender.com/api/testimonials?populate=*"
+          "https://render-learningneeds.onrender.com/api/testimonials?populate=*"
         );
         setTestimonials(response.data.data);
       } catch (error) {

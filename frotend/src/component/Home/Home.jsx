@@ -43,7 +43,6 @@ import "./Home.css";
 import "aos/dist/aos.css";
 
 function Home() {
- 
   const isMobile = useMediaQuery("(max-width: 600px)");
   const [notices, setNotices] = useState([]);
   const alert = useAlert();
@@ -51,19 +50,19 @@ function Home() {
   const { loading, error, products } = useSelector((state) => state.products);
   const [task, setTask] = useState([]);
 
-
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const response = await fetch('https://heroku-learningneeds-strapi.onrender.com/api/noticeboards');
+        const response = await fetch(
+          "https://render-learningneeds.onrender.com/api/noticeboards"
+        );
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const data = await response.json();
         console.log("Notices API response:", data);
         setNotices(data.data); // Extract `data` array from response
       } catch (error) {
-        
         console.error("Error fetching notices:", error);
       }
     };
@@ -71,14 +70,13 @@ function Home() {
     fetchNotices();
   }, []);
 
-
   React.useEffect(() => {
     if (error) {
       alert.error(error);
       dispatch(clearErrors);
     }
     dispatch(getProduct());
-  }, [dispatch, error, alert])
+  }, [dispatch, error, alert]);
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -93,8 +91,8 @@ function Home() {
 
   const h1Style = {
     textAlign: "center",
-    fontSize: 'var(--font-h2)',
-    fontWeight:700,
+    fontSize: "var(--font-h2)",
+    fontWeight: 700,
     marginTop: "10px",
     fontFamily: "'Outfit', sans-serif",
   };
@@ -103,8 +101,6 @@ function Home() {
     fontSize: "var(--font-span)",
     fontFamily: "'Outfit', sans-serif",
     fontWeight: "500",
-
-    
   };
 
   return (
@@ -124,7 +120,7 @@ function Home() {
                 width: "100%",
                 height: "auto",
                 overflow: "hidden",
-                marginTop:"2rem"
+                marginTop: "2rem",
               }}
             >
               <Container>
@@ -195,7 +191,7 @@ function Home() {
                               className="training"
                               style={{
                                 fontFamily: "'Outfit', sans-serif",
-                                fontSize: 'var(--font-h5)',
+                                fontSize: "var(--font-h5)",
                                 marginTop: "10px", // Add margin to separate text from avatar
                               }}
                             >
@@ -226,7 +222,7 @@ function Home() {
                     <Card
                       sx={{
                         maxWidth: 650,
-                        margin: "0"
+                        margin: "0",
                       }}
                     >
                       <Box sx={{ position: "relative" }}>
@@ -270,7 +266,7 @@ function Home() {
                               className="training"
                               style={{
                                 fontFamily: "'Outfit', sans-serif",
-                                fontSize: 'var(--font-h5)',
+                                fontSize: "var(--font-h5)",
                                 marginTop: "10px", // Add margin to separate text from avatar
                               }}
                             >
@@ -330,18 +326,16 @@ function Home() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-              marginTop:"2rem"
+                marginTop: "2rem",
               }}
             >
               <Container>
                 <TeamMessage />
               </Container>
             </div>
-            <Container style={{marginTop:"2rem", marginBottom:"2rem"}}>
+            <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
               <div className="circle_text">
-                <h1
-                  style={h1Style}
-                >
+                <h1 style={h1Style}>
                   Our <span className="highlight">Goals And Objective</span>
                 </h1>
               </div>
@@ -374,7 +368,7 @@ function Home() {
                           <span
                             className="goals-objective-title"
                             style={{
-                              fontSize: 'var(--font-h4)',
+                              fontSize: "var(--font-h4)",
                               color: "#1B1A1A",
                               fontWeight: "600",
                               fontFamily: "'Outfit', sans-serif",
@@ -387,9 +381,8 @@ function Home() {
                         subheaderTypographyProps={{
                           style: {
                             color: "#000000", // Example color
-                            fontSize: 'var(--font-span)', // Example font size
+                            fontSize: "var(--font-span)", // Example font size
                             fontFamily: "'Outfit', sans-serif", // Matching font family
-                            
                           },
                         }}
                         action={<IconButton>{/* <ThumbUpIcon/> */}</IconButton>}
@@ -413,7 +406,7 @@ function Home() {
                           <span
                             className="goals-objective-title"
                             style={{
-                              fontSize: 'var(--font-h4)',
+                              fontSize: "var(--font-h4)",
                               color: "#1B1A1A",
                               fontWeight: "600",
                               fontFamily: "'Outfit', sans-serif",
@@ -426,7 +419,7 @@ function Home() {
                         subheaderTypographyProps={{
                           style: {
                             color: "#000000", // Example color
-                            fontSize: 'var(--font-span)', // Example font size
+                            fontSize: "var(--font-span)", // Example font size
                             fontFamily: "'Outfit', sans-serif", // Matching font family
                             // Example font weight
                           },
@@ -437,7 +430,7 @@ function Home() {
                       style={{
                         fontFamily: "'Outfit', sans-serif",
                         background: "linear-gradient(120deg, #003E90, #3B90FF)",
-                        fontSize:'var(--font-h3)',
+                        fontSize: "var(--font-h3)",
                         padding: "1rem",
                         color: "white",
                       }}
@@ -447,7 +440,7 @@ function Home() {
                     <span
                       className=""
                       style={{
-                        fontSize:'var(--font-span)',
+                        fontSize: "var(--font-span)",
                         fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                       }}
@@ -481,7 +474,7 @@ function Home() {
                         textShadow: "0 0 10px red",
                         padding: "10px 0 0 0 ",
                         fontFamily: "Outfit, sans-serif",
-                        fontSize:'var(--font-h3)',
+                        fontSize: "var(--font-h3)",
                       }}
                     >
                       Updates

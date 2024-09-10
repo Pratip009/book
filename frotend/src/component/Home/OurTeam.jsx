@@ -18,7 +18,7 @@ export default function OurTeam() {
     const fetchTeamMembers = async () => {
       try {
         const response = await fetch(
-          "https://heroku-learningneeds-strapi.onrender.com/api/teams?populate=*"
+          "https://render-learningneeds.onrender.com/api/teams?populate=*"
         );
         const data = await response.json();
         setTeamMembers(data.data);

@@ -238,25 +238,29 @@ const ContactForm = () => {
             <Row>
               <Col xs={12} md={6} className="mx-auto">
                 <div className="circle_text">
-                  <h1>
+                  <h1
+                    style={{
+                      fontSize: "var(--font-h2)",
+                      marginTop: "2rem",
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                  >
                     <span className="highlight">Contact Us</span>{" "}
                   </h1>
                 </div>
                 <div style={{ padding: ".5rem" }}>
-                
-
                   <h2
                     className="blog-title"
                     style={{
-                      fontSize: "23px",
-                      fontWeight: "500",
-                      color: "#FF4E00"
+                      fontSize: "var(--font-h4)",
+                      marginTop: "2rem",
+                      fontFamily: "'Outfit', sans-serif",
                     }}
                   >
                     Need Help?
                   </h2>
 
-                  <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                  <p style={{ fontFamily: "'Outfit', sans-serif",fontSize: "var(--font-span)", }}>
                     Catch us anytime you want? Fill out our support form below,
                     and we'll be in touch shortly.
                   </p>
@@ -273,7 +277,7 @@ const ContactForm = () => {
                     </p>
                   </address>
 
-                  <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                  <p style={{ fontFamily: "'Outfit', sans-serif",fontSize: "var(--font-span)" }}>
                     We have live chat available, look for the chat icon in the
                     lower right-hand corner of this page. If it isn’t there,
                     then give us a call at{" "}
@@ -281,6 +285,7 @@ const ContactForm = () => {
                       style={{
                         textDecoration: "underline",
                         cursor: "pointer",
+                        fontSize: "var(--font-span)"
                       }}
                       onClick={handleCall}
                     >
@@ -297,6 +302,7 @@ const ContactForm = () => {
                           backgroundColor: "#003E90",
                           color: "white",
                           fontFamily: "'Outfit', sans-serif",
+                          fontSize: "var(--font-span)"
                         }}
                       >
                         Support Form
@@ -310,6 +316,7 @@ const ContactForm = () => {
                         backgroundColor: "#FF4E00",
                         color: "white",
                         fontFamily: "'Outfit', sans-serif",
+                        fontSize: "var(--font-span)"
                       }}
                     >
                       Call Us
@@ -322,14 +329,21 @@ const ContactForm = () => {
               <Col xs={12} md={6} className="mx-auto">
                 <div style={{ padding: ".5rem" }}>
                   <div className="circle_text">
-                    <h1>
+                    <h1
+                      style={{
+                        fontSize: "var(--font-h2)",
+                        marginTop: "2rem",
+                        fontFamily: "'Outfit', sans-serif",
+                      }}
+                    >
                       <span className="highlight">Support Form</span>{" "}
                     </h1>
                   </div>
                   <p
                     style={{
                       textAlign: "center",
-                      fontFamily: "'Outfit', sans-serif"
+                      fontFamily: "'Outfit', sans-serif",
+                      fontSize: "var(--font-span)"
                     }}
                   >
                     Need a quicker answer? Look for our chat icon on the right
@@ -338,23 +352,73 @@ const ContactForm = () => {
 
                   <Form
                     onSubmit={handleSubmit}
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                    style={{
+                      fontFamily: "'Outfit', sans-serif",
+                      padding: "20px",
+                      borderRadius: "15px",
+                      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                      backgroundColor: "#fff",
+                      maxWidth: "600px",
+                      margin: "auto",
+                    }}
                   >
-                    <Form.Group controlId="issue-select">
-                      <Form.Label>
+                    <Form.Group
+                      controlId="issue-select"
+                      style={{ marginBottom: "20px" }}
+                    >
+                      <Form.Label
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "16px",
+                          color: "#333",
+                        }}
+                      >
                         ISSUE *
                       </Form.Label>
-                      <Form.Control as="select" defaultValue="e-commerce">
+                      <Form.Control
+                        as="select"
+                        defaultValue="e-commerce"
+                        style={{
+                          borderRadius: "10px",
+                          padding: "12px",
+                          fontSize: "16px",
+                          backgroundColor: "#f4f4f4",
+                          border: "none",
+                          boxShadow: "inset 0 2px 5px rgba(0, 0, 0, 0.1)",
+                          transition: "background-color 0.3s ease",
+                        }}
+                      >
                         <option value="e-commerce">E-Commerce</option>
                         <option value="app">App</option>
                       </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="detail-select">
-                      <Form.Label>
+                    <Form.Group
+                      controlId="detail-select"
+                      style={{ marginBottom: "20px" }}
+                    >
+                      <Form.Label
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "16px",
+                          color: "#333",
+                        }}
+                      >
                         DETAIL *
                       </Form.Label>
-                      <Form.Control as="select" defaultValue="others">
+                      <Form.Control
+                        as="select"
+                        defaultValue="others"
+                        style={{
+                          borderRadius: "10px",
+                          padding: "12px",
+                          fontSize: "16px",
+                          backgroundColor: "#f4f4f4",
+                          border: "none",
+                          boxShadow: "inset 0 2px 5px rgba(0, 0, 0, 0.1)",
+                          transition: "background-color 0.3s ease",
+                        }}
+                      >
                         <option value="availability">Availability</option>
                         <option value="return/exchange">Return/Exchange</option>
                         <option value="technical-support">
@@ -366,29 +430,77 @@ const ContactForm = () => {
                       </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="language-select">
-                      <Form.Label>
+                    <Form.Group
+                      controlId="language-select"
+                      style={{ marginBottom: "20px" }}
+                    >
+                      <Form.Label
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "16px",
+                          color: "#333",
+                        }}
+                      >
                         LANGUAGE *
                       </Form.Label>
-                      <Form.Control as="select" defaultValue="english">
+                      <Form.Control
+                        as="select"
+                        defaultValue="english"
+                        style={{
+                          borderRadius: "10px",
+                          padding: "12px",
+                          fontSize: "16px",
+                          backgroundColor: "#f4f4f4",
+                          border: "none",
+                          boxShadow: "inset 0 2px 5px rgba(0, 0, 0, 0.1)",
+                          transition: "background-color 0.3s ease",
+                        }}
+                      >
                         <option value="english">English</option>
                         <option value="hindi">Hindi</option>
                       </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="email-input">
-                      <Form.Label>
+                    <Form.Group
+                      controlId="email-input"
+                      style={{ marginBottom: "20px" }}
+                    >
+                      <Form.Label
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "16px",
+                          color: "#333",
+                        }}
+                      >
                         EMAIL *
                       </Form.Label>
                       <Form.Control
                         type="email"
                         placeholder="Enter Your Email *"
                         required
+                        style={{
+                          borderRadius: "10px",
+                          padding: "12px",
+                          fontSize: "16px",
+                          backgroundColor: "#f4f4f4",
+                          border: "none",
+                          boxShadow: "inset 0 2px 5px rgba(0, 0, 0, 0.1)",
+                          transition: "background-color 0.3s ease",
+                        }}
                       />
                     </Form.Group>
 
-                    <Form.Group controlId="message-textarea">
-                      <Form.Label>
+                    <Form.Group
+                      controlId="message-textarea"
+                      style={{ marginBottom: "20px" }}
+                    >
+                      <Form.Label
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "16px",
+                          color: "#333",
+                        }}
+                      >
                         MESSAGE *
                       </Form.Label>
                       <Form.Control
@@ -396,6 +508,15 @@ const ContactForm = () => {
                         rows={6}
                         placeholder="Enter Your Message *"
                         required
+                        style={{
+                          borderRadius: "10px",
+                          padding: "12px",
+                          fontSize: "16px",
+                          backgroundColor: "#f4f4f4",
+                          border: "none",
+                          boxShadow: "inset 0 2px 5px rgba(0, 0, 0, 0.1)",
+                          transition: "background-color 0.3s ease",
+                        }}
                       />
                     </Form.Group>
 
@@ -404,10 +525,24 @@ const ContactForm = () => {
                       variant="primary"
                       style={{
                         width: "100%",
-                        backgroundColor: "#003E90",
-                        color: "white",
-                        marginTop: "10px",
+                        padding: "12px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        background:
+                          "linear-gradient(90deg, #0062E6 0%, #33AEFF 100%)", // Gradient button
+                        color: "#fff",
+                        borderRadius: "10px",
+                        border: "none",
+                        transition: "background-color 0.3s ease",
                       }}
+                      onMouseOver={(e) =>
+                        (e.target.style.background =
+                          "linear-gradient(90deg, #0056C1 0%, #1C8AFF 100%)")
+                      }
+                      onMouseOut={(e) =>
+                        (e.target.style.background =
+                          "linear-gradient(90deg, #0062E6 0%, #33AEFF 100%)")
+                      }
                     >
                       Submit
                     </Button>

@@ -136,9 +136,16 @@ function Products() {
                 <div className="productBack">
                   <Container>
                     <div className="circle_text">
-                      <h1>
-                         <span className="highlight">Why book Reading is important</span>
-                        {" "}
+                      <h1
+                        style={{
+                          textAlign: "center",
+                          fontSize: "var(--font-h2)",
+                          marginTop: "2rem",
+                        }}
+                      >
+                        <span className="highlight">
+                          Why book Reading is important
+                        </span>{" "}
                       </h1>
                     </div>
                     <span
@@ -146,7 +153,7 @@ function Products() {
                         fontFamily: "'Outfit', sans-serif",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontSize: "17px",
+                        fontSize: "var(--font-span)",
                       }}
                     >
                       One of the great reasons that signify the importance of
@@ -166,7 +173,7 @@ function Products() {
                           fontFamily: "'Outfit', sans-serif",
                           textAlign: "justify",
                           display: "inline-block",
-                          fontSize: "17px",
+                          fontSize: "var(--font-span)",
                           marginTop: "2rem",
                         }}
                       >
@@ -182,14 +189,18 @@ function Products() {
                       </span>
 
                       <div className="circle_text">
-                        <h1>
+                        <h1  style={{
+                          textAlign: "center",
+                          fontSize: "var(--font-h2)",
+                          marginTop: "2rem",
+                        }}>
                           Benefits of{" "}
                           <span className="highlight">Reading Books</span>{" "}
                         </h1>
                       </div>
                       <span
                         style={{
-                          fontSize: "17px",
+                          fontSize: "var(--font-span)",
                           marginTop: "14px",
                           fontWeight: "400",
                           textAlign: "justify",
@@ -216,7 +227,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -240,7 +251,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -264,7 +275,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -288,7 +299,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -317,7 +328,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -341,7 +352,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -365,7 +376,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -389,7 +400,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -418,7 +429,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -442,7 +453,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -466,7 +477,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -490,7 +501,7 @@ function Products() {
                                   <Typography
                                     variant="body2"
                                     style={{
-                                      fontSize: "17px",
+                                      fontSize: "var(--font-span)",
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
@@ -511,6 +522,7 @@ function Products() {
                         color: "#fff",
                         backgroundColor: "#FF4E00",
                         display: "flex",
+                        fontSize: "var(--font-span)",
                         marginTop: "10px",
                       }}
                       variant="contained"
@@ -687,7 +699,7 @@ function Products() {
                               sm={6}
                               xs={12}
                               className="d-flex justify-content-center p-3"
-                              >
+                            >
                               <ProductCard product={product} />
                             </Col>
                           ))}

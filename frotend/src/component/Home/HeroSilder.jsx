@@ -73,21 +73,22 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   productButton: {
-    backgroundColor: "#FF4E00",
-    color: "#fff",
+    backgroundColor: "#FF4E00",  // Keeps the background color solid
+    color: "#fff",               // Keeps the text color white
     borderRadius: theme.shape.borderRadius,
     padding: theme.spacing(1.5, 4),
-    transition: "background-color 0.3s ease-in-out",
+    border: "1px solid transparent", // Transparent border by default
+    transition: "border 0.3s ease-in-out", // Only animate the border change
     "&:hover": {
-      backgroundColor: theme.palette.common.white,
-      color: "#FF4E00",
-      border: "1px solid #FF4E00",
+      border: "1px solid #fff",   // Show white border on hover
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 'var(--font-span)',
-      padding: theme.spacing(1, 3)
+      padding: theme.spacing(1, 3),
     },
   },
+  
+  
 }));
 
 const staticSlides = [

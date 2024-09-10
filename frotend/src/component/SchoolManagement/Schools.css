@@ -19,21 +19,20 @@
   font-family: 'Outfit', sans-serif;
   text-align: justify;
   display: inline-block;
-  font-size: 19px;
-  font-weight: 600;
+
 }
 
 .support-item {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  
 }
 
 .support-item p {
   font-family: 'Outfit', sans-serif;
   text-align: justify;
   display: inline-block;
-  font-size: 15px;
+  font-size: "var(--font-span)",
 }
 
 @media (max-width: 899px) {
@@ -64,7 +63,7 @@
   }
 
   .support-item {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 

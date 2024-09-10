@@ -35,7 +35,13 @@ const School = () => {
         <Container>
           <div className="schoolbg">
             <div className="circle_text">
-              <h1>
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "var(--font-h2)",
+                  marginTop: "2rem",
+                }}
+              >
                 <span className="highlight">School Management Service</span>{" "}
               </h1>
             </div>
@@ -44,7 +50,7 @@ const School = () => {
                 fontFamily: "'Outfit', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
-                fontSize: "17px",
+                fontSize: "var(--font-span)",
               }}
             >
               The Learning Needs team has expansive expertise on school
@@ -66,7 +72,7 @@ const School = () => {
                 fontFamily: "'Outfit', sans-serif",
                 textAlign: "justify",
                 display: "inline-block",
-                fontSize: "17px",
+                fontSize: "var(--font-span)",
               }}
             >
               We can then develop the project methodology and main delivery. We
@@ -83,7 +89,13 @@ const School = () => {
           </div>
 
           <div className="circle_text">
-            <h1>
+            <h1
+              style={{
+                textAlign: "center",
+                fontSize: "var(--font-h2)",
+                marginTop: "2rem",
+              }}
+            >
               We Help People to
               <span className="highlight"> Start Their Own School</span>{" "}
             </h1>
@@ -91,7 +103,7 @@ const School = () => {
           <Container>
             <Row>
               <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
+                <Card body style={{ padding: 0, backgroundColor: "#003E90",}}>
                   <Row>
                     <Col
                       md="9"
@@ -122,7 +134,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -166,7 +178,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -207,7 +219,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -251,7 +263,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -299,7 +311,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -343,7 +355,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -387,7 +399,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -431,7 +443,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        minHeight: "100px",
+                        maxHeight: "100px",
                         padding: 0,
                       }}
                     >
@@ -447,7 +459,11 @@ const School = () => {
           </Container>
 
           <div className="circle_text">
-            <h1>
+            <h1  style={{
+                textAlign: "center",
+                fontSize: "var(--font-h2)",
+                marginTop: "2rem",
+              }}>
               Starting a<span className="highlight"> New School!</span>{" "}
             </h1>
           </div>
@@ -456,7 +472,7 @@ const School = () => {
               fontFamily: "'Outfit', sans-serif",
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "17px",
+              fontSize: "var(--font-span)",
             }}
           >
             Our team has experience of developing and managing new schools from
@@ -501,7 +517,11 @@ const School = () => {
           </div>
 
           <div className="circle_text">
-            <h1>
+            <h1 style={{
+                textAlign: "center",
+                fontSize: "var(--font-h2)",
+                marginTop: "2rem",
+              }}>
               <span className="highlight"> New Start-up School</span>{" "}
             </h1>
           </div>
@@ -599,9 +619,12 @@ const School = () => {
             </Grid>
           </Grid>
 
-         
           <div className="circle_text">
-            <h1>
+            <h1 style={{
+                textAlign: "center",
+                fontSize: "var(--font-h2)",
+                marginTop: "2rem",
+              }}>
               <span className="highlight">For Existing Schools</span>{" "}
             </h1>
           </div>
@@ -609,8 +632,9 @@ const School = () => {
             style={{
               fontFamily: "'Outfit', sans-serif",
               textAlign: "justify",
-              display: "inline-block",
-              fontSize: "17px"
+              display: "flex",
+              justifyContent:"center",
+              fontSize: "var(--font-span)",
             }}
           >
             Learning Needs provides all levels of support for schools leading up
@@ -667,10 +691,18 @@ const School = () => {
           </Grid>
 
           <Container className="additional">
-            <h1>
+            <h1 style={{
+                textAlign: "center",
+                fontSize: "var(--font-h2)",
+                marginTop: "2rem",
+              }}>
               <span className="highlight">Additional support</span>
             </h1>
-            <p>Team can also assist with:</p>
+            <p style={{
+                textAlign: "center",
+                fontSize: "var(--font-p)",
+                marginTop: "2rem",
+              }}>Team can also assist with:</p>
             <Container>
               <Row>
                 {supportItems.map((text, index) => (

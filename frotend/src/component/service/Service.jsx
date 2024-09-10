@@ -46,8 +46,8 @@ const Service = () => {
             <h1
               style={{
                 textAlign: "start",
-                fontSize: "36px",
-                marginTop: "20px",
+                fontSize: "var(--font-h2)",
+                marginTop: "2rem",
               }}
             >
               <span className="highlight">Services of Learning Needs</span>
@@ -56,7 +56,7 @@ const Service = () => {
           </div>
           <p
             style={{
-              fontSize: {xs:"15px",md:"36px"},
+              fontSize: "var(--font-h4)",
               fontWeight: "600",
               fontFamily: "'Outfit', sans-serif",
             }}
@@ -70,7 +70,7 @@ const Service = () => {
               fontFamily: "'Outfit', sans-serif",
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "17px",
+              fontSize: "var(--font-span)",
             }}
           >
             Learning Needs actively works with various reliable preferred
@@ -93,7 +93,7 @@ const Service = () => {
           </p>
         </Container>
 
-        <Container style={{ marginTop: "3rem" }}>
+        <Container style={{ marginTop: "2rem" }}>
           {/* <Price /> */}
           <img src={require("../../Image/servicessss.png")} alt="" />
         </Container>
@@ -101,8 +101,8 @@ const Service = () => {
           <h1
             style={{
               textAlign: "start",
-              fontSize: "36px",
-              marginTop: "20px",
+              fontSize: "var(--font-h2)",
+              marginTop: "2rem",
               fontFamily: "'Outfit', sans-serif",
             }}
           >

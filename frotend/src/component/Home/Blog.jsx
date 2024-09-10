@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import blogImage from '../../Image/blog1124.png';
+import blogImage from "../../Image/blog1124.png";
 
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
@@ -9,9 +9,11 @@ export default function Blog() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('https://heroku-learningneeds-strapi.onrender.com/api/blogs?populate=*');
+        const response = await fetch(
+          "https://render-learningneeds.onrender.com/api/blogs?populate=*"
+        );
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const data = await response.json();
         setBlogs(data.data); // `data.data` should be an array of blog objects
@@ -61,9 +63,9 @@ export default function Blog() {
 
           <h1
             style={{
-              textAlign: "center",
-              fontSize: "36px",
-              marginTop: "20px",
+              fontSize: "var(--font-h2)",
+              marginTop: "2rem",
+              fontFamily: "'Outfit', sans-serif",
             }}
           >
             <span className="highlight">Our Blog</span>
@@ -73,13 +75,21 @@ export default function Blog() {
               <div key={blog.id} style={blogStyle}>
                 <h2 style={headingStyle}>{blog.attributes.heading}</h2>
                 <p style={subheadingStyle}>{blog.attributes.subheading}</p>
-                {blog.attributes.images && blog.attributes.images.data && blog.attributes.images.data.length > 0 && (
-                  <img
-                    src={blog.attributes.images.data[0].attributes.formats.medium.url}
-                    alt={blog.attributes.images.data[0].attributes.name || 'Blog Image'}
-                    style={imageStyle}
-                  />
-                )}
+                {blog.attributes.images &&
+                  blog.attributes.images.data &&
+                  blog.attributes.images.data.length > 0 && (
+                    <img
+                      src={
+                        blog.attributes.images.data[0].attributes.formats.medium
+                          .url
+                      }
+                      alt={
+                        blog.attributes.images.data[0].attributes.name ||
+                        "Blog Image"
+                      }
+                      style={imageStyle}
+                    />
+                  )}
               </div>
             ))
           ) : (
@@ -118,5 +128,5 @@ const subheadingStyle = {
 
 const imageStyle = {
   maxWidth: "50%",
-  height: "auto"
+  height: "auto",
 };

@@ -38,9 +38,7 @@ function BasicExample() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://heroku-learningneeds-strapi.onrender.com/api/phoneand-emails"
-      )
+      .get("https://render-learningneeds.onrender.com/api/phoneand-emails")
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
         if (data) {
@@ -537,3 +535,5 @@ function BasicExample() {
 }
 
 export default BasicExample;
+// yim0eNWmTH-OiWI0ZDKAs7-BcBMJVE
+// admin

@@ -36,7 +36,7 @@ export default function TeamMessage() {
       <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <ButtonBase sx={{ width: "100%", height: "auto" }}>
-            <Img src={require("../../Image/discussion.png")} alt="discussion" />
+            <Img src={require("../../Image/discussion.png")} alt="discussion" className="team_img"/>
           </ButtonBase>
         </Grid>
         <Grid item xs={12} md={8} style={{

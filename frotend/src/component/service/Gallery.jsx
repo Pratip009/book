@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { MDBContainer, MDBCol, MDBRow } from 'mdb-react-ui-kit';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import galleryImg from "../../Image/gal11.png"
+import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import galleryImg from "../../Image/gal11.png";
 // ../../Image/gal11.png
 // Replace with the actual API URL
-const API_URL = 'https://heroku-learningneeds-strapi.onrender.com/api/galleries?populate=*';
+const API_URL =
+  "https://render-learningneeds.onrender.com/api/galleries?populate=*";
 
 export default function Gallery() {
   const [galleryData, setGalleryData] = useState([]);
@@ -15,7 +16,7 @@ export default function Gallery() {
       try {
         const response = await fetch(API_URL);
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const data = await response.json();
         console.log("Gallery API response:", data);
@@ -37,7 +38,7 @@ export default function Gallery() {
     <MDBContainer fluid className="bg-white p-0">
       <MDBRow className="mb-4">
         <MDBCol lg={12} md={12} className="mb-4 mb-lg-0">
-        <div
+          <div
             style={{
               width: "100%",
               height: "300px",
@@ -58,25 +59,43 @@ export default function Gallery() {
         </MDBCol>
       </MDBRow>
       <div className="text-center my-4">
-        <h1 className="display-4">
+        <h1
+          style={{
+            fontSize: "var(--font-h2)",
+            marginTop: "2rem",
+            fontFamily: "'Outfit', sans-serif",
+          }}
+        >
           <span className="highlight">Gallery</span>
         </h1>
       </div>
       <MDBRow className="g-4 px-2 px-lg-5">
         {galleryData.map((item) => (
-          <MDBCol key={item.id} lg={6} md={12} className="mb-4 mb-lg-0">
-            {item.attributes.images && item.attributes.images.data && item.attributes.images.data.length > 0 ? (
+          <MDBCol
+            key={item.id}
+            lg={6}
+            md={12}
+            className="mb-4 mb-lg-0 d-flex justify-content-center align-items-center"
+            style={{ minHeight: "300px" }}
+          >
+            {item.attributes.images &&
+            item.attributes.images.data &&
+            item.attributes.images.data.length > 0 ? (
               <img
-                src={item.attributes.images.data[0].attributes.formats.medium.url} // Use the medium format URL
+                src={
+                  item.attributes.images.data[0].attributes.formats.medium.url
+                } // Use the medium format URL
                 className="img-fluid shadow-1-strong rounded mb-4"
                 alt={item.attributes.description || "Image"}
                 style={{
-                  objectFit: 'cover',
-                  objectPosition: 'center',
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  width: "100%", // Ensure the image fits within the column
+                  maxHeight: "300px", // Image will not exceed 300px height
                 }}
               />
             ) : (
-              <span>Image URL not found</span>
+              <span>No gallery image uploaded</span> // Show message when no image
             )}
           </MDBCol>
         ))}

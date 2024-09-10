@@ -1,14 +1,9 @@
 import React from "react";
 import "./TermsAndCondtion.css";
 import MetaData from "../component/layouts/MataData/MataData";
-import { Grid } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
-import Challenges from "./Challenges";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import VerifiedIcon from "@mui/icons-material/Verified";
-// import TermsImage from "../Image/about/tc.jpg";
-import QontoConnector from "./Stepper";
 const TermsAndConditionsPage = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
