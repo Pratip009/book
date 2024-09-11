@@ -19,9 +19,9 @@
 }
 
 .scrolling-text {
+  font-family: 'Outfit', sans-serif;
   display: inline-block;
   font-size: var(--font-span); /* Use CSS variable for font size */
-  font-weight: bold;
   margin: 0;
   padding: .5rem;
 }

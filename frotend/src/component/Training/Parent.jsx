@@ -25,7 +25,7 @@ const Parent = () => {
           fontFamily: "'Outfit', sans-serif",
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "17px",
+          fontSize: "var(--font-span)",
         }}
       >
         Most of the parents always worry about their children & don’t know how

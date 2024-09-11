@@ -103,7 +103,7 @@ const School = () => {
           <Container>
             <Row>
               <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90",}}>
+                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
                   <Row>
                     <Col
                       md="9"
@@ -120,6 +120,7 @@ const School = () => {
                           margin: 0,
                           color: "#fff",
                           fontWeight: "600",
+                          fontSize: "var(--font-p)",
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
@@ -134,13 +135,18 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        maxHeight: "100px",
+                       
                         padding: 0,
                       }}
                     >
                       <img
                         src={require("../../Image/money-bag.png")}
                         alt="React"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
                       />
                     </Col>
                   </Row>
@@ -164,6 +170,7 @@ const School = () => {
                           margin: 0,
                           color: "#fff",
                           fontWeight: "600",
+                          fontSize: "var(--font-p)",
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
@@ -178,54 +185,18 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        maxHeight: "100px",
-                        padding: 0,
-                      }}
-                    >
-                      <img src={require("../../Image/money.png")} alt="React" />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontFamily: "'Outfit', sans-serif",
-                        }}
-                      >
-                        NO LOCK PERIOD
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        maxHeight: "100px",
+                   
                         padding: 0,
                       }}
                     >
                       <img
-                        src={require("../../Image/blackboard.png")}
+                        src={require("../../Image/money.png")}
                         alt="React"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
                       />
                     </Col>
                   </Row>
@@ -249,6 +220,57 @@ const School = () => {
                           margin: 0,
                           color: "#fff",
                           fontWeight: "600",
+                          fontSize: "var(--font-p)",
+                          fontFamily: "'Outfit', sans-serif",
+                        }}
+                      >
+                        NO LOCK PERIOD
+                      </p>
+                    </Col>
+
+                    <Col
+                      md="3"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                       
+                        padding: 0,
+                      }}
+                    >
+                      <img
+                        src={require("../../Image/blackboard.png")}
+                        alt="React"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
+                      />
+                    </Col>
+                  </Row>
+                </Card>
+              </Col>
+              <Col md="3" xs="6" className="mb-3 p-1">
+                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
+                  <Row>
+                    <Col
+                      md="9"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                        minHeight: "100px",
+                      }}
+                    >
+                      <p
+                        style={{
+                          margin: 0,
+                          color: "#fff",
+                          fontWeight: "600",
+                          fontSize: "var(--font-p)",
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
@@ -263,13 +285,18 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        maxHeight: "100px",
+                        
                         padding: 0,
                       }}
                     >
                       <img
                         src={require("../../Image/school.png")}
                         alt="React"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
                       />
                     </Col>
                   </Row>
@@ -297,6 +324,7 @@ const School = () => {
                           margin: 0,
                           color: "#fff",
                           fontWeight: "600",
+                          fontSize: "var(--font-p)",
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
@@ -311,13 +339,18 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        maxHeight: "100px",
+                       
                         padding: 0,
                       }}
                     >
                       <img
                         src={require("../../Image/branding.png")}
                         alt="React"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
                       />
                     </Col>
                   </Row>
@@ -341,6 +374,7 @@ const School = () => {
                           margin: 0,
                           color: "#fff",
                           fontWeight: "600",
+                          fontSize: "var(--font-p)",
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
@@ -355,13 +389,18 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        maxHeight: "100px",
+                       
                         padding: 0,
                       }}
                     >
                       <img
                         src={require("../../Image/freedom.png")}
                         alt="React"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
                       />
                     </Col>
                   </Row>
@@ -385,6 +424,7 @@ const School = () => {
                           margin: 0,
                           color: "#fff",
                           fontWeight: "600",
+                          fontSize: "var(--font-p)",
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
@@ -399,13 +439,18 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        maxHeight: "100px",
+                       
                         padding: 0,
                       }}
                     >
                       <img
                         src={require("../../Image/support.png")}
                         alt="React"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
                       />
                     </Col>
                   </Row>
@@ -429,6 +474,7 @@ const School = () => {
                           margin: 0,
                           color: "#fff",
                           fontWeight: "600",
+                          fontSize: "var(--font-p)",
                           fontFamily: "'Outfit', sans-serif",
                         }}
                       >
@@ -443,13 +489,18 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        maxHeight: "100px",
+
                         padding: 0,
                       }}
                     >
                       <img
                         src={require("../../Image/low-cost.png")}
-                        alt="React"
+                        alt="Low Setup Cost"
+                        style={{
+                          width: "80px", // Set a fixed width
+                          height: "80px", // Set a fixed height
+                          objectFit: "contain", // Ensures the image scales properly
+                        }}
                       />
                     </Col>
                   </Row>
@@ -459,11 +510,13 @@ const School = () => {
           </Container>
 
           <div className="circle_text">
-            <h1  style={{
+            <h1
+              style={{
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
-              }}>
+              }}
+            >
               Starting a<span className="highlight"> New School!</span>{" "}
             </h1>
           </div>
@@ -517,11 +570,13 @@ const School = () => {
           </div>
 
           <div className="circle_text">
-            <h1 style={{
+            <h1
+              style={{
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
-              }}>
+              }}
+            >
               <span className="highlight"> New Start-up School</span>{" "}
             </h1>
           </div>
@@ -620,11 +675,13 @@ const School = () => {
           </Grid>
 
           <div className="circle_text">
-            <h1 style={{
+            <h1
+              style={{
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
-              }}>
+              }}
+            >
               <span className="highlight">For Existing Schools</span>{" "}
             </h1>
           </div>
@@ -633,7 +690,7 @@ const School = () => {
               fontFamily: "'Outfit', sans-serif",
               textAlign: "justify",
               display: "flex",
-              justifyContent:"center",
+              justifyContent: "center",
               fontSize: "var(--font-span)",
             }}
           >
@@ -691,18 +748,24 @@ const School = () => {
           </Grid>
 
           <Container className="additional">
-            <h1 style={{
+            <h1
+              style={{
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
-              }}>
+              }}
+            >
               <span className="highlight">Additional support</span>
             </h1>
-            <p style={{
+            <p
+              style={{
                 textAlign: "center",
                 fontSize: "var(--font-p)",
                 marginTop: "2rem",
-              }}>Team can also assist with:</p>
+              }}
+            >
+              Team can also assist with:
+            </p>
             <Container>
               <Row>
                 {supportItems.map((text, index) => (

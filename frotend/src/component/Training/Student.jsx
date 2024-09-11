@@ -27,7 +27,7 @@ const Student = () => {
         style={{
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "17px",
+          fontSize: "var(--font-span)",
         }}
       >
         We offer educative workshops for children, parents and teachers.
@@ -47,7 +47,7 @@ const Student = () => {
             style={{
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "17px",
+              fontSize: "var(--font-span)",
             }}
           >
             Learning Needs regularly arrange student workshops in various fields
@@ -69,7 +69,7 @@ const Student = () => {
                     style={{
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                       marginLeft: "10px",
                     }}
                   >
@@ -89,7 +89,7 @@ const Student = () => {
                     style={{
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                       marginLeft: "10px",
                     }}
                   >
@@ -111,7 +111,7 @@ const Student = () => {
                     style={{
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                       marginLeft: "10px",
                     }}
                   >
@@ -133,7 +133,7 @@ const Student = () => {
                     style={{
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                       marginLeft: "10px",
                     }}
                   >
@@ -155,7 +155,7 @@ const Student = () => {
                     style={{
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                       marginLeft: "10px",
                     }}
                   >
@@ -175,6 +175,7 @@ const Student = () => {
           backgroundColor: "#FF4E00",
           display: "flex",
           marginTop: "10px",
+          fontSize: "var(--font-span)",
         }}
         variant="contained"
         onClick={handleExpandClick}

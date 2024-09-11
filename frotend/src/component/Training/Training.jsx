@@ -50,7 +50,7 @@ const Training = () => {
                   fontFamily: "'Outfit', sans-serif",
                   textAlign: "center",
 
-                  fontSize: "17px",
+                  fontSize: "var(--font-span)",
                 }}
               >
                 Soft skills’ Behavioural Shift training is essential because we
@@ -58,10 +58,10 @@ const Training = () => {
                 <br />
                 However it can be developed through continuous training.
               </p>
-             
+
               <p
                 style={{
-                  fontSize: "17px",
+                  fontSize: "var(--font-span)",
                   fontWeight: "400",
                   fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
@@ -77,7 +77,12 @@ const Training = () => {
             </div>
 
             <div className="circle_text">
-              <h1>
+              <h1
+                style={{
+                  fontSize: "var(--font-h2)",
+                  marginTop: "2rem",
+                }}
+              >
                 List of <span className="highlight">Programs</span>{" "}
               </h1>
             </div>
@@ -90,7 +95,7 @@ const Training = () => {
             >
               <p
                 style={{
-                  fontSize: "17px",
+                  fontSize: "var(--font-span)",
                   fontFamily: "'Outfit', sans-serif",
                   textAlign: "justify",
                   display: "inline-block",
@@ -106,7 +111,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -114,20 +119,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Effective Communication
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -135,20 +140,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Success with Change
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -156,20 +161,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Anger Management
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -177,13 +182,13 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Assertiveness in Action
@@ -198,7 +203,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -206,20 +211,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Peak Performance
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -227,20 +232,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Complaint Handling
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -248,20 +253,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)"
                     }}
                   >
-                    Dealing with Difficult Situations
+                    Dealing Difficult Situations
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -269,13 +274,13 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     {" "}
@@ -291,7 +296,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -299,20 +304,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Leadership Innovation
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -320,20 +325,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Questioning Skills
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -341,20 +346,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Presentation Skills
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -362,12 +367,12 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                       display: "inline-block",
                     }}
                   >
@@ -383,7 +388,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -391,20 +396,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Multipurpose Theme
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -412,20 +417,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Public Speaking
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -433,20 +438,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Time Management
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -454,13 +459,13 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Effective Meetings
@@ -475,7 +480,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -483,20 +488,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Power of Influence
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -504,20 +509,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Customer Service Excellence
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -525,20 +530,20 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Multipurpose Theme
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={12}>
+              <Grid item md={3} xs={6}>
                 <div
                   style={{
                     display: "flex",
@@ -546,13 +551,13 @@ const Training = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: 24 }} />
+                  <StarIcon style={{ color: "orange" }} sx={{ fontSize: "var(--font-p)", }} />
                   <span
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       textAlign: "justify",
                       display: "inline-block",
-                      fontSize: "17px",
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Think Your Way to Success
@@ -568,7 +573,12 @@ const Training = () => {
             </Container>
 
             <div className="circle_text">
-              <h1>
+              <h1
+                style={{
+                  fontSize: "var(--font-h2)",
+                  marginTop: "2rem",
+                }}
+              >
                 Our <span className="highlight">Strength</span>{" "}
               </h1>
             </div>
@@ -577,8 +587,12 @@ const Training = () => {
             </div>
 
             <div className="circle_text">
-              <h1>
-                <span className="highlight">Way we deliver our session</span> {" "}
+              <h1 style={{
+                      
+                      fontSize: "var(--font-h2)",
+                      marginTop: "2rem",
+                    }}>
+                <span className="highlight">Way we deliver our session</span>{" "}
               </h1>
             </div>
             <div
@@ -586,6 +600,7 @@ const Training = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                marginBottom:"2rem"
               }}
             >
               <img src={require("../../Image/sssa1233.png")} alt="" />

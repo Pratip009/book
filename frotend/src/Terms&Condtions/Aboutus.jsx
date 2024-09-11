@@ -300,7 +300,7 @@ const About_UsPage = () => {
                     style={{
                       textAlign: "left",
                       fontSize: "var(--font-h2)",
-                      marginTop: "20px",
+                      marginTop: "2rem",
                     }}
                   >
                     About <span className="highlight">Learning Needs</span>

@@ -24,7 +24,7 @@ const SoftSkill = () => {
         style={{
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "17px",
+          fontSize: "var(--font-span)",
         }}
       >
         The term “soft skills” is a common buzzword that employers and upper
@@ -39,7 +39,7 @@ const SoftSkill = () => {
         style={{
           display: "flex",
           alignItems: "flex-start",
-          fontSize: "23px",
+          fontSize: "var(--font-h3)",
           fontWeight: "600",
         }}
       >
@@ -49,7 +49,7 @@ const SoftSkill = () => {
         style={{
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "17px",
+          fontSize: "var(--font-span)",
         }}
       >
         Our soft skills workshops are custom-tailored to the needs of your
@@ -79,7 +79,7 @@ const SoftSkill = () => {
             style={{
               display: "flex",
               alignItems: "flex-start",
-              fontSize: "23px",
+              fontSize: "var(--font-h3)",
               fontWeight: "600",
             }}
           >
@@ -89,7 +89,7 @@ const SoftSkill = () => {
             style={{
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "17px",
+              fontSize: "var(--font-span)",
             }}
           >
             We keep up with the times at Learning Needs. Online soft skills
@@ -108,7 +108,7 @@ const SoftSkill = () => {
             style={{
               display: "flex",
               alignItems: "flex-start",
-              fontSize: "23px",
+              fontSize: "var(--font-h3)",
               fontWeight: "600",
             }}
           >
@@ -118,7 +118,7 @@ const SoftSkill = () => {
             style={{
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "17px",
+              fontSize: "var(--font-span)",
             }}
           >
             The Learning Needs caters to companies across all industries and
@@ -134,6 +134,7 @@ const SoftSkill = () => {
           backgroundColor: "#FF4E00",
           display: "flex",
           marginTop: "10px",
+          fontSize: "var(--font-span)",
         }}
         variant="contained"
         onClick={handleExpandClick}

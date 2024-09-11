@@ -20,7 +20,7 @@ import {
 } from "../DisplayMoney/DisplayMoney";
 import { addItemToCart } from "../../actions/cartAction";
 
-import placeholderImage from "../../Image/pdf.svg";
+import placeholderImage from "../../Image/pdf.png";
 
 import exclusiveIcon from "../../Image/stars.png";
 
@@ -93,7 +93,8 @@ const useStyles = makeStyles((theme) => ({
   mediaImg: {
     width: "100%",
     height: "100%",
-    objectFit: "cover",
+    objectFit: "contain",
+    marginTop:"10px"
   },
   button: {
     marginTop: -10,
