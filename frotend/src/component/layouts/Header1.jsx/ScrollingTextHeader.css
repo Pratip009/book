@@ -1,71 +1,50 @@
 /* General Styles */
 .scrolling-header {
-  background-color: #FF4E00; /* Background color */
-  color: rgb(255, 255, 255); /* Text color */
+  background-color: #FF4E00;
+  color: #fff;
   padding: 1px 0;
-  text-align: center; /* Center-align text */
+  text-align: center;
   width: 100%; /* Full width */
-  top: 0; /* Align to the top */
-  z-index: 1000; /* Ensure it stays above other content */
-  overflow: hidden; /* Hide overflow to create the scrolling effect */
-  position: relative; /* Position relative for absolute positioning of text */
+  top: 0;
+  z-index: 1000;
+  overflow: hidden; /* Hide overflow to enable the scrolling effect */
+  position: relative;
 }
 
 .scrolling-text-wrapper {
-  display: flex; /* Flex container for horizontal scrolling */
-  white-space: nowrap; /* Prevent line breaks */
-  position: absolute; /* Absolute positioning for animation */
-  animation: marquee 10s linear infinite; /* Animation for marquee effect */
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  animation: marquee 15s linear infinite; /* Marquee effect */
 }
 
 .scrolling-text {
   font-family: 'Outfit', sans-serif;
   display: inline-block;
-  font-size: var(--font-span); /* Use CSS variable for font size */
+  font-size: var(--font-span, 1rem); /* Use CSS variable or default size */
   margin: 0;
-  padding: .5rem;
+  padding: 0.5rem;
+  white-space: nowrap; /* Prevent line breaks */
 }
 
 /* Keyframes for marquee animation */
 @keyframes marquee {
   0% {
-    transform: translateX(100%); /* Start from right */
+    transform: translateX(100%); /* Start off-screen from the right */
   }
   100% {
-    transform: translateX(-100%); /* Move to left */
+    transform: translateX(-100%); /* Move off-screen to the left */
   }
 }
 
-/* Media Queries for Responsive Design */
-
-/* For tablets and smaller devices */
+/* Responsive Media Queries */
 @media (max-width: 767px) {
   .scrolling-header {
-    padding: 0.5rem 0; /* Reduce padding */
-  }
-
-  .scrolling-text-wrapper {
-    animation: marquee 12s linear infinite; /* Adjust duration for smaller screens */
+    padding: 0.5rem 0;
   }
 
   .scrolling-text {
-    font-size: var(--font-span) /* Use CSS variable for font size */
+    font-size: var(--font-span, 0.8rem);
+    animation-duration: 20s; /* Slower scroll for smaller screens */
   }
 }
-
-/* For devices 721px and smaller */
-@media (max-width: 721px) {
-  .scrolling-header {
-    padding: 0.5rem 0; /* Maintain consistent padding */
-  }
-
-  .scrolling-text-wrapper {
-    animation: marquee 11s linear infinite; /* Adjust duration */
-  }
-
-  .scrolling-text {
-    font-size: var(--font-span); /* Use CSS variable for font size */
-  }
-}
-
-/* Continue similarly for other breakpoints... */

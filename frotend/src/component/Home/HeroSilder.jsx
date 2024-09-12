@@ -5,12 +5,12 @@ import Button from "@material-ui/core/Button";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import Typed from "react-typed";
-import slider1 from "../../Image/h1.webp";
-import slider2 from "../../Image/h2.webp";
-import slider3 from "../../Image/h3.webp";
+import slider1 from "../../Image/h111.png";
+import slider2 from "../../Image/h2222.png";
+import slider3 from "../../Image/h33333.png";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import fontSizes, { desktopFontSizes, mobileFontSizes } from "../../Fontsize";
+import  { desktopFontSizes, mobileFontSizes } from "../../Fontsize";
 
 const useStyles = makeStyles((theme) => ({
   slide: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     overflow: "hidden",
     [theme.breakpoints.down("xs")]: {
-      height: "30vh", // Adjust for smaller screens
+      height: "25vh", // Adjust for smaller screens
     },
     "&::before": {
       content: '""',
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       width: "100%",
       height: "100%",
-      backgroundColor: "rgba(0, 0, 0, 0.4)", // Dark overlay
+      backgroundColor: "rgba(0, 0, 0, 0.3)", // Dark overlay
       zIndex: 1,
     },
   },

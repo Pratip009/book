@@ -93,11 +93,11 @@ const Service = () => {
           </p>
         </Container>
 
-        <Container style={{ marginTop: "2rem" }}>
+        <Container style={{ marginTop: "2rem"  }}>
           {/* <Price /> */}
           <img src={require("../../Image/servicessss.png")} alt="" />
         </Container>
-        <Container>
+        <Container style={{marginBottom:"10rem"}}>
           <h1
             style={{
               textAlign: "start",
@@ -110,7 +110,7 @@ const Service = () => {
               Learning Needs Core Serve Solutions
             </span>
           </h1>
-          <Pricing />
+          <Pricing/>
         </Container>
      
 
