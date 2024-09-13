@@ -17,7 +17,6 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-
 const navLinkStyle = {
   fontFamily: "'Outfit', sans-serif",
   textDecoration: "none",
@@ -33,12 +32,14 @@ const navLinkHoverStyle = {
 function BasicExample() {
   const history = useHistory();
   const { isAuthenticated, user } = useSelector((state) => state.userData);
-  const [searchBarActive, setSearchBarActive] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
+
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-
+  const [expanded, setExpanded] = useState(false);
+  const handleNavClick = () => {
+    setExpanded(false); 
+  };
   useEffect(() => {
     axios
       .get("https://render-learningneeds.onrender.com/api/phoneand-emails")
@@ -56,27 +57,6 @@ function BasicExample() {
     AOS.init({ duration: 2000 });
   }, []);
 
-  const handleSearchButtonClick = () => {
-    setSearchBarActive(!searchBarActive);
-  };
-
-  const handleSearchInputChange = (event) => {
-    setSearchValue(event.target.value);
-  };
-
-  const handleSearchFormSubmit = (event) => {
-    event.preventDefault();
-    if (searchValue.trim()) {
-      history.push(`/products/${searchValue}`);
-    } else {
-      history.push("/products");
-    }
-  };
-
-  const handleCrossButtonClick = () => {
-    setSearchValue("");
-    setSearchBarActive(!searchBarActive);
-  };
 
   const toggleNavbar = () => {
     setIsNavbarCollapsed(!isNavbarCollapsed);
@@ -93,145 +73,148 @@ function BasicExample() {
         }}
       >
         <Container fluid>
-        <Navbar.Collapse
-  id="basic-navbar-nav"
-  className="d-flex justify-content-between align-items-center"
->
-  <Nav className="d-flex align-items-center flex-row flex-wrap">
-    <Nav.Link
-      href="#"
-      className="d-flex align-items-center"
-      style={{
-        color: "white",
-        fontFamily: "'Outfit', sans-serif",
-        textDecoration: "none",
-      }}
-    >
-      <FaPhoneAlt
-        style={{
-          color: "white",
-          marginRight: "0.5rem",
-          fontSize: "var(--font-span)",
-        }}
-      />
-      <span style={{ fontSize: "var(--font-span)" }}>{phone}</span>
-    </Nav.Link>
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="d-flex justify-content-between align-items-center"
+          >
+            <Nav className="d-flex align-items-center flex-row flex-wrap">
+              <Nav.Link
+                href="#"
+                className="d-flex align-items-center"
+                style={{
+                  color: "white",
+                  fontFamily: "'Outfit', sans-serif",
+                  textDecoration: "none",
+                }}
+              >
+                <FaPhoneAlt
+                  style={{
+                    color: "white",
+                    marginRight: "0.5rem",
+                    fontSize: "var(--font-span)",
+                  }}
+                />
+                <span style={{ fontSize: "var(--font-span)" }}>{phone}</span>
+              </Nav.Link>
 
-    {/* Social icons in a row for mobile */}
-    <MDBRow className="d-flex justify-content-center align-items-center ms-4 flex-row">
-      <MDBCol md="auto" className="text-center">
-        {/* Social link with circular white background */}
-        <a
-          href="/"
-          className="me-2 text-reset"
-          style={{
-            backgroundColor: "white",
-            borderRadius: "50%",
-            padding: "0.25rem",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <FaFacebook style={{ color: "#1877F2" }} />
-        </a>
-        <a
-          href="/"
-          className="me-2 text-reset"
-          style={{
-            backgroundColor: "white",
-            borderRadius: "50%",
-            padding: "0.25rem",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <RiInstagramFill style={{ color: "#C13584" }} />
-        </a>
-        <a
-          href="/"
-          className="me-2 text-reset"
-          style={{
-            backgroundColor: "white",
-            borderRadius: "50%",
-            padding: "0.25rem",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <FaXTwitter style={{ color: "#000000" }} />
-        </a>
-        <a
-          href="/"
-          className="me-2 text-reset"
-          style={{
-            backgroundColor: "white",
-            borderRadius: "50%",
-            padding: "0.25rem",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <IoLogoWhatsapp style={{ color: "#25D366" }} />
-        </a>
-      </MDBCol>
-    </MDBRow>
-  </Nav>
+              {/* Social icons in a row for mobile */}
+              <MDBRow className="d-flex justify-content-center align-items-center flex-row">
+                <MDBCol
+                  md="auto"
+                  className="text-center"
+                  style={{ margin: "0 .5rem" }}
+                >
+                  {/* Social link with circular white background */}
+                  <a
+                    href="/"
+                    className="me-1 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.25rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <FaFacebook style={{ color: "#1877F2" }} />
+                  </a>
+                  <a
+                    href="/"
+                    className="me-1 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.25rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <RiInstagramFill style={{ color: "#C13584" }} />
+                  </a>
+                  <a
+                    href="/"
+                    className="me-1 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.25rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <FaXTwitter style={{ color: "#000000" }} />
+                  </a>
+                  <a
+                    href="/"
+                    className="me-1 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.25rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <IoLogoWhatsapp style={{ color: "#25D366" }} />
+                  </a>
+                </MDBCol>
+              </MDBRow>
+            </Nav>
 
-  <Nav className="d-flex align-items-center">
-    <Nav.Link
-      href="#"
-      className="d-flex align-items-center me-3 d-none d-lg-flex"
-      style={{
-        color: "white",
-        fontFamily: "'Outfit', sans-serif",
-        textDecoration: "none",
-      }}
-    >
-      <FaEnvelope
-        style={{
-          color: "white",
-          marginRight: "0.5rem",
-          fontSize: "var(--font-span)",
-        }}
-      />
-      <span style={{ fontSize: "var(--font-span)" }}>{email}</span>
-    </Nav.Link>
-    {isAuthenticated ? (
-      <Link to="/account">
-        <Button
-          style={{
-            backgroundColor: "#FF4E00",
-            color: "white",
-            fontFamily: "'Outfit', sans-serif",
-            fontSize: "var(--font-span)",
-          }}
-          size="sm"
-        >
-          My Account
-        </Button>
-      </Link>
-    ) : (
-      <Link to="/signup">
-        <Button
-          style={{
-            backgroundColor: "#FF4E00",
-            color: "white",
-            fontFamily: "'Outfit', sans-serif",
-            fontSize: "var(--font-span)",
-          }}
-          size="sm"
-        >
-          Sign Up
-        </Button>
-      </Link>
-    )}
-  </Nav>
-</Navbar.Collapse>
-
+            <Nav className="d-flex align-items-center">
+              <Nav.Link
+                href="#"
+                className="d-flex align-items-center me-3 d-none d-lg-flex"
+                style={{
+                  color: "white",
+                  fontFamily: "'Outfit', sans-serif",
+                  textDecoration: "none",
+                }}
+              >
+                <FaEnvelope
+                  style={{
+                    color: "white",
+                    marginRight: "0.5rem",
+                    fontSize: "var(--font-span)",
+                  }}
+                />
+                <span style={{ fontSize: "var(--font-span)" }}>{email}</span>
+              </Nav.Link>
+              {isAuthenticated ? (
+                <Link to="/account">
+                  <Button
+                    style={{
+                      backgroundColor: "#FF4E00",
+                      color: "white",
+                      fontFamily: "'Outfit', sans-serif",
+                      fontSize: "var(--font-span)",
+                    }}
+                    size="sm"
+                  >
+                    My Account
+                  </Button>
+                </Link>
+              ) : (
+                <Link to="/signup">
+                  <Button
+                    style={{
+                      backgroundColor: "#FF4E00",
+                      color: "white",
+                      fontFamily: "'Outfit', sans-serif",
+                      fontSize: "var(--font-span)",
+                    }}
+                    size="sm"
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
+              )}
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
 
@@ -413,6 +396,7 @@ function BasicExample() {
             </Nav>
 
             {/* Mobile View Navigation */}
+            
             <Nav
               className="d-flex flex-column align-items-start d-lg-none mx-2"
               id="mobile-nav"
@@ -427,6 +411,7 @@ function BasicExample() {
                 onMouseOut={(e) =>
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
+            
               >
                 Home
               </Link>
@@ -440,6 +425,7 @@ function BasicExample() {
                 onMouseOut={(e) =>
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
+             
               >
                 About Us
               </Link>

@@ -20,12 +20,15 @@
 
 /* Link spacing for mobile */
 .mobile-nav-link {
-  margin-bottom: 1rem; /* Adjust spacing between links */
+ 
+  width: 100%;
+ padding: .5rem;
+  border-bottom: 1px solid rgb(47, 47, 47);
 }
 
 /* Remove margin for the last link in the mobile view */
 .mobile-nav-link:last-child {
-  margin-bottom: 0;
+  margin-bottom: 2px;
 }
 
 .headerTop {
