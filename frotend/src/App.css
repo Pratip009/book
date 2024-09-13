@@ -27,9 +27,9 @@
 /* Adjust for devices 721px and smaller */
 @media (max-width: 721px) {
   :root {
-    --font-h1: 1.75em;  /* Approximately 28px */
-    --font-h2: 1.5em;   /* Approximately 24px */
-    --font-h3: 1.25em;  /* Approximately 20px */
+    --font-h1: 1.35em;  /* Approximately 28px */
+    --font-h2: 1.25em;   /* Approximately 24px */
+    --font-h3: 1.15em;  /* Approximately 20px */
     --font-h4: 1em;     /* Approximately 16px */
     --font-h5: 0.875em; /* Approximately 14px */
     --font-h6: 0.75em;  /* Approximately 12px */

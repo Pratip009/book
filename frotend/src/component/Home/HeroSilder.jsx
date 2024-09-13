@@ -1,205 +1,68 @@
-import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Carousel from "react-material-ui-carousel";
-import Button from "@material-ui/core/Button";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import Typed from "react-typed";
-import slider1 from "../../Image/h111.png";
-import slider2 from "../../Image/h2222.png";
-import slider3 from "../../Image/h33333.png";
-import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
-import  { desktopFontSizes, mobileFontSizes } from "../../Fontsize";
+import { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
+import Typed from 'react-typed';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Import icons from react-icons
+import slider1 from '../../Image/h111.jpeg';
+import slider2 from '../../Image/h222.jpeg';
+import slider3 from '../../Image/h3333.jpeg';
+import './HeroSlider.css';
 
-const useStyles = makeStyles((theme) => ({
-  slide: {
-    height: "calc(80vh)",
-    width: "100%",
-    position: "relative",
-    overflow: "hidden",
-    [theme.breakpoints.down("xs")]: {
-      height: "25vh", // Adjust for smaller screens
-    },
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(0, 0, 0, 0.3)", // Dark overlay
-      zIndex: 1,
-    },
-  },
-  slideImage: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover", // Ensures the image covers the entire area
-    zIndex: 1,
-  },
-  slideContent: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
-    color: "#fff",
-    zIndex: 2,
-    width: "80%",
-    [theme.breakpoints.down("sm")]: {
-      width: "90%",
-      padding: theme.spacing(2),
-    },
-  },
-  quote: {
-    fontSize: desktopFontSizes.h2,
-    color: "#E0FFFF", // Light Cyan for better contrast
-    fontFamily: "'Outfit', sans-serif",
-    fontWeight: 600,
-    marginBottom: theme.spacing(2),
-    [theme.breakpoints.down("sm")]: {
-      fontSize: mobileFontSizes.h2,
-    },
-  },
-  saleText: {
-    fontSize: desktopFontSizes.h1,
-    fontFamily: "'Outfit', sans-serif",
-    fontWeight: 800,
-    marginBottom: theme.spacing(6),
-    [theme.breakpoints.down("sm")]: {
-      fontSize: mobileFontSizes.h1,
-      marginBottom: theme.spacing(3),
-    },
-  },
-  productButton: {
-    backgroundColor: "#FF4E00",  // Keeps the background color solid
-    color: "#fff",               // Keeps the text color white
-    borderRadius: theme.shape.borderRadius,
-    padding: theme.spacing(1.5, 4),
-    border: "1px solid transparent", // Transparent border by default
-    transition: "border 0.3s ease-in-out", // Only animate the border change
-    "&:hover": {
-      border: "1px solid #fff",   // Show white border on hover
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 'var(--font-span)',
-      padding: theme.spacing(1, 3),
-    },
-  },
-  
-  
-}));
-
-const staticSlides = [
+// Array for slides data
+const slides = [
   {
     image: slider1,
-    alt: "Welcome to Our Store!",
     quote: "Welcome to Our Store!",
     saleText: "Exclusive Deals for You",
     productText: "Shop Now",
   },
   {
     image: slider2,
-    alt: "Discover Amazing Products",
     quote: "Discover Amazing Products",
     saleText: "Best Quality Guaranteed",
     productText: "Explore More",
   },
   {
     image: slider3,
-    alt: "Limited Time Offers",
     quote: "Limited Time Offers",
     saleText: "Up to 50% Off",
     productText: "Grab Yours",
   },
 ];
 
-const useWindowWidth = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+function ControlledCarousel() {
+  const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowWidth;
-};
-
-export default function HeroSlider() {
-  const windowWidth = useWindowWidth();
-  const classes = useStyles();
-  const [activeStep, setActiveStep] = useState(0);
-  const slides = staticSlides;
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % slides.length);
-  };
-
-  const handleBack = () => {
-    setActiveStep(
-      (prevActiveStep) => (prevActiveStep - 1 + slides.length) % slides.length
-    );
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
   };
 
   return (
     <Carousel
-      autoPlay
-      navButtonsAlwaysVisible
-      indicators
-      animation="slide"
+      activeIndex={index}
+      onSelect={handleSelect}
       interval={10000}
-      timeout={500}
-      cycleNavigation
-      navButtonsProps={{
-        style: {
-          backgroundColor: "#FFFFFF",
-          borderRadius: 0,
-          padding: 0,
-          margin: 0,
-          height: windowWidth <= 767 ? "50px" : "100%",
-        },
-      }}
-      prevButton={
-        <Button onClick={handleBack} startIcon={<ArrowBackIosIcon />} />
-      }
-      nextButton={
-        <Button onClick={handleNext} endIcon={<ArrowForwardIosIcon />} />
-      }
-      fullHeightHover={false}
-      className={classes.slide}
-      index={activeStep}
-      onChangeIndex={setActiveStep}
+      prevIcon={<FaChevronLeft className="custom-prev-icon" />} // Custom previous icon
+      nextIcon={<FaChevronRight className="custom-next-icon" />} // Custom next icon
     >
-      {slides.map((slide, index) => (
-        <div key={index} className={classes.slide}>
-          <img
-            src={slide.image}
-            srcSet={`${slide.image} 1x, ${slide.image} 2x`}
-            alt={slide.alt}
-            className={classes.slideImage}
-            loading="lazy"
-          />
-          <div className={classes.slideContent}>
-            <h1 className={classes.quote}>
-              <Typed
-                strings={[slide.quote]}
-                typeSpeed={350}
-                backSpeed={200}
-                loop
-              />
-            </h1>
-            <h2 className={classes.saleText}>{slide.saleText}</h2>
+      {slides.map((slide, idx) => (
+        <Carousel.Item key={idx} className="custom-carousel-item">
+          <img className="d-block w-100 custom-slider-img" src={slide.image} alt={slide.quote} />
+          <div className="carousel-overlay"></div>
+          <Carousel.Caption className="carousel-caption">
+            <span className="quote">
+              <Typed strings={[slide.quote]} typeSpeed={350} backSpeed={200} loop />
+            </span>
+            <span className="sale-text">{slide.saleText}</span>
             <Link to="/products">
-              <Button className={classes.productButton}>
-                {slide.productText}
-              </Button>
+              <button className="product-button">{slide.productText}</button>
             </Link>
-          </div>
-        </div>
+          </Carousel.Caption>
+        </Carousel.Item>
       ))}
     </Carousel>
   );
 }
+
+export default ControlledCarousel;

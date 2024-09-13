@@ -35,16 +35,16 @@ const SoftSkill = () => {
         Learning Needs provides exhaustive online and in-person soft skills
         training to help develop a positive and productive work culture.
       </span>
-      <p
+      <span
         style={{
           display: "flex",
           alignItems: "flex-start",
-          fontSize: "var(--font-h3)",
-          fontWeight: "600",
+          fontSize: "var(--font-h2)",
+          fontWeight: "700",
         }}
       >
         Our Soft Skills Workshop
-      </p>
+      </span>
       <span
         style={{
           textAlign: "justify",
@@ -75,16 +75,16 @@ const SoftSkill = () => {
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <span>
-          <p
+          <span
             style={{
               display: "flex",
               alignItems: "flex-start",
-              fontSize: "var(--font-h3)",
-              fontWeight: "600",
+              fontSize: "var(--font-h2)",
+              fontWeight: "700",
             }}
           >
             Our Customized Soft Skills Training Workshops
-          </p>
+          </span>
           <span
             style={{
               textAlign: "justify",
@@ -104,16 +104,16 @@ const SoftSkill = () => {
             potential of their existing soft skills while developing other soft
             skills that may not come as naturally to them.
           </span>
-          <p
+          <span
             style={{
               display: "flex",
               alignItems: "flex-start",
-              fontSize: "var(--font-h3)",
-              fontWeight: "600",
+              fontSize: "var(--font-h2)",
+              fontWeight: "700",
             }}
           >
             Participate in Our Soft Skills Training Programs
-          </p>
+          </span>
           <span
             style={{
               textAlign: "justify",

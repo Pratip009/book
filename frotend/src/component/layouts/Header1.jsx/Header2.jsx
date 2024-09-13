@@ -12,8 +12,11 @@ import logo from "../../../Image/LN.png";
 import "./Header.css";
 import "aos/dist/aos.css";
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 
 const navLinkStyle = {
   fontFamily: "'Outfit', sans-serif",
@@ -90,130 +93,145 @@ function BasicExample() {
         }}
       >
         <Container fluid>
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="d-flex justify-content-between align-items-center"
-          >
-            <Nav className="d-flex align-items-center">
-              <Nav.Link
-                href="#"
-                className="d-flex align-items-center"
-                style={{
-                  color: "white",
-                  fontFamily: "'Outfit', sans-serif",
-                  textDecoration: "none",
-                }}
-              >
-                <FaPhoneAlt
-                  style={{
-                    color: "white",
-                    marginRight: "0.5rem",
-                    fontSize: "var(--font-span)",
-                  }}
-                />
-                <span style={{ fontSize: "var(--font-span)" }}>{phone}</span>
-              </Nav.Link>
+        <Navbar.Collapse
+  id="basic-navbar-nav"
+  className="d-flex justify-content-between align-items-center"
+>
+  <Nav className="d-flex align-items-center flex-row flex-wrap">
+    <Nav.Link
+      href="#"
+      className="d-flex align-items-center"
+      style={{
+        color: "white",
+        fontFamily: "'Outfit', sans-serif",
+        textDecoration: "none",
+      }}
+    >
+      <FaPhoneAlt
+        style={{
+          color: "white",
+          marginRight: "0.5rem",
+          fontSize: "var(--font-span)",
+        }}
+      />
+      <span style={{ fontSize: "var(--font-span)" }}>{phone}</span>
+    </Nav.Link>
 
-              {/* Add spacing between Nav.Link and MDBRow */}
-              <MDBRow className="d-none d-sm-flex justify-content-center align-items-center ms-4">
-                <MDBCol md="auto" className="text-center">
-                  {/* Social link with circular white background */}
-                  <a
-                    href="/"
-                    className="me-2 text-reset"
-                    style={{
-                      backgroundColor: "white",
-                      borderRadius: "50%",
-                      padding: "0.25rem",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <FaFacebook style={{ color: "#1877F2" }} />
-                  </a>
-                  <a
-                    href="/"
-                    className="me-2 text-reset"
-                    style={{
-                      backgroundColor: "white",
-                      borderRadius: "50%",
-                      padding: "0.25rem",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <RiInstagramFill style={{ color: "#C13584" }} />
-                  </a>
-                  <a
-                    href="/"
-                    className="me-2 text-reset"
-                    style={{
-                      backgroundColor: "white",
-                      borderRadius: "50%",
-                      padding: "0.25rem",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <FaTwitter style={{ color: "#1DA1F2" }} />
-                  </a>
-                </MDBCol>
-              </MDBRow>
-            </Nav>
+    {/* Social icons in a row for mobile */}
+    <MDBRow className="d-flex justify-content-center align-items-center ms-4 flex-row">
+      <MDBCol md="auto" className="text-center">
+        {/* Social link with circular white background */}
+        <a
+          href="/"
+          className="me-2 text-reset"
+          style={{
+            backgroundColor: "white",
+            borderRadius: "50%",
+            padding: "0.25rem",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <FaFacebook style={{ color: "#1877F2" }} />
+        </a>
+        <a
+          href="/"
+          className="me-2 text-reset"
+          style={{
+            backgroundColor: "white",
+            borderRadius: "50%",
+            padding: "0.25rem",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <RiInstagramFill style={{ color: "#C13584" }} />
+        </a>
+        <a
+          href="/"
+          className="me-2 text-reset"
+          style={{
+            backgroundColor: "white",
+            borderRadius: "50%",
+            padding: "0.25rem",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <FaXTwitter style={{ color: "#000000" }} />
+        </a>
+        <a
+          href="/"
+          className="me-2 text-reset"
+          style={{
+            backgroundColor: "white",
+            borderRadius: "50%",
+            padding: "0.25rem",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <IoLogoWhatsapp style={{ color: "#25D366" }} />
+        </a>
+      </MDBCol>
+    </MDBRow>
+  </Nav>
 
-            <Nav className="d-flex align-items-center">
-              <Nav.Link
-                href="#"
-                className="d-flex align-items-center me-3 d-none d-lg-flex"
-                style={{
-                  color: "white",
-                  fontFamily: "'Outfit', sans-serif",
-                  textDecoration: "none",
-                }}
-              >
-                <FaEnvelope
-                  style={{
-                    color: "white",
-                    marginRight: "0.5rem",
-                    fontSize: "var(--font-span)",
-                  }}
-                />
-                <span style={{ fontSize: "var(--font-span)" }}>{email}</span>
-              </Nav.Link>
-              {isAuthenticated ? (
-                <Link to="/account">
-                  <Button
-                    style={{
-                      backgroundColor: "#FF4E00",
-                      color: "white",
-                      fontFamily: "'Outfit', sans-serif",
-                      fontSize: "var(--font-span)",
-                    }}
-                    size="sm"
-                  >
-                    My Account
-                  </Button>
-                </Link>
-              ) : (
-                <Link to="/signup">
-                  <Button
-                    style={{
-                      backgroundColor: "#FF4E00",
-                      color: "white",
-                      fontFamily: "'Outfit', sans-serif",
-                      fontSize: "var(--font-span)",
-                    }}
-                    size="sm"
-                  >
-                    Sign Up
-                  </Button>
-                </Link>
-              )}
-            </Nav>
-          </Navbar.Collapse>
+  <Nav className="d-flex align-items-center">
+    <Nav.Link
+      href="#"
+      className="d-flex align-items-center me-3 d-none d-lg-flex"
+      style={{
+        color: "white",
+        fontFamily: "'Outfit', sans-serif",
+        textDecoration: "none",
+      }}
+    >
+      <FaEnvelope
+        style={{
+          color: "white",
+          marginRight: "0.5rem",
+          fontSize: "var(--font-span)",
+        }}
+      />
+      <span style={{ fontSize: "var(--font-span)" }}>{email}</span>
+    </Nav.Link>
+    {isAuthenticated ? (
+      <Link to="/account">
+        <Button
+          style={{
+            backgroundColor: "#FF4E00",
+            color: "white",
+            fontFamily: "'Outfit', sans-serif",
+            fontSize: "var(--font-span)",
+          }}
+          size="sm"
+        >
+          My Account
+        </Button>
+      </Link>
+    ) : (
+      <Link to="/signup">
+        <Button
+          style={{
+            backgroundColor: "#FF4E00",
+            color: "white",
+            fontFamily: "'Outfit', sans-serif",
+            fontSize: "var(--font-span)",
+          }}
+          size="sm"
+        >
+          Sign Up
+        </Button>
+      </Link>
+    )}
+  </Nav>
+</Navbar.Collapse>
+
         </Container>
       </Navbar>
 

@@ -33,7 +33,7 @@ const Service = () => {
     <container-fluid>
       <container-fluid>
         <img
-          src={require("../../Image/trA011.png")}
+          src={require("../../Image/SER1211.png")}
           alt="About"
           className="responsive-img"
         />

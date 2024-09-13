@@ -51,7 +51,8 @@ const useStyles = makeStyles((theme) => ({
   },
   founderMessage: {
     textAlign: "start",
-    fontSize: "var(--font-h3)",
+    fontSize: "var(--font-h2)",
+    fontWeight: 700,
     marginTop: "20px",
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
@@ -300,18 +301,17 @@ const About_UsPage = () => {
                     style={{
                       textAlign: "left",
                       fontSize: "var(--font-h2)",
+                      fontWeight: 700,
                       marginTop: "2rem",
                     }}
                   >
-                    About <span className="highlight">Learning Needs</span>
+                    <span className="highlight">About Learning Needs</span>
                   </h1>
                 </div>
                 <p
                   variant="body1"
                   style={{
                     fontSize: "var(--font-span)",
-
-                    fontWeight: "400",
                     textAlign: "justify",
                     fontFamily: "'Outfit', sans-serif",
                   }}
@@ -348,7 +348,8 @@ const About_UsPage = () => {
                 style={{
                   textAlign: "center",
                   fontSize: "var(--font-h2)",
-                  marginTop: "20px",
+                  fontWeight: 700,
+                  marginTop: "2rem",
                 }}
               >
                 <span className="highlight">Learning Needs Traits</span>
@@ -483,6 +484,7 @@ const About_UsPage = () => {
                 <p
                   style={{
                     fontSize: "var(--font-span)",
+
                     fontFamily: "'Outfit', sans-serif",
                     textAlign: "justify",
                   }}
@@ -530,10 +532,10 @@ const About_UsPage = () => {
         <Container className={classes.container_12}>
           <div className="circle_text">
             <h1
-              className={classes.founderMessage}
               style={{
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
+                fontWeight: 700,
               }}
             >
               <span className="highlight">Our Team </span>
@@ -544,6 +546,7 @@ const About_UsPage = () => {
             style={{
               fontFamily: "'Outfit', sans-serif",
               fontSize: "var(--font-span)",
+              fontWeight: 500,
             }}
           >
             Learning Needs dedicated leadership team is focused on delivering
@@ -554,6 +557,7 @@ const About_UsPage = () => {
             style={{
               fontFamily: "'Outfit', sans-serif'",
               fontSize: "var(--font-span)",
+              fontWeight: 500,
             }}
           >
             programs that exceed our clients expectations and help them achieve
@@ -578,7 +582,15 @@ const About_UsPage = () => {
               </Col>
               <Col xs={12} sm={6}>
                 <div className="circle_text">
-                  <h1 className={classes.founderMessage}>
+                  <h1
+                    style={{
+                      display:"flex",
+                      textAlign: "start",
+                      fontSize: "var(--font-h2)",
+                      fontWeight: 700,
+                      marginTop: "2rem",
+                    }}
+                  >
                     <span className="highlight">Founder's Message</span>
                   </h1>
                 </div>
@@ -609,63 +621,49 @@ const About_UsPage = () => {
               style={{
                 width: "100%",
                 backgroundColor: "#FFFFFF",
-                marginTop: "2rem",
+                marginTop: "4rem",
               }}
             >
-              {/* testimonials */}
-
+             
               <div className="circle_text">
                 <h1
                   style={{
                     textAlign: "center",
                     fontSize: "var(--font-h2)",
+                    fontWeight: 700,
+                    marginTop: "2rem",
+                    marginBottom:"2rem"
                   }}
                 >
-                  <span className="highlight">Pride of Learning Needs</span>{" "}
+                  <span className="highlight">Pride of Learning Needs</span>
                 </h1>
               </div>
-
               <TestimonialSlider />
             </Container>
-            <div className="play">
+            <div className="play" style={{marginTop:"4rem"}}>
               <PlayApp />
             </div>
           </div>
 
           <Container className="faq p-0 mb-5">
+            
+
             <div className="circle_text">
               <h1
                 style={{
                   textAlign: "center",
                   fontSize: "var(--font-h2)",
-                  marginTop: "20px",
+                  fontWeight: 700,
+                  marginTop: "2rem",
                 }}
               >
                 <span className="highlight">Frequently Asked Questions</span>
               </h1>
             </div>
-
             <Faq />
           </Container>
 
-          {/* <Container style={{ marginTop: "1rem" }}>
-            <Row className="justify-content-center align-items-center">
-              <Col xs="auto">
-                <Link to="/products" style={{ textDecoration: "none" }}>
-                  <Button variant="contained" className="button1_about">
-                    Our Products
-                  </Button>
-                </Link>
-              </Col>
-              <Col xs="auto">
-                <Link to="/contact" style={{ textDecoration: "none" }}>
-                  <Button variant="contained" className="button2_about">
-                    Contact Us
-                  </Button>
-                </Link>
-              </Col>
-            </Row>
-          </Container> */}
+    
         </Container>
       </container-fluid>
     </>

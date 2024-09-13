@@ -300,8 +300,9 @@ function Home() {
                 <Col xs={12} className="text-center">
                   <div className="circle_text">
                     <h1 style={h1Style}>
-                      Find The <span className="highlight">Right Product</span>{" "}
-                      For You
+                      <span className="highlight">
+                        Find The Right Product For You
+                      </span>{" "}
                     </h1>
                   </div>
                   <span className="sub_headings" style={spanStyle}>
@@ -336,7 +337,7 @@ function Home() {
             <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
               <div className="circle_text">
                 <h1 style={h1Style}>
-                  Our <span className="highlight">Goals And Objective</span>
+                  <span className="highlight">Our Goals And Objective</span>
                 </h1>
               </div>
               <Row>

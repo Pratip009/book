@@ -83,7 +83,7 @@ const Training = () => {
                   marginTop: "2rem",
                 }}
               >
-                List of <span className="highlight">Programs</span>{" "}
+                 <span className="highlight">List of Programs</span>{" "}
               </h1>
             </div>
             <div
@@ -111,7 +111,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -132,7 +132,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -153,7 +153,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -174,7 +174,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -203,7 +203,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -224,7 +224,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -245,7 +245,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -266,7 +266,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -296,7 +296,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -317,7 +317,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -338,7 +338,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -359,7 +359,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -388,7 +388,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -409,7 +409,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -430,7 +430,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -451,7 +451,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -480,7 +480,7 @@ const Training = () => {
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
               style={{ marginTop: "1rem" }}
             >
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -501,7 +501,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -522,7 +522,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -543,7 +543,7 @@ const Training = () => {
                   </span>
                 </div>
               </Grid>
-              <Grid item md={3} xs={6}>
+              <Grid item md={3} xs={12}>
                 <div
                   style={{
                     display: "flex",
@@ -579,7 +579,7 @@ const Training = () => {
                   marginTop: "2rem",
                 }}
               >
-                Our <span className="highlight">Strength</span>{" "}
+                <span className="highlight">Our Strength</span>{" "}
               </h1>
             </div>
             <div>

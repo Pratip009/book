@@ -194,8 +194,8 @@ function Products() {
                           fontSize: "var(--font-h2)",
                           marginTop: "2rem",
                         }}>
-                          Benefits of{" "}
-                          <span className="highlight">Reading Books</span>{" "}
+                          {" "}
+                          <span className="highlight">Benefits of Reading Books</span>{" "}
                         </h1>
                       </div>
                       <span
