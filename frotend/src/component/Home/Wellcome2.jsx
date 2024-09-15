@@ -38,6 +38,7 @@ export default function Wellcome2() {
       <Link to="/about_us">
         <Button
           style={{
+            width:"30%",
             border: "1px solid white",
             color: "#fff",
             background: "linear-gradient(45deg, #ff5f6d, #ffc371)",

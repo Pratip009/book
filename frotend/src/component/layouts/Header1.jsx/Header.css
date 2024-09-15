@@ -16,6 +16,7 @@
 /* Remove margin for the last link in the desktop view */
 .desktop-nav-link:last-child {
   margin-right: 0;
+  
 }
 
 /* Link spacing for mobile */
@@ -23,12 +24,13 @@
  
   width: 100%;
  padding: .5rem;
-  border-bottom: 1px solid rgb(47, 47, 47);
+  border-bottom: 1px solid rgb(86, 86, 86);
 }
 
 /* Remove margin for the last link in the mobile view */
 .mobile-nav-link:last-child {
   margin-bottom: 2px;
+  border: none
 }
 
 .headerTop {
