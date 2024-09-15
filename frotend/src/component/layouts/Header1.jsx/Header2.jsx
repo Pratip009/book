@@ -3,7 +3,7 @@ import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { FaPhoneAlt, FaEnvelope, FaBars } from "react-icons/fa";
 import axios from "axios";
 
-import { Link,  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CartIcon from "./CartIcon";
 import ProfileModal from "./ProfileModel";
@@ -30,14 +30,13 @@ const navLinkHoverStyle = {
 };
 
 function BasicExample() {
-
   const { isAuthenticated, user } = useSelector((state) => state.userData);
 
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  
+
   useEffect(() => {
     axios
       .get("https://render-learningneeds.onrender.com/api/phoneand-emails")
@@ -52,7 +51,6 @@ function BasicExample() {
         console.error("Error fetching phone and email data:", error);
       });
   }, []);
-
 
   const toggleNavbar = () => {
     setIsNavbarCollapsed((prev) => !prev);
@@ -234,23 +232,12 @@ function BasicExample() {
               <img
                 src={logo}
                 alt="Logo"
-                className="d-none d-md-block"
-                style={{
-                  width: "200px",
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
+                className="logo-lg d-none d-md-block"
               />
               <img
                 src={logo}
                 alt="Logo"
-                className="d-block d-md-none"
-                style={{
-                  width: "150px",
-                  maxWidth: "100%",
-                  height: "auto",
-                  margin: 0,
-                }}
+                className="logo-sm d-block d-md-none"
               />
             </Navbar.Brand>
           </Link>
@@ -400,7 +387,7 @@ function BasicExample() {
             </Nav>
 
             {/* Mobile View Navigation */}
-            
+
             <Nav
               className="d-flex flex-column align-items-start d-lg-none mx-2"
               id="mobile-nav"
@@ -415,7 +402,6 @@ function BasicExample() {
                 onMouseOut={(e) =>
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
-            
               >
                 Home
               </Link>
@@ -429,7 +415,6 @@ function BasicExample() {
                 onMouseOut={(e) =>
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
-             
               >
                 About Us
               </Link>

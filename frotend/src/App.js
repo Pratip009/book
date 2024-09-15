@@ -77,7 +77,7 @@ const LazyProductReviews = React.lazy(() =>
 );
 
 function App() {
-  const [stripeApiKey, setStripeApiKey] = useState("");
+  const [stripeApiKey, setStripeApiKey] = useState("test");
 
   const dispatch = useDispatch();
 
