@@ -154,7 +154,7 @@ function Home() {
                         <CardMedia
                           component="img"
                           height="300"
-                          image={require("../../Image/lap.jpg")}
+                          image={require("../../Image/lap.webp")}
                         />
                         <Box
                           sx={{
@@ -229,7 +229,7 @@ function Home() {
                         <CardMedia
                           component="img"
                           height="300"
-                          image={require("../../Image/off.jpg")}
+                          image={require("../../Image/off.webp")}
                         />
                         <Box
                           sx={{
@@ -267,7 +267,7 @@ function Home() {
                               style={{
                                 fontFamily: "'Outfit', sans-serif",
                                 fontSize: "var(--font-h5)",
-                                marginTop: "10px", // Add margin to separate text from avatar
+                                marginTop: "10px",
                               }}
                             >
                               Training And Development Program

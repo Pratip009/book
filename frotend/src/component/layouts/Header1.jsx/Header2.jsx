@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { FaPhoneAlt, FaEnvelope, FaBars } from "react-icons/fa";
 import axios from "axios";
-import AOS from "aos";
-import { Link, useHistory } from "react-router-dom";
+
+import { Link,  } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CartIcon from "./CartIcon";
 import ProfileModal from "./ProfileModel";
 import ScrollingTextHeader from "./ScrollingTextHeader";
-import logo from "../../../Image/LN.png";
+import logo from "../../../Image/LN.webp";
 import "./Header.css";
 import "aos/dist/aos.css";
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
@@ -30,16 +30,14 @@ const navLinkHoverStyle = {
 };
 
 function BasicExample() {
-  const history = useHistory();
+
   const { isAuthenticated, user } = useSelector((state) => state.userData);
 
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const handleNavClick = () => {
-    setExpanded(false); 
-  };
+  
   useEffect(() => {
     axios
       .get("https://render-learningneeds.onrender.com/api/phoneand-emails")
@@ -53,13 +51,11 @@ function BasicExample() {
       .catch((error) => {
         console.error("Error fetching phone and email data:", error);
       });
-
-    AOS.init({ duration: 2000 });
   }, []);
 
 
   const toggleNavbar = () => {
-    setIsNavbarCollapsed(!isNavbarCollapsed);
+    setIsNavbarCollapsed((prev) => !prev);
   };
 
   return (
@@ -106,7 +102,9 @@ function BasicExample() {
                 >
                   {/* Social link with circular white background */}
                   <a
-                    href="/"
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="me-1 text-reset"
                     style={{
                       backgroundColor: "white",
@@ -120,7 +118,9 @@ function BasicExample() {
                     <FaFacebook style={{ color: "#1877F2" }} />
                   </a>
                   <a
-                    href="/"
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="me-1 text-reset"
                     style={{
                       backgroundColor: "white",
@@ -134,7 +134,9 @@ function BasicExample() {
                     <RiInstagramFill style={{ color: "#C13584" }} />
                   </a>
                   <a
-                    href="/"
+                    href="https://www.twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="me-1 text-reset"
                     style={{
                       backgroundColor: "white",
@@ -148,7 +150,9 @@ function BasicExample() {
                     <FaXTwitter style={{ color: "#000000" }} />
                   </a>
                   <a
-                    href="/"
+                    href="https://www.whatsapp.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="me-1 text-reset"
                     style={{
                       backgroundColor: "white",

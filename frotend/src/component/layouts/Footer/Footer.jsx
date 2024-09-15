@@ -9,7 +9,7 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import logo from "../../../Image/LN.png";
+import logo from "../../../Image/LN.webp";
 import "./Footer.css";
 import { TbTruckDelivery } from "react-icons/tb";
 import { GiCheckedShield } from "react-icons/gi";
