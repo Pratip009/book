@@ -277,7 +277,7 @@ const About_UsPage = () => {
         <container-fluid className="about_ln">
           <Container>
             <Row className="align-items-center justify-content-center mt-3">
-              <Col xs="12" sm="12" md="4" className="mb-3">
+              <Col xs="12" sm="12" md="4" className="mb-0">
                 <img
                   src={require("../Image/about/abb.png")}
                   alt="Learning needs"

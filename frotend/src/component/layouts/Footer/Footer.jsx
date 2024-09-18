@@ -9,13 +9,15 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import logo from "../../../Image/LN.webp";
 import "./Footer.css";
 import { TbTruckDelivery } from "react-icons/tb";
 import { GiCheckedShield } from "react-icons/gi";
 import { RiExchangeBoxLine } from "react-icons/ri";
 import { GrSecure } from "react-icons/gr";
-
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaYoutube } from "react-icons/fa6";
 export default function Footer() {
   return (
     <div className="footer-wrapper">
@@ -255,10 +257,16 @@ export default function Footer() {
                   <FaFacebook />
                 </a>
                 <a href="/" className="me-4 text-reset">
-                  <FaTwitter />
+                  <FaXTwitter />
                 </a>
                 <a href="/" className="me-4 text-reset">
                   <FaInstagram />
+                </a>
+                <a href="/" className="me-4 text-reset">
+                  <IoLogoWhatsapp />
+                </a>
+                <a href="/" className="me-4 text-reset">
+                  <FaYoutube />
                 </a>
               </MDBCol>
             </MDBRow>

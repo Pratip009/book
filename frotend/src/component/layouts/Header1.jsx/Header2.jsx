@@ -16,6 +16,7 @@ import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { FaYoutube } from "react-icons/fa6";
 
 const navLinkStyle = {
   fontFamily: "'Outfit', sans-serif",
@@ -84,7 +85,7 @@ function BasicExample() {
                 <FaPhoneAlt
                   style={{
                     color: "white",
-                    marginRight: "0.5rem",
+                    marginRight: "0.25rem",
                     fontSize: "var(--font-span)",
                   }}
                 />
@@ -96,7 +97,7 @@ function BasicExample() {
                 <MDBCol
                   md="auto"
                   className="text-center"
-                  style={{ margin: "0 .5rem" }}
+                  style={{ margin: "0 .25rem" }}
                 >
                   {/* Social link with circular white background */}
                   <a
@@ -107,7 +108,7 @@ function BasicExample() {
                     style={{
                       backgroundColor: "white",
                       borderRadius: "50%",
-                      padding: "0.25rem",
+                      padding: "0.15rem",
                       display: "inline-flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -123,7 +124,7 @@ function BasicExample() {
                     style={{
                       backgroundColor: "white",
                       borderRadius: "50%",
-                      padding: "0.25rem",
+                      padding: "0.15rem",
                       display: "inline-flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -139,7 +140,7 @@ function BasicExample() {
                     style={{
                       backgroundColor: "white",
                       borderRadius: "50%",
-                      padding: "0.25rem",
+                      padding: "0.15rem",
                       display: "inline-flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -155,13 +156,29 @@ function BasicExample() {
                     style={{
                       backgroundColor: "white",
                       borderRadius: "50%",
-                      padding: "0.25rem",
+                      padding: "0.15rem",
                       display: "inline-flex",
                       alignItems: "center",
                       justifyContent: "center",
                     }}
                   >
                     <IoLogoWhatsapp style={{ color: "#25D366" }} />
+                  </a>
+                  <a
+                    href="https://www.youtube.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="me-1 text-reset"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      padding: "0.15rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <FaYoutube style={{ color: "#FF0000" }} />
                   </a>
                 </MDBCol>
               </MDBRow>
@@ -190,6 +207,7 @@ function BasicExample() {
                 <Link to="/account">
                   <Button
                     style={{
+                      padding:"5px 4px",
                       backgroundColor: "#FF4E00",
                       color: "white",
                       fontFamily: "'Outfit', sans-serif",
@@ -204,6 +222,7 @@ function BasicExample() {
                 <Link to="/signup">
                   <Button
                     style={{
+                      padding:"5px 4px",
                       backgroundColor: "#FF4E00",
                       color: "white",
                       fontFamily: "'Outfit', sans-serif",

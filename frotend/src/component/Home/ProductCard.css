@@ -5,7 +5,7 @@ body, h5, p, button {
 
 .product-card {
     display: flex;
-    border: 1px solid black;
+    border: 1px solid rgb(227, 227, 227);
     flex-direction: column;
     height: 100%;
     /* Ensures all cards are the same height */
@@ -44,17 +44,18 @@ body, h5, p, button {
 .old-price {
     background-color: #ff4e4e; /* Red background for old price */
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 2px 10px;
+    border-radius: 50px;
     text-decoration: line-through;
+    font-weight: normal;
 }
 
 .discount-price {
     background-color: #28a745; /* Green background for discounted price */
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 50px;
+    font-weight: normal;
 }
 
 .product-card .card-body {
