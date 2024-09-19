@@ -73,7 +73,7 @@ function ProductCard({ product }) {
           className="card-img-top"
           style={{
             width: "100%",          /* Full width */
-            maxHeight:"200px",          /* Auto height to maintain aspect ratio */
+            maxHeight:"150px",          /* Auto height to maintain aspect ratio */
             objectFit: "contain",    /* Ensure the entire image is visible */
             objectPosition: "center",/* Center the image within its container */
           }}
