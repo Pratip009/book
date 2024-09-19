@@ -568,7 +568,7 @@ const Training = () => {
 
             <Container style={{ padding: 0, margin: 0 }}>
               <div style={{ marginTop: "2rem" }}>
-                <img src={require("../../Image/train1.png")} alt="" />
+                <img src={require("../../Image/train2.png")} alt="" />
               </div>
             </Container>
 

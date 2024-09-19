@@ -9,8 +9,11 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { FaPhone } from "react-icons/fa6";
+
 import { FaXTwitter } from "react-icons/fa6";
-import logo from "../../../Image/LN.webp";
+import logo from "../../../Image/LNWhite.png";
 import "./Footer.css";
 import { TbTruckDelivery } from "react-icons/tb";
 import { GiCheckedShield } from "react-icons/gi";
@@ -35,16 +38,11 @@ export default function Footer() {
                   <MDBNavbarBrand href="/" className="footer_logo">
                     <img
                       src={logo}
-                     width={200}
+                      width={200}
                       alt="Logo"
                       loading="lazy"
-                      style={{
-                        backgroundColor: "white",
-                        padding: "1rem",
-                        borderRadius: "0.5rem",
-                      }}
+                      
                     />
-                    
                   </MDBNavbarBrand>
                   <MDBRow>
                     <MDBCol md="6" xs="12" className="box-col">
@@ -112,7 +110,7 @@ export default function Footer() {
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
                         textAlign: "start",
-                        fontSize:"var(--font-p)"
+                        fontSize: "var(--font-p)",
                       }}
                     >
                       Help
@@ -151,7 +149,7 @@ export default function Footer() {
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
                         textAlign: "start",
-                         fontSize:"var(--font-p)",
+                        fontSize: "var(--font-p)",
                       }}
                     >
                       Policies
@@ -190,7 +188,7 @@ export default function Footer() {
                         textDecoration: "underline",
                         textDecorationColor: "#003E90",
                         textAlign: "start",
-                         fontSize:"var(--font-p)"
+                        fontSize: "var(--font-p)",
                       }}
                     >
                       Company
@@ -225,7 +223,9 @@ export default function Footer() {
               </MDBCol>
 
               <MDBCol md="2" lg="2" xl="2" xs="2" className="mb-md-0 mb-4 p-0">
-                <h6 className="mb-4" style={{fontSize:"var(--font-p)"}}>Newsletter</h6>
+                <h6 className="mb-4" style={{ fontSize: "var(--font-p)" }}>
+                  Newsletter
+                </h6>
                 <MDBInput
                   contrast
                   type="email"
@@ -240,14 +240,14 @@ export default function Footer() {
                   color="light"
                   type="submit"
                   className="mb-4 custom-btn w-100"
-                  style={{  fontFamily:"'Outfit', sans-serif"}}
+                  style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   Subscribe
                 </MDBBtn>
               </MDBCol>
             </MDBRow>
             <MDBRow className="d-flex justify-content-center align-items-center">
-              <MDBCol md="auto" className="text-center mb-3 mb-md-0">
+              <MDBCol md="auto" className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center">
                 <span className="textt">
                   Get connected with us on social networks:
                 </span>
@@ -270,6 +270,36 @@ export default function Footer() {
                 </a>
               </MDBCol>
             </MDBRow>
+            <MDBRow className="d-flex justify-content-center align-items-center mt-2">
+              <MDBCol
+                md="auto"
+                className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center"
+              >
+                <span className="textt d-flex align-items-center">
+                  <IoIosMail className="mail-icon"/>
+                  <span>Email:</span>
+                </span>
+                <a
+                  href="mailto:infolearningneeds@gmail.com"
+                  className="ms-2 text-reset"
+                >
+                  infolearningneeds@gmail.com
+                </a>
+              </MDBCol>
+
+              <MDBCol
+                md="auto"
+                className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center"
+              >
+                <span className="textt d-flex align-items-center">
+                  <FaPhone className="mail-icon"/>
+                  <span>Contact:</span>
+                </span>
+                <a href="tel:8240554890" className="ms-2 text-reset">
+                  8240554890
+                </a>
+              </MDBCol>
+            </MDBRow>
           </MDBContainer>
         </section>
 
@@ -277,31 +307,33 @@ export default function Footer() {
           className="text-center p-4 footer-custom"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         >
-          © 2024&nbsp; 
+          © 2024&nbsp;
           <a href="https://learningneeds.in/" className="text-reset">
-             Learning Needs, All Rights Reserved.
+            Learning Needs, All Rights Reserved.
           </a>
         </div>
       </MDBFooter>
 
       <div className="overlay-container">
         <div className="overlay-content">
-        <MDBRow>
-        <MDBCol md="10" xs="12" sm="12" className="text-col-two">
-            <h1 className="overlay-heading">
-              Let’s Change, Learn, Grow, and Transform!
-            </h1>
-            <p className="overlay-text">
-              Learning Needs offers a variety of boutique services, tailored to
-              each client's need. Our specialized expertise allows the
-              Individual, Institution, Schools, and Organizations to achieve
-              their objectives.
-            </p>
-          </MDBCol>
-          <MDBCol md="2" xs="12" sm="12" className="button-col">
-            <button className="btn btn-primary btn-normal-case">Get Started...</button>
-          </MDBCol>
-        </MDBRow>
+          <MDBRow>
+            <MDBCol md="10" xs="12" sm="12" className="text-col-two">
+              <h1 className="overlay-heading">
+                Let’s Change, Learn, Grow, and Transform!
+              </h1>
+              <p className="overlay-text">
+                Learning Needs offers a variety of boutique services, tailored
+                to each client's need. Our specialized expertise allows the
+                Individual, Institution, Schools, and Organizations to achieve
+                their objectives.
+              </p>
+            </MDBCol>
+            <MDBCol md="2" xs="12" sm="12" className="button-col">
+              <button className="btn btn-primary btn-normal-case">
+                Get Started...
+              </button>
+            </MDBCol>
+          </MDBRow>
         </div>
       </div>
     </div>

@@ -505,6 +505,7 @@ const About_UsPage = () => {
                 </p>
                 <Button
                   style={{
+                    width:"20%",
                     display: "flex",
                     fontSize: "var(--font-span)",
                     textAlign: "start",

@@ -83,7 +83,7 @@ const SoftSkill = () => {
               fontWeight: "700",
             }}
           >
-            Our Customized Soft Skills Training Workshops
+            Customized Soft Skills Training Workshops
           </span>
           <span
             style={{
@@ -130,6 +130,7 @@ const SoftSkill = () => {
       </Collapse>
       <Button
         style={{
+          width:"10%",
           color: "#fff",
           backgroundColor: "#FF4E00",
           display: "flex",

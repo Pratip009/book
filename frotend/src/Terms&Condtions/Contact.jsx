@@ -313,6 +313,7 @@ const ContactForm = () => {
                       variant="primary"
                       onClick={handleCall}
                       style={{
+                        width:"20%",
                         backgroundColor: "#FF4E00",
                         color: "white",
                         fontFamily: "'Outfit', sans-serif",

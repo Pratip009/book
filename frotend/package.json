@@ -72,7 +72,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=4096 react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -98,6 +98,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "ajv": "^7.2.4",
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "eslint-config-react-app": "^7.0.1",
     "postcss": "^8.4.47",

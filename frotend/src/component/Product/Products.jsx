@@ -519,6 +519,7 @@ function Products() {
                     </Collapse>
                     <Button
                       style={{
+                        width:"10%",
                         color: "#fff",
                         backgroundColor: "#FF4E00",
                         display: "flex",

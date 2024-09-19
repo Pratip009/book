@@ -3,6 +3,18 @@
   font-family: 'Outfit', sans-serif !important;
   color: white !important;
 }
+.mail-icon {
+  font-size: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.textt {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-span);
+}
+
 .navbar-brand{
   display: flex;
   align-items: center;
@@ -85,13 +97,13 @@
 }
 
 .text {
-  font-size: var(--font-span);
+  font-size: var(--font-P);
 font-weight: 500;
   color: white;
 }
 
 .text-two {
-  font-size: var(--font-span);
+  font-size: 12px;
   color: rgb(222, 222, 222);
 }
 
@@ -180,6 +192,11 @@ font-weight: 500;
 
 
 @media (max-width: 576px) {
+  .textt {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-span);
+  }
   .navbar-brand{
     display: flex;
     align-items: center;
@@ -222,6 +239,11 @@ font-weight: 500;
   }
 }
 @media (min-width: 768px) {
+  .textt {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-span);
+  }
   .btn-normal-case {
     
     text-transform: none; 
@@ -254,6 +276,11 @@ font-weight: 500;
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 767px) {
+  .textt {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-span);
+  }
   .custom-input .form-label {
     font-size: 0.65rem; /* Adjust font size for mobile */
     top: -0.5rem; /* Adjust position for mobile */
