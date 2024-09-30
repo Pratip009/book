@@ -349,7 +349,7 @@ function BasicExample() {
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
               >
-                School Management
+                School Management Service
               </Link>
               <Link
                 to="/service"
@@ -362,7 +362,7 @@ function BasicExample() {
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
               >
-                Service
+                School Ettentials
               </Link>
               <Link
                 to="/gallery"
@@ -474,7 +474,7 @@ function BasicExample() {
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
               >
-                School Management
+                School Management Service
               </Link>
               <Link
                 to="/service"
@@ -487,7 +487,7 @@ function BasicExample() {
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
               >
-                Service
+                School Ettentials
               </Link>
               <Link
                 to="/gallery"
