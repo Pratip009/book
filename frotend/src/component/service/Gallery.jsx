@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import imageCompression from "browser-image-compression"; // Import compression library
 import "./Gallery.css"; // Assuming you're using a custom CSS file
 
 const API_URL =
@@ -10,10 +11,11 @@ const API_URL =
 export default function Gallery() {
   const [galleryData, setGalleryData] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true); // Loading state
-  const [loadedImages, setLoadedImages] = useState([]); // State to track loaded images
+  const [loading, setLoading] = useState(true);
+  const [loadedImages, setLoadedImages] = useState([]);
+  const [modalImage, setModalImage] = useState(null); // State for modal image
+  const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
-  // Fetch data in batches to optimize memory
   useEffect(() => {
     const fetchGallery = async () => {
       try {
@@ -27,19 +29,17 @@ export default function Gallery() {
         setError(error);
         console.error("Error fetching gallery data:", error);
       } finally {
-        setLoading(false); // Set loading to false when done
+        setLoading(false);
       }
     };
 
     fetchGallery();
   }, []);
 
-  // Handle errors
   if (error) {
     return <div>Error fetching data: {error.message}</div>;
   }
 
-  // Separate images into two categories based on description
   const schoolImages = galleryData.filter(
     (item) =>
       item.attributes.description &&
@@ -51,45 +51,61 @@ export default function Gallery() {
       item.attributes.description.toLowerCase() !== "school"
   );
 
-  const handleImageLoad = (itemId) => {
-    setLoadedImages((prev) => [...prev, itemId]); // Track which images have loaded
+  const handleImageLoad = async (itemId, imageUrl) => {
+    const compressedImage = await compressImage(imageUrl);
+    setLoadedImages((prev) => [...prev, itemId]);
   };
 
-  const renderImageCard = (item) => (
-    <MDBCol
-      key={item.id}
-      lg={4}
-      md={6}
-      className="gallery-col d-flex justify-content-center align-items-center"
-    >
-      {item.attributes.images &&
-      item.attributes.images.data &&
-      item.attributes.images.data.length > 0 &&
-      item.attributes.images.data[0].attributes.formats ? (
-        <div
-          className={`image-card shadow-sm ${
-            loadedImages.includes(item.id) ? "visible" : ""
-          }`}
-        >
-          <LazyLoadImage
-            src={getOptimalImageUrl(item)} // Dynamically choose the image size
-            placeholderSrc={getPlaceholderImageUrl(item)} // Use a small placeholder for initial load
-            alt={item.attributes.description || "Image"}
-            effect="blur"
-            className="img-fluid rounded gallery-img"
-            afterLoad={() => handleImageLoad(item.id)} // Call the function after the image has loaded
-          />
-          <div className="image-overlay">
-            <span className="image-text">
-              {item.attributes.description || "Image Description"}
-            </span>
+  const handleOpenModal = (imageUrl) => {
+    setModalImage(imageUrl);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setModalImage(null); // Clear modal image on close
+  };
+
+  const renderImageCard = (item) => {
+    const imageUrl = getOptimalImageUrl(item);
+
+    return (
+      <MDBCol
+        key={item.id}
+        lg={4}
+        md={6}
+        className="gallery-col d-flex justify-content-center align-items-center"
+      >
+        {item.attributes.images &&
+        item.attributes.images.data &&
+        item.attributes.images.data.length > 0 &&
+        item.attributes.images.data[0].attributes.formats ? (
+          <div
+            className={`image-card shadow-sm ${
+              loadedImages.includes(item.id) ? "visible" : ""
+            }`}
+          >
+            <LazyLoadImage
+              src={imageUrl}
+              placeholderSrc={getPlaceholderImageUrl(item)}
+              alt={item.attributes.description || "Image"}
+              effect="blur"
+              className="img-fluid rounded gallery-img square-img"
+              afterLoad={() => handleImageLoad(item.id, imageUrl)}
+              onClick={() => handleOpenModal(imageUrl)} // Open modal on click
+            />
+            <div className="image-overlay">
+              <span className="image-text">
+                {item.attributes.description || "Image Description"}
+              </span>
+            </div>
           </div>
-        </div>
-      ) : (
-        <span>No gallery image uploaded</span>
-      )}
-    </MDBCol>
-  );
+        ) : (
+          <span>No gallery image uploaded</span>
+        )}
+      </MDBCol>
+    );
+  };
 
   return (
     <MDBContainer fluid className="gallery-container">
@@ -105,39 +121,15 @@ export default function Gallery() {
         </h1>
       </div>
 
-      {/* Loader */}
       {loading ? (
         <div className="text-center my-4">
-          <p>Loading images...</p>{" "}
-          {/* You can replace this with a spinner if you have one */}
+          <p>Loading images...</p>
         </div>
       ) : (
         <>
           {/* Section for School */}
           <section>
-            <div className="text-center my-4">
-              <h2
-                style={{
-                  fontSize: "var(--font-h3)",
-                  marginTop: "2rem",
-                  fontFamily: "'Outfit', sans-serif",
-                }}
-              >
-                <span className="highlight">School Management Service Gallery</span>
-              </h2>
-            </div>
-            <MDBRow className="g-4 px-2 px-lg-5 mt-4">
-              {schoolImages.length > 0 ? (
-                schoolImages.map(renderImageCard)
-              ) : (
-                <div>No school images available</div>
-              )}
-            </MDBRow>
-          </section>
-
-          {/* Section for Training */}
-          <section>
-          <div className="text-center my-4 mt-4">
+            <div className="text-center my-4 mt-4">
               <h2
                 style={{
                   fontSize: "var(--font-h3)",
@@ -156,7 +148,47 @@ export default function Gallery() {
               )}
             </MDBRow>
           </section>
+          <section>
+            <div className="text-center my-4">
+              <h2
+                style={{
+                  fontSize: "var(--font-h3)",
+                  marginTop: "2rem",
+                  fontFamily: "'Outfit', sans-serif",
+                }}
+              >
+                <span className="highlight">
+                  School Management Service Gallery
+                </span>
+              </h2>
+            </div>
+            <MDBRow className="g-4 px-2 px-lg-5 mt-4">
+              {schoolImages.length > 0 ? (
+                schoolImages.map(renderImageCard)
+              ) : (
+                <div>No school images available</div>
+              )}
+            </MDBRow>
+          </section>
+
+          {/* Section for Training */}
         </>
+      )}
+
+      {/* Modal for displaying the full image */}
+      {showModal && (
+        <div className="modal" onClick={handleCloseModal}>
+          <div className="modal-content">
+            <span className="close-button" onClick={handleCloseModal}>
+              &times;
+            </span>
+            {modalImage && (
+              <img src={modalImage} alt="Modal" className="modal-image" />
+            )}
+          </div>
+          <div className="modal-background" onClick={handleCloseModal}></div>{" "}
+          {/* Background for blur effect */}
+        </div>
       )}
     </MDBContainer>
   );
@@ -165,14 +197,33 @@ export default function Gallery() {
 // Function to choose optimal image size based on screen width
 const getOptimalImageUrl = (item) => {
   const formats = item.attributes.images.data[0].attributes.formats;
-
-  // Load smaller images for mobile, larger images for desktop
   if (window.innerWidth <= 768) {
-    return formats.thumbnail.url; // Load thumbnail for mobile
+    return formats.thumbnail.url;
   } else if (window.innerWidth <= 1024) {
-    return formats.small.url; // Load small version for tablets
+    return formats.small.url;
   } else {
-    return formats.medium.url; // Load medium version for desktops
+    return formats.medium.url;
+  }
+};
+
+// Function to compress images
+const compressImage = async (imageUrl) => {
+  const response = await fetch(imageUrl);
+  const blob = await response.blob(); // Fetch the image as a Blob
+
+  const options = {
+    maxSizeMB: 0.02, // Maximum size in MB (20 KB)
+    maxWidthOrHeight: 1920, // Maximum width or height
+    useWebWorker: true,
+  };
+
+  try {
+    const compressedBlob = await imageCompression(blob, options); // Compress the image
+    const compressedImageUrl = URL.createObjectURL(compressedBlob); // Create a URL for the compressed image
+    return compressedImageUrl; // Return the compressed image URL
+  } catch (error) {
+    console.error("Image compression failed:", error);
+    return imageUrl; // Return the original image URL if compression fails
   }
 };
 

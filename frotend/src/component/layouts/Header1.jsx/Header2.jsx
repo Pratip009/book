@@ -362,7 +362,7 @@ function BasicExample() {
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
               >
-                School Ettentials
+                School Essentials
               </Link>
               <Link
                 to="/gallery"
@@ -487,7 +487,7 @@ function BasicExample() {
                   (e.currentTarget.style.color = navLinkStyle.color)
                 }
               >
-                School Ettentials
+                School Essentials
               </Link>
               <Link
                 to="/gallery"
