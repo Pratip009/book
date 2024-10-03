@@ -18,8 +18,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white; /* Overlay text color */
+/* Semi-transparent background */
+
   padding: 10px;
   text-align: center;
 }
@@ -68,4 +68,34 @@
 
   font-size: 40px; /* Size of close button */
   cursor: pointer; /* Pointer cursor for close button */
+}
+/* General mobile adjustments */
+@media (max-width: 768px) {
+  .gallery-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio on mobile */
+  }
+
+  .image-card {
+    width: 100%; /* Full width on mobile */
+    aspect-ratio: unset; /* Remove fixed aspect ratio for mobile */
+  }
+
+  .modal-content {
+    width: 100%;
+    height: auto;
+    max-width: 90%; /* Limit max width for mobile */
+  }
+
+  .modal-image {
+    width: 100%;
+    max-height: 80vh; /* Restrict modal height */
+  }
+}
+
+/* For extra-small screens like mobile (up to 480px) */
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 0 15px;
+  }
 }

@@ -52,10 +52,13 @@
   padding: 12px 32px; /* Replace with actual padding values */
   border: 1px solid transparent; /* Transparent border by default */
   transition: border 0.3s ease-in-out;
+  text-decoration: none;
 }
+
 
 .product-button:hover {
   border: 1px solid #fff;
+  text-decoration: none;
 }
 
 /* Media queries for responsiveness */

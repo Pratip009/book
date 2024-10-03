@@ -67,7 +67,7 @@ function BasicExample() {
           fontFamily: "'Outfit', sans-serif",
         }}
       >
-        <Container fluid>
+        <Container>
           <Navbar.Collapse
             id="basic-navbar-nav"
             className="d-flex justify-content-between align-items-center"
@@ -245,7 +245,7 @@ function BasicExample() {
         expand="lg"
         style={{ padding: 0 }}
       >
-        <Container fluid>
+        <Container>
           <Link to="/" style={{ textDecoration: "none" }}>
             <Navbar.Brand className="mx-auto my-auto">
               <img

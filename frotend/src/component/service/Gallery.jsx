@@ -94,11 +94,11 @@ export default function Gallery() {
               afterLoad={() => handleImageLoad(item.id, imageUrl)}
               onClick={() => handleOpenModal(imageUrl)} // Open modal on click
             />
-            <div className="image-overlay">
+            {/* <div className="image-overlay">
               <span className="image-text">
                 {item.attributes.description || "Image Description"}
               </span>
-            </div>
+            </div> */}
           </div>
         ) : (
           <span>No gallery image uploaded</span>

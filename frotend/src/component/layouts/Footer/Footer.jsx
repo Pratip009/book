@@ -31,18 +31,12 @@ export default function Footer() {
         <section className="d-flex justify-content-center justify-content-lg-between p-4 social-networks"></section>
 
         <section className="d-flex justify-content-center justify-content-lg-between p-4">
-          <MDBContainer fluid className="text-center text-md-center mt-1 p-0">
+          <MDBContainer className="text-center text-md-center mt-1 p-0">
             <MDBRow className="mt-3 p-0">
               <MDBCol md="4" lg="4" xl="4" xs="4" className="mt-1 p-2">
                 <MDBContainer className="m-0 p-0">
                   <MDBNavbarBrand href="/" className="footer_logo">
-                    <img
-                      src={logo}
-                      width={200}
-                      alt="Logo"
-                      loading="lazy"
-                      
-                    />
+                    <img src={logo} width={200} alt="Logo" loading="lazy" />
                   </MDBNavbarBrand>
                   <MDBRow>
                     <MDBCol md="6" xs="12" className="box-col">
@@ -226,12 +220,15 @@ export default function Footer() {
                 <h6 className="mb-4" style={{ fontSize: "var(--font-p)" }}>
                   Newsletter
                 </h6>
-                <MDBInput
-                  contrast
-                  type="email"
-                  label="Email address"
-                  className="mb-4"
-                />
+                <div className="custom-input-wrapper">
+                  <input
+                    type="email"
+                    className="form-control custom-input-field"
+                    placeholder=" "
+                    required
+                  />
+                  <label className="custom-floating-label">Email address</label>
+                </div>
                 <p className="textt">
                   By submitting your email address you agree to the Terms &
                   Conditions
@@ -247,7 +244,10 @@ export default function Footer() {
               </MDBCol>
             </MDBRow>
             <MDBRow className="d-flex justify-content-center align-items-center">
-              <MDBCol md="auto" className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center">
+              <MDBCol
+                md="auto"
+                className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center"
+              >
                 <span className="textt">
                   Get connected with us on social networks:
                 </span>
@@ -276,7 +276,7 @@ export default function Footer() {
                 className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center"
               >
                 <span className="textt d-flex align-items-center">
-                  <IoIosMail className="mail-icon"/>
+                  <IoIosMail className="mail-icon" />
                   <span>Email:</span>
                 </span>
                 <a
@@ -292,7 +292,7 @@ export default function Footer() {
                 className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center"
               >
                 <span className="textt d-flex align-items-center">
-                  <FaPhone className="mail-icon"/>
+                  <FaPhone className="mail-icon" />
                   <span>Contact:</span>
                 </span>
                 <a href="tel:8240554890" className="ms-2 text-reset">

@@ -7,13 +7,13 @@ export default function Wellcome2() {
   const isXs = useMediaQuery({ maxWidth: 576 });
   return (
     <div>
-      <Container fluid>
+      <Container fluid style={{background: "linear-gradient(120deg, #FF4E00, #FFB99BFF)",}}>
         <h3
           className="app_heading1"
           style={{
             fontFamily: "'Outfit', sans-serif",
-
-            color: "#FF4E00",
+            padding: isXs ? "0.5rem" : "1rem",
+            color: "#FFFFFFFF",
             fontSize:'var(--font-h3)',
           }}
         >

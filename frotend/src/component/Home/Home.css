@@ -300,7 +300,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   max-width: 100%;
   margin-top: 2rem;
 }

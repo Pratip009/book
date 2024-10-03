@@ -175,35 +175,38 @@ box-shadow: rgb(255, 255, 255) !important;
   background-color: rgb(255, 255, 255);
   list-style: none;
   border: 1px solid rgba(0, 0, 0, 0.178);
-  padding: 1vmax 1.5vmax;
+ padding: 1rem;
   transition: all 0.3s;
   cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .page-item:first-child {
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .page-item:last-child {
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px 5px 5px 5px;
 }
 .page-link {
   text-decoration: none;
-  font: 300 .9vmax "Roboto";
+  font: 300 .9vmax "Outfit";
   color: rgb(2, 2, 2);
   transition: all 0.3s;
+  background-color: transparent !important;
+  border: none;
 }
 
 .page-item:hover {
-  background-color: #414141;
+  background-color: #FF4E00;
 }
 
 .page-item:hover .page-link {
-  color: rgb(234, 10, 10);
+  color: rgb(255, 255, 255);
 }
 
 .pageItemActive {
-  background-color: #ed1c24;
+  background-color: #FF4E00;
 }
 
 .pageLinkActive {
@@ -368,7 +371,7 @@ box-shadow: rgb(255, 255, 255) !important;
 
 
 .paginationContainer {
-  padding: 0 15px; /* Add horizontal padding to prevent overflow */
+  padding: 0 5px; /* Add horizontal padding to prevent overflow */
 }
 
 .pagination {
@@ -382,7 +385,7 @@ box-shadow: rgb(255, 255, 255) !important;
 }
 
 .page-link {
-  padding: 0.5rem 0.75rem; /* Adjust padding for better spacing */
+  padding: 0 ; /* Adjust padding for better spacing */
 }
 
 @media (max-width: 576px) { /* xs breakpoint */
@@ -400,12 +403,12 @@ box-shadow: rgb(255, 255, 255) !important;
   }
 }
 .pageItemActive {
-  background-color: rgb(255, 255, 255); /* Set background color to black */
-  border-color: rgb(255, 255, 255); /* Ensure the border color matches */
+  background-color: #FF4E00; /* Set background color to black */
+  border-color: #FF4E00; /* Ensure the border color matches */
 }
 
 .pageLinkActive {
-  color: white; /* Set the text color to white for contrast */
+  color: #ffffff; /* Set the text color to white for contrast */
 }
 
 .circle_text h1 {
