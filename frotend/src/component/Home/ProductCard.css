@@ -1,139 +1,121 @@
-/* Apply Outfit font-family globally or specifically where needed */
-body, h5, p, button {
-    font-family: 'Outfit', sans-serif;
-}
-
+/* General Product Card Styling */
 .product-card {
-    display: flex;
-    border: 1px solid rgb(227, 227, 227);
-    flex-direction: column;
-    height: 100%;
-    /* Ensures all cards are the same height */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15); /* Base 3D shadow effect */
-    border-radius: 12px; /* Rounded corners for the card */
-    font-family: 'Outfit', sans-serif; /* Font family for card content */
-    background-color: #ffffff; /* Light gray background color for the card */
-    overflow: hidden; /* Ensure content does not overflow */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
-}
-
-.product-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
-    transform: translateY(-1px); /* Slightly lift the card on hover for a modern effect */
-}
-
-.bg-image {
-    position: relative;
-    overflow: hidden; /* Ensures image does not overflow */
-    height: 200px; /* Default height for image container */
-}
-
-.card-img-top {
-    width: 100%;
-    height: 100%; /* Fill the container */
-    object-fit: cover; /* Ensures image covers the area without distortion */
-}
-
-.price-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem; /* Add space below price section */
-}
-
-.old-price {
-    background-color: #ff4e4e; /* Red background for old price */
-    color: white;
-    padding: 2px 10px;
-    border-radius: 50px;
-    text-decoration: line-through;
-    font-weight: normal;
-}
-
-.discount-price {
-    background-color: #28a745; /* Green background for discounted price */
-    color: white;
-    padding: 2px 10px;
-    border-radius: 50px;
-    font-weight: normal;
-}
-
-.product-card .card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: .2rem;
-    /* Ensures the card's content does not overflow */
-}
-
-.product-card .card-body p {
-    margin-bottom: .2rem; /* Space between description and price */
-}
-
-.mt-auto {
-    margin-top: auto; /* Pushes the button to the bottom of the card */
-}
-
-/* Button Styling */
-button {
-    margin-top: 1rem; /* Adjust space above the button as needed */
-    width: 100%; /* Make button full width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #007bff; /* Blue background color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
+    border: 1px solid #f5f5f5;
+    min-height: 300px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card .card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
     font-weight: bold;
+    color: #333;
+    text-align: center; /* Center the title */
+  }
+  
+  .product-card .description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px; /* Add a font size for the description */
+    color: #555; /* Optional: Change the color of the description */
+    text-align: center; /* Center the description */
+    margin: 10px 0; /* Add some margin for spacing */
+  }
+  
+  .product-card .price-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Align items with space between */
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    margin-top: auto; /* Push price section to the bottom */
+  }
+  
+  .product-card .old-price {
+    background-color: #e22323;
+    padding: 2px 15px;
+    border-radius: 5px;
+    text-decoration: line-through;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .product-card .discount-price {
+    background-color: #0abf34;
+    padding: 2px 15px;
+    border-radius: 5px;
+
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  
+  .icon-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4e00 !important;
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    font-family: 'Outfit', sans-serif; /* Font family for button text */
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-button .icon {
-    margin-right: 8px; /* Space between icon and text */
-}
-
-/* Media Queries for Responsive Design */
-
-/* Mobile view */
-@media (max-width: 767px) {
-    .product-card {
-        margin: 10px; /* Space between cards */
+    font-size: 35px;
+  }
+  
+  .icon-cart:hover {
+    background-color: #e03b00;
+  }
+  
+  /* Grid Layout for Product Cards */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in a row for desktop */
+    gap: 16px;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 1024px) {
+    /* For tablet and smaller screens */
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
     }
-
-    .product-card-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-        gap: 10px; /* Space between grid items */
+  }
+  
+  @media (max-width: 768px) {
+    /* For smaller devices */
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
     }
-
-    .bg-image {
-        height: 150px; /* Reduced height for image container on mobile */
+  }
+  
+  @media (max-width: 480px) {
+    /* For mobile devices */
+    .products-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 card in a row */
     }
-}
+  }
 
-/* Tablet view */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .product-card-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-        gap: 15px; /* Space between grid items */
-    }
-}
-
-/* Desktop view */
-@media (min-width: 1025px) {
-    .product-card-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-        gap: 20px; /* Space between grid items */
-    }
-}
+  /* Image Styling */
+  .product-card .card-img-top {
+    width: 100%;
+    height: auto; /* Allows the image to maintain its aspect ratio */
+    max-height: 150px; /* Maintain max height */
+    object-fit: contain; /* Ensure the entire image fits */
+    object-position: center;
+   
+  }
+  
+  /* Ensure proper layout for card body */
+  .product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items from the top */
+    padding: 16px; /* Added padding for better spacing */
+    align-items: center; /* Center items horizontally */
+  }
+  

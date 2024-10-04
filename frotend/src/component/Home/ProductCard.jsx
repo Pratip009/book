@@ -6,7 +6,6 @@ import {
   MDBCard,
   MDBCardBody,
   MDBCardImage,
-  MDBRipple,
 } from "mdb-react-ui-kit";
 import { Rating, Typography } from "@mui/material";
 import { addItemToCart } from "../../actions/cartAction";
@@ -61,47 +60,42 @@ function ProductCard({ product }) {
   };
 
   return (
-    <MDBCard className="product-card">
-      <MDBRipple
-        rippleColor="light"
-        rippleTag="div"
-        className="bg-image rounded hover-zoom"
-      >
-        <MDBCardImage
-          src={imageUrl}
-          fluid
-          className="card-img-top"
-          style={{
-            width: "100%",          /* Full width */
-            maxHeight:"150px",          /* Auto height to maintain aspect ratio */
-            objectFit: "contain",    /* Ensure the entire image is visible */
-            objectPosition: "center",/* Center the image within its container */
-          }}
-        />
-        <a href={`/product/${product._id}`}>
-          <div className="mask">
-            <div className="d-flex justify-content-start align-items-end h-100">
-              <h5>
-                <span className="badge bg-primary ms-2">New</span>
-                {product.isEco && (
-                  <span className="badge bg-success ms-2">Eco</span>
-                )}
-                {product.discount > 0 && (
-                  <span className="badge bg-danger ms-2">
-                    -{product.discount}%
-                  </span>
-                )}
-              </h5>
-            </div>
-          </div>
-        </a>
-      </MDBRipple>
-      <MDBCardBody className="d-flex flex-column">
+    <MDBCard className="product-card position-relative"> {/* Added position-relative to parent card */}
+      <MDBCardImage
+        src={imageUrl}
+        fluid
+        className="card-img-top"
+        style={{
+          width: "100%",
+          maxHeight: "150px",
+          objectFit: "contain",
+          objectPosition: "center",
+        }}
+      />
+      {/* Cart Icon on the top-right corner of the image */}
+      <FaShoppingCart
+        className="icon-cart"
+        onClick={() => addToCartHandler(product._id, 1)}
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+          backgroundColor: '#ff4e00',
+          fontSize: "35px",
+          cursor: "pointer",
+          color: "#FFFFFFFF",
+          background: "#fff",
+          padding: "8px",
+          borderRadius: "50%",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        }}
+      />
+      <MDBCardBody className="d-flex flex-column body">
         <a href={`/product/${product._id}`} className="text-reset">
           <h5 className="card-title mb-1">{product.name}</h5>
         </a>
-        {/* Rating and Reviews Section */}
-        <div className="d-flex align-items-center mb-1">
+        <p className="d-flex align-items-center mb-1">{truncatedDescription}</p>
+        <div className="d-flex align-items-center mb-2">
           <Rating
             name="rating"
             value={product.ratings}
@@ -118,20 +112,10 @@ function ProductCard({ product }) {
             ({product.numOfReviews})
           </Typography>
         </div>
-        <p>{truncatedDescription}</p>{" "}
         {/* Display the truncated description here */}
-        <div className="price-section mb-1">
+        <div className="price-section">
           <span className="old-price">{oldPrice}</span>
           <span className="discount-price">{discountPrice}</span>
-        </div>
-        <div className="mt-1">
-          <button
-            className="btn btn-primary"
-            onClick={() => addToCartHandler(product._id, 1)}
-            style={{display:"flex" , alignItems:"center",justifyContent:"space-between"}}
-          >
-            <FaShoppingCart className="icon" /> Add to Cart
-          </button>
         </div>
       </MDBCardBody>
     </MDBCard>
