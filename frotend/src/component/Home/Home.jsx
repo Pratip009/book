@@ -312,6 +312,7 @@ function Home() {
                 </Col>
               </Row>
               <Container className="trending-products">
+                {products && console.log(products)}
                 {products &&
                   products.map((product) => (
                     <ProductCard key={product._id} product={product} />

@@ -305,13 +305,13 @@ p {
 }
 
 .trending-products .product-card {
-  margin: 15px; /* Add margin to each product card */
-  flex: 0 1 calc(25% - 10px); /* 4 cards per row with margin adjustment */
+  margin: 10px; /* Reduce margin slightly */
+  flex: 0 1 calc(25% - 20px); /* 4 cards per row with 20px total margin adjustment */
 }
 
 @media (max-width: 768px) {
   .trending-products .product-card {
-    flex: 0 1 calc(50% - 10px); /* 2 cards per row on mobile */
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row on mobile with 20px total margin */
   }
 }
 
@@ -320,6 +320,7 @@ p {
     flex: 0 1 100%; /* 1 card per row on small screens */
   }
 }
+
 
 
 /* Inner Goal Styles */

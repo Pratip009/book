@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-} from "mdb-react-ui-kit";
+import { MDBCard, MDBCardBody, MDBCardImage } from "mdb-react-ui-kit";
 import { Rating, Typography } from "@mui/material";
 import { addItemToCart } from "../../actions/cartAction";
 import placeholderImage from "../../Image/pdf.png";
@@ -52,15 +48,19 @@ function ProductCard({ product }) {
   discountPrice = dispalyMoney(discountPrice);
   const oldPrice = dispalyMoney(product.price);
 
-  const truncatedDescription =
-    product.description.split(" ").slice(0, 6).join(" ") + "...";
+  const truncatedDescription = product.description
+    .split(" ")
+    .slice(0, 6)
+    .join(" ");
 
   const addToCartHandler = (id, qty) => {
     dispatch(addItemToCart(id, qty));
   };
 
   return (
-    <MDBCard className="product-card position-relative"> {/* Added position-relative to parent card */}
+    <MDBCard className="product-card position-relative">
+      {" "}
+      {/* Added position-relative to parent card */}
       <MDBCardImage
         src={imageUrl}
         fluid
@@ -80,7 +80,7 @@ function ProductCard({ product }) {
           position: "absolute",
           top: "10px",
           right: "10px",
-          backgroundColor: '#ff4e00',
+          backgroundColor: "#ff4e00",
           fontSize: "35px",
           cursor: "pointer",
           color: "#FFFFFFFF",
@@ -94,7 +94,12 @@ function ProductCard({ product }) {
         <a href={`/product/${product._id}`} className="text-reset">
           <h5 className="card-title mb-1">{product.name}</h5>
         </a>
-        <p className="d-flex align-items-center mb-1">{truncatedDescription}</p>
+        <p
+          className="d-flex align-items-center mb-1"
+          style={{ fontFamily: "'Outfit', sans-serif" }}
+        >
+          {truncatedDescription}
+        </p>
         <div className="d-flex align-items-center mb-2">
           <Rating
             name="rating"
@@ -103,7 +108,7 @@ function ProductCard({ product }) {
             readOnly
             size="small"
             style={{
-              color: "#ed1c24",
+              color: "#ED6C1CFF",
               marginRight: 8,
               fontWeight: "400",
             }}
@@ -112,6 +117,7 @@ function ProductCard({ product }) {
             ({product.numOfReviews})
           </Typography>
         </div>
+
         {/* Display the truncated description here */}
         <div className="price-section">
           <span className="old-price">{oldPrice}</span>

@@ -5,57 +5,56 @@
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-  }
-  
-  .product-card:hover {
+}
+
+.product-card:hover {
     transform: translateY(-5px);
-  }
-  
-  .product-card .card-title {
+}
+
+.product-card .card-title {
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #333;
     text-align: center; /* Center the title */
-  }
-  
-  .product-card .description {
+}
+
+.product-card .description {
     font-family: 'Outfit', sans-serif;
     font-size: 16px; /* Add a font size for the description */
     color: #555; /* Optional: Change the color of the description */
     text-align: center; /* Center the description */
     margin: 10px 0; /* Add some margin for spacing */
-  }
-  
-  .product-card .price-section {
+}
+
+.product-card .price-section {
     width: 100%;
     display: flex;
     justify-content: space-between; /* Align items with space between */
     align-items: center;
     font-family: 'Outfit', sans-serif;
     margin-top: auto; /* Push price section to the bottom */
-  }
-  
-  .product-card .old-price {
+}
+
+.product-card .old-price {
     background-color: #e22323;
     padding: 2px 15px;
     border-radius: 5px;
     text-decoration: line-through;
     color: #ffffff;
     font-size: 16px;
-  }
-  
-  .product-card .discount-price {
+}
+
+.product-card .discount-price {
     background-color: #0abf34;
     padding: 2px 15px;
     border-radius: 5px;
-
     color: #ffffff;
     font-weight: normal;
     font-size: 16px;
-  }
-  
-  .icon-cart {
+}
+
+.icon-cart {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -65,57 +64,55 @@
     border-radius: 50%;
     cursor: pointer;
     font-size: 35px;
-  }
-  
-  .icon-cart:hover {
+}
+
+.icon-cart:hover {
     background-color: #e03b00;
-  }
-  
-  /* Grid Layout for Product Cards */
-  .products-grid {
+}
+
+/* Grid Layout for Product Cards */
+.products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 cards in a row for desktop */
     gap: 16px;
     margin: 20px 0;
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     /* For tablet and smaller screens */
     .products-grid {
-      grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+        grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
     }
-  }
-  
-  @media (max-width: 768px) {
-    /* For smaller devices */
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    /* For mobile devices */
-    .products-grid {
-      grid-template-columns: repeat(1, 1fr); /* 1 card in a row */
-    }
-  }
+}
 
-  /* Image Styling */
-  .product-card .card-img-top {
+@media (max-width: 768px) {
+    /* For devices with width between 481px and 768px */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile devices with width less than 480px */
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 card in a row */
+    }
+}
+
+/* Image Styling */
+.product-card .card-img-top {
     width: 100%;
     height: auto; /* Allows the image to maintain its aspect ratio */
     max-height: 150px; /* Maintain max height */
     object-fit: contain; /* Ensure the entire image fits */
     object-position: center;
-   
-  }
-  
-  /* Ensure proper layout for card body */
-  .product-card .card-body {
+}
+
+/* Ensure proper layout for card body */
+.product-card .card-body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align items from the top */
     padding: 16px; /* Added padding for better spacing */
     align-items: center; /* Center items horizontally */
-  }
-  
+}

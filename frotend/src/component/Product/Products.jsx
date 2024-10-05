@@ -189,13 +189,17 @@ function Products() {
                       </span>
 
                       <div className="circle_text">
-                        <h1  style={{
-                          textAlign: "center",
-                          fontSize: "var(--font-h2)",
-                          marginTop: "2rem",
-                        }}>
+                        <h1
+                          style={{
+                            textAlign: "center",
+                            fontSize: "var(--font-h2)",
+                            marginTop: "2rem",
+                          }}
+                        >
                           {" "}
-                          <span className="highlight">Benefits of Reading Books</span>{" "}
+                          <span className="highlight">
+                            Benefits of Reading Books
+                          </span>{" "}
                         </h1>
                       </div>
                       <span
@@ -519,7 +523,7 @@ function Products() {
                     </Collapse>
                     <Button
                       style={{
-                        width:"10%",
+                        width: "10%",
                         color: "#fff",
                         backgroundColor: "#FF4E00",
                         display: "flex",
@@ -692,6 +696,8 @@ function Products() {
 
                     <Col md={9} sm={12} xs={12}>
                       <Row className="justify-content-center">
+                        {products &&
+                          console.log("Number of products:", products.length)}
                         {products &&
                           products.map((product) => (
                             <Col
