@@ -253,19 +253,44 @@ export default function Footer() {
                 </span>
               </MDBCol>
               <MDBCol md="auto" className="text-center">
-                <a href="/" className="me-4 text-reset">
+                <a
+                  href="https://www.facebook.com"
+                  className="me-4 text-reset"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaFacebook />
                 </a>
-                <a href="/" className="me-4 text-reset">
+                <a
+                  href="https://twitter.com"
+                  className="me-4 text-reset"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaXTwitter />
                 </a>
-                <a href="/" className="me-4 text-reset">
+                <a
+                  href="https://www.instagram.com"
+                  className="me-4 text-reset"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaInstagram />
                 </a>
-                <a href="/" className="me-4 text-reset">
+                <a
+                  href="https://wa.me/8240554890"
+                  className="me-4 text-reset"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IoLogoWhatsapp />
                 </a>
-                <a href="/" className="me-4 text-reset">
+                <a
+                  href="https://www.youtube.com"
+                  className="me-4 text-reset"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaYoutube />
                 </a>
               </MDBCol>

@@ -12,7 +12,7 @@ import {
 } from "../DisplayMoney/DisplayMoney";
 import "./ProductCard.css";
 import { FaShoppingCart } from "react-icons/fa"; // FontAwesome shopping cart icon
-
+import { Link } from "react-router-dom";
 function ProductCard({ product }) {
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -59,71 +59,77 @@ function ProductCard({ product }) {
 
   return (
     <MDBCard className="product-card position-relative">
-      {" "}
-      {/* Added position-relative to parent card */}
-      <MDBCardImage
-        src={imageUrl}
-        fluid
-        className="card-img-top"
-        style={{
-          width: "100%",
-          maxHeight: "150px",
-          objectFit: "contain",
-          objectPosition: "center",
-        }}
-      />
-      {/* Cart Icon on the top-right corner of the image */}
-      <FaShoppingCart
-        className="icon-cart"
-        onClick={() => addToCartHandler(product._id, 1)}
-        style={{
-          position: "absolute",
-          top: "10px",
-          right: "10px",
-          backgroundColor: "#ff4e00",
-          fontSize: "35px",
-          cursor: "pointer",
-          color: "#FFFFFFFF",
-          background: "#fff",
-          padding: "8px",
-          borderRadius: "50%",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        }}
-      />
-      <MDBCardBody className="d-flex flex-column body">
-        <a href={`/product/${product._id}`} className="text-reset">
-          <h5 className="card-title mb-1">{product.name}</h5>
-        </a>
-        <p
-          className="d-flex align-items-center mb-1"
-          style={{ fontFamily: "'Outfit', sans-serif" }}
-        >
-          {truncatedDescription}
-        </p>
-        <div className="d-flex align-items-center mb-2">
-          <Rating
-            name="rating"
-            value={product.ratings}
-            precision={0.1}
-            readOnly
-            size="small"
-            style={{
-              color: "#ED6C1CFF",
-              marginRight: 8,
-              fontWeight: "400",
-            }}
-          />
-          <Typography variant="body2" color="textSecondary">
-            ({product.numOfReviews})
-          </Typography>
-        </div>
+      <Link
+        className="productCard"
+        to={`/product/${product._id}`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        {" "}
+        {/* Added position-relative to parent card */}
+        <MDBCardImage
+          src={imageUrl}
+          fluid
+          className="card-img-top"
+          style={{
+            width: "100%",
+            maxHeight: "150px",
+            objectFit: "contain",
+            objectPosition: "center",
+          }}
+        />
+        {/* Cart Icon on the top-right corner of the image */}
+        <FaShoppingCart
+          className="icon-cart"
+          onClick={() => addToCartHandler(product._id, 1)}
+          style={{
+            position: "absolute",
+            top: "10px",
+            right: "10px",
+            backgroundColor: "#ff4e00",
+            fontSize: "35px",
+            cursor: "pointer",
+            color: "#FFFFFFFF",
+            background: "#fff",
+            padding: "8px",
+            borderRadius: "50%",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          }}
+        />
+        <MDBCardBody className="d-flex flex-column body">
+          <a href={`/product/${product._id}`} className="text-reset">
+            <h5 className="card-title mb-1">{product.name}</h5>
+          </a>
+          <p
+            className="d-flex align-items-center mb-1"
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+          >
+            {truncatedDescription}
+          </p>
+          <div className="d-flex align-items-center mb-2">
+            <Rating
+              name="rating"
+              value={product.ratings}
+              precision={0.1}
+              readOnly
+              size="small"
+              style={{
+                color: "#ED6C1CFF",
+                marginRight: 8,
+                fontWeight: "400",
+              }}
+            />
+            <Typography variant="body2" color="textSecondary">
+              ({product.numOfReviews})
+            </Typography>
+          </div>
 
-        {/* Display the truncated description here */}
-        <div className="price-section">
-          <span className="old-price">{oldPrice}</span>
-          <span className="discount-price">{discountPrice}</span>
-        </div>
-      </MDBCardBody>
+          {/* Display the truncated description here */}
+          <div className="price-section">
+            <span className="old-price">{oldPrice}</span>
+            <span className="discount-price">{discountPrice}</span>
+          </div>
+        </MDBCardBody>
+      </Link>
     </MDBCard>
   );
 }

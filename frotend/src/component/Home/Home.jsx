@@ -30,7 +30,6 @@ import HailIcon from "@mui/icons-material/Hail";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
 import Welcome from "./Welcome";
-import { Link } from "react-router-dom";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Wellcome2 from "./Wellcome2";
@@ -41,8 +40,10 @@ import Col from "react-bootstrap/Col";
 import "./Home.css";
 
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 function Home() {
+  
   const isMobile = useMediaQuery("(max-width: 600px)");
   const [notices, setNotices] = useState([]);
   const alert = useAlert();
@@ -51,6 +52,7 @@ function Home() {
   const [task, setTask] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchNotices = async () => {
       try {
         const response = await fetch(
@@ -197,14 +199,21 @@ function Home() {
                             >
                               School Management Service
                             </Typography>
-                            <Link to="/school">
+                            <Link
+                              to="/school"
+                              onClick={() =>
+                                console.log(
+                                  "Link clicked: Navigating to /school"
+                                )
+                              }
+                            >
                               <IconButton
                                 disableRipple={true}
                                 style={{
                                   color: "white",
                                   width: isMobile ? "25px" : "40px",
                                   height: isMobile ? "25px" : "40px",
-                                  marginTop: "10px", // Add margin to separate icon button from text
+                                  marginTop: "10px",
                                 }}
                               >
                                 <ArrowForwardIcon
@@ -312,7 +321,7 @@ function Home() {
                 </Col>
               </Row>
               <Container className="trending-products">
-                {products && console.log(products)}
+                
                 {products &&
                   products.map((product) => (
                     <ProductCard key={product._id} product={product} />

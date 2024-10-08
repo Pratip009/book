@@ -14,7 +14,7 @@ import Loader from "../layouts/loader/Loader";
 import { getAllUsers, clearErrors, deleteUser } from "../../actions/userAction";
 import { DELETE_USER_RESET } from "../../constants/userConstanat";
 import { useHistory } from "react-router-dom";
-import ChatIcon from '@mui/icons-material/Chat';
+import ChatIcon from "@mui/icons-material/Chat";
 
 function UserList() {
   const dispatch = useDispatch();
@@ -93,12 +93,10 @@ function UserList() {
       renderCell: (params) => {
         return (
           <>
-          
-
             <Link to={`/admin/user/${params.getValue(params.id, "id")}`}>
               <EditIcon className="icon-" />
             </Link>
-            
+
             <Button
               onClick={() =>
                 deleteUserHandler(params.getValue(params.id, "id"))

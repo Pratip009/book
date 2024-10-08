@@ -177,7 +177,7 @@ const ProductDetails = () => {
                       </div>
                     </div>
 
-                    <div className="seprator2"></div>
+                   
 
                     <div className="productDescription">
                       <div className="productDiscriptiopn_text">
@@ -196,7 +196,7 @@ const ProductDetails = () => {
                         We deliver! Just say when and how.
                       </div>
                     </div>
-                    <div className="seprator2"></div>
+                    
 
                     <div className="prod_details_additem">
                       <h5>QTY :</h5>

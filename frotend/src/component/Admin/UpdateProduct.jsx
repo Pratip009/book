@@ -79,7 +79,7 @@ function UpdateProduct() {
       setInfo(product.info);
       setStock(product.Stock);
       setOldImages(product.images);
-      setpdfFiles(product.pdfFiles)
+      setpdfFiles(product.pdfFiles);
     }
 
     if (error) {
@@ -132,16 +132,15 @@ function UpdateProduct() {
   };
 
   const updateProductImagesChange = (e) => {
-    
     const files = Array.from(e.target.files);
-    console.log("Files selected:", files); 
+    console.log("Files selected:", files);
     setImages([]);
     setImagesPreview([]);
     setOldImages([]);
     setpdfFiles([]);
 
     files.forEach((file) => {
-      if (file.type.startsWith('image/')) {
+      if (file.type.startsWith("image/")) {
         const reader = new FileReader();
         reader.onload = () => {
           if (reader.readyState === 2) {
@@ -150,12 +149,12 @@ function UpdateProduct() {
           }
         };
         reader.readAsDataURL(file);
-      } else if (file.type === 'application/pdf') {
+      } else if (file.type === "application/pdf") {
         setpdfFiles((prevPdfs) => [...prevPdfs, file]); // Add the PDF file to the state
         console.log(`PDF Selected: ${file.name}, Size: ${file.size} bytes`); // Log PDF details
       }
     });
-};
+  };
 
   // togle handler =>
   const toggleHandler = () => {

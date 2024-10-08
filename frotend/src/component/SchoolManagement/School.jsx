@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Grid from "@mui/material/Grid";
 
 import Card from "react-bootstrap/Card";
@@ -24,6 +24,9 @@ const supportItems = [
   "Health and safety audit",
 ];
 const School = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <container-fluid>
       <container-fluid>
@@ -40,6 +43,7 @@ const School = () => {
                   textAlign: "center",
                   fontSize: "var(--font-h2)",
                   marginTop: "2rem",
+                  fontWeight: 700,
                 }}
               >
                 <span className="highlight">School Management Service</span>{" "}
@@ -94,10 +98,12 @@ const School = () => {
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
+                fontWeight: 700,
               }}
             >
-              We Help People to
-              <span className="highlight"> Start Their Own School</span>{" "}
+              <span className="highlight">
+                We Help People to Start Their Own School
+              </span>{" "}
             </h1>
           </div>
           <Container>
@@ -135,7 +141,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                       
+
                         padding: 0,
                       }}
                     >
@@ -185,7 +191,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                   
+
                         padding: 0,
                       }}
                     >
@@ -235,7 +241,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                       
+
                         padding: 0,
                       }}
                     >
@@ -285,7 +291,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        
+
                         padding: 0,
                       }}
                     >
@@ -339,7 +345,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                       
+
                         padding: 0,
                       }}
                     >
@@ -389,7 +395,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                       
+
                         padding: 0,
                       }}
                     >
@@ -439,7 +445,7 @@ const School = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                       
+
                         padding: 0,
                       }}
                     >
@@ -515,22 +521,25 @@ const School = () => {
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
+                fontWeight: 700,
               }}
             >
-              Starting a<span className="highlight"> New School!</span>{" "}
+              <span className="highlight">Starting a New School!</span>{" "}
             </h1>
           </div>
-          <span
-            style={{
-              fontFamily: "'Outfit', sans-serif",
-              textAlign: "justify",
-              display: "inline-block",
-              fontSize: "var(--font-span)",
-            }}
-          >
-            Our team has experience of developing and managing new schools from
-            the very outset. We can advise on:
-          </span>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <span
+              style={{
+                fontFamily: "'Outfit', sans-serif",
+                textAlign: "center",
+                display: "inline-block",
+                fontSize: "var(--font-span)",
+              }}
+            >
+              Our team has experience of developing and managing new schools
+              from the very outset. We can advise on:
+            </span>
+          </div>
 
           <div style={{ marginTop: "2rem" }}>
             <Grid
@@ -575,6 +584,7 @@ const School = () => {
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
+                fontWeight:700
               }}
             >
               <span className="highlight"> New Start-up School</span>{" "}
@@ -680,6 +690,7 @@ const School = () => {
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
+                fontWeight:700
               }}
             >
               <span className="highlight">For Existing Schools</span>{" "}
@@ -755,7 +766,7 @@ const School = () => {
                 marginTop: "2rem",
               }}
             >
-              <span className="highlight">Additional support</span>
+              <span className="highlight">Additional Support</span>
             </h1>
             <p
               style={{

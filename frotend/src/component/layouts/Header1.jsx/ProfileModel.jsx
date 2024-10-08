@@ -6,7 +6,6 @@ import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import { FaRegUser } from "react-icons/fa";
 
-
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Modal, Avatar } from "@material-ui/core";
 import { AccountCircle as AccountCircleIcon } from "@material-ui/icons";
@@ -108,7 +107,6 @@ const ProfileModal = ({ user, isAuthenticated }) => {
         <FaRegUser
           className={`icon smaller ${isOpen ? "active" : ""}`}
           fontSize="medium"
-          
         />
         {isOpen ? (
           <ArrowDropUpIcon className="arrow-icon" />
@@ -153,18 +151,22 @@ const ProfileModal = ({ user, isAuthenticated }) => {
             )}
             <div className="divider" />
             <div className="profile-menu">
-              {user && user.role === "admin" &&(
+              {user && user.role === "admin" && (
                 <div className="menu-item" onClick={dashboardHandler}>
                   <DashboardIcon className="menu-icon" />
                   <span>Dashboard</span>
                 </div>
-              )}{user && user.role === "specialuser" &&(
-                <div className="menu-item" onClick={dashboardHandlerForSpecialUser}>
+              )}
+              {user && user.role === "specialuser" && (
+                <div
+                  className="menu-item"
+                  onClick={dashboardHandlerForSpecialUser}
+                >
                   <DashboardIcon className="menu-icon" />
                   <span>Dashboard</span>
                 </div>
               )}
-              {user && user.role === "staff" &&(
+              {user && user.role === "staff" && (
                 <div className="menu-item" onClick={dashboardHandlerForStaff}>
                   <DashboardIcon className="menu-icon" />
                   <span>Dashboard</span>

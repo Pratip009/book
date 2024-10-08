@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../Admin/ProductList.css"
+import "../Admin/ProductList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";

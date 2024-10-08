@@ -36,7 +36,6 @@ function BasicExample() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     axios
@@ -74,7 +73,7 @@ function BasicExample() {
           >
             <Nav className="d-flex align-items-center flex-row flex-wrap">
               <Nav.Link
-                href="#"
+                href={`tel:${phone}`}
                 className="d-flex align-items-center"
                 style={{
                   color: "white",
@@ -186,7 +185,9 @@ function BasicExample() {
 
             <Nav className="d-flex align-items-center">
               <Nav.Link
-                href="#"
+                href={`mailto:${email}`} // Try opening the email client with `mailto`
+                target="_blank" // Open the email client in a new tab
+                rel="noopener noreferrer"
                 className="d-flex align-items-center me-3 d-none d-lg-flex"
                 style={{
                   color: "white",
@@ -203,11 +204,12 @@ function BasicExample() {
                 />
                 <span style={{ fontSize: "var(--font-span)" }}>{email}</span>
               </Nav.Link>
+
               {isAuthenticated ? (
                 <Link to="/account">
                   <Button
                     style={{
-                      padding:"5px 4px",
+                      padding: "5px 4px",
                       backgroundColor: "#FF4E00",
                       color: "white",
                       fontFamily: "'Outfit', sans-serif",
@@ -222,7 +224,7 @@ function BasicExample() {
                 <Link to="/signup">
                   <Button
                     style={{
-                      padding:"5px 4px",
+                      padding: "5px 4px",
                       backgroundColor: "#FF4E00",
                       color: "white",
                       fontFamily: "'Outfit', sans-serif",

@@ -15,7 +15,7 @@ const SoftSkill = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <Container style={{margin:0,padding:0}}>
+    <Container style={{ margin: 0, padding: 0 }}>
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
         <img src={require("../../Image/ssworkshopneww.png")} alt="" />
       </div>
@@ -35,7 +35,7 @@ const SoftSkill = () => {
         Learning Needs provides exhaustive online and in-person soft skills
         training to help develop a positive and productive work culture.
       </span>
-      <span
+      {/* <span
         style={{
           display: "flex",
           alignItems: "flex-start",
@@ -44,7 +44,18 @@ const SoftSkill = () => {
         }}
       >
         Our Soft Skills Workshop
-      </span>
+      </span> */}
+      <h1
+        style={{
+          textAlign: "start",
+          fontSize: "var(--font-h3)",
+          fontWeight: 700,
+          marginTop: "1rem",
+          marginBottom: "1rem",
+        }}
+      >
+        <span className="highlight">Our Soft Skills Workshop</span>
+      </h1>
       <span
         style={{
           textAlign: "justify",
@@ -75,7 +86,7 @@ const SoftSkill = () => {
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <span>
-          <span
+          {/* <span
             style={{
               display: "flex",
               alignItems: "flex-start",
@@ -84,7 +95,20 @@ const SoftSkill = () => {
             }}
           >
             Customized Soft Skills Training Workshops
-          </span>
+          </span> */}
+          <h1
+            style={{
+              textAlign: "start",
+              fontSize: "var(--font-h3)",
+              fontWeight: 700,
+              marginTop: "1rem",
+              marginBottom: "1rem",
+            }}
+          >
+            <span className="highlight">
+              Customized Soft Skills Training Workshops
+            </span>
+          </h1>
           <span
             style={{
               textAlign: "justify",
@@ -104,7 +128,7 @@ const SoftSkill = () => {
             potential of their existing soft skills while developing other soft
             skills that may not come as naturally to them.
           </span>
-          <span
+          {/* <span
             style={{
               display: "flex",
               alignItems: "flex-start",
@@ -113,7 +137,20 @@ const SoftSkill = () => {
             }}
           >
             Participate in Our Soft Skills Training Programs
-          </span>
+          </span> */}
+          <h1
+            style={{
+              textAlign: "start",
+              fontSize: "var(--font-h3)",
+              fontWeight: 700,
+              marginTop: "1rem",
+              marginBottom: "1rem",
+            }}
+          >
+            <span className="highlight">
+              Participate in Our Soft Skills Training Programs
+            </span>
+          </h1>
           <span
             style={{
               textAlign: "justify",
@@ -130,7 +167,7 @@ const SoftSkill = () => {
       </Collapse>
       <Button
         style={{
-          width:"10%",
+          width: "10%",
           color: "#fff",
           backgroundColor: "#FF4E00",
           display: "flex",

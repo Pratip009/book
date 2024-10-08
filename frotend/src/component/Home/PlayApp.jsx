@@ -44,21 +44,37 @@ export default function MediaControlCard() {
     },
   };
 
- 
-
   return (
-    <Container style={{padding:0}}>
+    <Container style={{ padding: 0 }}>
       <Row>
-        <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
+        <Col
+          xs={12}
+          md={4}
+          className="d-flex justify-content-center align-items-center"
+        >
           <img
-            src={require("../../Image/appp.png")}
+            src={require("../../Image/nabout.jpg")}
             alt="App"
             style={commonStyles.appImage}
           />
         </Col>
-        <Col xs={12} md={8} className="d-flex justify-content-center align-items-center" style={{ textAlign: "start",}}>
+        <Col
+          xs={12}
+          md={8}
+          className="d-flex justify-content-center align-items-center"
+          style={{ textAlign: "start" }}
+        >
           <div style={{ width: "100%", margin: "auto" }}>
-            <h3 style={commonStyles.appHeading}>Educate Yourself</h3>
+            <h1
+              style={{
+                textAlign: "left",
+                fontSize: "var(--font-h2)",
+                fontWeight: 700,
+                marginTop: "2rem",
+              }}
+            >
+              <span className="highlight">Educate Yourself</span>
+            </h1>
             <h2 style={commonStyles.appSubheading}>
               Books and resources for better learning
             </h2>

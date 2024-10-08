@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import { useAlert } from "react-alert";
 import { useHistory } from "react-router-dom";
@@ -225,7 +225,9 @@ const ContactForm = () => {
     alert.success("Your message has been sent successfully");
     history.push("/");
   };
-
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <container-fluid>
       <container-fluid>
@@ -243,6 +245,7 @@ const ContactForm = () => {
                       fontSize: "var(--font-h2)",
                       marginTop: "2rem",
                       fontFamily: "'Outfit', sans-serif",
+                      fontWeight:700
                     }}
                   >
                     <span className="highlight">Contact Us</span>{" "}
@@ -260,7 +263,12 @@ const ContactForm = () => {
                     Need Help?
                   </h2>
 
-                  <p style={{ fontFamily: "'Outfit', sans-serif",fontSize: "var(--font-span)", }}>
+                  <p
+                    style={{
+                      fontFamily: "'Outfit', sans-serif",
+                      fontSize: "var(--font-span)",
+                    }}
+                  >
                     Catch us anytime you want? Fill out our support form below,
                     and we'll be in touch shortly.
                   </p>
@@ -277,7 +285,12 @@ const ContactForm = () => {
                     </p>
                   </address>
 
-                  <p style={{ fontFamily: "'Outfit', sans-serif",fontSize: "var(--font-span)" }}>
+                  <p
+                    style={{
+                      fontFamily: "'Outfit', sans-serif",
+                      fontSize: "var(--font-span)",
+                    }}
+                  >
                     We have live chat available, look for the chat icon in the
                     lower right-hand corner of this page. If it isn’t there,
                     then give us a call at{" "}
@@ -285,7 +298,7 @@ const ContactForm = () => {
                       style={{
                         textDecoration: "underline",
                         cursor: "pointer",
-                        fontSize: "var(--font-span)"
+                        fontSize: "var(--font-span)",
                       }}
                       onClick={handleCall}
                     >
@@ -302,7 +315,8 @@ const ContactForm = () => {
                           backgroundColor: "#003E90",
                           color: "white",
                           fontFamily: "'Outfit', sans-serif",
-                          fontSize: "var(--font-span)"
+                          fontSize: "var(--font-span)",
+
                         }}
                       >
                         Support Form
@@ -313,11 +327,11 @@ const ContactForm = () => {
                       variant="primary"
                       onClick={handleCall}
                       style={{
-                        width:"20%",
+                        width: "20%",
                         backgroundColor: "#FF4E00",
                         color: "white",
                         fontFamily: "'Outfit', sans-serif",
-                        fontSize: "var(--font-span)"
+                        fontSize: "var(--font-span)",
                       }}
                     >
                       Call Us
@@ -335,6 +349,7 @@ const ContactForm = () => {
                         fontSize: "var(--font-h2)",
                         marginTop: "2rem",
                         fontFamily: "'Outfit', sans-serif",
+                        fontWeight:700
                       }}
                     >
                       <span className="highlight">Support Form</span>{" "}
@@ -344,7 +359,7 @@ const ContactForm = () => {
                     style={{
                       textAlign: "center",
                       fontFamily: "'Outfit', sans-serif",
-                      fontSize: "var(--font-span)"
+                      fontSize: "var(--font-span)",
                     }}
                   >
                     Need a quicker answer? Look for our chat icon on the right

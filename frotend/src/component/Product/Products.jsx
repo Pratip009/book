@@ -32,6 +32,9 @@ import { Container, Row, Col } from "react-bootstrap";
 const categories = ["Books", "PDF", "Learning Aid"];
 
 function Products() {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -141,6 +144,7 @@ function Products() {
                           textAlign: "center",
                           fontSize: "var(--font-h2)",
                           marginTop: "2rem",
+                          fontWeight: 700,
                         }}
                       >
                         <span className="highlight">
@@ -194,6 +198,7 @@ function Products() {
                             textAlign: "center",
                             fontSize: "var(--font-h2)",
                             marginTop: "2rem",
+                            fontWeight: 700,
                           }}
                         >
                           {" "}

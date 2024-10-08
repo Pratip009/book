@@ -38,7 +38,6 @@ import {
   generateDiscountedPrice,
 } from "../DisplayMoney/DisplayMoney";
 
-
 const useStyles = makeStyles((theme) => ({
   payemntPage: {
     padding: "1rem 0",

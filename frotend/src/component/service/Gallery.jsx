@@ -35,7 +35,9 @@ export default function Gallery() {
 
     fetchGallery();
   }, []);
-
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   if (error) {
     return <div>Error fetching data: {error.message}</div>;
   }

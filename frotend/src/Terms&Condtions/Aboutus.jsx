@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Container, Grid, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
@@ -246,6 +246,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const About_UsPage = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   const classes = useStyles();
   const traits = [
     { src: increaseImg, letterr: "L-", textw: "LEADERSHIP" },
@@ -297,16 +300,7 @@ const About_UsPage = () => {
                 style={{ textAlign: "flex-start" }}
               >
                 <div className="circle_text">
-                  <h1
-                    style={{
-                      textAlign: "left",
-                      fontSize: "var(--font-h2)",
-                      fontWeight: 700,
-                      marginTop: "2rem",
-                    }}
-                  >
-                    <span className="highlight">About Learning Needs</span>
-                  </h1>
+                  
                 </div>
                 <p
                   variant="body1"

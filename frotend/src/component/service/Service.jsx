@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import { Grid } from "@material-ui/core";
 import "aos/dist/aos.css";
@@ -27,7 +27,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const Service = () => {
-
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <container-fluid>
@@ -48,6 +50,7 @@ const Service = () => {
                 textAlign: "start",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
+                fontWeight:700
               }}
             >
               <span className="highlight">Services of Learning Needs</span>
