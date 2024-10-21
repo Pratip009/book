@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa"; // Import the arrow icon
 import slider1Webp from "../../Image/heroslider/BG.png";
 import slider2Webp from "../../Image/heroslider/BG1.png";
 import slider3Webp from "../../Image/heroslider/BG2.png";
@@ -54,7 +54,6 @@ function ControlledCarousel() {
           <FaChevronRight className="custom-next-icon" />
         </span>
       }
-    
     >
       {slides.map((slide, idx) => (
         <Carousel.Item key={idx} className="custom-carousel-item">
@@ -75,7 +74,9 @@ function ControlledCarousel() {
             </span>
             <span className="sale-text">{slide.saleText}</span>
             <Link to="/products">
-              <button className="product-button">{slide.productText}</button>
+              <button className="product-button">
+                {slide.productText} <FaArrowRight />
+              </button>
             </Link>
           </Carousel.Caption>
         </Carousel.Item>
