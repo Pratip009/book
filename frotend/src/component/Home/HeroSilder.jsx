@@ -1,32 +1,34 @@
-import { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
-import Typed from 'react-typed';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import slider1Webp from '../../Image/h111.webp';
-import slider2Webp from '../../Image/h222.webp';
-import slider3Webp from '../../Image/h3333.webp';
-import './HeroSlider.css';
+import { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
+import Typed from "react-typed";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import slider1Webp from "../../Image/heroslider/BG.png";
+import slider2Webp from "../../Image/heroslider/BG1.png";
+import slider3Webp from "../../Image/heroslider/BG2.png";
+import "./HeroSlider.css";
 
 const slides = [
   {
     image: slider1Webp,
-    quote: "Welcome to Our Store!",
-    saleText: "Exclusive Deals for You",
-    productText: "Shop Now",
+    quote: "Empowering Kids With Smart Education",
+    saleText:
+      "Innovative learning solutions designed to boost creativity, critical thinking, and academic success",
+    productText: "Explore Today",
   },
   {
     image: slider2Webp,
-    quote: "Discover Amazing Products",
-    saleText: "Best Quality Guaranteed",
-    productText: "Explore More",
+    quote: "Simplify Education with School Management",
+    saleText:
+      "Comprehensive tools to streamline school operations, enhance efficiency, and support student success",
+    productText: "Explore Today",
   },
   {
     image: slider3Webp,
-    quote: "Limited Time Offers",
+    quote: "Training for Teachers, Parents, and Students",
     saleText: "Up to 50% Off",
-    productText: "Grab Yours",
+    productText: "Explore Today",
   },
 ];
 
@@ -42,8 +44,17 @@ function ControlledCarousel() {
       activeIndex={index}
       onSelect={handleSelect}
       interval={10000}
-      prevIcon={<FaChevronLeft className="custom-prev-icon" />}
-      nextIcon={<FaChevronRight className="custom-next-icon" />}
+      prevIcon={
+        <span aria-hidden="true">
+          <FaChevronLeft className="custom-prev-icon" />
+        </span>
+      }
+      nextIcon={
+        <span aria-hidden="true">
+          <FaChevronRight className="custom-next-icon" />
+        </span>
+      }
+    
     >
       {slides.map((slide, idx) => (
         <Carousel.Item key={idx} className="custom-carousel-item">
@@ -53,10 +64,14 @@ function ControlledCarousel() {
             alt={slide.quote}
             loading={idx === index ? "eager" : "lazy"}
           />
-          <div className="carousel-overlay"></div>
           <Carousel.Caption className="carousel-caption">
             <span className="quote">
-              <Typed strings={[slide.quote]} typeSpeed={300} backSpeed={50} loop />
+              <Typed
+                strings={[slide.quote]}
+                typeSpeed={50}
+                backSpeed={30}
+                loop
+              />
             </span>
             <span className="sale-text">{slide.saleText}</span>
             <Link to="/products">

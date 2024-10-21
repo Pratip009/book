@@ -39,7 +39,7 @@ function BasicExample() {
 
   useEffect(() => {
     axios
-      .get("https://render-learningneeds.onrender.com/api/phoneand-emails")
+      .get("https://learningneeds-strapi-11ta.onrender.com/api/phoneand-emails")
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
         if (data) {

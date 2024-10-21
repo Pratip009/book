@@ -53,7 +53,7 @@ export default function MediaControlCard() {
           className="d-flex justify-content-center align-items-center"
         >
           <img
-            src={require("../../Image/nabout.jpg")}
+            src={require("../../Image/about/abb.png")}
             alt="App"
             style={commonStyles.appImage}
           />

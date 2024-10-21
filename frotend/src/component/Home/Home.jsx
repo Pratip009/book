@@ -43,7 +43,6 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
 function Home() {
-  
   const isMobile = useMediaQuery("(max-width: 600px)");
   const [notices, setNotices] = useState([]);
   const alert = useAlert();
@@ -56,7 +55,7 @@ function Home() {
     const fetchNotices = async () => {
       try {
         const response = await fetch(
-          "https://render-learningneeds.onrender.com/api/noticeboards"
+          "https://learningneeds-strapi-11ta.onrender.com/api/noticeboards"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -321,7 +320,6 @@ function Home() {
                 </Col>
               </Row>
               <Container className="trending-products">
-                
                 {products &&
                   products.map((product) => (
                     <ProductCard key={product._id} product={product} />

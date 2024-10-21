@@ -282,7 +282,7 @@ const About_UsPage = () => {
             <Row className="align-items-center justify-content-center mt-3">
               <Col xs="12" sm="12" md="4" className="mb-0">
                 <img
-                  src={require("../Image/about/abb.png")}
+                  src={require("../Image/nabout.jpg")}
                   alt="Learning needs"
                   className={classes.image_about}
                   style={{

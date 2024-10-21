@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const BASE_URL = "https://render-learningneeds.onrender.com/api";
+const BASE_URL = "https://learningneeds-strapi-11ta.onrender.com/api";
 
 const API_KEY =
-  "22fa0a7e86c4723bed77a77422b7c68e73493297c5baaa2c32a6490d5b4e4362cfeebc1e2aa18474d15e767f9578a06b02d244a5dc046f8e0a8ec9a93f054fec757987c402304ee2f4e421690ec907fae2218a0499bb922b73c5bf10fe94d3747dabdafbce5bdd832170d73b0a4ac53e6b77317f3f10de601d28a3a18b6e609e";
+  "5cb371fa085221b823befcb137548fcd6861124f118edfff70d641605a0b2f5627fdf4c9a31fd2748947182cfc8ce8f42d5bdaa2a7443e2744cfaaa71d8bbde26fa29f44f73bc18f30b1ab3f8b10fcf87c8f9deb8f9081ece617bc95838976cf4eac20ff341eaddaea47ccc64ac0e67bc34f8678ed1f0116bbf220189b6b7881";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,

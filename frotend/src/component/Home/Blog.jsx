@@ -5,14 +5,14 @@ export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await fetch(
-          "https://render-learningneeds.onrender.com/api/blogs?populate=*"
+          "https://learningneeds-strapi-11ta.onrender.com/api/blogs?populate=*"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

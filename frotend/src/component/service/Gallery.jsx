@@ -6,7 +6,7 @@ import imageCompression from "browser-image-compression"; // Import compression 
 import "./Gallery.css"; // Assuming you're using a custom CSS file
 
 const API_URL =
-  "https://render-learningneeds.onrender.com/api/galleries?populate=*";
+  "https://learningneeds-strapi-11ta.onrender.com/api/galleries?populate=*";
 
 export default function Gallery() {
   const [galleryData, setGalleryData] = useState([]);
@@ -35,9 +35,11 @@ export default function Gallery() {
 
     fetchGallery();
   }, []);
-  useEffect(()=>{
+
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
+
   if (error) {
     return <div>Error fetching data: {error.message}</div>;
   }
@@ -172,8 +174,6 @@ export default function Gallery() {
               )}
             </MDBRow>
           </section>
-
-          {/* Section for Training */}
         </>
       )}
 
@@ -198,13 +198,17 @@ export default function Gallery() {
 
 // Function to choose optimal image size based on screen width
 const getOptimalImageUrl = (item) => {
-  const formats = item.attributes.images.data[0].attributes.formats;
+  const formats = item.attributes?.images?.data?.[0]?.attributes?.formats;
+  if (!formats) {
+    return 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png'; // Provide a fallback URL or placeholder image
+  }
+
   if (window.innerWidth <= 768) {
-    return formats.thumbnail.url;
+    return formats?.thumbnail?.url || 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png';
   } else if (window.innerWidth <= 1024) {
-    return formats.small.url;
+    return formats?.small?.url || 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png';
   } else {
-    return formats.medium.url;
+    return formats?.medium?.url || 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png';
   }
 };
 
@@ -231,6 +235,6 @@ const compressImage = async (imageUrl) => {
 
 // Optional: Use a tiny placeholder image or blur for initial load
 const getPlaceholderImageUrl = (item) => {
-  const formats = item.attributes.images.data[0].attributes.formats;
-  return formats.thumbnail.url; // Placeholder image for loading state
+  const formats = item.attributes?.images?.data?.[0]?.attributes?.formats;
+  return formats?.thumbnail?.url || 'fallback-placeholder-url'; // Placeholder image for loading state
 };
