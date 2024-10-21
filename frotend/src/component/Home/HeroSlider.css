@@ -60,29 +60,33 @@
 
 .quote {
   font-size: 70px;
-  line-height: 80px;
-  color: #e0ffff;
-  font-family: 'Outfit', sans-serif;
+  color: #ffffff;
+  font-family:var(--font-family-heading);
   font-weight: 700;
-  margin-bottom: .5em;
   text-align: start;
+  max-width: 60%;
+  word-wrap: break-word;
+  word-break: break-word;
+  margin-bottom: .5rem;
+  min-height: 210px;
 }
 
 .sale-text {
   font-size: 20px;
-  line-height: 30px;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-family-body);
   font-weight: 500;
-  margin-bottom: 1em;
   text-align: start;
   max-width: 40%;
   word-wrap: break-word;
   word-break: break-word;
+  margin-bottom: 1rem;
 }
 
 .product-button {
   background-color: #ff4e00;
+  font-family: var(--font-family-body);
   color: #fff;
+  font-weight: 700;
   border-radius: 15px;
   padding: 12px 32px;
   border: 1px solid transparent;
@@ -108,11 +112,13 @@
     max-width: 80%;
     word-wrap: break-word;
     word-break: break-word;
+    min-height: 40px;
   }
 
   .sale-text {
     font-size: 0.7rem;
-    max-width: 80%;
+    font-weight: 400;
+    max-width:60%;
     word-wrap: break-word;
     word-break: break-word;
   }

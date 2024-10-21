@@ -18,7 +18,7 @@ import { useAlert } from "react-alert";
 import HeroSlider from "./HeroSilder";
 import AOS from "aos";
 import List from "@mui/material/List";
-
+import OfferBanner from "./OfferBanner";
 import TeamMessage from "./TeamMessage";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -113,6 +113,7 @@ function Home() {
           <MataData title="Learning Needs" />
           <div className="Home_Page" style={{ overflow: "hidden" }}>
             <HeroSlider />
+        <OfferBanner/>
 
             <div
               className="background_image"

@@ -1,0 +1,67 @@
+.offer-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4e00; /* Orange background */
+    color: white;
+    padding: 20px 40px;
+  }
+  
+  .offer-text {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .offer-button {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    color: #ff4e00;
+    border: none;
+    padding: 10px 20px;
+    line-height: 26.25px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 2px;
+    font-weight: 700;
+  }
+  
+
+  
+  /* Media query for screens 768px and below (tablets and smaller devices) */
+  @media (max-width: 768px) {
+    .offer-banner {
+      padding: 12px 15px; /* Reduce padding */
+      flex-direction: row; /* Stack text and button vertically */
+      text-align: center; /* Center-align text and button */
+      align-items: center;
+      
+    }
+  
+    .offer-text {
+      font-size: 0.7rem; /* Slightly smaller font size for mobile */
+     
+    }
+  
+    .offer-button {
+      font-size: 0.6rem; /* Smaller button font size */
+      padding: 5px 13px; /* Adjust button padding */
+    }
+  }
+  
+  /* Media query for screens 480px and below (mobile phones) */
+  @media (max-width: 480px) {
+    .offer-banner {
+      padding: 7px 12px; /* Further reduce padding */
+    }
+  
+    .offer-text {
+      font-size: 0.7rem; /* Further reduce font size */
+    }
+  
+    .offer-button {
+      font-size:0.6rem; /* Smaller font for button */
+      padding: 6px 10px; /* Reduce button padding */
+    }
+  }
+  
