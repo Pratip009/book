@@ -59,7 +59,8 @@
 }
 
 .quote {
-  font-size: var(--font-h1);
+  font-size: 70px;
+  line-height: 80px;
   color: #e0ffff;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
@@ -68,9 +69,10 @@
 }
 
 .sale-text {
-  font-size: var(--font-h5);
+  font-size: 20px;
+  line-height: 30px;
   font-family: 'Outfit', sans-serif;
-  font-weight: 200;
+  font-weight: 500;
   margin-bottom: 1em;
   text-align: start;
   max-width: 40%;
