@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
-import slider1Webp from "../../Image/BG.png";
-import slider2Webp from "../../Image/BG1.png";
-import slider3Webp from "../../Image/BG2.png";
+import slider1Webp from "../../Image/hs1.svg";
+import slider2Webp from "../../Image/hs2.svg";
+import slider3Webp from "../../Image/hs3.svg";
 import "./HeroSlider.css";
 
 const slides = [

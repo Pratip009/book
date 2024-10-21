@@ -65,7 +65,9 @@
 .headerTopLeft {
   justify-content: flex-start;
 }
-
+.cartIconWrapper{
+  margin-bottom: 4px !important;
+}
 .headerTopRight {
   justify-content: flex-end; /* Email address and button should be aligned to the end */
 }
@@ -145,9 +147,11 @@
   .headerTop {
     flex-direction: column; /* Stack items vertically on smaller screens */
     height: auto; /* Allow height to adjust based on content */
-    padding: 10px 0; /* Adjust padding for extra-small screens */
+    padding: 5px 0; /* Adjust padding for extra-small screens */
   }
-
+  .cartIconWrapper{
+    margin-bottom: 4px !important;
+  }
   .headerTopLeft,
   .headerTopRight {
     justify-content: center; /* Center items horizontally */
