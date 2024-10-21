@@ -32,7 +32,7 @@ const slides = [
   },
 ];
 
-function ControlledCarousel() {
+function HeroSlider() {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
@@ -85,4 +85,4 @@ function ControlledCarousel() {
   );
 }
 
-export default ControlledCarousel;
+export default HeroSlider;
