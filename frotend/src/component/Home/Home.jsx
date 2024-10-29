@@ -20,7 +20,7 @@ import AOS from "aos";
 import List from "@mui/material/List";
 import OfferBanner from "./OfferBanner";
 import TeamMessage from "./TeamMessage";
-
+import TeamMessage1 from "./TeamMessage1";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -30,17 +30,18 @@ import HailIcon from "@mui/icons-material/Hail";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
 import Welcome from "./Welcome";
-
+import Programs from "./Programs";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Wellcome2 from "./Wellcome2";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import AboutUsSection from "./AboutUsSection";
 import "./Home.css";
-
+import ProductSection from "./ProductSection";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import MissionAndVision from "./MissionAndVision";
 
 function Home() {
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -113,8 +114,12 @@ function Home() {
           <MataData title="Learning Needs" />
           <div className="Home_Page" style={{ overflow: "hidden" }}>
             <HeroSlider />
-        <OfferBanner/>
-
+            <OfferBanner />
+            <AboutUsSection />
+            <Programs />
+            <ProductSection products={products} />
+            <TeamMessage1/>
+            <MissionAndVision/>
             <div
               className="background_image"
               style={{

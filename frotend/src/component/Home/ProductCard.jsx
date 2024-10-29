@@ -3,16 +3,17 @@ import { useDispatch } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { MDBCard, MDBCardBody, MDBCardImage } from "mdb-react-ui-kit";
-import { Rating, Typography } from "@mui/material";
+import { Rating, Typography, Button } from "@mui/material";
 import { addItemToCart } from "../../actions/cartAction";
-import placeholderImage from "../../Image/pdf.png";
+import placeholderImage from "../../Image/home/pdfIcon.png";
 import {
   dispalyMoney,
   generateDiscountedPrice,
 } from "../DisplayMoney/DisplayMoney";
 import "./ProductCard.css";
-import { FaShoppingCart } from "react-icons/fa"; // FontAwesome shopping cart icon
 import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 function ProductCard({ product }) {
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -46,12 +47,8 @@ function ProductCard({ product }) {
 
   let discountPrice = generateDiscountedPrice(product.price);
   discountPrice = dispalyMoney(discountPrice);
-  const oldPrice = dispalyMoney(product.price);
 
-  const truncatedDescription = product.description
-    .split(" ")
-    .slice(0, 6)
-    .join(" ");
+  const truncatedTitle = product.name.split(" ").slice(0, 2).join(" ");
 
   const addToCartHandler = (id, qty) => {
     dispatch(addItemToCart(id, qty));
@@ -64,48 +61,62 @@ function ProductCard({ product }) {
         to={`/product/${product._id}`}
         style={{ textDecoration: "none", color: "inherit" }}
       >
-        {" "}
-        {/* Added position-relative to parent card */}
-        <MDBCardImage
-          src={imageUrl}
-          fluid
-          className="card-img-top"
+        <MDBCard
           style={{
-            width: "100%",
-            maxHeight: "150px",
-            objectFit: "contain",
-            objectPosition: "center",
+            width: "255px",
+            height: "129px",
+            borderTopLeftRadius: "6px",
+            borderTopRightRadius: "6px",
+            backgroundColor: "#ECF4FF",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            overflow: "hidden",
+            border: "none",
           }}
-        />
-        {/* Cart Icon on the top-right corner of the image */}
-        <FaShoppingCart
-          className="icon-cart"
-          onClick={() => addToCartHandler(product._id, 1)}
-          style={{
-            position: "absolute",
-            top: "10px",
-            right: "10px",
-            backgroundColor: "#ff4e00",
-            fontSize: "35px",
-            cursor: "pointer",
-            color: "#FFFFFFFF",
-            background: "#fff",
-            padding: "8px",
-            borderRadius: "50%",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          }}
-        />
-        <MDBCardBody className="d-flex flex-column body">
-          <a href={`/product/${product._id}`} className="text-reset">
-            <h5 className="card-title mb-1">{product.name}</h5>
-          </a>
-          <p
-            className="d-flex align-items-center mb-1"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
+        >
+          <MDBCardImage
+            src={imageUrl}
+            fluid
+            className="card-img-top"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
+          />
+        </MDBCard>
+
+        <MDBCardBody
+          className="d-flex flex-column body"
+          style={{ padding: 0, alignItems: "flex-start" }}
+        >
+          {/* Discount Price */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+              marginBottom: "8px",
+              marginTop: "8px",
+            }}
           >
-            {truncatedDescription}
-          </p>
-          <div className="d-flex align-items-center mb-2">
+            <span className="discount-price" style={{ margin: 0 }}>
+              {discountPrice}
+            </span>
+          </div>
+
+          {/* Product Name */}
+          <a href={`/product/${product._id}`} className="text-reset">
+            <h5 className="card-title mb-1" style={{ margin: 0 }}>
+              {truncatedTitle}
+            </h5>
+          </a>
+
+          {/* Product Description */}
+
+          {/* Rating Section */}
+          <div className="d-flex align-items-center mb-2" style={{ margin: 0 }}>
             <Rating
               name="rating"
               value={product.ratings}
@@ -118,16 +129,39 @@ function ProductCard({ product }) {
                 fontWeight: "400",
               }}
             />
-            <Typography variant="body2" color="textSecondary">
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              style={{ margin: 0 }}
+            >
               ({product.numOfReviews})
             </Typography>
           </div>
 
-          {/* Display the truncated description here */}
-          <div className="price-section">
-            <span className="old-price">{oldPrice}</span>
-            <span className="discount-price">{discountPrice}</span>
-          </div>
+          {/* Buy Now Button */}
+          <Button
+            className="product_btn"
+            onClick={() => addToCartHandler(product._id, 1)}
+            style={{
+              display: "flex", // Use flexbox for alignment
+              alignItems: "center", // Center items vertically
+              justifyContent: "center", // Center items horizontally
+              padding: "8px 12px", // Add some padding
+              borderRadius: "12px", // Match your CSS
+              border: "1px solid #000", // Match your CSS
+               // Background color
+              color: "#313131", // Text color
+              fontWeight: "700", // Bold text
+              cursor: "pointer", // Pointer cursor on hover
+              transition: "background-color 0.3s", // Smooth background color change
+              textTransform: "capitalize",
+              marginTop:'1rem'
+            }}
+          >
+            Buy Now
+            <FaArrowRightLong style={{ marginLeft: "5px" }} />{" "}
+            {/* Arrow icon */}
+          </Button>
         </MDBCardBody>
       </Link>
     </MDBCard>

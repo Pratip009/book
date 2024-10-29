@@ -1,0 +1,202 @@
+/* Container for the entire programs section */
+.programs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 939px;
+    background-color: #fff1eb;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Title styling */
+.programs-container h2 {
+    font-size: 60px;
+    margin-bottom: 5rem;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    line-height: 60px;
+    z-index: 1;
+}
+.underline-image {
+    width: 289px;                /* Set width */
+    height: 12px;                /* Set height */
+    position: absolute;          /* Position it absolutely */
+    top: 164px;                  /* Adjust vertical position */
+    left: 800px;                 /* Adjust horizontal position */
+    border-radius: 45px;        /* Optional: apply border-radius */
+    /* Optionally add other styles like margin or padding */
+  }
+  
+/* Grid layout for program cards */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px; /* Limit max width for better centering */
+    margin: 0 auto;
+    z-index: 1;
+}
+
+/* Styling for each program card */
+.program-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    width: 100%; /* Full width of grid cell */
+    height: 275px;
+}
+
+/* Individual program colors */
+.school-management {
+    background-color: #B6E3DF;
+}
+
+.training-program {
+    background-color: #FDE1A4;
+}
+
+.sports-training {
+    background-color: #F5CCC1;
+}
+
+.development-program {
+    background-color: #C3DDFF;
+}
+
+/* Content area with icon and text split */
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between icon and text content */
+    width: 100%;
+}
+
+/* Icon styling and spacing for left column */
+.icon1 {
+    width: 90px;                    /* Fixed width */
+    height: 90px;                   /* Fixed height */
+    background-color: #85CEC7;      /* Background color */
+    border-radius: 50%;             /* Make the div circular */
+    display: flex;                  /* Flexbox layout */
+    align-items: center;            /* Center items vertically */
+    justify-content: center;        /* Center items horizontally */
+    overflow: hidden;               /* Hide overflow */
+    margin-right: 1rem;             /* Margin to the right */
+}
+
+
+
+.icon2 {
+    width: 90px;                    /* Fixed width */
+    height: 90px;                   /* Fixed height */
+    background-color: #ECCA7F;      /* Background color */
+    border-radius: 50%;             /* Make the div circular */
+    display: flex;                  /* Flexbox layout */
+    align-items: center;            /* Center items vertically */
+    justify-content: center;        /* Center items horizontally */
+    overflow: hidden;               /* Hide overflow */
+    margin-right: 1rem;
+}
+.icon3 {
+    width: 90px;                    /* Fixed width */
+    height: 90px;                   /* Fixed height */
+    background-color: #E8B4A6;      /* Background color */
+    border-radius: 50%;             /* Make the div circular */
+    display: flex;                  /* Flexbox layout */
+    align-items: center;            /* Center items vertically */
+    justify-content: center;        /* Center items horizontally */
+    overflow: hidden;               /* Hide overflow */
+    margin-right: 1rem;
+}
+.icon4 {
+    width: 90px;                    /* Fixed width */
+    height: 90px;                   /* Fixed height */
+    background-color: #8DBBF6;      /* Background color */
+    border-radius: 50%;             /* Make the div circular */
+    display: flex;                  /* Flexbox layout */
+    align-items: center;            /* Center items vertically */
+    justify-content: center;        /* Center items horizontally */
+    overflow: hidden;               /* Hide overflow */
+    margin-right: 1rem;
+}
+
+/* Text content column within the program card */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Text styles for heading, paragraph, and button */
+.program-card h3 {
+    font-size: 33px;
+    font-weight: 700;
+    color: #1F1F1F;
+    font-family: 'Quicksand';
+    margin-bottom: 1rem;
+}
+
+.program-card p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.program-card button {
+    position: absolute;
+    left: 3%;
+    bottom: 5%;
+    text-align: start;
+    font-size: 16px;
+    line-height: 24px;
+    color: #313131;
+    font-family: 'Nunito';
+    background: none;
+    width: 135.55px;
+    height: 42px;
+    border: none;
+    border-radius: 16px;
+    padding-top: 10px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    gap: 4px;
+    background-color: #ffffff;
+}
+
+/* Styling for decorative icons (tree, rocket, sun) */
+.tree-icon, .rocket-icon, .sun-icon {
+    position: absolute;
+    opacity: 0.7;
+}
+
+.tree-icon {
+    width: 111px;
+    height: 154px;
+    top: 5%;
+    left: 0;
+}
+
+.rocket-icon {
+    width: 90px;
+    height: 87px;
+    top: 20%;
+    right: 10%;
+}
+
+.sun-icon {
+    width: 277px;
+    height: 183px;
+    bottom: 10%;
+    right: 0;
+}

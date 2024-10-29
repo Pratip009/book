@@ -1,0 +1,46 @@
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f4f8;
+}
+
+.title {
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.section {
+    background-color: #cce7e8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+}
+
+.section.vision {
+    background-color: #cce7e8;
+}
+
+.section.mission {
+    background-color: #d0e7ff;
+}
+
+.icon {
+    background-color: #8fd3d4;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.updates {
+    background-color: #ffe7b3;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}

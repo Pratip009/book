@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0bb3cfad.css",
-    "main.js": "/static/js/main.61f53ea7.js",
+    "main.css": "/static/css/main.e3f1ed60.css",
+    "main.js": "/static/js/main.df1a5d3f.js",
     "static/js/37.23d5dc1f.chunk.js": "/static/js/37.23d5dc1f.chunk.js",
     "static/js/721.ffb5aae4.chunk.js": "/static/js/721.ffb5aae4.chunk.js",
     "static/js/128.48cf579f.chunk.js": "/static/js/128.48cf579f.chunk.js",
@@ -36,6 +36,7 @@
     "static/media/hs1.svg": "/static/media/hs1.ab3e2b05bd47c3afaf1b591db56e2e58.svg",
     "static/media/dddd.png": "/static/media/dddd.41dcc845bc8cad92904b.png",
     "static/media/ssworkshopneww11.png": "/static/media/ssworkshopneww11.8f5e20c8898c662809af.png",
+    "static/media/about.png": "/static/media/about.e636e7d8974378aa9327.png",
     "static/media/newbackand.png": "/static/media/newbackand.d4a34c710a1ada288f56.png",
     "static/media/off.webp": "/static/media/off.106952a77b2c16d670be.webp",
     "static/media/sssa1233.png": "/static/media/sssa1233.c731474feb8b7a472539.png",
@@ -71,6 +72,7 @@
     "static/media/designnn.png": "/static/media/designnn.62909b5b9e33f79ee40e.png",
     "static/media/dddd.webp": "/static/media/dddd.5089ac3d0c554c585083.webp",
     "static/media/money-bag.png": "/static/media/money-bag.df21a3442a3a33303272.png",
+    "static/media/teammain.png": "/static/media/teammain.b1048966dc9ac116b86e.png",
     "static/media/teach11.png": "/static/media/teach11.a645aa89b911d8602c36.png",
     "static/media/bear.png": "/static/media/bear.ea0a8081c118246b7fb8.png",
     "static/media/learning2.png": "/static/media/learning2.9363fdf2a0bb9fac18c4.png",
@@ -108,7 +110,6 @@
     "static/media/teamaaa.png": "/static/media/teamaaa.835e0b626a839410d7aa.png",
     "static/media/aboutln1.png": "/static/media/aboutln1.d722e762ed5ff8788c67.png",
     "static/media/logo.png": "/static/media/logo.1263e68b0e4cb77606c2.png",
-    "static/media/pdf.png": "/static/media/pdf.5316ce9af74a0be5d69d.png",
     "static/media/google-play-black.svg": "/static/media/google-play-black.c0bc3350b9a1f59b7de6a67d02bfb57c.svg",
     "static/media/paytm.svg": "/static/media/paytm.0c8cf558f2e0c4f9aaa359ee6c7ad634.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -120,8 +121,8 @@
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/ball.svg": "/static/media/ball.3fd7b69ef820ed69d89467d63e115582.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
-    "main.0bb3cfad.css.map": "/static/css/main.0bb3cfad.css.map",
-    "main.61f53ea7.js.map": "/static/js/main.61f53ea7.js.map",
+    "main.e3f1ed60.css.map": "/static/css/main.e3f1ed60.css.map",
+    "main.df1a5d3f.js.map": "/static/js/main.df1a5d3f.js.map",
     "37.23d5dc1f.chunk.js.map": "/static/js/37.23d5dc1f.chunk.js.map",
     "721.ffb5aae4.chunk.js.map": "/static/js/721.ffb5aae4.chunk.js.map",
     "128.48cf579f.chunk.js.map": "/static/js/128.48cf579f.chunk.js.map",
@@ -138,7 +139,7 @@
     "17.ef9f6fbc.chunk.js.map": "/static/js/17.ef9f6fbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bb3cfad.css",
-    "static/js/main.61f53ea7.js"
+    "static/css/main.e3f1ed60.css",
+    "static/js/main.df1a5d3f.js"
   ]
 }
