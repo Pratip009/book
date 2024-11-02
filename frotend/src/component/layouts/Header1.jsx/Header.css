@@ -139,7 +139,7 @@
 }
 
 .headerBotttom_icons .profile-icon {
-  margin: 0; /* Remove margin if applied */
+  margin-right: 10px; /* Remove margin if applied */
 }
 
 /* Media queries for different screen sizes */
@@ -219,6 +219,9 @@
 }
 
 @media (min-width: 768px) {
+  .profile-icon{
+    margin-right: 10px;
+  }
   .headerLogin .account_box {
     padding: 5px 10px; /* Add padding for desktop view */
     font-size: var(--font-size-account-box); /* Use dynamic font size */
@@ -258,27 +261,42 @@
   .headerBottom__logo_main {
     width: 160px;
   }
+  .profile-icon{
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 440px) {
+  .profile-icon{
+    margin-right: 10px;
+  }
   .headerBottom__logo_main {
     width: 150px;
   }
 }
 
 @media (max-width: 420px) {
+  .profile-icon{
+    margin-right: 10px;
+  }
   .headerBottom__logo_main {
     width: 145px;
   }
 }
 
 @media (max-width: 412px) {
+  .profile-icon{
+    margin-right: 10px;
+  }
   .headerBottom__logo_main {
     width: 140px;
   }
 }
 
 @media (max-width: 393px) {
+  .profile-icon{
+    margin-right: 10px;
+  }
   .headerBottom__logo_main {
     width: 135px;
   }
