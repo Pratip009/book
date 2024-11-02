@@ -40,21 +40,24 @@ const AboutUsSection = () => {
           </div>
 
           {/* Features List */}
-          <div className="features row justify-content-center justify-content-md-start z-2">
+          <div className="features row justify-content-start z-2">
+            {" "}
+            {/* Changed justify-content-center to justify-content-start */}
             {[
-              "Sports Training",
-              "Easy To Learn",
-              "Expert Teachers",
-              "Management",
+              "Leadership Development",
+              "Process Optimization",
+              "Ongoing Support",
+              "Cost Efficiency",
             ].map((feature, index) => (
               <div
                 key={index}
-                className="featureItem col-12 col-sm-6 d-flex align-items-center justify-content-center text-center mx-auto"
+                className="featureItem col-12 col-sm-6 d-flex align-items-center justify-content-start mx-auto"
               >
                 <span className="checkMark">
                   <MdOutlineCheckCircle />
                 </span>
-                {feature}
+                <span>{feature}</span>{" "}
+                {/* Wrapped feature in a span for proper alignment */}
               </div>
             ))}
           </div>

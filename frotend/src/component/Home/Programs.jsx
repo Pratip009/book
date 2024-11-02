@@ -21,7 +21,18 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>School Management Services</h3>
-                  <p>Lorem Ipsum dolor sit uierdf fnsjfna</p>
+                  <p>
+                    <span
+                      style={{
+                        color: "red",
+                        fontWeight: "600",
+                      }}
+                    >
+                      From vision to reality:
+                    </span>{" "}
+                    Expert school management guides you through every step of
+                    establishing a thriving educational institution.
+                  </p>
                   <button>Enroll now →</button>
                 </div>
                 <div className="icon12">
@@ -35,7 +46,19 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Training Program</h3>
-                  <p>Lorem Ipsum dolor sit uierdf fnsjfna</p>
+                  <p>
+                    <span
+                      style={{
+                        color: "red",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Bridging the gap:{" "}
+                    </span>
+                    Our inclusive training empowers teachers, engages students,
+                    and equips parents to foster a collaborative learning
+                    environment.
+                  </p>
                   <button>Enroll now →</button>
                 </div>
                 <div className="icon2">
@@ -49,7 +72,18 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Sports Training</h3>
-                  <p>Lorem Ipsum dolor sit uierdf fnsjfna</p>
+                  <p>
+                    <span
+                      style={{
+                        color: "red",
+                        fontWeight: "600",
+                      }}
+                    >
+                      From the classroom to the playing field
+                    </span>
+                    , our comprehensive training nurtures athletic talent and
+                    fosters a love for physical fitness
+                  </p>
                   <button>Enroll now →</button>
                 </div>
                 <div className="icon3">
@@ -62,8 +96,19 @@ const Programs = () => {
             <div className="program-card development-program">
               <div className="card-content">
                 <div className="text-content">
-                  <h3>Development Program</h3>
-                  <p>Lorem Ipsum dolor sit uierdf fnsjfna</p>
+                  <h3>Services</h3>
+                  <p>
+                    <span
+                      style={{
+                        color: "red",
+                        fontWeight: "600",
+                      }}
+                    >
+                      From essential supplies to expert services
+                    </span>
+                    , we support schools in creating an inspiring and effective
+                    learning environment.
+                  </p>
                   <button>Enroll now →</button>
                 </div>
                 <div className="icon4">
