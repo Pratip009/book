@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e3f1ed60.css",
-    "main.js": "/static/js/main.df1a5d3f.js",
+    "main.css": "/static/css/main.6cc9978b.css",
+    "main.js": "/static/js/main.c2246718.js",
     "static/js/37.23d5dc1f.chunk.js": "/static/js/37.23d5dc1f.chunk.js",
     "static/js/721.ffb5aae4.chunk.js": "/static/js/721.ffb5aae4.chunk.js",
     "static/js/128.48cf579f.chunk.js": "/static/js/128.48cf579f.chunk.js",
@@ -30,7 +30,6 @@
     "static/media/products.png": "/static/media/products.e0f41533dcc4e92ed743.png",
     "static/media/st2.png": "/static/media/st2.45ff4244807379712831.png",
     "static/media/schooln.jpeg": "/static/media/schooln.5076cc56f46c31028c1a.jpeg",
-    "static/media/lap.webp": "/static/media/lap.c8969a6719237090a57d.webp",
     "static/media/ssworkshopneww.png": "/static/media/ssworkshopneww.bcbcd01540408321e3d0.png",
     "static/media/servicessss.png": "/static/media/servicessss.9318b3723d6aafe9fb69.png",
     "static/media/hs1.svg": "/static/media/hs1.ab3e2b05bd47c3afaf1b591db56e2e58.svg",
@@ -38,7 +37,6 @@
     "static/media/ssworkshopneww11.png": "/static/media/ssworkshopneww11.8f5e20c8898c662809af.png",
     "static/media/about.png": "/static/media/about.e636e7d8974378aa9327.png",
     "static/media/newbackand.png": "/static/media/newbackand.d4a34c710a1ada288f56.png",
-    "static/media/off.webp": "/static/media/off.106952a77b2c16d670be.webp",
     "static/media/sssa1233.png": "/static/media/sssa1233.c731474feb8b7a472539.png",
     "static/media/founder1.png": "/static/media/founder1.dfb14378d3fe9a727e4e.png",
     "static/media/sservice1234.png": "/static/media/sservice1234.a802be10700db6b68ea4.png",
@@ -70,7 +68,6 @@
     "static/media/low-cost.png": "/static/media/low-cost.1520c01483e3336ec8dc.png",
     "static/media/pw1.png": "/static/media/pw1.02a5829a253671e278cc.png",
     "static/media/designnn.png": "/static/media/designnn.62909b5b9e33f79ee40e.png",
-    "static/media/dddd.webp": "/static/media/dddd.5089ac3d0c554c585083.webp",
     "static/media/money-bag.png": "/static/media/money-bag.df21a3442a3a33303272.png",
     "static/media/teammain.png": "/static/media/teammain.b1048966dc9ac116b86e.png",
     "static/media/teach11.png": "/static/media/teach11.a645aa89b911d8602c36.png",
@@ -94,7 +91,6 @@
     "static/media/warning.png": "/static/media/warning.27c177462efb749e7d97.png",
     "static/media/nego.png": "/static/media/nego.61fc20c967ff1de40134.png",
     "static/media/LNWhite.png": "/static/media/LNWhite.8d085f8f2b0b7e439da5.png",
-    "static/media/dart.png": "/static/media/dart.e7ee1d2c7286018f5e71.png",
     "static/media/money.png": "/static/media/money.112ef1399e787d316d29.png",
     "static/media/increase.png": "/static/media/increase.a979a25eff3f1f482ece.png",
     "static/media/dream.png": "/static/media/dream.a6adc1a12805944e63f7.png",
@@ -105,7 +101,6 @@
     "static/media/support.png": "/static/media/support.6a092232f30bfcd589af.png",
     "static/media/you-can.png": "/static/media/you-can.1257542b8a005336c24e.png",
     "static/media/ourteam.png": "/static/media/ourteam.a018afb7e2fdf4a1e305.png",
-    "static/media/ourteamd.png": "/static/media/ourteamd.59943490764b5fb64fb0.png",
     "static/media/inventory.png": "/static/media/inventory.270d0225023707836f02.png",
     "static/media/teamaaa.png": "/static/media/teamaaa.835e0b626a839410d7aa.png",
     "static/media/aboutln1.png": "/static/media/aboutln1.d722e762ed5ff8788c67.png",
@@ -116,13 +111,12 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/line.svg": "/static/media/line.cb9f8977db37abe98cc0.svg",
     "index.html": "/index.html",
     "static/media/visa (1).svg": "/static/media/visa (1).5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "static/media/ball.svg": "/static/media/ball.3fd7b69ef820ed69d89467d63e115582.svg",
     "static/media/mastercard.svg": "/static/media/mastercard.7d056af02786552977cff392eb03b1a2.svg",
-    "main.e3f1ed60.css.map": "/static/css/main.e3f1ed60.css.map",
-    "main.df1a5d3f.js.map": "/static/js/main.df1a5d3f.js.map",
+    "main.6cc9978b.css.map": "/static/css/main.6cc9978b.css.map",
+    "main.c2246718.js.map": "/static/js/main.c2246718.js.map",
     "37.23d5dc1f.chunk.js.map": "/static/js/37.23d5dc1f.chunk.js.map",
     "721.ffb5aae4.chunk.js.map": "/static/js/721.ffb5aae4.chunk.js.map",
     "128.48cf579f.chunk.js.map": "/static/js/128.48cf579f.chunk.js.map",
@@ -139,7 +133,7 @@
     "17.ef9f6fbc.chunk.js.map": "/static/js/17.ef9f6fbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3f1ed60.css",
-    "static/js/main.df1a5d3f.js"
+    "static/css/main.6cc9978b.css",
+    "static/js/main.c2246718.js"
   ]
 }

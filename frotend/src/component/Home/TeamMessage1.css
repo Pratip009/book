@@ -1,6 +1,6 @@
 .team-message-container {
   width: 100%;
-  height: 538px;
+  height: auto; /* You might want to change this to auto for better responsiveness */
   display: grid;
   position: relative;
   background-color: #003e90;
@@ -19,7 +19,6 @@
   margin: 0 auto;
 }
 
-
 .title {
   font-size: 60px;
   font-weight: 700;
@@ -29,8 +28,8 @@
 }
 
 .description {
-  width:758px;
-  height: 244px;
+  width: 758px; /* You might want to set this to auto or max-width for responsiveness */
+  height: 244px; /* Consider changing to auto for responsiveness */
   font-size: 18px;
   line-height: 32px;
   font-weight: 400;
@@ -96,5 +95,123 @@
   height: 68px;
   top: 146px;
   left: 1456px;
-  transform: rotate(180deg);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .chat-bubbles-icon {
+    width: 300px; /* Adjust size for tablet */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Adjustments for iPads (768px - 1024px) */
+@media (max-width: 1024px) {
+  .team-message-container {
+    padding: 30px; /* Adjust padding for iPads */
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack columns for better layout */
+    padding: 0; /* Remove padding for the grid */
+  }
+.content{
+  padding: 0!important;
+}
+  .title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .description {
+    font-size: 16px; /* Maintain readability */
+    width: auto; /* Allow width to adjust */
+    height: auto; /* Allow height to adjust */
+    line-height: 25px;
+  }
+
+  .subtitle {
+    font-size: 14px; /* Adjust subtitle size */
+  }
+
+  .chat-bubbles-icon {
+    width: 250px; /* Adjust for better fit */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .star-icon, .rocket-icon, .book-icon, .planet-icon {
+    width: 35px; /* Reduce icon size */
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-message-container {
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack the columns */
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .description {
+    font-size: 14px;
+    width: auto; /* Allow width to adjust */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .chat-bubbles-icon {
+    width: 250px; /* Further adjust for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .star-icon, .rocket-icon, .book-icon, .planet-icon {
+    width: 30px; /* Reduce icon size */
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-message-container{
+    padding: 0;
+  }
+  
+  .title {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .chat-bubbles-icon {
+    width: 200px; /* Further adjust for smaller mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .star-icon, .rocket-icon, .book-icon, .planet-icon {
+    width: 25px; /* Further reduce icon size */
+    height: 25px;
+  }
 }

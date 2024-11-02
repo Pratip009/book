@@ -11,7 +11,9 @@
     padding: 2rem;
     position: relative;
 }
-
+.Newcontainer{
+    z-index: 3;
+}
 /* Title styling */
 .programs-container h2 {
     font-size: 60px;
@@ -21,23 +23,18 @@
     line-height: 60px;
     z-index: 1;
 }
+
 .underline-image {
-    width: 289px;                /* Set width */
-    height: 12px;                /* Set height */
-    position: absolute;          /* Position it absolutely */
-    top: 164px;                  /* Adjust vertical position */
-    left: 800px;                 /* Adjust horizontal position */
-    border-radius: 45px;        /* Optional: apply border-radius */
-    /* Optionally add other styles like margin or padding */
-  }
-  
+    width: 289px; 
+    height: 12px; 
+    position: absolute; 
+    top: 164px; 
+    left: 800px; 
+    border-radius: 45px; 
+}
+
 /* Grid layout for program cards */
 .programs-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1100px; /* Limit max width for better centering */
     margin: 0 auto;
     z-index: 1;
 }
@@ -52,7 +49,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     position: relative;
-    width: 100%; /* Full width of grid cell */
     height: 275px;
 }
 
@@ -77,57 +73,36 @@
 .card-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between icon and text content */
+    justify-content: space-between; 
     width: 100%;
 }
 
 /* Icon styling and spacing for left column */
-.icon1 {
-    width: 90px;                    /* Fixed width */
-    height: 90px;                   /* Fixed height */
-    background-color: #85CEC7;      /* Background color */
-    border-radius: 50%;             /* Make the div circular */
-    display: flex;                  /* Flexbox layout */
-    align-items: center;            /* Center items vertically */
-    justify-content: center;        /* Center items horizontally */
-    overflow: hidden;               /* Hide overflow */
-    margin-right: 1rem;             /* Margin to the right */
+.icon12, .icon2, .icon3, .icon4 {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+    margin-right: 1rem; 
 }
 
-
+.icon12 {
+    background-color: #85CEC7; 
+}
 
 .icon2 {
-    width: 90px;                    /* Fixed width */
-    height: 90px;                   /* Fixed height */
-    background-color: #ECCA7F;      /* Background color */
-    border-radius: 50%;             /* Make the div circular */
-    display: flex;                  /* Flexbox layout */
-    align-items: center;            /* Center items vertically */
-    justify-content: center;        /* Center items horizontally */
-    overflow: hidden;               /* Hide overflow */
-    margin-right: 1rem;
+    background-color: #ECCA7F; 
 }
+
 .icon3 {
-    width: 90px;                    /* Fixed width */
-    height: 90px;                   /* Fixed height */
-    background-color: #E8B4A6;      /* Background color */
-    border-radius: 50%;             /* Make the div circular */
-    display: flex;                  /* Flexbox layout */
-    align-items: center;            /* Center items vertically */
-    justify-content: center;        /* Center items horizontally */
-    overflow: hidden;               /* Hide overflow */
-    margin-right: 1rem;
+    background-color: #E8B4A6; 
 }
+
 .icon4 {
-    width: 90px;                    /* Fixed width */
-    height: 90px;                   /* Fixed height */
-    background-color: #8DBBF6;      /* Background color */
-    border-radius: 50%;             /* Make the div circular */
-    display: flex;                  /* Flexbox layout */
-    align-items: center;            /* Center items vertically */
-    justify-content: center;        /* Center items horizontally */
-    overflow: hidden;               /* Hide overflow */
-    margin-right: 1rem;
+    background-color: #8DBBF6; 
 }
 
 /* Text content column within the program card */
@@ -166,10 +141,7 @@
     height: 42px;
     border: none;
     border-radius: 16px;
-    padding-top: 10px;
-    padding-right: 16px;
-    padding-bottom: 10px;
-    padding-left: 16px;
+    padding: 10px 16px;
     gap: 4px;
     background-color: #ffffff;
 }
@@ -199,4 +171,197 @@
     height: 183px;
     bottom: 10%;
     right: 0;
+}
+@media (max-width: 1440px) {
+    .programs-container {
+        padding: 2rem; /* Adjust padding if necessary */
+    }
+
+    .programs-container h2 {
+        font-size: 55px; /* Slightly smaller title size */
+        margin-bottom: 4rem; /* Adjust margin as needed */
+    }
+
+    .underline-image {
+        width: 250px; /* Adjust underline size */
+        height: 10px;
+        position: absolute;
+        top: 180px; /* Adjust position */
+        left: 61%; /* Centered */
+        transform: translateX(-50%); /* Center adjustment */
+        border-radius: 45px;
+    }
+
+    .program-card {
+        height: 260px; /* Slightly taller cards */
+        padding: 1.5rem; /* Maintain comfortable padding */
+    }
+
+    .program-card h3 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .program-card p {
+        font-size: 15px; /* Adjust paragraph size */
+    }
+
+    .program-card button {
+        width: 130px; /* Adjust button size */
+    }
+
+    .text-content {
+        width: 90%; /* Increase text content width */
+    }
+
+    .icon12, .icon2, .icon3, .icon4 {
+        margin-right: 1.5rem; /* Increase spacing between icons */
+    }
+
+    /* Adjust the sizes of decorative icons */
+    .tree-icon, .rocket-icon, .sun-icon {
+        width: 100px; /* Adjust for visibility */
+        height: auto; 
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .programs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #fff1eb;
+        text-align: center;
+        position: relative;
+    }
+    .underline-image {
+        width: 250px;
+        height: 10px;
+        position: absolute;
+        top: 95px;
+        left: 65%;
+        border-radius: 45px;
+        transform: translateX(-50%); 
+    }
+
+    .programs-container h2 {
+        font-size: 50px; 
+        margin-bottom: 3rem;
+    }
+    .programs-container h3 {
+        font-size: 30px; 
+    }
+.text-content{
+    width: 80%;
+}
+    .program-card {
+        height: 220px; 
+    }
+
+    .program-card button {
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+    }
+    .programs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #fff1eb;
+        text-align: center;
+      
+        position: relative;
+    }
+    .icon12,.icon2,.icon3,.icon4{
+        margin: 0 !important;
+    }
+    .programs-container h2 {
+        font-size: 40px; 
+        margin-bottom: 3rem; 
+    }
+
+    .underline-image {
+        width: 190px;
+        height: 8px;
+        position: absolute;
+        top: 90px;
+        left: 65.5%;
+        border-radius: 45px;
+        transform: translateX(-50%);  
+    }
+    .program-card{
+       height: 250px;
+       padding: 0 10px;
+    }
+    .program-card h3 {
+        font-size: 20px; 
+    }
+
+    .program-card p {
+        font-size: 14px; 
+    }
+
+    .program-card button {
+        width: 130px; 
+    }
+
+    .tree-icon, .rocket-icon, .sun-icon {
+        width: 80px;
+        height: auto; 
+    }
+}
+
+@media (max-width: 575px) {
+    .programs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #fff1eb;
+        text-align: center;
+        position: relative;
+        padding: 0;
+    }
+    .programs-container h2 {
+        font-size: 20px;
+     
+    }
+
+    .underline-image {
+      display: none;  
+    }
+
+    .program-card {
+        height: 180px; 
+    }
+
+    .program-card h3 {
+        font-size: 14px; 
+    }
+
+    .program-card p {
+        font-size: 10px; 
+    }
+
+    .program-card button {
+        padding: auto;
+        font-size: 10px;
+        width: 100px; 
+        
+    }
 }

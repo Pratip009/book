@@ -1,134 +1,259 @@
-/* General Product Card Styling */
+/* ProductCard.css */
+
+/* Base Styles */
 .product-card {
-    border: 1px solid #D7D7D7 !important;
-   
     width: 291px;
     height: 328px;
+    border-radius: 10px;
     overflow: hidden;
-    
-    transition: transform 0.3s ease;
-    
+    border: 1px solid #D7D7D7;
+    transition: transform 0.2s ease-in-out;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.03);
 }
 
-.product-card .card-title {
+.Product_Inner_Card {
+    width: 255px;
+    height: 129px;
+    background-color: #ECF4FF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border: none;
+}
 
-    height: 24px;
-    font-family: 'Quicksand';
+.card-img-top {
+    width: 41px;
+    height: 41px;
+    object-fit: contain;
+}
+
+.body {
+    padding: 0 15px;
+    align-items: flex-start;
+}
+
+.discount-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 25px;
+    border-radius: 100px;
+    padding: 10px;
+    gap: 10px;
+    color: #0C7D3F;
+    font-family: 'Nunito';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #CEFFC9;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-family: 'Nunito';
     font-size: 22px;
     font-weight: 700;
+    color: #313131;
     line-height: 24px;
-    color: #1F1F1F;
-    
+    margin-bottom: 4px;
 }
-.product_btn{
-    width: 110px;
-    height: 34px;
+
+.text-reset {
+    color: inherit;
+    text-decoration: none;
+}
+
+.MuiButton-root.product_btnn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
     border-radius: 12px;
-    border: 1px solid #000000 !important;
-    margin-top: 1rem;
-}
-.product-card .description {
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px; /* Add a font size for the description */
-    color: #555; /* Optional: Change the color of the description */
-     /* Center the description */
-    margin: 10px 0; /* Add some margin for spacing */
-}
-
-.product-card .price-section {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Align items with space between */
-
-    font-family: 'Outfit', sans-serif;
-    margin-top: auto; /* Push price section to the bottom */
-}
-
-/* .product-card .old-price {
-    background-color: #e22323;
-    padding: 2px 15px;
-    border-radius: 5px;
-    text-decoration: line-through;
-    color: #ffffff;
-    font-size: 16px;
-} */
-
-.product-card .discount-price {
-  width: 64px;
-  height: 25px;
-  border-radius: 100px;
-  gap: 10px;
-  background-color: #CEFFC9;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  font-family: 'Nunito';
-  color: #0C7D3F;
-}
-
-.icon-cart {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff4e00 !important;
-    color: #fff;
-    padding: 8px;
-    border-radius: 50%;
+    border: 1px solid #000000;
+    color: #313131;
+    font-weight: 700;
     cursor: pointer;
-    font-size: 35px;
+    transition: background-color 0.3s;
+    text-transform: capitalize;
+    margin-top: 1rem;
+     margin-bottom: 10px;
 }
 
-.icon-cart:hover {
-    background-color: #e03b00;
+.MuiButton-root.product_btnn:hover {
+    background-color: #f0f0f0;
 }
 
-/* Grid Layout for Product Cards */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards in a row for desktop */
-    gap: 16px;
-    margin: 20px 0;
+/* Small Devices (Phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .product-card {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .Product_Inner_Card {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .card-img-top {
+        width: 35px;
+        height: 35px;
+    }
+
+    .body {
+        padding: 10px;
+    }
+
+    .discount-price {
+        font-size: 14px;
+        width: 60px;
+        height: 22px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .MuiButton-root.product_btnn {
+        font-size: 14px;
+        padding: 6px 10px;
+        margin-bottom: 10px;
+    }
 }
 
+/* Medium Devices (Tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .product-card {
+        width: 220px;
+        height: auto;
+    }
+    
+    .Product_Inner_Card {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .card-img-top {
+        width: 38px;
+        height: 38px;
+    }
+
+    .discount-price {
+        font-size: 15px;
+    }
+
+    .card-title {
+        font-size: 17px;
+    }
+
+    .MuiButton-root.product_btnn {
+        font-size: 15px;
+        padding: 3px 12px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) {
+    .product-card {
+        width: 291px;
+        height: 328px;
+    }
+    
+    .Product_Inner_Card {
+        width: 255px;
+        height: 129px;
+    }
+    
+    .card-img-top {
+        width: 41px;
+        height: 41px;
+    }
+
+    .discount-price {
+        font-size: 16px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .MuiButton-root.product_btnn {
+        font-size: 16px;
+        padding: 8px 12px;
+        margin-bottom: 10px;
+    }
+}
+/* Medium Devices (Tablets, up to 1024px) */
 @media (max-width: 1024px) {
-    /* For tablet and smaller screens */
-    .products-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+    .product-card {
+        width: 210px; /* Adjust width for tablets */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 auto; /* Center the card */
+    }
+    
+    .Product_Inner_Card {
+        width: 200px; /* Slightly reduced inner card width */
+        height: 120px; /* Adjust inner card height for better proportions */
+    }
+    
+    .card-img-top {
+        width: 40px; /* Adjust image size */
+        height: 40px;
+    }
+
+    .discount-price {
+        font-size: 15px; /* Slightly smaller font size */
+    }
+
+    .card-title {
+        font-size: 16px; /* Slightly smaller title font */
+    }
+
+    .MuiButton-root.product_btnn {
+        font-size: 15px; /* Adjust button font size */
+        padding: 3px 12px; /* Adjust padding for buttons */
+        margin-bottom: 8px; /* Slightly smaller margin */
     }
 }
 
-@media (max-width: 768px) {
-    /* For devices with width between 481px and 768px */
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .product-card {
+        width: 310px;
+        height: 350px;
     }
-}
-
-@media (max-width: 480px) {
-    /* For mobile devices with width less than 480px */
-    .products-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 card in a row */
+    
+    .Product_Inner_Card {
+        width: 270px;
+        height: 140px;
     }
-}
+    
+    .card-img-top {
+        width: 45px;
+        height: 45px;
+    }
 
-/* Image Styling */
-.product-card .card-img-top {
-    width: 41px !important;
-    height: 41px !important;
-   
-    object-fit: contain; /* Ensure the entire image fits */
-    object-position: center;
-}
+    .discount-price {
+        font-size: 17px;
+    }
 
-/* Ensure proper layout for card body */
-.product-card .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align items from the top */
-    padding: 16px; /* Added padding for better spacing */
-    align-items: center; /* Center items horizontally */
+    .card-title {
+        font-size: 24px;
+    }
+
+    .MuiButton-root.product_btnn {
+        font-size: 17px;
+        padding: 10px 14px;
+        margin-bottom: 10px;
+    }
 }

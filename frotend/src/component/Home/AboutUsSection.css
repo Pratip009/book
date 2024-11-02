@@ -1,0 +1,456 @@
+/* AboutUsSection.css */
+
+.Aboutcontainer {
+    position: relative;
+    width: 100%;
+    height: 666px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffffff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Background boxes */
+  .backgroundBoxOne {
+    position: absolute;
+    top: 84px;
+    left: 620px;
+    width: 145px;
+    height: 155px;
+    background-color: #e0d6fc;
+    border-radius: 10px;
+    z-index: -2;
+  }
+  
+  .backgroundBoxTwo {
+    position: absolute;
+    left: 51px;
+    top: 441px;
+    width: 182px;
+    height: 161px;
+    background-color: #fee4dd;
+    border-radius: 10px;
+    z-index: -2;
+  }
+  
+  /* Main Content Section */
+  .imageSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .image {
+    width: 541px;
+    height: 395px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .textSection {
+    flex: 1;
+    padding: 20px;
+    z-index: 2;
+  }
+  
+  .subheading {
+    color: #ff4e00;
+    font-family: Quicksand;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .heading {
+    width: 641px;
+    position: relative;
+    color: #003e90;
+    font-family: Quicksand;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  
+  .underline {
+    position: absolute;
+    width: 239px;
+    height: 12px;
+    top: 300px;
+    left: 1095px;
+    border-radius: 45px;
+    z-index: -1;
+  }
+  
+  .call {
+    font-family: Quicksand;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #313131;
+    margin: 0;
+  }
+  
+  .features {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  
+  .featureItem {
+    width: 242.27px;
+    height: 48px;
+    background: #ffffff00;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 25px 0px #0000000f;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Quicksand;
+    color: #313131;
+  }
+  
+  .checkMark {
+    color: #313131;
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  
+  .button {
+    width: 201.38px;
+    height: 61px;
+    border-radius: 22px;
+    background-color: #ff4e00;
+    font-family: Quicksand;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contactInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phoneIcon {
+    font-size: 24px;
+    color: #ff6b6b;
+    margin-right: 10px;
+  }
+  
+  .phoneNumber {
+    font-family: Quicksand;
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 600;
+    color: #313131;
+  }
+  
+  /* Clip art styles */
+  .carClipArt {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 91px;
+    height: 66px;
+    opacity: 1;
+  }
+  .phone-link {
+    color: inherit; /* Make link color inherit from parent */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.phone-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+  .globeClipArt {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 121px;
+    height: 98px;
+    opacity: 1;
+  }
+  
+  /* Responsive Styles */
+  .actionSection {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  /* AboutUsSection.css */
+
+/* Existing Styles Omitted for Brevity */
+
+/* Responsive Styles */
+/* AboutUsSection.css */
+
+/* Existing Styles Omitted for Brevity */
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    /* Tablet landscape mode */
+    .Aboutcontainer {
+        height: auto;
+        padding: 20px;
+    }
+    .phone-link {
+      color: inherit; /* Make link color inherit from parent */
+      text-decoration: none; /* Remove underline from link */
+  }
+  
+  .phone-link:hover {
+      text-decoration: underline; /* Add underline on hover */
+  }
+    .image {
+        width: 100%;
+        height: auto;
+    }
+    .heading {
+        font-size: 30px;
+        line-height: 1.2;
+        width: 350px;
+        position: relative;
+        color: #003e90;
+        font-family: 'Quicksand';
+        font-weight: 700;
+    }
+    .subheading {
+        font-size: 18px;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .featureItem {
+        width: 100%;
+        font-size: 15px;
+        padding: 8px;
+    }
+    .actionSection {
+        margin-top: 10px !important;
+        gap: 10px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+        padding: 7px 15px;
+        margin: 0 !important;
+    }
+    
+    /* Hide background boxes for tablet and smaller screens */
+    .backgroundBoxOne,
+    .backgroundBoxTwo {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+  /* General styles for the About container */
+  .Aboutcontainer {
+      flex-direction: column; /* Stack elements vertically */
+      padding: 15px; /* Add padding for better spacing */
+      height: auto; /* Allow height to adjust based on content */
+  }
+
+  /* Image styling */
+  .image {
+      width: 100%; /* Full width for images */
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 20px; /* Spacing below the image */
+  }
+
+  /* Heading styles */
+  .heading {
+      font-size: 25px; /* Adjust heading size */
+  }
+
+  .subheading {
+      font-size: 16px; /* Adjust subheading size */
+  }
+
+  /* Features grid adjustments */
+  .features {
+      display: grid; /* Use grid layout for features */
+      grid-template-columns: repeat(2, 1fr);
+      z-index: 2; /* Ensure visibility */
+  }
+.underline{
+  display: none;
+}
+  /* Feature item styles */
+  .featureItem {
+      font-size: 13px; /* Font size for feature items */
+      /* Padding around feature items */
+      width: 90%; /* Maintain width */
+      margin: 0 auto; /* Center the items */
+  }
+
+  /* Button styles */
+  .button {
+      font-size: 13px; /* Adjust button text size */
+      padding: 12px 20px; /* Adjust button padding */
+      width: 45%; /* Full width for button */
+      margin-top: 10px; /* Add spacing above the button */
+  }
+  .call,
+  .phoneNumber {
+      font-size: 13px; /* Adjust font size for contact info */
+  }
+  .actionSection {
+    flex-direction: row !important;
+    gap: 10px;
+    margin-top: 10px !important;
+}
+.carClipArt,
+    .globeClipArt {
+       z-index: -20;
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Mobile view */
+    .image {
+        width: 100%;
+        height: 200px;
+        object-fit: none;
+        padding: 0;
+    }
+    .heading {
+        font-size: 15px;
+        line-height: 35px;
+    }
+    .subheading {
+        font-size: 14px;
+    }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        gap: 16px;
+        width: 100%;
+    }
+    .featureItem {
+        width: auto;
+        max-width: 300px;
+        font-size: 14px;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    .button {
+        height: 45px;
+        font-size: 12px;
+        padding: 10px;
+        width: 20%;
+    }
+    
+    /* Hide background boxes for mobile view */
+    .backgroundBoxOne,
+    .backgroundBoxTwo {
+        display: none;
+    }
+    
+    .carClipArt,
+    .globeClipArt {
+        display: none;
+    }
+    .contactInfo {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .phoneIcon {
+        font-size: 20px;
+    }
+    .phoneNumber {
+        font-size: 14px;
+    }
+    .actionSection {
+        flex-direction: row !important;
+        gap: 10px;
+        margin-top: 10px !important;
+    }
+    .underline{
+      display: none;
+    }
+}
+
+
+/* General adjustments for small mobile devices */
+@media (max-width: 360px) {
+  .Aboutcontainer{
+    padding: 10px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    gap: 16px;
+    width: 100%;}
+
+    .heading {
+        font-size: 15px;
+        line-height: 32px;
+    }
+    .subheading {
+        font-size: 12px;
+    }
+    .featureItem {
+        font-size: 10px;
+        padding: 6px;
+    }
+    .button {
+        font-size: 10px;
+        padding: 8px;
+    }
+    .contactInfo {
+        gap: 8px;
+    }
+    .underline {
+   
+      display: none;
+    } .actionSection {
+      flex-direction: row !important;
+      gap: 10px;
+      margin-top: 10px;
+  }
+  .phoneIcon {
+    font-size: 12px;
+    color: #ff6b6b;
+    margin-right: 10px;
+  }
+  .call,.phoneNumber{
+    font-size: 10px;
+  }
+
+}
+
+  
+  

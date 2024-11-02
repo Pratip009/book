@@ -5,11 +5,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./ProductSection.css"; // Import any CSS specific to ProductSection
 import underline from "../../Image/home/underline.png";
+
 function ProductSection({ products }) {
   return (
     <div className="product-section">
       <h2>
-        Choose the right <span>product</span> for you
+        Choose the right <span>product</span>
         <img src={underline} alt="underline" className="underline-image" />
       </h2>
       <p>

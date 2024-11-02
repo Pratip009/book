@@ -1,46 +1,359 @@
-.container {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f0f4f8;
-}
-
-.title {
+.goals-container {
+    background-image: url('../../Image/home/teamstar.png'), url('../../Image/home/throne.png'), url('../../Image/home/hair.png');
+    background-size: 180px 180px, 68px 67px, 100px 92px; /* Sizes for star, throne, and hair */
+    background-position: -74px 151px, 814px 734px, 1409.77px 538px; /* Positions for star, throne, and hair */
+    background-repeat: no-repeat;
+    background-color: #f4faff;
+    padding: 40px 20px;
     text-align: center;
-    color: #1a1a1a;
-}
-
-.sections {
+    position: relative;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .goals-container-title {
+    font-family: 'Quicksand';
+    font-size: 60px;
+    font-weight: 700;
+    color: #003E90;
+    margin-bottom: 30px;
+    line-height: 60px;
+    z-index: 1;
+  }
+  .underline-image2 {
+    display: block; /* Change to block to position it correctly */
+    margin: 0 auto; /* Center the image */
+    width: 250px; /* Adjust as needed */
+     /* Set max width for the underline */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; 
+    top: 110px; /* Position relative to h2 */
+    left: 60%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 0; /* Keep the image behind the text */
+  }
+  .objective-highlight {
+    position: relative;
+    color: #1c4074;
+  }
+  
+  .objective-highlight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #ffddb5;
+    bottom: -5px;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .goal-card {
+    width: 624px;
     display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.section {
-    background-color: #cce7e8;
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 174px;
     border-radius: 10px;
-    width: 40%;
-    text-align: center;
-}
-
-.section.vision {
-    background-color: #cce7e8;
-}
-
-.section.mission {
-    background-color: #d0e7ff;
-}
-
-.icon {
-    background-color: #8fd3d4;
-    border-radius: 50%;
-    padding: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    color: #1c4074;
+  }
+  
+  .vision-card {
+    background-color: #bce9e6;
+  }
+  
+  .mission-card {
+    background-color: #c4dcfc;
+  }
+  
+  .goal-icon {
+    width: 85px;
+    height: 85px;
     margin-bottom: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .vision-icon {
+    background-image: url('../../Image/home/mission.png'); /* Add your vision icon */
+  }
+  
+  .mission-icon {
+    background-image: url('../../Image/home/mission1.png'); /* Add your mission icon */
+  }
+  
+  .goal-title {
+    font-family: 'Nunito';
+    font-size: 28px;
+    line-height: 33.6px;
+    font-weight: 800;
+  }
+  
+  .goal-text {
+    font-family: 'Nunito';
+    font-size: 18px;
+    line-height: 22.31px;
+    font-weight: 500;
+    letter-spacing: 0.17px;
+  }
+  
+  .update-card {
+    width: 1270px;
+    height: 259px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #8DBBF6;
+    padding: 0;
+  }
+  
+  .update-header {
+    background-color: #FFE2A3;
+    text-align: start;
+  }
+  
+  .update-header h5 {
+    font-family: 'Nunito';
+    font-size: 28px;
+    line-height: 33.6px;
+    font-weight: 800;
+  }
+  
+  .update-content {
+    font-family: 'Nunito';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22.31px;
+    letter-spacing: 0.17px;
+    text-align: justify;
+    align-items: center;
+  }
+  
+  /* Media Queries */
+/* Extra Small Devices (320px) */
+@media (max-width: 320px) {
+  .goals-container-title {
+      font-size: 20px; /* Smaller title font size */
+  }
+
+  .underline-image2 {
+      width: 180px; /* Adjust underline image size */
+      top: 100px; /* Adjust position for smaller screens */
+  }
+
+  .goal-card {
+      width: 100%; /* Full width for small screens */
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Allow height to adjust */
+      padding: 10px; /* Adjust padding */
+  }
+
+  .goal-icon {
+      width: 60px; /* Adjust icon size */
+      height: 60px; /* Adjust icon size */
+  }
+
+  .goal-title {
+      font-size: 16px; /* Smaller title font size */
+  }
+
+  .goal-text {
+      font-size: 12px; /* Smaller text size */
+  }
+
+  .update-card {
+      width: 100%; /* Full width for update cards */
+      height: auto; /* Allow height to adjust */
+  }
+
+  .update-header h5 {
+      font-size: 20px; /* Smaller header font size */
+  }
+
+  .update-content {
+      font-size: 16px; /* Smaller content font size */
+  }
 }
 
-.updates {
-    background-color: #ffe7b3;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+/* Small Devices (375px) */
+@media (max-width: 375px) {
+  .goals-container-title {
+      font-size: 24px; /* Adjust title font size */
+  }
+
+  .underline-image2 {
+      width: 200px; /* Adjust underline image size */
+      top: 105px; /* Adjust position for small screens */
+  }
+
+  .goal-card {
+      width: 100%; /* Full width for small screens */
+      height: auto; /* Allow height to adjust */
+      padding: 15px; /* Adjust padding */
+  }
+
+  .goal-icon {
+      width: 70px; /* Adjust icon size */
+      height: 70px; /* Adjust icon size */
+  }
+
+  .goal-title {
+      font-size: 18px; /* Adjust title font size */
+  }
+
+  .goal-text {
+      font-size: 14px; /* Adjust text size */
+  }
+
+  .update-card {
+      width: 100%; /* Full width for update cards */
+      height: auto; /* Allow height to adjust */
+  }
+
+  .update-header h5 {
+      font-size: 22px; /* Adjust header font size */
+  }
+
+  .update-content {
+      font-size: 18px; /* Adjust content font size */
+  }
 }
+
+/* Medium Devices (425px) */
+@media (max-width: 425px) {
+  .goals-container-title {
+      font-size: 26px; /* Adjust title font size */
+  }
+
+  .underline-image2 {
+      width: 220px; /* Adjust underline image size */
+      top: 110px; /* Adjust position for medium screens */
+  }
+
+  .goal-card {
+      width: 100%; /* Full width for medium screens */
+      height: auto; /* Allow height to adjust */
+      padding: 15px; /* Adjust padding */
+  }
+
+  .goal-icon {
+      width: 75px; /* Adjust icon size */
+      height: 75px; /* Adjust icon size */
+  }
+
+  .goal-title {
+      font-size: 20px; /* Adjust title font size */
+  }
+
+  .goal-text {
+      font-size: 16px; /* Adjust text size */
+  }
+
+  .update-card {
+      width: 100%; /* Full width for update cards */
+      height: auto; /* Allow height to adjust */
+  }
+
+  .update-header h5 {
+      font-size: 24px; /* Adjust header font size */
+  }
+
+  .update-content {
+      font-size: 18px; /* Adjust content font size */
+  }
+}
+
+/* Medium Devices (768px) */
+@media (max-width: 768px) {
+  .goals-container-title {
+      font-size: 28px; /* Adjust title font size */
+  }
+
+  .underline-image2 {
+      width: 250px; /* Keep size for larger small devices */
+      top: 110px; /* Adjust position */
+      left: 550px !important;
+  }
+
+  .goal-card {
+      width: 100%; /* Full width for small tablets */
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Allow height to adjust */
+      padding: 20px; /* Maintain padding */
+  }
+
+  .goal-icon {
+      width: 80px; /* Adjust icon size */
+      height: 80px; /* Adjust icon size */
+  }
+
+  .goal-title {
+      font-size: 22px; /* Adjust title font size */
+  }
+
+  .goal-text {
+      font-size: 16px; /* Maintain text size */
+  }
+
+  .update-card {
+      width: 100%; /* Full width for update cards */
+      height: auto; /* Allow height to adjust */
+  }
+
+  .update-header h5 {
+      font-size: 26px; /* Adjust header font size */
+  }
+
+  .update-content {
+      font-size: 18px; /* Adjust content font size */
+  }
+}
+
+/* Large Devices (1024px) */
+@media (max-width: 1024px) {
+  .goals-container-title {
+      font-size: 32px; /* Adjust title font size */
+  }
+
+  .underline-image2 {
+      width: 150px; /* Keep size for larger small devices */
+      top: 105px; /* Maintain position */
+      left: 590px;
+  }
+
+  .goal-card {
+      width: 100%; /* Full width for tablets */
+      height: auto; /* Allow height to adjust */
+      padding: 20px; /* Maintain padding */
+  }
+
+  .goal-icon {
+      width: 85px; /* Maintain icon size */
+      height: 85px; /* Maintain icon size */
+  }
+
+  .goal-title {
+      font-size: 24px; /* Adjust title font size */
+  }
+
+  .goal-text {
+      font-size: 18px; /* Maintain text size */
+  }
+
+  .update-card {
+      width: 100%; /* Full width for update cards */
+      height: auto; /* Allow height to adjust */
+  }
+
+  .update-header h5 {
+      font-size: 28px; /* Adjust header font size */
+  }
+
+  .update-content {
+      font-size: 20px; /* Adjust content font size */
+  }
+}
+
+  

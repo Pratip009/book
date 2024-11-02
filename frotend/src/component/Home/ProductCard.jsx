@@ -61,54 +61,24 @@ function ProductCard({ product }) {
         to={`/product/${product._id}`}
         style={{ textDecoration: "none", color: "inherit" }}
       >
-        <MDBCard
-          style={{
-            width: "255px",
-            height: "129px",
-            borderTopLeftRadius: "6px",
-            borderTopRightRadius: "6px",
-            backgroundColor: "#ECF4FF",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-            border: "none",
-          }}
-        >
-          <MDBCardImage
-            src={imageUrl}
-            fluid
-            className="card-img-top"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-            }}
-          />
+        <MDBCard className="Product_Inner_Card">
+          <MDBCardImage src={imageUrl} fluid className="card-img-top" />
         </MDBCard>
 
         <MDBCardBody
           className="d-flex flex-column body"
-          style={{ padding: 0, alignItems: "flex-start" }}
+          style={{ padding: '0 15px', alignItems: "flex-start" }}
         >
           {/* Discount Price */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-              marginBottom: "8px",
-              marginTop: "8px",
-            }}
-          >
-            <span className="discount-price" style={{ margin: 0 }}>
+          <div>
+            <span className="discount-price">
               {discountPrice}
             </span>
           </div>
 
           {/* Product Name */}
           <a href={`/product/${product._id}`} className="text-reset">
-            <h5 className="card-title mb-1" style={{ margin: 0 }}>
+            <h5 className="card-title mb-1">
               {truncatedTitle}
             </h5>
           </a>
@@ -116,7 +86,7 @@ function ProductCard({ product }) {
           {/* Product Description */}
 
           {/* Rating Section */}
-          <div className="d-flex align-items-center mb-2" style={{ margin: 0 }}>
+          <div className="d-flex align-items-center mb-2">
             <Rating
               name="rating"
               value={product.ratings}
@@ -140,23 +110,8 @@ function ProductCard({ product }) {
 
           {/* Buy Now Button */}
           <Button
-            className="product_btn"
+            className="product_btnn"
             onClick={() => addToCartHandler(product._id, 1)}
-            style={{
-              display: "flex", // Use flexbox for alignment
-              alignItems: "center", // Center items vertically
-              justifyContent: "center", // Center items horizontally
-              padding: "8px 12px", // Add some padding
-              borderRadius: "12px", // Match your CSS
-              border: "1px solid #000", // Match your CSS
-               // Background color
-              color: "#313131", // Text color
-              fontWeight: "700", // Bold text
-              cursor: "pointer", // Pointer cursor on hover
-              transition: "background-color 0.3s", // Smooth background color change
-              textTransform: "capitalize",
-              marginTop:'1rem'
-            }}
           >
             Buy Now
             <FaArrowRightLong style={{ marginLeft: "5px" }} />{" "}
