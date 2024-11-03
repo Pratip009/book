@@ -137,7 +137,7 @@
 /* Extra Small Devices (320px) */
 @media (max-width: 320px) {
   .goals-container-title {
-      font-size: 20px; /* Smaller title font size */
+      font-size: 30px; /* Smaller title font size */
   }
 
   .underline-image2 {
@@ -316,7 +316,7 @@
 /* Large Devices (1024px) */
 @media (max-width: 1024px) {
   .goals-container-title {
-    font-size: 45px; /* Adjust title font size */
+    font-size: 30px; /* Adjust title font size */
   }
 
   .underline-image2 {
