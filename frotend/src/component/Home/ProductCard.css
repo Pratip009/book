@@ -235,19 +235,19 @@
 /* Medium Devices (Tablets, up to 1024px) */
 @media (max-width: 1024px) {
     .product-card {
-        width: 210px; /* Adjust width for tablets */
+        width: 300px; /* Adjust width for tablets */
         height: auto; /* Allow height to adjust based on content */
         margin: 0 auto; /* Center the card */
     }
     
     .Product_Inner_Card {
-        width: 200px; /* Slightly reduced inner card width */
-        height: 120px; /* Adjust inner card height for better proportions */
+        width: 280px; /* Slightly reduced inner card width */
+        height: 140px; /* Adjust inner card height for better proportions */
     }
     
     .card-img-top {
-        width: 40px; /* Adjust image size */
-        height: 40px;
+        width: 60px; /* Adjust image size */
+        height: 60px;
     }
 
     .discount-price {

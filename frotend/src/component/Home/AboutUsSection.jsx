@@ -30,7 +30,7 @@ const AboutUsSection = () => {
         </div>
 
         {/* Text Section */}
-        <div className="col-lg-6 col-md-6">
+        <div className="col-lg-6 col-md-6 mainAboutContainer">
           <h3 className="subheading">About Us</h3>
           <h2 className="heading">Our Services Help You Succeed in Business</h2>
 
@@ -63,7 +63,7 @@ const AboutUsSection = () => {
           </div>
 
           {/* Explore More Button and Contact Info */}
-          <div className="actionSection d-flex flex-row align-items-center justify-content-center justify-content-md-start mt-3 z-2">
+          <div className="actionSection d-flex flex-row align-items-center justify-content-between justify-content-md-start mt-3 z-2">
             <button className="button me-3">Explore More →</button>
 
             <div className="contactInfo d-flex align-items-center">
