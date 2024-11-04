@@ -73,7 +73,7 @@
     line-height: 60px;
   }
   
-  .underline {
+  /* .underline {
     position: absolute;
     width: 239px;
     height: 12px;
@@ -81,8 +81,32 @@
     left: 1105px;
     border-radius: 45px;
     z-index: -1;
-  }
-  
+  } */
+  .underline {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 0; /* Start with a width of 0 for animation */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; 
+    top: 300px; /* Adjust top position as needed */
+    left: 80%; /* Center the image */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: -1; /* Keep the image behind other content */
+    animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+}
+
+@keyframes zigzagUnderline {
+    0% {
+        width: 0; /* Start with width 0 */
+    }
+    50% {
+        width: 239px; /* Reach max width at 50% */
+    }
+    100% {
+        width: 0; /* End with width 0 */
+    }
+}
+
   .call {
     font-family: Quicksand;
     font-size: 14px;
@@ -163,7 +187,7 @@
     top: 20px;
     left: 20px;
     width: 91px;
-    height: 66px;
+    height: auto;
     opacity: 1;
   }
   .phone-link {
@@ -179,7 +203,7 @@
     bottom: 20px;
     right: 20px;
     width: 121px;
-    height: 98px;
+    height: auto;
     opacity: 1;
   }
   
@@ -284,7 +308,7 @@
 
   /* Heading styles */
   .heading {
-      font-size: 25px; /* Adjust heading size */
+      font-size: 30px; /* Adjust heading size */
   }
 
   .subheading {
@@ -341,7 +365,8 @@
         padding: 0;
     }
     .heading {
-        font-size: 15px;
+      width: 100%;
+        font-size: 30px;
         line-height: 35px;
     }
     .subheading {
@@ -359,15 +384,15 @@
     }
    
     .featureItem {
-        width: auto;
-        max-width: 300px;
-        font-size: 14px;
+        width: 100%;
+ 
+        font-size: 11px;
         justify-content: center;
         box-sizing: border-box;
     }
     .button {
         height: 45px;
-        font-size: 12px;
+        font-size: 11px;
         padding: 10px;
         width: 40%;
     }
@@ -391,7 +416,7 @@
         font-size: 20px;
     }
     .phoneNumber {
-        font-size: 14px;
+        font-size: 11px;
     }
     .actionSection {
         flex-direction: row !important;
@@ -420,7 +445,7 @@
 }
 
     .heading {
-      font-size: 15px;
+      font-size: 10px;
       line-height: 35px;
       display: flex;
       align-items: center;

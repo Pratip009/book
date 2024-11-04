@@ -1,17 +1,53 @@
 .goals-container {
-    background-image: url('../../Image/home/teamstar.png'), url('../../Image/home/throne.png'), url('../../Image/home/hair.png');
-    background-size: 180px 180px, 68px 67px, 100px 92px; /* Sizes for star, throne, and hair */
-    background-position: -74px 151px, 814px 734px, 1409.77px 538px; /* Positions for star, throne, and hair */
-    background-repeat: no-repeat;
     background-color: #f4faff;
     padding: 40px 20px;
     text-align: center;
     position: relative;
     border-radius: 8px;
     color: white;
-  }
-  
-  .goals-container-title {
+}
+
+/* Image background classes */
+.teamstar-image {
+  position: absolute;
+  top: 151px;
+  left: 0px;
+  background-image: url('../../Image/home/teamstar.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80px;
+  height: 80px;
+  z-index: 0;
+}
+
+.throne-image {
+  position: absolute;
+  top: 734px;
+  left: 814px;
+  background-image: url('../../Image/home/throne.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 68px;
+  height: 67px;
+  z-index: 0;
+}
+
+.hair-image {
+  position: absolute;
+  top: 538px;
+  left: 1409.77px;
+  background-image: url('../../Image/home/hair.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 92px;
+  z-index: 0;
+}
+
+.goals-container-title {
     font-family: 'Quicksand';
     font-size: 60px;
     font-weight: 700;
@@ -19,25 +55,26 @@
     margin-bottom: 30px;
     line-height: 60px;
     z-index: 1;
-  }
-  .underline-image2 {
-    display: block; /* Change to block to position it correctly */
-    margin: 0 auto; /* Center the image */
-    width: 250px; /* Adjust as needed */
-     /* Set max width for the underline */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute; 
-    top: 110px; /* Position relative to h2 */
-    left: 60%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: 0; /* Keep the image behind the text */
-  }
-  .objective-highlight {
+}
+
+.underline-image2 {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 110px;
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.objective-highlight {
     position: relative;
     color: #1c4074;
-  }
-  
-  .objective-highlight::after {
+}
+
+.objective-highlight::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -46,9 +83,9 @@
     bottom: -5px;
     left: 0;
     z-index: -1;
-  }
-  
-  .goal-card {
+}
+
+.goal-card {
     width: 624px;
     display: flex;
     align-items: center;
@@ -59,71 +96,73 @@
     margin: 10px;
     text-align: left;
     color: #1c4074;
-  }
-  
-  .vision-card {
+}
+
+.vision-card {
     background-color: #bce9e6;
-  }
-  
-  .mission-card {
+}
+
+.mission-card {
     background-color: #c4dcfc;
-  }
-  
-  .goal-icon {
+}
+
+.goal-icon {
     width: 85px;
     height: 85px;
     margin-bottom: 10px;
     background-size: contain;
     background-repeat: no-repeat;
-  }
-  
-  .vision-icon {
-    background-image: url('../../Image/home/mission.png'); /* Add your vision icon */
-  }
-  
-  .mission-icon {
-    background-image: url('../../Image/home/mission1.png'); /* Add your mission icon */
-  }
-  
-  .goal-title {
+}
+
+.vision-icon {
+    background-image: url('../../Image/home/mission.png');
+}
+
+.mission-icon {
+    background-image: url('../../Image/home/mission1.png');
+}
+
+.goal-title {
     font-family: 'Nunito';
     font-size: 28px;
     line-height: 33.6px;
     font-weight: 800;
     color: #1F1F1F;
-  }
-  
-  .goal-text {
+}
+
+.goal-text {
     font-family: 'Nunito';
     font-size: 18px;
     line-height: 22.31px;
     font-weight: 500;
     letter-spacing: 0.17px;
-  }
-  
-  .update-card {
+}
+
+.update-card {
     width: 1270px;
     height: 259px;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid #8DBBF6;
     padding: 0;
-  }
-  
-  .update-header {
+}
+
+.update-header {
     background-color: #FDE1A4;
     text-align: start;
-  }
-  
-  .update-header h5 {
+}
+
+.update-header h5 {
     font-family: 'Nunito';
     font-size: 28px;
     line-height: 33.6px;
     font-weight: 800;
     color: #1F1F1F;
-  }
-  
-  .update-content {
+}
+
+.update-content {
+  max-height: 300px; /* Set a fixed height for the scrollable area */
+  overflow-y: auto;
     font-family: 'Nunito';
     font-size: 20px;
     font-weight: 500;
@@ -131,231 +170,242 @@
     letter-spacing: 0.17px;
     text-align: justify;
     align-items: center;
-  }
-  
-  /* Media Queries */
+}
+
+/* Responsive Design */
+
 /* Extra Small Devices (320px) */
 @media (max-width: 320px) {
+    .teamstar-image {
+       display: none;
+      }
   .goals-container-title {
-      font-size: 30px; /* Smaller title font size */
+      font-size: 30px;
   }
 
   .underline-image2 {
-      width: 180px; /* Adjust underline image size */
-      top: 100px; /* Adjust position for smaller screens */
+      width: 180px;
+      top: 100px;
   }
 
   .goal-card {
-      width: 100%; /* Full width for small screens */
-      flex-direction: column; /* Stack elements vertically */
-      height: auto; /* Allow height to adjust */
-      padding: 10px; /* Adjust padding */
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
   }
 
   .goal-icon {
-      width: 60px; /* Adjust icon size */
-      height: 60px; /* Adjust icon size */
+      width: 60px;
+      height: 60px;
   }
 
   .goal-title {
-      font-size: 15px; /* Smaller title font size */
+      font-size: 15px;
   }
 
   .goal-text {
-      font-size: 12px; /* Smaller text size */
+      font-size: 12px;
   }
 
   .update-card {
-      width: 100%; /* Full width for update cards */
-      height: auto; /* Allow height to adjust */
+      width: 100%;
+      height: auto;
   }
 
   .update-header h5 {
-      font-size: 20px; /* Smaller header font size */
+      font-size: 20px;
   }
 
   .update-content {
-      font-size: 16px; /* Smaller content font size */
+      font-size: 16px;
   }
 }
 
 /* Small Devices (375px) */
 @media (max-width: 375px) {
+    .teamstar-image {
+        display: none;
+       }
   .goals-container-title {
-      font-size: 20px; /* Adjust title font size */
+      font-size: 20px;
   }
 
   .underline-image2 {
-      width: 200px; /* Adjust underline image size */
-      top: 105px; /* Adjust position for small screens */
+      width: 200px;
+      top: 105px;
   }
 
   .goal-card {
-      width: 100%; /* Full width for small screens */
-      height: auto; /* Allow height to adjust */
-      padding: 15px; /* Adjust padding */
+      width: 100%;
+      height: auto;
+      padding: 15px;
   }
 
   .goal-icon {
-      width: 70px; /* Adjust icon size */
-      height: 70px; /* Adjust icon size */
+      width: 70px;
+      height: 70px;
   }
 
   .goal-title {
-      font-size: 18px; /* Adjust title font size */
+      font-size: 18px;
   }
 
   .goal-text {
-      font-size: 14px; /* Adjust text size */
+      font-size: 14px;
   }
 
   .update-card {
-      width: 100%; /* Full width for update cards */
-      height: auto; /* Allow height to adjust */
+      width: 100%;
+      height: auto;
   }
 
   .update-header h5 {
-      font-size: 22px; /* Adjust header font size */
+      font-size: 22px;
   }
 
   .update-content {
-      font-size: 18px; /* Adjust content font size */
+      font-size: 18px;
   }
 }
 
 /* Medium Devices (425px) */
 @media (max-width: 425px) {
+    .teamstar-image {
+        display: none;
+       }
   .goals-container-title {
-      font-size: 28px; /* Adjust title font size */
+      font-size: 28px;
   }
 
   .underline-image2 {
-      width: 220px; /* Adjust underline image size */
-      top: 110px; /* Adjust position for medium screens */
+      width: 220px;
+      top: 110px;
   }
 
   .goal-card {
-      width: 100%; /* Full width for medium screens */
-      height: auto; /* Allow height to adjust */
-      padding: 15px; /* Adjust padding */
+      width: 100%;
+      height: auto;
+      padding: 15px;
   }
 
   .goal-icon {
-      width: 75px; /* Adjust icon size */
-      height: 75px; /* Adjust icon size */
+      width: 75px;
+      height: 75px;
   }
 
   .goal-title {
-      font-size: 18px; /* Adjust title font size */
+      font-size: 18px;
   }
 
   .goal-text {
-      font-size: 14px !important; /* Adjust text size */
+      font-size: 14px !important;
   }
 
   .update-card {
-      width: 100%; /* Full width for update cards */
-      height: auto; /* Allow height to adjust */
+      width: 100%;
+      height: auto;
   }
 
   .update-header h5 {
-      font-size: 18px; /* Adjust header font size */
+      font-size: 18px;
   }
 
   .update-content {
-      font-size: 18px; /* Adjust content font size */
+      font-size: 18px;
   }
 }
 
 /* Medium Devices (768px) */
 @media (max-width: 768px) {
+    .teamstar-image {
+        display: none;
+       }
   .goals-container-title {
-      font-size: 28px; /* Adjust title font size */
+      font-size: 28px;
   }
 
   .underline-image2 {
-      width: 250px; /* Keep size for larger small devices */
-      top: 110px; /* Adjust position */
+      width: 250px;
+      top: 110px;
       left: 550px !important;
   }
 
   .goal-card {
-      width: 100%; /* Full width for small tablets */
-      flex-direction: column; /* Stack elements vertically */
-      height: auto; /* Allow height to adjust */
-      padding: 20px; /* Maintain padding */
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
   }
 
   .goal-icon {
-      width: 80px; /* Adjust icon size */
-      height: 80px; /* Adjust icon size */
+      width: 80px;
+      height: 80px;
   }
 
   .goal-title {
-      font-size: 22px; /* Adjust title font size */
+      font-size: 22px;
   }
 
   .goal-text {
-      font-size: 16px; /* Maintain text size */
+      font-size: 16px;
   }
 
   .update-card {
-      width: 100%; /* Full width for update cards */
-      height: auto; /* Allow height to adjust */
+      width: 100%;
+      height: auto;
   }
 
   .update-header h5 {
-      font-size: 26px; /* Adjust header font size */
+      font-size: 26px;
   }
 
   .update-content {
-      font-size: 18px; /* Adjust content font size */
+      font-size: 18px;
   }
 }
 
 /* Large Devices (1024px) */
 @media (max-width: 1024px) {
   .goals-container-title {
-    font-size: 30px; /* Adjust title font size */
+    font-size: 30px;
   }
 
   .underline-image2 {
-      width: 150px; /* Keep size for larger small devices */
-      top: 105px; /* Maintain position */
+      width: 150px;
+      top: 105px;
       left: 590px;
   }
 
   .goal-card {
-      width: 100%; /* Full width for tablets */
-      height: auto; /* Allow height to adjust */
-      padding: 20px; /* Maintain padding */
+      width: 100%;
+      height: auto;
+      padding: 20px;
   }
 
   .goal-icon {
-      width: 85px; /* Maintain icon size */
-      height: 85px; /* Maintain icon size */
+      width: 85px;
+      height: 85px;
   }
 
   .goal-title {
-      font-size: 24px; /* Adjust title font size */
+      font-size: 24px;
   }
 
   .goal-text {
-      font-size: 18px; /* Maintain text size */
+      font-size: 18px;
   }
 
   .update-card {
-      width: 100%; /* Full width for update cards */
-      height: auto; /* Allow height to adjust */
+      width: 100%;
+      height: auto;
   }
 
   .update-header h5 {
-      font-size: 28px; /* Adjust header font size */
+      font-size: 28px;
   }
 
   .update-content {
-      font-size: 20px; /* Adjust content font size */
+      font-size: 20px;
   }
 }
-
-  

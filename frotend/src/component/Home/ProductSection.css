@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 .product-section h2 {
   color: #003E90;
@@ -24,16 +25,26 @@
 }
 
 .product-section .underline-image {
-  display: block; /* Change to block to position it correctly */
+  display: block; /* Display block for proper positioning */
   margin: 0 auto; /* Center the image */
-  width: 100%; /* Adjust as needed */
+  width: 0; /* Start with width 0 for animation */
   max-width: 227px; /* Set max width for the underline */
   height: auto; /* Maintain aspect ratio */
   position: absolute; 
   top: 50px; /* Position relative to h2 */
-  left: 68%; /* Center it horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
+  left: 67.5%; /* Center it horizontally */
+  transform: translate(-50%, 0); /* Adjust for centering */
   z-index: 0; /* Keep the image behind the text */
+  animation: growUnderline 6s ease-out infinite; /* Repeat the animation infinitely */
+}
+
+@keyframes growUnderline {
+  0%, 100% {
+      width: 0; /* Start and end at width 0 */
+  }
+  50% {
+      width: 227px; /* Reach max width at 50% of the animation */
+  }
 }
 
 .product-section p {
@@ -157,6 +168,12 @@
 }
 
 @media (max-width: 575px) {
+  .trending-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
   .product-section {
     padding: 20px; /* Adjust padding for mobile */
   }
@@ -177,6 +194,12 @@
 
 /* Media Query for Large Mobile (425px) */
 @media (max-width: 425px) {
+  .trending-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
   .product-section {
     padding: 15px; /* Further reduce padding for large mobile */
   }
@@ -194,6 +217,12 @@
  
 }
 @media (max-width: 320px) {
+  .trending-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
   .product-section {
     padding: 5px; /* Further reduce padding for large mobile */
   }
@@ -213,6 +242,12 @@
   }
 }
 @media (max-width: 375px) {
+  .trending-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
   .product-section {
     padding: 5px; /* Further reduce padding for large mobile */
   }

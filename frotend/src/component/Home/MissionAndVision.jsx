@@ -3,7 +3,9 @@ import "./MissionAndVision.css";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import underline from "../../Image/home/underline.png";
-// Import images
+import teamstar from "../../Image/home/teamstar.png";
+import throne from "../../Image/home/throne.png";
+import hair from "../../Image/home/hair.png";
 
 const MissionAndVision = () => {
   const [notices, setNotices] = useState([]);
@@ -30,6 +32,9 @@ const MissionAndVision = () => {
 
   return (
     <div className="goals-container">
+      <div className="teamstar-image"></div>
+      <div className="throne-image"></div>
+      <div className="hair-image"></div>
       <h2 className="goals-container-title">
         Goals And <span>Objective</span>
         <img src={underline} alt="underline" className="underline-image2" />
@@ -76,7 +81,10 @@ const MissionAndVision = () => {
             <div className="update-header p-3">
               <h5 className="m-0">Updates</h5>
             </div>
-            <div className="update-content p-4">
+            <div
+              className="update-content p-4"
+              style={{ maxHeight: "300px", overflowY: "auto" }}
+            >
               {notices.map((notice) => (
                 <React.Fragment key={notice.id}>
                   <ListItem>

@@ -9,7 +9,11 @@ import underline from "../../Image/home/underline.png";
 function ProductSection({ products }) {
   return (
     <div className="product-section">
-      <h2>
+      <h2
+        style={{
+          position: "relative",
+        }}
+      >
         Choose the right <span>product</span>
         <img src={underline} alt="underline" className="underline-image" />
       </h2>
