@@ -237,7 +237,7 @@ export default function Footer() {
                   color="light"
                   type="submit"
                   className="mb-4 custom-btn w-100"
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
+                  style={{ fontFamily: "Nunito" }}
                 >
                   Subscribe
                 </MDBBtn>

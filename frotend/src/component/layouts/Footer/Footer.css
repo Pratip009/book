@@ -1,6 +1,6 @@
 /* General Footer Styling */
 .footer-custom {
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Nunito' !important;
   color: white !important;
 }
 .mail-icon {
@@ -37,9 +37,9 @@
 .footer_links {
   color: white;
   font-size: var(--font-span);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito';
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 600;
 }
 
 /* Custom Button Styling */
@@ -47,7 +47,7 @@
   background-color: #FF4E00 !important;
   color: white !important;
   text-transform: none;
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Nunito'!important;
   
 }
 .button-col {
@@ -143,17 +143,17 @@ font-weight: 500;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 10;
   color: white;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito';
 
 }
 .textt{
   font-size: var(--font-span);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito';
   color: white
 }
 .text-reset{
   font-size: var(--font-span);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito';
 }
 .overlay-content {
   display: flex;
@@ -166,13 +166,13 @@ font-weight: 500;
 .overlay-content h1 {
   font-size: var(--font-h2);
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito';
 }
 
 .overlay-content p {
   font-size: var(--font-span);
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito';
 }
 
 .overlay-content .btn {

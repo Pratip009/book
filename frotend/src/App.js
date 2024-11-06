@@ -62,6 +62,7 @@ const LazyBlogPost = React.lazy(()=>import ("./component/Admin/BlogPost"));
 const LazyOrderList = React.lazy(() => import("./component/Admin/OrderList"));
 const LazyAddImage = React.lazy(()=>import("./component/Admin/AddImage.jsx"));
 const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
+const LazyAdminContact = React.lazy(() => import("./component/Admin/ContactForm.jsx"));
 const LazyUpdateProduct = React.lazy(() =>
   import("./component/Admin/UpdateProduct")
 );
@@ -600,6 +601,12 @@ function App() {
               exact
               path="/admin/dashboard"
               component={LazyDashboard}
+            />
+            <PrivateRoute
+              isAdmin={true}
+              exact
+              path="/admin/contact"
+              component={LazyAdminContact}
             />
             <PrivateRoute
             isAdmin={true}

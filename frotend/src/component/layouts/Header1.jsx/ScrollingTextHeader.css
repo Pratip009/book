@@ -19,7 +19,7 @@
 }
 
 .scrolling-text {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito';
   display: inline-block;
   font-size: var(--font-span, 1rem); /* Use CSS variable or default size */
   margin: 0;

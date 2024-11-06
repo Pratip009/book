@@ -19,7 +19,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
 
 const navLinkStyle = {
-  fontFamily: "'Outfit', sans-serif",
+  fontFamily: "Nunito",
   textDecoration: "none",
   color: "#000000",
   marginRight: "20px",
@@ -63,7 +63,7 @@ function BasicExample() {
         expand="lg"
         style={{
           backgroundColor: "#003E90",
-          fontFamily: "'Outfit', sans-serif",
+          fontFamily: "Nunito",
         }}
       >
         <Container style={{ padding: "0 5px" }}>
@@ -77,7 +77,7 @@ function BasicExample() {
                 className="d-flex align-items-center"
                 style={{
                   color: "white",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                   textDecoration: "none",
                 }}
               >
@@ -88,7 +88,7 @@ function BasicExample() {
                     fontSize: "var(--font-span)",
                   }}
                 />
-                <span style={{ fontSize: "var(--font-span)" }}>{phone}</span>
+                <span style={{ fontSize: "var(--font-span)" , fontFamily:'Nunito' }}>{phone}</span>
               </Nav.Link>
 
               {/* Social icons in a row for mobile */}
@@ -202,7 +202,7 @@ function BasicExample() {
                     fontSize: "var(--font-span)",
                   }}
                 />
-                <span style={{ fontSize: "var(--font-span)" }}>{email}</span>
+                <span style={{ fontSize: "var(--font-span)" ,fontFamily:'Nunito' }}>{email}</span>
               </Nav.Link>
 
               {isAuthenticated ? (
@@ -212,7 +212,7 @@ function BasicExample() {
                       padding: "5px 4px",
                       backgroundColor: "#FF4E00",
                       color: "white",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       fontSize: "var(--font-span)",
                     }}
                     size="sm"
@@ -227,7 +227,7 @@ function BasicExample() {
                       padding: "5px 4px",
                       backgroundColor: "#FF4E00",
                       color: "white",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       fontSize: "var(--font-span)",
                     }}
                     size="sm"
@@ -537,9 +537,9 @@ function BasicExample() {
             <Link to="/cart" className="me-3">
               <CartIcon />
             </Link>
-            <Link>
+            <div>
               <ProfileModal user={user} isAuthenticated={isAuthenticated} />
-            </Link>
+            </div>
           </Nav>
         </Container>
       </Navbar>
