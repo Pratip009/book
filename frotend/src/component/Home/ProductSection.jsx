@@ -15,7 +15,7 @@ function ProductSection({ products }) {
         }}
       >
         Choose the right <span>product</span>
-        <img src={underline} alt="underline" className="underline-image" />
+        <img src={underline} alt="underline" className="underline-image2" />
       </h2>
       <p>
         lorem sapasnf ksoqwe dscnko dsllapwok sdknk aoqbzpo mnqqwe dkdnc

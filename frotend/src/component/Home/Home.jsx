@@ -61,7 +61,7 @@ function Home() {
         <AboutUsSection />
         <Programs />
 
-        {/* Show loader only for ProductSection */}
+      
         {productsLoading ? (
           <Loader />
         ) : (

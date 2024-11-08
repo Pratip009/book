@@ -8,12 +8,12 @@ import training from "../../Image/programs/training.png";
 import sports from "../../Image/programs/sports.png";
 import development from "../../Image/programs/development.png";
 import underlineImage from "../../Image/home/underline.png";
-
+import { Link } from "react-router-dom";
 const Programs = () => {
   return (
     <div className="programs-container">
       <h2>Explore Our Programs</h2>
-      <img src={underlineImage} alt="Underline" className="underline-image" />
+      <img src={underlineImage} alt="Underline" className="underline-image1" />
       <div className="Newcontainer">
         <div className="row programs-grid">
           <div className="col-12 col-sm-6 mb-4">
@@ -21,19 +21,17 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>School Management Services</h3>
-                  <p>
-                    <span
-                      style={{
-                        color: "red",
-                        fontWeight: "600",
-                      }}
-                    >
-                      From vision to reality:
-                    </span>{" "}
-                    Expert school management guides you through every step of
-                    establishing a thriving educational institution.
+                  <p style={{
+                    width:'90%',
+                    textAlign:'justify'
+                  }}>
+                    From vision to reality Expert school management guides you
+                    through every step of establishing a thriving educational
+                    institution.
                   </p>
-                  <button>Enroll now →</button>
+                  <Link to="/school">
+                    <button>Enroll now →</button>
+                  </Link>
                 </div>
                 <div className="icon12">
                   <img src={school} alt="School Icon" />
@@ -46,20 +44,17 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Training Program</h3>
-                  <p>
-                    <span
-                      style={{
-                        color: "red",
-                        fontWeight: "600",
-                      }}
-                    >
-                      Bridging the gap:{" "}
-                    </span>
-                    Our inclusive training empowers teachers, engages students,
-                    and equips parents to foster a collaborative learning
-                    environment.
+                  <p style={{
+                    width:'90%',
+                    textAlign:'justify'
+                  }}>
+                    Bridging the gap Our inclusive training empowers teachers,
+                    engages students, and equips parents to foster a
+                    collaborative learning environment.
                   </p>
-                  <button>Enroll now →</button>
+                  <Link to="/training">
+                    <button>Enroll now →</button>
+                  </Link>
                 </div>
                 <div className="icon2">
                   <img src={training} alt="Training Icon" />
@@ -72,17 +67,13 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Sports Training</h3>
-                  <p>
-                    <span
-                      style={{
-                        color: "red",
-                        fontWeight: "600",
-                      }}
-                    >
-                      From the classroom to the playing field
-                    </span>
-                    , our comprehensive training nurtures athletic talent and
-                    fosters a love for physical fitness
+                  <p style={{
+                    width:'90%',
+                    textAlign:'justify'
+                  }}>
+                    From the classroom to the playing field , our comprehensive
+                    training nurtures athletic talent and fosters a love for
+                    physical fitness
                   </p>
                   <button>Enroll now →</button>
                 </div>
@@ -97,19 +88,17 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Services</h3>
-                  <p>
-                    <span
-                      style={{
-                        color: "red",
-                        fontWeight: "600",
-                      }}
-                    >
-                      From essential supplies to expert services
-                    </span>
-                    , we support schools in creating an inspiring and effective
-                    learning environment.
+                  <p style={{
+                    width:'90%',
+                    textAlign:'justify'
+                  }}>
+                    From essential supplies to expert services , we support
+                    schools in creating an inspiring and effective learning
+                    environment.
                   </p>
-                  <button>Enroll now →</button>
+                  <Link to="/service">
+                    <button>Enroll now →</button>
+                  </Link>
                 </div>
                 <div className="icon4">
                   <img src={development} alt="Development Icon" />

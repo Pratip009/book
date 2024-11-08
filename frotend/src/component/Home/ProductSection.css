@@ -24,21 +24,22 @@
   z-index: 1; /* Ensure the text is above the underline image */
 }
 
-.product-section .underline-image {
-  display: block; /* Display block for proper positioning */
-  margin: 0 auto; /* Center the image */
-  width: 0; /* Start with width 0 for animation */
-  max-width: 227px; /* Set max width for the underline */
-  height: auto; /* Maintain aspect ratio */
-  position: absolute; 
-  top: 50px; /* Position relative to h2 */
-  left: 67.5%; /* Center it horizontally */
-  transform: translate(-50%, 0); /* Adjust for centering */
-  z-index: 0; /* Keep the image behind the text */
-  animation: growUnderline 6s ease-out infinite; /* Repeat the animation infinitely */
+.product-section .underline-image2 {
+  display: block; /* Ensure it behaves like a block element */
+margin: 0 auto; 
+width: 0; /* Start with a width of 0 for animation */
+height: 10px;
+height: 12px; /* Set the height as required */
+position: absolute; 
+top: 55px; /* Position relative to h2 */
+left: 67.5%; /* Center the image horizontally */
+transform: translateX(-50%); /* Adjust for centering */
+border-radius: 45px; /* Maintain rounded edges */
+background-color: #FF4E00; /* Background color for visibility */
+animation: growUnderline2 6s ease-out infinite; 
 }
 
-@keyframes growUnderline {
+@keyframes growUnderline2 {
   0%, 100% {
       width: 0; /* Start and end at width 0 */
   }
@@ -90,17 +91,28 @@
     line-height: 60px;
     position: relative; /* Allow positioning of the image */
   }
-  .product-section .underline-image {
-    display: block; /* Change to block to position it correctly */
-    margin: 0 auto; /* Center the image */
-    width: 100%; /* Adjust as needed */
-    max-width: 227px; /* Set max width for the underline */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute; 
-    top: 50px; /* Position relative to h2 */
-    left: 72%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: 0; /* Keep the image behind the text */
+  .product-section .underline-image2 {
+    display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto; 
+  width: 0; /* Start with a width of 0 for animation */
+  height: 10px;
+  height: 12px; /* Set the height as required */
+  position: absolute; 
+  top: 52px; /* Position relative to h2 */
+  left: 72.5%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  border-radius: 45px; /* Maintain rounded edges */
+  background-color: #FF4E00; /* Background color for visibility */
+  animation: growUnderline2 6s ease-out infinite; 
+  }
+  
+  @keyframes growUnderline2 {
+    0%, 100% {
+        width: 0; /* Start and end at width 0 */
+    }
+    50% {
+        width: 180px; /* Reach max width at 50% of the animation */
+    }
   }
   .product-section p {
     width: 647.81px;
@@ -124,9 +136,7 @@
     width: 90%; /* Adjust paragraph width for tablets */
   }
 
-  .product-section .underline-image {
-    max-width: 200px; /* Adjust underline for tablets */
-  }
+  
 }
 
 @media (max-width: 768px) {
@@ -138,17 +148,29 @@
     line-height: 60px;
     position: relative; /* Allow positioning of the image */
   }
-  .product-section .underline-image {
-    display: block; /* Change to block to position it correctly */
-    margin: 0 auto; /* Center the image */
-    width: 95%; /* Adjust as needed */
-    max-width: 220px; /* Set max width for the underline */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute; 
-    top: 45px; /* Position relative to h2 */
-    left: 74%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: 0; /* Keep the image behind the text */
+  .product-section .underline-image2 {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 12px; /* Fixed duplicate height */
+    position: absolute;
+    top: 41px;
+    left: 83.5% !important;
+    transform: translateX(-50%);
+    border-radius: 45px;
+    background-color: #FF4E00;
+    animation: growUnderline2 6s ease-out infinite;
+  }
+  
+  @keyframes growUnderline2 {
+    0%, 100% {
+        width: 0; /* Start and end at width 0 */
+        height: 5px;
+    }
+    50% {
+        width: 120px; /* Reach max width at 50% of the animation */
+        
+    }
   }
   .product-section {
     padding: 30px; /* Adjust padding for smaller tablets */
@@ -162,9 +184,7 @@
     width: 80%; /* Adjust paragraph width for smaller tablets */
   }
 
-  .product-section .underline-image {
-    max-width: 180px; /* Adjust underline for smaller tablets */
-  }
+ 
 }
 
 @media (max-width: 575px) {
@@ -187,9 +207,7 @@
     font-size: 14px;
   }
 
-  .product-section .underline-image {
-    display: none !important;
-  }
+  
 }
 
 /* Media Query for Large Mobile (425px) */
@@ -237,9 +255,7 @@
     width: 90%; /* Adjust paragraph width for large mobile */
   }
 
-  .product-section .underline-image {
-   display: none !important;
-  }
+ 
 }
 @media (max-width: 375px) {
   .trending-products{
@@ -262,7 +278,5 @@
     width: 90%; /* Adjust paragraph width for large mobile */
   }
 
-  .underline-image {
-   display: none !important;
-  }
+ 
 }

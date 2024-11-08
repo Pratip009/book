@@ -7,7 +7,7 @@ import { MdOutlineCheckCircle } from "react-icons/md";
 import callIcon from "../../Image/home/Background.png";
 import underlineImg from "../../Image/home/underline.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Link } from "react-router-dom"
 const AboutUsSection = () => {
   return (
     <div className="Aboutcontainer container-fluid d-flex justify-content-center align-items-center z-1">
@@ -64,7 +64,9 @@ const AboutUsSection = () => {
 
           {/* Explore More Button and Contact Info */}
           <div className="actionSection d-flex flex-row align-items-center justify-content-between justify-content-md-start mt-3 z-2">
-            <button className="button me-3">Explore More →</button>
+            <Link to="/about_us">
+              <button className="button me-3">Explore More →</button>
+            </Link>
 
             <div className="contactInfo d-flex align-items-center">
               <img src={callIcon} alt="Phone Icon" className="phoneIcon" />

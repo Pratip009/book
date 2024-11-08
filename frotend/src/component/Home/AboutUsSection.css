@@ -224,7 +224,54 @@
 /* Existing Styles Omitted for Brevity */
 
 /* Responsive Styles */
+@media (max-width: 1440px){
+  .underline {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 0; /* Start with a width of 0 for animation */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; 
+    top: 45%; /* Adjust top position as needed */
+    left: 82%; /* Center the image */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: -1; /* Keep the image behind other content */
+    animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+}
+@keyframes zigzagUnderline {
+  0% {
+      width: 0; /* Start with width 0 */
+  }
+  50% {
+      width: 235px; /* Reach max width at 50% */
+  }
+  100% {
+      width: 0; /* End with width 0 */
+  }
+}
+}
 @media (max-width: 1024px) {
+  .backgroundBoxOne
+     {
+      position: absolute;
+      top: 73%;
+      left:0;
+      width:100px;
+      height: 100px;
+      background-color: #e0d6fc;
+      border-radius: 10px;
+      z-index: -2;
+    }
+    .backgroundBoxTwo
+     {
+      position: absolute;
+      top: 2px;
+      left:42%;
+      width:100px;
+      height: 100px;
+      background-color: #fee4dd;
+      border-radius: 10px;
+      z-index: -2;
+    }
     /* Tablet landscape mode */
     .Aboutcontainer {
         height: auto;
@@ -283,12 +330,32 @@
         padding: 7px 15px;
         margin: 0 !important;
     }
-    
-    /* Hide background boxes for tablet and smaller screens */
-    .backgroundBoxOne,
-    .backgroundBoxTwo {
-        display: none;
+    .underline {
+      display: block; /* Ensure it behaves like a block element */
+      margin: 0 auto; /* Center the image horizontally */
+      width: 0; /* Start with a width of 0 for animation */
+      height: auto; /* Maintain aspect ratio */
+      position: absolute; 
+      top: 40%; /* Adjust top position as needed */
+      left: 73%; /* Center the image */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: -1; /* Keep the image behind other content */
+      animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+  }
+  @keyframes zigzagUnderline {
+    0% {
+        width: 0; /* Start with width 0 */
     }
+    50% {
+        width: 130px; /* Reach max width at 50% */
+    }
+    100% {
+        width: 0; /* End with width 0 */
+    }
+}
+    /* Hide background boxes for tablet and smaller screens */
+   
+    
 }
 
 @media (max-width: 768px) {
@@ -337,7 +404,7 @@
   .button {
       font-size: 13px; /* Adjust button text size */
       padding: 12px 20px; /* Adjust button padding */
-      width: 45%; /* Full width for button */
+      width: 100%; /* Full width for button */
       margin-top: 10px; /* Add spacing above the button */
   }
   .call,
@@ -353,15 +420,37 @@
     .globeClipArt {
        z-index: -20;
     }
+    .backgroundBoxOne
+     {
+      position: absolute;
+      top: 65%;
+      left:0;
+      width:100px;
+      height: 100px;
+      background-color: #e0d6fc;
+      border-radius: 10px;
+      z-index: -2;
+    }
+    .backgroundBoxTwo
+     {
+      position: absolute;
+      top: 2px;
+      left:40%;
+      width:100px;
+      height: 100px;
+      background-color: #fee4dd;
+      border-radius: 10px;
+      z-index: -2;
+    }
 }
 
 
 @media (max-width: 480px) {
     /* Mobile view */
     .image {
-        width: 100%;
-        height: 200px;
-        object-fit: none;
+        width: 85%;
+        height: auto;
+        object-fit: contain;
         padding: 0;
     }
     .heading {
@@ -392,17 +481,34 @@
     }
     .button {
         height: 45px;
-        font-size: 11px;
+        font-size: 14px;
         padding: 10px;
-        width: 40%;
+        width: 100%;
     }
     
     /* Hide background boxes for mobile view */
-    .backgroundBoxOne,
-    .backgroundBoxTwo {
-        display: none;
+    .backgroundBoxOne
+     {
+      position: absolute;
+      top: 28%;
+      left:5%;
+      width:100px;
+      height: 100px;
+      background-color: #e0d6fc;
+      border-radius: 10px;
+      z-index: -2;
     }
-    
+    .backgroundBoxTwo
+     {
+      position: absolute;
+      top: 2px;
+      left:70%;
+      width:100px;
+      height: 100px;
+      background-color: #fee4dd;
+      border-radius: 10px;
+      z-index: -2;
+    }
     .carClipArt,
     .globeClipArt {
         display: none;
@@ -419,15 +525,118 @@
         font-size: 11px;
     }
     .actionSection {
+      width: 80%;
         flex-direction: row !important;
         gap: 10px;
         margin-top: 10px !important;
     }
-    .underline{
-      display: none;
+    .underline {
+      display: block; /* Ensure it behaves like a block element */
+      margin: 0 auto; /* Center the image horizontally */
+      width: 0; /* Start with a width of 0 for animation */
+      height: auto; /* Maintain aspect ratio */
+      position: absolute; 
+      top: 65.5%; /* Adjust top position as needed */
+      left: 70%; /* Center the image */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: -1; /* Keep the image behind other content */
+      animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+  }
+  @keyframes zigzagUnderline {
+    0% {
+        width: 0; /* Start with width 0 */
     }
+    50% {
+        width: 125px; /* Reach max width at 50% */
+    }
+    100% {
+        width: 0; /* End with width 0 */
+    }
+  }
+}
+@media (max-width: 375px) {
+  .Aboutcontainer{
+    padding: 10px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    justify-items: center; /* Center items in their grid cells */
+    text-align: center; /* Center text within items */
+    margin: 0 auto; 
+    gap: 10px; 
+    width: 90%;
 }
 
+    .heading {
+      font-size: 10px;
+      line-height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .subheading {
+        font-size: 12px;
+    }
+    .featureItem {
+      width: 100%; /* Set to 100% to fill the entire grid cell */
+      height: auto; /* Allow height to adjust based on content */
+      font-size: 10px;
+      padding: 6px;
+      background: #ffffff00; /* Optional background, adjust as needed */
+      border-radius: 30px; /* Maintain your border-radius */
+      display: flex;
+      align-items: center; /* Center content vertically */
+      justify-content: flex-start; /* Align content to the left */
+      margin: 0; /* Reset margin to avoid extra space */
+  }
+  
+    .button {
+        font-size: 10px;
+        padding: 8px;
+    }
+    .contactInfo {
+        gap: 8px;
+    }
+    .underline {
+      display: block; /* Ensure it behaves like a block element */
+      margin: 0 auto; /* Center the image horizontally */
+      width: 0; /* Start with a width of 0 for animation */
+      height: auto; /* Maintain aspect ratio */
+      position: absolute; 
+      top: 65.5%; /* Adjust top position as needed */
+      left: 70%; /* Center the image */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: -1; /* Keep the image behind other content */
+      animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+  }
+  @keyframes zigzagUnderline {
+    0% {
+        width: 0; /* Start with width 0 */
+    }
+    50% {
+        width: 125px; /* Reach max width at 50% */
+    }
+    100% {
+        width: 0; /* End with width 0 */
+    }
+  }
+    .actionSection {
+      width: 100%;
+      flex-direction: row !important;
+      gap: 10px;
+      margin-top: 10px;
+  }
+  .phoneIcon {
+    font-size: 12px;
+    color: #ff6b6b;
+    margin-right: 10px;
+  }
+  .call,.phoneNumber{
+    font-size: 10px;
+  }
+
+}
 
 /* General adjustments for small mobile devices */
 @media (max-width: 360px) {
@@ -478,6 +687,7 @@
    
       display: none;
     } .actionSection {
+      width: 100%;
       flex-direction: row !important;
       gap: 10px;
       margin-top: 10px;

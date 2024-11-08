@@ -25,26 +25,26 @@
     z-index: 1;
 }
 
-.underline-image {
+.underline-image1 {
     display: block; /* Ensure it behaves like a block element */
     margin: 0 auto; 
     width: 0; /* Start with a width of 0 for animation */
     height: 12px; /* Set the height as required */
     position: absolute; 
-    top: 216px; /* Position relative to h2 */
+    top: 155px; /* Position relative to h2 */
     left: 61.5%; /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
     background-color: #FF4E00; /* Background color for visibility */
-    animation: growUnderline 6s ease-out infinite; /* Infinite animation */
+    animation: growUnderline1 6s ease-out infinite; /* Infinite animation */
 }
 
-@keyframes growUnderline {
+@keyframes growUnderline1 {
     0% {
         width: 0; /* Start with width 0 */
     }
     50% {
-        width: 335px; /* Reach max width at 50% */
+        width: 350px; /* Reach max width at 50% */
     }
     100% {
         width: 0; /* End with width 0 */
@@ -61,13 +61,14 @@
 .program-card {
     display: flex;
     align-items: center;
+    justify-content: center; 
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     position: relative;
-    height: 220px;
+    height: 280px;
 }
 
 /* Individual program colors */
@@ -147,9 +148,7 @@
 }
 
 .program-card button {
-    position: absolute;
-    left: 3%;
-    bottom: 5%;
+  margin-bottom: .5rem;
     text-align: start;
     font-size: 16px;
     line-height: 24px;
@@ -201,7 +200,7 @@
         margin-bottom: 4rem; /* Adjust margin as needed */
     }
 
-    .underline-image {
+    .underline-image1 {
         width: 250px; /* Adjust underline size */
         height: 10px;
         position: absolute;
@@ -259,7 +258,7 @@
         text-align: center;
         position: relative;
     }
-    .underline-image {
+    .underline-image1 {
         width: 250px;
         height: 10px;
         position: absolute;
@@ -318,11 +317,11 @@
         margin-bottom: 3rem; 
     }
 
-    .underline-image {
-        width: 190px;
+    .underline-image1 {
+        width: 120px;
         height: 8px;
         position: absolute;
-        top: 90px;
+        top: 95px;
         left: 65.5%;
         border-radius: 45px;
         transform: translateX(-50%);  
@@ -350,6 +349,34 @@
 }
 
 @media (max-width: 575px) {
+    .underline-image1{
+        display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; 
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute; 
+    top: 58px; /* Position relative to h2 */
+    left: 72%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #FF4E00; /* Background color for visibility */
+    animation: growUnderline1 6s ease-out infinite; 
+    }
+    @keyframes growUnderline1 {
+        0% {
+            width: 0; /* Start with width 0 */
+            height: 5px;
+        }
+        50% {
+            width: 150px; /* Reach max width at 50% */
+            height: 5px;
+        }
+        100% {
+            width: 0; /* End with width 0 */
+            height: 5px;
+        }
+    }
     .Newcontainer{
         width: 100%;
     }
@@ -370,9 +397,7 @@
      
     }
 
-    .underline-image {
-      display: none;  
-    }
+    
 
     .program-card {
         height: 180px; 
@@ -394,14 +419,17 @@
     }
 }
 @media (max-width: 425px){
-.Newcontainer{
-    width: 100%;
-}
+    
+   
+    .programs-container h2 {
+        font-size: 30px;
+    }
 }
 @media (max-width: 320px) {
     .Newcontainer{
         width: 100%;
     }
+   
     .programs-container {
         display: flex;
         flex-direction: column;
@@ -422,8 +450,28 @@
      
     }
 
-    .underline-image {
-      display: none;  
+    .underline {
+        display: block; /* Ensure it behaves like a block element */
+        margin: 0 auto; /* Center the image horizontally */
+        width: 0; /* Start with a width of 0 for animation */
+        height: auto; /* Maintain aspect ratio */
+        position: absolute; 
+        top: 50%; /* Adjust top position as needed */
+        left: 70%; /* Center the image */
+        transform: translateX(-50%); /* Adjust for centering */
+        z-index: -1; /* Keep the image behind other content */
+        animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+    }
+    @keyframes zigzagUnderline {
+      0% {
+          width: 0; /* Start with width 0 */
+      }
+      50% {
+          width: 100px; /* Reach max width at 50% */
+      }
+      100% {
+          width: 0; /* End with width 0 */
+      }
     }
 
     .program-card {

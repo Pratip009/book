@@ -1,10 +1,10 @@
 .goals-container {
-    background-color: #f4faff;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-    border-radius: 8px;
-    color: white;
+  background-color: #f4faff;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  color: white;
 }
 
 /* Image background classes */
@@ -12,7 +12,7 @@
   position: absolute;
   top: 151px;
   left: 0px;
-  background-image: url('../../Image/home/teamstar.png');
+  background-image: url("../../Image/home/teamstar.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +25,7 @@
   position: absolute;
   top: 734px;
   left: 814px;
-  background-image: url('../../Image/home/throne.png');
+  background-image: url("../../Image/home/throne.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,7 +38,7 @@
   position: absolute;
   top: 538px;
   left: 1409.77px;
-  background-image: url('../../Image/home/hair.png');
+  background-image: url("../../Image/home/hair.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -48,16 +48,16 @@
 }
 
 .goals-container-title {
-    font-family: 'Quicksand';
-    font-size: 60px;
-    font-weight: 700;
-    color: #003E90;
-    margin-bottom: 30px;
-    line-height: 60px;
-    z-index: 1;
+  font-family: "Quicksand";
+  font-size: 60px;
+  font-weight: 700;
+  color: #003e90;
+  margin-bottom: 30px;
+  line-height: 60px;
+  z-index: 2;
 }
 
-.underline-image2 {
+/* .underline-image3 {
     display: block;
     margin: 0 auto;
     width: 250px;
@@ -67,301 +67,338 @@
     left: 60%;
     transform: translateX(-50%);
     z-index: 0;
+} */
+.underline-image3 {
+  display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto;
+  width: 0; /* Start with a width of 0 for animation */
+  height: 10px;
+  height: 12px; /* Set the height as required */
+  position: absolute;
+  top: 110px; /* Position relative to h2 */
+  left: 61%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  border-radius: 45px; /* Maintain rounded edges */
+  background-color: #ff4e00; /* Background color for visibility */
+  animation: growUnderline2 6s ease-out infinite;
+  z-index: 1;
+}
+
+@keyframes growUnderline2 {
+  0%,
+  100% {
+    width: 0; /* Start and end at width 0 */
+  }
+  50% {
+    width: 250px; /* Reach max width at 50% of the animation */
+    z-index: 1;
+  }
 }
 
 .objective-highlight {
-    position: relative;
-    color: #1c4074;
+  position: relative;
+  color: #1c4074;
 }
 
 .objective-highlight::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background-color: #ffddb5;
-    bottom: -5px;
-    left: 0;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #ffddb5;
+  bottom: -5px;
+  left: 0;
+  z-index: -1;
 }
 
 .goal-card {
-    width: 624px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 174px;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    text-align: left;
-    color: #1c4074;
+  width: 624px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 174px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+  color: #1c4074;
 }
 
 .vision-card {
-    background-color: #bce9e6;
+  background-color: #bce9e6;
 }
 
 .mission-card {
-    background-color: #c4dcfc;
+  background-color: #c4dcfc;
 }
 
 .goal-icon {
-    width: 85px;
-    height: 85px;
-    margin-bottom: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 85px;
+  height: 85px;
+  margin-bottom: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .vision-icon {
-    background-image: url('../../Image/home/mission.png');
+  background-image: url("../../Image/home/mission.png");
 }
 
 .mission-icon {
-    background-image: url('../../Image/home/mission1.png');
+  background-image: url("../../Image/home/mission1.png");
 }
 
 .goal-title {
-    font-family: 'Nunito';
-    font-size: 28px;
-    line-height: 33.6px;
-    font-weight: 800;
-    color: #1F1F1F;
+  font-family: "Nunito";
+  font-size: 28px;
+  line-height: 33.6px;
+  font-weight: 800;
+  color: #1f1f1f;
 }
 
 .goal-text {
-    font-family: 'Nunito';
-    font-size: 18px;
-    line-height: 22.31px;
-    font-weight: 500;
-    letter-spacing: 0.17px;
+  font-family: "Nunito";
+  font-size: 18px;
+  line-height: 22.31px;
+  font-weight: 500;
+  letter-spacing: 0.17px;
 }
 
 .update-card {
-    width: 1270px;
-    height: 259px;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid #8DBBF6;
-    padding: 0;
+  width: 1270px;
+  height: 259px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #8dbbf6;
+  padding: 0;
 }
 
 .update-header {
-    background-color: #FDE1A4;
-    text-align: start;
+  background-color: #fde1a4;
+  text-align: start;
 }
 
 .update-header h5 {
-    font-family: 'Nunito';
-    font-size: 28px;
-    line-height: 33.6px;
-    font-weight: 800;
-    color: #1F1F1F;
+  font-family: "Nunito";
+  font-size: 28px;
+  line-height: 33.6px;
+  font-weight: 800;
+  color: #1f1f1f;
 }
 
 .update-content {
   max-height: 300px; /* Set a fixed height for the scrollable area */
   overflow-y: auto;
-    font-family: 'Nunito';
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 22.31px;
-    letter-spacing: 0.17px;
-    text-align: justify;
-    align-items: center;
+  font-family: "Nunito";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22.31px;
+  letter-spacing: 0.17px;
+  text-align: justify;
+  align-items: center;
 }
 
 /* Responsive Design */
 
 /* Extra Small Devices (320px) */
 @media (max-width: 320px) {
-    .teamstar-image {
-       display: none;
-      }
-  .goals-container-title {
-      font-size: 30px;
+  .teamstar-image {
+    display: none;
   }
-
-  .underline-image2 {
-      width: 180px;
-      top: 100px;
+  .goals-container-title {
+    font-size: 20px;
   }
 
   .goal-card {
-      width: 100%;
-      flex-direction: column;
-      height: auto;
-      padding: 10px;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
   }
 
   .goal-icon {
-      width: 60px;
-      height: 60px;
+    width: 60px;
+    height: 60px;
   }
 
   .goal-title {
-      font-size: 15px;
+    font-size: 15px;
   }
 
   .goal-text {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   .update-card {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .update-header h5 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .update-content {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
 /* Small Devices (375px) */
 @media (max-width: 375px) {
-    .teamstar-image {
-        display: none;
-       }
-  .goals-container-title {
-      font-size: 20px;
+  .teamstar-image {
+    display: none;
   }
-
-  .underline-image2 {
-      width: 200px;
-      top: 105px;
+  .goals-container-title {
+    font-size: 20px;
   }
 
   .goal-card {
-      width: 100%;
-      height: auto;
-      padding: 15px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
   }
 
   .goal-icon {
-      width: 70px;
-      height: 70px;
+    width: 70px;
+    height: 70px;
   }
 
   .goal-title {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .goal-text {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .update-card {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .update-header h5 {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   .update-content {
-      font-size: 18px;
+    font-size: 18px;
   }
 }
 
 /* Medium Devices (425px) */
 @media (max-width: 425px) {
-    .teamstar-image {
-        display: none;
-       }
-  .goals-container-title {
-      font-size: 28px;
+  .teamstar-image {
+    display: none;
   }
-
-  .underline-image2 {
-      width: 220px;
-      top: 110px;
+  .goals-container-title {
+    font-size: 28px;
   }
 
   .goal-card {
-      width: 100%;
-      height: auto;
-      padding: 15px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
   }
 
   .goal-icon {
-      width: 75px;
-      height: 75px;
+    width: 75px;
+    height: 75px;
   }
 
   .goal-title {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .goal-text {
-      font-size: 14px !important;
+    font-size: 14px !important;
   }
 
   .update-card {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .update-header h5 {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .update-content {
-      font-size: 18px;
+    font-size: 18px;
+  }
+  .underline-image3 {
+    position: absolute;
+    left: 60% !important; /* Adjust to be centered */
+    top: 90px !important; /* Adjust as necessary */
+    transform: translateX(-50%);
   }
 }
 
 /* Medium Devices (768px) */
 @media (max-width: 768px) {
-    .teamstar-image {
-        display: none;
-       }
+  .teamstar-image {
+    display: none;
+  }
   .goals-container-title {
-      font-size: 28px;
+    font-size: 28px;
+  }
+  .underline-image3 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 110px; /* Position relative to h2 */
+    left: 60% !important; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline2 6s ease-out infinite;
+    z-index: 1;
   }
 
-  .underline-image2 {
-      width: 250px;
-      top: 110px;
-      left: 550px !important;
+  @keyframes growUnderline2 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+    }
+    50% {
+      width: 250px; /* Reach max width at 50% of the animation */
+      z-index: 1;
+    }
   }
 
   .goal-card {
-      width: 100%;
-      flex-direction: column;
-      height: auto;
-      padding: 20px;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
   }
 
   .goal-icon {
-      width: 80px;
-      height: 80px;
+    width: 80px;
+    height: 80px;
   }
 
   .goal-title {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   .goal-text {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .update-card {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .update-header h5 {
-      font-size: 26px;
+    font-size: 26px;
   }
 
   .update-content {
-      font-size: 18px;
+    font-size: 18px;
   }
 }
 
@@ -370,42 +407,64 @@
   .goals-container-title {
     font-size: 30px;
   }
+  .underline-image3 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 105px; /* Position relative to h2 */
+    left: 57%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline2 6s ease-out infinite;
+    z-index: 1;
+  }
 
-  .underline-image2 {
-      width: 150px;
-      top: 105px;
-      left: 590px;
+  @keyframes growUnderline2 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 8px;
+    }
+    50% {
+      width: 140px; /* Reach max width at 50% of the animation */
+      height: 8px;
+      z-index: 1;
+    }
   }
 
   .goal-card {
-      width: 100%;
-      height: auto;
-      padding: 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
   }
 
   .goal-icon {
-      width: 85px;
-      height: 85px;
+    width: 85px;
+    height: 85px;
   }
 
   .goal-title {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .goal-text {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .update-card {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .update-header h5 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .update-content {
-      font-size: 20px;
+    font-size: 20px;
   }
 }

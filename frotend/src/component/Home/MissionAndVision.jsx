@@ -37,7 +37,7 @@ const MissionAndVision = () => {
       <div className="hair-image"></div>
       <h2 className="goals-container-title">
         Goals And <span>Objective</span>
-        <img src={underline} alt="underline" className="underline-image2" />
+        <img src={underline} alt="underline" className="underline-image3" />
       </h2>
 
       <div className="row justify-content-center">
