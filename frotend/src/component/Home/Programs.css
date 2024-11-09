@@ -356,7 +356,7 @@
     height: 10px;
     height: 12px; /* Set the height as required */
     position: absolute; 
-    top: 58px; /* Position relative to h2 */
+    top: 50px; /* Position relative to h2 */
     left: 72%; /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */

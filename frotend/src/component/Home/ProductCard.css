@@ -2,297 +2,299 @@
 
 /* Base Styles */
 .product-card {
-    width: 291px;
-    height: 328px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #D7D7D7;
-    transition: transform 0.2s ease-in-out;
+    width: 291px !important;
+    height: 328px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid #D7D7D7 !important;
+    transition: transform 0.2s ease-in-out !important;
 }
 
 .product-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) !important;
 }
 
 .Product_Inner_Card {
-    width: 255px;
-    height: 129px;
-    background-color: #ECF4FF;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px auto;
-    border: none;
+    width: 255px !important;
+    height: 129px !important;
+    background-color: #ECF4FF !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 10px auto !important;
+    border: none !important;
 }
 
 .card-img-top {
-    width: 41px;
-    height: 41px;
-    object-fit: contain;
+    width: 41px !important;
+    height: 41px !important;
+    object-fit: contain !important;
 }
 
 .body {
-    padding: 0 15px;
-    align-items: flex-start;
+    padding: 0 15px !important;
+    align-items: flex-start !important;
 }
 
 .discount-price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 25px;
-    border-radius: 100px;
-    padding: 10px;
-    gap: 10px;
-    color: #0C7D3F;
-    font-family: 'Nunito';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    background-color: #CEFFC9;
-    margin-bottom: 15px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 64px !important;
+    height: 25px !important;
+    border-radius: 100px !important;
+    padding: 10px !important;
+    gap: 10px !important;
+    color: #0C7D3F !important;
+    font-family: 'Nunito' !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    background-color: #CEFFC9 !important;
+    margin-bottom: 15px !important;
 }
 
 .card-title {
-    font-family: 'Nunito';
-    font-size: 22px;
-    font-weight: 700;
-    color: #313131;
-    line-height: 24px;
-    margin-bottom: 4px;
+    font-family: 'Nunito' !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #313131 !important;
+    line-height: 24px !important;
+    margin-bottom: 4px !important;
 }
 
 .text-reset {
-    color: inherit;
-    text-decoration: none;
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
 .MuiButton-root.product_btnn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    border-radius: 12px;
-    border: 1px solid #000000;
-    color: #313131;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-transform: capitalize;
-    margin-top: 1rem;
-     margin-bottom: 10px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 12px !important;
+    border-radius: 12px !important;
+    border: 1px solid #000000 !important;
+    color: #313131 !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s !important;
+    text-transform: capitalize !important;
+    margin-top: 1rem !important;
+    margin-bottom: 10px !important;
 }
 
 .MuiButton-root.product_btnn:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0 !important;
 }
+
 /* Small Devices (Phones, up to 425px) */
 @media (max-width: 425px) {
     .product-card {
-        width: 100%; /* Allow the card to take full width */
-        height: auto; /* Let height adjust based on content */
-        margin: 0; /* Center the card */
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
     }
     
     .Product_Inner_Card {
-        width: 90%; /* Adjust to fit within the product card */
-        height: auto; /* Let height adjust based on content */
-        padding: 8px; /* Slightly reduce padding */
+        width: 90% !important;
+        height: auto !important;
+        padding: 8px !important;
     }
     
     .card-img-top {
-        width: 30px; /* Adjust image size for smaller screens */
-        height: 30px; /* Keep the aspect ratio */
+        width: 30px !important;
+        height: 30px !important;
     }
 
     .body {
-        padding: 5px; /* Reduce padding for the body */
+        padding: 5px !important;
     }
 
     .discount-price {
-        font-size: 12px; /* Smaller font size */
-        width: 50px; /* Adjust width */
-        height: 20px; /* Adjust height */
+        font-size: 12px !important;
+        width: 50px !important;
+        height: 20px !important;
     }
 
     .card-title {
-        font-size: 16px; /* Smaller title font */
+        font-size: 16px !important;
     }
 
     .MuiButton-root.product_btnn {
-        font-size: 12px; /* Smaller button font size */
-        padding: 5px 8px; /* Adjust padding */
-        margin-bottom: 8px; /* Reduce bottom margin */
+        font-size: 12px !important;
+        padding: 5px 8px !important;
+        margin-bottom: 8px !important;
     }
 }
 
 /* Small Devices (Phones, less than 576px) */
 @media (max-width: 575.98px) {
     .product-card {
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
     }
     
     .Product_Inner_Card {
-        width: 90%;
-        height: auto;
-        padding: 10px;
+        width: 90% !important;
+        height: auto !important;
+        padding: 10px !important;
     }
     
     .card-img-top {
-        width: 35px;
-        height: 35px;
+        width: 35px !important;
+        height: 35px !important;
     }
 
     .body {
-        padding: 10px;
+        padding: 10px !important;
     }
 
     .discount-price {
-        font-size: 14px;
-        width: 60px;
-        height: 22px;
+        font-size: 14px !important;
+        width: 60px !important;
+        height: 22px !important;
     }
 
     .card-title {
-        font-size: 18px;
+        font-size: 18px !important;
     }
 
     .MuiButton-root.product_btnn {
-        font-size: 14px;
-        padding: 6px 10px;
-        margin-bottom: 10px;
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+        margin-bottom: 10px !important;
     }
 }
 
 /* Medium Devices (Tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 991.98px) {
     .product-card {
-        width: 220px;
-        height: auto;
+        width: 220px !important;
+        height: auto !important;
     }
     
     .Product_Inner_Card {
-        width: 200px;
-        height: 100px;
+        width: 200px !important;
+        height: 100px !important;
     }
     
     .card-img-top {
-        width: 38px;
-        height: 38px;
+        width: 38px !important;
+        height: 38px !important;
     }
 
     .discount-price {
-        font-size: 15px;
+        font-size: 15px !important;
     }
 
     .card-title {
-        font-size: 17px;
+        font-size: 17px !important;
     }
 
     .MuiButton-root.product_btnn {
-        font-size: 15px;
-        padding: 3px 12px;
-        margin-bottom: 10px;
+        font-size: 15px !important;
+        padding: 3px 12px !important;
+        margin-bottom: 10px !important;
     }
 }
 
 /* Large Devices (Desktops, 992px and up) */
 @media (min-width: 992px) {
     .product-card {
-        width: 291px;
-        height: 328px;
+        width: 291px !important;
+        height: 328px !important;
     }
     
     .Product_Inner_Card {
-        width: 255px;
-        height: 129px;
+        width: 255px !important;
+        height: 129px !important;
     }
     
     .card-img-top {
-        width: 41px;
-        height: 41px;
+        width: 41px !important;
+        height: 41px !important;
     }
 
     .discount-price {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     .card-title {
-        font-size: 22px;
+        font-size: 22px !important;
     }
 
     .MuiButton-root.product_btnn {
-        font-size: 16px;
-        padding: 8px 12px;
-        margin-bottom: 10px;
+        font-size: 16px !important;
+        padding: 8px 12px !important;
+        margin-bottom: 10px !important;
     }
 }
+
 /* Medium Devices (Tablets, up to 1024px) */
 @media (max-width: 1024px) {
     .product-card {
-        width: 300px; /* Adjust width for tablets */
-        height: auto; /* Allow height to adjust based on content */
-        margin: 0 auto; /* Center the card */
+        width: 300px !important;
+        height: auto !important;
+        margin: 0 auto !important;
     }
     
     .Product_Inner_Card {
-        width: 280px; /* Slightly reduced inner card width */
-        height: 140px; /* Adjust inner card height for better proportions */
+        width: 280px !important;
+        height: 140px !important;
     }
     
     .card-img-top {
-        width: 60px; /* Adjust image size */
-        height: 60px;
+        width: 60px !important;
+        height: 60px !important;
     }
 
     .discount-price {
-        font-size: 15px; /* Slightly smaller font size */
+        font-size: 15px !important;
     }
 
     .card-title {
-        font-size: 16px; /* Slightly smaller title font */
+        font-size: 16px !important;
     }
 
     .MuiButton-root.product_btnn {
-        font-size: 15px; /* Adjust button font size */
-        padding: 3px 12px; /* Adjust padding for buttons */
-        margin-bottom: 8px; /* Slightly smaller margin */
+        font-size: 15px !important;
+        padding: 3px 12px !important;
+        margin-bottom: 8px !important;
     }
 }
 
 /* Extra Large Devices (Large Desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .product-card {
-        width: 310px;
-        height: 350px;
+        width: 310px !important;
+        height: 350px !important;
     }
     
     .Product_Inner_Card {
-        width: 270px;
-        height: 140px;
+        width: 270px !important;
+        height: 140px !important;
     }
     
     .card-img-top {
-        width: 45px;
-        height: 45px;
+        width: 45px !important;
+        height: 45px !important;
     }
 
     .discount-price {
-        font-size: 17px;
+        font-size: 17px !important;
     }
 
     .card-title {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 
     .MuiButton-root.product_btnn {
-        font-size: 17px;
-        padding: 10px 14px;
-        margin-bottom: 10px;
+        font-size: 17px !important;
+        padding: 10px 14px !important;
+        margin-bottom: 10px !important;
     }
 }

@@ -87,6 +87,7 @@
 .icon {
   font-size: 2vw;
   color: white;
+  margin-bottom: 15px;
 }
 
 .text-col {
@@ -94,6 +95,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .text {

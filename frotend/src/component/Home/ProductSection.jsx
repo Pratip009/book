@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import ProductCard from "./ProductCard";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -6,20 +6,16 @@ import Col from "react-bootstrap/Col";
 import "./ProductSection.css"; // Import any CSS specific to ProductSection
 import underline from "../../Image/home/underline.png";
 
-// Memoize ProductCard to prevent unnecessary re-renders
-const MemoizedProductCard = memo(ProductCard);
-
 function ProductSection({ products }) {
   return (
     <div className="product-section">
-      <h2 className="section-title">
+      <h2
+        style={{
+          position: "relative",
+        }}
+      >
         Choose the right <span>product</span>
-        <img
-          src={underline}
-          alt="underline"
-          className="underline-image2"
-          loading="lazy" // Lazy load the image
-        />
+        <img src={underline} alt="underline" className="underline-image2" />
       </h2>
       <p>
         lorem sapasnf ksoqwe dscnko dsllapwok sdknk aoqbzpo mnqqwe dkdnc
@@ -37,7 +33,7 @@ function ProductSection({ products }) {
                 lg={3}
                 className="mb-4"
               >
-                <MemoizedProductCard product={product} />
+                <ProductCard product={product} />
               </Col>
             ))}
         </Row>
@@ -46,4 +42,4 @@ function ProductSection({ products }) {
   );
 }
 
-export default ProductSection;
+export default ProductSection; 
