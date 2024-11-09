@@ -3,9 +3,7 @@ import "./MissionAndVision.css";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import underline from "../../Image/home/underline.png";
-import teamstar from "../../Image/home/teamstar.png";
-import throne from "../../Image/home/throne.png";
-import hair from "../../Image/home/hair.png";
+
 
 const MissionAndVision = () => {
   const [notices, setNotices] = useState([]);

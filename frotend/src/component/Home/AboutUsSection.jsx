@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./AboutUsSection.css";
 import aboutImg from "../../Image/home/about.png";
 import carClipArt from "../../Image/home/car.png";
@@ -6,14 +6,35 @@ import globeClipArt from "../../Image/home/globe.png";
 import { MdOutlineCheckCircle } from "react-icons/md";
 import callIcon from "../../Image/home/Background.png";
 import underlineImg from "../../Image/home/underline.png";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 const AboutUsSection = () => {
+  // Memoize static data to prevent re-creation on each render
+  const features = useMemo(
+    () => [
+      "Leadership Development",
+      "Process Optimization",
+      "Ongoing Support",
+      "Cost Efficiency",
+    ],
+    []
+  );
+
   return (
     <div className="Aboutcontainer container-fluid d-flex justify-content-center align-items-center z-1">
-      {/* Background Clip Art */}
-      <img src={carClipArt} alt="Car Clip Art" className="carClipArt" />
-      <img src={globeClipArt} alt="Globe Clip Art" className="globeClipArt" />
+      {/* Background Clip Art with lazy loading */}
+      <img
+        src={carClipArt}
+        alt="Car Clip Art"
+        className="carClipArt"
+        loading="lazy"
+      />
+      <img
+        src={globeClipArt}
+        alt="Globe Clip Art"
+        className="globeClipArt"
+        loading="lazy"
+      />
 
       {/* Background Boxes */}
       <div className="backgroundBoxOne"></div>
@@ -26,6 +47,7 @@ const AboutUsSection = () => {
             src={aboutImg}
             alt="Team working together"
             className="image img-fluid"
+            loading="lazy"
           />
         </div>
 
@@ -36,19 +58,12 @@ const AboutUsSection = () => {
 
           {/* Underline Image */}
           <div className="d-flex justify-content-center justify-content-md-start">
-            <img src={underlineImg} alt="Underline" className="underline" />
+            <img src={underlineImg} alt="Underline" className="underline" loading="lazy" />
           </div>
 
           {/* Features List */}
           <div className="features row justify-content-start z-2">
-            {" "}
-            {/* Changed justify-content-center to justify-content-start */}
-            {[
-              "Leadership Development",
-              "Process Optimization",
-              "Ongoing Support",
-              "Cost Efficiency",
-            ].map((feature, index) => (
+            {features.map((feature, index) => (
               <div
                 key={index}
                 className="featureItem col-12 col-sm-6 d-flex align-items-center justify-content-start mx-auto"
@@ -56,8 +71,7 @@ const AboutUsSection = () => {
                 <span className="checkMark">
                   <MdOutlineCheckCircle />
                 </span>
-                <span>{feature}</span>{" "}
-                {/* Wrapped feature in a span for proper alignment */}
+                <span>{feature}</span>
               </div>
             ))}
           </div>
@@ -69,7 +83,7 @@ const AboutUsSection = () => {
             </Link>
 
             <div className="contactInfo d-flex align-items-center">
-              <img src={callIcon} alt="Phone Icon" className="phoneIcon" />
+              <img src={callIcon} alt="Phone Icon" className="phoneIcon" loading="lazy" />
               <div>
                 <p className="call">Call Us Now</p>
                 <p className="phoneNumber">

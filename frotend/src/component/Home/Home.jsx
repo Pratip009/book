@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import "./Home.css";
 import MataData from "../layouts/MataData/MataData";
 import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";
-import HeroSlider from "./HeroSilder";
 import AOS from "aos";
-import OfferBanner from "./OfferBanner";
-import TeamMessage1 from "./TeamMessage1";
-import AboutUsSection from "./AboutUsSection";
-import Programs from "./Programs";
-import ProductSection from "./ProductSection";
 import "aos/dist/aos.css";
-import MissionAndVision from "./MissionAndVision";
+
+// Lazy load non-essential components
+const HeroSlider = lazy(() => import("./HeroSilder"));
+const OfferBanner = lazy(() => import("./OfferBanner"));
+const AboutUsSection = lazy(() => import("./AboutUsSection"));
+const Programs = lazy(() => import("./Programs"));
+const ProductSection = lazy(() => import("./ProductSection"));
+const TeamMessage1 = lazy(() => import("./TeamMessage1"));
+const MissionAndVision = lazy(() => import("./MissionAndVision"));
 
 function Home() {
   const [notices, setNotices] = useState([]);
@@ -30,7 +32,6 @@ function Home() {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log("Notices API response:", data);
         setNotices(data.data);
       } catch (error) {
         console.error("Error fetching notices:", error);
@@ -56,20 +57,19 @@ function Home() {
     <>
       <MataData title="Learning Needs" />
       <div className="Home_Page" style={{ overflow: "hidden" }}>
-        <HeroSlider />
-        <OfferBanner />
-        <AboutUsSection />
-        <Programs />
-
-      
-        {productsLoading ? (
-          <Loader />
-        ) : (
-          <ProductSection products={products} />
-        )}
-
-        <TeamMessage1 />
-        <MissionAndVision />
+        <Suspense fallback={<Loader />}>
+          <HeroSlider />
+          <OfferBanner />
+          <AboutUsSection />
+          <Programs />
+          {productsLoading ? (
+            <Loader />
+          ) : (
+            <ProductSection products={products} />
+          )}
+          <TeamMessage1 />
+          <MissionAndVision />
+        </Suspense>
       </div>
     </>
   );

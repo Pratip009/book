@@ -88,7 +88,11 @@ function BasicExample() {
                     fontSize: "var(--font-span)",
                   }}
                 />
-                <span style={{ fontSize: "var(--font-span)" , fontFamily:'Nunito' }}>{phone}</span>
+                <span
+                  style={{ fontSize: "var(--font-span)", fontFamily: "Nunito" }}
+                >
+                  {phone}
+                </span>
               </Nav.Link>
 
               {/* Social icons in a row for mobile */}
@@ -202,7 +206,11 @@ function BasicExample() {
                     fontSize: "var(--font-span)",
                   }}
                 />
-                <span style={{ fontSize: "var(--font-span)" ,fontFamily:'Nunito' }}>{email}</span>
+                <span
+                  style={{ fontSize: "var(--font-span)", fontFamily: "Nunito" }}
+                >
+                  {email}
+                </span>
               </Nav.Link>
 
               {isAuthenticated ? (
@@ -254,11 +262,14 @@ function BasicExample() {
                 src={logo}
                 alt="Logo"
                 className="logo-lg d-none d-md-block"
+                width="200"
+                height="200"
               />
               <img
                 src={logo}
                 alt="Logo"
                 className="logo-sm d-block d-md-none"
+                
               />
             </Navbar.Brand>
           </Link>

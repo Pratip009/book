@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import Typed from "react-typed";
@@ -34,10 +34,44 @@ const slides = [
 
 function HeroSlider() {
   const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
+  const handleSelect = useCallback((selectedIndex) => {
     setIndex(selectedIndex);
-  };
+  }, []);
+
+  const carouselItems = useMemo(() =>
+    slides.map((slide, idx) => (
+      <Carousel.Item key={idx} className="custom-carousel-item">
+        <img
+          className="d-block w-100 custom-slider-img"
+          src={slide.image}
+          alt={slide.quote}
+          loading={idx === index ? "eager" : "lazy"}
+          width={1440}
+          height={666}
+        />
+        <Carousel.Caption className="carousel-caption">
+          <span className="quote">
+            {idx === index ? (
+              <Typed
+                strings={[slide.quote]}
+                typeSpeed={50}
+                backSpeed={30}
+                loop
+              />
+            ) : (
+              slide.quote
+            )}
+          </span>
+          <span className="sale-text">{slide.saleText}</span>
+          <Link to="/products">
+            <button className="product-button">
+              {slide.productText} <FaArrowRight />
+            </button>
+          </Link>
+        </Carousel.Caption>
+      </Carousel.Item>
+    )), [index]
+  );
 
   return (
     <Carousel
@@ -55,32 +89,7 @@ function HeroSlider() {
         </span>
       }
     >
-      {slides.map((slide, idx) => (
-        <Carousel.Item key={idx} className="custom-carousel-item">
-          <img
-            className="d-block w-100 custom-slider-img"
-            src={slide.image}
-            alt={slide.quote}
-            loading={idx === index ? "eager" : "lazy"}
-          />
-          <Carousel.Caption className="carousel-caption">
-            <span className="quote">
-              <Typed
-                strings={[slide.quote]}
-                typeSpeed={50}
-                backSpeed={30}
-                loop
-              />
-            </span>
-            <span className="sale-text">{slide.saleText}</span>
-            <Link to="/products">
-              <button className="product-button">
-                {slide.productText} <FaArrowRight />
-              </button>
-            </Link>
-          </Carousel.Caption>
-        </Carousel.Item>
-      ))}
+      {carouselItems}
     </Carousel>
   );
 }

@@ -310,7 +310,53 @@
   }
 
   .goal-text {
-    font-size: 14px !important;
+    font-size: 12px !important;
+  }
+
+  .update-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .update-header h5 {
+    font-size: 18px;
+  }
+
+  .update-content {
+    font-size: 18px;
+  }
+  .underline-image3 {
+    position: absolute;
+    left: 70% !important; /* Adjust to be centered */
+    top: 90px !important; /* Adjust as necessary */
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 576px) {
+  .teamstar-image {
+    display: none;
+  }
+  .goals-container-title {
+    font-size: 28px;
+  }
+
+  .goal-card {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .goal-icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .goal-title {
+    font-size: 18px;
+  }
+
+  .goal-text {
+    font-size: 12px !important;
   }
 
   .update-card {
@@ -332,7 +378,6 @@
     transform: translateX(-50%);
   }
 }
-
 /* Medium Devices (768px) */
 @media (max-width: 768px) {
   .teamstar-image {
