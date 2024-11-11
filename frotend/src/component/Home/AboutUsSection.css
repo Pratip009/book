@@ -1,79 +1,79 @@
 /* AboutUsSection.css */
 
 .Aboutcontainer {
-    position: relative;
-    width: 100%;
-    height: 666px;
-    display: flex;
-    align-items: center;
-    background-color: #ffffffff;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  /* Background boxes */
-  .backgroundBoxOne {
-    position: absolute;
-    top: 84px;
-    left: 620px;
-    width: 145px;
-    height: 155px;
-    background-color: #e0d6fc;
-    border-radius: 10px;
-    z-index: -2;
-  }
-  
-  .backgroundBoxTwo {
-    position: absolute;
-    left: 51px;
-    top: 441px;
-    width: 182px;
-    height: 161px;
-    background-color: #fee4dd;
-    border-radius: 10px;
-    z-index: -2;
-  }
-  
-  /* Main Content Section */
-  .imageSection {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-  }
-  
-  .image {
-    width: 541px;
-    height: 395px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .textSection {
-    flex: 1;
-    padding: 20px;
-    z-index: 2;
-  }
-  
-  .subheading {
-    color: #ff4e00;
-    font-family: Quicksand;
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 10px;
-  }
-  
-  .heading {
-    width: 641px;
-    position: relative;
-    color: #003e90;
-    font-family: Quicksand;
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 60px;
-  }
-  
-  /* .underline {
+  position: relative;
+  width: 100%;
+  height: 666px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Background boxes */
+.backgroundBoxOne {
+  position: absolute;
+  top: 84px;
+  left: 620px;
+  width: 145px;
+  height: 155px;
+  background-color: #e0d6fc;
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.backgroundBoxTwo {
+  position: absolute;
+  left: 51px;
+  top: 441px;
+  width: 182px;
+  height: 161px;
+  background-color: #fee4dd;
+  border-radius: 10px;
+  z-index: -2;
+}
+
+/* Main Content Section */
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.image {
+  width: 541px;
+  height: 395px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.textSection {
+  flex: 1;
+  padding: 20px;
+  z-index: 2;
+}
+
+.subheading {
+  color: #ff4e00;
+  font-family: Quicksand;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.heading {
+  width: 641px;
+  position: relative;
+  color: #003e90;
+  font-family: Quicksand;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+/* .underline {
     position: absolute;
     width: 239px;
     height: 12px;
@@ -82,565 +82,468 @@
     border-radius: 45px;
     z-index: -1;
   } */
-  .underline {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto; /* Center the image horizontally */
-    width: 0; /* Start with a width of 0 for animation */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute; 
-    top: 300px; /* Adjust top position as needed */
-    left: 80%; /* Center the image */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: -1; /* Keep the image behind other content */
-    animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+.underline {
+  display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  width: 0; /* Start with a width of 0 for animation */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  top: 300px; /* Adjust top position as needed */
+  left: 80%; /* Center the image */
+  transform: translateX(-50%); /* Adjust for centering */
+  z-index: -1; /* Keep the image behind other content */
+  animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
 }
 
 @keyframes zigzagUnderline {
-    0% {
-        width: 0; /* Start with width 0 */
-    }
-    50% {
-        width: 239px; /* Reach max width at 50% */
-    }
-    100% {
-        width: 0; /* End with width 0 */
-    }
+  0% {
+    width: 0; /* Start with width 0 */
+  }
+  50% {
+    width: 239px; /* Reach max width at 50% */
+  }
+  100% {
+    width: 0; /* End with width 0 */
+  }
 }
 
-  .call {
-    font-family: Quicksand;
-    font-size: 14px;
-    line-height: 28px;
-    font-weight: 600;
-    color: #313131;
-    margin: 0;
-  }
-  
-  .features {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    z-index: 2;
+.call {
+  font-family: Quicksand;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #313131;
+  margin: 0;
+}
+
+.features {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  z-index: 2;
 }
 
 .featureItem {
-    width: 100%; /* Fill the entire grid cell */
-    height: 48px;
-    background: #ffffff00;
-    padding: 10px;
-    border-radius: 30px;
-    box-shadow: 0px 4px 25px 0px #0000000f;
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: flex-start; /* Align left */
-    font-size: 17px;
-    font-weight: 600;
-    font-family: Quicksand;
-    color: #313131;
+  width: 100%; /* Fill the entire grid cell */
+  height: 48px;
+  background: #ffffff00;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 25px 0px #0000000f;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Align left */
+  font-size: 17px;
+  font-weight: 600;
+  font-family: Quicksand;
+  color: #313131;
 }
 
-  
-  .checkMark {
-    color: #313131;
-    font-size: 22px;
-    margin-right: 10px;
-  }
-  
-  .button {
-    width: 201.38px;
-    height: 61px;
-    border-radius: 22px;
-    background-color: #ff4e00;
-    font-family: Quicksand;
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .contactInfo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .phoneIcon {
-    font-size: 24px;
-    color: #ff6b6b;
-    margin-right: 10px;
-  }
-  
-  .phoneNumber {
-    font-family: Quicksand;
-    font-size: 18px;
-    line-height: 21.6px;
-    font-weight: 600;
-    color: #313131;
-  }
-  
-  /* Clip art styles */
-  .carClipArt {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 91px;
-    height: auto;
-    opacity: 1;
-  }
-  .phone-link {
-    color: inherit; /* Make link color inherit from parent */
-    text-decoration: none; /* Remove underline from link */
+.checkMark {
+  color: #313131;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.button {
+  width: 201.38px;
+  height: 61px;
+  border-radius: 22px;
+  background-color: #ff4e00;
+  font-family: Quicksand;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+}
+
+.phoneIcon {
+  font-size: 24px;
+  color: #ff6b6b;
+  margin-right: 10px;
+}
+
+.phoneNumber {
+  font-family: Quicksand;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 600;
+  color: #313131;
+}
+
+/* Clip art styles */
+.carClipArt {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 91px;
+  height: auto;
+  opacity: 1;
+}
+.phone-link {
+  color: inherit; /* Make link color inherit from parent */
+  text-decoration: none; /* Remove underline from link */
 }
 
 .phone-link:hover {
-    text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
-  .globeClipArt {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 121px;
-    height: auto;
-    opacity: 1;
-  }
-  
-  /* Responsive Styles */
-  .actionSection {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  }
-  
-  /* AboutUsSection.css */
-
-/* Existing Styles Omitted for Brevity */
+.globeClipArt {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 121px;
+  height: auto;
+  opacity: 1;
+}
 
 /* Responsive Styles */
-/* AboutUsSection.css */
+.actionSection {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
 
-/* Existing Styles Omitted for Brevity */
-
-/* Responsive Styles */
-@media (max-width: 1440px){
+@media (max-width: 1440px) {
   .underline {
     display: block; /* Ensure it behaves like a block element */
     margin: 0 auto; /* Center the image horizontally */
     width: 0; /* Start with a width of 0 for animation */
     height: auto; /* Maintain aspect ratio */
-    position: absolute; 
+    position: absolute;
     top: 45%; /* Adjust top position as needed */
     left: 82%; /* Center the image */
     transform: translateX(-50%); /* Adjust for centering */
     z-index: -1; /* Keep the image behind other content */
     animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
-}
-@keyframes zigzagUnderline {
-  0% {
-      width: 0; /* Start with width 0 */
-  }
-  50% {
-      width: 235px; /* Reach max width at 50% */
-  }
-  100% {
-      width: 0; /* End with width 0 */
-  }
-}
-}
-@media (max-width: 1024px) {
-  .backgroundBoxOne
-     {
-      position: absolute;
-      top: 73%;
-      left:0;
-      width:100px;
-      height: 100px;
-      background-color: #e0d6fc;
-      border-radius: 10px;
-      z-index: -2;
-    }
-    .backgroundBoxTwo
-     {
-      position: absolute;
-      top: 2px;
-      left:42%;
-      width:100px;
-      height: 100px;
-      background-color: #fee4dd;
-      border-radius: 10px;
-      z-index: -2;
-    }
-    /* Tablet landscape mode */
-    .Aboutcontainer {
-        height: auto;
-        padding: 20px;
-    }
-    .phone-link {
-      color: inherit; /* Make link color inherit from parent */
-      text-decoration: none; /* Remove underline from link */
-  }
-  
-  .phone-link:hover {
-      text-decoration: underline; /* Add underline on hover */
-  }
-    .image {
-        width: 100%;
-        height: auto;
-    }
-    .heading {
-        font-size: 30px;
-        line-height: 1.2;
-        width: 350px;
-        position: relative;
-        color: #003e90;
-        font-family: 'Quicksand';
-        font-weight: 700;
-    }
-    .subheading {
-        font-size: 18px;
-    }
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        justify-content: center;
-        text-align: center;
-        margin: 0;
-        width: 90%;
-        z-index: 2;
-    }
-    .featureItem {
-        width: 100%;
-        font-size: 15px;
-        padding: 8px;
-    }
-    .actionSection {
-        margin-top: 10px !important;
-        gap: 10px;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .button {
-        width: 150px;
-        height: 50px;
-        font-size: 16px;
-        padding: 7px 15px;
-        margin: 0 !important;
-    }
-    .underline {
-      display: block; /* Ensure it behaves like a block element */
-      margin: 0 auto; /* Center the image horizontally */
-      width: 0; /* Start with a width of 0 for animation */
-      height: auto; /* Maintain aspect ratio */
-      position: absolute; 
-      top: 40%; /* Adjust top position as needed */
-      left: 73%; /* Center the image */
-      transform: translateX(-50%); /* Adjust for centering */
-      z-index: -1; /* Keep the image behind other content */
-      animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
   }
   @keyframes zigzagUnderline {
     0% {
-        width: 0; /* Start with width 0 */
+      width: 0; /* Start with width 0 */
     }
     50% {
-        width: 130px; /* Reach max width at 50% */
+      width: 235px; /* Reach max width at 50% */
     }
     100% {
-        width: 0; /* End with width 0 */
+      width: 0; /* End with width 0 */
     }
+  }
 }
-    /* Hide background boxes for tablet and smaller screens */
-   
-    
+@media (max-width: 1024px) {
+  .backgroundBoxOne {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #e0d6fc;
+    border-radius: 10px;
+    z-index: -2;
+  }
+  .backgroundBoxTwo {
+    position: absolute;
+    top: 2px;
+    left: 42%;
+    width: 100px;
+    height: 100px;
+    background-color: #fee4dd;
+    border-radius: 10px;
+    z-index: -2;
+  }
+  /* Tablet landscape mode */
+  .Aboutcontainer {
+    height: auto;
+    padding: 20px;
+  }
+  .phone-link {
+    color: inherit; /* Make link color inherit from parent */
+    text-decoration: none; /* Remove underline from link */
+  }
+
+  .phone-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  .heading {
+    font-size: 30px;
+    line-height: 1.2;
+    width: 350px;
+    position: relative;
+    color: #003e90;
+    font-family: "Quicksand";
+    font-weight: 700;
+  }
+  .subheading {
+    font-size: 18px;
+  }
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    width: 90%;
+    z-index: 2;
+  }
+  .featureItem {
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+  }
+  .actionSection {
+    margin-top: 10px !important;
+    gap: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    padding: 7px 15px;
+    margin: 0 !important;
+  }
+  .underline {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 0; /* Start with a width of 0 for animation */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 40%; /* Adjust top position as needed */
+    left: 73%; /* Center the image */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: -1; /* Keep the image behind other content */
+    animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+  }
+  @keyframes zigzagUnderline {
+    0% {
+      width: 0; /* Start with width 0 */
+    }
+    50% {
+      width: 130px; /* Reach max width at 50% */
+    }
+    100% {
+      width: 0; /* End with width 0 */
+    }
+  }
+  /* Hide background boxes for tablet and smaller screens */
 }
 
 @media (max-width: 768px) {
   /* General styles for the About container */
   .Aboutcontainer {
-      flex-direction: column; /* Stack elements vertically */
-      padding: 15px; /* Add padding for better spacing */
-      height: auto; /* Allow height to adjust based on content */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 15px; /* Add padding for better spacing */
+    height: auto; /* Allow height to adjust based on content */
   }
 
   /* Image styling */
   .image {
-      width: 100%; /* Full width for images */
-      height: auto; /* Maintain aspect ratio */
-      margin-bottom: 20px; /* Spacing below the image */
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Spacing below the image */
   }
 
   /* Heading styles */
   .heading {
-      font-size: 30px; /* Adjust heading size */
+    font-size: 30px; /* Adjust heading size */
   }
 
   .subheading {
-      font-size: 16px; /* Adjust subheading size */
+    font-size: 16px; /* Adjust subheading size */
   }
 
   /* Features grid adjustments */
   .features {
-      display: grid; /* Use grid layout for features */
-      grid-template-columns: repeat(2, 1fr);
-      z-index: 2; /* Ensure visibility */
-      width: 100%;
+    display: grid; /* Use grid layout for features */
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 2; /* Ensure visibility */
+    width: 100%;
   }
-.underline{
-  display: none;
-}
+  .underline {
+    display: none;
+  }
   /* Feature item styles */
   .featureItem {
-      font-size: 13px; /* Font size for feature items */
-      /* Padding around feature items */
-      width: 90%; /* Maintain width */
-      margin: 0 auto; /* Center the items */
+    font-size: 13px; /* Font size for feature items */
+    /* Padding around feature items */
+    width: 90%; /* Maintain width */
+    margin: 0 auto; /* Center the items */
   }
 
   /* Button styles */
   .button {
-      font-size: 13px; /* Adjust button text size */
-      padding: 12px 20px; /* Adjust button padding */
-      width: 100%; /* Full width for button */
-      margin-top: 10px; /* Add spacing above the button */
+    font-size: 13px; /* Adjust button text size */
+    padding: 12px 20px; /* Adjust button padding */
+    width: 100%; /* Full width for button */
+    margin-top: 10px; /* Add spacing above the button */
   }
   .call,
   .phoneNumber {
-      font-size: 13px; /* Adjust font size for contact info */
+    font-size: 13px; /* Adjust font size for contact info */
   }
   .actionSection {
     flex-direction: row !important;
     gap: 10px;
     margin-top: 10px !important;
-}
-.carClipArt,
-    .globeClipArt {
-       z-index: -20;
-    }
-    .backgroundBoxOne
-     {
-      position: absolute;
-      top: 65%;
-      left:0;
-      width:100px;
-      height: 100px;
-      background-color: #e0d6fc;
-      border-radius: 10px;
-      z-index: -2;
-    }
-    .backgroundBoxTwo
-     {
-      position: absolute;
-      top: 2px;
-      left:40%;
-      width:100px;
-      height: 100px;
-      background-color: #fee4dd;
-      border-radius: 10px;
-      z-index: -2;
-    }
+  }
+  .carClipArt,
+  .globeClipArt {
+    z-index: -20;
+  }
+  .backgroundBoxOne {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #e0d6fc;
+    border-radius: 10px;
+    z-index: -2;
+  }
+  .backgroundBoxTwo {
+    position: absolute;
+    top: 2px;
+    left: 40%;
+    width: 100px;
+    height: 100px;
+    background-color: #fee4dd;
+    border-radius: 10px;
+    z-index: -2;
+  }
 }
 
-
-@media (max-width: 480px) {
-    /* Mobile view */
-    .image {
-        width: 85%;
-        height: auto;
-        object-fit: contain;
-        padding: 0;
-    }
-    .heading {
-      width: 100%;
-        font-size: 30px;
-        line-height: 35px;
-    }
-    .subheading {
-        font-size: 14px;
-    }
-    .features {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        justify-content: center;
-        text-align: center;
-        margin: 0 auto;
-        gap: 16px;
-        width: 100%;
-    }
-   
-    .featureItem {
-        width: 100%;
- 
-        font-size: 11px;
-        justify-content: center;
-        box-sizing: border-box;
-    }
-    .button {
-        height: 45px;
-        font-size: 14px;
-        padding: 10px;
-        width: 100%;
-    }
-    
-    /* Hide background boxes for mobile view */
-    .backgroundBoxOne
-     {
-      position: absolute;
-      top: 28%;
-      left:5%;
-      width:100px;
-      height: 100px;
-      background-color: #e0d6fc;
-      border-radius: 10px;
-      z-index: -2;
-    }
-    .backgroundBoxTwo
-     {
-      position: absolute;
-      top: 2px;
-      left:70%;
-      width:100px;
-      height: 100px;
-      background-color: #fee4dd;
-      border-radius: 10px;
-      z-index: -2;
-    }
-    .carClipArt,
-    .globeClipArt {
-        display: none;
-    }
-    .contactInfo {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .phoneIcon {
-        font-size: 20px;
-    }
-    .phoneNumber {
-        font-size: 11px;
-    }
-    .actionSection {
-      width: 90%;
-        flex-direction: row !important;
-        gap: 10px;
-        margin-top: 10px !important;
-    }
-    .underline {
-      display: block; /* Ensure it behaves like a block element */
-      margin: 0 auto; /* Center the image horizontally */
-      width: 0; /* Start with a width of 0 for animation */
-      height: auto; /* Maintain aspect ratio */
-      position: absolute; 
-      top: 65.5%; /* Adjust top position as needed */
-      left: 70%; /* Center the image */
-      transform: translateX(-50%); /* Adjust for centering */
-      z-index: -1; /* Keep the image behind other content */
-      animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
-  }
-  @keyframes zigzagUnderline {
-    0% {
-        width: 0; /* Start with width 0 */
-    }
-    50% {
-        width: 125px; /* Reach max width at 50% */
-    }
-    100% {
-        width: 0; /* End with width 0 */
-    }
-  }
-}
-@media (max-width: 375px) {
-  .Aboutcontainer{
-    padding: 10px;
-  }
-  .features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
-    justify-items: center; /* Center items in their grid cells */
-    text-align: center; /* Center text within items */
-    margin: 0 auto; 
-    gap: 10px; 
-    width: 90%;
-}
-
-    .heading {
-      font-size: 10px;
-      line-height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .subheading {
-        font-size: 12px;
-    }
-    .featureItem {
-      width: 100%; /* Set to 100% to fill the entire grid cell */
-      height: auto; /* Allow height to adjust based on content */
-      font-size: 10px;
-      padding: 6px;
-      background: #ffffff00; /* Optional background, adjust as needed */
-      border-radius: 30px; /* Maintain your border-radius */
-      display: flex;
-      align-items: center; /* Center content vertically */
-      justify-content: flex-start; /* Align content to the left */
-      margin: 0; /* Reset margin to avoid extra space */
-  }
-  
-    .button {
-        font-size: 10px;
-        padding: 8px;
-    }
-    .contactInfo {
-        gap: 8px;
-    }
-    .underline {
-      display: block; /* Ensure it behaves like a block element */
-      margin: 0 auto; /* Center the image horizontally */
-      width: 0; /* Start with a width of 0 for animation */
-      height: auto; /* Maintain aspect ratio */
-      position: absolute; 
-      top: 65.5%; /* Adjust top position as needed */
-      left: 70%; /* Center the image */
-      transform: translateX(-50%); /* Adjust for centering */
-      z-index: -1; /* Keep the image behind other content */
-      animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
-  }
-  @keyframes zigzagUnderline {
-    0% {
-        width: 0; /* Start with width 0 */
-    }
-    50% {
-        width: 125px; /* Reach max width at 50% */
-    }
-    100% {
-        width: 0; /* End with width 0 */
-    }
-  }
-    .actionSection {
-      width: 100%;
-      flex-direction: row !important;
-      gap: 10px;
-      margin-top: 10px;
-  }
-  .phoneIcon {
+@media (max-width: 525px) {
+  .checkMark {
+    color: #313131;
+    text-align: start;
     font-size: 12px;
-    color: #ff6b6b;
     margin-right: 10px;
   }
-  .call,.phoneNumber{
-    font-size: 10px;
+  /* Tablet view */
+  .Aboutcontainer {
+    flex-direction: column !important;
+    padding: 20px !important;
+    height: auto !important;
   }
-
+  .image {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    padding: 5px !important;
+  }
+  .heading {
+    width: 100% !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+  .subheading {
+    font-size: 16px !important;
+  }
+  .features {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    justify-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+  .featureItem {
+    width: 100% !important;
+    font-size: 11px !important;
+    justify-content: start !important;
+  }
+  .button {
+    height: 50px !important;
+    font-size: 11px !important;
+    padding: 12px !important;
+    width: 100% !important;
+  }
+  /* Position and adjust background boxes for tablet view */
+  .backgroundBoxOne {
+    position: absolute !important;
+    top: 34% !important;
+    left: 1% !important;
+    width: 80px !important;
+    height: 80px !important;
+    background-color: #e0d6fc !important;
+    border-radius: 10px !important;
+    z-index: -2 !important;
+  }
+  .backgroundBoxTwo {
+    position: absolute !important;
+    top: 1% !important;
+    left: 80% !important;
+    width: 80px !important;
+    height: 80px !important;
+    background-color: #fee4dd !important;
+    border-radius: 10px !important;
+    z-index: -2 !important;
+  }
+  .carClipArt,
+  .globeClipArt {
+    display: none !important;
+  }
+  .contactInfo {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  .phoneIcon {
+    font-size: 11px !important;
+  }
+  .phoneNumber {
+    font-size: 11px !important;
+  }
+  .actionSection {
+    width: 85% !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    margin-top: 15px !important;
+  }
+  .underline {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: auto;
+    position: absolute;
+    top: 64.5%;
+    left: 70%;
+    transform: translateX(-50%);
+    z-index: -1;
+    animation: zigzagUnderline 6s ease-out infinite;
+  }
+  @keyframes zigzagUnderline {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 130px;
+    }
+    100% {
+      width: 0;
+    }
+  }
 }
 
-/* General adjustments for small mobile devices */
 @media (max-width: 360px) {
-  .Aboutcontainer{
+  .Aboutcontainer {
     padding: 10px;
   }
   .features {
@@ -648,60 +551,57 @@
     grid-template-columns: repeat(2, 1fr); /* Two columns by default */
     justify-items: center; /* Center items in their grid cells */
     text-align: center; /* Center text within items */
-    margin: 0 auto; 
-    gap: 10px; 
+    margin: 0 auto;
+    gap: 10px;
     width: 90%;
-}
-
-    .heading {
-      font-size: 10px;
-      line-height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .subheading {
-        font-size: 12px;
-    }
-    .featureItem {
-      width: 100%; /* Set to 100% to fill the entire grid cell */
-      height: auto; /* Allow height to adjust based on content */
-      font-size: 10px;
-      padding: 6px;
-      background: #ffffff00; /* Optional background, adjust as needed */
-      border-radius: 30px; /* Maintain your border-radius */
-      display: flex;
-      align-items: center; /* Center content vertically */
-      justify-content: flex-start; /* Align content to the left */
-      margin: 0; /* Reset margin to avoid extra space */
   }
-  
-    .button {
-        font-size: 10px;
-        padding: 8px;
-    }
-    .contactInfo {
-        gap: 8px;
-    }
-    .underline {
-   
-      display: none;
-    } .actionSection {
-      width: 100%;
-      flex-direction: row !important;
-      gap: 10px;
-      margin-top: 10px;
+
+  .heading {
+    font-size: 10px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .subheading {
+    font-size: 12px;
+  }
+  .featureItem {
+    width: 100%; /* Set to 100% to fill the entire grid cell */
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 10px;
+    padding: 6px;
+    background: #ffffff00; /* Optional background, adjust as needed */
+    border-radius: 30px; /* Maintain your border-radius */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: flex-start; /* Align content to the left */
+    margin: 0; /* Reset margin to avoid extra space */
+  }
+
+  .button {
+    font-size: 10px;
+    padding: 8px;
+  }
+  .contactInfo {
+    gap: 8px;
+  }
+  .underline {
+    display: none;
+  }
+  .actionSection {
+    width: 100%;
+    flex-direction: row !important;
+    gap: 10px;
+    margin-top: 10px;
   }
   .phoneIcon {
     font-size: 12px;
     color: #ff6b6b;
     margin-right: 10px;
   }
-  .call,.phoneNumber{
+  .call,
+  .phoneNumber {
     font-size: 10px;
   }
-
 }
-
-  
-  
