@@ -119,7 +119,7 @@ export default function Gallery() {
     <container-fluid>
        <container-fluid>
                   <Banner
-                    title="Gallery"
+                    title="You'll Only See the Best of the Best"
                     mainImage={mainImg}
                     iconLeft={bookImg}
                     backgroundPattern={pattern}
