@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Products.css";
 import "aos/dist/aos.css";
-
+import pattern from "../../Image/Product/Frame 19.png"
 import AOS from "aos";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layouts/loader/Loader";
@@ -29,12 +29,16 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import "../../Terms&Condtions/Aboutus.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Banner from "../Banner";
+import mainImage from "../../Image/Product/productImg.png";
+import bookImg from "../../Image/home/teambook.png";
+import star from "../../Image/home/teamstar.png"
 const categories = ["Books", "PDF", "Learning Aid"];
 
 function Products() {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -130,10 +134,12 @@ function Products() {
             <>
               <container-fluid className="productPage">
                 <container-fluid>
-                  <img
-                    src={require("../../Image/PRODNEW111.png")}
-                    alt="About"
-                    className="responsive-img"
+                  <Banner
+                    title="Make No Bad Choices,Choose Us"
+                    mainImage={mainImage}
+                    iconLeft={bookImg}
+                    backgroundPattern={pattern}
+                    iconRight={star}
                   />
                 </container-fluid>
                 <div className="productBack">

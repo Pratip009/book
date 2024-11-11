@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import blogImage from "../../Image/blog1124.png";
-
+import mainImg from "../../Image/Product/blogimg.png"
+import Banner from "../Banner";
+import pattern from "../../Image/Product/Frame 19.png"
+import bookImg from "../../Image/home/teambook.png";
+import star from "../../Image/home/teamstar.png"
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -36,32 +39,17 @@ export default function Blog() {
       ) : error ? (
         <div>Error: {error.message}</div>
       ) : (
-        <div
-          style={{
-            backgroundColor: "white",
-            width: "100%",
-            margin: "0",
-            padding: "0",
-          }}
+        <container-fluid
         >
-          <div
-            style={{
-              width: "100%",
-              height: "300px",
-              overflow: "hidden",
-            }}
-          >
-            <img
-              src={blogImage}
-              alt="Blog"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-          </div>
+           <container-fluid>
+                  <Banner
+                    title="Personal Development for Smart People"
+                    mainImage={mainImg}
+                    iconLeft={bookImg}
+                    backgroundPattern={pattern}
+                    iconRight={star}
+                  />
+                </container-fluid>
 
           <h1
             style={{
@@ -97,7 +85,7 @@ export default function Blog() {
           ) : (
             <div>No blogs available</div>
           )}
-        </div>
+        </container-fluid>
       )}
     </div>
   );

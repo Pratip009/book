@@ -5,8 +5,12 @@ import { useHistory } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import ContactImage from "../Image/cont12112.png";
 import "./Contact.css";
+import Banner from "../component/Banner";
+import mainImg from "../Image/Product/contactImg.png";
+import pattern from "../Image/Product/Frame 18.png";
+import bookImg from "../Image/home/teambook.png";
+import star from "../Image/home/teamstar.png";
 const useStyles = makeStyles((theme) => ({
   root_contactus: {
     padding: "8rem 2rem",
@@ -225,13 +229,19 @@ const ContactForm = () => {
     alert.success("Your message has been sent successfully");
     history.push("/");
   };
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
   return (
     <container-fluid>
       <container-fluid>
-        <img src={ContactImage} alt="contact" className="responsive-img" />
+        <Banner
+          title="Get the Help You Need"
+          mainImage={mainImg}
+          iconLeft={bookImg}
+          backgroundPattern={pattern}
+          iconRight={star}
+        />
       </container-fluid>
       <MetaData title={"Contact Us"} />
       <div className={classes.contact_Container_contactus}>
@@ -245,7 +255,7 @@ const ContactForm = () => {
                       fontSize: "var(--font-h2)",
                       marginTop: "2rem",
                       fontFamily: "'Outfit', sans-serif",
-                      fontWeight:700
+                      fontWeight: 700,
                     }}
                   >
                     <span className="highlight">Contact Us</span>{" "}
@@ -316,7 +326,6 @@ const ContactForm = () => {
                           color: "white",
                           fontFamily: "'Outfit', sans-serif",
                           fontSize: "var(--font-span)",
-
                         }}
                       >
                         Support Form
@@ -349,7 +358,7 @@ const ContactForm = () => {
                         fontSize: "var(--font-h2)",
                         marginTop: "2rem",
                         fontFamily: "'Outfit', sans-serif",
-                        fontWeight:700
+                        fontWeight: 700,
                       }}
                     >
                       <span className="highlight">Support Form</span>{" "}

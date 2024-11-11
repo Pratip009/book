@@ -28,6 +28,11 @@ import learning2Img from "../Image/learning2.png";
 import need2Img from "../Image/need2.png";
 import teamSpiritImg from "../Image/team-spiri.png";
 import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import Banner from "../component/Banner";
+import mainImg from "../Image/Product/aboutUsImg.png";
+import pattern from "../Image/Product/Frame 18.png";
+import bookImg from "../Image/home/teambook.png";
+import star from "../Image/home/teamstar.png";
 const useStyles = makeStyles((theme) => ({
   image_about1: {
     width: "100%",
@@ -267,13 +272,15 @@ const About_UsPage = () => {
   return (
     <>
       <container-fluid>
-        <container-fluid>
-          <img
-            src={require("../Image/about_top.webp")}
-            alt="About"
-            className="responsive-img"
-          />
-        </container-fluid>
+      <container-fluid>
+        <Banner
+          title="Innovation In Every Step"
+          mainImage={mainImg}
+          iconLeft={bookImg}
+          backgroundPattern={pattern}
+          iconRight={star}
+        />
+      </container-fluid>
 
         <MetaData title={"About Us"} />
 

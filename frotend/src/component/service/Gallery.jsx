@@ -4,7 +4,11 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import imageCompression from "browser-image-compression"; // Import compression library
 import "./Gallery.css"; // Assuming you're using a custom CSS file
-
+import Banner from "../Banner";
+import mainImg from "../../Image/Product/galleryImg.png";
+import pattern from "../../Image/Product/Frame 18.png";
+import bookImg from "../../Image/home/teambook.png";
+import star from "../../Image/home/teamstar.png";
 const API_URL =
   "https://learningneeds-strapi-11ta.onrender.com/api/galleries?populate=*";
 
@@ -112,7 +116,16 @@ export default function Gallery() {
   };
 
   return (
-    <MDBContainer fluid className="gallery-container">
+    <container-fluid>
+       <container-fluid>
+                  <Banner
+                    title="Gallery"
+                    mainImage={mainImg}
+                    iconLeft={bookImg}
+                    backgroundPattern={pattern}
+                    iconRight={star}
+                  />
+                </container-fluid>
       <div className="text-center my-4">
         <h1
           style={{
@@ -192,7 +205,7 @@ export default function Gallery() {
           {/* Background for blur effect */}
         </div>
       )}
-    </MDBContainer>
+    </container-fluid>
   );
 }
 

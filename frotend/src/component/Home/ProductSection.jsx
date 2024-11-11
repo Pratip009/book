@@ -18,8 +18,8 @@ function ProductSection({ products }) {
         <img src={underline} alt="underline" className="underline-image2" />
       </h2>
       <p>
-        lorem sapasnf ksoqwe dscnko dsllapwok sdknk aoqbzpo mnqqwe dkdnc
-        kvnksdsddd dhiowbjvb ndjd hadvm
+        Our product ensures you get the best quality, performance, and value,
+        you are investing in both reliability and innovation.
       </p>
       <Container className="trending-products">
         <Row>
@@ -42,4 +42,4 @@ function ProductSection({ products }) {
   );
 }
 
-export default ProductSection; 
+export default ProductSection;

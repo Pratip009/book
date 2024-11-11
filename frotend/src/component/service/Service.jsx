@@ -6,6 +6,11 @@ import Pricing from "../pricing/pricing";
 import "./Service.css";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "react-bootstrap";
+import Banner from "../Banner";
+import mainImg from "../../Image/Product/essentialImg.png";
+import pattern from "../../Image/Product/Frame 18.png";
+import bookImg from "../../Image/home/teambook.png";
+import star from "../../Image/home/teamstar.png";
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
     marginTop: "110px",
@@ -33,11 +38,13 @@ const Service = () => {
 
   return (
     <container-fluid>
-      <container-fluid>
-        <img
-          src={require("../../Image/SER1211.png")}
-          alt="About"
-          className="responsive-img"
+       <container-fluid>
+      <Banner
+          title="Service Truly Different"
+          mainImage={mainImg}
+          iconLeft={bookImg}
+          backgroundPattern={pattern}
+          iconRight={star}
         />
       </container-fluid>
 

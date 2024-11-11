@@ -3,7 +3,11 @@ import Grid from "@mui/material/Grid";
 
 import Card from "react-bootstrap/Card";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import schoolImage from "../../Image/schooln.jpeg";
+import Banner from "../../component/Banner";
+import mainImg from "../../Image/Product/schoolManagementImg.png";
+import pattern from "../../Image/Product/Frame 18.png";
+import bookImg from "../../Image/home/teambook.png";
+import star from "../../Image/home/teamstar.png";
 
 import "./Schools.css";
 import { Col, Container, Row } from "react-bootstrap";
@@ -30,7 +34,13 @@ const School = () => {
   return (
     <container-fluid>
       <container-fluid>
-        <img src={schoolImage} alt="School" className="responsive-img" />
+      <Banner
+          title="We Work to Make you Happy"
+          mainImage={mainImg}
+          iconLeft={bookImg}
+          backgroundPattern={pattern}
+          iconRight={star}
+        />
       </container-fluid>
       <div style={{ display: "flex", width: "100%" }}>
         {/* <MetaData title={"Training"} /> */}

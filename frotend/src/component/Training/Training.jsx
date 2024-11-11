@@ -6,6 +6,11 @@ import TabList from "./TabList";
 import StarIcon from "@mui/icons-material/Star";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "react-bootstrap";
+import Banner from "../Banner";
+import mainImg from "../../Image/Product/trainingImg.png";
+import pattern from "../../Image/Product/Frame 20.png";
+import bookImg from "../../Image/home/teambook.png";
+import star from "../../Image/home/teamstar.png";
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
     width: "100%",
@@ -26,23 +31,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const Training = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
   const classes = useStyles();
   return (
-    <div
-      style={{ width: "100%", backgroundColor: "white", overflowX: "hidden" }}
-    >
+    <container-fluid>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={12}>
-          <div className={classes.imageContainer}>
-            <img
-              src={require("../../Image/trA011.png")}
-              alt="About"
-              className={classes.image}
+          <container-fluid>
+            <Banner
+              title="Get the Help You Need"
+              mainImage={mainImg}
+              iconLeft={bookImg}
+              backgroundPattern={pattern}
+              iconRight={star}
             />
-          </div>
+          </container-fluid>
         </Grid>
         <Grid item xs={12}>
           <Container style={{ marginTop: "2rem" }}>
@@ -656,7 +661,7 @@ const Training = () => {
                 style={{
                   fontSize: "var(--font-h2)",
                   marginTop: "2rem",
-                  fontWeight:700
+                  fontWeight: 700,
                 }}
               >
                 <span className="highlight">Way we deliver our session</span>{" "}
@@ -677,7 +682,7 @@ const Training = () => {
       </Grid>
 
       {/* <MetaData title={"Training"} /> */}
-    </div>
+    </container-fluid>
   );
 };
 
