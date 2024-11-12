@@ -16,13 +16,13 @@ const Parent = () => {
     setExpanded(!expanded);
   };
   return (
-    <Container style={{margin:0,padding:0}}>
+    <Container style={{ margin: 0, padding: 0 }}>
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
         <img src={require("../../Image/PW.png")} alt="" />
       </div>
       <span
         style={{
-          fontFamily: "'Outfit', sans-serif",
+          fontFamily: "Nunito",
           textAlign: "justify",
           display: "inline-block",
           fontSize: "var(--font-span)",
@@ -57,7 +57,7 @@ const Parent = () => {
 
       <Button
         style={{
-          width:"10%",
+          width: "10%",
           color: "#fff",
           backgroundColor: "#FF4E00",
           display: "flex",

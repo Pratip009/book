@@ -117,21 +117,21 @@ export default function Gallery() {
 
   return (
     <container-fluid>
-       <container-fluid>
-                  <Banner
-                    title="You'll Only See the Best of the Best"
-                    mainImage={mainImg}
-                    iconLeft={bookImg}
-                    backgroundPattern={pattern}
-                    iconRight={star}
-                  />
-                </container-fluid>
+      <container-fluid>
+        <Banner
+          title="You'll Only See the Best of the Best"
+          mainImage={mainImg}
+          iconLeft={bookImg}
+          backgroundPattern={pattern}
+          iconRight={star}
+        />
+      </container-fluid>
       <div className="text-center my-4">
         <h1
           style={{
             fontSize: "var(--font-h2)",
             marginTop: "2rem",
-            fontFamily: "'Outfit', sans-serif",
+            fontFamily: "Nunito",
           }}
         >
           <span className="highlight">Gallery</span>
@@ -151,7 +151,7 @@ export default function Gallery() {
                 style={{
                   fontSize: "var(--font-h3)",
                   marginTop: "2rem",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                 }}
               >
                 <span className="highlight">Training Gallery</span>
@@ -171,7 +171,7 @@ export default function Gallery() {
                 style={{
                   fontSize: "var(--font-h3)",
                   marginTop: "2rem",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                 }}
               >
                 <span className="highlight">
@@ -213,15 +213,24 @@ export default function Gallery() {
 const getOptimalImageUrl = (item) => {
   const formats = item.attributes?.images?.data?.[0]?.attributes?.formats;
   if (!formats) {
-    return 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png'; // Provide a fallback URL or placeholder image
+    return "https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png"; // Provide a fallback URL or placeholder image
   }
 
   if (window.innerWidth <= 768) {
-    return formats?.thumbnail?.url || 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png';
+    return (
+      formats?.thumbnail?.url ||
+      "https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png"
+    );
   } else if (window.innerWidth <= 1024) {
-    return formats?.small?.url || 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png';
+    return (
+      formats?.small?.url ||
+      "https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png"
+    );
   } else {
-    return formats?.medium?.url || 'https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png';
+    return (
+      formats?.medium?.url ||
+      "https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png"
+    );
   }
 };
 
@@ -249,5 +258,5 @@ const compressImage = async (imageUrl) => {
 // Optional: Use a tiny placeholder image or blur for initial load
 const getPlaceholderImageUrl = (item) => {
   const formats = item.attributes?.images?.data?.[0]?.attributes?.formats;
-  return formats?.thumbnail?.url || 'fallback-placeholder-url'; // Placeholder image for loading state
+  return formats?.thumbnail?.url || "fallback-placeholder-url"; // Placeholder image for loading state
 };

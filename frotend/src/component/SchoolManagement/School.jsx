@@ -28,13 +28,13 @@ const supportItems = [
   "Health and safety audit",
 ];
 const School = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
   return (
     <container-fluid>
       <container-fluid>
-      <Banner
+        <Banner
           title="We Work to Make you Happy"
           mainImage={mainImg}
           iconLeft={bookImg}
@@ -61,7 +61,7 @@ const School = () => {
             </div>
             <p
               style={{
-                fontFamily: "'Outfit', sans-serif",
+                fontFamily: "Nunito",
                 textAlign: "justify",
                 display: "inline-block",
                 fontSize: "var(--font-span)",
@@ -83,7 +83,7 @@ const School = () => {
             </p>
             <p
               style={{
-                fontFamily: "'Outfit', sans-serif",
+                fontFamily: "Nunito",
                 textAlign: "justify",
                 display: "inline-block",
                 fontSize: "var(--font-span)",
@@ -137,7 +137,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         NO FRANCHISEE
@@ -187,7 +187,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         NO ROYALTY
@@ -237,7 +237,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         NO LOCK PERIOD
@@ -287,7 +287,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         YOU’RE SCHOOL
@@ -341,7 +341,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         YOU’RE BRAND
@@ -391,7 +391,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         FREEDOM
@@ -441,7 +441,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         END TO END SUPPORT
@@ -491,7 +491,7 @@ const School = () => {
                           color: "#fff",
                           fontWeight: "600",
                           fontSize: "var(--font-p)",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         LOW SETUP COST
@@ -540,7 +540,7 @@ const School = () => {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <span
               style={{
-                fontFamily: "'Outfit', sans-serif",
+                fontFamily: "Nunito",
                 textAlign: "center",
                 display: "inline-block",
                 fontSize: "var(--font-span)",
@@ -594,7 +594,7 @@ const School = () => {
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
-                fontWeight:700
+                fontWeight: 700,
               }}
             >
               <span className="highlight"> New Start-up School</span>{" "}
@@ -700,7 +700,7 @@ const School = () => {
                 textAlign: "center",
                 fontSize: "var(--font-h2)",
                 marginTop: "2rem",
-                fontWeight:700
+                fontWeight: 700,
               }}
             >
               <span className="highlight">For Existing Schools</span>{" "}
@@ -708,7 +708,7 @@ const School = () => {
           </div>
           <p
             style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "Nunito",
               textAlign: "justify",
               display: "flex",
               justifyContent: "center",

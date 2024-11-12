@@ -1,23 +1,22 @@
-.Faq_header{
-    color: #003E90;
-    font-family: 'Outfit', sans-serif;
+.Faq_header {
+  color: #003e90;
+  font-family: "Nunito";
   font-weight: 600;
 }
-.Faq_desc{
-    font-size:var(--font-span);
-    text-align: start;
-    font-family: 'Outfit', sans-serif;
-    color: white;
+.Faq_desc {
+  font-size: var(--font-span);
+  text-align: start;
+  font-family: "Nunito";
+  color: white;
 }
-.desc_body{
-background-color: #FF4E00;
-
+.desc_body {
+  background-color: #ff4e00;
 }
-.accordion{
-    border: 1px solid black;
+.accordion {
+  border: 1px solid black;
 }
-.wraapping{
-    display: flex;
-    align-items: start;
-    flex-wrap: wrap;
+.wraapping {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
 }

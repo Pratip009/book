@@ -25,31 +25,36 @@ export default function TeamMessage() {
       className="teamback"
       sx={{
         p: 2,
-        
+
         borderRadius: "10px",
         maxWidth: "100%",
         flexGrow: 1,
         boxShadow: "none",
-        
       }}
     >
       <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <ButtonBase sx={{ width: "100%", height: "auto" }}>
-            <Img src={require("../../Image/discussion.png")} alt="discussion" className="team_img" width={250} height={250}/>
+            <Img
+              src={require("../../Image/discussion.png")}
+              alt="discussion"
+              className="team_img"
+              width={250}
+              height={250}
+            />
           </ButtonBase>
         </Grid>
-        <Grid item xs={12} md={8} style={{
-          display:"flex",
-          alignItems:'center',
-          justifyContent:'center'
-        }}>
-          <Grid
-            container
-            direction="column"
-            spacing={2}
-           
-          >
+        <Grid
+          item
+          xs={12}
+          md={8}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Grid container direction="column" spacing={2}>
             <Grid item xs>
               <Typography
                 gutterBottom
@@ -57,9 +62,9 @@ export default function TeamMessage() {
                 component="div"
                 sx={{
                   color: "white",
-                  fontSize: 'var(--font-h2)',
+                  fontSize: "var(--font-h2)",
                   fontWeight: "700",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
@@ -69,15 +74,14 @@ export default function TeamMessage() {
                 <p
                   className=""
                   style={{
-                    display:"flex",
-                    alignItems:"center",
-                    justifyContent:"center",
-                    fontFamily: "'Outfit', sans-serif",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "Nunito",
                     fontWeight: "300",
-                    fontSize: 'var(--font-span)',
+                    fontSize: "var(--font-span)",
                     color: "white",
                     textAlign: "justify",
-                   
                   }}
                 >
                   We share an enthusiasm for the kind of great learning made
@@ -98,10 +102,10 @@ export default function TeamMessage() {
             <Grid item>
               <Typography
                 sx={{
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                   color: "white",
                   fontWeight: "500",
-                  fontSize: 'var(--font-span)',
+                  fontSize: "var(--font-span)",
                   textAlign: { xs: "center", sm: "left" },
                 }}
                 variant="body2"

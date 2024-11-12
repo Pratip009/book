@@ -195,7 +195,7 @@ function BasicExample() {
                 className="d-flex align-items-center me-3 d-none d-lg-flex"
                 style={{
                   color: "white",
-                  fontFamily: "'Outfit', sans-serif",
+                  
                   textDecoration: "none",
                 }}
               >
@@ -269,7 +269,6 @@ function BasicExample() {
                 src={logo}
                 alt="Logo"
                 className="logo-sm d-block d-md-none"
-                
               />
             </Navbar.Brand>
           </Link>

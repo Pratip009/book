@@ -55,7 +55,7 @@ const Training = () => {
               <p
                 style={{
                   fontWeight: "600",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                   textAlign: "center",
 
                   fontSize: "var(--font-span)",
@@ -71,7 +71,7 @@ const Training = () => {
                 style={{
                   fontSize: "var(--font-span)",
                   fontWeight: "400",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                   textAlign: "justify",
                   display: "inline-block",
                 }}
@@ -105,7 +105,7 @@ const Training = () => {
               <p
                 style={{
                   fontSize: "var(--font-span)",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                   textAlign: "justify",
                   display: "inline-block",
                 }}
@@ -134,7 +134,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -158,7 +158,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -182,7 +182,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -206,7 +206,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -238,7 +238,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -262,7 +262,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -286,7 +286,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -310,7 +310,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -343,7 +343,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -367,7 +367,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -391,7 +391,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -415,7 +415,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       fontSize: "var(--font-span)",
                       display: "inline-block",
@@ -447,7 +447,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -471,7 +471,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -495,7 +495,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -519,7 +519,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -551,7 +551,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -575,7 +575,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -599,7 +599,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",
@@ -623,7 +623,7 @@ const Training = () => {
                   />
                   <span
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       textAlign: "justify",
                       display: "inline-block",
                       fontSize: "var(--font-span)",

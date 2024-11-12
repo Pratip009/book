@@ -1,10 +1,8 @@
-.content1{
-    max-width: 100%;
- 
+.content1 {
+  max-width: 100%;
 
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px;
-
+  font-family: "Nunito";
+  font-size: 15px;
 }
 .additional {
   margin-top: 2rem;
@@ -16,23 +14,21 @@
 }
 
 .additional p {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
   text-align: justify;
   display: inline-block;
-
 }
 
 .support-item {
   display: flex;
   align-items: center;
-  
 }
 
 .support-item p {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
   text-align: justify;
   display: inline-block;
-  font-size: "var(--font-span)",
+  font-size: "var(--font-span)";
 }
 
 @media (max-width: 899px) {
@@ -72,30 +68,30 @@
   }
 }
 
-.header{
-    font-size: 20px;
-    text-align: start
+.header {
+  font-size: 20px;
+  text-align: start;
 }
-.long-text{
-    max-height: 0;
-    overflow: hidden;
-    display: inline-block;
-    transition: max-height 1s;
-    font-family: 'Outfit', sans-serif;
+.long-text {
+  max-height: 0;
+  overflow: hidden;
+  display: inline-block;
+  transition: max-height 1s;
+  font-family: "Nunito";
 }
-.expand1{
-max-height: 50rem;
+.expand1 {
+  max-height: 50rem;
 }
-.schoolbg{
-    background-image: url("../../Image/ourteam.png");
+.schoolbg {
+  background-image: url("../../Image/ourteam.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.additional{
-    background-image: url("../../Image/welcomepage5.png");
+.additional {
+  background-image: url("../../Image/welcomepage5.png");
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
@@ -127,7 +123,6 @@ max-height: 50rem;
   }
 }
 
-
 .icon-container {
   display: flex;
   align-items: center;
@@ -144,13 +139,13 @@ max-height: 50rem;
   text-align: start;
   font-size: 36px;
   margin-top: 10px;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
 }
 
 /* Media query for extra small screens (xs) */
 @media (max-width: 767px) {
   .circle_text h1 {
-    font-size:25px;
-    font-weight:500 
+    font-size: 25px;
+    font-weight: 500;
   }
 }

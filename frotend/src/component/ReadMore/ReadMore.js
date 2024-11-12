@@ -34,7 +34,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
           fontWeight: "400",
           textAlign: "justify",
           display: "inline-block",
-          fontFamily: "'Outfit', sans-serif",
+          fontFamily: "Nunito",
           lineHeight: "22px",
         }}
       >
@@ -49,7 +49,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
           fontWeight: "400",
           textAlign: "justify",
           display: "inline-block",
-          fontFamily: "'Outfit', sans-serif",
+          fontFamily: "Nunito",
           lineHeight: "22px",
         }}
       >
@@ -74,7 +74,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
             fontWeight: "400",
             textAlign: "justify",
             display: "inline-block",
-            fontFamily: "'Outfit', sans-serif",
+            fontFamily: "Nunito",
           }}
         >
           Here are few good benefits of reading books. When you read every day
@@ -97,7 +97,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Gain valuable knowledge
@@ -119,7 +119,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Exercise your brain
@@ -141,7 +141,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Improve your focus{" "}
@@ -163,7 +163,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Improve your memory
@@ -189,7 +189,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Enjoy entertainment
@@ -212,7 +212,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Improve your ability to empathize
@@ -234,7 +234,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Improve your communication skills
@@ -260,7 +260,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Stronger Analytical Thinking Skills
@@ -282,7 +282,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Improve your mental health
@@ -304,7 +304,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
                         fontWeight: "400",
                         textAlign: "justify",
                         display: "inline-block",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                       }}
                     >
                       Vocabulary Expansion{" "}

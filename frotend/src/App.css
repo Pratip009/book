@@ -1,14 +1,13 @@
 /* src/styles/global.css */
 :root {
-  --font-family-heading: 'Quicksand', sans-serif; /* For h1, h2, h3, etc. */
-  --font-family-body: 'Source Sans 3', sans-serif; 
+  --font-family-heading: "Quicksand", sans-serif; /* For h1, h2, h3, etc. */
+  --font-family-body: "Source Sans 3", sans-serif;
 
-  
   --font-h1: 2.441em;
   --font-h2: 1.953em;
   --font-h3: 1.563em;
-  --font-h4: 1.250em;
-  --font-h5: 1.250em;
+  --font-h4: 1.25em;
+  --font-h5: 1.25em;
   --font-h6: 0.875em;
   --font-p: 1em;
   --font-span: 0.975em;
@@ -21,9 +20,9 @@
     --font-h2: 1.625em; /* Approximately 26px */
     --font-h3: 1.375em; /* Approximately 22px */
     --font-h4: 1.125em; /* Approximately 18px */
-    --font-h5: 1em;     /* Approximately 16px */
+    --font-h5: 1em; /* Approximately 16px */
     --font-h6: 0.875em; /* Approximately 14px */
-    --font-p: 1em;      /* Approximately 16px */
+    --font-p: 1em; /* Approximately 16px */
     --font-span: 0.875em; /* Approximately 14px */
   }
 }
@@ -31,17 +30,16 @@
 /* Adjust for devices 721px and smaller */
 @media (max-width: 721px) {
   :root {
-    --font-h1: 1.35em;  /* Approximately 28px */
-    --font-h2: 1.25em;   /* Approximately 24px */
-    --font-h3: 1.15em;  /* Approximately 20px */
-    --font-h4: 1em;     /* Approximately 16px */
+    --font-h1: 1.35em; /* Approximately 28px */
+    --font-h2: 1.25em; /* Approximately 24px */
+    --font-h3: 1.15em; /* Approximately 20px */
+    --font-h4: 1em; /* Approximately 16px */
     --font-h5: 0.875em; /* Approximately 14px */
-    --font-h6: 0.75em;  /* Approximately 12px */
-    --font-p: 0.875em;  /* Approximately 14px */
+    --font-h6: 0.75em; /* Approximately 12px */
+    --font-p: 0.875em; /* Approximately 14px */
     --font-span: 0.75em; /* Approximately 12px */
   }
 }
-
 
 :root {
   /* Default values for larger screens */
@@ -95,11 +93,7 @@
   padding: var(--global-padding);
 }
 
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 html,
 body,
@@ -114,7 +108,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -125,10 +119,10 @@ input::-webkit-inner-spin-button {
 }
 
 .greenColor {
-  color: green !important; 
+  color: green !important;
 }
 
-.redColor { 
+.redColor {
   color: red !important;
 }
 
@@ -187,7 +181,7 @@ input::-webkit-inner-spin-button {
     flex: 1 1 calc(100% - 30px); /* 1 column */
     max-width: calc(100% - 30px);
     /* Ensure no horizontal scroll for individual items */
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   .model-title {

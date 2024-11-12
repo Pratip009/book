@@ -25,8 +25,8 @@ export default function FooterHover() {
         boxShadow: "none",
         // Use theme breakpoints for responsive padding
         padding: {
-          xs: '16px', // Default padding
-          sm: '32px', // Increased padding on sm and up
+          xs: "16px", // Default padding
+          sm: "32px", // Increased padding on sm and up
         },
       }}
     >
@@ -38,17 +38,17 @@ export default function FooterHover() {
           sx={{
             padding: "20px 40px",
             // Responsive font size for the title
-            '& h1': {
+            "& h1": {
               fontSize: {
-                xs: '24px', // Smaller screens
-                sm: '36px', // Larger screens
+                xs: "24px", // Smaller screens
+                sm: "36px", // Larger screens
               },
             },
             // Responsive font size for the paragraph
-            '& p': {
+            "& p": {
               fontSize: {
-                xs: '14px', // Smaller screens
-                sm: '17px', // Larger screens
+                xs: "14px", // Smaller screens
+                sm: "17px", // Larger screens
               },
             },
           }}
@@ -56,16 +56,16 @@ export default function FooterHover() {
           <h1
             style={{
               fontWeight: "600",
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "Nunito",
               color: "#FFFFFF",
-              fontSize:"35px"
+              fontSize: "35px",
             }}
           >
             Let’s Change, Learn, Grow, and Transform!
           </h1>
           <p
             style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "Nunito",
               textAlign: "justify",
               display: "inline-block",
               color: "#FFFFFF",
@@ -96,12 +96,12 @@ export default function FooterHover() {
               marginTop: "10px",
               // Adjust button padding and font size responsively
               padding: {
-                xs: '8px 16px', // Smaller screens
-                sm: '10px 20px', // Larger screens
+                xs: "8px 16px", // Smaller screens
+                sm: "10px 20px", // Larger screens
               },
               fontSize: {
-                xs: '0.75rem', // Smaller screens
-                sm: '0.875rem', // Larger screens
+                xs: "0.75rem", // Smaller screens
+                sm: "0.875rem", // Larger screens
               },
             }}
             variant="contained"

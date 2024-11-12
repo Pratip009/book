@@ -254,7 +254,7 @@ const ContactForm = () => {
                     style={{
                       fontSize: "var(--font-h2)",
                       marginTop: "2rem",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       fontWeight: 700,
                     }}
                   >
@@ -267,7 +267,7 @@ const ContactForm = () => {
                     style={{
                       fontSize: "var(--font-h4)",
                       marginTop: "2rem",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                     }}
                   >
                     Need Help?
@@ -275,7 +275,7 @@ const ContactForm = () => {
 
                   <p
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       fontSize: "var(--font-span)",
                     }}
                   >
@@ -297,7 +297,7 @@ const ContactForm = () => {
 
                   <p
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       fontSize: "var(--font-span)",
                     }}
                   >
@@ -324,7 +324,7 @@ const ContactForm = () => {
                         style={{
                           backgroundColor: "#003E90",
                           color: "white",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                           fontSize: "var(--font-span)",
                         }}
                       >
@@ -339,7 +339,7 @@ const ContactForm = () => {
                         width: "20%",
                         backgroundColor: "#FF4E00",
                         color: "white",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                         fontSize: "var(--font-span)",
                       }}
                     >
@@ -357,7 +357,7 @@ const ContactForm = () => {
                       style={{
                         fontSize: "var(--font-h2)",
                         marginTop: "2rem",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                         fontWeight: 700,
                       }}
                     >
@@ -367,7 +367,7 @@ const ContactForm = () => {
                   <p
                     style={{
                       textAlign: "center",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       fontSize: "var(--font-span)",
                     }}
                   >
@@ -378,7 +378,7 @@ const ContactForm = () => {
                   <Form
                     onSubmit={handleSubmit}
                     style={{
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                       padding: "20px",
                       borderRadius: "15px",
                       boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",

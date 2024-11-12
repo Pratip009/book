@@ -56,7 +56,7 @@ export default function TabList() {
                     padding: "15px 12px",
                     textDecoration: "none",
                     transition: "background-color 0.3s, color 0.3s",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textTransform: "none",
                     fontSize: "var(--font-h4)",
                   }}
@@ -77,7 +77,7 @@ export default function TabList() {
                     padding: "15px 12px",
                     textDecoration: "none",
                     transition: "background-color 0.3s, color 0.3s",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textTransform: "none",
                     fontSize: "var(--font-h4)",
                   }}
@@ -98,7 +98,7 @@ export default function TabList() {
                     padding: "15px 12px",
                     textDecoration: "none",
                     transition: "background-color 0.3s, color 0.3s",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textTransform: "none",
                     fontSize: "var(--font-h4)",
                   }}

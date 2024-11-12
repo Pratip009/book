@@ -4,7 +4,6 @@ import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import underline from "../../Image/home/underline.png";
 
-
 const MissionAndVision = () => {
   const [notices, setNotices] = useState([]);
 
@@ -48,8 +47,7 @@ const MissionAndVision = () => {
             <div className="col-9">
               <h3 className="goal-title">Vision</h3>
               <p className="goal-text">
-                To provide the best quality service and products to our customer
-                and clients.
+                Performance improvement in terms of a personal mission.
               </p>
             </div>
           </div>
@@ -64,8 +62,7 @@ const MissionAndVision = () => {
             <div className="col-9">
               <h3 className="goal-title">Mission</h3>
               <p className="goal-text">
-                To provide the best quality service and products to our customer
-                and clients.
+                For the success of our clients and their individual.
               </p>
             </div>
           </div>

@@ -66,7 +66,7 @@ export default function GoalsObjective() {
                       fontSize: "1rem",
                       color: "#1B1A1A",
                       fontWeight: "600",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                     }}
                   >
                     VISION
@@ -97,7 +97,7 @@ export default function GoalsObjective() {
                       fontSize: "1rem",
                       color: "#1B1A1A",
                       fontWeight: "600",
-                      fontFamily: "'Outfit', sans-serif",
+                      fontFamily: "Nunito",
                     }}
                   >
                     MISSION
@@ -108,7 +108,7 @@ export default function GoalsObjective() {
             </Card>
             <h3
               className="goals-objective-heading"
-              style={{ fontFamily: "'Outfit', sans-serif", fontSize: "2rem" }}
+              style={{ fontFamily: "Nunito", fontSize: "2rem" }}
             >
               Future Target Innovation
             </h3>
@@ -117,7 +117,7 @@ export default function GoalsObjective() {
                 className="goals-objective-desc"
                 style={{
                   fontSize: "1rem",
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "Nunito",
                   textAlign: "justify",
                 }}
               >

@@ -6,15 +6,18 @@ export default function Wellcome() {
   const isXs = useMediaQuery({ maxWidth: 576 });
   return (
     <div>
-      <Container fluid style={{background: "linear-gradient(120deg, #003E90, #3B90FF)",}}>
+      <Container
+        fluid
+        style={{ background: "linear-gradient(120deg, #003E90, #3B90FF)" }}
+      >
         <h3
           className="app_heading1"
           style={{
-            fontFamily: "'Outfit', sans-serif",
-            
+            fontFamily: "Nunito",
+
             padding: isXs ? "0.5rem" : "1rem",
             color: "white",
-            fontSize:'var(--font-h3)',
+            fontSize: "var(--font-h3)",
           }}
         >
           Welcome to Learning Needs
@@ -24,11 +27,10 @@ export default function Wellcome() {
       <p
         style={{
           fontSize: "var(--font-span)",
-          fontFamily: "'Outfit', sans-serif",
+          fontFamily: "Nunito",
           color: "black",
           textAlign: "justify",
-          backgroundColor:"#FFFFFF34",
-
+          backgroundColor: "#FFFFFF34",
         }}
       >
         Necessity is the Mother of Invention, and this proverb perfectly defines

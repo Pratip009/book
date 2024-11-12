@@ -69,7 +69,7 @@ const StyledCard = styled(Card)(({ index }) => ({
   height: "100%",
   display: "flex",
   flexDirection: "column",
-  marginTop:"2rem",
+  marginTop: "2rem",
   backgroundColor: getCardBackgroundColor(index),
 }));
 
@@ -84,11 +84,10 @@ const HeadingSection = styled("div")(({ index }) => ({
   backgroundColor: getHeadingBackgroundColor(index),
   padding: "12px", // Adjusted padding
   borderBottom: "2px solid #000",
-  
 }));
 
 const StyledHeadingTypography = styled(Typography)({
-  fontFamily: "'Outfit', sans-serif",
+  fontFamily: "Nunito",
   fontSize: "var(--font-h4)",
   fontWeight: "bold",
   position: "relative",
@@ -96,13 +95,12 @@ const StyledHeadingTypography = styled(Typography)({
 });
 
 const StyledTypography = styled(Typography)({
-  fontFamily: "'Outfit', sans-serif",
-  
+  fontFamily: "Nunito",
 });
 
 const ContactButton = styled(Button)({
   backgroundColor: "#055694",
-  fontFamily: "'Outfit', sans-serif",
+  fontFamily: "Nunito",
   color: "#fff",
   marginTop: "12px", // Adjusted margin top
   "&:hover": {
@@ -111,17 +109,17 @@ const ContactButton = styled(Button)({
 });
 
 const StyledDialogTitle = styled(DialogTitle)({
-  fontFamily: "'Outfit', sans-serif",
-  borderBottom: "2px solid #cc3d00", 
+  fontFamily: "Nunito",
+  borderBottom: "2px solid #cc3d00",
 });
 
 const StyledDialogContent = styled(DialogContent)({
-  fontFamily: "'Outfit', sans-serif",
+  fontFamily: "Nunito",
   fontSize: "var(--font-p)",
 });
 
 const StyledDialogContentText = styled(DialogContentText)({
-  fontFamily: "'Outfit', sans-serif",
+  fontFamily: "Nunito",
 });
 
 const Pricing = () => {
@@ -154,7 +152,9 @@ const Pricing = () => {
                         <CircleIcon style={{ fontSize: 30 }} />
                       </ListItemIcon>
                       <ListItemText
-                        primary={<StyledTypography style={{}}>{item}</StyledTypography>}
+                        primary={
+                          <StyledTypography style={{}}>{item}</StyledTypography>
+                        }
                       />
                     </ListItem>
                   ))}

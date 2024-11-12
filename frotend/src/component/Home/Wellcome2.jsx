@@ -7,14 +7,17 @@ export default function Wellcome2() {
   const isXs = useMediaQuery({ maxWidth: 576 });
   return (
     <div>
-      <Container fluid style={{background: "linear-gradient(120deg, #FF4E00, #FFB99BFF)",}}>
+      <Container
+        fluid
+        style={{ background: "linear-gradient(120deg, #FF4E00, #FFB99BFF)" }}
+      >
         <h3
           className="app_heading1"
           style={{
-            fontFamily: "'Outfit', sans-serif",
+            fontFamily: "Nunito",
             padding: isXs ? "0.5rem" : "1rem",
             color: "#FFFFFFFF",
-            fontSize:'var(--font-h3)',
+            fontSize: "var(--font-h3)",
           }}
         >
           Our Services Help You Succeed in Business
@@ -23,7 +26,7 @@ export default function Wellcome2() {
       <p
         style={{
           fontSize: "var(--font-span)",
-          fontFamily: "'Outfit', sans-serif",
+          fontFamily: "Nunito",
           color: "black",
           textAlign: "justify",
         }}
@@ -38,7 +41,7 @@ export default function Wellcome2() {
       <Link to="/about_us">
         <Button
           style={{
-            width:"30%",
+            width: "30%",
             border: "1px solid white",
             color: "#fff",
             background: "linear-gradient(45deg, #ff5f6d, #ffc371)",
@@ -48,7 +51,7 @@ export default function Wellcome2() {
             outline: "none",
             cursor: "pointer",
             marginTop: "23px",
-            fontSize:'var(--font-span)',
+            fontSize: "var(--font-span)",
           }}
           variant="contained"
         >

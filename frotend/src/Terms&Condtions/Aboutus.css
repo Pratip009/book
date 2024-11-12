@@ -2,9 +2,9 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
 }
-.aboutus_image::before {    
+.aboutus_image::before {
   content: "";
   background-image: url("../Image/gate.jpg");
   background-size: cover;
@@ -17,7 +17,7 @@ body {
 }
 
 .sub_headings {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
 }
 
 .product_back {
@@ -67,12 +67,10 @@ body {
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
- 
-  display: flex; 
+
+  display: flex;
   align-items: center;
 }
-
-
 
 .founder {
   background-image: url("../Image/dddd.png");
@@ -97,12 +95,13 @@ body {
 }
 
 .responsive-img {
-  width: 100%;       /* Default width 100% */
+  width: 100%; /* Default width 100% */
   max-height: 400px; /* Default max-height */
   object-fit: cover; /* Maintain aspect ratio */
 }
 
-@media (max-width: 576px) { /* For xs screens */
+@media (max-width: 576px) {
+  /* For xs screens */
   .responsive-img {
     height: 150px; /* Adjust this value for smaller screens */
     object-fit: cover;

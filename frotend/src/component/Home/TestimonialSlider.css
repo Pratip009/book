@@ -21,7 +21,6 @@
 
   background-color: #fff;
   border-radius: 10px;
-  
 }
 
 .testimonial-avatar {
@@ -32,7 +31,7 @@
 
 .testimonial-description {
   font-size: var(--font-span);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
   margin-bottom: 1rem;
   color: #555;
   text-align: center;
@@ -40,7 +39,7 @@
 
 .testimonial-name {
   font-weight: bold;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
   font-size: var(--font-p);
 }
 

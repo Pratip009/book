@@ -67,7 +67,7 @@ export default function TabList() {
                     padding: "15px 12px",
                     textDecoration: "none",
                     transition: "background-color 0.3s, color 0.3s",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textTransform: "none",
                     fontSize: "var(--font-h4)",
                   }}
@@ -88,7 +88,7 @@ export default function TabList() {
                     padding: "15px 12px",
                     textDecoration: "none",
                     transition: "background-color 0.3s, color 0.3s",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textTransform: "none",
                     fontSize: "var(--font-h4)",
                   }}
@@ -109,7 +109,7 @@ export default function TabList() {
                     padding: "15px 12px",
                     textDecoration: "none",
                     transition: "background-color 0.3s, color 0.3s",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textTransform: "none",
                     fontSize: "var(--font-h4)",
                   }}
@@ -130,7 +130,7 @@ export default function TabList() {
                     padding: "15px 12px",
                     textDecoration: "none",
                     transition: "background-color 0.3s, color 0.3s",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textTransform: "none",
                     fontSize: "var(--font-h4)",
                   }}
@@ -147,36 +147,28 @@ export default function TabList() {
                 activeKey={activeKey}
                 imageSrc={require("../../Image/pw1.png")}
                 altText="Parenting Workshop"
-              >
-             
-              </CustomTabPanel>
+              ></CustomTabPanel>
 
               <CustomTabPanel
                 eventKey="1"
                 activeKey={activeKey}
                 imageSrc={require("../../Image/st2.png")}
                 altText="Education Issues"
-              >
-             
-              </CustomTabPanel>
+              ></CustomTabPanel>
 
               <CustomTabPanel
                 eventKey="2"
                 activeKey={activeKey}
                 imageSrc={require("../../Image/playyyyy.png")}
                 altText="Play"
-              >
-            
-              </CustomTabPanel>
+              ></CustomTabPanel>
 
               <CustomTabPanel
                 eventKey="3"
                 activeKey={activeKey}
                 imageSrc={require("../../Image/ei.png")}
                 altText="Other Issues"
-              >
-               
-              </CustomTabPanel>
+              ></CustomTabPanel>
             </Tab.Content>
           </Tab.Container>
         </Col>

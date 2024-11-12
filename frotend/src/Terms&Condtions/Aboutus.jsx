@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "var(--font-span)",
     lineHeight: "1.6",
     textAlign: "justify",
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     [theme.breakpoints.down("xs")]: {
       lineHeight: "1.5",
       padding: "0 1rem",
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   wishes: {
     display: "flex",
     alignItems: "flex-start",
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     fontWeight: "500",
     margin: "0",
     padding: "0",
@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   founderName: {
     display: "flex",
     alignItems: "flex-start",
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     fontWeight: "600",
     margin: "0",
     padding: "0",
@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "36px",
     textAlign: "start",
     padding: "2rem 1rem 2rem",
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     fontWeight: "500 !important",
   },
   heading12_about: {
@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   introText_about: {
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     maxWidth: "800px",
     lineHeight: "1.5",
     color: "#292929",
@@ -160,7 +160,7 @@ const useStyles = makeStyles((theme) => ({
   },
   introText_about2: {
     lineHeight: "1.5",
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     marginTop: "-20px",
     color: "#292929",
     fontSize: "0.9rem",
@@ -239,21 +239,21 @@ const useStyles = makeStyles((theme) => ({
   traitLetter: {
     color: "#FF4E00",
     fontSize: "var(--font-h4)",
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     fontWeight: "600",
   },
   traitText: {
     color: "#61677A",
     fontSize: "5px",
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "Nunito",
     fontWeight: "600",
   },
 }));
 
 const About_UsPage = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
   const classes = useStyles();
   const traits = [
     { src: increaseImg, letterr: "L-", textw: "LEADERSHIP" },
@@ -272,15 +272,15 @@ const About_UsPage = () => {
   return (
     <>
       <container-fluid>
-      <container-fluid>
-        <Banner
-          title="Innovation In Every Step"
-          mainImage={mainImg}
-          iconLeft={bookImg}
-          backgroundPattern={pattern}
-          iconRight={star}
-        />
-      </container-fluid>
+        <container-fluid>
+          <Banner
+            title="Innovation In Every Step"
+            mainImage={mainImg}
+            iconLeft={bookImg}
+            backgroundPattern={pattern}
+            iconRight={star}
+          />
+        </container-fluid>
 
         <MetaData title={"About Us"} />
 
@@ -306,15 +306,13 @@ const About_UsPage = () => {
                 className="d-flex flex-column justify-content-start align-items-start"
                 style={{ textAlign: "flex-start" }}
               >
-                <div className="circle_text">
-                  
-                </div>
+                <div className="circle_text"></div>
                 <p
                   variant="body1"
                   style={{
                     fontSize: "var(--font-span)",
                     textAlign: "justify",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                   }}
                 >
                   Learning Needs is a training & management consulting company
@@ -370,7 +368,7 @@ const About_UsPage = () => {
                       style={{
                         color: "#FF4E00",
                         fontSize: "var(--font-h4)",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                         fontWeight: "600",
                       }}
                     >
@@ -380,7 +378,7 @@ const About_UsPage = () => {
                       style={{
                         color: "#61677A",
                         fontSize: "var(--font-span)",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                         fontWeight: "600",
                       }}
                     >
@@ -425,7 +423,7 @@ const About_UsPage = () => {
                       style={{
                         color: "#FF4E00",
                         fontSize: "var(--font-h4)",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                         fontWeight: "600",
                       }}
                     >
@@ -435,7 +433,7 @@ const About_UsPage = () => {
                       style={{
                         color: "#61677A",
                         fontSize: "var(--font-span)",
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                         fontWeight: "600",
                       }}
                     >
@@ -474,7 +472,7 @@ const About_UsPage = () => {
                     textAlign: "start",
                     marginTop: "0",
                     marginBottom: "10px",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     fontSize: "var(--font-h3)",
                     fontWeight: "700",
                     color: "#FF4E00",
@@ -486,7 +484,7 @@ const About_UsPage = () => {
                   style={{
                     fontSize: "var(--font-span)",
 
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     textAlign: "justify",
                   }}
                 >
@@ -506,13 +504,13 @@ const About_UsPage = () => {
                 </p>
                 <Button
                   style={{
-                    width:"20%",
+                    width: "20%",
                     display: "flex",
                     fontSize: "var(--font-span)",
                     textAlign: "start",
                     backgroundColor: "#FF4E00",
                     color: "#fff",
-                    fontFamily: "'Outfit', sans-serif",
+                    fontFamily: "Nunito",
                     fontWeight: "600",
                   }}
                   variant="contained"
@@ -546,7 +544,7 @@ const About_UsPage = () => {
           <span
             className="sub_headings"
             style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "Nunito",
               fontSize: "var(--font-span)",
               fontWeight: 500,
             }}
@@ -586,7 +584,7 @@ const About_UsPage = () => {
                 <div className="circle_text">
                   <h1
                     style={{
-                      display:"flex",
+                      display: "flex",
                       textAlign: "start",
                       fontSize: "var(--font-h2)",
                       fontWeight: 700,
@@ -626,7 +624,6 @@ const About_UsPage = () => {
                 marginTop: "4rem",
               }}
             >
-             
               <div className="circle_text">
                 <h1
                   style={{
@@ -634,7 +631,7 @@ const About_UsPage = () => {
                     fontSize: "var(--font-h2)",
                     fontWeight: 700,
                     marginTop: "2rem",
-                    marginBottom:"2rem"
+                    marginBottom: "2rem",
                   }}
                 >
                   <span className="highlight">Pride of Learning Needs</span>
@@ -642,14 +639,12 @@ const About_UsPage = () => {
               </div>
               <TestimonialSlider />
             </Container>
-            <div className="play" style={{marginTop:"4rem"}}>
+            <div className="play" style={{ marginTop: "4rem" }}>
               <PlayApp />
             </div>
           </div>
 
           <Container className="faq p-0 mb-5">
-            
-
             <div className="circle_text">
               <h1
                 style={{
@@ -664,8 +659,6 @@ const About_UsPage = () => {
             </div>
             <Faq />
           </Container>
-
-    
         </Container>
       </container-fluid>
     </>

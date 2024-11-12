@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Products.css";
 import "aos/dist/aos.css";
-import pattern from "../../Image/Product/Frame 19.png"
+import pattern from "../../Image/Product/Frame 19.png";
 import AOS from "aos";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layouts/loader/Loader";
@@ -32,7 +32,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Banner from "../Banner";
 import mainImage from "../../Image/Product/productImg.png";
 import bookImg from "../../Image/home/teambook.png";
-import star from "../../Image/home/teamstar.png"
+import star from "../../Image/home/teamstar.png";
 const categories = ["Books", "PDF", "Learning Aid"];
 
 function Products() {
@@ -160,7 +160,7 @@ function Products() {
                     </div>
                     <span
                       style={{
-                        fontFamily: "'Outfit', sans-serif",
+                        fontFamily: "Nunito",
                         textAlign: "justify",
                         display: "inline-block",
                         fontSize: "var(--font-span)",
@@ -180,7 +180,7 @@ function Products() {
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                       <span
                         style={{
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                           textAlign: "justify",
                           display: "inline-block",
                           fontSize: "var(--font-span)",
@@ -220,7 +220,7 @@ function Products() {
                           fontWeight: "400",
                           textAlign: "justify",
                           display: "inline-block",
-                          fontFamily: "'Outfit', sans-serif",
+                          fontFamily: "Nunito",
                         }}
                       >
                         Here are a few good benefits of reading books. When you
@@ -246,7 +246,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Gain valuable knowledge
@@ -270,7 +270,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Exercise your brain
@@ -294,7 +294,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Improve your focus and concentration
@@ -318,7 +318,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Improve your memory
@@ -347,7 +347,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Enjoy entertainment
@@ -371,7 +371,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Improve your ability to empathize
@@ -395,7 +395,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Improve your communication skills
@@ -419,7 +419,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Mental Stimulation
@@ -448,7 +448,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Stronger Analytical Thinking Skills
@@ -472,7 +472,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Improve your mental health
@@ -496,7 +496,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Vocabulary Expansion
@@ -520,7 +520,7 @@ function Products() {
                                       fontWeight: "400",
                                       textAlign: "justify",
                                       display: "inline-block",
-                                      fontFamily: "'Outfit', sans-serif",
+                                      fontFamily: "Nunito",
                                     }}
                                   >
                                     Stress Reduction

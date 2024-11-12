@@ -1,31 +1,31 @@
 .blog-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .blog-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    display: flex;
-    font-family: 'Outfit', sans-serif;
-    text-align: start;
-  }
-  
-  .blog-description {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 30px;
-    display: inline-flex;
-    font-family: 'Outfit', sans-serif;
-    text-align: justify;
-  }
-  
-  .blog-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  font-family: "Nunito";
+  text-align: start;
+}
+
+.blog-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 30px;
+  display: inline-flex;
+  font-family: "Nunito";
+  text-align: justify;
+}
+
+.blog-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

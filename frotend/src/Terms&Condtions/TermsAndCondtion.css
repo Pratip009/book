@@ -16,7 +16,7 @@
   top: 50%;
   left: 50%;
   transform: translateY(-50%);
- text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 10px;
   color: white;
   font-size: 32px;
@@ -30,12 +30,11 @@
   line-height: 1.6;
   color: #333333;
   width: 80%;
- font-family: 'Outfit', sans-serif;
- display: block;
- gap: 1rem;
- padding: 23px;
- margin: 0 auto;
- 
+  font-family: "Nunito";
+  display: block;
+  gap: 1rem;
+  padding: 23px;
+  margin: 0 auto;
 }
 
 .terms-title {
@@ -54,39 +53,35 @@ h2 {
 p {
   margin-bottom: 10px;
 }
-.programm_name{
+.programm_name {
   font-size: 15px;
   font-weight: 600;
-  font-family: 'Outfit', sans-serif;
-  
-
+  font-family: "Nunito";
 }
-.programm_name1{
+.programm_name1 {
   font-size: 15px;
   font-weight: 400;
-  font-family: 'Outfit', sans-serif;
-  
+  font-family: "Nunito";
+}
+.headings {
+  display: flex;
+  justify-content: center;
+  font-family: "Nunito";
+  margin-top: 3rem;
 
+  font-size: 30px;
 }
-.headings{
+.sub_headings {
   display: flex;
-justify-content: center;
-font-family: 'Outfit', sans-serif;
-margin-top: 3rem;
-
-font-size: 30px;
+  justify-content: center;
+  font-size: 13px;
+  font-family: "Nunito";
 }
-.sub_headings{
+.sub_headings1 {
   display: flex;
-justify-content: center;
-font-size: 13px;
-font-family: 'Outfit', sans-serif;
-}
-.sub_headings1{
-  display: flex;
-justify-content: center;
-font-size: 15px;
-font-family: 'Outfit', sans-serif;
+  justify-content: center;
+  font-size: 15px;
+  font-family: "Nunito";
 }
 /* Responsive Styles */
 
@@ -94,11 +89,11 @@ font-family: 'Outfit', sans-serif;
   .terms-overlay {
     font-size: 20px;
   }
-  
+
   .terms-title {
     font-size: 20px;
   }
-  
+
   .terms-content {
     font-size: 14px;
   }

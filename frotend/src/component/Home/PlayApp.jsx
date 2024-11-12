@@ -12,21 +12,21 @@ export default function MediaControlCard() {
   // Define styles for responsiveness
   const commonStyles = {
     appHeading: {
-      fontFamily: "'Outfit', sans-serif",
+      fontFamily:'Nunito',
       fontSize: "var(--font-h2)",
       margin: "0",
     },
     appSubheading: {
       marginTop: "20px",
       marginBottom: "10px",
-      fontFamily: "'Outfit', sans-serif",
+      fontFamily: "Nunito",
       fontSize: "var(--font-p)",
       fontWeight: "700",
       color: "#000000",
     },
     appDesc: {
       fontSize: "var(--font-span)",
-      fontFamily: "'Outfit', sans-serif",
+      fontFamily: "Nunito",
       color: "rgb(49, 49, 49)",
       textAlign: "justify",
       display: "inline-block",

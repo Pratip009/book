@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import mainImg from "../../Image/Product/blogimg.png"
+import mainImg from "../../Image/Product/blogimg.png";
 import Banner from "../Banner";
-import pattern from "../../Image/Product/Frame 19.png"
+import pattern from "../../Image/Product/Frame 19.png";
 import bookImg from "../../Image/home/teambook.png";
-import star from "../../Image/home/teamstar.png"
+import star from "../../Image/home/teamstar.png";
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,23 +39,22 @@ export default function Blog() {
       ) : error ? (
         <div>Error: {error.message}</div>
       ) : (
-        <container-fluid
-        >
-           <container-fluid>
-                  <Banner
-                    title="Personal Development for Smart People"
-                    mainImage={mainImg}
-                    iconLeft={bookImg}
-                    backgroundPattern={pattern}
-                    iconRight={star}
-                  />
-                </container-fluid>
+        <container-fluid>
+          <container-fluid>
+            <Banner
+              title="Personal Development for Smart People"
+              mainImage={mainImg}
+              iconLeft={bookImg}
+              backgroundPattern={pattern}
+              iconRight={star}
+            />
+          </container-fluid>
 
           <h1
             style={{
               fontSize: "var(--font-h2)",
               marginTop: "2rem",
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "Nunito",
             }}
           >
             <span className="highlight">Our Blog</span>
@@ -113,7 +112,7 @@ const subheadingStyle = {
   fontSize: "15px",
   marginBottom: "10px",
   textAlign: "justify",
-  fontFamily: "'Outfit', sans-serif",
+  fontFamily: "Nunito",
 };
 
 const imageStyle = {

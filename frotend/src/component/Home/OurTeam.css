@@ -1,6 +1,6 @@
 /* Ensure the Outfit font is applied to the entire container */
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Nunito";
 }
 
 /* Specific styles for social media icons */
@@ -14,7 +14,7 @@ body {
   font-size: 30px; /* Adjust the icon size as needed */
   color: #000; /* Adjust the icon color as needed */
   cursor: pointer; /* Add a pointer cursor on hover */
-  font-family: 'Outfit', sans-serif; /* Apply Outfit font */
+  font-family: "Nunito"; /* Apply Outfit font */
 }
 
 .social-media {
@@ -29,6 +29,6 @@ body {
 /* Add responsive styles */
 @media (max-width: 768px) {
   .social-media {
-    margin-bottom: 1rem /* Add margin-bottom for mobile view */
+    margin-bottom: 1rem; /* Add margin-bottom for mobile view */
   }
 }
