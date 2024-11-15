@@ -10,12 +10,12 @@
 .offer-text {
   font-size: 28px;
   font-weight: 700;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans";
 }
 
 .offer-button {
   background-color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans";
   color: #ff4e00;
   border: none;
   padding: 10px 20px;
@@ -24,6 +24,9 @@
   font-size: 14px;
   border-radius: 2px;
   font-weight: 700;
+  text-decoration: none;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Media query for screens 768px and below (tablets and smaller devices) */

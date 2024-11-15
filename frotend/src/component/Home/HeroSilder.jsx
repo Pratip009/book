@@ -41,34 +41,39 @@ function HeroSlider() {
   const carouselItems = useMemo(() =>
     slides.map((slide, idx) => (
       <Carousel.Item key={idx} className="custom-carousel-item">
-        <img
-          className="d-block w-100 custom-slider-img"
-          src={slide.image}
-          alt={slide.quote}
-          loading={idx === index ? "eager" : "lazy"}
-          width={1440}
-          height={666}
-        />
-        <Carousel.Caption className="carousel-caption">
-          <span className="quote">
-            {idx === index ? (
-              <Typed
-                strings={[slide.quote]}
-                typeSpeed={50}
-                backSpeed={30}
-                loop
-              />
-            ) : (
-              slide.quote
-            )}
-          </span>
-          <span className="sale-text">{slide.saleText}</span>
-          <Link to="/products">
-            <button className="product-button">
-              {slide.productText} <FaArrowRight />
-            </button>
-          </Link>
-        </Carousel.Caption>
+        <figure className="carousel-figure" style={{margin:0}}>
+          <img
+            className="d-block w-100 custom-slider-img"
+            src={slide.image}
+            alt='slider'
+            loading={idx === index ? "eager" : "lazy"}
+            width={1440}
+            height={666}
+          />
+          <figcaption className="carousel-caption">
+            <span className="quote">
+              {idx === index ? (
+                <Typed
+                  strings={[slide.quote]}
+                  typeSpeed={50}
+                  backSpeed={30}
+                  loop
+                />
+              ) : (
+                slide.quote
+              )}
+            </span>
+            <span className="sale-text">{slide.saleText}</span>
+            <Link to="/products">
+              <button
+                className="product-button"
+                aria-label={`Explore ${slide.productText}`}
+              >
+                {slide.productText} <FaArrowRight />
+              </button>
+            </Link>
+          </figcaption>
+        </figure>
       </Carousel.Item>
     )), [index]
   );

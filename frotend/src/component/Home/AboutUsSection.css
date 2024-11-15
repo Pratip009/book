@@ -117,12 +117,11 @@
 }
 
 .features {
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns */
   gap: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+ padding: 10px 0;
   z-index: 2;
 }
 
@@ -448,8 +447,8 @@
   }
   .heading {
     width: 100% !important;
-    font-size: 30px !important;
-    line-height: 40px !important;
+    font-size: 20px !important;
+    line-height: 25px !important;
   }
   .subheading {
     font-size: 16px !important;
@@ -470,7 +469,7 @@
     justify-content: start !important;
   }
   .button {
-    height: 50px !important;
+    height: 40px !important;
     font-size: 11px !important;
     padding: 12px !important;
     width: 100% !important;
@@ -502,14 +501,16 @@
   }
   .contactInfo {
     flex-direction: row !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     gap: 12px !important;
   }
   .phoneIcon {
     font-size: 11px !important;
+    width: 50px;
   }
   .phoneNumber {
     font-size: 11px !important;
+    margin: 0;
   }
   .actionSection {
     width: 85% !important;
@@ -523,8 +524,8 @@
     width: 0;
     height: auto;
     position: absolute;
-    top: 65.5%;
-    left: 70%;
+    top: 64%;
+    left: 50%;
     transform: translateX(-50%);
     z-index: -1;
     animation: zigzagUnderline 6s ease-out infinite;
@@ -534,7 +535,7 @@
       width: 0;
     }
     50% {
-      width: 130px;
+      width: 90px;
     }
     100% {
       width: 0;
@@ -558,7 +559,7 @@
 
   .heading {
     font-size: 10px;
-    line-height: 35px;
+    line-height: 15px;
     display: flex;
     align-items: center;
     justify-content: center;

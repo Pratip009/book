@@ -286,12 +286,12 @@
 }
 
 /* Medium Devices (425px) */
-@media (max-width: 425px) {
+@media (max-width: 525px) {
   .teamstar-image {
     display: none;
   }
   .goals-container-title {
-    font-size: 28px;
+    font-size: 20px !important;
   }
 
   .goal-card {
@@ -326,10 +326,21 @@
     font-size: 18px;
   }
   .underline-image3 {
-    position: absolute;
-    left: 70% !important; /* Adjust to be centered */
-    top: 90px !important; /* Adjust as necessary */
-    transform: translateX(-50%);
+    display: none !important; /* Ensure it behaves like a block element */
+   
+  }
+
+  @keyframes growUnderline29 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 8px;
+    }
+    50% {
+      width: 140px; /* Reach max width at 50% of the animation */
+      height: 8px;
+      z-index: 1;
+    }
   }
 }
 @media (max-width: 576px) {
@@ -464,11 +475,11 @@
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
     background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline2 6s ease-out infinite;
+    animation: growUnderline29 6s ease-out infinite;
     z-index: 1;
   }
 
-  @keyframes growUnderline2 {
+  @keyframes growUnderline29 {
     0%,
     100% {
       width: 0; /* Start and end at width 0 */

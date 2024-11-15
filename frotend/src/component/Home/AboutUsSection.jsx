@@ -21,7 +21,7 @@ const AboutUsSection = () => {
   );
 
   return (
-    <div className="Aboutcontainer container-fluid d-flex justify-content-center align-items-center z-1">
+    <section className="Aboutcontainer container-fluid d-flex justify-content-center align-items-center z-1">
       {/* Background Clip Art with lazy loading */}
       <img
         src={carClipArt}
@@ -37,8 +37,8 @@ const AboutUsSection = () => {
       />
 
       {/* Background Boxes */}
-      <div className="backgroundBoxOne"></div>
-      <div className="backgroundBoxTwo"></div>
+      <div className="backgroundBoxOne" aria-hidden="true"></div>
+      <div className="backgroundBoxTwo" aria-hidden="true"></div>
 
       <div className="row align-items-center justify-content-center text-center text-md-start">
         {/* Image Section */}
@@ -58,13 +58,18 @@ const AboutUsSection = () => {
 
           {/* Underline Image */}
           <div className="d-flex justify-content-center justify-content-md-start">
-            <img src={underlineImg} alt="Underline" className="underline" loading="lazy" />
+            <img
+              src={underlineImg}
+              alt="Decorative underline"
+              className="underline"
+              loading="lazy"
+            />
           </div>
 
           {/* Features List */}
-          <div className="features row justify-content-start z-2">
+          <ul className="features row justify-content-start z-2">
             {features.map((feature, index) => (
-              <div
+              <li
                 key={index}
                 className="featureItem col-12 col-sm-6 d-flex align-items-center justify-content-start mx-auto"
               >
@@ -72,22 +77,34 @@ const AboutUsSection = () => {
                   <MdOutlineCheckCircle />
                 </span>
                 <span>{feature}</span>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
 
           {/* Explore More Button and Contact Info */}
           <div className="actionSection d-flex flex-row align-items-center justify-content-between justify-content-md-start mt-3 z-2">
-            <Link to="/about_us">
+            <Link to="/about_us" aria-label="Explore more about our services">
               <button className="button me-3">Explore More →</button>
             </Link>
 
             <div className="contactInfo d-flex align-items-center">
-              <img src={callIcon} alt="Phone Icon" className="phoneIcon" loading="lazy" />
-              <div>
+              <img
+                src={callIcon}
+                alt="Phone Icon"
+                className="phoneIcon"
+                loading="lazy"
+              />
+              <div style={{
+                zIndex:'2',
+                
+              }}>
                 <p className="call">Call Us Now</p>
                 <p className="phoneNumber">
-                  <a href="tel:+2085550112" className="phone-link">
+                  <a
+                    href="tel:+2085550112"
+                    className="phone-link"
+                    aria-label="Call us at +208-555-0112"
+                  >
                     +208-555-0112
                   </a>
                 </p>
@@ -96,7 +113,7 @@ const AboutUsSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

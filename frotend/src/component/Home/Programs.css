@@ -1,495 +1,509 @@
 /* Container for the entire programs section */
 .programs-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 939px;
-    background-color: #fff1eb;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 939px;
+  background-color: #fff1eb;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
 }
-.Newcontainer{
-    width: 80%;
-    z-index: 3;
+.Newcontainer {
+  width: 80%;
+  z-index: 3;
 }
 /* Title styling */
 .programs-container h2 {
-    font-size: 60px;
-    margin-bottom: 5rem;
-    font-family: 'Quicksand';
-    font-weight: 700;
-    line-height: 60px;
-    z-index: 1;
+  font-size: 60px;
+  margin-bottom: 5rem;
+  font-family: "Quicksand";
+  font-weight: 700;
+  line-height: 60px;
+  z-index: 2;
 }
 
 .underline-image1 {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto; 
-    width: 0; /* Start with a width of 0 for animation */
-    height: 12px; /* Set the height as required */
-    position: absolute; 
-    top: 155px; /* Position relative to h2 */
-    left: 61.5%; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    border-radius: 45px; /* Maintain rounded edges */
-    background-color: #FF4E00; /* Background color for visibility */
-    animation: growUnderline1 6s ease-out infinite; /* Infinite animation */
+  display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto;
+  width: 0; /* Start with a width of 0 for animation */
+  height: 12px; /* Set the height as required */
+  position: absolute;
+  top: 155px; /* Position relative to h2 */
+  left: 61.5%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  border-radius: 45px; /* Maintain rounded edges */
+  background-color: #ff4e00; /* Background color for visibility */
+  animation: growUnderline1 6s ease-out infinite; /* Infinite animation */
 }
 
 @keyframes growUnderline1 {
-    0% {
-        width: 0; /* Start with width 0 */
-    }
-    50% {
-        width: 350px; /* Reach max width at 50% */
-    }
-    100% {
-        width: 0; /* End with width 0 */
-    }
+  0% {
+    width: 0; /* Start with width 0 */
+  }
+  50% {
+    width: 350px; /* Reach max width at 50% */
+  }
+  100% {
+    width: 0; /* End with width 0 */
+  }
 }
 
 /* Grid layout for program cards */
 .programs-grid {
-    margin: 0 auto;
-    z-index: 1;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 /* Styling for each program card */
 .program-card {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    position: relative;
-    height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+  height: 280px;
 }
 
 /* Individual program colors */
 .school-management {
-    background-color: #B6E3DF;
+  background-color: #b6e3df;
 }
 
 .training-program {
-    background-color: #FDE1A4;
+  background-color: #fde1a4;
 }
 
 .sports-training {
-    background-color: #F5CCC1;
+  background-color: #f5ccc1;
 }
 
 .development-program {
-    background-color: #C3DDFF;
+  background-color: #c3ddff;
 }
 
 /* Content area with icon and text split */
 .card-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* Icon styling and spacing for left column */
-.icon12, .icon2, .icon3, .icon4 {
-    width: 90px; 
-    height: 90px; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    overflow: hidden; 
-    margin-right: 1rem; 
+.icon12,
+.icon2,
+.icon3,
+.icon4 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 1rem;
 }
 
 .icon12 {
-    background-color: #85CEC7; 
+  background-color: #85cec7;
 }
 
 .icon2 {
-    background-color: #ECCA7F; 
+  background-color: #ecca7f;
 }
 
 .icon3 {
-    background-color: #E8B4A6; 
+  background-color: #e8b4a6;
 }
 
 .icon4 {
-    background-color: #8DBBF6; 
+  background-color: #8dbbf6;
 }
 
 /* Text content column within the program card */
 .text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
 }
 
 /* Text styles for heading, paragraph, and button */
 .program-card h3 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1F1F1F;
-    font-family: 'Quicksand';
-    margin-bottom: 1rem;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f1f1f;
+  font-family: "Quicksand";
+  margin-bottom: 1rem;
 }
 
 .program-card p {
-    font-size: 16px;
-    color: #000000;
-    margin-bottom: 1rem;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 1rem;
 }
 
 .program-card button {
-  margin-bottom: .5rem;
-    text-align: start;
-    font-size: 16px;
-    line-height: 24px;
-    color: #313131;
-    font-family: 'Nunito';
-    background: none;
-    width: 135.55px;
-    height: 42px;
-    border: none;
-    border-radius: 16px;
-    padding: 10px 16px;
-    gap: 4px;
-    background-color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-align: start;
+  font-size: 16px;
+  line-height: 24px;
+  color: #313131;
+  font-family: "Nunito";
+  background: none;
+  width: 135.55px;
+  height: 42px;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 16px;
+  gap: 4px;
+  background-color: #ffffff;
 }
 
 /* Styling for decorative icons (tree, rocket, sun) */
-.tree-icon, .rocket-icon, .sun-icon {
-    position: absolute;
-    opacity: 0.7;
+.tree-icon,
+.rocket-icon,
+.sun-icon {
+  position: absolute;
+  opacity: 0.7;
 }
 
 .tree-icon {
-    width: 111px;
-    height: auto;
-    top: 5%;
-    left: 0;
+  width: 111px;
+  height: auto;
+  top: 5%;
+  left: 0;
 }
 
 .rocket-icon {
-    width: 90px;
-    height: auto;
-    top: 20%;
-    right: 10%;
+  width: 90px;
+  height: auto;
+  top: 20%;
+  right: 10%;
 }
 
 .sun-icon {
-    width: 277px;
-    height: auto;
-    bottom: 10%;
-    right: 0;
+  width: 277px;
+  height: auto;
+  bottom: 10%;
+  right: 0;
 }
 @media (max-width: 1440px) {
-    .programs-container {
-        padding: 2rem; /* Adjust padding if necessary */
-    }
+  .programs-container {
+    padding: 2rem; /* Adjust padding if necessary */
+  }
 
-    .programs-container h2 {
-        font-size: 55px; /* Slightly smaller title size */
-        margin-bottom: 4rem; /* Adjust margin as needed */
-    }
+  .programs-container h2 {
+    font-size: 55px; /* Slightly smaller title size */
+    margin-bottom: 4rem; /* Adjust margin as needed */
+  }
 
-    .underline-image1 {
-        width: 250px; /* Adjust underline size */
-        height: 10px;
-        position: absolute;
-        top: 180px; /* Adjust position */
-        left: 61%; /* Centered */
-        transform: translateX(-50%); /* Center adjustment */
-        border-radius: 45px;
-    }
+  .underline-image1 {
+    width: 250px; /* Adjust underline size */
+    height: 10px;
+    position: absolute;
+    top: 180px; /* Adjust position */
+    left: 61%; /* Centered */
+    transform: translateX(-50%); /* Center adjustment */
+    border-radius: 45px;
+  }
 
-    .program-card {
-        height: 260px; /* Slightly taller cards */
-        padding: 1.5rem; /* Maintain comfortable padding */
-    }
+  .program-card {
+    height: 260px; /* Slightly taller cards */
+    padding: 1.5rem; /* Maintain comfortable padding */
+  }
 
-    .program-card h3 {
-        font-size: 28px; /* Adjust heading size */
-    }
+  .program-card h3 {
+    font-size: 28px; /* Adjust heading size */
+  }
 
-    .program-card p {
-        font-size: 15px; /* Adjust paragraph size */
-    }
+  .program-card p {
+    font-size: 15px; /* Adjust paragraph size */
+  }
 
-    .program-card button {
-        width: 130px; /* Adjust button size */
-    }
+  .program-card button {
+    width: 130px; /* Adjust button size */
+  }
 
-    .text-content {
-        width: 90%; /* Increase text content width */
-    }
+  .text-content {
+    width: 90%; /* Increase text content width */
+  }
 
-    .icon12, .icon2, .icon3, .icon4 {
-        margin-right: 1.5rem; /* Increase spacing between icons */
-    }
+  .icon12,
+  .icon2,
+  .icon3,
+  .icon4 {
+    margin-right: 1.5rem; /* Increase spacing between icons */
+  }
 
-    /* Adjust the sizes of decorative icons */
-    .tree-icon, .rocket-icon, .sun-icon {
-        width: 100px; /* Adjust for visibility */
-        height: auto; 
-    }
+  /* Adjust the sizes of decorative icons */
+  .tree-icon,
+  .rocket-icon,
+  .sun-icon {
+    width: 100px; /* Adjust for visibility */
+    height: auto;
+  }
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
-    .Newcontainer{
-        width: 100%;
-    }
-    .programs-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        background-color: #fff1eb;
-        text-align: center;
-        position: relative;
-    }
-    .underline-image1 {
-        width: 250px;
-        height: 10px;
-        position: absolute;
-        top: 97px;
-        left: 65%;
-        border-radius: 45px;
-        transform: translateX(-50%); 
-    }
+  .Newcontainer {
+    width: 100%;
+  }
+  .programs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff1eb;
+    text-align: center;
+    position: relative;
+  }
+  .underline-image1 {
+    width: 250px;
+    height: 10px;
+    position: absolute;
+    top: 97px;
+    left: 65%;
+    border-radius: 45px;
+    transform: translateX(-50%);
+  }
 
-    .programs-container h2 {
-        font-size: 50px; 
-        margin-bottom: 3rem;
-    }
-    .programs-container h3 {
-        font-size: 20px; 
-    }
-.text-content{
+  .programs-container h2 {
+    font-size: 50px;
+    margin-bottom: 3rem;
+  }
+  .programs-container h3 {
+    font-size: 20px;
+  }
+  .text-content {
     width: 80%;
-}
-    .program-card {
-        height: 220px; 
-    }
+  }
+  .program-card {
+    height: 220px;
+  }
 
-    .program-card button {
-        width: 130px;
-    }
+  .program-card button {
+    width: 130px;
+  }
 }
 
 @media (max-width: 768px) {
-    .Newcontainer{
-        width: 100%;
-    }
-    .text-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 70%;
-    }
-    .programs-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        background-color: #fff1eb;
-        text-align: center;
-      
-        position: relative;
-    }
-    .icon12,.icon2,.icon3,.icon4{
-        margin: 0 !important;
-    }
-    .programs-container h2 {
-        font-size: 40px; 
-        margin-bottom: 3rem; 
-    }
+  .Newcontainer {
+    width: 100%;
+  }
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+  }
+  .programs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff1eb;
+    text-align: center;
 
-    .underline-image1 {
-        width: 120px;
-        height: 8px;
-        position: absolute;
-        top: 95px;
-        left: 65.5%;
-        border-radius: 45px;
-        transform: translateX(-50%);  
-    }
-    .program-card{
-       height: 250px;
-       padding: 0 10px;
-    }
-    .program-card h3 {
-        font-size: 20px; 
-    }
+    position: relative;
+  }
+  .icon12,
+  .icon2,
+  .icon3,
+  .icon4 {
+    margin: 0 !important;
+  }
+  .programs-container h2 {
+    font-size: 40px;
+    margin-bottom: 3rem;
+  }
 
-    .program-card p {
-        font-size: 14px; 
-    }
+  .underline-image1 {
+    width: 120px;
+    height: 8px;
+    position: absolute;
+    top: 95px;
+    left: 65.5%;
+    border-radius: 45px;
+    transform: translateX(-50%);
+  }
+  .program-card {
+    height: 250px;
+    padding: 0 10px;
+  }
+  .program-card h3 {
+    font-size: 20px;
+   
+  }
 
-    .program-card button {
-        width: 130px; 
-    }
+  .program-card p {
+    font-size: 14px;
+  }
 
-    .tree-icon, .rocket-icon, .sun-icon {
-        width: 80px;
-        height: auto; 
-    }
+  .program-card button {
+    width: 130px;
+  }
+
+  .tree-icon,
+  .rocket-icon,
+  .sun-icon {
+    width: 80px;
+    height: auto;
+  }
 }
 
 @media (max-width: 575px) {
-    .underline-image1{
-        display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto; 
+  .underline-image1 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
     width: 0; /* Start with a width of 0 for animation */
     height: 10px;
     height: 12px; /* Set the height as required */
-    position: absolute; 
-    top: 50px; /* Position relative to h2 */
-    left: 72%; /* Center the image horizontally */
+    position: absolute;
+    top: 37px; /* Position relative to h2 */
+    left: 64%; /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
-    background-color: #FF4E00; /* Background color for visibility */
-    animation: growUnderline1 6s ease-out infinite; 
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline1 6s ease-out infinite;
+    z-index: 0;
+  }
+  @keyframes growUnderline1 {
+    0% {
+      width: 0; /* Start with width 0 */
+      height: 3px;
     }
-    @keyframes growUnderline1 {
-        0% {
-            width: 0; /* Start with width 0 */
-            height: 5px;
-        }
-        50% {
-            width: 150px; /* Reach max width at 50% */
-            height: 5px;
-        }
-        100% {
-            width: 0; /* End with width 0 */
-            height: 5px;
-        }
+    50% {
+      width: 100px; /* Reach max width at 50% */
+      height: 3px;
     }
-    .Newcontainer{
-        width: 100%;
+    100% {
+      width: 0; /* End with width 0 */
+      height: 3px;
     }
-    .programs-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        background-color: #fff1eb;
-        text-align: center;
-        position: relative;
-        padding: 0;
-    }
-    .programs-container h2 {
-        font-size: 30px;
-     
-    }
+  }
+  .Newcontainer {
+    width: 100%;
+  }
+  .programs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff1eb;
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+  .programs-container h2 {
+    font-size: 20px;
+  }
 
-    
+  .program-card {
+    height: 180px;
+  }
 
-    .program-card {
-        height: 180px; 
-    }
+  .program-card h3 {
+    font-size: 14px;
+  }
 
-    .program-card h3 {
-        font-size: 14px; 
-    }
+  .program-card p {
+    font-size: 10px;
+  }
 
-    .program-card p {
-        font-size: 10px; 
-    }
-
-    .program-card button {
-        padding: auto;
-        font-size: 10px;
-        width: 100px; 
-        
-    }
+  .program-card button {
+    height: 30px;
+    font-size: 10px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Optional: remove padding */
+  }
 }
-@media (max-width: 425px){
-    
-   
-    .programs-container h2 {
-        font-size: 30px;
-    }
+@media (max-width: 425px) {
+  .programs-container h2 {
+    font-size: 30px;
+  }
 }
 @media (max-width: 320px) {
-    .Newcontainer{
-        width: 100%;
-    }
-   
-    .programs-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        background-color: #fff1eb;
-        text-align: center;
-        position: relative;
-        padding: 0;
-    }
-    .Newcontainer{
-        width: 100%;
-    }
-    .programs-container h2 {
-        font-size: 20px;
-     
-    }
+  .Newcontainer {
+    width: 100%;
+  }
 
-    .underline {
-        display: block; /* Ensure it behaves like a block element */
-        margin: 0 auto; /* Center the image horizontally */
-        width: 0; /* Start with a width of 0 for animation */
-        height: auto; /* Maintain aspect ratio */
-        position: absolute; 
-        top: 50%; /* Adjust top position as needed */
-        left: 70%; /* Center the image */
-        transform: translateX(-50%); /* Adjust for centering */
-        z-index: -1; /* Keep the image behind other content */
-        animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
-    }
-    @keyframes zigzagUnderline {
-      0% {
-          width: 0; /* Start with width 0 */
-      }
-      50% {
-          width: 100px; /* Reach max width at 50% */
-      }
-      100% {
-          width: 0; /* End with width 0 */
-      }
-    }
+  .programs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff1eb;
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+  .Newcontainer {
+    width: 100%;
+  }
+  .programs-container h2 {
+    font-size: 20px;
+  }
 
-    .program-card {
-        height: 210px; 
+  .underline {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 0; /* Start with a width of 0 for animation */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 50%; /* Adjust top position as needed */
+    left: 70%; /* Center the image */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: -1; /* Keep the image behind other content */
+    animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
+  }
+  @keyframes zigzagUnderline {
+    0% {
+      width: 0; /* Start with width 0 */
     }
+    50% {
+      width: 100px; /* Reach max width at 50% */
+    }
+    100% {
+      width: 0; /* End with width 0 */
+    }
+  }
 
-    .program-card h3 {
-        font-size: 14px; 
-    }
+  .program-card {
+    height: 210px;
+  }
 
-    .program-card p {
-        font-size: 10px; 
-    }
+  .program-card h3 {
+    font-size: 14px;
+  }
 
-    .program-card button {
-        padding: auto;
-        font-size: 10px;
-        width: 100px; 
-        
-    }
+  .program-card p {
+    font-size: 10px;
+  }
+
+  .program-card button {
+    padding: auto;
+    font-size: 10px;
+    width: 100px;
+  }
 }

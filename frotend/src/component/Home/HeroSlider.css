@@ -63,7 +63,7 @@
 .quote {
   font-size: 70px;
   color: #ffffff;
-  font-family: var(--font-family-heading);
+  font-family: 'Quicksand';
   font-weight: 700;
   text-align: start;
   max-width: 60%;
@@ -75,7 +75,7 @@
 
 .sale-text {
   font-size: 20px;
-  font-family: var(--font-family-body);
+  font-family: 'Source Sans 3';
   font-weight: 500;
   text-align: start;
   max-width: 40%;
@@ -86,7 +86,7 @@
 
 .product-button {
   background-color: #ff4e00;
-  font-family: var(--font-family-body);
+  font-family: 'Source Sans 3';
   color: #fff;
   font-weight: 700;
   border-radius: 15px;
@@ -128,18 +128,21 @@
   .product-button {
     display: flex; /* Use flex to align items */
     align-items: center; /* Center items vertically */
+    text-decoration: none;
   }
 
   .product-button svg {
     margin-left: 8px; /* Space between text and icon */
     font-size: 0.5rem; /* Adjust icon size as needed */
     color: #fff; /* Icon color */
+    text-decoration: none;
   }
 
   .product-button {
     font-size: 0.6rem;
     border-radius: 5px;
     padding: 5px 8px;
+    text-decoration: none;
   }
 
   .carousel-indicators {
@@ -161,6 +164,7 @@
     min-height: 120px;
     word-wrap: break-word;
     word-break: break-word;
+    margin-bottom: 1rem; /* Add some margin for better spacing */
   }
 
   .sale-text {
@@ -169,35 +173,46 @@
     max-width: 50%;
     word-wrap: break-word;
     word-break: break-word;
+    margin-bottom: 1.5rem; /* Added margin for spacing */
   }
 
   .product-button {
     font-size: 1rem; /* Adjust the button font size */
     border-radius: 10px;
-    padding: 10px 20px; /* Adjust padding for iPad */
+    text-decoration: none;
+    padding: 12px 25px; /* Adjust padding for a balanced button */
   }
 
   .carousel-control-prev,
   .carousel-control-next {
-    width: 5%;
+    width: 7%; /* Slightly increase the width to give more space */
     height: 100%;
+    z-index: 5; /* Ensure controls are above other content */
   }
 
   .custom-prev-icon,
   .custom-next-icon {
-    font-size: 1.5rem; /* Slightly reduce icon size for iPad */
+    font-size: 1.8rem; /* Increase the icon size for better visibility */
+    color: #000000; /* Icon color */
+    background-color: rgba(255, 255, 255, 0.7); /* Background for better visibility */
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 6; /* Ensure icons are above other elements */
   }
 
   .carousel-caption {
-    top: 45%; /* Adjust vertical alignment of caption */
-    padding: 0 3rem; /* Adjust padding for iPad */
+    top: 50%; /* Center the caption vertically */
+    transform: translateY(-50%); /* Adjust to vertically center */
+    padding: 0 3rem; /* Adjust padding for better spacing */
+    text-align: left; /* Align text to the left */
+    
   }
 
   .carousel-indicators {
     display: block;
     justify-content: center;
     position: absolute;
-    bottom: 10px; /* Adjust based on the layout */
+    bottom: 15px; /* Adjust position for better alignment */
     left: 0;
     right: 0;
     margin: auto;
@@ -207,26 +222,28 @@
   }
 
   .carousel-indicators li {
-    width: 8px;
-    height: 8px;
+    width: 10px; /* Slightly larger dots */
+    height: 10px;
+    margin: 0 5px; /* Add margin between dots */
   }
 
   .carousel-indicators .active {
-    background-color: #ff4e00; /* Orange color for the active dot */
+    background-color: #ff4e00; /* Active dot color */
   }
 }
+
 
 /* Styles for Carousel Controls */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%;
+  width: 10%;
   height: 100%;
   z-index: 3;
 }
 
 .custom-prev-icon,
 .custom-next-icon {
-  font-size: 2rem; /* Ensuring the icons are visible */
+  font-size: 2rem;
   color: #000000;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;

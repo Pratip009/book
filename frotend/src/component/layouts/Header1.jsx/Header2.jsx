@@ -30,7 +30,7 @@ const navLinkHoverStyle = {
   color: "#FF4E00",
 };
 
-function BasicExample() {
+function Header2() {
   const { isAuthenticated, user } = useSelector((state) => state.userData);
 
   const [phone, setPhone] = useState("");
@@ -79,6 +79,7 @@ function BasicExample() {
                   color: "white",
                   fontFamily: "Nunito",
                   textDecoration: "none",
+                  marginRight:'10px'
                 }}
               >
                 <FaPhoneAlt
@@ -558,6 +559,6 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Header2;
 // yim0eNWmTH-OiWI0ZDKAs7-BcBMJVE
 // admin

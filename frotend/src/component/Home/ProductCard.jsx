@@ -77,13 +77,9 @@ function ProductCard({ product }) {
           </div>
 
           {/* Product Name */}
-          <a href={`/product/${product._id}`} className="text-reset">
-            <h5 className="card-title mb-1">
-              {truncatedTitle}
-            </h5>
-          </a>
-
-          {/* Product Description */}
+          <h3 className="card-title mb-1">
+            {truncatedTitle}
+          </h3>
 
           {/* Rating Section */}
           <div className="d-flex align-items-center mb-2">

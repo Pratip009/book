@@ -41,7 +41,9 @@ export default function Footer() {
                   <MDBRow>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center">
+                        <MDBRow className="align-items-center" style={{
+                          height:'100%'
+                        }}>
                           <MDBCol md="4" className="icon-col">
                             <TbTruckDelivery className="icon" />
                           </MDBCol>
@@ -54,7 +56,9 @@ export default function Footer() {
                     </MDBCol>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center">
+                        <MDBRow className="align-items-center" style={{
+                          height:'100%'
+                        }}>
                           <MDBCol md="4" className="icon-col">
                             <GiCheckedShield className="icon" />
                           </MDBCol>
@@ -67,7 +71,9 @@ export default function Footer() {
                     </MDBCol>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center">
+                        <MDBRow className="align-items-center" style={{
+                          height:'100%'
+                        }}>
                           <MDBCol md="4" className="icon-col">
                             <RiExchangeBoxLine className="icon" />
                           </MDBCol>
@@ -80,7 +86,9 @@ export default function Footer() {
                     </MDBCol>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center">
+                        <MDBRow className="align-items-center" style={{
+                          height:'100%'
+                        }}>
                           <MDBCol md="4" className="icon-col">
                             <GrSecure className="icon" />
                           </MDBCol>

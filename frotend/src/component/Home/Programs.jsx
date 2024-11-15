@@ -9,50 +9,51 @@ import sports from "../../Image/programs/sports.png";
 import development from "../../Image/programs/development.png";
 import underlineImage from "../../Image/home/underline.png";
 import { Link } from "react-router-dom";
+
 const Programs = () => {
   return (
-    <div className="programs-container">
-      <h2>Explore Our Programs</h2>
-      <img src={underlineImage} alt="Underline" className="underline-image1" />
+    <section className="programs-container">
+      <header>
+        <h2>Explore Our Programs</h2>
+        <img src={underlineImage} alt="Decorative underline" className="underline-image1" />
+      </header>
+
       <div className="Newcontainer">
         <div className="row programs-grid">
-          <div className="col-12 col-sm-6 mb-4">
+          {/* School Management Service Program Card */}
+          <article className="col-12 col-sm-6 mb-4">
             <div className="program-card school-management">
               <div className="card-content">
                 <div className="text-content">
                   <h3>School Management Services</h3>
-                  <p style={{
-                    width:'90%',
-                    textAlign:'justify'
-                  }}>
-                    From vision to reality Expert school management guides you
+                  <p style={{ width: "90%", textAlign: "justify" }}>
+                    From vision to reality, expert school management guides you
                     through every step of establishing a thriving educational
                     institution.
                   </p>
-                  <Link to="/school">
+                  <Link to="/school" aria-label="Enroll in School Management Services">
                     <button>Enroll now →</button>
                   </Link>
                 </div>
                 <div className="icon12">
-                  <img src={school} alt="School Icon" />
+                  <img src={school} alt="School Management Icon" />
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-12 col-sm-6 mb-4">
+          </article>
+
+          {/* Training Program Card */}
+          <article className="col-12 col-sm-6 mb-4">
             <div className="program-card training-program">
               <div className="card-content">
                 <div className="text-content">
                   <h3>Training Program</h3>
-                  <p style={{
-                    width:'90%',
-                    textAlign:'justify'
-                  }}>
-                    Bridging the gap Our inclusive training empowers teachers,
+                  <p style={{ width: "90%", textAlign: "justify" }}>
+                    Bridging the gap. Our inclusive training empowers teachers,
                     engages students, and equips parents to foster a
                     collaborative learning environment.
                   </p>
-                  <Link to="/training">
+                  <Link to="/training" aria-label="Enroll in Training Program">
                     <button>Enroll now →</button>
                   </Link>
                 </div>
@@ -61,58 +62,58 @@ const Programs = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-12 col-sm-6 mb-4">
+          </article>
+
+          {/* Sports Training Program Card */}
+          <article className="col-12 col-sm-6 mb-4">
             <div className="program-card sports-training">
               <div className="card-content">
                 <div className="text-content">
                   <h3>Sports Training</h3>
-                  <p style={{
-                    width:'90%',
-                    textAlign:'justify'
-                  }}>
-                    From the classroom to the playing field , our comprehensive
+                  <p style={{ width: "90%", textAlign: "justify" }}>
+                    From the classroom to the playing field, our comprehensive
                     training nurtures athletic talent and fosters a love for
-                    physical fitness
+                    physical fitness.
                   </p>
                   <button>Enroll now →</button>
                 </div>
                 <div className="icon3">
-                  <img src={sports} alt="Sports Icon" />
+                  <img src={sports} alt="Sports Training Icon" />
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-12 col-sm-6 mb-4">
+          </article>
+
+          {/* Services Program Card */}
+          <article className="col-12 col-sm-6 mb-4">
             <div className="program-card development-program">
               <div className="card-content">
                 <div className="text-content">
                   <h3>Services</h3>
-                  <p style={{
-                    width:'90%',
-                    textAlign:'justify'
-                  }}>
-                    From essential supplies to expert services , we support
+                  <p style={{ width: "90%", textAlign: "justify" }}>
+                    From essential supplies to expert services, we support
                     schools in creating an inspiring and effective learning
                     environment.
                   </p>
-                  <Link to="/service">
+                  <Link to="/service" aria-label="Enroll in Services">
                     <button>Enroll now →</button>
                   </Link>
                 </div>
                 <div className="icon4">
-                  <img src={development} alt="Development Icon" />
+                  <img src={development} alt="Development Services Icon" />
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
 
-      <img src={tree} alt="Tree" className="tree-icon" />
-      <img src={rocket} alt="Rocket" className="rocket-icon" />
-      <img src={sun} alt="Sun" className="sun-icon" />
-    </div>
+      <div className="decorative-icons">
+        <img src={tree} alt="Tree Icon" className="tree-icon" />
+        <img src={rocket} alt="Rocket Icon" className="rocket-icon" />
+        <img src={sun} alt="Sun Icon" className="sun-icon" />
+      </div>
+    </section>
   );
 };
 

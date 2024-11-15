@@ -14,33 +14,33 @@ const OfferBanner = lazy(() => import("./OfferBanner"));
 const AboutUsSection = lazy(() => import("./AboutUsSection"));
 const Programs = lazy(() => import("./Programs"));
 const ProductSection = lazy(() => import("./ProductSection"));
-const TeamMessage1 = lazy(() => import("./TeamMessage1"));
+const TeamMessage = lazy(() => import("./TeamMessage1"));
 const MissionAndVision = lazy(() => import("./MissionAndVision"));
 
-function Home() {
+const Home = () => {
   const [notices, setNotices] = useState([]);
   const alert = useAlert();
   const dispatch = useDispatch();
   const { loading: productsLoading, error, products } = useSelector((state) => state.products);
 
+  // Fetch Notices
+  const fetchNotices = async () => {
+    try {
+      const response = await fetch("https://learningneeds-strapi-11ta.onrender.com/api/noticeboards");
+      if (!response.ok) throw new Error("Failed to fetch notices.");
+      const data = await response.json();
+      setNotices(data.data);
+    } catch (error) {
+      console.error("Error fetching notices:", error);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    const fetchNotices = async () => {
-      try {
-        const response = await fetch("https://learningneeds-strapi-11ta.onrender.com/api/noticeboards");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        setNotices(data.data);
-      } catch (error) {
-        console.error("Error fetching notices:", error);
-      }
-    };
-
     fetchNotices();
   }, []);
 
+  // Handle Redux product errors and fetch products
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -49,6 +49,7 @@ function Home() {
     dispatch(getProduct());
   }, [dispatch, error, alert]);
 
+  // Initialize AOS animations
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -56,10 +57,10 @@ function Home() {
   return (
     <>
       <MataData title="Learning Needs" />
-      <div className="Home_Page" style={{ overflow: "hidden" }}>
+      <main className="Home_Page" style={{ overflow: "hidden" }}>
         <Suspense fallback={<Loader />}>
           <HeroSlider />
-          <OfferBanner />
+          <OfferBanner/>
           <AboutUsSection />
           <Programs />
           {productsLoading ? (
@@ -67,12 +68,12 @@ function Home() {
           ) : (
             <ProductSection products={products} />
           )}
-          <TeamMessage1 />
+          <TeamMessage />
           <MissionAndVision />
         </Suspense>
-      </div>
+      </main>
     </>
   );
-}
+};
 
 export default Home;

@@ -49,6 +49,8 @@ animation: growUnderline2 6s ease-out infinite;
 }
 
 .product-section p {
+  position: relative;
+  z-index: 2;
   width: 647.81px;
   font-size: 18px;
   line-height: 32px;
@@ -188,6 +190,31 @@ animation: growUnderline2 6s ease-out infinite;
 }
 
 @media (max-width: 575px) {
+  .product-section .underline-image2 {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 12px; /* Fixed duplicate height */
+    position: absolute;
+    top: 39px;
+    left: 72% !important;
+    transform: translateX(-50%);
+    border-radius: 45px;
+    background-color: #FF4E00;
+    animation: growUnderline13 6s ease-out infinite;
+  }
+  
+  @keyframes growUnderline13 {
+    0%, 100% {
+        width: 0; /* Start and end at width 0 */
+        height: 3px;
+    }
+    50% {
+        width: 80px ; /* Reach max width at 50% of the animation */
+        height: 3px
+        
+    }
+  }
   .trending-products{
     display: flex;
     align-items: center;
@@ -199,7 +226,7 @@ animation: growUnderline2 6s ease-out infinite;
   }
   
   .product-section h2 {
-    font-size: 30px; 
+    font-size: 20px; 
   }
   
   .product-section p {

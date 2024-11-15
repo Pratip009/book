@@ -14,10 +14,14 @@ function ProductSection({ products }) {
           position: "relative",
         }}
       >
-        Choose the right <span>product</span>
+        Choose the right product
         <img src={underline} alt="underline" className="underline-image2" />
       </h2>
-      <p>
+      <p
+        style={{
+          position: "relative",
+        }}
+      >
         Our product ensures you get the best quality, performance, and value,
         you are investing in both reliability and innovation.
       </p>
