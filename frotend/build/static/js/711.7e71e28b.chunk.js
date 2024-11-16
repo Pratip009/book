@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrotend=self.webpackChunkfrotend||[]).push([[711],{69711:(e,a,t)=>{t.r(a),t.d(a,{default:()=>o});var s=t(65043),n=(t(97905),t(17115)),f=t.n(n),d=t(70579);const o=()=>((0,s.useEffect)((()=>{f().init({duration:2e3,once:!0})}),[]),(0,d.jsxs)("div",{className:"offer-banner",children:[(0,d.jsx)("div",{className:"offer-text",children:"Limited Time Offer - Up to 50% Off!"}),(0,d.jsx)("button",{className:"offer-button","data-aos":"fade-in","data-aos-delay":"300",children:"Connect With Us Today"})]}))}}]);
+//# sourceMappingURL=711.7e71e28b.chunk.js.map
