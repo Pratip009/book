@@ -117,7 +117,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+a{
+  text-decoration: none;
+}
 .greenColor {
   color: green !important;
 }

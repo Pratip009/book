@@ -17,6 +17,7 @@
   font-weight: 700;
   line-height: 60px;
   position: relative; /* Allow positioning of the image */
+  z-index: 2 !important;
 }
 
 .product-section span {
@@ -26,25 +27,26 @@
 
 .product-section .underline-image2 {
   display: block; /* Ensure it behaves like a block element */
-margin: 0 auto; 
-width: 0; /* Start with a width of 0 for animation */
-height: 10px;
-height: 12px; /* Set the height as required */
-position: absolute; 
-top: 55px; /* Position relative to h2 */
-left: 67.5%; /* Center the image horizontally */
-transform: translateX(-50%); /* Adjust for centering */
-border-radius: 45px; /* Maintain rounded edges */
-background-color: #FF4E00; /* Background color for visibility */
-animation: growUnderline2 6s ease-out infinite; 
+  margin: 0 auto;
+  width: 0; /* Start with a width of 0 for animation */
+  position: absolute;
+  top: 56px; /* Position relative to h2 */
+  left: 67.5%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  border-radius: 45px; /* Maintain rounded edges */
+  background-color: #ff4e00; /* Background color for visibility */
+  animation: growUnderline2 6s ease-out infinite; /* Infinite animation */
+  z-index: 1 !important;
 }
 
 @keyframes growUnderline2 {
   0%, 100% {
       width: 0; /* Start and end at width 0 */
+     
   }
   50% {
-      width: 227px; /* Reach max width at 50% of the animation */
+      width: 210px; /* Reach max width at 50% of the animation */
+      
   }
 }
 
@@ -81,6 +83,7 @@ animation: growUnderline2 6s ease-out infinite;
   width: 100px;
   height: 100px;
   opacity: 1;
+  z-index: 1;
 }
 
 /* Media Queries for responsiveness */
@@ -230,8 +233,9 @@ animation: growUnderline2 6s ease-out infinite;
   }
   
   .product-section p {
-    width: 100%; /* Full width for mobile */
-    font-size: 14px;
+    width: 90%; /* Full width for mobile */
+    font-size: 11px;
+    line-height: 25px;
   }
 
   

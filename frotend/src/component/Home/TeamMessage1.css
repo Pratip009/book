@@ -53,7 +53,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.content {
+  z-index: 2;
+}
 .chat-bubbles-icon {
   width: 382.71px;
   height: 387.71px;
@@ -69,6 +71,8 @@
   height: 43px;
   top: 51px;
   left: 43px;
+  opacity: 0.7;
+  z-index: 1;
 }
 
 /* Rocket Icon */
@@ -78,6 +82,7 @@
   top: 163px;
   left: 740px;
   transform: rotate(90deg);
+  z-index: 1;
 }
 
 /* Book Icon */
@@ -194,6 +199,9 @@
     width: 30px; /* Reduce icon size */
     height: 30px;
   }
+  .star-icon {
+    top: 40px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -208,6 +216,8 @@
   }
 
   .description {
+    position: relative !important;
+    z-index: 2 !important;
     font-size: 12px;
   }
 

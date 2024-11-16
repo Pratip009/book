@@ -326,22 +326,31 @@
     font-size: 18px;
   }
   .underline-image3 {
-    display: none !important; /* Ensure it behaves like a block element */
-   
+    display: block !important; /* Ensure it behaves like a block element */
+    margin: 0 auto !important;
+    width: 0 !important; /* Start with a width of 0 for animation */
+    height: 3px !important; /* Set the height as required */
+    position: absolute !important;
+    top: 110px !important; /* Position relative to h2 (adjust as necessary) */
+    left: 50% !important; /* Center the image horizontally */
+    transform: translateX(-50%) !important; /* Adjust for centering */
+    border-radius: 45px !important; /* Maintain rounded edges */
+    background-color: #ff4e00 !important; /* Background color for visibility */
+    animation: growUnderline29 6s ease-out infinite !important; /* Animation declaration */
+    z-index: 1 !important;
   }
-
+  
   @keyframes growUnderline29 {
     0%,
     100% {
-      width: 0; /* Start and end at width 0 */
-      height: 8px;
+      width: 0 !important; /* Start and end at width 0 */
     }
     50% {
-      width: 140px; /* Reach max width at 50% of the animation */
-      height: 8px;
-      z-index: 1;
+      width: 100px !important; /* Reach max width at 50% of the animation */
     }
   }
+  
+  
 }
 @media (max-width: 576px) {
   .teamstar-image {

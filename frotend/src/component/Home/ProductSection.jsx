@@ -9,22 +9,26 @@ import underline from "../../Image/home/underline.png";
 function ProductSection({ products }) {
   return (
     <div className="product-section">
-      <h2
-        style={{
-          position: "relative",
-        }}
-      >
-        Choose the right product
-        <img src={underline} alt="underline" className="underline-image2" />
-      </h2>
-      <p
-        style={{
-          position: "relative",
-        }}
-      >
-        Our product ensures you get the best quality, performance, and value,
-        you are investing in both reliability and innovation.
-      </p>
+     <header>
+  <h2
+    id="product-heading"
+    style={{
+      position: "relative", // Parent with relative positioning
+    }}
+  >
+    Choose the right product
+    <img
+      src={underline}
+      alt="underline"
+      className="underline-image2" // Child with absolute positioning
+    />
+  </h2>
+  <p className="product-description">
+    Our product ensures you get the best quality, performance, and value,
+    so you are investing in both reliability and innovation.
+  </p>
+</header>
+
       <Container className="trending-products">
         <Row>
           {products &&

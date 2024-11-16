@@ -9,5 +9,7 @@ body {
   font-family: 'Nunito';
   overflow-x: hidden;
 }
-
+a {
+  text-decoration: none !important;
+}
 

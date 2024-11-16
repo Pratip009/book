@@ -14,7 +14,10 @@ const Programs = () => {
   return (
     <section className="programs-container">
       <header>
-        <h2>Explore Our Programs</h2>
+        <h2 style={{
+          position:'relative',
+          zIndex:'2'
+        }}>Explore Our Programs</h2>
         <img src={underlineImage} alt="Decorative underline" className="underline-image1" />
       </header>
 

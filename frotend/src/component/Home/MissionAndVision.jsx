@@ -31,21 +31,24 @@ const MissionAndVision = () => {
     <div className="goals-container">
       {/* Section for Goals and Objectives */}
       <header className="goals-header">
-        <h2 className="goals-container-title">
-          Goals And <span>Objective</span>
-          <img src={underline} alt="underline" className="underline-image3" />
-        </h2>
+        <h2 className="goals-container-title">Goals And Objective</h2>
+        <img src={underline} alt="underline" className="underline-image3" />
       </header>
 
       <div className="row justify-content-center">
         {/* Vision Section */}
-        <section className="col-12 col-md-5 goal-card vision-card" aria-labelledby="vision">
+        <section
+          className="col-12 col-md-5 goal-card vision-card"
+          aria-labelledby="vision"
+        >
           <div className="row">
             <div className="col-3 d-flex align-items-center justify-content-center">
               <div className="goal-icon vision-icon" aria-hidden="true"></div>
             </div>
             <div className="col-9">
-              <h3 id="vision" className="goal-title">Vision</h3>
+              <h3 id="vision" className="goal-title">
+                Vision
+              </h3>
               <p className="goal-text">
                 Performance improvement in terms of a personal mission.
               </p>
@@ -54,13 +57,18 @@ const MissionAndVision = () => {
         </section>
 
         {/* Mission Section */}
-        <section className="col-12 col-md-5 goal-card mission-card" aria-labelledby="mission">
+        <section
+          className="col-12 col-md-5 goal-card mission-card"
+          aria-labelledby="mission"
+        >
           <div className="row">
             <div className="col-3 d-flex align-items-center justify-content-center">
               <div className="goal-icon mission-icon" aria-hidden="true"></div>
             </div>
             <div className="col-9">
-              <h3 id="mission" className="goal-title">Mission</h3>
+              <h3 id="mission" className="goal-title">
+                Mission
+              </h3>
               <p className="goal-text">
                 For the success of our clients and their individual.
               </p>
@@ -70,9 +78,12 @@ const MissionAndVision = () => {
       </div>
 
       {/* Section for Updates */}
-      <section className="container mt-4" style={{
-        padding:0
-      }}>
+      <section
+        className="container mt-4"
+        style={{
+          padding: 0,
+        }}
+      >
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 update-card">
             <header className="update-header p-3">

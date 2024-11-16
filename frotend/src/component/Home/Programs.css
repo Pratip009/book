@@ -31,12 +31,13 @@
   width: 0; /* Start with a width of 0 for animation */
   height: 12px; /* Set the height as required */
   position: absolute;
-  top: 155px; /* Position relative to h2 */
+  top: 151px; /* Position relative to h2 */
   left: 61.5%; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
   animation: growUnderline1 6s ease-out infinite; /* Infinite animation */
+  z-index: 1 !important;
 }
 
 @keyframes growUnderline1 {
@@ -44,7 +45,7 @@
     width: 0; /* Start with width 0 */
   }
   50% {
-    width: 350px; /* Reach max width at 50% */
+    width: 280px; /* Reach max width at 50% */
   }
   100% {
     width: 0; /* End with width 0 */
