@@ -29,7 +29,10 @@ const navLinkStyle = {
 const navLinkHoverStyle = {
   color: "#FF4E00",
 };
-
+const activeLinkStyle = {
+  color: "#FF4E00",
+  fontWeight: "bold",
+};
 function Header2() {
   const { isAuthenticated, user } = useSelector((state) => state.userData);
 
@@ -79,7 +82,7 @@ function Header2() {
                   color: "white",
                   fontFamily: "Nunito",
                   textDecoration: "none",
-                  marginRight:'10px'
+                  marginRight: "10px",
                 }}
               >
                 <FaPhoneAlt
@@ -196,7 +199,7 @@ function Header2() {
                 className="d-flex align-items-center me-3 d-none d-lg-flex"
                 style={{
                   color: "white",
-                  
+
                   textDecoration: "none",
                 }}
               >
@@ -352,6 +355,19 @@ function Header2() {
                 Training
               </Link>
               <Link
+                to="/sports"
+                className="desktop-nav-link"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Sports
+              </Link>
+              <Link
                 to="/school"
                 className="desktop-nav-link"
                 style={navLinkStyle}
@@ -475,6 +491,19 @@ function Header2() {
                 }
               >
                 Training
+              </Link>
+              <Link
+                to="/sports"
+                className="mobile-nav-link"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Sports
               </Link>
               <Link
                 to="/school"

@@ -75,13 +75,14 @@
   height: 10px;
   height: 12px; /* Set the height as required */
   position: absolute;
-  top: 110px; /* Position relative to h2 */
+  top: 100px; /* Position relative to h2 */
   left: 61%; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
   animation: growUnderline2 6s ease-out infinite;
   z-index: 1;
+  opacity: 0.75;
 }
 
 @keyframes growUnderline2 {
@@ -533,3 +534,4 @@
     font-size: 20px;
   }
 }
+

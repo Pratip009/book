@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   termsAndConditionsText: {
-    fontFamily: "Roboto",
+    fontFamily: "Nunito",
     color: "#727272",
     textAlign: "center",
     lineHeight: "17px",

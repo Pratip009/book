@@ -37,12 +37,24 @@ const AboutUsSection = () => {
       />
 
       {/* Background Boxes */}
-      <div className="backgroundBoxOne" aria-hidden="true"></div>
-      <div className="backgroundBoxTwo" aria-hidden="true"></div>
+      <div
+        className="backgroundBoxOne"
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+        }}
+      ></div>
+      <div
+        className="backgroundBoxTwo"
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+        }}
+      ></div>
 
       <div className="row align-items-center justify-content-center text-center text-md-start">
         {/* Image Section */}
-        <div className="col-lg-6 col-md-6 d-flex justify-content-center mb-3 mb-md-0">
+        <div className="col-lg-6 col-md-6 d-flex justify-content-center mb-3 mb-md-0 position-relative">
           <img
             src={aboutImg}
             alt="Team working together"
@@ -94,18 +106,19 @@ const AboutUsSection = () => {
                 className="phoneIcon"
                 loading="lazy"
               />
-              <div style={{
-                zIndex:'2',
-                
-              }}>
+              <div
+                style={{
+                  zIndex: "2",
+                }}
+              >
                 <p className="call">Call Us Now</p>
                 <p className="phoneNumber">
                   <a
-                    href="tel:+2085550112"
+                    href="tel:8240554890"
                     className="phone-link"
-                    aria-label="Call us at +208-555-0112"
+                    aria-label="Call us at 8240554890"
                   >
-                    +208-555-0112
+                    +91 82405-54890
                   </a>
                 </p>
               </div>

@@ -225,7 +225,7 @@ const useStyles = makeStyles((theme) => ({
 
   traitCard: {
     borderRadius: "10px",
-    backgroundColor: "red",
+    backgroundColor: "white",
     boxShadow: 3,
     height: "180px",
     padding: theme.spacing(2),
@@ -271,7 +271,9 @@ const About_UsPage = () => {
   ];
   return (
     <>
-      <container-fluid>
+      <container-fluid style={{
+        backgroundColor:'#ffffff'
+      }}>
         <container-fluid>
           <Banner
             title="Innovation In Every Step"
@@ -555,7 +557,7 @@ const About_UsPage = () => {
           <span
             className="sub_headings"
             style={{
-              fontFamily: "'Outfit', sans-serif'",
+              fontFamily: "Nunito",
               fontSize: "var(--font-span)",
               fontWeight: 500,
             }}

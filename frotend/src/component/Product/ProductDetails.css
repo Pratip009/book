@@ -8,7 +8,7 @@
   height: fit-content;
   margin-right: auto;
   overflow: hidden !important;
-  font-family: "Outfit";
+  font-family: "Nunito";
   background: #f5f5f5;
 }
 
@@ -137,7 +137,7 @@ img {
 .prod_details_info {
   font-weight: 300;
   color: #524f4ff0;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Nunito';
 }
 .price_box {
   margin-right: 3rem;
@@ -172,13 +172,13 @@ a {
   align-items: baseline;
   display: flex;
   justify-content: flex-start;
-  font-family: "Outfit", serif;
+  font-family: 'Nunito';
   color: #2d2c2c;
 }
 
 .prod_details_price .del_price {
   font-size: 1rem;
-  font-family: "Outfit", serif;
+  font-family: 'Nunito';
   font-weight: 500;
   color: #ed1c24;
 }
@@ -233,7 +233,7 @@ del {
 .prod_details_offers h4 {
   font-weight: 600;
   font-size: 16px;
-  font-family: "Outfit", serif;
+  font-family: 'Nunito';
   color: #ff4e00;
 }
 
@@ -273,7 +273,7 @@ ul {
   position: relative;
   text-decoration: none;
   text-transform: none;
-  font-family: "Outfit", serif;
+  font-family: 'Nunito';
   white-space: nowrap;
   width: 40%;
   border-radius: 8px;
@@ -372,7 +372,7 @@ input[type="number"] {
 .productDiscriptiopn_text h4 {
   font-size: 16px;
   margin-left: 2px;
-  font-family: "Outfit", serif;
+  font-family: 'Nunito';
   margin-bottom: 0px;
   padding: 0px;
   color: #ff4e00;
@@ -380,7 +380,7 @@ input[type="number"] {
 .productDiscriptiopn_text {
   color: #626262;
   font-size: 13px;
-  font-family: "Outfit", serif;
+  font-family: 'Nunito';
 }
 .seprator2 {
   background-color: #6f6868;
@@ -393,7 +393,7 @@ input[type="number"] {
   margin-top: 1rem;
   font-size: 16px;
   line-height: 19px;
-  font-family: "Outfit", serif;
+  font-family: 'Nunito';
   color: #292929;
   font-weight: 600;
 }

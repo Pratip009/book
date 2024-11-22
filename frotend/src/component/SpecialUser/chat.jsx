@@ -30,7 +30,7 @@ export default function Chat() {
   return (
     <div
       style={{
-        fontFamily: "Arial, sans-serif",
+        fontFamily: "Nunito",
         maxWidth: "600px",
         margin: "auto",
         marginTop: "150px",

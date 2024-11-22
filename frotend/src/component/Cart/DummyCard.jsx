@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     background: "linear-gradient(45deg, #000000 30%, #4e4e4e 90%)",
     boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.3)",
     color: "white",
-    fontFamily: "Arial, sans-serif",
+    fontFamily: "Nunito",
     position: "relative",
     zIndex: 999,
   },

@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#414141",
     fontSize: "1.5rem !important",
     padding: "1rem 3rem",
-    fontFamily: "Roboto",
+    fontFamily: "Nunito",
     fontWeight: "700 !important",
     letterSpacing: "2px",
     [theme.breakpoints.down("sm")]: {
@@ -284,7 +284,7 @@ const ContactForm = () => {
                   </p>
 
                   <address>
-                    <p style={{ fontFamily: "'Outfit', sans-serif" }}>
+                    <p style={{ fontFamily: "Nunito" }}>
                       <strong>Learning Needs</strong>
                       <br />
                       Kolkata

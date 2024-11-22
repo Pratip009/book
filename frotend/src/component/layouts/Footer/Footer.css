@@ -31,7 +31,7 @@
 }
 
 .footer-custom h6 {
-  color: #ff6d1c !important;
+  color: #FF4E00 !important;
 }
 
 .footer_links {
@@ -56,7 +56,7 @@
 }
 /* Box Styling */
 .box {
-  background-color: #ff6d1c;
+  background-color: #FF4E00;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch,Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { load_UserProfile } from "./actions/userAction";
 import axios from "axios";
@@ -9,7 +9,7 @@ import CricketBallLoader from "./component/layouts/loader/Loader";
 import PrivateRoute from "./component/Route/PrivateRoute";
 
 import "./App.css";
-
+import Sports from "../src/component/Home/Sports.jsx";
 import Header2 from "./component/layouts/Header1.jsx/Header2";
 import Service from "./component/service/Service";
 import Payment from "./component/Cart/Payment";
@@ -51,18 +51,20 @@ import StaffUserList from "./component/Staff/StaffUserList.jsx";
 import StaffProductList from "./component/Staff/StaffProductsList.jsx";
 import StaffUpdateProduct from "./component/Staff/StaffUpdateProductList.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
 const LazyProductList = React.lazy(() =>
   import("./component/Admin/ProductList")
 );
-const LazyBlogPost = React.lazy(()=>import ("./component/Admin/BlogPost"));
+const LazyBlogPost = React.lazy(() => import("./component/Admin/BlogPost"));
 const LazyOrderList = React.lazy(() => import("./component/Admin/OrderList"));
-const LazyAddImage = React.lazy(()=>import("./component/Admin/AddImage.jsx"));
+const LazyAddImage = React.lazy(() => import("./component/Admin/AddImage.jsx"));
 const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
-const LazyAdminContact = React.lazy(() => import("./component/Admin/ContactForm.jsx"));
+const LazyAdminContact = React.lazy(() =>
+  import("./component/Admin/ContactForm.jsx")
+);
 const LazyUpdateProduct = React.lazy(() =>
   import("./component/Admin/UpdateProduct")
 );
@@ -122,7 +124,7 @@ function App() {
   return (
     <>
       <Router>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Switch>
           <Route
             exact
@@ -187,6 +189,18 @@ function App() {
               <>
                 {<Header2 />}
                 <Products />
+
+                {<Footer />}
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/sports"
+            render={() => (
+              <>
+                {<Header2 />}
+                <Sports />
 
                 {<Footer />}
               </>
@@ -609,9 +623,9 @@ function App() {
               component={LazyAdminContact}
             />
             <PrivateRoute
-            isAdmin={true}
-            path="/admin/blog"
-            component={LazyBlogPost}
+              isAdmin={true}
+              path="/admin/blog"
+              component={LazyBlogPost}
             />
             <PrivateRoute
               isAdmin={true}
@@ -690,4 +704,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

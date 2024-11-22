@@ -98,6 +98,7 @@
 html,
 body,
 #root {
+  background-color: #ffffff;
   height: 100%;
   width: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling on the entire page */
@@ -124,9 +125,6 @@ a{
   color: green !important;
 }
 
-.redColor {
-  color: red !important;
-}
 
 .model-title {
   text-align: center;

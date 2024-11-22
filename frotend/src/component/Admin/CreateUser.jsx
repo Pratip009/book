@@ -28,7 +28,7 @@ export default function AdminChat() {
   }, [messages]);
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: 'auto', marginTop: '50px' }}>
+    <div style={{ fontFamily: 'Nunito', maxWidth: '600px', margin: 'auto', marginTop: '50px' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Admin Chat</h1>
       <div style={{ maxHeight: '300px', overflowY: 'scroll', border: '1px solid #ccc', marginBottom: '20px', padding: '10px' }} ref={chatContainerRef}>
         {messages.map((msg, index) => (

@@ -37,6 +37,7 @@
   background-color: #ff4e00; /* Background color for visibility */
   animation: growUnderline2 6s ease-out infinite; /* Infinite animation */
   z-index: 1 !important;
+  opacity: .75;
 }
 
 @keyframes growUnderline2 {
@@ -86,6 +87,24 @@
   z-index: 1;
 }
 
+@media (max-width: 1440px){
+  .product-section .underline-image2 {
+    display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto; 
+  width: 0; /* Start with a width of 0 for animation */
+  height: 10px;
+  height: 12px; /* Set the height as required */
+  position: absolute; 
+  top: 52px; /* Position relative to h2 */
+  left: 69%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  border-radius: 45px; /* Maintain rounded edges */
+  background-color: #FF4E00; /* Background color for visibility */
+  animation: growUnderline2 6s ease-out infinite; 
+  z-index: 1 !important;
+  
+  }
+}
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .product-section h2 {

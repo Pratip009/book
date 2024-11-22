@@ -37,7 +37,7 @@ border: 1px solid rgba(255, 255, 255, 0.564);
 background-color: rgb(6, 19, 113);
 }
 .featured_title {
-  font-family: 'Tinos', serif;
+  font-family: 'Nunito';
   background-color: rgb(6, 19, 113); 
   padding: 3px;
   font-size: 22px;
@@ -74,7 +74,7 @@ margin-bottom: 30px;
 }
 
 .final_price {
-font-family: "Archivo", sans-serif;
+font-family: 'Nunito';
 font-size: 26px;
 font-weight: 600;
 color: #1ac923;
@@ -82,7 +82,7 @@ margin-right: 5px;
 }
 
 .old_price {
-font-family: "Archivo", sans-serif;
+font-family: 'Nunito';
 font-size: 15px;
 font-weight: 400;
 color: rgb(255, 0, 0);

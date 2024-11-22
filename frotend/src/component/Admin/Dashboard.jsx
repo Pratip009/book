@@ -327,7 +327,7 @@ function Dashboard() {
     chart: {
       type: "line",
       style: {
-        fontFamily: "Roboto",
+        fontFamily: "Nunito",
         fontWeight: "900",
       },
     },
@@ -376,7 +376,7 @@ function Dashboard() {
         beta: 0,
       },
       style: {
-        fontFamily: "Roboto",
+        fontFamily: "Nunito",
       },
     },
     title: {
