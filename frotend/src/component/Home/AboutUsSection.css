@@ -15,7 +15,7 @@
 .backgroundBoxOne {
   position: absolute;
   top: 90px;
-  left: 620px;
+  margin-left: -8em;
   width: 145px;
   height: 155px;
   background-color: #e0d6fc;
@@ -25,7 +25,7 @@
 
 .backgroundBoxTwo {
   position: absolute;
-  left: 140px;
+  margin-left: -70em;
   top: 410px;
   width: 182px;
   height: 161px;
@@ -89,7 +89,7 @@
   height: auto; /* Maintain aspect ratio */
   position: absolute;
   top: 300px; /* Adjust top position as needed */
-  left: 80%; /* Center the image */
+  margin-left: 28em; /* Center the image */
   transform: translateX(-50%); /* Adjust for centering */
   z-index: -1; /* Keep the image behind other content */
   animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
@@ -239,7 +239,7 @@
 }
 @media (max-width: 1024px) {
   .backgroundBoxOne {
-    position: absolute;
+   
     top: 73%;
     left: 0;
     width: 100px;
@@ -249,7 +249,7 @@
     z-index: -2;
   }
   .backgroundBoxTwo {
-    position: absolute;
+   
     top: 2px;
     left: 42%;
     width: 100px;
@@ -322,8 +322,8 @@
     width: 0; /* Start with a width of 0 for animation */
     height: auto; /* Maintain aspect ratio */
     position: absolute;
-    top: 40%; /* Adjust top position as needed */
-    left: 73%; /* Center the image */
+    top: 36%; /* Adjust top position as needed */
+    margin-left: -5.5em; /* Center the image */
     transform: translateX(-50%); /* Adjust for centering */
     z-index: -1; /* Keep the image behind other content */
     animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
@@ -405,21 +405,21 @@
     z-index: -20;
   }
   .backgroundBoxOne {
-    position: absolute;
+   
     top: 65%;
-    left: 0;
-    width: 100px;
-    height: 100px;
+    margin-left: -.5em;
+    width: 75px;
+    height: 75px;
     background-color: #e0d6fc;
     border-radius: 10px;
     z-index: -2;
   }
   .backgroundBoxTwo {
-    position: absolute;
-    top: 2px;
-    left: 40%;
-    width: 100px;
-    height: 100px;
+    
+    top: 8px;
+    margin-left: -.9em;
+    width: 75px;
+    height: 75px;
     background-color: #fee4dd;
     border-radius: 10px;
     z-index: -2;
@@ -476,9 +476,9 @@
   }
   /* Position and adjust background boxes for tablet view */
   .backgroundBoxOne {
-    position: absolute !important;
+    
     top: 34% !important;
-    left: 1% !important;
+   margin-left: .5em;
     width: 80px !important;
     height: 80px !important;
     background-color: #e0d6fc !important;
@@ -486,9 +486,9 @@
     z-index: -2 !important;
   }
   .backgroundBoxTwo {
-    position: absolute !important;
+   
     top: 1% !important;
-    left: 80% !important;
+   margin-left: 9.5em;
     width: 80px !important;
     height: 80px !important;
     background-color: #fee4dd !important;
@@ -544,6 +544,26 @@
 }
 
 @media (max-width: 360px) {
+  .backgroundBoxOne {
+    
+    top: 32% !important;
+   margin-left: .5em;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #e0d6fc !important;
+    border-radius: 10px !important;
+    z-index: -2 !important;
+  }
+  .backgroundBoxTwo {
+   
+    top: 1% !important;
+   margin-left: 7.5em;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #fee4dd !important;
+    border-radius: 10px !important;
+    z-index: -2 !important;
+  }
   .Aboutcontainer {
     padding: 10px;
   }

@@ -32,7 +32,7 @@
   height: 12px; /* Set the height as required */
   position: absolute;
   top: 151px; /* Position relative to h2 */
-  left: 61.5%; /* Center the image horizontally */
+  margin-left: 31em; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
@@ -212,7 +212,7 @@
     height: 10px;
     position: absolute;
     top: 180px; /* Adjust position */
-    left: 61%; /* Centered */
+   margin-left: 28.5em; /* Centered */
     transform: translateX(-50%); /* Center adjustment */
     border-radius: 45px;
   }
@@ -271,11 +271,11 @@
     position: relative;
   }
   .underline-image1 {
-    width: 250px;
+    width: 200px;
     height: 10px;
     position: absolute;
     top: 97px;
-    left: 65%;
+    margin-left: 26em;
     border-radius: 45px;
     transform: translateX(-50%);
   }
@@ -332,14 +332,43 @@
     margin-bottom: 3rem;
   }
 
-  .underline-image1 {
-    width: 120px;
+  /* .underline-image1 {
+    width: 180px;
     height: 8px;
-    position: absolute;
-    top: 95px;
-    left: 65.5%;
+   
+    top: 80px;
+    margin-left: 20.5em;
     border-radius: 45px;
     transform: translateX(-50%);
+  } */
+  .underline-image1 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 80px; /* Position relative to h2 */
+    margin-left: 20.5em; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline1 6s ease-out infinite; /* Infinite animation */
+    z-index: 1 !important;
+  }
+  
+  @keyframes growUnderline1 {
+    0% {
+      width: 0; /* Start with width 0 */
+      height: 7px;
+    }
+    50% {
+      width: 180px; /* Reach max width at 50% */
+      height: 7px;
+    }
+    100% {
+      width: 0; /* End with width 0 */
+      height: 7px;
+    }
   }
   .program-card {
     height: 250px;
@@ -373,8 +402,8 @@
     height: 10px;
     height: 12px; /* Set the height as required */
     position: absolute;
-    top: 37px; /* Position relative to h2 */
-    left: 64%; /* Center the image horizontally */
+    top: 39px; /* Position relative to h2 */
+   margin-left: 10.3em; /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
     background-color: #ff4e00; /* Background color for visibility */
@@ -387,7 +416,7 @@
       height: 3px;
     }
     50% {
-      width: 100px; /* Reach max width at 50% */
+      width: 90px; /* Reach max width at 50% */
       height: 3px;
     }
     100% {

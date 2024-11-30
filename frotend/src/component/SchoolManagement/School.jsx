@@ -46,7 +46,7 @@ const School = () => {
         {/* <MetaData title={"Training"} /> */}
 
         <Container>
-          <div className="schoolbg">
+          <div className="">
             <div className="circle_text">
               <h1
                 style={{

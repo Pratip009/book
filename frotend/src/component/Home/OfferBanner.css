@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #ff4e00; /* Orange background */
   color: white;
-  padding: 20px 100px;
+  padding: 8px 100px;
 }
 
 .offer-text {
@@ -32,7 +32,7 @@
 /* Media query for screens 768px and below (tablets and smaller devices) */
 @media (max-width: 768px) {
   .offer-banner {
-    padding: 12px 15px; /* Reduce padding */
+    padding: 8px 15px; /* Reduce padding */
     flex-direction: row; /* Stack text and button vertically */
     text-align: center; /* Center-align text and button */
     align-items: center;

@@ -4,15 +4,15 @@
   background-color: #ffffff;
   position: relative;
 }
-.trending-products{
+.trending-products {
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
 }
 .product-section h2 {
-  color: #003E90;
-  font-family: 'Quicksand';
+  color: #003e90;
+  font-family: "Quicksand";
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
@@ -31,23 +31,22 @@
   width: 0; /* Start with a width of 0 for animation */
   position: absolute;
   top: 56px; /* Position relative to h2 */
-  left: 67.5%; /* Center the image horizontally */
+  margin-left: 16em !important; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
-  animation: growUnderline2 6s ease-out infinite; /* Infinite animation */
+  animation: growUnderline23 6s ease-out infinite; /* Infinite animation */
   z-index: 1 !important;
-  opacity: .75;
+  opacity: 0.75;
 }
 
-@keyframes growUnderline2 {
-  0%, 100% {
-      width: 0; /* Start and end at width 0 */
-     
+@keyframes growUnderline23 {
+  0%,
+  100% {
+    width: 0; /* Start and end at width 0 */
   }
   50% {
-      width: 210px; /* Reach max width at 50% of the animation */
-      
+    width: 210px; /* Reach max width at 50% of the animation */
   }
 }
 
@@ -59,14 +58,14 @@
   line-height: 32px;
   font-weight: 400;
   text-align: center;
-  font-family: 'Quicksand';
-  color: #1F1F1F;
+  font-family: "Quicksand";
+  color: #1f1f1f;
   margin: 0 auto 30px;
 }
 
 .product-section::before {
-  content: '';
-  background: url('../../Image/home/globe1.png') no-repeat;
+  content: "";
+  background: url("../../Image/home/globe1.png") no-repeat;
   position: absolute;
   top: 20px;
   left: 10px;
@@ -76,8 +75,8 @@
 }
 
 .product-section::after {
-  content: '';
-  background: url('../../Image/home/car1.png') no-repeat;
+  content: "";
+  background: url("../../Image/home/car1.png") no-repeat;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -86,30 +85,45 @@
   opacity: 1;
   z-index: 1;
 }
-
-@media (max-width: 1440px){
+@media (max-width: 2560px) {
   .product-section .underline-image2 {
     display: block; /* Ensure it behaves like a block element */
-  margin: 0 auto; 
-  width: 0; /* Start with a width of 0 for animation */
-  height: 10px;
-  height: 12px; /* Set the height as required */
-  position: absolute; 
-  top: 52px; /* Position relative to h2 */
-  left: 69%; /* Center the image horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
-  border-radius: 45px; /* Maintain rounded edges */
-  background-color: #FF4E00; /* Background color for visibility */
-  animation: growUnderline2 6s ease-out infinite; 
-  z-index: 1 !important;
-  
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 52px; /* Position relative to h2 */
+    margin-left: 24.5em; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline23 6s ease-out infinite;
+    z-index: 1 !important;
+  }
+}
+@media (max-width: 1440px) {
+  .product-section .underline-image2 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 52px; /* Position relative to h2 */
+    left: 69%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline23 6s ease-out infinite;
+    z-index: 1 !important;
   }
 }
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .product-section h2 {
-    color: #003E90;
-    font-family: 'Quicksand';
+    color: #003e90;
+    font-family: "Quicksand";
     font-size: 45px;
     font-weight: 700;
     line-height: 60px;
@@ -117,25 +131,26 @@
   }
   .product-section .underline-image2 {
     display: block; /* Ensure it behaves like a block element */
-  margin: 0 auto; 
-  width: 0; /* Start with a width of 0 for animation */
-  height: 10px;
-  height: 12px; /* Set the height as required */
-  position: absolute; 
-  top: 52px; /* Position relative to h2 */
-  left: 72.5%; /* Center the image horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
-  border-radius: 45px; /* Maintain rounded edges */
-  background-color: #FF4E00; /* Background color for visibility */
-  animation: growUnderline2 6s ease-out infinite; 
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 52px; /* Position relative to h2 */
+    left: 72.5%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline23 6s ease-out infinite;
   }
-  
-  @keyframes growUnderline2 {
-    0%, 100% {
-        width: 0; /* Start and end at width 0 */
+
+  @keyframes growUnderline23 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
     }
     50% {
-        width: 180px; /* Reach max width at 50% of the animation */
+      width: 180px; /* Reach max width at 50% of the animation */
     }
   }
   .product-section p {
@@ -144,29 +159,27 @@
     line-height: 32px;
     font-weight: 400;
     text-align: center;
-    font-family: 'Quicksand';
-    color: #1F1F1F;
+    font-family: "Quicksand";
+    color: #1f1f1f;
     margin: 0 auto 30px;
   }
   .product-section {
     padding: 40px;
   }
-  
+
   .product-section h2 {
-    font-size: 50px; 
+    font-size: 50px;
   }
-  
+
   .product-section p {
     width: 90%; /* Adjust paragraph width for tablets */
   }
-
-  
 }
 
 @media (max-width: 768px) {
   .product-section h2 {
-    color: #003E90;
-    font-family: 'Quicksand';
+    color: #003e90;
+    font-family: "Quicksand";
     font-size: 40px;
     font-weight: 700;
     line-height: 60px;
@@ -178,37 +191,36 @@
     width: 0;
     height: 12px; /* Fixed duplicate height */
     position: absolute;
-    top: 41px;
-    left: 83.5% !important;
+    top: 45px;
+    margin-left: 0.2em;
     transform: translateX(-50%);
     border-radius: 45px;
-    background-color: #FF4E00;
-    animation: growUnderline2 6s ease-out infinite;
+    background-color: #ff4e00;
+    animation: growUnderline23 6s ease-out infinite;
   }
-  
-  @keyframes growUnderline2 {
-    0%, 100% {
-        width: 0; /* Start and end at width 0 */
-        height: 5px;
+
+  @keyframes growUnderline23 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 5px;
     }
     50% {
-        width: 120px; /* Reach max width at 50% of the animation */
-        
+      width: 150px; /* Reach max width at 50% of the animation */
+      height: 5px;
     }
   }
   .product-section {
     padding: 30px; /* Adjust padding for smaller tablets */
   }
-  
+
   .product-section h2 {
-    font-size: 40px; 
+    font-size: 40px;
   }
-  
+
   .product-section p {
     width: 80%; /* Adjust paragraph width for smaller tablets */
   }
-
- 
 }
 
 @media (max-width: 575px) {
@@ -222,22 +234,22 @@
     left: 72% !important;
     transform: translateX(-50%);
     border-radius: 45px;
-    background-color: #FF4E00;
+    background-color: #ff4e00;
     animation: growUnderline13 6s ease-out infinite;
   }
-  
+
   @keyframes growUnderline13 {
-    0%, 100% {
-        width: 0; /* Start and end at width 0 */
-        height: 3px;
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 3px;
     }
     50% {
-        width: 80px ; /* Reach max width at 50% of the animation */
-        height: 3px
-        
+      width: 80px; /* Reach max width at 50% of the animation */
+      height: 3px;
     }
   }
-  .trending-products{
+  .trending-products {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,23 +258,21 @@
   .product-section {
     padding: 20px; /* Adjust padding for mobile */
   }
-  
+
   .product-section h2 {
-    font-size: 20px; 
+    font-size: 20px;
   }
-  
+
   .product-section p {
     width: 90%; /* Full width for mobile */
     font-size: 11px;
     line-height: 25px;
   }
-
-  
 }
 
 /* Media Query for Large Mobile (425px) */
 @media (max-width: 425px) {
-  .trending-products{
+  .trending-products {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -275,17 +285,15 @@
   .product-section h2 {
     font-size: 20px; /* Smaller font size for large mobile */
   }
-  
+
   .product-section p {
     font-size: 14px; /* Adjust paragraph font size */
     line-height: 28px; /* Adjust line height for better readability */
     width: 90%; /* Adjust paragraph width for large mobile */
   }
-
- 
 }
 @media (max-width: 320px) {
-  .trending-products{
+  .trending-products {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,17 +306,15 @@
   .product-section h2 {
     font-size: 20px; /* Smaller font size for large mobile */
   }
-  
+
   .product-section p {
     font-size: 14px; /* Adjust paragraph font size */
     line-height: 28px; /* Adjust line height for better readability */
     width: 90%; /* Adjust paragraph width for large mobile */
   }
-
- 
 }
 @media (max-width: 375px) {
-  .trending-products{
+  .trending-products {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,12 +327,10 @@
   .product-section h2 {
     font-size: 20px; /* Smaller font size for large mobile */
   }
-  
+
   .product-section p {
     font-size: 14px; /* Adjust paragraph font size */
     line-height: 28px; /* Adjust line height for better readability */
     width: 90%; /* Adjust paragraph width for large mobile */
   }
-
- 
 }

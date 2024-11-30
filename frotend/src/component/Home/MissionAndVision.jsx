@@ -28,10 +28,18 @@ const MissionAndVision = () => {
   }, []);
 
   return (
-    <div className="goals-container">
+    <section className="goals-container">
       {/* Section for Goals and Objectives */}
       <header className="goals-header">
-        <h2 className="goals-container-title">Goals And Objective</h2>
+        <h2
+          className="goals-container-title"
+          style={{
+            position: "relative",
+            zIndex: "2",
+          }}
+        >
+          Goals And Objective
+        </h2>
         <img src={underline} alt="underline" className="underline-image3" />
       </header>
 
@@ -118,7 +126,7 @@ const MissionAndVision = () => {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 

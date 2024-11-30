@@ -57,26 +57,15 @@
   z-index: 2;
 }
 
-/* .underline-image3 {
-    display: block;
-    margin: 0 auto;
-    width: 250px;
-    height: auto;
-    position: absolute;
-    top: 110px;
-    left: 60%;
-    transform: translateX(-50%);
-    z-index: 0;
-} */
 .underline-image3 {
   display: block; /* Ensure it behaves like a block element */
   margin: 0 auto;
   width: 0; /* Start with a width of 0 for animation */
-  height: 10px;
-  height: 12px; /* Set the height as required */
+  height: 12px;
+ 
   position: absolute;
   top: 100px; /* Position relative to h2 */
-  left: 61%; /* Center the image horizontally */
+  margin-left: 56em; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
@@ -203,6 +192,36 @@
 
 /* Extra Small Devices (320px) */
 @media (max-width: 320px) {
+  .underline-image3 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 80px; /* Position relative to h2 */
+    margin-left: 11.5em; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline2 6s ease-out infinite;
+    z-index: 1;
+    opacity: 0.75;
+  }
+
+  @keyframes growUnderline2 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 3px;
+    }
+    50% {
+      width: 85px; /* Reach max width at 50% of the animation */
+      height: 3px;
+      z-index: 1;
+    }
+  }
+
   .teamstar-image {
     display: none;
   }
@@ -246,6 +265,35 @@
 
 /* Small Devices (375px) */
 @media (max-width: 375px) {
+  .underline-image3 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 80px; /* Position relative to h2 */
+    margin-left: -165em; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline2 6s ease-out infinite;
+    z-index: 1;
+    opacity: 0.75;
+  }
+
+  @keyframes growUnderline2 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 3px;
+    }
+    50% {
+      width: 100px; /* Reach max width at 50% of the animation */
+      height: 3px;
+      z-index: 1;
+    }
+  }
   .teamstar-image {
     display: none;
   }
@@ -288,6 +336,35 @@
 
 /* Medium Devices (425px) */
 @media (max-width: 525px) {
+  .underline-image3 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 80px; /* Position relative to h2 */
+    margin-left: 14.8em; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline2 6s ease-out infinite;
+    z-index: 1;
+    opacity: 0.75;
+  }
+
+  @keyframes growUnderline2 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 3px;
+    }
+    50% {
+      width: 85px; /* Reach max width at 50% of the animation */
+      height: 3px;
+      z-index: 1;
+    }
+  }
   .teamstar-image {
     display: none;
   }
@@ -326,32 +403,6 @@
   .update-content {
     font-size: 18px;
   }
-  .underline-image3 {
-    display: block !important; /* Ensure it behaves like a block element */
-    margin: 0 auto !important;
-    width: 0 !important; /* Start with a width of 0 for animation */
-    height: 3px !important; /* Set the height as required */
-    position: absolute !important;
-    top: 110px !important; /* Position relative to h2 (adjust as necessary) */
-    left: 50% !important; /* Center the image horizontally */
-    transform: translateX(-50%) !important; /* Adjust for centering */
-    border-radius: 45px !important; /* Maintain rounded edges */
-    background-color: #ff4e00 !important; /* Background color for visibility */
-    animation: growUnderline29 6s ease-out infinite !important; /* Animation declaration */
-    z-index: 1 !important;
-  }
-  
-  @keyframes growUnderline29 {
-    0%,
-    100% {
-      width: 0 !important; /* Start and end at width 0 */
-    }
-    50% {
-      width: 100px !important; /* Reach max width at 50% of the animation */
-    }
-  }
-  
-  
 }
 @media (max-width: 576px) {
   .teamstar-image {
@@ -392,46 +443,43 @@
   .update-content {
     font-size: 18px;
   }
-  .underline-image3 {
-    position: absolute;
-    left: 60% !important; /* Adjust to be centered */
-    top: 90px !important; /* Adjust as necessary */
-    transform: translateX(-50%);
-  }
 }
 /* Medium Devices (768px) */
 @media (max-width: 768px) {
-  .teamstar-image {
-    display: none;
-  }
-  .goals-container-title {
-    font-size: 28px;
-  }
   .underline-image3 {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto;
-    width: 0; /* Start with a width of 0 for animation */
-    height: 10px;
-    height: 12px; /* Set the height as required */
-    position: absolute;
-    top: 110px; /* Position relative to h2 */
-    left: 60% !important; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    border-radius: 45px; /* Maintain rounded edges */
-    background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline2 6s ease-out infinite;
-    z-index: 1;
+    display: block !important; /* Ensure it behaves like a block element */
+    margin: 0 auto !important;
+    width: 0 !important; /* Start with a width of 0 for animation */
+    height: 12px !important; /* Set the height as required */
+    position: absolute !important;
+    top: 85px !important; /* Position relative to h2 */
+    margin-left: 27.5em !important; /* Center the image horizontally */
+    transform: translateX(-50%) !important; /* Adjust for centering */
+    border-radius: 45px !important; /* Maintain rounded edges */
+    background-color: #ff4e00 !important; /* Background color for visibility */
+    animation: growUnderline2 6s ease-out infinite !important;
+    z-index: 1 !important;
+    opacity: 0.75 !important;
   }
 
   @keyframes growUnderline2 {
     0%,
     100% {
-      width: 0; /* Start and end at width 0 */
+      width: 0 !important; /* Start and end at width 0 */
+      height: 5px !important;
     }
     50% {
-      width: 250px; /* Reach max width at 50% of the animation */
-      z-index: 1;
+      width: 130px !important; /* Reach max width at 50% of the animation */
+      height: 5px !important;
+      z-index: 1 !important;
     }
+  }
+
+  .teamstar-image {
+    display: none;
+  }
+  .goals-container-title {
+    font-size: 28px;
   }
 
   .goal-card {
@@ -470,9 +518,6 @@
 
 /* Large Devices (1024px) */
 @media (max-width: 1024px) {
-  .goals-container-title {
-    font-size: 30px;
-  }
   .underline-image3 {
     display: block; /* Ensure it behaves like a block element */
     margin: 0 auto;
@@ -480,26 +525,30 @@
     height: 10px;
     height: 12px; /* Set the height as required */
     position: absolute;
-    top: 105px; /* Position relative to h2 */
-    left: 57%; /* Center the image horizontally */
+    top: 83px; /* Position relative to h2 */
+    margin-left: 35.3em; /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
     background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline29 6s ease-out infinite;
+    animation: growUnderline2 6s ease-out infinite;
     z-index: 1;
+    opacity: 0.75;
   }
 
-  @keyframes growUnderline29 {
+  @keyframes growUnderline2 {
     0%,
     100% {
       width: 0; /* Start and end at width 0 */
-      height: 8px;
+      height: 6px;
     }
     50% {
-      width: 140px; /* Reach max width at 50% of the animation */
-      height: 8px;
+      width: 135px; /* Reach max width at 50% of the animation */
+      height: 6px;
       z-index: 1;
     }
+  }
+  .goals-container-title {
+    font-size: 30px;
   }
 
   .goal-card {
@@ -534,4 +583,3 @@
     font-size: 20px;
   }
 }
-
