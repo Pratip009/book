@@ -1,3 +1,15 @@
+.aos-init {
+  opacity: 0 !important;
+}
+
+.aos-animate {
+  opacity: 1 !important;
+}
+[data-aos] {
+  opacity: 1; /* Ensure elements are visible even if AOS fails */
+  transform: translate(0, 0); /* Reset transformations */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add smooth animation */
+}
 .product-section {
   text-align: center;
   padding: 50px;

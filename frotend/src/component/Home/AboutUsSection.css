@@ -1,5 +1,8 @@
 /* AboutUsSection.css */
-
+/* for animation */
+.mainAboutContainer{
+  padding: 0 1.5em;
+}
 .Aboutcontainer {
   position: relative;
   width: 100%;

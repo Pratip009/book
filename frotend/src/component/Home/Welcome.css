@@ -1,0 +1,140 @@
+/* Full-width background for the container */
+.welcome-full-bg {
+    background-color: #ffffff; /* Light yellow background */
+    width: 100%;
+    margin: 0; /* Ensure no gaps on the sides */
+  }
+  
+  /* Card container */
+  .welcome-card {
+    background-color: #fffaf8;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 95%;
+    margin: 2em auto; /* Center the card vertically and horizontally */
+  }
+  
+  /* Title styling */
+  .welcome-title {
+    font-weight: 700;
+    font-size: 24px;
+    font-family: "Nunito";
+    padding: 1rem;
+    line-height: 39.6px;
+    background-color: #ffd58a;
+    border-radius: 8px;
+  }
+  
+  /* Text content styling */
+  .welcome-text {
+    padding: 1rem;
+    font-size: 20px;
+    font-family: "Nunito";
+    font-weight: 400;
+    color: #000000;
+    text-align: justify;
+  }
+  
+  /* Button styling */
+  .welcome-button {
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid #313131;
+    border-radius: 16px;
+    font-weight: 700;
+    font-family: 'Nunito';
+    color: #313131;
+    transition: background-color 0.3s ease;
+  }
+  
+  .welcome-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styling using media queries */
+  @media (max-width: 1024px) {
+    .welcome-title {
+      font-size: 22px;
+      padding: 0.8rem;
+      line-height: 36px;
+    }
+  
+    .welcome-text {
+      font-size: 18px;
+    }
+  
+    .welcome-button {
+      font-size: 14px;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 20px;
+      padding: 0.7rem;
+      line-height: 34px;
+    }
+  
+    .welcome-text {
+      font-size: 16px;
+    }
+  
+    .welcome-button {
+      font-size: 14px;
+      padding: 0.5rem 1.2rem;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .welcome-title {
+      font-size: 18px;
+      padding: 0.6rem;
+      line-height: 30px;
+    }
+  
+    .welcome-text {
+      font-size: 14px;
+    }
+  
+    .welcome-button {
+      font-size: 12px;
+      padding: 0.4rem 1rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .welcome-title {
+      font-size: 16px;
+      padding: 0.5rem;
+      line-height: 28px;
+    }
+  
+    .welcome-text {
+      font-size: 14px;
+    }
+  
+    .welcome-button {
+      font-size: 12px;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .welcome-title {
+      font-size: 14px;
+      padding: 0.4rem;
+      line-height: 26px;
+    }
+  
+    .welcome-text {
+      font-size: 12px;
+    }
+  
+    .welcome-button {
+      font-size: 10px;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+  

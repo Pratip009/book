@@ -5,8 +5,8 @@ import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Wellcome from "./Wellcome";
+
 
 // Lazy load non-essential components
 const HeroSlider = lazy(() => import("./HeroSilder"));
@@ -50,17 +50,15 @@ const Home = () => {
   }, [dispatch, error, alert]);
 
   // Initialize AOS animations
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
 
   return (
     <>
       <MataData title="Learning Needs" />
-      <main className="Home_Page" style={{ overflow: "hidden" }}>
+      <main className="Home_Page">
         <Suspense fallback={<Loader />}>
           <HeroSlider />
-          <OfferBanner/>
+          <OfferBanner />
+          <Wellcome/>
           <AboutUsSection />
           <Programs />
           {productsLoading ? (

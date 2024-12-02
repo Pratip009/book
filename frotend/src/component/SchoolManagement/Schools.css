@@ -1,16 +1,47 @@
+/* Base Styles */
+.circle_text h1 {
+  font-family: "Quicksand";
+  text-align: center;
+  font-size: 60px;
+  line-height: 60px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #003e90;
+  font-weight: 700;
+}
+
+.school_para,
+.school_para2,
+.school_para4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito";
+  text-align: justify;
+  display: inline-block;
+}
+
+.school_para2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 39.6px;
+  margin: 0;
+}
+.school_para22 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 39.6px;
+  margin: 0;
+}
 .content1 {
   max-width: 100%;
-
   font-family: "Nunito";
   font-size: 15px;
-}
-.additional {
-  margin-top: 2rem;
+  text-align: justify;
 }
 
-.additional h1 {
-  text-align: start;
-  font-size: 36px;
+.additional {
+  margin-top: 2rem;
 }
 
 .additional p {
@@ -28,50 +59,9 @@
   font-family: "Nunito";
   text-align: justify;
   display: inline-block;
-  font-size: "var(--font-span)";
+  font-size: var(--font-span);
 }
 
-@media (max-width: 899px) {
-  .additional h1 {
-    font-size: 28px;
-  }
-
-  .additional p {
-    font-size: 17px;
-  }
-
-  .support-item p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 499px) {
-  .additional h1 {
-    font-size: 24px;
-  }
-
-  .additional p {
-    font-size: 15px;
-  }
-
-  .support-item p {
-    font-size: 13px;
-  }
-
-  .support-item {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .support-item p {
-    text-align: left;
-  }
-}
-
-.header {
-  font-size: 20px;
-  text-align: start;
-}
 .long-text {
   max-height: 0;
   overflow: hidden;
@@ -79,9 +69,11 @@
   transition: max-height 1s;
   font-family: "Nunito";
 }
+
 .expand1 {
   max-height: 50rem;
 }
+
 .schoolbg {
   background-image: url("../../Image/ourteam.png");
   position: relative;
@@ -97,6 +89,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .image-containerschool {
   margin-top: 110px;
   width: 100%;
@@ -111,18 +104,6 @@
   object-position: center;
 }
 
-@media (max-width: 899px) {
-  .image-containerschool {
-    height: 250px; /* Adjust height for medium screens */
-  }
-}
-
-@media (max-width: 499px) {
-  .image-containerschool {
-    height: 200px; /* Adjust height for small screens */
-  }
-}
-
 .icon-container {
   display: flex;
   align-items: center;
@@ -131,21 +112,121 @@
 }
 
 .custom-icon {
-  font-size: 32px !important; /* Ensures the size is applied */
-  color: blue;
+  font-size: 32px !important;
+  color: #ffd700;
 }
 
-.circle_text h1 {
-  text-align: start;
-  font-size: 36px;
-  margin-top: 10px;
-  font-family: "Nunito";
-}
+/* Responsive Media Queries */
 
-/* Media query for extra small screens (xs) */
-@media (max-width: 767px) {
+/* 2560px (Large Screen Monitors) */
+@media (max-width: 2560px) {
   .circle_text h1 {
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 60px;
+  }
+
+  .support-item p {
+    font-size: 18px;
+  }
+}
+
+/* 1440px (Desktops) */
+@media (max-width: 1440px) {
+  .circle_text h1 {
+    font-size: 38px;
+  }
+
+  .support-item p {
+    font-size: 17px;
+  }
+
+  .image-containerschool {
+    height: 400px;
+  }
+}
+
+/* 1024px (Tablets Landscape) */
+@media (max-width: 1024px) {
+  .circle_text h1 {
+    font-size: 32px;
+  }
+
+  .support-item p {
+    font-size: 16px;
+  }
+
+  .image-containerschool {
+    height: 350px;
+  }
+}
+
+/* 768px (Tablets Portrait) */
+@media (max-width: 768px) {
+  .circle_text h1 {
+    font-size: 28px;
+  }
+
+  .support-item {
+    flex-direction: column;
+  }
+
+  .support-item p {
+    font-size: 15px;
+  }
+
+  .image-containerschool {
+    height: 300px;
+  }
+}
+
+/* 425px (Large Mobile Phones) */
+@media (max-width: 425px) {
+  .circle_text h1 {
+    font-size: 20px;
+  }
+
+  .support-item p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .image-containerschool {
+    height: 250px;
+  }
+}
+
+/* 375px (Standard Mobile Phones) */
+@media (max-width: 375px) {
+  .circle_text h1 {
+    font-size: 18px;
+  }
+
+  .support-item p {
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  .image-containerschool {
+    height: 200px;
+  }
+}
+
+/* 320px (Small Mobile Phones) */
+@media (max-width: 320px) {
+  .circle_text h1 {
+    font-size: 16px;
+  }
+
+  .support-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .support-item p {
+    font-size: 12px;
+    text-align: justify; /* Ensure justification on small devices */
+  }
+
+  .image-containerschool {
+    height: 180px;
   }
 }

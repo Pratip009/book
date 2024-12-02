@@ -53,6 +53,8 @@ import StaffUpdateProduct from "./component/Staff/StaffUpdateProductList.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
+
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
 const LazyProductList = React.lazy(() =>
@@ -80,6 +82,9 @@ const LazyProductReviews = React.lazy(() =>
 );
 
 function App() {
+
+ 
+
   const [stripeApiKey, setStripeApiKey] = useState("test");
 
   const dispatch = useDispatch();

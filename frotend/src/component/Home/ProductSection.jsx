@@ -5,10 +5,17 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./ProductSection.css"; // Import any CSS specific to ProductSection
 import underline from "../../Image/home/underline.png";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../src/varients";
 function ProductSection({ products }) {
   return (
-    <div className="product-section">
+    <motion.div
+      className="product-section"
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.7 }}
+    >
       <header>
         <h2 id="product-heading">
           Choose the right product
@@ -41,7 +48,7 @@ function ProductSection({ products }) {
             ))}
         </Row>
       </Container>
-    </div>
+    </motion.div>
   );
 }
 

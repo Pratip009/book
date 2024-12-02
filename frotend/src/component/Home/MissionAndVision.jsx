@@ -3,7 +3,8 @@ import "./MissionAndVision.css";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import underline from "../../Image/home/underline.png";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../src/varients";
 const MissionAndVision = () => {
   const [notices, setNotices] = useState([]);
 
@@ -28,7 +29,13 @@ const MissionAndVision = () => {
   }, []);
 
   return (
-    <section className="goals-container">
+    <motion.section
+      className="goals-container"
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.7 }}
+    >
       {/* Section for Goals and Objectives */}
       <header className="goals-header">
         <h2
@@ -126,7 +133,7 @@ const MissionAndVision = () => {
           </div>
         </div>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

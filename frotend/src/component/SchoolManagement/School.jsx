@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import Grid from "@mui/material/Grid";
+import redicon from "../../Image/home/redicon.png";
+import yellowicon from "../../Image/home/yellowicon.png";
+import greenicon from "../../Image/home/greenicon.png";
+import { FaStar } from "react-icons/fa6";
 
-import Card from "react-bootstrap/Card";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import Banner from "../../component/Banner";
 import mainImg from "../../Image/Product/schoolManagementImg.png";
 import pattern from "../../Image/Product/Frame 18.png";
@@ -11,6 +13,43 @@ import star from "../../Image/home/teamstar.png";
 
 import "./Schools.css";
 import { Col, Container, Row } from "react-bootstrap";
+const feature = [
+  { text: "Teacher's Training", bgColor: "#F5CCC1", imgSrc: redicon },
+  { text: "Infrustructure Designing", bgColor: "#FDE1A4", imgSrc: yellowicon },
+  { text: "Marketing Training", bgColor: "#B6E3DF", imgSrc: greenicon },
+  { text: "Interior Layout Designing", bgColor: "#B6E3DF", imgSrc: greenicon },
+  { text: "Advertisement Plan", bgColor: "#F5CCC1", imgSrc: redicon },
+  { text: "Operation Plan", bgColor: "#FDE1A4", imgSrc: yellowicon },
+  { text: "Staff Selection Support", bgColor: "#F5CCC1", imgSrc: redicon },
+  { text: "Name Selection", bgColor: "#FDE1A4", imgSrc: yellowicon },
+  { text: "Area & Site Selection", bgColor: "#B6E3DF", imgSrc: greenicon },
+  {
+    text: "Furniture & Learning Aid Selection",
+    bgColor: "#B6E3DF",
+    imgSrc: greenicon,
+  },
+  {
+    text: "School Organization Structure",
+    bgColor: "#F5CCC1",
+    imgSrc: redicon,
+  },
+  {
+    text: "Collateral Designing Support",
+    bgColor: "#FDE1A4",
+    imgSrc: yellowicon,
+  },
+];
+const features = [
+  { text: "No Franchisee", icon: "💰" },
+  { text: "No Royalty", icon: "💵" },
+  { text: "No Lock Period", icon: "📅" },
+  { text: "You're School", icon: "🏫" },
+  { text: "You're Brand", icon: "✨" },
+  { text: "Freedom", icon: "🕊️" },
+  { text: "End to End Support", icon: "🖥️" },
+  { text: "Low Setup Cost", icon: "💲" },
+];
+
 const supportItems = [
   "The quality of teaching (teachers and non-teaching staff)",
   "Teacher performance evaluation",
@@ -42,31 +81,15 @@ const School = () => {
           iconRight={star}
         />
       </container-fluid>
-      <div style={{ display: "flex", width: "100%" }}>
+      <container-fluid>
         {/* <MetaData title={"Training"} /> */}
 
         <Container>
           <div className="">
             <div className="circle_text">
-              <h1
-                style={{
-                  textAlign: "center",
-                  fontSize: "var(--font-h2)",
-                  marginTop: "2rem",
-                  fontWeight: 700,
-                }}
-              >
-                <span className="highlight">School Management Service</span>{" "}
-              </h1>
+              <h1 className="school_header">School Management Service</h1>
             </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                textAlign: "justify",
-                display: "inline-block",
-                fontSize: "var(--font-span)",
-              }}
-            >
+            <p className="school_para">
               The Learning Needs team has expansive expertise on school
               management issues and can provide all necessary support in various
               ways. Our team member can advise you on any issues which your
@@ -81,14 +104,7 @@ const School = () => {
               important to gain a clear understanding of exactly what is
               required.
             </p>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                textAlign: "justify",
-                display: "inline-block",
-                fontSize: "var(--font-span)",
-              }}
-            >
+            <p className="school_para">
               We can then develop the project methodology and main delivery. We
               offer a full range of services, spanning organizational structure,
               project planning and development. At Learning Needs we value the
@@ -102,440 +118,53 @@ const School = () => {
             </p>
           </div>
 
-          <div className="circle_text">
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "var(--font-h2)",
-                marginTop: "2rem",
-                fontWeight: 700,
-              }}
-            >
-              <span className="highlight">
-                We Help People to Start Their Own School
-              </span>{" "}
+          <div
+            className="circle_text"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h1 className="school_header">
+              We Help People to Start Their Own School
             </h1>
           </div>
-          <Container>
-            <Row>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        NO FRANCHISEE
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/money-bag.png")}
-                        alt="React"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        NO ROYALTY
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/money.png")}
-                        alt="React"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        NO LOCK PERIOD
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/blackboard.png")}
-                        alt="React"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        YOU’RE SCHOOL
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/school.png")}
-                        alt="React"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-          <Container style={{ marginTop: "1rem" }}>
-            <Row>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        YOU’RE BRAND
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/branding.png")}
-                        alt="React"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        FREEDOM
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/freedom.png")}
-                        alt="React"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        END TO END SUPPORT
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/support.png")}
-                        alt="React"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col md="3" xs="6" className="mb-3 p-1">
-                <Card body style={{ padding: 0, backgroundColor: "#003E90" }}>
-                  <Row>
-                    <Col
-                      md="9"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          color: "#fff",
-                          fontWeight: "600",
-                          fontSize: "var(--font-p)",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        LOW SETUP COST
-                      </p>
-                    </Col>
-
-                    <Col
-                      md="3"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "column",
-
-                        padding: 0,
-                      }}
-                    >
-                      <img
-                        src={require("../../Image/low-cost.png")}
-                        alt="Low Setup Cost"
-                        style={{
-                          width: "80px", // Set a fixed width
-                          height: "80px", // Set a fixed height
-                          objectFit: "contain", // Ensures the image scales properly
-                        }}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
+          <div className="container py-5">
+            <div className="row text-center">
+              {features.slice(0, 6).map((feature, index) => (
+                <div key={index} className="col-md-4 mb-4">
+                  <div
+                    className="p-3 border rounded d-flex align-items-center justify-content-center"
+                    style={{ backgroundColor: "#B6E3DF66" }}
+                  >
+                    <span style={{ fontSize: "2rem", marginRight: "10px" }}>
+                      {feature.icon}
+                    </span>
+                    <p className="school_para2">{feature.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="row justify-content-center">
+              {features.slice(6).map((feature, index) => (
+                <div key={index} className="col-md-4 mb-4">
+                  <div
+                    className="p-3 border rounded d-flex align-items-center justify-content-center"
+                    style={{ backgroundColor: "#B6E3DF66" }}
+                  >
+                    <span style={{ fontSize: "2rem", marginRight: "10px" }}>
+                      {feature.icon}
+                    </span>
+                    <p className="school_para2">{feature.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div className="circle_text">
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "var(--font-h2)",
-                marginTop: "2rem",
-                fontWeight: 700,
-              }}
-            >
-              <span className="highlight">Starting a New School!</span>{" "}
-            </h1>
+            <h1 className="school_header">Starting a New School!</h1>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <span
@@ -589,136 +218,66 @@ const School = () => {
           </div>
 
           <div className="circle_text">
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "var(--font-h2)",
-                marginTop: "2rem",
-                fontWeight: 700,
-              }}
-            >
-              <span className="highlight"> New Start-up School</span>{" "}
-            </h1>
+            <h1 className="school_header">New Start-up School</h1>
           </div>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          >
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/sservice1234.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/sm5.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/sm4.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            {/* 2nd row */}
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/sm3.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/sm2.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/ssm6.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            {/* 3rd row */}
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/ssm7.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/sm8.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/sm9.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            {/* 4th row */}
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/smm10.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/smmm11.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                src={require("../../Image/smmm12.png")}
-                alt=""
-                style={{ width: "400px" }}
-              />
-            </Grid>
-          </Grid>
+          <div className="container py-5">
+            <div className="row">
+              {feature.map((feature, index) => (
+                <div key={index} className="col-md-4 mb-4">
+                  <div
+                    className="p-3 rounded d-flex align-items-center"
+                    style={{
+                      backgroundColor: feature.bgColor,
+                      height: "100px", 
+                    }}
+                  >
+                    <span
+                      style={{
+                        display: "inline-block",
+                        marginRight: "10px",
+                        borderRadius: "50%",
+                        width: "35px",
+                        height: "35px",
+                        textAlign: "center",
+                        lineHeight: "35px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={feature.imgSrc}
+                        alt="feature"
+                        style={{
+                          width: "100%", // Make the image fill the circle
+                          height: "100%", // Make the image fill the circle
+                          objectFit: "cover", // Ensure the image doesn't stretch
+                        }}
+                      />
+                    </span>
+
+                    <p className="school_para22">{feature.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div className="circle_text">
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "var(--font-h2)",
-                marginTop: "2rem",
-                fontWeight: 700,
-              }}
-            >
-              <span className="highlight">For Existing Schools</span>{" "}
-            </h1>
+            <h1 className="school_header">For Existing Schools</h1>
           </div>
-          <p
+          <div
             style={{
-              fontFamily: "Nunito",
-              textAlign: "justify",
               display: "flex",
+              alignItems: "center",
               justifyContent: "center",
-              fontSize: "var(--font-span)",
             }}
           >
-            Learning Needs provides all levels of support for schools leading up
-            to their inspections, observations and preparations for affiliation
-            networks and collaborations.
-          </p>
+            <p className="school_para4">
+              Learning Needs provides all levels of support for schools leading
+              up to their inspections, observations and preparations for
+              affiliation networks and collaborations.
+            </p>
+          </div>
+
           <Grid
             container
             rowSpacing={1}
@@ -768,34 +327,28 @@ const School = () => {
             </Grid>
           </Grid>
 
-          <Container className="additional">
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "var(--font-h2)",
-                marginTop: "2rem",
-              }}
-            >
-              <span className="highlight">Additional Support</span>
-            </h1>
-            <p
-              style={{
-                textAlign: "center",
-                fontSize: "var(--font-p)",
-                marginTop: "2rem",
-              }}
-            >
-              Team can also assist with:
-            </p>
+          <Container className="">
+            <div className="circle_text">
+              <h1 className="school_header">Additional Support</h1>
+            </div>
+            <p className="school_para1">Team can also assist with:</p>
             <Container>
               <Row>
                 {supportItems.map((text, index) => (
                   <Col xs={12} md={6} key={index} className="mb-3 p-0">
                     <div className="support-item d-flex align-items-start">
                       <div className="icon-container">
-                        <CheckBoxIcon className="custom-icon" />
+                        <FaStar className="custom-icon" />
                       </div>
-                      <p style={{ margin: 0 }}>{text}</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <p>{text}</p>
+                      </div>
                     </div>
                   </Col>
                 ))}
@@ -803,7 +356,7 @@ const School = () => {
             </Container>
           </Container>
         </Container>
-      </div>
+      </container-fluid>
     </container-fluid>
   );
 };

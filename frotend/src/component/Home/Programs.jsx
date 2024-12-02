@@ -9,16 +9,31 @@ import sports from "../../Image/programs/sports.png";
 import development from "../../Image/programs/development.png";
 import underlineImage from "../../Image/home/underline.png";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../src/varients";
 const Programs = () => {
   return (
-    <section className="programs-container">
+    <motion.section
+      className="programs-container"
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.7 }}
+    >
       <header>
-        <h2 style={{
-          position:'relative',
-          zIndex:'2'
-        }}>Explore Our Programs</h2>
-        <img src={underlineImage} alt="Decorative underline" className="underline-image1" />
+        <h2
+          style={{
+            position: "relative",
+            zIndex: "2",
+          }}
+        >
+          Explore Our Programs
+        </h2>
+        <img
+          src={underlineImage}
+          alt="Decorative underline"
+          className="underline-image1"
+        />
       </header>
 
       <div className="Newcontainer">
@@ -34,7 +49,10 @@ const Programs = () => {
                     through every step of establishing a thriving educational
                     institution.
                   </p>
-                  <Link to="/school" aria-label="Enroll in School Management Services">
+                  <Link
+                    to="/school"
+                    aria-label="Enroll in School Management Services"
+                  >
                     <button>Enroll now →</button>
                   </Link>
                 </div>
@@ -116,7 +134,7 @@ const Programs = () => {
         <img src={rocket} alt="Rocket Icon" className="rocket-icon" />
         <img src={sun} alt="Sun Icon" className="sun-icon" />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -363,7 +363,7 @@ export default function Footer() {
             </MDBCol>
             <MDBCol md="2" xs="12" sm="12" className="button-col">
               <button className="btn btn-primary btn-normal-case">
-                Get Started...
+                Get Started
               </button>
             </MDBCol>
           </MDBRow>
