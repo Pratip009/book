@@ -4,11 +4,10 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBInput,
   MDBNavbarBrand,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 
@@ -41,61 +40,68 @@ export default function Footer() {
                   <MDBRow>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center" style={{
-                          height:'100%'
-                        }}>
-                          <MDBCol md="4" className="icon-col">
-                            <TbTruckDelivery className="icon" />
-                          </MDBCol>
-                          <MDBCol md="8" className="text-col">
+                        <MDBRow
+                          className="align-items-center"
+                          style={{
+                            height: "100%",
+                          }}
+                        >
+                        
+                            <TbTruckDelivery style={{color:'white'}} />
                             <span className="text">Express Delivery</span>
                             <span className="text-two">Ships in 24 Hours</span>
-                          </MDBCol>
+                          
                         </MDBRow>
                       </div>
                     </MDBCol>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center" style={{
-                          height:'100%'
-                        }}>
-                          <MDBCol md="4" className="icon-col">
-                            <GiCheckedShield className="icon" />
-                          </MDBCol>
-                          <MDBCol md="8" className="text-col">
+                        <MDBRow
+                          className="align-items-center"
+                          style={{
+                            height: "100%",
+                          }}
+                        >
+                         
+                            <GiCheckedShield style={{color:'white'}} />
                             <span className="text">Brand Warranty</span>
                             <span className="text-two">Original products</span>
-                          </MDBCol>
+                          
                         </MDBRow>
                       </div>
                     </MDBCol>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center" style={{
-                          height:'100%'
-                        }}>
-                          <MDBCol md="4" className="icon-col">
-                            <RiExchangeBoxLine className="icon" />
-                          </MDBCol>
-                          <MDBCol md="8" className="text-col">
+                        <MDBRow
+                          className="align-items-center"
+                          style={{
+                            height: "100%",
+                          }}
+                        >
+                         
+                            <RiExchangeBoxLine style={{color:'white'}} />
+                          
                             <span className="text">Exciting Deals</span>
                             <span className="text-two">All prepaid orders</span>
-                          </MDBCol>
+                          
                         </MDBRow>
                       </div>
                     </MDBCol>
                     <MDBCol md="6" xs="12" className="box-col">
                       <div className="box">
-                        <MDBRow className="align-items-center" style={{
-                          height:'100%'
-                        }}>
-                          <MDBCol md="4" className="icon-col">
-                            <GrSecure className="icon" />
-                          </MDBCol>
-                          <MDBCol md="8" className="text-col">
+                        <MDBRow
+                          className="align-items-center"
+                          style={{
+                            height: "100%",
+                          }}
+                        >
+                        
+                            <GrSecure style={{color:'white'}} />
+                      
+                       
                             <span className="text">Secure Payment</span>
                             <span className="text-two">Secure certificate</span>
-                          </MDBCol>
+                     
                         </MDBRow>
                       </div>
                     </MDBCol>
@@ -251,7 +257,7 @@ export default function Footer() {
                 </MDBBtn>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="d-flex justify-content-center align-items-center">
+            <MDBRow className="d-flex justify-content-center align-items-center mt-4">
               <MDBCol
                 md="auto"
                 className="text-center mb-3 mb-md-0 d-flex justify-content-center align-items-center"

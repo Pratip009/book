@@ -62,7 +62,7 @@
   margin: 0 auto;
   width: 0; /* Start with a width of 0 for animation */
   height: 12px;
- 
+
   position: absolute;
   top: 100px; /* Position relative to h2 */
   margin-left: 56em; /* Center the image horizontally */
@@ -257,9 +257,13 @@
   .update-header h5 {
     font-size: 20px;
   }
-
+  .primaryTypographyProps {
+    font-family: "Nunito", sans-serif; /* Use Nunito font */
+    font-size: 14px; /* Slightly smaller text */
+    color: #000; /* Black text */
+  }
   .update-content {
-    font-size: 16px;
+    font-size: 14px !important;
   }
 }
 
@@ -313,7 +317,7 @@
   }
 
   .goal-title {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .goal-text {
@@ -384,7 +388,7 @@
   }
 
   .goal-title {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .goal-text {
@@ -397,7 +401,7 @@
   }
 
   .update-header h5 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .update-content {
@@ -437,7 +441,7 @@
   }
 
   .update-header h5 {
-    font-size: 18px;
+    font-size: 20px !important;
   }
 
   .update-content {

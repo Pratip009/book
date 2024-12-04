@@ -11,6 +11,9 @@
   padding: 2rem;
   position: relative;
 }
+.program_analysys img{
+  margin: 0 !important;
+}
 .Newcontainer {
   width: 80%;
   z-index: 3;
@@ -92,9 +95,10 @@
 /* Content area with icon and text split */
 .card-content {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
   width: 100%;
+  margin: 0;
 }
 
 /* Icon styling and spacing for left column */
@@ -109,9 +113,20 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-right: 1rem;
+  
 }
-
+.icon12 img{
+  margin: 0 !important;
+}
+.icon2 img{
+  margin: 0 !important;
+}
+.icon3 img{
+  margin: 0 !important;
+}
+.icon4 img{
+  margin: 0 !important;
+}
 .icon12 {
   background-color: #85cec7;
 }
@@ -395,6 +410,19 @@
 }
 
 @media (max-width: 575px) {
+  .icon12,
+.icon2,
+.icon3,
+.icon4 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+}
   .underline-image1 {
     display: block; /* Ensure it behaves like a block element */
     margin: 0 auto;
@@ -468,7 +496,7 @@
 }
 @media (max-width: 425px) {
   .programs-container h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 @media (max-width: 320px) {

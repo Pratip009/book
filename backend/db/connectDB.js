@@ -8,6 +8,7 @@ const connectDB = async () => {
     if (!dbURI) {
       throw new Error('DB_LINK environment variable is not set');
     }
+    mongoose.set('strictQuery', true);
     await mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log('MongoDB connected successfully');
   } catch (error) {

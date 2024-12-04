@@ -94,7 +94,7 @@ const MissionAndVision = () => {
 
       {/* Section for Updates */}
       <section
-        className="container mt-4"
+        className="container mt-4 mb-3"
         style={{
           padding: 0,
         }}
@@ -105,10 +105,12 @@ const MissionAndVision = () => {
               <h5 className="m-0">Updates</h5>
             </header>
             <div
-              className="update-content p-4"
+              className="update-content p-1"
               style={{ maxHeight: "300px", overflowY: "auto" }}
             >
-              <ul>
+              <ul style={{
+                padding:0
+              }}>
                 {notices.map((notice) => (
                   <li key={notice.id}>
                     <ListItem>
@@ -119,6 +121,7 @@ const MissionAndVision = () => {
                         primary={notice.attributes.notices}
                         primaryTypographyProps={{
                           style: {
+                            fontSize: "18px",
                             fontFamily: "Nunito",
                             color: "black",
                           },

@@ -1,7 +1,7 @@
 /* src/styles/global.css */
 :root {
   --font-family-heading: "Quicksand", sans-serif; /* For h1, h2, h3, etc. */
-  --font-family-body: "Source Sans 3", sans-serif;
+  
 
   --font-h1: 2.441em;
   --font-h2: 1.953em;

@@ -4,7 +4,16 @@
   padding: 20px;
   text-align: center;
 }
-
+.about_head {
+  font-family: "Quicksand";
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 60px;
+  line-height: 60px;
+  
+  color: #003e90;
+  font-weight: 700;
+}
 .blog-title {
   font-size: 2.5rem;
   margin-bottom: 20px;

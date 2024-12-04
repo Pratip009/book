@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect } from "react";
+import React, { useMemo } from "react";
 import "./AboutUsSection.css";
 import aboutImg from "../../Image/home/about.png";
 import carClipArt from "../../Image/home/car.png";

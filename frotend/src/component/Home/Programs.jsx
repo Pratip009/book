@@ -57,7 +57,7 @@ const Programs = () => {
                   </Link>
                 </div>
                 <div className="icon12">
-                  <img src={school} alt="School Management Icon" />
+                  <img src={school} alt="School Management Icon"/>
                 </div>
               </div>
             </div>

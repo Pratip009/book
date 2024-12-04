@@ -8,7 +8,7 @@
 }
 
 .offer-text {
-  font-size: 28px;
+  font-size: var(--font-h4); /* Font size for the offer text */
   font-weight: 700;
   font-family: "Open Sans";
 }
@@ -21,7 +21,7 @@
   padding: 10px 20px;
   line-height: 26.25px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: var(--font-span); /* Font size for the offer button */
   border-radius: 2px;
   font-weight: 700;
   text-decoration: none;
@@ -39,11 +39,11 @@
   }
 
   .offer-text {
-    font-size: 0.7rem; /* Slightly smaller font size for mobile */
+    font-size: var(--font-h6); /* Adjust font size for mobile */
   }
 
   .offer-button {
-    font-size: 0.6rem; /* Smaller button font size */
+    font-size: var(--font-span); /* Adjust button font size for mobile */
     padding: 5px 13px; /* Adjust button padding */
   }
 }
@@ -58,11 +58,11 @@
   }
 
   .offer-text {
-    font-size: 1.5rem; /* Adjust font size for iPad */
+    font-size: var(--font-h4); /* Adjust font size for iPad */
   }
 
   .offer-button {
-    font-size: 0.9rem; /* Adjust button font size for iPad */
+    font-size: var(--font-h6); /* Adjust button font size for iPad */
     padding: 8px 16px; /* Adjust button padding for iPad */
   }
 }
@@ -70,15 +70,18 @@
 /* Media query for screens 480px and below (mobile phones) */
 @media (max-width: 480px) {
   .offer-banner {
+    flex-direction: column;
+ 
     padding: 7px 12px; /* Further reduce padding */
   }
 
   .offer-text {
-    font-size: 0.7rem; /* Further reduce font size */
+    font-size: var(--font-span); /* Further reduce font size */
   }
 
   .offer-button {
-    font-size: 0.6rem; /* Smaller font for button */
-    padding: 6px 10px; /* Reduce button padding */
+    font-size: var(--font-span); /* Smaller font for button */
+    margin-top: 5px;
+     /* Reduce button padding */
   }
 }

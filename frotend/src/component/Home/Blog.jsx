@@ -4,6 +4,7 @@ import Banner from "../Banner";
 import pattern from "../../Image/Product/Frame 19.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
+import { Container } from "react-bootstrap";
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -33,7 +34,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <div style={containerStyle}>
+    <container-fluid>
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
@@ -50,43 +51,41 @@ export default function Blog() {
             />
           </container-fluid>
 
-          <h1
-            style={{
-              fontSize: "var(--font-h2)",
-              marginTop: "2rem",
-              fontFamily: "Nunito",
-            }}
-          >
-            <span className="highlight">Our Blog</span>
-          </h1>
-          {blogs.length > 0 ? (
-            blogs.map((blog) => (
-              <div key={blog.id} style={blogStyle}>
-                <h2 style={headingStyle}>{blog.attributes.heading}</h2>
-                <p style={subheadingStyle}>{blog.attributes.subheading}</p>
-                {blog.attributes.images &&
-                  blog.attributes.images.data &&
-                  blog.attributes.images.data.length > 0 && (
-                    <img
-                      src={
-                        blog.attributes.images.data[0].attributes.formats.medium
-                          .url
-                      }
-                      alt={
-                        blog.attributes.images.data[0].attributes.name ||
-                        "Blog Image"
-                      }
-                      style={imageStyle}
-                    />
-                  )}
-              </div>
-            ))
-          ) : (
-            <div>No blogs available</div>
-          )}
+          <Container>
+            <h1
+              className="about_head"
+            >
+              Our Blog
+            </h1>
+            {blogs.length > 0 ? (
+              blogs.map((blog) => (
+                <div key={blog.id} style={blogStyle}>
+                  <h2 style={headingStyle}>{blog.attributes.heading}</h2>
+                  <p style={subheadingStyle}>{blog.attributes.subheading}</p>
+                  {blog.attributes.images &&
+                    blog.attributes.images.data &&
+                    blog.attributes.images.data.length > 0 && (
+                      <img
+                        src={
+                          blog.attributes.images.data[0].attributes.formats
+                            .thumbnail.url
+                        }
+                        alt={
+                          blog.attributes.images.data[0].attributes.name ||
+                          "Blog Image"
+                        }
+                        style={imageStyle}
+                      />
+                    )}
+                </div>
+              ))
+            ) : (
+              <div>No blogs available</div>
+            )}
+          </Container>
         </container-fluid>
       )}
-    </div>
+    </container-fluid>
   );
 }
 

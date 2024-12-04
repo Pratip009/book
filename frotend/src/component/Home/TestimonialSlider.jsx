@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+
 import { Avatar } from "@material-ui/core";
 import "./TestimonialSlider.css";
 import { BsArrowRightSquareFill } from "react-icons/bs";
@@ -70,7 +70,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <Container className="testimonial-container p-0" fluid>
+    <Container className="testimonial-container" fluid>
       <Row>
         <Col xs={12}>
           <Slider {...settings}>

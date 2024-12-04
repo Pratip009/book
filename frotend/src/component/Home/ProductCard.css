@@ -76,7 +76,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 8px 12px !important;
+    padding: 5px 8px !important;
     border-radius: 12px !important;
     border: 1px solid #000000 !important;
     color: #313131 !important;
@@ -169,7 +169,7 @@
 
     .MuiButton-root.product_btnn {
         font-size: 12px !important; /* Smaller button text */
-        padding: 5px 10px !important; /* Adjust padding */
+        padding: 5px 5px !important; /* Adjust padding */
         margin-bottom: 8px !important;
     }
 }
@@ -297,8 +297,8 @@
     }
 
     .MuiButton-root.product_btnn {
-        font-size: 17px !important;
-        padding: 10px 14px !important;
+        font-size: 14px !important;
+        padding: 5px 5px !important;
         margin-bottom: 10px !important;
     }
 }

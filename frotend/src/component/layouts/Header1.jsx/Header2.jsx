@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { FaPhoneAlt, FaEnvelope, FaBars } from "react-icons/fa";
 import axios from "axios";
-
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CartIcon from "./CartIcon";
@@ -30,10 +30,12 @@ const navLinkHoverStyle = {
   color: "#FF4E00",
 };
 const activeLinkStyle = {
-  color: "#FF4E00",
   fontWeight: "bold",
+  marginTop:'-2px'
 };
 function Header2() {
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
   const { isAuthenticated, user } = useSelector((state) => state.userData);
 
   const [phone, setPhone] = useState("");
@@ -305,7 +307,10 @@ function Header2() {
               <Link
                 to="/"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={{
+                  ...navLinkStyle,
+                  ...(isActive("/") && activeLinkStyle), // Merge active styles
+                }}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -318,7 +323,7 @@ function Header2() {
               <Link
                 to="/about_us"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/about_us") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -331,7 +336,7 @@ function Header2() {
               <Link
                 to="/products"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/products") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -344,7 +349,7 @@ function Header2() {
               <Link
                 to="/training"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/training") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -357,7 +362,7 @@ function Header2() {
               <Link
                 to="/sports"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/sports") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -370,7 +375,7 @@ function Header2() {
               <Link
                 to="/school"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/school") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -383,7 +388,7 @@ function Header2() {
               <Link
                 to="/service"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/service") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -396,7 +401,7 @@ function Header2() {
               <Link
                 to="/gallery"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/gallery") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -409,7 +414,7 @@ function Header2() {
               <Link
                 to="/blog"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/blog") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }
@@ -422,7 +427,7 @@ function Header2() {
               <Link
                 to="/contact"
                 className="desktop-nav-link"
-                style={navLinkStyle}
+                style={isActive("/contact") ? activeLinkStyle : navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
                 }

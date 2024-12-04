@@ -33,7 +33,6 @@
 
 .banner-title {
   width: 713px;
-
   height: auto;
   font-family: "Quicksand";
   font-weight: 700;
@@ -41,7 +40,7 @@
   color: #ffffff;
   font-size: 60px;
   z-index: 2;
-  margin: 0;
+  margin-left: 2em;
 }
 
 .main-image {

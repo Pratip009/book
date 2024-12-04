@@ -82,7 +82,7 @@ function HeroSlider() {
     <Carousel
       activeIndex={index}
       onSelect={handleSelect}
-      interval={10000}
+      interval={3000}
       prevIcon={
         <span aria-hidden="true">
           <FaChevronLeft className="custom-prev-icon" />

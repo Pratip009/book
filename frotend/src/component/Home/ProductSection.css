@@ -299,9 +299,9 @@
   }
 
   .product-section p {
-    font-size: 14px; /* Adjust paragraph font size */
-    line-height: 28px; /* Adjust line height for better readability */
-    width: 90%; /* Adjust paragraph width for large mobile */
+    font-size: 12px; /* Adjust paragraph font size */
+     /* Adjust line height for better readability */
+    width: 100%; /* Adjust paragraph width for large mobile */
   }
 }
 @media (max-width: 320px) {

@@ -67,13 +67,17 @@ export default function MediaControlCard() {
           <div style={{ width: "100%", margin: "auto" }}>
             <h1
               style={{
-                textAlign: "left",
-                fontSize: "var(--font-h2)",
-                fontWeight: 700,
-                marginTop: "2rem",
+                fontFamily: "Quicksand",
+                textAlign: 'start',
+                fontSize: '60px',
+                lineHeight: '60px',
+                marginTop: '2rem',
+                marginBottom: '2rem',
+                color: '#313131',
+                fontWeight: '700',
               }}
             >
-              <span className="highlight">Educate Yourself</span>
+             Educate Yourself
             </h1>
             <h2 style={commonStyles.appSubheading}>
               Books and resources for better learning

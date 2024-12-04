@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
 // Use dynamic imports for images to enable lazy loading
 const starIcon = require("../../Image/home/teamstar.png");
-const rocketIcon = require("../../Image/home/teamrocket.png");
+
 const planetIcon = require("../../Image/home/teamglobe.png");
 const bookIcon = require("../../Image/home/teambook.png");
 const chatBubblesIcon = require("../../Image/home/teammain.png");
@@ -28,12 +28,7 @@ const TeamMessage1 = () => {
               className="icon star-icon"
               loading="lazy"
             />
-            <img
-              src={rocketIcon}
-              alt="Rocket Icon"
-              className="icon rocket-icon"
-              loading="lazy"
-            />
+           
             <img
               src={bookIcon}
               alt="Book Icon"

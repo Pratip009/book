@@ -66,6 +66,19 @@
 }
 
 /* Star Icon */
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Starting position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* Star Icon */
 .star-icon {
   width: 43px;
   height: 43px;
@@ -73,16 +86,7 @@
   left: 43px;
   opacity: 0.7;
   z-index: 1;
-}
-
-/* Rocket Icon */
-.rocket-icon {
-  width: 90px;
-  height: 87px;
-  top: 163px;
-  left: 740px;
-  transform: rotate(90deg);
-  z-index: 1;
+  animation: float 2s ease-in-out infinite; /* Apply animation */
 }
 
 /* Book Icon */
@@ -92,6 +96,7 @@
   top: 423.25px;
   left: 914.92px;
   transform: rotate(32.46deg);
+  animation: float 2s ease-in-out infinite; /* Apply animation */
 }
 
 /* Planet Icon */
@@ -100,6 +105,7 @@
   height: 68px;
   top: 146px;
   left: 1456px;
+  animation: float 2s ease-in-out infinite; /* Apply animation */
 }
 
 /* Media Queries for Responsive Design */
