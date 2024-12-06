@@ -6,7 +6,7 @@ import { fadeIn } from "../../../src/varients";
 const Welcome = () => {
   return (
     <div className="welcome-full-bg">
-      <Container className="welcome-card" style={{padding:0}}>
+      <Container className="welcome-card" style={{padding:0, marginTop:2rem}}>
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
