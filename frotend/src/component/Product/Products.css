@@ -12,14 +12,14 @@
   justify-content: space-around;
 }
 
-.productBack {
-  background-image: url("../../Image/teamaaa.png");
-  position: relative;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.productBack h1{
+  font-size: 60px;
+  line-height: 60px;
+  font-family: 'Quicksand';
+  color: #003e90;
+  font-weight: 700;
+  margin-top: 2rem;
 }
-
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -167,7 +167,7 @@
 }
 .page-link {
   text-decoration: none;
-  font: 300 0.9vmax "Outfit";
+  font: 300 0.9vmax "Nunito";
   color: rgb(2, 2, 2);
   transition: all 0.3s;
   background-color: transparent !important;
@@ -240,6 +240,14 @@
 }
 
 @media screen and (max-width: 800px) {
+  .productBack h1{
+    font-size: 45px;
+    line-height: 60px;
+    font-family: 'Quicksand';
+    color: #003e90;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
   .filterBox {
     width: 40vmax;
   }
@@ -256,6 +264,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  .productBack h1{
+    font-size: 40px;
+    line-height: 60px;
+    font-family: 'Quicksand';
+    color: #003e90;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
   .prodcutPageTop {
     flex-direction: column-reverse;
     align-items: center;
@@ -351,6 +367,14 @@
 }
 
 @media (max-width: 576px) {
+  .productBack h1{
+    font-size: 20px;
+    line-height: 40px;
+    font-family: 'Quicksand';
+    color: #003e90;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
   /* xs breakpoint */
   .paginationContainer {
     padding-left: 10px;

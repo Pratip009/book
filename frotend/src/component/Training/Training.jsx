@@ -98,36 +98,18 @@ const Training = () => {
 
             <ProgramList />
 
-            <container-fluid
-              
-            >
+            <container-fluid>
               <Challenges />
             </container-fluid>
-            <div className="circle_text">
-              <h1
-                style={{
-                  fontSize: "var(--font-h2)",
-                  marginTop: "2rem",
-                  fontWeight: 700,
-                }}
-              >
-                <span className="highlight">Our Strength</span>{" "}
-              </h1>
+            <div className="training_head">
+              <h1>Our Strength</h1>
             </div>
             <div>
               <TabList />
             </div>
 
-            <div className="circle_text">
-              <h1
-                style={{
-                  fontSize: "var(--font-h2)",
-                  marginTop: "2rem",
-                  fontWeight: 700,
-                }}
-              >
-                <span className="highlight">Way we deliver our session</span>{" "}
-              </h1>
+            <div className="training_head">
+              <h1>Way we deliver our session</h1>
             </div>
             <div
               style={{

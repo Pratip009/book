@@ -3,15 +3,15 @@
   background-color: #ffffff; /* Light yellow background */
   width: 100%;
   margin: 0; /* Ensure no gaps on the sides */
+  
 }
 
 /* Card container */
 .welcome-card {
   background-color: #fef3ef;
   border-radius: 12px;
-
   max-width: 95%;
-  margin: 0.5em auto; /* Center the card vertically and horizontally */
+  margin: 1.5rem auto; /* Center the card vertically and horizontally */
 }
 
 /* Title styling */
@@ -93,7 +93,7 @@
 
 @media (max-width: 425px) {
   .welcome-title {
-    font-size: 18px;
+    font-size: 20px;
     padding: 0.6rem;
     line-height: 30px;
   }

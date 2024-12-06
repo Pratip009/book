@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { Button, Collapse } from "@mui/material";
 import { Container } from "react-bootstrap";
-
+import './Softskill.css'
 const SoftSkill = () => {
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => {
@@ -25,6 +25,7 @@ const SoftSkill = () => {
           textAlign: "justify",
           display: "inline-block",
           fontSize: "var(--font-span)",
+          fontFamily: "Nunito",
         }}
       >
         The term “soft skills” is a common buzzword that employers and upper
@@ -35,32 +36,16 @@ const SoftSkill = () => {
         Learning Needs provides exhaustive online and in-person soft skills
         training to help develop a positive and productive work culture.
       </span>
-      {/* <span
-        style={{
-          display: "flex",
-          alignItems: "flex-start",
-          fontSize: "var(--font-h2)",
-          fontWeight: "700",
-        }}
-      >
-        Our Soft Skills Workshop
-      </span> */}
-      <h1
-        style={{
-          textAlign: "start",
-          fontSize: "var(--font-h3)",
-          fontWeight: 700,
-          marginTop: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
-        <span className="highlight">Our Soft Skills Workshop</span>
-      </h1>
+
+      <div className="training_head1">
+        <h1>Our Soft Skills Workshop</h1>
+      </div>
       <span
         style={{
           textAlign: "justify",
           display: "inline-block",
           fontSize: "var(--font-span)",
+          fontFamily: "Nunito",
         }}
       >
         Our soft skills workshops are custom-tailored to the needs of your
@@ -86,34 +71,15 @@ const SoftSkill = () => {
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <span>
-          {/* <span
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              fontSize: "var(--font-h2)",
-              fontWeight: "700",
-            }}
-          >
-            Customized Soft Skills Training Workshops
-          </span> */}
-          <h1
-            style={{
-              textAlign: "start",
-              fontSize: "var(--font-h3)",
-              fontWeight: 700,
-              marginTop: "1rem",
-              marginBottom: "1rem",
-            }}
-          >
-            <span className="highlight">
-              Customized Soft Skills Training Workshops
-            </span>
-          </h1>
+          <div className="training_head1">
+            <h1>Customized Soft Skills Training Workshops</h1>
+          </div>
           <span
             style={{
               textAlign: "justify",
               display: "inline-block",
               fontSize: "var(--font-span)",
+              fontFamily: "Nunito",
             }}
           >
             We keep up with the times at Learning Needs. Online soft skills
@@ -128,34 +94,16 @@ const SoftSkill = () => {
             potential of their existing soft skills while developing other soft
             skills that may not come as naturally to them.
           </span>
-          {/* <span
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              fontSize: "var(--font-h2)",
-              fontWeight: "700",
-            }}
-          >
-            Participate in Our Soft Skills Training Programs
-          </span> */}
-          <h1
-            style={{
-              textAlign: "start",
-              fontSize: "var(--font-h3)",
-              fontWeight: 700,
-              marginTop: "1rem",
-              marginBottom: "1rem",
-            }}
-          >
-            <span className="highlight">
-              Participate in Our Soft Skills Training Programs
-            </span>
-          </h1>
+
+          <div className="training_head1">
+            <h1>Participate in Our Soft Skills Training Programs</h1>
+          </div>
           <span
             style={{
               textAlign: "justify",
               display: "inline-block",
               fontSize: "var(--font-span)",
+              fontFamily: "Nunito",
             }}
           >
             The Learning Needs caters to companies across all industries and

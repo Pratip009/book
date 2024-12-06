@@ -162,7 +162,7 @@
 /* 768px (Tablets Portrait) */
 @media (max-width: 768px) {
   .circle_text h1 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .support-item {

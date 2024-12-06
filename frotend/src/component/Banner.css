@@ -99,6 +99,7 @@
   .banner-title {
     font-size: 30px;
     line-height: 60px;
+    width: 200px;
   }
 
   .main-image {
@@ -135,7 +136,7 @@
     display: flex;
     align-items: center;
     font-size: 15px;
-    width: 200px;
+    width: 100px;
     line-height: 30px;
     padding: 0;
   }

@@ -1,87 +1,59 @@
-.educate {
-  width: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
+/* Default Styles */
+.playapp_head h1 {
+  font-family: 'Quicksand';
   text-align: start;
-}
-
-.app_heading {
-  font-family: "Nunito";
-  font-size: 30px;
-  margin: 0;
-}
-
-.app_subheading {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: "Nunito";
-  font-size: 26px;
+  font-size: 60px;
+  line-height: 60px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #313131;
   font-weight: 700;
-  color: #000000;
 }
 
-.app_desc {
-  font-size: 15px;
-  font-family: "Nunito";
-  color: rgb(49, 49, 49);
-  text-align: justify;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.app_links1 {
-  width: 20%;
-}
-
-.googlePlayStore_link1 img {
-  width: 100%;
-}
-
-.app_image {
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 899px) {
-  .app_heading {
-    font-size: 26px;
-  }
-
-  .app_subheading {
-    font-size: 22px;
-  }
-
-  .app_desc {
-    font-size: 14px;
-  }
-
-  .app_links1 {
-    width: 30%;
-  }
-
-  .googlePlayStore_link1 img {
-    width: 100%;
+/* For screens up to 1024px */
+@media (max-width: 1024px) {
+  .playapp_head h1 {
+    font-size: 50px;
+    line-height: 55px;
   }
 }
 
-@media (max-width: 499px) {
-  .app_heading {
-    font-size: 22px;
+/* For screens up to 768px */
+@media (max-width: 768px) {
+  .playapp_head h1 {
+    font-size: 20px;
+    line-height: 45px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
+}
 
-  .app_subheading {
+/* For screens up to 425px */
+@media (max-width: 425px) {
+  .playapp_head h1 {
+    font-size: 20px !important;
+    line-height: 38px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* For screens up to 375px */
+@media (max-width: 375px) {
+  .playapp_head h1 {
+    font-size: 20px;
+    line-height: 34px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* For screens up to 320px */
+@media (max-width: 320px) {
+  .playapp_head h1 {
     font-size: 18px;
-  }
-
-  .app_desc {
-    font-size: 13px;
-  }
-
-  .app_links1 {
-    width: 40%;
-  }
-
-  .googlePlayStore_link1 img {
-    width: 100%;
+    line-height: 30px;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
   }
 }

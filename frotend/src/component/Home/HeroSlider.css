@@ -117,7 +117,7 @@
   .sale-text {
     font-size: var(--font-h6); /* Adjusted for smaller screens */
     font-weight: 400;
-    max-width: 60%;
+    max-width: 70%;
     word-wrap: break-word;
     word-break: break-word;
   }

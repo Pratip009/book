@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GooglePlay from "../../Image/Footer/google-play-black.svg";
-
+import './PlayApp.css'
 export default function MediaControlCard() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -12,7 +12,7 @@ export default function MediaControlCard() {
   // Define styles for responsiveness
   const commonStyles = {
     appHeading: {
-      fontFamily:'Nunito',
+      fontFamily: "Nunito",
       fontSize: "var(--font-h2)",
       margin: "0",
     },
@@ -64,21 +64,8 @@ export default function MediaControlCard() {
           className="d-flex justify-content-center align-items-center"
           style={{ textAlign: "start" }}
         >
-          <div style={{ width: "100%", margin: "auto" }}>
-            <h1
-              style={{
-                fontFamily: "Quicksand",
-                textAlign: 'start',
-                fontSize: '60px',
-                lineHeight: '60px',
-                marginTop: '2rem',
-                marginBottom: '2rem',
-                color: '#313131',
-                fontWeight: '700',
-              }}
-            >
-             Educate Yourself
-            </h1>
+          <div style={{ width: "100%", margin: "auto" }} className="playapp_head">
+            <h1>Educate Yourself</h1>
             <h2 style={commonStyles.appSubheading}>
               Books and resources for better learning
             </h2>

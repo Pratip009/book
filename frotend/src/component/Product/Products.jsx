@@ -33,7 +33,28 @@ import Banner from "../Banner";
 import mainImage from "../../Image/Product/productImg.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
+import { motion } from "framer-motion";
 const categories = ["Books", "PDF", "Learning Aid"];
+const data = [
+  [
+    "Gain valuable knowledge",
+    "Exercise your brain",
+    "Improve your focus and concentration",
+    "Improve your memory",
+  ],
+  [
+    "Enjoy entertainment",
+    "Improve your ability to empathize",
+    "Improve your communication skills",
+    "Mental Stimulation",
+  ],
+  [
+    "Stronger Analytical Thinking Skills",
+    "Improve your mental health",
+    "Vocabulary Expansion",
+    "Stress Reduction",
+  ],
+];
 
 function Products() {
   useEffect(() => {
@@ -105,8 +126,11 @@ function Products() {
 
           {products === undefined || products.length === 0 ? (
             <>
-              <div
+              <motion.div
                 className="emptyCartContainer "
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 style={{ marginTop: "5rem", background: "white" }}
               >
                 <InventoryIcon className="cartIcon" />
@@ -128,11 +152,11 @@ function Products() {
                 >
                   Refresh
                 </Button>
-              </div>
+              </motion.div>
             </>
           ) : (
             <>
-              <container-fluid className="productPage">
+              <container-fluid>
                 <container-fluid>
                   <Banner
                     title="Make No Bad Choices,Choose Us"
@@ -144,20 +168,8 @@ function Products() {
                 </container-fluid>
                 <div className="productBack">
                   <Container>
-                    <div className="circle_text">
-                      <h1
-                        style={{
-                          textAlign: "center",
-                          fontSize: "var(--font-h2)",
-                          marginTop: "2rem",
-                          fontWeight: 700,
-                        }}
-                      >
-                        <span className="highlight">
-                          Why book Reading is important
-                        </span>{" "}
-                      </h1>
-                    </div>
+                    <h1>Why book Reading is important</h1>
+
                     <span
                       style={{
                         fontFamily: "Nunito",
@@ -198,20 +210,8 @@ function Products() {
                         imagination amongst many other benefits.
                       </span>
 
-                      <div className="circle_text">
-                        <h1
-                          style={{
-                            textAlign: "center",
-                            fontSize: "var(--font-h2)",
-                            marginTop: "2rem",
-                            fontWeight: 700,
-                          }}
-                        >
-                          {" "}
-                          <span className="highlight">
-                            Benefits of Reading Books
-                          </span>{" "}
-                        </h1>
+                      <div className="">
+                        <h1> Benefits of Reading Books</h1>
                       </div>
                       <span
                         style={{
@@ -228,308 +228,38 @@ function Products() {
                       </span>
 
                       <Row>
-                        <Col md={4} sm={6} xs={12}>
-                          <List>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Gain valuable knowledge
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Exercise your brain
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Improve your focus and concentration
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Improve your memory
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                          </List>
-                        </Col>
-
-                        <Col md={4} sm={6} xs={12}>
-                          <List>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Enjoy entertainment
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Improve your ability to empathize
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Improve your communication skills
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Mental Stimulation
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                          </List>
-                        </Col>
-
-                        <Col md={4} sm={6} xs={12}>
-                          <List>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Stronger Analytical Thinking Skills
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Improve your mental health
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Vocabulary Expansion
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                            <ListItem>
-                              <ListItemAvatar>
-                                <MenuBookIcon
-                                  fontSize="large"
-                                  style={{ color: "#FF4E00" }}
-                                />
-                              </ListItemAvatar>
-                              <ListItemText
-                                primary={
-                                  <Typography
-                                    variant="body2"
-                                    style={{
-                                      fontSize: "var(--font-span)",
-                                      fontWeight: "400",
-                                      textAlign: "justify",
-                                      display: "inline-block",
-                                      fontFamily: "Nunito",
-                                    }}
-                                  >
-                                    Stress Reduction
-                                  </Typography>
-                                }
-                              />
-                            </ListItem>
-                          </List>
-                        </Col>
+                        {data.map((column, colIndex) => (
+                          <Col key={colIndex} md={4} sm={6} xs={12}>
+                            <List>
+                              {column.map((text, index) => (
+                                <ListItem key={index}>
+                                  <ListItemAvatar>
+                                    <MenuBookIcon
+                                      fontSize="large"
+                                      style={{ color: "#FF4E00" }}
+                                    />
+                                  </ListItemAvatar>
+                                  <ListItemText
+                                    primary={
+                                      <Typography
+                                        variant="body2"
+                                        style={{
+                                          fontSize: "var(--font-span)",
+                                          fontWeight: "400",
+                                          textAlign: "justify",
+                                          display: "inline-block",
+                                          fontFamily: "Nunito",
+                                        }}
+                                      >
+                                        {text}
+                                      </Typography>
+                                    }
+                                  />
+                                </ListItem>
+                              ))}
+                            </List>
+                          </Col>
+                        ))}
                       </Row>
                     </Collapse>
                     <Button
