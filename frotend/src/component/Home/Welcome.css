@@ -93,6 +93,7 @@
 
 @media (max-width: 425px) {
   .welcome-title {
+    margin-top:1rem;
     font-size: 18px;
     padding: 0.6rem;
     line-height: 30px;
@@ -111,6 +112,7 @@
 
 @media (max-width: 375px) {
   .welcome-title {
+    margin-top:1rem;
     font-size: 16px;
     padding: 0.5rem;
     line-height: 28px;
