@@ -3,7 +3,6 @@
   background-color: #ffffff; /* Light yellow background */
   width: 100%;
   margin: 0; /* Ensure no gaps on the sides */
-  
 }
 
 /* Card container */
@@ -35,7 +34,7 @@
   color: #000000;
   text-align: justify;
 }
-.welcome_btn{
+.welcome_btn {
   padding: 1em 1em;
 }
 /* Button styling */
@@ -93,12 +92,11 @@
 
 @media (max-width: 425px) {
   .welcome-title {
-<<<<<<< HEAD
     font-size: 20px;
-=======
-    margin-top:1rem;
+
+    margin-top: 1rem;
     font-size: 18px;
->>>>>>> a560d6921828b2cd84d89f5e7d840fcca54acecb
+
     padding: 0.6rem;
     line-height: 30px;
   }
@@ -110,13 +108,12 @@
 
   .welcome-button {
     font-size: 12px;
-    
   }
 }
 
 @media (max-width: 375px) {
   .welcome-title {
-    margin-top:1rem;
+    margin-top: 1rem;
     font-size: 16px;
     padding: 0.5rem;
     line-height: 28px;

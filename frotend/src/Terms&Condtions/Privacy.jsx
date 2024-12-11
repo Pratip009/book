@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Privacy.css";
 import MetaData from "../component/layouts/MataData/MataData";
+import { Container } from "react-bootstrap";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy-policy-container">
+    <Container className="privacy-policy-container">
       <MetaData title={"Privacy Policy"} />
-      <div className="container___">
+      <Container className="content-container">
         <h1>Privacy Policy</h1>
         <p>
           At Learning Needs, we are committed to protecting your privacy. This
@@ -139,8 +140,8 @@ const PrivacyPolicy = () => {
           +8240554890
         </span>
         <h2>Effective Date: 01-01-2024</h2>
-      </div>
-    </div>
+      </Container>
+    </Container>
   );
 };
 

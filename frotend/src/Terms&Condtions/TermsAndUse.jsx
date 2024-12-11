@@ -1,11 +1,12 @@
 import React from "react";
 import "./Privacy.css";
 import MetaData from "../component/layouts/MataData/MataData";
+import { Container } from "react-bootstrap";
 const TermsAndConditions = () => {
   return (
-    <div className="privacy-policy-container">
+    <Container className="privacy-policy-container">
       <MetaData title="Terms And Conditions" />
-      <div className="container___">
+      <div className="content-container">
         <h1>Privacy Policy</h1>
         <p>
           At Learning Needs, we are committed to protecting your privacy. This
@@ -14,7 +15,7 @@ const TermsAndConditions = () => {
           and purchase our products.
         </p>
         <h3>Information We Collect</h3>
-        <h5>Personal Information</h5>
+        <h3>Personal Information</h3>
         <p>
         When you make a purchase or register an account on our website, we may
         collect the following personal information:
@@ -32,7 +33,7 @@ We may also collect non-personal information about your visit to our website,
 including:</li>
          
         </ul>
-        <h2>Acceptance of These Terms</h2>
+        <h3>Acceptance of These Terms</h3>
         <p>
           You (“Customer”) may place orders for Products with Learning Needs
           ("we," "our") via our website. By placing an order, you consent to
@@ -43,7 +44,7 @@ including:</li>
           way inconsistent with these Terms shall be inapplicable and of no
           force and effect whatsoever.
         </p>
-        <h2>Orders</h2>
+        <h3>Orders</h3>
         <p>
           All orders are subject to Learning Needs's acceptance. This means
           Learning Needs may, for any reason, refuse to accept or may cancel or
@@ -54,7 +55,7 @@ including:</li>
           cancel an order after you have already been charged, Learning Needs
           will refund you the charged amount.
         </p>
-        <h2>Product Offering</h2>
+        <h3>Product Offering</h3>
         <p>
           All product descriptions on our website are subject to change at any
           time without notice, at our sole discretion. We reserve the right to
@@ -64,7 +65,7 @@ including:</li>
           any color will be accurate and a true reflection of the physical item
           upon receipt.
         </p>
-        <h2>Price</h2>
+        <h3>Price</h3>
         <p>
           All prices are subject to change up to the time you place your order
           and it is accepted by Learning Needs. Prices for products displayed on
@@ -81,7 +82,7 @@ including:</li>
           proceed with the purchase of any product(s) where the price has been
           corrected.
         </p>
-        <h2>Special Offers</h2>
+        <h3>Special Offers</h3>
         <p>
           From time to time, we may offer special promotions for some or all of
           our products, including discounts, limited edition products, or free
@@ -89,20 +90,20 @@ including:</li>
           Needs reserves the right to change or discontinue such offers at any
           time.
         </p>
-        <h2>Taxes</h2>
+        <h3>Taxes</h3>
         <p>
           The prices quoted for the products sold hereunder include applicable
           taxes. Customer shall pay, and reimburse Learning Needs if it pays,
           any taxes, except for those based on Learning Needs's income.
         </p>
-        <h2>Payment</h2>
+        <h3>Payment</h3>
         <p>
           All orders must be paid in full prior to shipment. Payment information
           is submitted by the customer upon the placement of any order, and
           fulfillment and shipping of the order are subject to verification of
           payment information and availability of funds.
         </p>
-        <h2>Shipping</h2>
+        <h3>Shipping</h3>
         <p>
           Available shipping options will be displayed during the checkout
           process. Any timeframe provided by Learning Needs for when the
@@ -120,7 +121,7 @@ including:</li>
           product(s). If items are lost or damaged in transit, please contact
           our Customer Service Department.
         </p>
-        <h2>Returns</h2>
+        <h3>Returns</h3>
         <p>
           Once an order has been placed and accepted by Learning Needs, customer
           may not cancel such accepted order without Learning Needs’s prior
@@ -130,23 +131,23 @@ including:</li>
           expenses. The product(s) must be returned to Learning Needs within
           thirty days of purchase.
         </p>
-        <h2>Warranty</h2>
+        <h3>Warranty</h3>
         <p>
           For more information regarding our warranty policy, please refer to
           the written warranty included with the product.
         </p>
-        <h2>Not for Resale</h2>
+        <h3>Not for Resale</h3>
         <p>
           Products sold on our website are for end-user customers only and not
           for resale. We reserve the right to refuse or cancel any order if we
           suspect you are purchasing products for resale.
         </p>
-        <h2>Governing Law/ Jurisdiction</h2>
+        <h3>Governing Law/ Jurisdiction</h3>
         <p>
           These Terms shall be governed and construed in accordance with the
           laws of Singapore.
         </p>
-        <h2>Dispute Resolution and Applicable Law</h2>
+        <h3>Dispute Resolution and Applicable Law</h3>
         <p>
           This Agreement is to be governed by and construed in accordance with
           all applicable laws in force in Singapore from time to time. The
@@ -162,7 +163,7 @@ including:</li>
           of Arbitration of the SIAC. The language of the arbitration shall be
           English.
         </p>
-        <h2>Indemnification</h2>
+        <h3>Indemnification</h3>
         <p>
           To the fullest extent permitted by applicable law, you agree to
           indemnify and hold Learning Needs harmless from and against any and
@@ -171,14 +172,14 @@ including:</li>
           of any kind or nature arising from or in connection with your use of
           our website or your breach of these Terms.
         </p>
-        <h2>Entire Agreement</h2>
+        <h3>Entire Agreement</h3>
         <p>
           These Terms and Conditions of Sale constitute the entire agreement
           between the parties and supersede all prior and contemporaneous
           agreements, proposals, or representations, written or oral, concerning
           their subject matter.
         </p>
-        <h2>Contact Information</h2>
+        <h3>Contact Information</h3>
         <p>
           If you have any questions about these Terms and Conditions, please
           contact us at:
@@ -190,7 +191,7 @@ including:</li>
           <span style={{ fontWeight: "400" }}>info@Learning Needs.com</span>
         </p>
       </div>
-    </div>
+    </Container>
   );
 };
 

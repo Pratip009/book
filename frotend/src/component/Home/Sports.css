@@ -1,0 +1,163 @@
+/* Global Styles */
+
+
+.sports_head h1 {
+  font-family: "Quicksand";
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 60px;
+  line-height: 60px;
+  color: #003e90;
+  font-weight: 700;
+}
+.sports_paragraph {
+  font-family: "Nunito";
+  text-align: justify;
+}
+.program-container .tree {
+  width: 90px;
+  height: auto;
+  top: 10px;
+  left: 20px;
+  position: absolute;
+  animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+/* Book */
+.program-container .book {
+  bottom: 70px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+/* Globe */
+.program-container .globe {
+  bottom: 50px;
+  right: -50px;
+  width: 60px;
+  height: 60px;
+  transform: rotate(180deg); /* Right rotation */
+  position: absolute;
+  animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
+}
+.sports-card {
+  background-color: #e6f1ff;
+  padding: 20px;
+  font-size: 18px !important;
+  border-radius: 10px;
+  text-align: center !important;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+.sports-card .star-icon {
+  color: #ffa500;
+  margin-right: 8px;
+}
+
+.center-align {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Font Size for h1 */
+@media (max-width: 425px) {
+  .sports_head h1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.sports_paragraph {
+  font-family: "Nunito";
+  text-align: justify;
+}
+
+/* Sports Card Styles */
+.sports-card {
+  font-size: 14px;
+  background-color: #e6f1ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: start;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+/* Star Icon Styling */
+.sports-card .star-icon {
+  color: #ffa500;
+  margin-right: 8px;
+}
+
+/* Center Align (if needed for specific items) */
+.center-align {
+  text-align: start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid Gap */
+
+/* Media Queries for Responsiveness */
+
+/* 320px (Extra Small Devices) */
+@media (max-width: 320px) {
+  .sports-card {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .sports_paragraph {
+    font-size: 14px;
+  }
+}
+
+/* 375px (Small Smartphones) */
+@media (max-width: 375px) {
+  .sports-card {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .sports_paragraph {
+    font-size: 15px;
+  }
+}
+
+/* 425px (Larger Smartphones) */
+@media (max-width: 425px) {
+  .sports-card {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .sports_paragraph {
+    font-size: 14px;
+  }
+}
+
+/* 768px (Tablets) */
+@media (max-width: 768px) {
+  .sports_head h1 {
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  .sports-card {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .sports_paragraph {
+    font-size: 16px;
+  }
+}
+
+/* 1024px (Small Laptops) */

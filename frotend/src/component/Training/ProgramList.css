@@ -19,28 +19,48 @@
     transition: all 0.3s ease-in-out;
   }
   
+  @keyframes floatUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Move up */
+    }
+    100% {
+      transform: translateY(0); /* Move back down */
+    }
+  }
+  
+  /* Tree */
   .program-container .tree {
     width: 90px;
     height: auto;
     top: 10px;
     left: 20px;
+    position: absolute;
+    animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
   }
   
+  /* Book */
   .program-container .book {
     bottom: 70px;
     left: 0;
     width: 50px;
     height: 50px;
+    position: absolute;
+    animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
   }
   
+  /* Globe */
   .program-container .globe {
     bottom: 50px;
     right: -50px;
     width: 60px;
     height: 60px;
     transform: rotate(180deg); /* Right rotation */
+    position: absolute;
+    animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
   }
-  
   /* Title Styles */
   .program-container h1 {
     font-family: 'Quicksand', sans-serif;
@@ -76,19 +96,25 @@
   
   /* Program Card Styles */
   .program-card {
-    height: auto;
+    height: fit-content; /* Ensure the height adjusts to the content dynamically */
     background-color: #FFF1EB;
     padding: 20px 15px;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    z-index: 2; /* Ensure program boxes appear above clipart */
     position: relative;
-    margin-bottom: .5rem; /* Add margin to separate the cards */
+    z-index: 2; /* Ensure program boxes appear above clipart */
+    margin-bottom: 0.5rem; /* Add consistent spacing between cards */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  }
+    box-sizing: border-box; /* Prevent padding from affecting card dimensions */
+    overflow: hidden; /* Prevent unintended content overflow */
+    transition: all 0.3s ease; /* Smooth resizing or appearance transitions */
+}
+
+/* Prevent excessive sizes by limiting width */
+.program-card img, .program-card .content {
+    max-width: 100%; /* Ensure content or images do not overflow the card */
+}
   
   .program-card img {
     width: 38px;

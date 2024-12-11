@@ -31,7 +31,7 @@ const navLinkHoverStyle = {
 };
 const activeLinkStyle = {
   fontWeight: "bold",
-  marginTop:'-2px'
+  marginTop: "-2px",
 };
 function Header2() {
   const location = useLocation();
@@ -359,19 +359,7 @@ function Header2() {
               >
                 Training
               </Link>
-              <Link
-                to="/sports"
-                className="desktop-nav-link"
-                style={isActive("/sports") ? activeLinkStyle : navLinkStyle}
-                onMouseOver={(e) =>
-                  (e.currentTarget.style.color = navLinkHoverStyle.color)
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.style.color = navLinkStyle.color)
-                }
-              >
-                Sports
-              </Link>
+
               <Link
                 to="/school"
                 className="desktop-nav-link"
@@ -397,6 +385,19 @@ function Header2() {
                 }
               >
                 School Essentials
+              </Link>
+              <Link
+                to="/sports"
+                className="desktop-nav-link"
+                style={isActive("/sports") ? activeLinkStyle : navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Sports
               </Link>
               <Link
                 to="/gallery"
@@ -497,19 +498,7 @@ function Header2() {
               >
                 Training
               </Link>
-              <Link
-                to="/sports"
-                className="mobile-nav-link"
-                style={navLinkStyle}
-                onMouseOver={(e) =>
-                  (e.currentTarget.style.color = navLinkHoverStyle.color)
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.style.color = navLinkStyle.color)
-                }
-              >
-                Sports
-              </Link>
+
               <Link
                 to="/school"
                 className="mobile-nav-link"
@@ -535,6 +524,19 @@ function Header2() {
                 }
               >
                 School Essentials
+              </Link>
+              <Link
+                to="/sports"
+                className="mobile-nav-link"
+                style={navLinkStyle}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.color = navLinkHoverStyle.color)
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.color = navLinkStyle.color)
+                }
+              >
+                Sports
               </Link>
               <Link
                 to="/gallery"

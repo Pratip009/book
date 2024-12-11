@@ -139,7 +139,7 @@ export default function Footer() {
                       </a>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <a href="/policy/return" className="footer_links">
                         Return Order
                       </a>
                     </p>
@@ -163,7 +163,7 @@ export default function Footer() {
                       Policies
                     </h6>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <a href="/policy/Terms" className="footer_links">
                         Return Policy
                       </a>
                     </p>
@@ -178,12 +178,12 @@ export default function Footer() {
                       </a>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <a href="/policy/Terms" className="footer_links">
                         Privacy Policy
                       </a>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <a href="/terms/conditions" className="footer_links">
                         T&C
                       </a>
                     </p>
@@ -202,12 +202,12 @@ export default function Footer() {
                       Company
                     </h6>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <a href="/about_us" className="footer_links">
                         About Us
                       </a>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <a href="/contact" className="footer_links">
                         Contact Us
                       </a>
                     </p>

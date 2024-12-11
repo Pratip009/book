@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./Return.css";
 import MetaData from "../component/layouts/MataData/MataData";
+import { Container } from "react-bootstrap";
 // import TermsImage from "../Image/about/tc.jpg";
 const ReturnPolicyPage = () => {
   return (
-    <div className="container__0">
+    <Container className="container__0">
       <MetaData title="Return Policy" />
 
       <div className="content-container">
@@ -18,7 +19,7 @@ const ReturnPolicyPage = () => {
           policy carefully to understand your rights and obligations when
           purchasing from Learning Needs.
         </span>
-        <h2>Cancellations</h2>
+        <h3>Cancellations</h3>
         <h3>Order Cancellation by Customer</h3>
         <span>
           Digital Products: Due to the nature of digital products, orders for
@@ -44,7 +45,7 @@ const ReturnPolicyPage = () => {
             a full refund.
           </li>
         </ul>
-        <h2>Digital Products</h2>
+        <h3>Digital Products</h3>
         <span>
           Due to the immediate and irrevocable nature of digital downloads, all
           sales of digital products are final. We do not accept returns or offer
@@ -54,7 +55,7 @@ const ReturnPolicyPage = () => {
           infolearningneeds@gmail.com, and we will work with you to resolve the
           issue.
         </span>
-        <h2>Physical Products</h2>
+        <h3>Physical Products</h3>
         <span>
           For physical product , If you have received defective or incorrect
           product you purchased from www.lerningneeds.in, you may return it
@@ -68,7 +69,7 @@ const ReturnPolicyPage = () => {
           service and purchasing shipping insurance, as we cannot guarantee that
           we will receive your returned item.
         </span>
-        <h2>Refunds for Physical Products</h2>
+        <h3>Refunds for Physical Products</h3>
         <span>
           Once we receive and inspect your returned item, we will notify you of
           the approval or rejection of your refund.
@@ -85,13 +86,13 @@ const ReturnPolicyPage = () => {
             damaged, or missing parts not due to our error.
           </li>
         </ul>
-        <h2>Exchanges</h2>
+        <h3>Exchanges</h3>
         <span>
           We only replace items if they are defective or damaged. If you need to
           exchange a defective or damaged item for the same item, please contact
           us at infolearningneeds.in@gmail.com.
         </span>
-        <h2>Contact Us</h2>
+        <h3>Contact Us</h3>
         <span>
           If you have any questions or concerns about our cancellation and
           refund policy, please contact us at: Learning Needs Email:
@@ -103,7 +104,7 @@ const ReturnPolicyPage = () => {
           business and
         </span>
       </div>
-    </div>
+    </Container>
   );
 };
 
