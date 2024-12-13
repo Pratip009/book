@@ -1,4 +1,9 @@
 .goals-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   background-color: #f4faff;
   padding: 40px 20px;
   text-align: center;
@@ -49,12 +54,11 @@
 
 .goals-container-title {
   font-family: "Quicksand";
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 700;
   color: #003e90;
   margin-bottom: 30px;
   line-height: 60px;
-  z-index: 2;
 }
 
 .underline-image3 {
@@ -62,14 +66,13 @@
   margin: 0 auto;
   width: 0; /* Start with a width of 0 for animation */
   height: 12px;
-
   position: absolute;
-  top: 100px; /* Position relative to h2 */
-  margin-left: 56em; /* Center the image horizontally */
+  top: 86px !important; /* Position relative to h2 */
+  margin-left: 21em !important; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
-  animation: growUnderline2 6s ease-out infinite;
+  animation: growUnderline2 6s ease-out infinite !important;
   z-index: 1;
   opacity: 0.75;
 }
@@ -78,9 +81,11 @@
   0%,
   100% {
     width: 0; /* Start and end at width 0 */
+    height: 8px;
   }
   50% {
-    width: 250px; /* Reach max width at 50% of the animation */
+    width: 200px; /* Reach max width at 50% of the animation */
+    height: 8px;
     z-index: 1;
   }
 }
@@ -276,8 +281,8 @@
     height: 10px;
     height: 12px; /* Set the height as required */
     position: absolute;
-    top: 80px; /* Position relative to h2 */
-    margin-left: -165em; /* Center the image horizontally */
+    top: 80px !important; /* Position relative to h2 */
+    margin-left: -165em !important;  /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
     background-color: #ff4e00; /* Background color for visibility */
@@ -347,8 +352,8 @@
     height: 10px;
     height: 12px; /* Set the height as required */
     position: absolute;
-    top: 80px; /* Position relative to h2 */
-    margin-left: 14.8em; /* Center the image horizontally */
+    top: 80px !important; /* Position relative to h2 */
+    margin-left: 12em !important; /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
     background-color: #ff4e00; /* Background color for visibility */
@@ -364,7 +369,7 @@
       height: 3px;
     }
     50% {
-      width: 85px; /* Reach max width at 50% of the animation */
+      width: 86px; /* Reach max width at 50% of the animation */
       height: 3px;
       z-index: 1;
     }
@@ -450,34 +455,7 @@
 }
 /* Medium Devices (768px) */
 @media (max-width: 768px) {
-  .underline-image3 {
-    display: block !important; /* Ensure it behaves like a block element */
-    margin: 0 auto !important;
-    width: 0 !important; /* Start with a width of 0 for animation */
-    height: 12px !important; /* Set the height as required */
-    position: absolute !important;
-    top: 85px !important; /* Position relative to h2 */
-    margin-left: 27.5em !important; /* Center the image horizontally */
-    transform: translateX(-50%) !important; /* Adjust for centering */
-    border-radius: 45px !important; /* Maintain rounded edges */
-    background-color: #ff4e00 !important; /* Background color for visibility */
-    animation: growUnderline2 6s ease-out infinite !important;
-    z-index: 1 !important;
-    opacity: 0.75 !important;
-  }
-
-  @keyframes growUnderline2 {
-    0%,
-    100% {
-      width: 0 !important; /* Start and end at width 0 */
-      height: 5px !important;
-    }
-    50% {
-      width: 130px !important; /* Reach max width at 50% of the animation */
-      height: 5px !important;
-      z-index: 1 !important;
-    }
-  }
+  
 
   .teamstar-image {
     display: none;
@@ -521,69 +499,4 @@
 }
 
 /* Large Devices (1024px) */
-@media (max-width: 1024px) {
-  .underline-image3 {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto;
-    width: 0; /* Start with a width of 0 for animation */
-    height: 10px;
-    height: 12px; /* Set the height as required */
-    position: absolute;
-    top: 83px; /* Position relative to h2 */
-    margin-left: 35.3em; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    border-radius: 45px; /* Maintain rounded edges */
-    background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline2 6s ease-out infinite;
-    z-index: 1;
-    opacity: 0.75;
-  }
 
-  @keyframes growUnderline2 {
-    0%,
-    100% {
-      width: 0; /* Start and end at width 0 */
-      height: 6px;
-    }
-    50% {
-      width: 135px; /* Reach max width at 50% of the animation */
-      height: 6px;
-      z-index: 1;
-    }
-  }
-  .goals-container-title {
-    font-size: 30px;
-  }
-
-  .goal-card {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .goal-icon {
-    width: 85px;
-    height: 85px;
-  }
-
-  .goal-title {
-    font-size: 24px;
-  }
-
-  .goal-text {
-    font-size: 18px;
-  }
-
-  .update-card {
-    width: 100%;
-    height: auto;
-  }
-
-  .update-header h5 {
-    font-size: 28px;
-  }
-
-  .update-content {
-    font-size: 20px;
-  }
-}

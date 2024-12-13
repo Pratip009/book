@@ -1,27 +1,27 @@
 /* Default styles */
 .content-container h1 {
-  font-size: 60px;
-  font-family: 'Quicksand';
+  font-size: 45px;
+  font-family: "Quicksand";
   font-weight: 700;
   line-height: 60px;
   color: #003e90;
 }
 .content-container h3 {
   font-size: 40px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-weight: 700;
   line-height: 60px;
   color: #003e90;
 }
 .content-container p {
   font-size: 18px;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-weight: 400;
   text-align: justify;
 }
 .content-container h2 {
   font-size: 40px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-weight: 700;
   line-height: 60px;
   color: #000000;
@@ -45,7 +45,7 @@
 
 @media (max-width: 768px) {
   .content-container h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .content-container h3 {
     font-size: 30px;

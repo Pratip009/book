@@ -75,7 +75,7 @@ const AboutUsSection = () => {
 
         {/* Text Section */}
         <div className="col-lg-6 col-md-6 mainAboutContainer">
-          <h3 className="subheading">About Us</h3>
+          <h3 className="subheading">"Simply The Best"</h3>
           <h2 className="heading">Our Services Help You Succeed in Business</h2>
 
           {/* Underline Image */}

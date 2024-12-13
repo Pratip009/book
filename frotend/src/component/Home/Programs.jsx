@@ -29,11 +29,19 @@ const Programs = () => {
         >
           Explore Our Programs
         </h2>
-        <img
+        <div className="d-flex justify-content-center justify-content-md-start">
+          <img
+            src={underlineImage}
+            alt="Decorative underline"
+            className="underline-image1"
+            loading="lazy"
+          />
+        </div>
+        {/* <img
           src={underlineImage}
           alt="Decorative underline"
           className="underline-image1"
-        />
+        /> */}
       </header>
 
       <div className="Newcontainer">
@@ -57,7 +65,7 @@ const Programs = () => {
                   </Link>
                 </div>
                 <div className="icon12">
-                  <img src={school} alt="School Management Icon"/>
+                  <img src={school} alt="School Management Icon" />
                 </div>
               </div>
             </div>

@@ -71,7 +71,7 @@
   position: relative;
   color: #003e90;
   font-family: Quicksand;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 700;
   line-height: 60px;
 }
@@ -91,8 +91,8 @@
   width: 0; /* Start with a width of 0 for animation */
   height: auto; /* Maintain aspect ratio */
   position: absolute;
-  top: 300px; /* Adjust top position as needed */
-  margin-left: 28em; /* Center the image */
+  top: 292px; /* Adjust top position as needed */
+  margin-left: 21em; /* Center the image */
   transform: translateX(-50%); /* Adjust for centering */
   z-index: -1; /* Keep the image behind other content */
   animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
@@ -103,7 +103,7 @@
     width: 0; /* Start with width 0 */
   }
   50% {
-    width: 239px; /* Reach max width at 50% */
+    width: 180px; /* Reach max width at 50% */
   }
   100% {
     width: 0; /* End with width 0 */
@@ -216,29 +216,7 @@
 }
 
 @media (max-width: 1440px) {
-  .underline {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto; /* Center the image horizontally */
-    width: 0; /* Start with a width of 0 for animation */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute;
-    top: 45%; /* Adjust top position as needed */
-    left: 82%; /* Center the image */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: -1; /* Keep the image behind other content */
-    animation: zigzagUnderline 6s ease-out infinite; /* Infinite animation */
-  }
-  @keyframes zigzagUnderline {
-    0% {
-      width: 0; /* Start with width 0 */
-    }
-    50% {
-      width: 235px; /* Reach max width at 50% */
-    }
-    100% {
-      width: 0; /* End with width 0 */
-    }
-  }
+  
 }
 @media (max-width: 1024px) {
   .backgroundBoxOne {
@@ -636,7 +614,7 @@
     margin: 0 auto !important;
     width: 80px; /* Set an initial width */
     height: 2px; /* Set a visible height */
-     /* Add a color to make it visible */
+    /* Add a color to make it visible */
     position: absolute;
     top: 51%; /* Adjust as needed */
     left: 53%;
@@ -644,7 +622,7 @@
     z-index: 0; /* Ensure it's visible */
     animation: zigzagUnderline 6s ease-out infinite;
   }
-  
+
   @keyframes zigzagUnderline {
     0% {
       width: 0;

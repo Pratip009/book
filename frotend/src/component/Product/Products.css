@@ -5,6 +5,29 @@
   background-color: #ffffff;
   width: 100%;
 }
+
+.star-iconproduct{
+  width: 23px;
+  height: 23px;
+  top: 10px;
+  left: 0px;
+  opacity: 0.7;
+  z-index: 1;
+  animation: float 2s ease-in-out infinite;
+}
+.product_back_clipart{
+  position: relative;
+}
+.about_paragraph5 {
+  
+  z-index: 2;
+  font-size: 18px;
+
+  font-weight: 400;
+ 
+  font-family: "Quicksand";
+  color: #1f1f1f;
+}
 .prodcutPageTop {
   display: flex;
   width: auto;
@@ -12,10 +35,10 @@
   justify-content: space-around;
 }
 
-.productBack h1{
-  font-size: 60px;
+.productBack h1 {
+  font-size: 45px;
   line-height: 60px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   color: #003e90;
   font-weight: 700;
   margin-top: 2rem;
@@ -225,6 +248,9 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .about_paragraph5 {
+    font-size: 14px;
+  }
   .filterBox {
     width: 30vmax;
   }
@@ -240,10 +266,13 @@
 }
 
 @media screen and (max-width: 800px) {
-  .productBack h1{
+  .about_paragraph5 {
+    font-size: 14px;
+  }
+  .productBack h1 {
     font-size: 45px;
     line-height: 60px;
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     color: #003e90;
     font-weight: 700;
     margin-top: 2rem;
@@ -264,10 +293,13 @@
 }
 
 @media screen and (max-width: 600px) {
-  .productBack h1{
-    font-size: 40px;
+  .about_paragraph5 {
+    font-size: 14px;
+  }
+  .productBack h1 {
+    font-size: 35px;
     line-height: 60px;
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     color: #003e90;
     font-weight: 700;
     margin-top: 2rem;
@@ -292,6 +324,9 @@
   }
 }
 @media (max-width: 575.98px) {
+  .about_paragraph5 {
+    font-size: 14px;
+  }
   /* xs breakpoint */
   .responsive-heading {
     font-size: 24px; /* Adjust this size as needed */
@@ -334,6 +369,9 @@
 
 /* Responsive adjustments for very small screens */
 @media (max-width: 576px) {
+  .about_paragraph5 {
+    font-size: 14px;
+  }
   .categoriesFilter {
     padding: 15px; /* Add padding for better spacing on small screens */
   }
@@ -367,10 +405,13 @@
 }
 
 @media (max-width: 576px) {
-  .productBack h1{
+  .about_paragraph5 {
+    font-size: 14px;
+  }
+  .productBack h1 {
     font-size: 20px;
     line-height: 40px;
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     color: #003e90;
     font-weight: 700;
     margin-top: 1rem;
@@ -407,6 +448,9 @@
 
 /* Media query for extra small screens (xs) */
 @media (max-width: 767px) {
+  .about_paragraph5 {
+    font-size: 14px;
+  }
   .circle_text h1 {
     font-size: 25px;
     font-weight: 500;

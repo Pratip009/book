@@ -50,22 +50,13 @@ const Service = () => {
 
       <Container className="servicebg">
         <div className="circle_text">
-          <h1
-            style={{
-              textAlign: "start",
-              fontSize: "var(--font-h2)",
-              marginTop: "2rem",
-              fontWeight: 700,
-            }}
-          >
-            <span className="highlight">Services of Learning Needs</span>
-          </h1>
+          <h1 className="about_head">Services of Learning Needs</h1>
         </div>
         <p
           style={{
-            fontSize: "var(--font-h4)",
-            fontWeight: "600",
-            fontFamily: "Nunito",
+            fontSize: "18px",
+            fontWeight: "400",
+            fontFamily: "Quicksand",
           }}
         >
           {" "}
@@ -104,16 +95,7 @@ const Service = () => {
         <img src={require("../../Image/servicessss.png")} alt="" />
       </Container>
       <Container style={{ marginBottom: "10rem" }}>
-        <h1
-          style={{
-            textAlign: "start",
-            fontSize: "var(--font-h2)",
-            marginTop: "2rem",
-            fontFamily: "Nunito",
-          }}
-        >
-          <span className="highlight">Learning Needs Core Serve Solutions</span>
-        </h1>
+        <h1 className="about_head">Learning Needs Core Serve Solutions</h1>
         <Pricing />
       </Container>
     </container-fluid>

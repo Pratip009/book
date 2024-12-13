@@ -168,12 +168,8 @@ const School = () => {
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <span
-              style={{
-                fontFamily: "Nunito",
-                textAlign: "center",
-                display: "inline-block",
-                fontSize: "var(--font-span)",
-              }}
+             className="school_para41"
+                
             >
               Our team has experience of developing and managing new schools
               from the very outset. We can advise on:
@@ -271,7 +267,7 @@ const School = () => {
               justifyContent: "center",
             }}
           >
-            <p className="school_para4">
+            <p className="school_para41">
               Learning Needs provides all levels of support for schools leading
               up to their inspections, observations and preparations for
               affiliation networks and collaborations.
@@ -331,7 +327,7 @@ const School = () => {
             <div className="circle_text">
               <h1 className="school_header">Additional Support</h1>
             </div>
-            <p className="school_para1">Team can also assist with:</p>
+            <p className="school_para41">Team can also assist with:</p>
             <Container>
               <Row>
                 {supportItems.map((text, index) => (

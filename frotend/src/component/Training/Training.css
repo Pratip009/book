@@ -1,13 +1,19 @@
 .training_head h1 {
   font-family: "Quicksand", sans-serif;
   text-align: center;
-  font-size: 60px;
+  font-size: 45px;
   line-height: 60px;
   font-weight: 700;
   color: #003e90;
   margin-bottom: 1rem;
   z-index: 2;
   position: relative;
+}
+.training_header p{
+  font-Weight: 400;
+  font-Family: "Quicksand";
+  text-Align: center;
+  font-Size: 18px;
 }
 .training_head1 h1 {
   font-family: "Quicksand", sans-serif;
@@ -16,7 +22,7 @@
   line-height: 60px;
   font-weight: 700;
   color: #003e90;
- 
+
   z-index: 2;
   position: relative;
 }
@@ -29,6 +35,12 @@
     text-align: center;
     margin-bottom: 0.8rem;
   }
+  .training_header p{
+    font-Weight: 400;
+    font-Family: "Quicksand";
+    text-Align: center;
+    font-Size: 12px;
+  }
 }
 
 /* Media query for small screens (375px) */
@@ -40,6 +52,12 @@
     text-align: center;
     margin-bottom: 0.8rem;
   }
+  .training_header p{
+    font-Weight: 400;
+    font-Family: "Quicksand";
+    text-Align: center;
+    font-Size: 12px;
+  }
 }
 
 /* Media query for small to medium screens (425px) */
@@ -50,6 +68,12 @@
     line-height: 45px;
     text-align: center;
     margin-bottom: 1rem;
+  }
+  .training_header p{
+    font-Weight: 400;
+    font-Family: "Quicksand";
+    text-Align: center;
+    font-Size: 12px;
   }
 }
 
@@ -64,5 +88,11 @@
     font-size: 20px;
     line-height: 48px;
     text-align: start;
+  }
+  .training_header p{
+    font-Weight: 400;
+    font-Family: "Quicksand";
+    text-Align: center;
+    font-Size: 12px;
   }
 }

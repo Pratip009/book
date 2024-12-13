@@ -60,34 +60,20 @@ const Training = () => {
             }}
           >
             <Container
+              className="training_header"
               style={{
                 marginTop: "2rem",
                 marginBottom: "2rem",
               }}
             >
-              <p
-                style={{
-                  fontWeight: "400",
-                  fontFamily: "Nunito",
-                  textAlign: "center",
-                  fontSize: "var(--font-span)",
-                }}
-              >
+              <p>
                 Soft skills’ Behavioural Shift training is essential because we
                 do not have it in our academic curricula.
                 <br />
                 However it can be developed through continuous training.
               </p>
 
-              <p
-                style={{
-                  fontSize: "var(--font-span)",
-                  fontWeight: "400",
-                  fontFamily: "Nunito",
-                  textAlign: "center",
-                  display: "inline-block",
-                }}
-              >
+              <p>
                 Our skill based training programs are designed to encourage
                 ‘awareness’ in one’s behavioural patterns. Learning Needs
                 international quality Training & Development Programs are
@@ -101,15 +87,19 @@ const Training = () => {
             <container-fluid>
               <Challenges />
             </container-fluid>
-            <div className="training_head">
-              <h1>Our Strength</h1>
+            <div style={{
+              display:'flex',
+              alignItems:'center',
+              justifyContent:'center'
+            }}>
+              <h1 className="about_head">Our Strength</h1>
             </div>
             <div>
               <TabList />
             </div>
 
             <div className="training_head">
-              <h1>Way we deliver our session</h1>
+              <h1 className="about_head">Way we deliver our session</h1>
             </div>
             <div
               style={{

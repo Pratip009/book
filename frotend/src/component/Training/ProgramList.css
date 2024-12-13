@@ -1,227 +1,228 @@
 /* General Styles */
 .program-container {
-    position: relative;
-    text-align: center;
-    font-family: 'Nunito', sans-serif;
-    width: 100%;
-    max-width: 1440px; /* Constrain the container width */
-    margin: 0 auto; /* Center the container horizontally */
-    height: 100%;
-    z-index: 2; /* Ensure overall content is above clipart */
+  position: relative;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  max-width: 1440px; /* Constrain the container width */
+  margin: 0 auto; /* Center the container horizontally */
+  height: 100%;
+  z-index: 2; /* Ensure overall content is above clipart */
+}
+
+/* Clipart Decorations */
+.program-container .tree,
+.program-container .book,
+.program-container .globe {
+  position: absolute;
+  z-index: 1; /* Lower z-index for clipart */
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
   }
-  
-  /* Clipart Decorations */
-  .program-container .tree,
-  .program-container .book,
-  .program-container .globe {
-    position: absolute;
-    z-index: 1; /* Lower z-index for clipart */
-    transition: all 0.3s ease-in-out;
+  50% {
+    transform: translateY(-20px); /* Move up */
   }
-  
-  @keyframes floatUpDown {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px); /* Move up */
-    }
-    100% {
-      transform: translateY(0); /* Move back down */
-    }
+  100% {
+    transform: translateY(0); /* Move back down */
   }
-  
-  /* Tree */
-  .program-container .tree {
-    width: 90px;
-    height: auto;
-    top: 10px;
-    left: 20px;
-    position: absolute;
-    animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
-  }
-  
-  /* Book */
-  .program-container .book {
-    bottom: 70px;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
-  }
-  
-  /* Globe */
-  .program-container .globe {
-    bottom: 50px;
-    right: -50px;
-    width: 60px;
-    height: 60px;
-    transform: rotate(180deg); /* Right rotation */
-    position: absolute;
-    animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
-  }
-  /* Title Styles */
-  .program-container h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 60px;
-    line-height: 60px;
-    font-weight: 700;
-    color: #003E90;
-    margin-bottom: 1rem;
-    z-index: 2;
-    position: relative;
-  }
-  
-  /* Subtitle Styles */
-  .program-container p {
-    font-family: 'Nunito';
-    font-size: 1rem;
-    color: #212529;
-    max-width: 600px;
-    margin: 0 auto;
-    z-index: 2;
-    position: relative;
-    margin-bottom: 2rem;
-  }
-  
-  /* Grid Styles for Program Cards */
-  .program-list {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 2;
-  }
-  
-  /* Program Card Styles */
-  .program-card {
-    height: fit-content; /* Ensure the height adjusts to the content dynamically */
-    background-color: #FFF1EB;
-    padding: 20px 15px;
-    border-radius: 12px;
-    position: relative;
-    z-index: 2; /* Ensure program boxes appear above clipart */
-    margin-bottom: 0.5rem; /* Add consistent spacing between cards */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    box-sizing: border-box; /* Prevent padding from affecting card dimensions */
-    overflow: hidden; /* Prevent unintended content overflow */
-    transition: all 0.3s ease; /* Smooth resizing or appearance transitions */
+}
+
+/* Tree */
+.program-container .tree {
+  width: 90px;
+  height: auto;
+  top: 10px;
+  left: 20px;
+  position: absolute;
+  animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+/* Book */
+.program-container .book {
+  bottom: 70px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+/* Globe */
+.program-container .globe {
+  bottom: 50px;
+  right: -50px;
+  width: 60px;
+  height: 60px;
+  transform: rotate(180deg); /* Right rotation */
+  position: absolute;
+  animation: floatUpDown 3s ease-in-out infinite; /* Apply floating animation */
+}
+/* Title Styles */
+.program-container h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 45px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #003e90;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Subtitle Styles */
+.program-container p {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 400;
+  color: #212529;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Grid Styles for Program Cards */
+.program-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Program Card Styles */
+.program-card {
+  height: fit-content; /* Ensure the height adjusts to the content dynamically */
+  background-color: #fff1eb;
+  padding: 20px 15px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2; /* Ensure program boxes appear above clipart */
+  margin-bottom: 0.5rem; /* Add consistent spacing between cards */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box; /* Prevent padding from affecting card dimensions */
+  overflow: hidden; /* Prevent unintended content overflow */
+  transition: all 0.3s ease; /* Smooth resizing or appearance transitions */
 }
 
 /* Prevent excessive sizes by limiting width */
-.program-card img, .program-card .content {
-    max-width: 100%; /* Ensure content or images do not overflow the card */
+.program-card img,
+.program-card .content {
+  max-width: 100%; /* Ensure content or images do not overflow the card */
 }
-  
+
+.program-card img {
+  width: 38px;
+  height: 36px;
+  margin-right: 8px;
+}
+
+.program-card span {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  line-height: 39.6px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .program-card img {
-    width: 38px;
-    height: 36px;
+    width: 27px;
+    height: 27px;
     margin-right: 8px;
   }
-  
+  /* For tablets */
+  .program-container h1 {
+    font-size: 50px;
+  }
+
+  .program-container p {
+    font-size: 0.95rem;
+  }
+
+  .program-card {
+    padding: 8px 12px;
+  }
+
   .program-card span {
-    font-family: 'Nunito', sans-serif;
-    font-size: 24px;
-    line-height: 39.6px;
-    font-weight: 700;
-    color: #1F1F1F;
+    font-size: 18px;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .program-card img {
-        width: 27px;
-        height: 27px;
-        margin-right: 8px;
-      }
-    /* For tablets */
-    .program-container h1 {
-      font-size: 50px;
-    }
-  
-    .program-container p {
-      font-size: 0.95rem;
-    }
-  
-    .program-card {
-      padding: 8px 12px;
-    }
-  
-    .program-card span {
-      font-size: 18px;
-    }
+}
+
+@media (max-width: 768px) {
+  /* For smaller tablets and large phones */
+  .program-container h1 {
+    font-size: 30px;
   }
-  
-  @media (max-width: 768px) {
-    /* For smaller tablets and large phones */
-    .program-container h1 {
-      font-size: 30px;
-    }
-  
-    .program-container p {
-      font-size: 0.9rem;
-    }
-  
-    .program-card {
-      padding: 8px 10px;
-    }
-  
-    .program-card span {
-      font-size: 15px;
-    }
-  
-    .program-container .tree {
-      width: 70px;
-    }
-  
-    .program-container .book {
-      width: 45px;
-      height: 45px;
-    }
-  
-    .program-container .globe {
-      width: 50px;
-      height: 50px;
-      bottom: 40px;
-    }
+
+  .program-container p {
+    font-size: 0.9rem;
   }
-  
-  @media (max-width: 480px) {
-    /* For mobile phones */
-    .program-container h1 {
-      font-size: 20px;
-    }
-  
-    .program-container p {
-      font-size: 0.85rem;
-    }
-  
-    .program-card {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 1rem;
-    }
-  
-    .program-card span {
-      font-size: 16px;
-    }
-  
-    .program-container .tree {
-      width: 50px;
-    }
-  
-    .program-container .book {
-      width: 40px;
-      height: 40px;
-    }
-  
-    .program-container .globe {
-      width: 45px;
-      height: 45px;
-      bottom: 30px;
-    }
+
+  .program-card {
+    padding: 8px 10px;
   }
-  
+
+  .program-card span {
+    font-size: 15px;
+  }
+
+  .program-container .tree {
+    width: 70px;
+  }
+
+  .program-container .book {
+    width: 45px;
+    height: 45px;
+  }
+
+  .program-container .globe {
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile phones */
+  .program-container h1 {
+    font-size: 20px;
+  }
+
+  .program-container p {
+    font-size: 0.85rem;
+  }
+
+  .program-card {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .program-card span {
+    font-size: 16px;
+  }
+
+  .program-container .tree {
+    width: 50px;
+  }
+
+  .program-container .book {
+    width: 40px;
+    height: 40px;
+  }
+
+  .program-container .globe {
+    width: 45px;
+    height: 45px;
+    bottom: 30px;
+  }
+}

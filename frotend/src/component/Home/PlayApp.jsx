@@ -65,8 +65,8 @@ export default function MediaControlCard() {
           style={{ textAlign: "start" }}
         >
           <div style={{ width: "100%", margin: "auto" }} className="playapp_head">
-            <h1>Educate Yourself</h1>
-            <h2 style={commonStyles.appSubheading}>
+          <h1 className="about_head3">Educate Yourself</h1>
+            <h2 className="app_subheading">
               Books and resources for better learning
             </h2>
             <p style={commonStyles.appDesc}>

@@ -11,7 +11,7 @@
   padding: 2rem;
   position: relative;
 }
-.program_analysys img{
+.program_analysys img {
   margin: 0 !important;
 }
 .Newcontainer {
@@ -20,7 +20,7 @@
 }
 /* Title styling */
 .programs-container h2 {
-  font-size: 60px;
+  font-size: 45px;
   margin-bottom: 5rem;
   font-family: "Quicksand";
   font-weight: 700;
@@ -34,8 +34,8 @@
   width: 0; /* Start with a width of 0 for animation */
   height: 12px; /* Set the height as required */
   position: absolute;
-  top: 151px; /* Position relative to h2 */
-  margin-left: 31em; /* Center the image horizontally */
+  top: 138px; /* Position relative to h2 */
+  margin-left: 23em; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
@@ -46,9 +46,11 @@
 @keyframes growUnderline1 {
   0% {
     width: 0; /* Start with width 0 */
+    height: 8px;
   }
   50% {
-    width: 280px; /* Reach max width at 50% */
+    width: 205px; /* Reach max width at 50% */
+    height: 8px;
   }
   100% {
     width: 0; /* End with width 0 */
@@ -113,18 +115,17 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  
 }
-.icon12 img{
+.icon12 img {
   margin: 0 !important;
 }
-.icon2 img{
+.icon2 img {
   margin: 0 !important;
 }
-.icon3 img{
+.icon3 img {
   margin: 0 !important;
 }
-.icon4 img{
+.icon4 img {
   margin: 0 !important;
 }
 .icon12 {
@@ -227,7 +228,7 @@
     height: 10px;
     position: absolute;
     top: 180px; /* Adjust position */
-   margin-left: 28.5em; /* Centered */
+    margin-left: 28.5em; /* Centered */
     transform: translateX(-50%); /* Center adjustment */
     border-radius: 45px;
   }
@@ -343,7 +344,7 @@
     margin: 0 !important;
   }
   .programs-container h2 {
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 3rem;
   }
 
@@ -370,7 +371,7 @@
     animation: growUnderline1 6s ease-out infinite; /* Infinite animation */
     z-index: 1 !important;
   }
-  
+
   @keyframes growUnderline1 {
     0% {
       width: 0; /* Start with width 0 */
@@ -411,18 +412,17 @@
 
 @media (max-width: 575px) {
   .icon12,
-.icon2,
-.icon3,
-.icon4 {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  
-}
+  .icon2,
+  .icon3,
+  .icon4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
   .underline-image1 {
     display: block; /* Ensure it behaves like a block element */
     margin: 0 auto;
@@ -431,7 +431,7 @@
     height: 12px; /* Set the height as required */
     position: absolute;
     top: 39px; /* Position relative to h2 */
-   margin-left: 10.3em; /* Center the image horizontally */
+    margin-left: 10.3em; /* Center the image horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     border-radius: 45px; /* Maintain rounded edges */
     background-color: #ff4e00; /* Background color for visibility */
@@ -495,6 +495,35 @@
   }
 }
 @media (max-width: 425px) {
+  .underline-image1 {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto;
+    width: 0; /* Start with a width of 0 for animation */
+    height: 10px;
+    height: 12px; /* Set the height as required */
+    position: absolute;
+    top: 39px; /* Position relative to h2 */
+    margin-left: 13em; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 45px; /* Maintain rounded edges */
+    background-color: #ff4e00; /* Background color for visibility */
+    animation: growUnderline1 6s ease-out infinite;
+    z-index: 0;
+  }
+  @keyframes growUnderline1 {
+    0% {
+      width: 0; /* Start with width 0 */
+      height: 3px;
+    }
+    50% {
+      width: 90px; /* Reach max width at 50% */
+      height: 3px;
+    }
+    100% {
+      width: 0; /* End with width 0 */
+      height: 3px;
+    }
+  }
   .programs-container h2 {
     font-size: 20px;
   }

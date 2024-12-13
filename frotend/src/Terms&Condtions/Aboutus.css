@@ -4,9 +4,135 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   font-family: "Nunito";
 }
+.carClipArtAbout {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 51px;
+  height: auto;
+  opacity: 0.8;
+  animation: float 2s ease-in-out infinite;
+}
+.about_head3 {
+  font-family: "Quicksand";
+  text-align: start;
+  font-size: 45px;
+  margin-top: 2rem;
+  line-height: 60px;
+  position: relative; /* Key for positioning the ::after pseudo-element */
+  color: #003e90;
+  font-weight: 700;
+  z-index: 1;
+  display: inline-block; /* Ensure the underline is relative to the text width */
+}
+
+.about_head3::after {
+  content: ""; /* Creates the underline */
+  position: absolute;
+  bottom: 5px; /* Positions it slightly below the text */
+  left: 50%; /* Start the underline at the middle of the H1 */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  width: 0; /* Start with width 0 for animation */
+  height: 5px; /* Set a fixed height for the underline */
+  background-image: url("../Image/home/underline.png"); /* Decorative zigzag underline image */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure it scales well */
+  z-index: -1;
+  animation: zigzagUnderlineAbout 6s ease-out infinite; /* Apply animation */
+}
+
+@keyframes zigzagUnderlineAbout {
+  0% {
+    width: 0; /* Start with width 0 */
+    height: 5px;
+  }
+  50% {
+    width: 100%; /* Make the underline span the full width of the h1 */
+    height: 5px;
+  }
+  100% {
+    width: 0; /* End with width 0 */
+    height: 5px;
+  }
+}
+
+.globeClipArtAbout {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 81px;
+  height: auto;
+  opacity: 0.5;
+  animation: float 2s ease-in-out infinite;
+}
 .faq {
   margin-top: 2rem;
   margin-bottom: 5rem;
+}
+.Testimonial_container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Quicksand";
+  color: #1f1f1f;
+}
+.founder_container {
+  position: relative;
+  padding: 0;
+  background-color: #fff1eb !important;
+}
+.icon {
+  position: absolute;
+}
+.star-icon {
+  width: 43px;
+  height: 43px;
+  top: 51px;
+  left: 0px;
+  opacity: 0.7;
+  z-index: 1;
+  animation: float 2s ease-in-out infinite; /* Apply animation */
+}
+
+/* Book Icon */
+.book-icon {
+  width: 50.77px;
+  height: 50.77px;
+  top: 320.25px;
+  left: 714.92px;
+  transform: rotate(32.46deg);
+  animation: float 2s ease-in-out infinite; /* Apply animation */
+}
+
+/* Planet Icon */
+.planet-icon {
+  width: 84px;
+  height: 68px;
+  top: 146px;
+  left: 1456px;
+  animation: float 2s ease-in-out infinite; /* Apply animation */
+}
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Starting position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+.playapp_container{
+  position: relative;
+  background-color: #edf5da !important;
+  padding: 1rem 0;
+  margin: 2rem 0;
 }
 .traitImage {
   width: 100%; /* Makes the image take full width of its container */
@@ -15,35 +141,90 @@ body {
   object-fit: cover; /* Ensures the image covers the entire container without distortion */
   margin-bottom: 1rem; /* Spacing between the image and text */
 }
+.about_paragraph1 {
+  font-size: 16px;
+  color: #313131;
+  text-align: justify;
+  font-family: "Nunito";
+  width: 80%;
+}
 .about_paragraph {
   font-size: 16px;
   color: #313131;
   text-align: justify;
   font-family: "Nunito";
 }
+.about_title_new {
+  color: #003e90;
+  font-family: "Quicksand";
+  font-size: 35px;
+  font-weight: 700;
+}
 .about_paragraph2 {
-  font-size: 16px;
-  color: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-size: 18px;
+
+  font-weight: 400;
   text-align: center;
-  font-family: "Nunito";
+  font-family: "Quicksand";
+  color: #1f1f1f;
 }
 .about_head {
   font-family: "Quicksand";
-  text-align: center;
+  text-align: center; /* Center the text */
+  font-size: 45px;
   margin-top: 2rem;
-  font-size: 60px;
   line-height: 60px;
-  
+  position: relative; /* Key for positioning the ::after pseudo-element */
   color: #003e90;
   font-weight: 700;
+  z-index: 1;
+  display: block; /* Makes the <h1> a block element */
+  width: max-content; /* Ensures the width of the <h1> is just as wide as its content */
+  margin-left: auto;
+  margin-right: auto; /* Centers the block element */
 }
+
+.about_head::after {
+  content: ""; /* Creates the underline */
+  position: absolute;
+  bottom: 5px; /* Positions it slightly below the text */
+  left: 50%; /* Start the underline at the middle of the H1 */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  width: 0; /* Start with width 0 for animation */
+  height: 5px; /* Set a fixed height for the underline */
+  background-image: url("../Image/home/underline.png"); /* Decorative zigzag underline image */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure it scales well */
+  z-index: -1;
+  animation: zigzagUnderlineAbout 6s ease-out infinite; /* Apply animation */
+}
+
+@keyframes zigzagUnderlineAbout {
+  0% {
+    width: 0; /* Start with width 0 */
+    height: 5px;
+  }
+  50% {
+    width: 100%; /* Make the underline span the full width of the text */
+    height: 5px;
+  }
+  100% {
+    width: 0; /* End with width 0 */
+    height: 5px;
+  }
+}
+
 .about_head3 {
   font-family: "Quicksand";
   text-align: start;
-  font-size: 60px;
+  font-size: 45px;
   margin-top: 2rem;
   line-height: 60px;
-  
+  position: relative;
   color: #003e90;
   font-weight: 700;
 }
@@ -53,7 +234,7 @@ body {
   margin-top: 2rem;
   font-size: 30px;
   line-height: 50px;
- 
+
   color: "#003e90";
   font-weight: 700;
 }
@@ -86,6 +267,24 @@ body {
 }
 
 @media (max-width: 600px) {
+ 
+  .Testimonial_container span {
+    font-size: 14px;
+  }
+  .about_head {
+    font-size: 20px; /* Adjust font size for mobile */
+    
+     /* Horizontally centers the element */
+}
+  .about_head::after {
+    width: 0; /* Start width at 0 for animation */
+  }
+  .about_title_new {
+    color: #003e90;
+    font-family: "Quicksand";
+    font-size: 25px;
+    font-weight: 700;
+  }
   .faq {
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -110,6 +309,16 @@ body {
 }
 /* Global font adjustments for smaller screens */
 @media (max-width: 1024px) {
+
+  .about_head {
+    font-size: 20px; /* Adjust font size for mobile */
+   
+  ; /* Horizontally centers the element */
+}
+
+  .about_head::after {
+    width: 0; /* Start width at 0 for animation */
+  }
   .faq {
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -128,6 +337,7 @@ body {
 }
 
 @media (max-width: 768px) {
+ 
   .traitImage {
     border-radius: 6px; /* Slightly smaller rounded corners */
   }
@@ -157,10 +367,24 @@ body {
 }
 
 @media (max-width: 425px) {
+
+
+
+  
+  .Testimonial_container span {
+    font-size: 14px;
+  }
+
+  .about_title_new {
+    color: #003e90;
+    font-family: "Quicksand";
+    font-size: 20px;
+    font-weight: 700;
+  }
   .traitImage {
     width: 60%;
     margin: 0 auto; /* Centers the image */
-    border-radius: 4px;/* Slightly smaller rounded corners */
+    border-radius: 4px; /* Slightly smaller rounded corners */
   }
   .faq {
     margin-top: 2rem;
@@ -168,9 +392,7 @@ body {
   }
   .container .about_head {
     font-size: 20px !important;
-    line-height: 40px !important;
-    margin: 0; /* Optional: Reset margin */
-    padding: 0;
+   
   }
   .container .about_head2 {
     margin: 0;
@@ -192,12 +414,27 @@ body {
 }
 
 @media (max-width: 375px) {
+ 
+
+ 
+  .Testimonial_container span {
+    font-size: 14px;
+  }
+
+  .about_title_new {
+    color: #003e90;
+    font-family: "Quicksand";
+    font-size: 18px;
+    font-weight: 700;
+  }
   .faq {
     margin-top: 2rem;
     margin-bottom: 5rem;
   }
   .container .about_head {
     margin: 0;
+    text-align: center; /* Ensure text is centered */
+    width: max-content;
     font-size: 20px;
     line-height: 35px;
   }
@@ -221,6 +458,17 @@ body {
 }
 
 @media (max-width: 320px) {
+  
+  .Testimonial_container span {
+    font-size: 14px;
+  }
+
+  .about_title_new {
+    color: #003e90;
+    font-family: "Quicksand";
+    font-size: 18px;
+    font-weight: 700;
+  }
   .faq {
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -228,6 +476,8 @@ body {
   .about_head {
     margin: 0;
     font-size: 24px;
+    text-align: center; /* Ensure text is centered */
+    width: max-content;
     line-height: 30px;
   }
   .about_head2 {
@@ -264,6 +514,17 @@ body {
 
 /* Adjustments for 320px screens */
 @media (max-width: 320px) {
+  .underline_header_about {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 0; /* Start with a width of 0 for animation */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    /* Center the image */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: -1; /* Keep the image behind other content */
+    animation: zigzagUnderlineAbout 6s ease-out infinite; /* Infinite animation */
+  }
   .faq {
     margin-top: 2rem;
     margin-bottom: 5rem;

@@ -37,7 +37,7 @@ const MissionAndVision = () => {
       viewport={{ once: true, amount: 0.7 }}
     >
       {/* Section for Goals and Objectives */}
-      <header className="goals-header">
+      <header>
         <h2
           className="goals-container-title"
           style={{
@@ -47,7 +47,14 @@ const MissionAndVision = () => {
         >
           Goals And Objective
         </h2>
-        <img src={underline} alt="underline" className="underline-image3" />
+        <div className="d-flex justify-content-center justify-content-md-start">
+          <img
+            src={underline}
+            alt="Decorative underline"
+            className="underline-image3"
+            loading="lazy"
+          />
+        </div>
       </header>
 
       <div className="row justify-content-center">
@@ -108,9 +115,11 @@ const MissionAndVision = () => {
               className="update-content p-1"
               style={{ maxHeight: "300px", overflowY: "auto" }}
             >
-              <ul style={{
-                padding:0
-              }}>
+              <ul
+                style={{
+                  padding: 0,
+                }}
+              >
                 {notices.map((notice) => (
                   <li key={notice.id}>
                     <ListItem>

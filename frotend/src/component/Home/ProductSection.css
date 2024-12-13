@@ -11,10 +11,23 @@
   transition: opacity 0.3s ease, transform 0.3s ease; /* Add smooth animation */
 }
 .product-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   text-align: center;
   padding: 50px;
   background-color: #ffffff;
   position: relative;
+}
+.productsection_heading{
+  
+  color: #003e90;
+  font-family: Quicksand;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 60px;
 }
 .trending-products {
   display: flex;
@@ -25,11 +38,10 @@
 .product-section h2 {
   color: #003e90;
   font-family: "Quicksand";
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 700;
   line-height: 60px;
-  position: relative; /* Allow positioning of the image */
-  z-index: 2 !important;
+
 }
 
 .product-section span {
@@ -42,8 +54,8 @@
   margin: 0 auto;
   width: 0; /* Start with a width of 0 for animation */
   position: absolute;
-  top: 56px; /* Position relative to h2 */
-  margin-left: 16em !important; /* Center the image horizontally */
+  top: 98px !important; /* Position relative to h2 */
+  margin-left: 32em !important; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust for centering */
   border-radius: 45px; /* Maintain rounded edges */
   background-color: #ff4e00; /* Background color for visibility */
@@ -56,9 +68,11 @@
   0%,
   100% {
     width: 0; /* Start and end at width 0 */
+    height: 8px;
   }
   50% {
-    width: 210px; /* Reach max width at 50% of the animation */
+    width: 170px; /* Reach max width at 50% of the animation */
+    height: 8px;
   }
 }
 
@@ -97,40 +111,8 @@
   opacity: 1;
   z-index: 1;
 }
-@media (max-width: 2560px) {
-  .product-section .underline-image2 {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto;
-    width: 0; /* Start with a width of 0 for animation */
-    height: 10px;
-    height: 12px; /* Set the height as required */
-    position: absolute;
-    top: 52px; /* Position relative to h2 */
-    margin-left: 24.5em; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    border-radius: 45px; /* Maintain rounded edges */
-    background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline23 6s ease-out infinite;
-    z-index: 1 !important;
-  }
-}
-@media (max-width: 1440px) {
-  .product-section .underline-image2 {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto;
-    width: 0; /* Start with a width of 0 for animation */
-    height: 10px;
-    height: 12px; /* Set the height as required */
-    position: absolute;
-    top: 52px; /* Position relative to h2 */
-    left: 69%; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    border-radius: 45px; /* Maintain rounded edges */
-    background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline23 6s ease-out infinite;
-    z-index: 1 !important;
-  }
-}
+
+
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .product-section h2 {
@@ -192,7 +174,7 @@
   .product-section h2 {
     color: #003e90;
     font-family: "Quicksand";
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
     line-height: 60px;
     position: relative; /* Allow positioning of the image */
@@ -203,8 +185,8 @@
     width: 0;
     height: 12px; /* Fixed duplicate height */
     position: absolute;
-    top: 45px;
-    margin-left: 0.2em;
+    top: 75px !important;
+    margin-left: -1.5em !important;
     transform: translateX(-50%);
     border-radius: 45px;
     background-color: #ff4e00;
@@ -218,7 +200,7 @@
       height: 5px;
     }
     50% {
-      width: 150px; /* Reach max width at 50% of the animation */
+      width: 140px; /* Reach max width at 50% of the animation */
       height: 5px;
     }
   }
@@ -227,7 +209,7 @@
   }
 
   .product-section h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .product-section p {
@@ -242,8 +224,8 @@
     width: 0;
     height: 12px; /* Fixed duplicate height */
     position: absolute;
-    top: 39px;
-    left: 72% !important;
+    top: 60px !important;
+    left: 75% !important;
     transform: translateX(-50%);
     border-radius: 45px;
     background-color: #ff4e00;
@@ -257,7 +239,7 @@
       height: 3px;
     }
     50% {
-      width: 80px; /* Reach max width at 50% of the animation */
+      width: 75px; /* Reach max width at 50% of the animation */
       height: 3px;
     }
   }
@@ -284,6 +266,31 @@
 
 /* Media Query for Large Mobile (425px) */
 @media (max-width: 425px) {
+  .product-section .underline-image2 {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 12px; /* Fixed duplicate height */
+    position: absolute;
+    top: 55px !important;
+    left: 79% !important;
+    transform: translateX(-50%);
+    border-radius: 45px;
+    background-color: #ff4e00;
+    animation: growUnderline13 6s ease-out infinite;
+  }
+
+  @keyframes growUnderline13 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 3px;
+    }
+    50% {
+      width: 75px; /* Reach max width at 50% of the animation */
+      height: 3px;
+    }
+  }
   .trending-products {
     display: flex;
     align-items: center;
@@ -300,7 +307,7 @@
 
   .product-section p {
     font-size: 12px; /* Adjust paragraph font size */
-     /* Adjust line height for better readability */
+    /* Adjust line height for better readability */
     width: 100%; /* Adjust paragraph width for large mobile */
   }
 }
@@ -326,6 +333,31 @@
   }
 }
 @media (max-width: 375px) {
+  .product-section .underline-image2 {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 12px; /* Fixed duplicate height */
+    position: absolute;
+    top: 55px !important;
+    left: 75% !important;
+    transform: translateX(-50%);
+    border-radius: 45px;
+    background-color: #ff4e00;
+    animation: growUnderline13 6s ease-out infinite;
+  }
+
+  @keyframes growUnderline13 {
+    0%,
+    100% {
+      width: 0; /* Start and end at width 0 */
+      height: 3px;
+    }
+    50% {
+      width: 75px; /* Reach max width at 50% of the animation */
+      height: 3px;
+    }
+  }
   .trending-products {
     display: flex;
     align-items: center;

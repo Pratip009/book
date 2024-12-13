@@ -34,6 +34,9 @@ import mainImage from "../../Image/Product/productImg.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
 import { motion } from "framer-motion";
+const planetIcon = require("../../Image/home/teamglobe.png");
+const bookIcon = require("../../Image/home/teambook.png");
+const starIcon = require("../../Image/home/teamstar.png");
 const categories = ["Books", "PDF", "Learning Aid"];
 const data = [
   [
@@ -166,118 +169,145 @@ function Products() {
                     iconRight={star}
                   />
                 </container-fluid>
-                <div className="productBack">
-                  <Container>
-                    <h1>Why book Reading is important</h1>
+                <container fluid className="product_back_clipart">
+                  <img
+                    src={starIcon}
+                    alt="Star Icon"
+                    className="icon star-iconproduct"
+                    loading="lazy"
+                  />
 
-                    <span
-                      style={{
-                        fontFamily: "Nunito",
-                        textAlign: "justify",
-                        display: "inline-block",
-                        fontSize: "var(--font-span)",
-                      }}
-                    >
-                      One of the great reasons that signify the importance of
-                      book reading in our life is that books act as our best
-                      friends. Friends are one of the most important parts of
-                      our life. We can’t imagine our life without the
-                      companionship of a good friend. Similarly, a book is like
-                      a best friend that constantly inspires us to become the
-                      best versions of ourselves. Books enrich our minds with
-                      knowledge just like a good friend. We can learn a lot from
-                      books and they can help us in overcoming our failures as
-                      well as shape our minds.
-                    </span>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                  <img
+                    src={bookIcon}
+                    alt="Book Icon"
+                    className="icon book-icon"
+                    loading="lazy"
+                  />
+                  <img
+                    src={planetIcon}
+                    alt="Planet Icon"
+                    className="icon planet-icon"
+                    loading="lazy"
+                  />
+                  <div className="productBack">
+                    <Container>
+                      <h1
+                        className="about_head3"
+                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0 }}
+                        transition={{ duration: 1, delay: 0.1 }}
+                      >
+                        Why book Reading is important
+                      </h1>
+
                       <span
                         style={{
                           fontFamily: "Nunito",
                           textAlign: "justify",
                           display: "inline-block",
                           fontSize: "var(--font-span)",
-                          marginTop: "2rem",
                         }}
                       >
-                        A variety of tasks in daily life require reading and
-                        understanding written instructions. If children do not
-                        learn to read, they cannot read to learn. Children
-                        should be encouraged to pick up a book they prefer.
-                        Children may not have much reading time at school but
-                        parents can encourage their children to pick up books at
-                        home. Reading books helps in cognitive mental
-                        stimulation and brain exercising, enhancing the child’s
-                        imagination amongst many other benefits.
+                        One of the great reasons that signify the importance of
+                        book reading in our life is that books act as our best
+                        friends. Friends are one of the most important parts of
+                        our life. We can’t imagine our life without the
+                        companionship of a good friend. Similarly, a book is
+                        like a best friend that constantly inspires us to become
+                        the best versions of ourselves. Books enrich our minds
+                        with knowledge just like a good friend. We can learn a
+                        lot from books and they can help us in overcoming our
+                        failures as well as shape our minds.
                       </span>
+                      <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <span
+                          style={{
+                            fontFamily: "Nunito",
+                            textAlign: "justify",
+                            display: "inline-block",
+                            fontSize: "var(--font-span)",
+                            marginTop: "2rem",
+                          }}
+                        >
+                          A variety of tasks in daily life require reading and
+                          understanding written instructions. If children do not
+                          learn to read, they cannot read to learn. Children
+                          should be encouraged to pick up a book they prefer.
+                          Children may not have much reading time at school but
+                          parents can encourage their children to pick up books
+                          at home. Reading books helps in cognitive mental
+                          stimulation and brain exercising, enhancing the
+                          child’s imagination amongst many other benefits.
+                        </span>
 
-                      <div className="">
-                        <h1> Benefits of Reading Books</h1>
-                      </div>
-                      <span
-                        style={{
-                          fontSize: "var(--font-span)",
-                          marginTop: "14px",
-                          fontWeight: "400",
-                          textAlign: "justify",
-                          display: "inline-block",
-                          fontFamily: "Nunito",
-                        }}
-                      >
-                        Here are a few good benefits of reading books. When you
-                        read every day, you:
-                      </span>
+                        <div className="">
+                          <h1
+                            className="about_head3"
+                            whileInView={{ opacity: 1 }}
+                            initial={{ opacity: 0 }}
+                            transition={{ duration: 1, delay: 0.1 }}
+                          >
+                            {" "}
+                            Benefits of Reading Books
+                          </h1>
+                        </div>
+                        <span className="about_paragraph5">
+                          Here are a few good benefits of reading books. When
+                          you read every day, you:
+                        </span>
 
-                      <Row>
-                        {data.map((column, colIndex) => (
-                          <Col key={colIndex} md={4} sm={6} xs={12}>
-                            <List>
-                              {column.map((text, index) => (
-                                <ListItem key={index}>
-                                  <ListItemAvatar>
-                                    <MenuBookIcon
-                                      fontSize="large"
-                                      style={{ color: "#FF4E00" }}
+                        <Row>
+                          {data.map((column, colIndex) => (
+                            <Col key={colIndex} md={4} sm={6} xs={12}>
+                              <List>
+                                {column.map((text, index) => (
+                                  <ListItem key={index}>
+                                    <ListItemAvatar>
+                                      <MenuBookIcon
+                                        fontSize="large"
+                                        style={{ color: "#FF4E00" }}
+                                      />
+                                    </ListItemAvatar>
+                                    <ListItemText
+                                      primary={
+                                        <Typography
+                                          variant="body2"
+                                          style={{
+                                            fontSize: "var(--font-span)",
+                                            fontWeight: "400",
+                                            textAlign: "justify",
+                                            display: "inline-block",
+                                            fontFamily: "Nunito",
+                                          }}
+                                        >
+                                          {text}
+                                        </Typography>
+                                      }
                                     />
-                                  </ListItemAvatar>
-                                  <ListItemText
-                                    primary={
-                                      <Typography
-                                        variant="body2"
-                                        style={{
-                                          fontSize: "var(--font-span)",
-                                          fontWeight: "400",
-                                          textAlign: "justify",
-                                          display: "inline-block",
-                                          fontFamily: "Nunito",
-                                        }}
-                                      >
-                                        {text}
-                                      </Typography>
-                                    }
-                                  />
-                                </ListItem>
-                              ))}
-                            </List>
-                          </Col>
-                        ))}
-                      </Row>
-                    </Collapse>
-                    <Button
-                      style={{
-                        width: "10%",
-                        color: "#fff",
-                        backgroundColor: "#FF4E00",
-                        display: "flex",
-                        fontSize: "var(--font-span)",
-                        marginTop: "10px",
-                      }}
-                      variant="contained"
-                      onClick={handleExpandClick}
-                    >
-                      {expanded ? "Read Less" : "Read More"}
-                    </Button>
-                  </Container>
-                </div>
+                                  </ListItem>
+                                ))}
+                              </List>
+                            </Col>
+                          ))}
+                        </Row>
+                      </Collapse>
+                      <Button
+                        style={{
+                          width: "10%",
+                          color: "#fff",
+                          backgroundColor: "#FF4E00",
+                          display: "flex",
+                          fontSize: "var(--font-span)",
+                          marginTop: "10px",
+                        }}
+                        variant="contained"
+                        onClick={handleExpandClick}
+                      >
+                        {expanded ? "Read Less" : "Read More"}
+                      </Button>
+                    </Container>
+                  </div>
+                </container>
 
                 <Container className="productPageTop">
                   <Row>

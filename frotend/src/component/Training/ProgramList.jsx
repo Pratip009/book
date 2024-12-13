@@ -6,7 +6,7 @@ import Globe from "../../Image/home/globe1.png";
 import star from "../../Image/home/Vector.png";
 import Tree from "../../Image/home/teamrocket.png";
 import { Container } from "@mui/material";
-import './ProgramList.css'; // Import external CSS file
+import "./ProgramList.css"; // Import external CSS file
 
 const programs = [
   "Effective Communication",
@@ -32,10 +32,7 @@ const programs = [
 const ProgramCard = ({ name }) => (
   <Grid item md={4} sm={6} xs={12}>
     <div className="program-card">
-      <img
-        src={star}
-        alt="Star"
-      />
+      <img src={star} alt="Star" />
       <span>{name}</span>
     </div>
   </Grid>
@@ -44,24 +41,20 @@ const ProgramCard = ({ name }) => (
 const ProgramList = () => (
   <div className="program-container">
     {/* Clipart Decorations */}
-    <img
-      src={Tree}
-      alt="Rocket"
-      className="tree"
-    />
-    <img
-      src={Book}
-      alt="Book"
-      className="book"
-    />
-    <img
-      src={Globe}
-      alt="Globe"
-      className="globe"
-    />
+    <img src={Tree} alt="Rocket" className="tree" />
+    <img src={Book} alt="Book" className="book" />
+    <img src={Globe} alt="Globe" className="globe" />
 
     {/* Title */}
-    <h1>List of Programs</h1>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <h1 className="about_head">List of Programs</h1>
+    </div>
 
     {/* Subtitle */}
     <p>
@@ -70,11 +63,7 @@ const ProgramList = () => (
     </p>
 
     {/* Grid of Programs */}
-    <Grid
-      container
-      spacing={3}
-      className="program-list"
-    >
+    <Grid container spacing={3} className="program-list">
       {programs.map((program, index) => (
         <ProgramCard key={index} name={program} />
       ))}

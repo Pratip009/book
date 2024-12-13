@@ -1,0 +1,59 @@
+.softskill_head3 {
+  font-family: "Quicksand";
+  text-align: start;
+  font-size: 35px;
+  line-height: 60px;
+  position: relative; /* Key for positioning the ::after pseudo-element */
+  color: #003e90;
+  font-weight: 700;
+  z-index: 1;
+  display: inline-block; /* Ensure the underline is relative to the text width */
+}
+
+.softskill_head3::after {
+  content: ""; /* Creates the underline */
+  position: absolute;
+  bottom: 5px; /* Positions it slightly below the text */
+  left: 50%; /* Start the underline at the middle of the H1 */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  width: 0; /* Start with width 0 for animation */
+  height: 5px; /* Set a fixed height for the underline */
+  background-image: url("../../Image/home/underline.png"); /* Decorative zigzag underline image */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure it scales well */
+  z-index: -1;
+  animation: zigzagUnderlineAbout 6s ease-out infinite; /* Apply animation */
+}
+
+@keyframes zigzagUnderlineAbout {
+  0% {
+    width: 0; /* Start with width 0 */
+    height: 5px;
+  }
+  50% {
+    width: 100%; /* Make the underline span the full width of the h1 */
+    height: 5px;
+  }
+  100% {
+    width: 0; /* End with width 0 */
+    height: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .softskill_head3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 768px) {
+    .softskill_head3 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  @media (max-width: 525px) {
+    .softskill_head3 {
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }

@@ -1,15 +1,24 @@
 /* Default Styles */
 .playapp_head h1 {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   text-align: start;
-  font-size: 60px;
+  font-size: 45px;
   line-height: 60px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: #313131;
+
+  color: #003e90;
   font-weight: 700;
 }
-
+.app_subheading {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  z-index: 2;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: start;
+  font-family: "Quicksand";
+  color: #1f1f1f;
+}
 /* For screens up to 1024px */
 @media (max-width: 1024px) {
   .playapp_head h1 {

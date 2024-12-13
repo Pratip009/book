@@ -38,7 +38,7 @@
   font-weight: 700;
   line-height: 80px;
   color: #ffffff;
-  font-size: 60px;
+  font-size: 45px;
   z-index: 2;
   margin-left: 2em;
 }
@@ -81,7 +81,7 @@
 
 @media (max-width: 1024px) {
   .banner-title {
-    font-size: 40px;
+    font-size: 35px;
     width: 500px;
   }
 
@@ -236,8 +236,8 @@
     display: flex;
     align-items: center;
     font-size: 12px;
-    width: 150px;
-    line-height: 30px;
+    width: 80px;
+    line-height: 20px;
     padding: 0;
   }
 

@@ -37,8 +37,8 @@ const SoftSkill = () => {
         training to help develop a positive and productive work culture.
       </span>
 
-      <div className="training_head1">
-        <h1>Our Soft Skills Workshop</h1>
+      <div className="">
+        <h1 className="softskill_head3">Our Soft Skills Workshop</h1>
       </div>
       <span
         style={{
@@ -71,8 +71,8 @@ const SoftSkill = () => {
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <span>
-          <div className="training_head1">
-            <h1>Customized Soft Skills Training Workshops</h1>
+          <div className="">
+            <h1 className="softskill_head3">Customized Soft Skills Training Workshops</h1>
           </div>
           <span
             style={{
@@ -95,8 +95,8 @@ const SoftSkill = () => {
             skills that may not come as naturally to them.
           </span>
 
-          <div className="training_head1">
-            <h1>Participate in Our Soft Skills Training Programs</h1>
+          <div className="">
+            <h1 className="softskill_head3">Participate in Our Soft Skills Training Programs</h1>
           </div>
           <span
             style={{

@@ -17,14 +17,23 @@ function ProductSection({ products }) {
       viewport={{ once: true, amount: 0.7 }}
     >
       <header>
-        <h2 id="product-heading">
+        <h2
+          className="productsection_heading"
+          style={{
+            position: "relative",
+            zIndex: "2",
+          }}
+        >
           Choose the right product
+        </h2>
+        <div className="d-flex justify-content-center justify-content-md-start">
           <img
             src={underline}
-            alt="underline"
-            className="underline-image2" // Child with absolute positioning
+            alt="Decorative underline"
+            className="underline-image2"
+            loading="lazy"
           />
-        </h2>
+        </div>
         <p className="product-description">
           Our product ensures you get the best quality, performance, and value,
           so you are investing in both reliability and innovation.

@@ -1,15 +1,23 @@
 /* Base Styles */
 .circle_text h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Quicksand";
   text-align: center;
-  font-size: 60px;
+  font-size: 45px;
   line-height: 60px;
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: #003e90;
   font-weight: 700;
 }
-
+.school_para41{
+  font-size: 18px;
+  font-family: 'Quicksand';
+  font-weight: 400;
+  text-align: center;
+}
 .school_para,
 .school_para2,
 .school_para4 {
@@ -28,8 +36,8 @@
   margin: 0;
 }
 .school_para22 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   line-height: 39.6px;
   margin: 0;
 }
@@ -121,7 +129,7 @@
 /* 2560px (Large Screen Monitors) */
 @media (max-width: 2560px) {
   .circle_text h1 {
-    font-size: 60px;
+    font-size: 45px;
   }
 
   .support-item p {
@@ -161,6 +169,11 @@
 
 /* 768px (Tablets Portrait) */
 @media (max-width: 768px) {
+  .school_para41{
+    font-size: 16px;
+    font-family: 'Quicksand';
+    font-weight: 400;
+  }
   .circle_text h1 {
     font-size: 20px;
   }
@@ -180,6 +193,11 @@
 
 /* 425px (Large Mobile Phones) */
 @media (max-width: 425px) {
+  .school_para41{
+    font-size: 14px;
+    font-family: 'Quicksand';
+    font-weight: 400;
+  }
   .circle_text h1 {
     font-size: 20px;
   }
@@ -196,6 +214,11 @@
 
 /* 375px (Standard Mobile Phones) */
 @media (max-width: 375px) {
+  .school_para41{
+    font-size: 14px;
+    font-family: 'Quicksand';
+    font-weight: 400;
+  }
   .circle_text h1 {
     font-size: 18px;
   }
@@ -212,6 +235,11 @@
 
 /* 320px (Small Mobile Phones) */
 @media (max-width: 320px) {
+  .school_para41{
+    font-size: 14px;
+    font-family: 'Quicksand';
+    font-weight: 400;
+  }
   .circle_text h1 {
     font-size: 16px;
   }
