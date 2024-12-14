@@ -21,22 +21,13 @@ const Programs = () => {
       viewport={{ once: true, amount: 0.7 }}
     >
       <header>
-        <h2
-          style={{
-            position: "relative",
-            zIndex: "2",
-          }}
+        <h1
+          
+          className="program_head"
         >
           Explore Our Programs
-        </h2>
-        <div className="d-flex justify-content-center justify-content-md-start">
-          <img
-            src={underlineImage}
-            alt="Decorative underline"
-            className="underline-image1"
-            loading="lazy"
-          />
-        </div>
+        </h1>
+       
         {/* <img
           src={underlineImage}
           alt="Decorative underline"

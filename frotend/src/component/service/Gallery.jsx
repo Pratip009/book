@@ -126,18 +126,16 @@ export default function Gallery() {
           iconRight={star}
         />
       </container-fluid>
-      <div className="text-center my-4">
-        <h1
-          style={{
-            fontSize: "var(--font-h2)",
-            marginTop: "2rem",
-            fontFamily: "Nunito",
-          }}
-        >
-          <span className="highlight">Gallery</span>
-        </h1>
-      </div>
 
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1 className="about_head">Gallery</h1>
+      </div>
       {loading ? (
         <div className="text-center my-4">
           <p>Loading images...</p>
@@ -149,9 +147,9 @@ export default function Gallery() {
             <div className="text-center my-4 mt-4">
               <h2
                 style={{
-                  fontSize: "var(--font-h3)",
+                  fontSize: "18px",
                   marginTop: "2rem",
-                  fontFamily: "Nunito",
+                  fontFamily: "Quicksand",
                 }}
               >
                 <span className="highlight">Training Gallery</span>
@@ -169,9 +167,9 @@ export default function Gallery() {
             <div className="text-center my-4">
               <h2
                 style={{
-                  fontSize: "var(--font-h3)",
+                  fontSize: "18px",
                   marginTop: "2rem",
-                  fontFamily: "Nunito",
+                  fontFamily: "Quicksand",
                 }}
               >
                 <span className="highlight">

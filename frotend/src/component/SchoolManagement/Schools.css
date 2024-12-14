@@ -60,6 +60,7 @@
 
 .support-item {
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -179,11 +180,15 @@
   }
 
   .support-item {
-    flex-direction: column;
+    flex-direction: row;
   }
-
+  .custom-icon {
+    font-size: 20px !important;
+    color: #ffd700;
+  }
   .support-item p {
     font-size: 15px;
+    margin: 0;
   }
 
   .image-containerschool {

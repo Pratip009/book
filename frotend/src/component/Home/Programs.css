@@ -11,6 +11,52 @@
   padding: 2rem;
   position: relative;
 }
+.program_head {
+  font-family: "Quicksand";
+  text-align: center; /* Center the text */
+  font-size: 45px;
+
+  margin-bottom: 2.5rem;
+  line-height: 60px;
+  position: relative; /* Key for positioning the ::after pseudo-element */
+  color: #1f1f1f;
+  font-weight: 700;
+  z-index: 1;
+  display: block; /* Makes the <h1> a block element */
+  width: max-content; /* Ensures the width of the <h1> is just as wide as its content */
+  margin-left: auto;
+  margin-right: auto; /* Centers the block element */
+}
+
+.program_head::after {
+  content: ""; /* Creates the underline */
+  position: absolute;
+  bottom: 10px; /* Positions it slightly below the text */
+  left: 50%; /* Start the underline at the middle of the H1 */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  width: 0; /* Start with width 0 for animation */
+  height: 10px; /* Set a fixed height for the underline */
+  background-image: url("../../Image/home/underline.png"); /* Decorative zigzag underline image */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure it scales well */
+  z-index: -1;
+  animation: zigzagUnderlineAbout 6s ease-out infinite; /* Apply animation */
+}
+
+@keyframes zigzagUnderlineAbout {
+  0% {
+    width: 0; /* Start with width 0 */
+    height: 5px;
+  }
+  50% {
+    width: 100%; /* Make the underline span the full width of the text */
+    height: 5px;
+  }
+  100% {
+    width: 0; /* End with width 0 */
+    height: 5px;
+  }
+}
 .program_analysys img {
   margin: 0 !important;
 }
@@ -316,6 +362,17 @@
 }
 
 @media (max-width: 768px) {
+  .program_head{
+    font-size: 20px !important;
+ 
+  }
+  .programs-container h2 {
+    font-size: 35px;
+ 
+  }
+  .program_head::after{
+    height: 0px;
+  }
   .Newcontainer {
     width: 100%;
   }
@@ -410,125 +467,22 @@
   }
 }
 
-@media (max-width: 575px) {
-  .icon12,
-  .icon2,
-  .icon3,
-  .icon4 {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .underline-image1 {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto;
-    width: 0; /* Start with a width of 0 for animation */
-    height: 10px;
-    height: 12px; /* Set the height as required */
-    position: absolute;
-    top: 39px; /* Position relative to h2 */
-    margin-left: 10.3em; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    border-radius: 45px; /* Maintain rounded edges */
-    background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline1 6s ease-out infinite;
-    z-index: 0;
-  }
-  @keyframes growUnderline1 {
-    0% {
-      width: 0; /* Start with width 0 */
-      height: 3px;
-    }
-    50% {
-      width: 90px; /* Reach max width at 50% */
-      height: 3px;
-    }
-    100% {
-      width: 0; /* End with width 0 */
-      height: 3px;
-    }
-  }
-  .Newcontainer {
-    width: 100%;
-  }
-  .programs-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    background-color: #fff1eb;
-    text-align: center;
-    position: relative;
-    padding: 0;
-  }
-  .programs-container h2 {
-    font-size: 20px;
-  }
 
-  .program-card {
-    height: 180px;
-  }
-
-  .program-card h3 {
-    font-size: 14px;
-  }
-
-  .program-card p {
-    font-size: 10px;
-  }
-
-  .program-card button {
-    height: 30px;
-    font-size: 10px;
-    width: 100px;
-    text-align: center;
-    justify-content: center;
-    display: flex; /* Enable flexbox */
-    align-items: center; /* Vertically center the text */
-    justify-content: center; /* Optional: remove padding */
-  }
-}
 @media (max-width: 425px) {
-  .underline-image1 {
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto;
-    width: 0; /* Start with a width of 0 for animation */
-    height: 10px;
-    height: 12px; /* Set the height as required */
-    position: absolute;
-    top: 39px; /* Position relative to h2 */
-    margin-left: 13em; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    border-radius: 45px; /* Maintain rounded edges */
-    background-color: #ff4e00; /* Background color for visibility */
-    animation: growUnderline1 6s ease-out infinite;
-    z-index: 0;
+  .program_head{
+    font-size: 20px !important;
+ 
   }
-  @keyframes growUnderline1 {
-    0% {
-      width: 0; /* Start with width 0 */
-      height: 3px;
-    }
-    50% {
-      width: 90px; /* Reach max width at 50% */
-      height: 3px;
-    }
-    100% {
-      width: 0; /* End with width 0 */
-      height: 3px;
-    }
+  .program_head::after{
+    height: 15px !important;
   }
-  .programs-container h2 {
-    font-size: 20px;
-  }
+  
 }
 @media (max-width: 320px) {
+  .program_head {
+    font-size: 20px;
+ 
+  }
   .Newcontainer {
     width: 100%;
   }

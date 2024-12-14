@@ -134,7 +134,7 @@ export default function Footer() {
                       </a>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <a href="/policy/return" className="footer_links">
                         Cancel Order
                       </a>
                     </p>

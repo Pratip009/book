@@ -86,8 +86,14 @@ const School = () => {
 
         <Container>
           <div className="">
-            <div className="circle_text">
-              <h1 className="school_header">School Management Service</h1>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <h1 className="about_head">School Management Service</h1>
             </div>
             <p className="school_para">
               The Learning Needs team has expansive expertise on school
@@ -119,15 +125,14 @@ const School = () => {
           </div>
 
           <div
-            className="circle_text"
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <h1 className="school_header">
-              We Help People to Start Their Own School
+            <h1 className="about_head">
+              We Help People to Start Their School
             </h1>
           </div>
           <div className="container py-5">
@@ -163,14 +168,17 @@ const School = () => {
             </div>
           </div>
 
-          <div className="circle_text">
-            <h1 className="school_header">Starting a New School!</h1>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h1 className="about_head">Starting a New School!</h1>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <span
-             className="school_para41"
-                
-            >
+            <span className="school_para41">
               Our team has experience of developing and managing new schools
               from the very outset. We can advise on:
             </span>
@@ -213,8 +221,14 @@ const School = () => {
             </Grid>
           </div>
 
-          <div className="circle_text">
-            <h1 className="school_header">New Start-up School</h1>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h1 className="about_head">New Start-up School</h1>
           </div>
           <div className="container py-5">
             <div className="row">
@@ -224,7 +238,7 @@ const School = () => {
                     className="p-3 rounded d-flex align-items-center"
                     style={{
                       backgroundColor: feature.bgColor,
-                      height: "100px", 
+                      height: "100px",
                     }}
                   >
                     <span
@@ -257,8 +271,14 @@ const School = () => {
             </div>
           </div>
 
-          <div className="circle_text">
-            <h1 className="school_header">For Existing Schools</h1>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h1 className="about_head">For Existing Schools</h1>
           </div>
           <div
             style={{
@@ -324,8 +344,14 @@ const School = () => {
           </Grid>
 
           <Container className="">
-            <div className="circle_text">
-              <h1 className="school_header">Additional Support</h1>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <h1 className="about_head">Additional Support</h1>
             </div>
             <p className="school_para41">Team can also assist with:</p>
             <Container>

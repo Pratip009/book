@@ -38,22 +38,14 @@ const MissionAndVision = () => {
     >
       {/* Section for Goals and Objectives */}
       <header>
-        <h2
-          className="goals-container-title"
+        <div
           style={{
-            position: "relative",
-            zIndex: "2",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          Goals And Objective
-        </h2>
-        <div className="d-flex justify-content-center justify-content-md-start">
-          <img
-            src={underline}
-            alt="Decorative underline"
-            className="underline-image3"
-            loading="lazy"
-          />
+          <h2 className="about_head">Goals And Objective</h2>
         </div>
       </header>
 

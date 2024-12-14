@@ -30,8 +30,14 @@ export default function Sports() {
         />
       </container-fluid>
       <Container>
-        <div className="sports_head">
-          <h1>Fitness Development Programs</h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h1 className="about_head">Fitness Development Programs</h1>
         </div>
         <p className="sports_paragraph">
           Our Sports training for children is essential for promoting physical
@@ -49,8 +55,14 @@ export default function Sports() {
         </p>
       </Container>
       <Container>
-        <div className="sports_head">
-          <h1>Sports training categories include</h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h1 className="about_head">Sports training categories include</h1>
         </div>
       </Container>
       <Container className="mt-4">
