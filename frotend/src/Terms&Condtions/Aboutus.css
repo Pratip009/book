@@ -135,11 +135,11 @@ body {
   margin: 2rem 0;
 }
 .traitImage {
-  width: 100%; /* Makes the image take full width of its container */
+  width: 50%; /* Makes the image take full width of its container */
   height: auto; /* Maintains the aspect ratio */
   border-radius: 8px; /* Adds smooth rounded corners */
   object-fit: cover; /* Ensures the image covers the entire container without distortion */
-  margin-bottom: 1rem; /* Spacing between the image and text */
+/* Spacing between the image and text */
 }
 .about_paragraph1 {
   font-size: 16px;
@@ -258,12 +258,16 @@ body {
   background-color: white;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for subtle effect */
   border-color: transparent !important;
-  height: 180px;
+  height: 150px;
   padding: 16px; /* Adjust padding as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trait-image {
-  height: 100px;
+  height: 80px;
+  margin: 0;
 }
 
 @media (max-width: 600px) {

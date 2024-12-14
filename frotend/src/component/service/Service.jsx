@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import { Grid } from "@material-ui/core";
+
 import "aos/dist/aos.css";
 import Pricing from "../pricing/pricing";
 import "./Service.css";
@@ -49,15 +48,15 @@ const Service = () => {
       </container-fluid>
 
       <Container className="servicebg">
-        <div className="circle_text">
+        <div style={{
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center'
+        }}>
           <h1 className="about_head">Services of Learning Needs</h1>
         </div>
         <p
-          style={{
-            fontSize: "18px",
-            fontWeight: "400",
-            fontFamily: "Quicksand",
-          }}
+         className="service_description_tag"
         >
           {" "}
           Our services help you succeed in business

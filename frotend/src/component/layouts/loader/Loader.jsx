@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as CricketBall } from "../../../Image/Loader-svg/ball.svg";
+import { ReactComponent as CricketBall } from "../../../Image/Loader-svg/newloader.svg";
 import "./Loader.css";
 
 const CricketBallLoader = () => (
