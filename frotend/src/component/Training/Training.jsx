@@ -43,7 +43,7 @@ const Training = () => {
         <Grid item xs={12}>
           <container-fluid>
             <Banner
-              title="Get the Help You Need"
+              title="Delivering Positive Change"
               mainImage={mainImg}
               iconLeft={bookImg}
               backgroundPattern={pattern}

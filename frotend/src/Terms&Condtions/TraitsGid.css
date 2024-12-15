@@ -1,0 +1,72 @@
+.traits-container {
+    position: relative;
+    margin-top: 2em;
+  }
+  
+  .last-row-container {
+    margin-top: 1em;
+    justify-content: center;
+  }
+  
+  /* Card Styling */
+  .trait-card {
+    justify-content: space-around;
+  border-radius: 50px;
+  height: auto;
+    text-align: center;
+    background-color: var(--card-background-color, #ffffff);
+  }
+  
+  .last-row-card {
+    background-color: #ffffff; /* Default color for last-row cards */
+  }
+  
+  /* Image Styling */
+  .trait-image {
+    width: 30%;
+    height: auto;
+   
+    padding: 5px;
+   
+    
+  }
+  
+  /* Typography Styling */
+  .trait-letter {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+  }
+  
+  .trait-text {
+    color: #ffffff;
+    font-size: var(--font-span);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+  }
+  /* Row-based colors */
+.row-0 {
+    background: linear-gradient(to right,#06d3d0, #18b6b4);
+  }
+  
+  .row-1 {
+    background: linear-gradient(to right, #37c9ef, #00a2cb);
+  }
+  
+  .last-row-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .last-row-container .trait-card{
+    
+    justify-content: space-around;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    background: linear-gradient(to right, #2c92d5, #017fd3);
+  }
+  .last-row-container .trait-card:nth-last-child(-n+2) {
+    margin: 0;
+  }

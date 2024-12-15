@@ -6,19 +6,8 @@ import mainImg from "../Image/Product/aboutUsImg.png";
 import pattern from "../Image/Product/Frame 18.png";
 import bookImg from "../Image/home/teambook.png";
 import star from "../Image/home/teamstar.png";
-import increaseImg from "../Image/increase.png";
-import bearImg from "../Image/bear.png";
-import bestImg from "../Image/best.png";
-import familyImg from "../Image/family.png";
-import negoImg from "../Image/nego.png";
-import creativeBrainImg from "../Image/creative-brain.png";
-import youCanImg from "../Image/you-can.png";
-import tarImg from "../Image/tar.png";
-import inventoryImg from "../Image/inventory.png";
-import warningImg from "../Image/warning.png";
-import dreamImg from "../Image/dream.png";
-import developerImg from "../Image/developer.png";
-import supportImg from "../Image/24-hours-support.png";
+import TraitsGid from "./TraitsGid.jsx";
+
 import learning2Img from "../Image/learning2.png";
 import need2Img from "../Image/need2.png";
 import Faq from "./Faq";
@@ -38,21 +27,6 @@ const bookIcon = require("../Image/home/teambook.png");
 const starIcon = require("../Image/home/teamstar.png");
 
 const Aboutus = () => {
-  const traits = [
-    { src: increaseImg, letterr: "L-", textw: "LEADERSHIP" },
-    { src: bearImg, letterr: "E-", textw: "EFFECTIVENESS" },
-    { src: bestImg, letterr: "A-", textw: "ATTITUDE" },
-    { src: familyImg, letterr: "R-", textw: "RELATION" },
-    { src: negoImg, letterr: "N-", textw: "NEGOTIATION" },
-    { src: creativeBrainImg, letterr: "I-", textw: "INNOVATION" },
-    { src: youCanImg, letterr: "N-", textw: "NURTURE" },
-    { src: tarImg, letterr: "G-", textw: "GOAL" },
-    { src: inventoryImg, letterr: "N-", textw: "NEEDFUL" },
-    { src: warningImg, letterr: "E-", textw: "ESSENTIAL" },
-    { src: dreamImg, letterr: "E-", textw: "EXPECTATIONAL" },
-    { src: developerImg, letterr: "D-", textw: "DEVELOPMENT" },
-  ];
-
   return (
     <container fluid>
       <Banner
@@ -164,110 +138,10 @@ const Aboutus = () => {
           </motion.h1>
         </div>
 
-        <Grid container spacing={3} style={{ marginTop: "2em" }}>
-          {traits.map((trait, index) => (
-            <Grid item xs={6} sm={4} md={2} key={index}>
-              <motion.div
-                whileInView={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                transition={{ duration: 1, delay: index * 0.1 }}
-              >
-                <Card className="trait-card">
-                  <img
-                    src={trait.src}
-                    alt={trait.textw}
-                    className="traitImage"
-                  />
-                  <Typography
-                    style={{
-                      color: "#FF4E00",
-                      fontSize: "var(--font-h4)",
-                      fontFamily: "Nunito",
-                      fontWeight: "700",
-                    }}
-                  >
-                    {trait.letterr}
-                  </Typography>
-                  <Typography
-                    style={{
-                      color: "#61677A",
-                      fontSize: "var(--font-span)",
-                      fontFamily: "Nunito",
-                      fontWeight: "700",
-                    }}
-                  >
-                    {trait.textw}
-                  </Typography>
-                </Card>
-              </motion.div>
-            </Grid>
-          ))}
-        </Grid>
+        <TraitsGid />
       </Container>
 
-      <Container>
-        <MDBRow
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "2rem",
-          }}
-        >
-          <MDBCol item xs={4} sm={6} md={2}>
-            <motion.img
-              src={learning2Img}
-              alt="Learning needs"
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1, delay: 0.1 }}
-            />
-          </MDBCol>
-
-          <MDBCol item xs={4} sm={6} md={2}>
-            <motion.div
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1, delay: 1 }}
-            >
-              <Card className="trait-card">
-                <img src={supportImg} alt="SERVICES" className="traitImage" />
-                <Typography
-                  style={{
-                    color: "#FF4E00",
-                    fontSize: "var(--font-h4)",
-                    fontFamily: "Nunito",
-                    fontWeight: "700",
-                  }}
-                >
-                  S-
-                </Typography>
-                <Typography
-                  style={{
-                    color: "#61677A",
-                    fontSize: "var(--font-span)",
-                    fontFamily: "Nunito",
-                    fontWeight: "700",
-                  }}
-                >
-                  SERVICES
-                </Typography>
-              </Card>
-            </motion.div>
-          </MDBCol>
-
-          <MDBCol item xs={4} sm={6} md={2}>
-            <motion.img
-              src={need2Img}
-              alt="Learning needs"
-              className="image_about"
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1, delay: 1.5 }}
-            />
-          </MDBCol>
-        </MDBRow>
-      </Container>
+     
 
       <Container
         fluid
@@ -410,7 +284,7 @@ const Aboutus = () => {
               sm={6}
               className="d-flex align-items-center justify-content-center"
               style={{
-                padding:0
+                padding: 0,
               }}
             >
               <motion.img
