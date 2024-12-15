@@ -8,7 +8,7 @@
   height: 939px;
   background-color: #fff1eb;
   text-align: center;
-  padding: 2rem;
+  padding: 0;
   position: relative;
 }
 .program_head {
@@ -35,7 +35,7 @@
   left: 50%; /* Start the underline at the middle of the H1 */
   transform: translateX(-50%); /* Adjust for perfect centering */
   width: 0; /* Start with width 0 for animation */
-  height: 10px; /* Set a fixed height for the underline */
+  height: 5px; /* Set a fixed height for the underline */
   background-image: url("../../Image/home/underline.png"); /* Decorative zigzag underline image */
   background-repeat: no-repeat;
   background-size: cover; /* Ensure it scales well */
@@ -391,7 +391,7 @@
     height: auto;
     background-color: #fff1eb;
     text-align: center;
-
+padding: 0;
     position: relative;
   }
   .icon12,
@@ -399,6 +399,7 @@
   .icon3,
   .icon4 {
     margin: 0 !important;
+   
   }
   .programs-container h2 {
     font-size: 35px;
@@ -469,16 +470,18 @@
 
 
 @media (max-width: 425px) {
+  
   .program_head{
     font-size: 20px !important;
  
   }
   .program_head::after{
-    height: 15px !important;
+    height: 5px !important;
   }
   
 }
 @media (max-width: 320px) {
+  
   .program_head {
     font-size: 20px;
  

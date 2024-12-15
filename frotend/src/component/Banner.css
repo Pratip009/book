@@ -175,8 +175,12 @@
 
 @media (max-width: 425px) {
   .banner-title {
-    font-size: 28px;
-    width: 250px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: 100px;
+    line-height: 30px;
+    padding: 0;
   }
 
   .main-image {
