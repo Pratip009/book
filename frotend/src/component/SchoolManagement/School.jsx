@@ -131,22 +131,32 @@ const School = () => {
               justifyContent: "center",
             }}
           >
-            <h1 className="about_head">
-              We Help People to Start Their School
-            </h1>
+            <h1 className="about_head">We Help People to Start Their School</h1>
           </div>
           <div className="container py-5">
             <div className="row text-center">
               {features.slice(0, 6).map((feature, index) => (
                 <div key={index} className="col-md-4 mb-4">
                   <div
-                    className="p-3 border rounded d-flex align-items-center justify-content-center"
-                    style={{ backgroundColor: "#B6E3DF66" }}
+                    className="p-3 border rounded"
+                    style={{
+                      backgroundColor: "#B6E3DF66",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
                   >
-                    <span style={{ fontSize: "2rem", marginRight: "10px" }}>
-                      {feature.icon}
-                    </span>
-                    <p className="school_para2">{feature.text}</p>
+                    <div className="row w-100 align-items-center">
+                      {/* Column for the icon/image */}
+                      <div className="col-3 text-center">
+                        <span style={{ fontSize: "2rem" }}>{feature.icon}</span>
+                      </div>
+                      {/* Column for the text */}
+                      <div className="col-9" style={{
+                        display:'flex'
+                      }}>
+                        <p className="school_para2 mb-0">{feature.text}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}

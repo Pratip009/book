@@ -190,7 +190,9 @@
     font-size: 15px;
     margin: 0;
   }
-
+  .school_para2{
+    font-size: 18px;
+  }
   .image-containerschool {
     height: 300px;
   }
@@ -198,6 +200,9 @@
 
 /* 425px (Large Mobile Phones) */
 @media (max-width: 425px) {
+  .school_para2{
+    font-size: 18px;
+  }
   .school_para41{
     font-size: 14px;
     font-family: 'Quicksand';
@@ -219,6 +224,9 @@
 
 /* 375px (Standard Mobile Phones) */
 @media (max-width: 375px) {
+  .school_para2{
+    font-size: 18px;
+  }
   .school_para41{
     font-size: 14px;
     font-family: 'Quicksand';
