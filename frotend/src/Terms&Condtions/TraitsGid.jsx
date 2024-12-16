@@ -36,74 +36,118 @@ const rowColors = ["#FFD700", "#ADFF2F", "#87CEEB"]; // Colors for each row
 const TraitsGrid = () => {
   return (
     <>
-      <div style={{
-        marginTop:'2rem'
-      }}>
-      <Grid container spacing={3} className="traits-container">
-  {traits.slice(0, 10).map((trait, index) => {
-    const rowIndex = Math.floor(index / 5); // Calculate row index
-    return (
-      <Grid item xs={12} sm={6} md={2.4} key={index}>
-        <motion.div
-          whileInView={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 1, delay: index * 0.1 }}
-        >
-          <div className={`trait-card row-${rowIndex}`}>
-            <img
-              src={trait.src}
-              alt={trait.textw}
-              className="trait-image"
-            />
-            <div>
-              <span className="trait-letter">
-                {trait.letterr}
-              </span>
-              <span className="trait-text">
-                {trait.textw.toLowerCase()}
-              </span>
-            </div>
-          </div>
-        </motion.div>
-      </Grid>
-    );
-  })}
-</Grid>
+      <div
+        style={{
+          marginTop: "2rem",
+        }}
+      >
+        <Grid container spacing={3} className="traits-container">
+          {traits.slice(0, 10).map((trait, index) => {
+            const rowIndex = Math.floor(index / 5); // Calculate row index
+            return (
+              <Grid item xs={12} sm={6} md={2.4} key={index}>
+                <motion.div
+                  whileInView={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 1, delay: index * 0.1 }}
+                >
+                  <div className={`trait-card row-${rowIndex}`}>
+                    {/* Parent container with column layout */}
+                    <Grid container direction="row" alignItems="center">
+                      {/* Column for the image */}
+                      <Grid item xs={5}>
+                        <img
+                          src={trait.src}
+                          alt={trait.textw}
+                          className="trait-image"
+                          style={{ width: "100%", objectFit: "contain" }}
+                        />
+                      </Grid>
+                      {/* Column for the text */}
+                      <Grid item xs={7}>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "flex-start",
+                          }}
+                        >
+                          <span
+                            className="trait-letter"
+                            style={{ fontWeight: "bold", marginRight: "8px" }}
+                          >
+                            {trait.letterr}
+                          </span>
+                          <span className="trait-text">
+                            {trait.textw.toLowerCase()}
+                          </span>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
+                </motion.div>
+              </Grid>
+            );
+          })}
+        </Grid>
 
-{/* Separate grid for last 3 cards */}
-<Grid container spacing={3} className="last-row-container" style={{
-    marginTop:'.4em'
-}}>
-  {traits.slice(10).map((trait, index) => {
-    const rowIndex = Math.floor(index / 5); // Calculate row index for the last row
-    return (
-      <Grid item xs={12} sm={6} md={2.4} key={index + 10}>
-        <motion.div
-          whileInView={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 1, delay: (index + 10) * 0.1 }}
+        {/* Separate grid for last 3 cards */}
+        <Grid
+          container
+          spacing={3}
+          className="last-row-container"
+          style={{
+            marginTop: ".4em",
+          }}
         >
-          <div className={`trait-card last-row-card row-${rowIndex}`}>
-            <img
-              src={trait.src}
-              alt={trait.textw}
-              className="trait-image"
-            />
-            <div>
-              <span className="trait-letter">
-                {trait.letterr}
-              </span>
-              <span className="trait-text">
-                {trait.textw.toLowerCase()}
-              </span>
-            </div>
-          </div>
-        </motion.div>
-      </Grid>
-    );
-  })}
-</Grid>
-
+          {traits.slice(10).map((trait, index) => {
+            const rowIndex = Math.floor(index / 5); // Calculate row index for the last row
+            return (
+              <Grid item xs={12} sm={6} md={2.4} key={index + 10}>
+                <motion.div
+                  whileInView={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 1, delay: (index + 10) * 0.1 }}
+                >
+                  <div className={`trait-card last-row-card row-${rowIndex}`}>
+                    {/* Parent Grid container for two-column layout */}
+                    <Grid container direction="row" alignItems="center">
+                      {/* Column for the image */}
+                      <Grid item xs={5}>
+                        <img
+                          src={trait.src}
+                          alt={trait.textw}
+                          className="trait-image"
+                          style={{ width: "100%", objectFit: "contain" }}
+                        />
+                      </Grid>
+                      {/* Column for the text */}
+                      <Grid item xs={7}>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "flex-start",
+                          }}
+                        >
+                          <span
+                            className="trait-letter"
+                            style={{ fontWeight: "bold", marginRight: "8px" }}
+                          >
+                            {trait.letterr}
+                          </span>
+                          <span className="trait-text">
+                            {trait.textw.toLowerCase()}
+                          </span>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
+                </motion.div>
+              </Grid>
+            );
+          })}
+        </Grid>
       </div>
     </>
   );

@@ -147,7 +147,7 @@ const Aboutus = () => {
         fluid
         style={{
           position: "relative",
-          backgroundColor: "#BAEFF5FF",
+          backgroundColor: "#D6FBFFFF",
           padding: "1rem 0",
           margin: "2rem 0",
           zIndex: 1,

@@ -25,7 +25,7 @@
   .trait-image {
     width: 30%;
     height: auto;
-   
+   margin-right: 10px;
     padding: 5px;
    
     
@@ -47,11 +47,11 @@
   }
   /* Row-based colors */
 .row-0 {
-    background: linear-gradient(to right,#06d3d0, #18b6b4);
+    background: linear-gradient(to right,#8fefed, #18b6b4);
   }
   
   .row-1 {
-    background: linear-gradient(to right, #37c9ef, #00a2cb);
+    background: linear-gradient(to right, #6bd9f5, #00a2cb);
   }
   
   .last-row-container {
@@ -65,7 +65,7 @@
     justify-content: space-around;
     border-radius: 50px;
     margin-top: 1.5rem;
-    background: linear-gradient(to right, #2c92d5, #017fd3);
+    background: linear-gradient(to right, #81bbe2, #017fd3);
   }
   .last-row-container .trait-card:nth-last-child(-n+2) {
     margin: 0;
