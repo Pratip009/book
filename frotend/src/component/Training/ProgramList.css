@@ -97,7 +97,7 @@
 
 /* Program Card Styles */
 .program-card {
-  height: fit-content; /* Ensure the height adjusts to the content dynamically */
+  height: auto; /* Ensure the height adjusts to the content dynamically */
   background-color: #fff1eb;
   padding: 20px 15px;
   border-radius: 12px;

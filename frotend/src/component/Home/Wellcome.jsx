@@ -5,14 +5,18 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
 const Welcome = () => {
   return (
-    <div className="welcome-full-bg">
-      <Container className="welcome-card" style={{padding:0, marginTop:'2rem'}}>
-        <motion.div
-          variants={fadeIn("up", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
-        >
+    <motion.div
+      className="welcome-full-bg"
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.7 }}
+    >
+      <Container
+        className="welcome-card"
+        style={{ padding: 0, marginTop: "2rem" }}
+      >
+        <div>
           <h2 className="welcome-title text-start">
             Welcome to Learning Needs
           </h2>
@@ -31,9 +35,9 @@ const Welcome = () => {
           <div className="welcome_btn text-start mt-1">
             <button className="welcome-button">Join Us Today &rarr;</button>
           </div>
-        </motion.div>
+        </div>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 
