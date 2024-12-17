@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useCallback, useMemo } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
@@ -75,8 +76,7 @@ function HeroSlider() {
           </figcaption>
         </figure>
       </Carousel.Item>
-    )), [index]
-  );
+    )), [index]);
 
   return (
     <Carousel
@@ -99,4 +99,4 @@ function HeroSlider() {
   );
 }
 
-export default HeroSlider;
+export default React.memo(HeroSlider);

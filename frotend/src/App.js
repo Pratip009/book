@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { load_UserProfile } from "./actions/userAction";
 import axios from "axios";
@@ -62,7 +62,7 @@ const LazyProductList = React.lazy(() =>
 );
 const LazyBlogPost = React.lazy(() => import("./component/Admin/BlogPost"));
 const LazyOrderList = React.lazy(() => import("./component/Admin/OrderList"));
-const LazyAddImage = React.lazy(() => import("./component/Admin/AddImage.jsx"));
+
 const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
 const LazyAdminContact = React.lazy(() =>
   import("./component/Admin/ContactForm.jsx")
