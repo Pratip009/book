@@ -5,6 +5,7 @@ import StarIcon from "@mui/icons-material/Star";
 import underline from "../../Image/home/underline.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const MissionAndVision = () => {
   const [notices, setNotices] = useState([]);
 
@@ -38,7 +39,7 @@ const MissionAndVision = () => {
     >
       {/* Section for Goals and Objectives */}
       <header>
-        <div
+        {/* <div
           style={{
             display: "flex",
             alignItems: "center",
@@ -46,7 +47,11 @@ const MissionAndVision = () => {
           }}
         >
           <h2 className="about_head">Goals And Objective</h2>
-        </div>
+        </div> */}
+        <HeaderWithUnderline
+          sentence="Goals And Objective"
+          highlightedWord="Goals And Objective"
+        />
       </header>
 
       <div className="row justify-content-center">

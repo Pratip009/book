@@ -5,6 +5,7 @@ import pattern from "../../Image/Product/Frame 19.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
 import { Container } from "react-bootstrap";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -52,11 +53,9 @@ export default function Blog() {
           </container-fluid>
 
           <Container>
-            <h1
-              className="about_head"
-            >
-              Our Blog
-            </h1>
+           
+            <HeaderWithUnderline sentence="Our Blog" highlightedWord="Our Blog" />
+
             {blogs.length > 0 ? (
               blogs.map((blog) => (
                 <div key={blog.id} style={blogStyle}>

@@ -1,0 +1,79 @@
+/* HeaderWithUnderline.css */
+
+.header-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .header-title {
+    font-family: "Quicksand", sans-serif;
+    font-size: 45px;
+    position: relative;
+    display: inline-block;
+    color: #003e90;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  
+  /* Make font size responsive */
+  .highlighted-text {
+    position: relative;
+    display: inline-block;
+    color: #003e90;
+    font-weight: 700;
+    line-height: 60px; /* Highlighted text color */
+    font-family: "Quicksand", sans-serif;
+    font-size: 45px; /* Default font size */
+    z-index: 2; /* Ensure text is above the underline */
+  }
+  
+  /* Mobile devices: Set font size to 20px, bottom to 15px, height to 5px */
+  @media (max-width: 768px) {
+    .header-title {
+      font-size: 20px; /* Smaller font size for mobile */
+    }
+    .highlighted-text {
+      font-size: 20px; /* Smaller font size for mobile */
+    }
+    .highlighted-text::after {
+      content: "";
+      position: absolute;
+      left: 50%; /* Start from the middle */
+      bottom: 15px !important; /* Adjust bottom to 15px for mobile */
+      transform: translateX(-50%); /* Center the starting point */
+      width: 0; /* Start with 0 width */
+      height: 5px !important; /* Adjust height to 5px for mobile */
+      background-color: #ffc0a5; /* Underline color */
+      border-radius: 10px;
+      animation: zigzagUnderlineCenter 5s infinite; /* Apply the animation */
+      z-index: -1; /* Ensure the underline stays behind the text */
+    }
+  }
+  
+  /* Default styles for larger screens */
+  .highlighted-text::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Start from the middle */
+    bottom: 0; /* Adjust bottom to 0 for large screens */
+    transform: translateX(-50%); /* Center the starting point */
+    width: 0; /* Start with 0 width */
+    height: 10px; /* Adjust height to 10px for large screens */
+    background-color: #ffc0a5; /* Underline color */
+    border-radius: 10px;
+    animation: zigzagUnderlineCenter 5s infinite; /* Apply the animation */
+    z-index: -1; /* Ensure the underline stays behind the text */
+  }
+  
+  @keyframes zigzagUnderlineCenter {
+    0% {
+      width: 0; /* Start at the center */
+    }
+    50% {
+      width: 100%; /* Expand outward fully */
+    }
+    100% {
+      width: 0; /* Contract back to center */
+    }
+  }
+  

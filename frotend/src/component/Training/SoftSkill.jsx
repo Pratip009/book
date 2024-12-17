@@ -5,7 +5,9 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { Button, Collapse } from "@mui/material";
 import { Container } from "react-bootstrap";
-import './Softskill.css'
+import "./Softskill.css";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
+
 const SoftSkill = () => {
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => {
@@ -37,9 +39,18 @@ const SoftSkill = () => {
         training to help develop a positive and productive work culture.
       </span>
 
-      <div className="">
-        <h1 className="softskill_head3">Our Soft Skills Workshop</h1>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "start",
+        }}
+      >
+        <HeaderWithUnderline
+          sentence="Our Soft Skills Workshop"
+          highlightedWord="Soft Skills Workshop"
+        />
       </div>
+
       <span
         style={{
           textAlign: "justify",
@@ -71,8 +82,16 @@ const SoftSkill = () => {
       </span>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <span>
-          <div className="">
-            <h1 className="softskill_head3">Customized Soft Skills Training Workshops</h1>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "start",
+            }}
+          >
+            <HeaderWithUnderline
+              sentence="Customized Training"
+              highlightedWord="Customized Training"
+            />
           </div>
           <span
             style={{
@@ -95,8 +114,16 @@ const SoftSkill = () => {
             skills that may not come as naturally to them.
           </span>
 
-          <div className="">
-            <h1 className="softskill_head3">Participate in Our Soft Skills Training Programs</h1>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "start",
+            }}
+          >
+            <HeaderWithUnderline
+              sentence="Participate in Our Training Programs"
+              highlightedWord="Training Programs"
+            />
           </div>
           <span
             style={{

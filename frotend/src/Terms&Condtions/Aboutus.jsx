@@ -22,13 +22,16 @@ import underlineImgAbout from "../Image/home/underline.png";
 import carClipArt from "../Image/home/car.png";
 import globeClipArt from "../Image/home/globe.png";
 import { motion } from "framer-motion";
+import HeaderWithUnderline from "../component/UnderLineAnimation/HeaderWithUnderline.jsx";
 const planetIcon = require("../Image/home/teamglobe.png");
 const bookIcon = require("../Image/home/teambook.png");
 const starIcon = require("../Image/home/teamstar.png");
 
 const Aboutus = () => {
   return (
-    <container fluid>
+    <Container fluid style={{
+      padding:0
+    }}>
       <Banner
         title="Innovation In Every Step"
         mainImage={mainImg}
@@ -36,6 +39,7 @@ const Aboutus = () => {
         backgroundPattern={pattern}
         iconRight={star}
       />
+
       <MetaData title={"About Us"} />
       <container
         fluid
@@ -79,14 +83,18 @@ const Aboutus = () => {
               className="d-flex flex-column justify-content-start align-items-start"
               style={{ textAlign: "flex-start" }}
             >
-              <h1
+              {/* <h1
                 className="about_head3"
                 whileInView={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
                 transition={{ duration: 1, delay: 0.1 }}
               >
                 About Learning Needs
-              </h1>
+              </h1> */}
+              <HeaderWithUnderline
+                sentence="About Learning Needs"
+                highlightedWord="Learning Needs"
+              />
 
               <motion.p
                 className="about_paragraph"
@@ -121,7 +129,7 @@ const Aboutus = () => {
       </container>
 
       <Container>
-        <div
+        {/* <div
           style={{
             display: "flex",
             alignItems: "center",
@@ -136,12 +144,14 @@ const Aboutus = () => {
           >
             Learning Needs Traits
           </motion.h1>
-        </div>
+        </div> */}
+        <HeaderWithUnderline
+          sentence="Learning Needs Traits"
+          highlightedWord="Traits"
+        />
 
         <TraitsGid />
       </Container>
-
-     
 
       <Container
         fluid
@@ -238,15 +248,7 @@ const Aboutus = () => {
       </Container>
 
       <Container>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h1 className="about_head">Our Team</h1>
-        </div>
+        <HeaderWithUnderline sentence="Our Team" highlightedWord="Our Team" />
 
         <p className="about_paragraph2">
           Learning Needs dedicated leadership team is focused on delivering
@@ -297,8 +299,17 @@ const Aboutus = () => {
               />
             </Col>
             <Col xs={12} sm={6}>
-              <h1 className="about_head3">Founder's Message</h1>
-
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                }}
+              >
+                <HeaderWithUnderline
+                  sentence="Founder's Message"
+                  highlightedWord="Message"
+                />
+              </div>
               <motion.p
                 className="about_paragraph"
                 whileInView={{ opacity: 1 }}
@@ -325,16 +336,11 @@ const Aboutus = () => {
       </Container>
 
       <Container className="Testimonial_container">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h1 className="about_head">Pride of Learning Needs</h1>
-        </div>
-        <span>Client's Sharing Their Experience</span>
+        <HeaderWithUnderline
+          sentence="Pride of Learning Needs"
+          highlightedWord="Pride of Learning Needs"
+        />
+        <h6>Client's Sharing Their Experience</h6>
         <TestimonialSlider />
       </Container>
 
@@ -357,19 +363,13 @@ const Aboutus = () => {
       </Container>
 
       <Container className="faq">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h1 className="about_head">Frequently Asked Questions</h1>
-        </div>
-
+        <HeaderWithUnderline
+          sentence="Frequently Asked Questions"
+          highlightedWord="Questions"
+        />
         <Faq />
       </Container>
-    </container>
+    </Container>
   );
 };
 

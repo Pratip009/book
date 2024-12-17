@@ -78,7 +78,7 @@
   max-width: 40%;
   word-wrap: break-word;
   word-break: break-word;
-  margin-bottom: .3rem;
+  margin-bottom: .8rem;
 }
 
 .product-button {
@@ -117,7 +117,7 @@
   .sale-text {
     font-size: var(--font-h6); /* Adjusted for smaller screens */
     font-weight: 400;
-    max-width: 70%;
+    max-width: 78%;
     word-wrap: break-word;
     word-break: break-word;
   }

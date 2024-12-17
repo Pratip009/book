@@ -34,6 +34,7 @@ import mainImage from "../../Image/Product/productImg.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
 import { motion } from "framer-motion";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const planetIcon = require("../../Image/home/teamglobe.png");
 const bookIcon = require("../../Image/home/teambook.png");
 const starIcon = require("../../Image/home/teamstar.png");
@@ -60,9 +61,6 @@ const data = [
 ];
 
 function Products() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -94,9 +92,6 @@ function Products() {
     dispatch(getProduct(keyword, currentPage, price, category, ratings));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, keyword, currentPage, price, ratings, category]);
-  React.useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
 
   const setCurrentPageNoHandler = (e) => {
     setCurrentPage(e); // e is the clicked page value
@@ -118,7 +113,9 @@ function Products() {
     setSelectedRating(event.target.value);
     // Trigger filtering with the selected rating value or perform any other action
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Always scroll to top
+  }, [products, loading, currentPage]);
   return (
     <>
       {loading ? (
@@ -191,15 +188,17 @@ function Products() {
                   />
                   <div className="productBack">
                     <Container>
-                      <h1
-                        className="about_head3"
-                        whileInView={{ opacity: 1 }}
-                        initial={{ opacity: 0 }}
-                        transition={{ duration: 1, delay: 0.1 }}
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                        }}
                       >
-                        Why book Reading is important
-                      </h1>
-
+                        <HeaderWithUnderline
+                          sentence="Why book Reading is important"
+                          highlightedWord="Reading is important"
+                        />
+                      </div>
                       <span
                         style={{
                           fontFamily: "Nunito",
@@ -240,16 +239,16 @@ function Products() {
                           child’s imagination amongst many other benefits.
                         </span>
 
-                        <div className="">
-                          <h1
-                            className="about_head3"
-                            whileInView={{ opacity: 1 }}
-                            initial={{ opacity: 0 }}
-                            transition={{ duration: 1, delay: 0.1 }}
-                          >
-                            {" "}
-                            Benefits of Reading Books
-                          </h1>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "flex-start",
+                          }}
+                        >
+                          <HeaderWithUnderline
+                            sentence="Benefits of Reading Books"
+                            highlightedWord="Reading Books"
+                          />
                         </div>
                         <span className="about_paragraph5">
                           Here are a few good benefits of reading books. When

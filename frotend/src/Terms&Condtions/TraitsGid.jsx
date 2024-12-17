@@ -28,7 +28,7 @@ const traits = [
   { src: warningImg, letterr: "E-", textw: "ESSENTIAL" },
   { src: dreamImg, letterr: "E-", textw: "EXPECTATIONAL" },
   { src: developerImg, letterr: "D-", textw: "DEVELOPMENT" },
-  { src: supportImg, letterr: "S-", textw: "SUPPORT" },
+  { src: supportImg, letterr: "S-", textw: "SERVICE" },
 ];
 
 const rowColors = ["#FFD700", "#ADFF2F", "#87CEEB"]; // Colors for each row

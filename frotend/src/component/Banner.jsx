@@ -1,5 +1,6 @@
 import React from "react";
-import './Banner.css';  // Import the CSS file
+import "./Banner.css"; // Import the CSS file
+import { Container } from "react-bootstrap";
 
 const Banner = ({
   title,
@@ -9,48 +10,35 @@ const Banner = ({
   backgroundPattern,
 }) => {
   return (
-    <div className="banner-container">
-      {/* Background Pattern behind Main Image */}
-      {backgroundPattern && (
-        <img
-          src={backgroundPattern}
-          alt="Background Pattern"
-          className="banner-background"
-        />
-      )}
+    <Container fluid className="banner-main">
+      <Container className="banner-container">
+        {/* Background Pattern behind Main Image */}
 
-      {/* Left Icon */}
-      {iconLeft && (
-        <img
-          src={iconLeft}
-          alt="Left Icon"
-          className="icon-left"
-        />
-      )}
+        {backgroundPattern && (
+          <img
+            src={backgroundPattern}
+            alt="Background Pattern"
+            className="banner-background"
+          />
+        )}
 
-      {/* Heading Text */}
-      <h1 className="banner-title">
-        {title}
-      </h1>
+        {/* Left Icon */}
+        {iconLeft && (
+          <img src={iconLeft} alt="Left Icon" className="icon-left" />
+        )}
 
-      {/* Main Image */}
-      {mainImage && (
-        <img
-          src={mainImage}
-          alt="Main"
-          className="main-image"
-        />
-      )}
+        {/* Heading Text */}
+        <h1 className="banner-title">{title}</h1>
 
-      {/* Right Icon */}
-      {iconRight && (
-        <img
-          src={iconRight}
-          alt="Right Icon"
-          className="icon-right"
-        />
-      )}
-    </div>
+        {/* Main Image */}
+        {mainImage && <img src={mainImage} alt="Main" className="main-image" />}
+
+        {/* Right Icon */}
+        {iconRight && (
+          <img src={iconRight} alt="Right Icon" className="icon-right" />
+        )}
+      </Container>
+    </Container>
   );
 };
 

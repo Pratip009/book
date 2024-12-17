@@ -9,6 +9,7 @@ import mainImg from "../../Image/Product/galleryImg.png";
 import pattern from "../../Image/Product/Frame 18.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const API_URL =
   "https://learningneeds-strapi-11ta.onrender.com/api/galleries?populate=*";
 
@@ -127,15 +128,7 @@ export default function Gallery() {
         />
       </container-fluid>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <h1 className="about_head">Gallery</h1>
-      </div>
+      <HeaderWithUnderline sentence="Gallery" highlightedWord="Gallery" />
       {loading ? (
         <div className="text-center my-4">
           <p>Loading images...</p>

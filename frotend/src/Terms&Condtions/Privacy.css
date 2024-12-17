@@ -1,13 +1,13 @@
 /* Default styles */
 .content-container h1 {
-  font-size: 45px;
+  font-size: 30px;
   font-family: "Quicksand";
   font-weight: 700;
   line-height: 60px;
   color: #003e90;
 }
 .content-container h3 {
-  font-size: 40px;
+  font-size: 25px;
   font-family: "Quicksand";
   font-weight: 700;
   line-height: 60px;
@@ -20,7 +20,7 @@
   text-align: justify;
 }
 .content-container h2 {
-  font-size: 40px;
+  font-size: 20px;
   font-family: "Quicksand";
   font-weight: 700;
   line-height: 60px;
@@ -30,22 +30,22 @@
 /* Responsive styles */
 @media (max-width: 1024px) {
   .content-container h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
   .content-container h3 {
-    font-size: 35px;
+    font-size: 25px;
   }
   .content-container p {
     font-size: 16px;
   }
   .content-container h2 {
-    font-size: 35px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .content-container h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   .content-container h3 {
     font-size: 30px;

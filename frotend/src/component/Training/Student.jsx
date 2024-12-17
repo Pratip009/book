@@ -19,7 +19,7 @@ const Student = () => {
   };
 
   return (
-    <Container style={{margin:0,padding:0}}>
+    <Container style={{ margin: 0, padding: 0 }}>
       <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
         <img src={require("../../Image/ssworkshopneww11.png")} alt="" />
       </div>
@@ -51,9 +51,9 @@ const Student = () => {
             }}
           >
             Learning Needs regularly arrange student workshops in various fields
-            to impart practical approach and experiential learning in
-            students, This Workshop is designed to assist students in better
-            career decision making by identifying their potential.
+            to impart practical approach and experiential learning in students,
+            This Workshop is designed to assist students in better career
+            decision making by identifying their potential.
           </span>
 
           <List sx={{ width: "100%", margin: 0 }}>
@@ -171,7 +171,7 @@ const Student = () => {
 
       <Button
         style={{
-          width:"10%",
+          width: "10%",
           color: "#fff",
           backgroundColor: "#FF4E00",
           display: "flex",

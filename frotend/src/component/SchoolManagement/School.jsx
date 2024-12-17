@@ -13,6 +13,7 @@ import star from "../../Image/home/teamstar.png";
 
 import "./Schools.css";
 import { Col, Container, Row } from "react-bootstrap";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const feature = [
   { text: "Teacher's Training", bgColor: "#F5CCC1", imgSrc: redicon },
   { text: "Infrustructure Designing", bgColor: "#FDE1A4", imgSrc: yellowicon },
@@ -86,15 +87,10 @@ const School = () => {
 
         <Container>
           <div className="">
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <h1 className="about_head">School Management Service</h1>
-            </div>
+            <HeaderWithUnderline
+              sentence="School Management Service"
+              highlightedWord="Management Service"
+            />
             <p className="school_para">
               The Learning Needs team has expansive expertise on school
               management issues and can provide all necessary support in various
@@ -124,15 +120,10 @@ const School = () => {
             </p>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <h1 className="about_head">We Help People to Start Their School</h1>
-          </div>
+          <HeaderWithUnderline
+            sentence="We Help People to Start Their School"
+            highlightedWord="Start Their School"
+          />
           <div className="container py-5">
             <div className="row text-center">
               {features.slice(0, 6).map((feature, index) => (
@@ -191,15 +182,10 @@ const School = () => {
             </div>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <h1 className="about_head">Starting a New School!</h1>
-          </div>
+          <HeaderWithUnderline
+            sentence="Starting a New School!"
+            highlightedWord="New School!"
+          />
           <div style={{ display: "flex", justifyContent: "center" }}>
             <span className="school_para41">
               Our team has experience of developing and managing new schools
@@ -244,15 +230,11 @@ const School = () => {
             </Grid>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <h1 className="about_head">New Start-up School</h1>
-          </div>
+          
+          <HeaderWithUnderline
+            sentence="New Start-up School"
+            highlightedWord="Start-up School"
+          />
           <div className="container py-5">
             <div className="row">
               {feature.map((feature, index) => (
@@ -294,15 +276,11 @@ const School = () => {
             </div>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <h1 className="about_head">For Existing Schools</h1>
-          </div>
+          
+          <HeaderWithUnderline
+            sentence="For Existing Schools"
+            highlightedWord="Existing Schools"
+          />
           <div
             style={{
               display: "flex",
@@ -367,15 +345,11 @@ const School = () => {
           </Grid>
 
           <Container className="">
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <h1 className="about_head">Additional Support</h1>
-            </div>
+            
+            <HeaderWithUnderline
+            sentence="Additional Support"
+            highlightedWord="Additional Support"
+          />
             <p className="school_para41">Team can also assist with:</p>
             <Container>
               <Row>

@@ -4,6 +4,7 @@ import MetaData from "../component/layouts/MataData/MataData";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Container } from "react-bootstrap";
 const TermsAndConditionsPage = () => {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -11,6 +12,7 @@ const TermsAndConditionsPage = () => {
   return (
     <div className="terms-container" style={{ backgroundColor: "white" }}>
       <MetaData title="Terms and Conditions" />
+      <Container>
       <div
         className="content-container"
         style={{ marginTop: "2rem", backgroundColor: "white" }}
@@ -122,6 +124,7 @@ const TermsAndConditionsPage = () => {
         </p>
         <h2>Effective Date: 01-01-2024</h2>
       </div>
+      </Container>
     </div>
   );
 };

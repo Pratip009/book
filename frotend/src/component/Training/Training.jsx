@@ -13,6 +13,7 @@ import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
 import ProgramList from "./ProgramList";
 import Challenges from "./Challenges";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
     width: "100%",
@@ -87,20 +88,20 @@ const Training = () => {
             <container-fluid>
               <Challenges />
             </container-fluid>
-            <div style={{
-              display:'flex',
-              alignItems:'center',
-              justifyContent:'center'
-            }}>
-              <h1 className="about_head">Our Strength</h1>
-            </div>
+
+            <HeaderWithUnderline
+              sentence="Our Strength"
+              highlightedWord="Strength"
+            />
             <div>
               <TabList />
             </div>
 
-            <div className="training_head">
-              <h1 className="about_head">Way we deliver our session</h1>
-            </div>
+            
+            <HeaderWithUnderline
+              sentence="Way we deliver our session"
+              highlightedWord="our session"
+            />
             <div
               style={{
                 display: "flex",

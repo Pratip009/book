@@ -11,6 +11,7 @@ import underlineImage from "../../Image/home/underline.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const Programs = () => {
   return (
     <motion.section
@@ -21,18 +22,10 @@ const Programs = () => {
       viewport={{ once: true, amount: 0.7 }}
     >
       <header>
-        <h1
-          
-          className="program_head"
-        >
-          Explore Our Programs
-        </h1>
-       
-        {/* <img
-          src={underlineImage}
-          alt="Decorative underline"
-          className="underline-image1"
-        /> */}
+        <HeaderWithUnderline
+          sentence="Explore Our Programs"
+          highlightedWord="Programs"
+        />
       </header>
 
       <div className="Newcontainer">

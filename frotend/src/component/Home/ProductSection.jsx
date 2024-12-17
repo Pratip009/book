@@ -7,6 +7,7 @@ import "./ProductSection.css"; // Import any CSS specific to ProductSection
 import underline from "../../Image/home/underline.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 function ProductSection({ products }) {
   return (
     <motion.div
@@ -17,15 +18,10 @@ function ProductSection({ products }) {
       viewport={{ once: true, amount: 0.7 }}
     >
       <header>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h1 className="about_head">Choose the right product</h1>
-        </div>
+        <HeaderWithUnderline
+          sentence="Choose the right product"
+          highlightedWord="product"
+        />
 
         <p className="product-description">
           Our product ensures you get the best quality, performance, and value,

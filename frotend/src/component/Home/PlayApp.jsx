@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import GooglePlay from "../../Image/Footer/google-play-black.svg";
 import './PlayApp.css'
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 export default function MediaControlCard() {
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -65,7 +66,15 @@ export default function MediaControlCard() {
           style={{ textAlign: "start" }}
         >
           <div style={{ width: "100%", margin: "auto" }} className="playapp_head">
-          <h1 className="about_head3">Educate Yourself</h1>
+          <div style={{
+            display:'flex',
+            alignItems:'flex-start'
+          }}>
+          <HeaderWithUnderline
+          sentence="Educate Yourself"
+          highlightedWord="Yourself"
+        />
+          </div>
             <h2 className="app_subheading">
               Books and resources for better learning
             </h2>

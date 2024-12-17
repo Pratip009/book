@@ -69,7 +69,7 @@ body {
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
-.Testimonial_container span {
+.Testimonial_container h6 {
   display: flex;
   justify-content: center;
   align-items: center;

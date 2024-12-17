@@ -11,6 +11,7 @@ import mainImg from "../Image/Product/contactImg.png";
 import pattern from "../Image/Product/Frame 18.png";
 import bookImg from "../Image/home/teambook.png";
 import star from "../Image/home/teamstar.png";
+import HeaderWithUnderline from "../component/UnderLineAnimation/HeaderWithUnderline";
 const useStyles = makeStyles((theme) => ({
   root_contactus: {
     padding: "8rem 2rem",
@@ -250,16 +251,10 @@ const ContactForm = () => {
             <Row>
               <Col xs={12} md={6} className="mx-auto">
                 <div className="circle_text">
-                  <h1
-                    style={{
-                      fontSize: "var(--font-h2)",
-                      marginTop: "2rem",
-                      fontFamily: "Nunito",
-                      fontWeight: 700,
-                    }}
-                  >
-                    <span className="highlight">Contact Us</span>{" "}
-                  </h1>
+                  <HeaderWithUnderline
+                    sentence="Contact Us"
+                    highlightedWord="Contact Us"
+                  />
                 </div>
                 <div style={{ padding: ".5rem" }}>
                   <h2
@@ -353,16 +348,10 @@ const ContactForm = () => {
               <Col xs={12} md={6} className="mx-auto">
                 <div style={{ padding: ".5rem" }}>
                   <div className="circle_text">
-                    <h1
-                      style={{
-                        fontSize: "var(--font-h2)",
-                        marginTop: "2rem",
-                        fontFamily: "Nunito",
-                        fontWeight: 700,
-                      }}
-                    >
-                      <span className="highlight">Support Form</span>{" "}
-                    </h1>
+                    <HeaderWithUnderline
+                      sentence="Support Form"
+                      highlightedWord="Support Form"
+                    />
                   </div>
                   <p
                     style={{
@@ -553,8 +542,7 @@ const ContactForm = () => {
                         padding: "12px",
                         fontSize: "16px",
                         fontWeight: "bold",
-                        background:
-                          "linear-gradient(90deg, #0062E6 0%, #33AEFF 100%)", // Gradient button
+                        background: "#FF4E00", // Gradient button
                         color: "#fff",
                         borderRadius: "10px",
                         border: "none",

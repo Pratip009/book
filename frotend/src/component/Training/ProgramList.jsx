@@ -7,6 +7,7 @@ import star from "../../Image/home/Vector.png";
 import Tree from "../../Image/home/teamrocket.png";
 import { Container } from "@mui/material";
 import "./ProgramList.css"; // Import external CSS file
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 
 const programs = [
   "Effective Communication",
@@ -46,16 +47,11 @@ const ProgramList = () => (
     <img src={Globe} alt="Globe" className="globe" />
 
     {/* Title */}
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <h1 className="about_head">List of Programs</h1>
-    </div>
 
+    <HeaderWithUnderline
+      sentence="List of Programs"
+      highlightedWord="Programs"
+    />
     {/* Subtitle */}
     <p>
       There are many different programs offered by Learning Needs that will

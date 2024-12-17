@@ -7,7 +7,7 @@ import { MdOutlineCheckCircle } from "react-icons/md";
 import callIcon from "../../Image/home/Background.png";
 import underlineImg from "../../Image/home/underline.png";
 import { Link } from "react-router-dom";
-
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
 const AboutUsSection = () => {

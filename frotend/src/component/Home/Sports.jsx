@@ -7,6 +7,7 @@ import star from "../../Image/home/teamstar.png";
 import "./Sports.css";
 import { Container } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 
 export default function Sports() {
   const trainingItems = [
@@ -30,15 +31,11 @@ export default function Sports() {
         />
       </container-fluid>
       <Container>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h1 className="about_head">Fitness Development Programs</h1>
-        </div>
+       
+        <HeaderWithUnderline
+            sentence="Fitness Development Programs"
+            highlightedWord="Fitness Development"
+          />
         <p className="sports_paragraph">
           Our Sports training for children is essential for promoting physical
           health, building teamwork, and developing essential motor skills. It
@@ -55,15 +52,11 @@ export default function Sports() {
         </p>
       </Container>
       <Container>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h1 className="about_head">Sports training categories include</h1>
-        </div>
+        
+        <HeaderWithUnderline
+            sentence="Sports training categories include"
+            highlightedWord="categories include"
+          />
       </Container>
       <Container className="mt-4">
         <Row className="g-3">

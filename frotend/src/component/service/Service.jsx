@@ -10,6 +10,7 @@ import mainImg from "../../Image/Product/essentialImg.png";
 import pattern from "../../Image/Product/Frame 18.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
     marginTop: "110px",
@@ -48,13 +49,11 @@ const Service = () => {
       </container-fluid>
 
       <Container className="servicebg">
-        <div style={{
-          display:'flex',
-          alignItems:'center',
-          justifyContent:'center'
-        }}>
-          <h1 className="about_head">Services of Learning Needs</h1>
-        </div>
+        
+        <HeaderWithUnderline
+            sentence="Services of Learning Needs"
+            highlightedWord="Services"
+          />
         <p
          className="service_description_tag"
         >
@@ -94,7 +93,10 @@ const Service = () => {
         <img src={require("../../Image/servicessss.png")} alt="" />
       </Container>
       <Container style={{ marginBottom: "10rem" }}>
-        <h1 className="about_head">Learning Needs Core Serve Solutions</h1>
+        <HeaderWithUnderline
+            sentence="Learning Needs Core Serve Solutions"
+            highlightedWord="Core Serve Solutions"
+          />
         <Pricing />
       </Container>
     </container-fluid>

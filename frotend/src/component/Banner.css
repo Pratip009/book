@@ -1,8 +1,11 @@
 /* Banner.css */
+.banner-main{
+  background: linear-gradient(102.64deg, #06254f 3.91%, #105dc3 97.02%);
+}
 .banner-container {
   width: 100%;
   height: 290px; /* Default height for larger screens */
-  background: linear-gradient(102.64deg, #06254f 3.91%, #105dc3 97.02%);
+  background: transparent;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -23,7 +26,7 @@
 .icon-left {
   position: absolute;
   top: 10%;
-  left: 65%;
+  left: 60%;
   width: 54px;
   height: auto;
   transform: rotate(32.46deg);
