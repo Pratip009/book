@@ -40,6 +40,7 @@
     "jspdf": "^2.5.1",
     "mdb-react-ui-kit": "^8.0.0",
     "node-sass": "^9.0.0",
+    "qs": "^6.13.1",
     "react": "^18.2.0",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",

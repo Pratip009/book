@@ -190,6 +190,7 @@
   width: 91px;
   height: auto;
   opacity: 1;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 .phone-link {
   color: inherit; /* Make link color inherit from parent */
@@ -206,8 +207,19 @@
   width: 121px;
   height: auto;
   opacity: 1;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
-
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -10px
+    ); /* Adjust the value to control the float height */
+  }
+}
 /* Responsive Styles */
 .actionSection {
   display: flex;
@@ -216,7 +228,6 @@
 }
 
 @media (max-width: 1440px) {
-  
 }
 @media (max-width: 1024px) {
   .backgroundBoxOne {
@@ -616,7 +627,7 @@
     height: 2px; /* Set a visible height */
     /* Add a color to make it visible */
     position: absolute;
-    top: 51%; /* Adjust as needed */
+    top: 51.5%; /* Adjust as needed */
     left: 53%;
     transform: translate(-50%, -50%);
     z-index: 0; /* Ensure it's visible */

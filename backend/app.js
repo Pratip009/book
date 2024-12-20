@@ -16,7 +16,9 @@ const payment = require("./route/paymentRoute");
 const task = require("./route/taskRoute");
 const usermessage = require("./route/userMessageRoute");
 const adminMessage = require("./route/adminMessageRoute");
-const blog = require("./route/blogRoutes")
+const blog = require("./route/blogRoutes");
+const contactRoutes = require('./route/contactRoutes');
+const team = require('./route/teamRoutes')
 
 
 // for req.cookie to get token while authentication
@@ -41,7 +43,9 @@ app.use("/api/v1", payment);
 app.use("/api/v1", task);
 app.use("/api/v1", usermessage);
 app.use("/api/v1", adminMessage);
-app.use("/api/v1",blog)
+app.use("/api/v1",blog);
+app.use('/api/v1', contactRoutes);
+app.use('/api/v1',team)
 
 // Serve static files from the frontend build directory
 const __dirname1 = path.resolve();

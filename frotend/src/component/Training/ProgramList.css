@@ -93,17 +93,18 @@
   flex-wrap: wrap;
   justify-content: center;
   z-index: 2;
+ 
 }
 
 /* Program Card Styles */
 .program-card {
   height: auto; /* Ensure the height adjusts to the content dynamically */
   background-color: #fff1eb;
-  padding: 20px 15px;
+  padding: 15px 15px;
   border-radius: 12px;
   position: relative;
   z-index: 2; /* Ensure program boxes appear above clipart */
-  margin-bottom: 0.5rem; /* Add consistent spacing between cards */
+   /* Add consistent spacing between cards */
   display: flex;
   align-items: center;
   justify-content: flex-start;

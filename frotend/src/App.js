@@ -64,6 +64,7 @@ const LazyBlogPost = React.lazy(() => import("./component/Admin/BlogPost"));
 const LazyOrderList = React.lazy(() => import("./component/Admin/OrderList"));
 
 const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
+const LazyTeam = React.lazy(() => import("./component/Admin/Team.jsx"));
 const LazyAdminContact = React.lazy(() =>
   import("./component/Admin/ContactForm.jsx")
 );
@@ -631,6 +632,11 @@ function App() {
               isAdmin={true}
               path="/admin/blog"
               component={LazyBlogPost}
+            />
+            <PrivateRoute
+              isAdmin={true}
+              path="/admin/team"
+              component={LazyTeam}
             />
             <PrivateRoute
               isAdmin={true}

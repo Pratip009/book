@@ -36,7 +36,7 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>School Management Services</h3>
-                  <p style={{ width: "90%", textAlign: "justify" }}>
+                  <p style={{ width: "90%", textAlign: "justify" , textJustify:'inter-word' }}>
                     From vision to reality, expert school management guides you
                     through every step of establishing a thriving educational
                     institution.
@@ -61,7 +61,7 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Training Program</h3>
-                  <p style={{ width: "90%", textAlign: "justify" }}>
+                  <p style={{ width: "90%", textAlign: "justify", textJustify:'inter-word' }}>
                     Bridging the gap. Our inclusive training empowers teachers,
                     engages students, and equips parents to foster a
                     collaborative learning environment.
@@ -83,7 +83,7 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Sports Training</h3>
-                  <p style={{ width: "90%", textAlign: "justify" }}>
+                  <p style={{ width: "90%", textAlign: "justify", textJustify:'inter-word' }}>
                     From the classroom to the playing field, our comprehensive
                     training nurtures athletic talent and fosters a love for
                     physical fitness.
@@ -103,9 +103,9 @@ const Programs = () => {
               <div className="card-content">
                 <div className="text-content">
                   <h3>Services</h3>
-                  <p style={{ width: "90%", textAlign: "justify" }}>
+                  <p style={{ width: "90%", textAlign: "justify", textJustify:'inter-word' }}>
                     From essential supplies to expert services, we support
-                    schools in creating an inspiring and effective learning
+                    schools in creating an inspiring effective learning
                     environment.
                   </p>
                   <Link to="/service" aria-label="Enroll in Services">

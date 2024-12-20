@@ -98,6 +98,7 @@
   width: 100px;
   height: 100px;
   opacity: 1;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
 .product-section::after {
@@ -110,6 +111,7 @@
   height: 100px;
   opacity: 1;
   z-index: 1;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
 

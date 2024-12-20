@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Products.css";
 import "aos/dist/aos.css";
 import pattern from "../../Image/Product/Frame 19.png";
-import AOS from "aos";
+
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";

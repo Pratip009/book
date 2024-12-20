@@ -17,7 +17,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
-
+import { baseURL } from "../../utils/constant";
 const navLinkStyle = {
   fontFamily: "Nunito",
   textDecoration: "none",
@@ -44,16 +44,26 @@ function Header2() {
 
   useEffect(() => {
     axios
-      .get("https://learningneeds-strapi-11ta.onrender.com/api/phoneand-emails")
+      .get(`${baseURL}/contacts`)
       .then((response) => {
-        const data = response.data?.data[0]?.attributes;
-        if (data) {
-          setPhone(data.phone);
-          setEmail(data.email);
+        console.log("API Response:", response.data); // Log the entire response
+        const contacts = response.data; // Adjust based on API response structure
+
+        // If data is an array, log each contact
+        if (Array.isArray(contacts)) {
+          contacts.forEach((contact, index) => {
+            console.log(`Contact ${index + 1}:`, contact);
+          });
+        }
+
+        // Example: Set phone and email for the first contact
+        if (contacts?.[0]) {
+          setPhone(contacts[0].number || "");
+          setEmail(contacts[0].email || "");
         }
       })
       .catch((error) => {
-        console.error("Error fetching phone and email data:", error);
+        console.error("Error fetching contacts:", error); // Log error details
       });
   }, []);
 

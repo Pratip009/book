@@ -29,9 +29,12 @@ const starIcon = require("../Image/home/teamstar.png");
 
 const Aboutus = () => {
   return (
-    <Container fluid style={{
-      padding:0
-    }}>
+    <Container
+      fluid
+      style={{
+        padding: 0,
+      }}
+    >
       <Banner
         title="Innovation In Every Step"
         mainImage={mainImg}
@@ -121,7 +124,7 @@ const Aboutus = () => {
                 }}
                 variant="contained"
               >
-                Read More..
+                Read More
               </Button>
             </Col>
           </Row>
@@ -230,7 +233,7 @@ const Aboutus = () => {
                 }}
                 variant="contained"
               >
-                Read More..
+                Read More
               </Button>
             </Col>
 

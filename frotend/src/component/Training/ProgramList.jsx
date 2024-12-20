@@ -1,11 +1,11 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import StarIcon from "@mui/icons-material/Star";
+
 import Book from "../../Image/home/teambook.png";
 import Globe from "../../Image/home/globe1.png";
 import star from "../../Image/home/Vector.png";
 import Tree from "../../Image/home/teamrocket.png";
-import { Container } from "@mui/material";
+
 import "./ProgramList.css"; // Import external CSS file
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 

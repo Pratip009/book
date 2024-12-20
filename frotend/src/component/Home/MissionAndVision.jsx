@@ -6,6 +6,7 @@ import underline from "../../Image/home/underline.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
+
 const MissionAndVision = () => {
   const [notices, setNotices] = useState([]);
 
@@ -39,15 +40,6 @@ const MissionAndVision = () => {
     >
       {/* Section for Goals and Objectives */}
       <header>
-        {/* <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2 className="about_head">Goals And Objective</h2>
-        </div> */}
         <HeaderWithUnderline
           sentence="Goals And Objective"
           highlightedWord="Goals And Objective"
@@ -118,24 +110,22 @@ const MissionAndVision = () => {
                 }}
               >
                 {notices.map((notice) => (
-                  <li key={notice.id}>
-                    <ListItem>
-                      <ListItemIcon sx={{ minWidth: 32 }}>
-                        <StarIcon fontSize="small" sx={{ color: "#FF4E00" }} />
-                      </ListItemIcon>
-                      <ListItemText
-                        primary={notice.attributes.notices}
-                        primaryTypographyProps={{
-                          style: {
-                            fontSize: "18px",
-                            fontFamily: "Nunito",
-                            color: "black",
-                          },
-                        }}
-                        sx={{ marginLeft: 0 }}
-                      />
-                    </ListItem>
-                  </li>
+                  <ListItem key={notice.id}>
+                    <ListItemIcon sx={{ minWidth: 32 }}>
+                      <StarIcon fontSize="small" sx={{ color: "#FF4E00" }} />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={notice.attributes.notices}
+                      primaryTypographyProps={{
+                        style: {
+                          fontSize: "18px",
+                          fontFamily: "Nunito",
+                          color: "black",
+                        },
+                      }}
+                      sx={{ marginLeft: 0 }}
+                    />
+                  </ListItem>
                 ))}
               </ul>
             </div>

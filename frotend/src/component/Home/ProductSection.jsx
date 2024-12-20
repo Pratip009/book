@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./ProductSection.css"; // Import any CSS specific to ProductSection
-import underline from "../../Image/home/underline.png";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";

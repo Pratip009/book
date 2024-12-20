@@ -204,6 +204,28 @@ function Sidebar() {
                 </li>
               </Link>
               <Link
+                to="/admin/contact"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <li className={classes.sideBarMenuItem}>
+                  <SchoolIcon fontSize="large" />
+                  <span className={classes.sideBarMenuItem_text}>
+                    Contact-Header
+                  </span>
+                </li>
+              </Link>
+              <Link
+                to="/admin/team"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <li className={classes.sideBarMenuItem}>
+                  <SchoolIcon fontSize="large" />
+                  <span className={classes.sideBarMenuItem_text}>
+                    Team
+                  </span>
+                </li>
+              </Link>
+              <Link
                 to="/admin/news"
                 style={{ color: "inherit", textDecoration: "none" }}
               >

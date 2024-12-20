@@ -1,43 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import "aos/dist/aos.css";
 import "./Training.css";
 import { Grid } from "@material-ui/core";
 import TabList from "./TabList";
-import StarIcon from "@mui/icons-material/Star";
-import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "react-bootstrap";
 import Banner from "../Banner";
 import mainImg from "../../Image/Product/trainingImg.png";
 import pattern from "../../Image/Product/Frame 20.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
-import ProgramList from "./ProgramList";
+
 import Challenges from "./Challenges";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
-const useStyles = makeStyles((theme) => ({
-  imageContainer: {
-    width: "100%",
-    height: "400px",
-    overflow: "hidden",
-    [theme.breakpoints.down("sm")]: {
-      height: "200px", // Adjust height for small screens
-    },
-    [theme.breakpoints.down("xs")]: {
-      height: "150px", // Adjust height for extra small screens
-    },
-  },
-  image: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    objectPosition: "center",
-  },
-}));
+
 const Training = () => {
+  const ProgramList = React.lazy(() => import("./ProgramList"));
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const classes = useStyles();
+
   return (
     <container-fluid>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -63,6 +44,7 @@ const Training = () => {
             <Container
               className="training_header"
               style={{
+                padding: 0,
                 marginTop: "2rem",
                 marginBottom: "2rem",
               }}
@@ -82,9 +64,15 @@ const Training = () => {
                 ever increasing competitive and diverse business environment.
               </p>
             </Container>
-
-            <ProgramList />
-
+            <Container style={{
+              display:'flex',
+              alignItems:'center',
+              justifyContent:'center'
+            }}>
+              <Suspense fallback={<div>Loading...</div>}>
+                <ProgramList />
+              </Suspense>
+            </Container>
             <container-fluid>
               <Challenges />
             </container-fluid>
@@ -97,7 +85,6 @@ const Training = () => {
               <TabList />
             </div>
 
-            
             <HeaderWithUnderline
               sentence="Way we deliver our session"
               highlightedWord="our session"

@@ -55,7 +55,7 @@ export default function Wellcome2() {
           }}
           variant="contained"
         >
-          Read More..
+          Read More
         </Button>
       </Link>
     </div>

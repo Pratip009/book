@@ -7,9 +7,10 @@ import { MdOutlineCheckCircle } from "react-icons/md";
 import callIcon from "../../Image/home/Background.png";
 import underlineImg from "../../Image/home/underline.png";
 import { Link } from "react-router-dom";
-import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
+import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const AboutUsSection = () => {
 
 
@@ -26,7 +27,7 @@ const AboutUsSection = () => {
 
   return (
     <motion.section
-      className="Aboutcontainer container-fluid d-flex justify-content-center align-items-center z-1"
+      className="Aboutcontainer container-fluid d-flex justify-content-center align-items-center z-1 "
       variants={fadeIn("up", 0.2)}
       initial="hidden"
       whileInView={"show"}
@@ -77,7 +78,7 @@ const AboutUsSection = () => {
         <div className="col-lg-6 col-md-6 mainAboutContainer">
           <h3 className="subheading">"Simply The Best"</h3>
           <h2 className="heading">Our Services Help You Succeed in Business</h2>
-
+          
           {/* Underline Image */}
           <div className="d-flex justify-content-center justify-content-md-start">
             <img

@@ -243,6 +243,7 @@
   height: auto;
   top: 5%;
   left: 0;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
 .rocket-icon {
@@ -250,6 +251,7 @@
   height: auto;
   top: 20%;
   right: 10%;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
 .sun-icon {
@@ -257,6 +259,7 @@
   height: auto;
   bottom: 10%;
   right: 0;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
 @media (max-width: 1440px) {
@@ -362,15 +365,13 @@
 }
 
 @media (max-width: 768px) {
-  .program_head{
+  .program_head {
     font-size: 20px !important;
- 
   }
   .programs-container h2 {
     font-size: 35px;
- 
   }
-  .program_head::after{
+  .program_head::after {
     height: 0px;
   }
   .Newcontainer {
@@ -391,7 +392,7 @@
     height: auto;
     background-color: #fff1eb;
     text-align: center;
-padding: 0;
+    padding: 0;
     position: relative;
   }
   .icon12,
@@ -399,7 +400,6 @@ padding: 0;
   .icon3,
   .icon4 {
     margin: 0 !important;
-   
   }
   .programs-container h2 {
     font-size: 35px;
@@ -468,23 +468,27 @@ padding: 0;
   }
 }
 
-
 @media (max-width: 425px) {
+  .text-content p {
   
-  .program_head{
-    font-size: 20px !important;
- 
+  text-justify: inter-word;
+  word-spacing:0.1em;
+  hyphens: auto;
+  line-height: 1.6;
   }
-  .program_head::after{
+  .program_head {
+    font-size: 20px !important;
+  }
+  .program_head::after {
     height: 5px !important;
   }
-  
 }
 @media (max-width: 320px) {
-  
+  .text-content p {
+    text-justify: inter-word;
+  }
   .program_head {
     font-size: 20px;
- 
   }
   .Newcontainer {
     width: 100%;

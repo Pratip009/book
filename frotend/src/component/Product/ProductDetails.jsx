@@ -43,7 +43,9 @@ const ProductDetails = () => {
   const { product, loading, error, success } = useSelector(
     (state) => state.productDetails
   );
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Reset scroll to top
+  }, []);
   useEffect(() => {
     if (error) {
       alert.error(error);

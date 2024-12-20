@@ -32,6 +32,7 @@
   transform: rotate(32.46deg);
   transform-origin: center;
   z-index: 1;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
 .banner-title {
@@ -63,6 +64,7 @@
   width: 47px;
   height: auto;
   z-index: 1;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
 /* Responsive Design */

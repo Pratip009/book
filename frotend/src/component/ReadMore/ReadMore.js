@@ -333,7 +333,7 @@ const ReadMore = ({ header, shortContent, longContent }) => {
         variant="contained"
         onClick={() => setCollapse((prev) => !prev)}
       >
-        Read More..
+        Read More
       </Button>
     </div>
   );
