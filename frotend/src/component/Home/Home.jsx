@@ -6,9 +6,6 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";
 import Wellcome from "./Wellcome";
-import construction from "../../Image/home/cons.jpg";
-// Bootstrap modal
-import { Modal } from "react-bootstrap"; // Import Modal from react-bootstrap
 
 // Lazy load non-essential components
 const HeroSlider = lazy(() => import("./HeroSilder"));
@@ -21,7 +18,7 @@ const MissionAndVision = lazy(() => import("./MissionAndVision"));
 
 const Home = () => {
   const [notices, setNotices] = useState([]);
-  const [modalVisible, setModalVisible] = useState(true); // Modal visibility state
+  const [showPopup, setShowPopup] = useState(false); // State for popup visibility
   const alert = useAlert();
   const dispatch = useDispatch();
   const {
@@ -58,60 +55,38 @@ const Home = () => {
     dispatch(getProduct());
   }, [dispatch, error, alert]);
 
+  // Show popup after the page has fully loaded
+  useEffect(() => {
+    const handlePageLoad = () => {
+      setShowPopup(true);
+    };
+    window.addEventListener("load", handlePageLoad);
+
+    return () => {
+      window.removeEventListener("load", handlePageLoad);
+    };
+  }, []);
+
   return (
     <>
       <MataData title="Learning Needs" />
       <main className="Home_Page">
-        {/* Bootstrap Modal for "Website Under Construction" */}
-        <Modal
-          show={modalVisible}
-          onHide={() => setModalVisible(false)}
-          centered
-          style={{
-            display:'flex',
-            alignItems:'center',
-            justifyContent:'center'
-          }}
-        >
-          <Modal.Body>
-            <div className="text-center">
-              <img
-                src="https://media.istockphoto.com/id/1171943134/vector/building-under-construction-flat-illustration.jpg?s=612x612&w=0&k=20&c=ZdmcPBWmbMT45fVofLiNziYtQRcPMKL5GVahNHGwNGE=" // You can replace this with your own image
-                alt="Under Construction"
-                className="modal-image"
-              />
-              <h2
-                style={{
-                  fontFamily: "Nunito",
-                }}
-              >
-                Website Under Construction
-              </h2>
-              <p
-                style={{
-                  fontFamily: "Nunito",
-                }}
-              >
-                We're working hard to bring you an amazing experience. Stay
-                tuned!
-              </p>
-              <button
-                className=""
-                onClick={() => setModalVisible(false)}
-                style={{
-                  background: "#ff4e00",
-                  color: "white",
-                  padding: "7px 10px",
-                  border: "none",
-                  fontFamily: "Nunito",
-                  borderRadius: "10px",
-                }}
-              >
-                Close
-              </button>
-            </div>
-          </Modal.Body>
-        </Modal>
+        {/* Popup Alert */}
+        {showPopup && (
+          <div className="popup">
+            <button className="close-btn" onClick={() => setShowPopup(false)}>
+              ✖
+            </button>
+            <p>
+              <strong>We are updating!</strong>
+            </p>
+            <p>
+              Our website is undergoing some improvements to serve you better.
+              During this time, you might experience minor changes.
+            </p>
+            <p>Thank you for your patience and understanding!</p>
+          </div>
+        )}
 
         <Suspense fallback={<Loader />}>
           <HeroSlider />
