@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {
-  TextField,
-  FormControlLabel,
-  Checkbox,
-  Button,
-  Typography,
-  Grid,
-  Avatar,
-} from "@material-ui/core";
+
 import useStyles from "./LoginFromStyle";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import { login, clearErrors } from "../../actions/userAction";
-import CricketBallLoader from "../layouts/loader/Loader";
+
 import { useAlert } from "react-alert";
 import { Link } from "react-router-dom";
 import MetaData from "../layouts/MataData/MataData";
@@ -31,7 +21,7 @@ export default function Login() {
     (state) => state.userData
   );
 
-  const classes = useStyles();
+
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -76,96 +66,110 @@ export default function Login() {
     <>
       <MetaData title={"Login"} />
       {loading ? (
-        <CricketBallLoader />
+        <div className="text-center">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
       ) : (
-        <div className={classes.formContainer}>
-          <form className={classes.form}>
-            <Avatar className={classes.avatar}>
-              <LockOpenIcon />
-            </Avatar>
-            <Typography variant="h5" component="h1" className={classes.heading}>
-              Sign in to Your Account
-            </Typography>
-            <TextField
-              label="Email"
-              variant="outlined"
-              fullWidth
-              className={`${classes.emailInput} ${classes.textField}`}
-              value={email}
-              onChange={handleEmailChange}
-              error={!isValidEmail && email !== ""}
-              helperText={
-                !isValidEmail && email !== ""
-                  ? "Please enter a valid email address."
-                  : ""
-              }
-            />
-            <TextField
-              label="Password"
-              variant="outlined"
-              type={showPassword ? "text" : "password"}
-              fullWidth
-              className={`${classes.passwordInput} ${classes.textField}`}
-              InputProps={{
-                endAdornment: (
-                  <Button
-                    variant="outlined"
-                    className={classes.showPasswordButton}
-                    onClick={handleShowPasswordClick}
-                  >
-                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                  </Button>
-                ),
-              }}
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            <Grid container className={classes.rememberMeContainer}>
-              <Grid item>
-                <FormControlLabel
-                  control={<Checkbox color="primary" />}
-                  label="Remember me"
-                />
-              </Grid>
-              <Grid item>
-                <Link
-                  to="/password/forgot"
-                  className={classes.forgotPasswordLink}
-                >
-                  Forgot your password?
-                </Link>
-              </Grid>
-            </Grid>
-            <Typography
-              variant="body2"
-              className={classes.termsAndConditionsText}
-            >
-              I accept the Learning Needs Terms of Use and acknowledge Learning
-              Needs will use my information in accordance with its
-              <Link to="/policy/privacy" className={classes.privacyText}>
-                Privacy Policy.
-              </Link>
-            </Typography>
-            <Button
-              variant="contained"
-              className={classes.loginButton}
-              fullWidth
-              disabled={isSignInDisabled}
-              onClick={handleLoginSubmit}
-            >
-              Sign in
-            </Button>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ marginTop: "1rem" }}
-            >
-              Don't have an account?
-              <Link to="/signup" className={classes.createAccount}>
-                Create Account
-              </Link>
-            </Typography>
-          </form>
+        <div className="container mt-5">
+          <div className="row justify-content-center">
+            <div className="col-md-6 col-lg-4">
+              <div className="card shadow-sm">
+                <div className="card-body">
+                  <div className="text-center mb-4">
+                    <i className="bi bi-lock fs-1 text-primary"></i>
+                  </div>
+                  <h5 className="text-center mb-4">Sign in to Your Account</h5>
+                  <form onSubmit={handleLoginSubmit}>
+                    <div className="mb-3">
+                      <label htmlFor="email" className="form-label">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        className={`form-control ${
+                          !isValidEmail && email !== "" ? "is-invalid" : ""
+                        }`}
+                        id="email"
+                        value={email}
+                        onChange={handleEmailChange}
+                      />
+                      {!isValidEmail && email !== "" && (
+                        <div className="invalid-feedback">
+                          Please enter a valid email address.
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="mb-3">
+                      <label htmlFor="password" className="form-label">
+                        Password
+                      </label>
+                      <div className="input-group">
+                        <input
+                          type={showPassword ? "text" : "password"}
+                          className="form-control"
+                          id="password"
+                          value={password}
+                          onChange={handlePasswordChange}
+                        />
+                        <button
+                          className="btn btn-outline-secondary"
+                          type="button"
+                          onClick={handleShowPasswordClick}
+                        >
+                          {showPassword ? "Hide" : "Show"}
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="d-flex justify-content-between align-items-center mb-3">
+                      <div>
+                        <input type="checkbox" id="rememberMe" />
+                        <label htmlFor="rememberMe" className="ms-2">
+                          Remember me
+                        </label>
+                      </div>
+                      <Link
+                        to="/password/forgot"
+                        className="text-decoration-none"
+                      >
+                        Forgot your password?
+                      </Link>
+                    </div>
+
+                    <p>
+                      By logging in, you agree to our{" "}
+                      <Link
+                        to="/policy/privacy"
+                        className="text-decoration-none"
+                      >
+                        Privacy Policy.
+                      </Link>
+                    </p>
+
+                    <button
+                      type="submit"
+                      className="btn btn-primary w-100"
+                      disabled={isSignInDisabled}
+                    >
+                      Sign in
+                    </button>
+                  </form>
+
+                  <div className="text-center mt-4">
+                    <p>
+                      Don't have an account?{" "}
+                      <Link to="/signup" className="text-decoration-none">
+                        Create Account
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </>

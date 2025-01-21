@@ -295,9 +295,9 @@ function Header2() {
               <Link to="/cart" className="me-3">
                 <CartIcon style={{ color: "black" }} />
               </Link>
-              <Link>
+              <span>
                 <ProfileModal user={user} isAuthenticated={isAuthenticated} />
-              </Link>
+              </span>
               <Nav className="d-lg-none">
                 <Nav.Link onClick={toggleNavbar}>
                   <FaBars size={24} />
