@@ -224,6 +224,9 @@
 }
 
 @media (max-width: 575px) {
+  .product-description{
+    font-size: 15px;
+  }
   .product-section .underline-image2 {
     display: block;
     margin: 0 auto;
@@ -272,6 +275,9 @@
 
 /* Media Query for Large Mobile (425px) */
 @media (max-width: 425px) {
+  .product-description{
+    font-size: 15px;
+  }
   .product-section .underline-image2 {
     display: block;
     margin: 0 auto;
