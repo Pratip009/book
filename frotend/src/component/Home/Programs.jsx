@@ -7,7 +7,7 @@ import school from "../../Image/programs/school.png";
 import training from "../../Image/programs/training.png";
 import sports from "../../Image/programs/sports.png";
 import development from "../../Image/programs/development.png";
-import underlineImage from "../../Image/home/underline.png";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
