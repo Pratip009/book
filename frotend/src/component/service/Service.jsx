@@ -49,26 +49,16 @@ const Service = () => {
       </container-fluid>
 
       <Container className="servicebg">
-        
         <HeaderWithUnderline
-            sentence="Services of Learning Needs"
-            highlightedWord="Services"
-          />
-        <p
-         className="service_description_tag"
-        >
+          sentence="Services of Learning Needs"
+          highlightedWord="Services"
+        />
+        <p className="service_description_tag">
           {" "}
           Our services help you succeed in business
         </p>
 
-        <p
-          style={{
-            fontFamily: "Nunito",
-            textAlign: "justify",
-            display: "inline-block",
-            fontSize: "14px",
-          }}
-        >
+        <p className="school_para">
           Learning Needs actively works with various reliable preferred
           associates from different walks of life. This exercise ensures
           durable, timely and quality supply of school needs at reasonable
@@ -94,9 +84,9 @@ const Service = () => {
       </Container>
       <Container style={{ marginBottom: "10rem" }}>
         <HeaderWithUnderline
-            sentence="Learning Needs Core Serve Solutions"
-            highlightedWord="Core Serve Solutions"
-          />
+          sentence="Learning Needs Core Serve Solutions"
+          highlightedWord="Core Serve Solutions"
+        />
         <Pricing />
       </Container>
     </container-fluid>

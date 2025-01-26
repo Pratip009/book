@@ -25,7 +25,7 @@ const Parent = () => {
           fontFamily: "Nunito",
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "14px",
+          fontSize: "18px",
         }}
       >
         Most of the parents always worry about their children & don’t know how

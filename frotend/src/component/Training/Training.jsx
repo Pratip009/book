@@ -49,14 +49,14 @@ const Training = () => {
                 marginBottom: "2rem",
               }}
             >
-              <p>
+              <p className="">
                 Soft skills’ Behavioural Shift training is essential because we
                 do not have it in our academic curricula.
                 <br />
                 However it can be developed through continuous training.
               </p>
 
-              <p>
+              <p className="">
                 Our skill based training programs are designed to encourage
                 ‘awareness’ in one’s behavioural patterns. Learning Needs
                 international quality Training & Development Programs are

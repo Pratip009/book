@@ -27,7 +27,7 @@ const Student = () => {
         style={{
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "14px",
+          fontSize: "18px",
         }}
       >
         We offer educative workshops for children, parents and teachers.
@@ -47,7 +47,7 @@ const Student = () => {
             style={{
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "14px",
+              fontSize: "18px",
             }}
           >
             Learning Needs regularly arrange student workshops in various fields
