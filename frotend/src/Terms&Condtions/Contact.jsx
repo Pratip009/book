@@ -271,7 +271,7 @@ const ContactForm = () => {
                   <p
                     style={{
                       fontFamily: "Nunito",
-                      fontSize: "var(--font-span)",
+                      fontSize: "15px",
                     }}
                   >
                     Catch us anytime you want? Fill out our support form below,
@@ -293,7 +293,7 @@ const ContactForm = () => {
                   <p
                     style={{
                       fontFamily: "Nunito",
-                      fontSize: "var(--font-span)",
+                      fontSize: "15px",
                     }}
                   >
                     We have live chat available, look for the chat icon in the
@@ -357,7 +357,7 @@ const ContactForm = () => {
                     style={{
                       textAlign: "center",
                       fontFamily: "Nunito",
-                      fontSize: "var(--font-span)",
+                      fontSize: "15px",
                     }}
                   >
                     Need a quicker answer? Look for our chat icon on the right

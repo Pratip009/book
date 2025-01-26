@@ -184,7 +184,7 @@
   }
 
   .description {
-    font-size: 14px;
+    font-size: 15px;
     width: auto; /* Allow width to adjust */
     height: auto; /* Allow height to adjust */
   }
@@ -224,7 +224,7 @@
   .description {
     position: relative !important;
     z-index: 2 !important;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .chat-bubbles-icon {

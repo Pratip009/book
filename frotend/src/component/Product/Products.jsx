@@ -204,7 +204,7 @@ function Products() {
                           fontFamily: "Nunito",
                           textAlign: "justify",
                           display: "inline-block",
-                          fontSize: "var(--font-span)",
+                          fontSize: "15px",
                         }}
                       >
                         One of the great reasons that signify the importance of
@@ -224,7 +224,7 @@ function Products() {
                             fontFamily: "Nunito",
                             textAlign: "justify",
                             display: "inline-block",
-                            fontSize: "var(--font-span)",
+                            fontSize: "15px",
                             marginTop: "2rem",
                           }}
                         >
@@ -272,7 +272,7 @@ function Products() {
                                         <Typography
                                           variant="body2"
                                           style={{
-                                            fontSize: "var(--font-span)",
+                                            fontSize: "15px",
                                             fontWeight: "400",
                                             textAlign: "justify",
                                             display: "inline-block",

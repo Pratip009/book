@@ -36,7 +36,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             1.
@@ -48,7 +48,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             What type of training and workshops do you provide?
@@ -74,7 +74,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             2.
@@ -86,7 +86,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             Where and how do you deliver your training and workshop?
@@ -108,7 +108,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             3.
@@ -120,7 +120,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             Who can attend the training and workshop?
@@ -144,7 +144,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             4.
@@ -156,7 +156,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             What are the topics covered in training and workshop?
@@ -181,7 +181,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             5.
@@ -193,7 +193,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             What is the cost involved during training and workshop? type of
@@ -229,7 +229,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             6.
@@ -241,7 +241,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             Who can open a school?
@@ -266,7 +266,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             7.
@@ -278,7 +278,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             Why choose Learning Needs?
@@ -305,7 +305,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             8.
@@ -317,7 +317,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             How much area is required for opening a school?
@@ -345,7 +345,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             9.
@@ -357,7 +357,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             What is the investment to open a school?
@@ -383,7 +383,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             10.
@@ -395,7 +395,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             How you will help in curriculum?
@@ -430,7 +430,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             11.
@@ -442,7 +442,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             Benefits of choosing Learning Needs for our School?
@@ -467,7 +467,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             12.
@@ -479,7 +479,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             Benefits for existing school?
@@ -506,7 +506,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             13.
@@ -518,7 +518,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             What is your consultancy fee?
@@ -542,7 +542,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             14.
@@ -554,7 +554,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             What products you sell on Learning Needs Site?
@@ -581,7 +581,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             15.
@@ -593,7 +593,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             When will you ship my order?
@@ -620,7 +620,7 @@ export default function Faq() {
               fontWeight: "600",
               fontFamily: "Nunito",
               color: "#FF4E00",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             16.
@@ -632,7 +632,7 @@ export default function Faq() {
               fontFamily: "Nunito",
               fontWeight: 600,
               textAlign: "justify",
-              fontSize: "var(--font-span)",
+              fontSize: "15px",
             }}
           >
             Which carrier do you use to ship orders to your customers?

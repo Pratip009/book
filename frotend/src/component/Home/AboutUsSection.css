@@ -368,7 +368,7 @@
   }
   /* Feature item styles */
   .featureItem {
-    font-size: 13px; /* Font size for feature items */
+    font-size: 15px; /* Font size for feature items */
     /* Padding around feature items */
     width: 90%; /* Maintain width */
     margin: 0 auto; /* Center the items */
@@ -454,7 +454,7 @@
 
   .featureItem {
     width: 100% !important;
-    font-size: 12px !important;
+    font-size: 15px !important;
     justify-content: start !important;
   }
   .button {
@@ -569,7 +569,7 @@
 
   .featureItem {
     width: 100% !important;
-    font-size: 12px !important;
+    font-size: 15px !important;
     justify-content: start !important;
   }
   .button {
@@ -691,7 +691,7 @@
   .featureItem {
     width: 100%; /* Set to 100% to fill the entire grid cell */
     height: auto; /* Allow height to adjust based on content */
-    font-size: 10px;
+    font-size: 12px;
     padding: 6px;
     background: #ffffff00; /* Optional background, adjust as needed */
     border-radius: 30px; /* Maintain your border-radius */

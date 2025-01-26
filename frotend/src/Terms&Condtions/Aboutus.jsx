@@ -8,17 +8,13 @@ import bookImg from "../Image/home/teambook.png";
 import star from "../Image/home/teamstar.png";
 import TraitsGid from "./TraitsGid.jsx";
 
-import learning2Img from "../Image/learning2.png";
-import need2Img from "../Image/need2.png";
 import Faq from "./Faq";
 import teamSpiritImg from "../Image/team-spiri.png";
 import TestimonialSlider from "../component/Home/TestimonialSlider.jsx";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Aboutus.css";
-import { Grid, Typography } from "@mui/material";
-import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+
 import OurTeam from "../component/Home/OurTeam";
-import underlineImgAbout from "../Image/home/underline.png";
 import carClipArt from "../Image/home/car.png";
 import globeClipArt from "../Image/home/globe.png";
 import { motion } from "framer-motion";
@@ -343,7 +339,7 @@ const Aboutus = () => {
           sentence="Pride of Learning Needs"
           highlightedWord="Pride of Learning Needs"
         />
-        <h6>Client's Sharing Their Experience</h6>
+        <p className="about_paragraph2">Client's Sharing Their Experience</p>
         <TestimonialSlider />
       </Container>
 

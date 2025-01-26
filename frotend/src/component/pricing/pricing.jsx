@@ -102,7 +102,7 @@ const ContactButton = styled(Button)({
   backgroundColor: "#055694",
   fontFamily: "Nunito",
   color: "#fff",
-  marginTop: "12px", // Adjusted margin top
+  marginTop: "12px", 
   "&:hover": {
     backgroundColor: "#cc3d00",
   },
@@ -115,11 +115,12 @@ const StyledDialogTitle = styled(DialogTitle)({
 
 const StyledDialogContent = styled(DialogContent)({
   fontFamily: "Nunito",
-  fontSize: "var(--font-p)",
+  fontSize: "15px",
 });
 
 const StyledDialogContentText = styled(DialogContentText)({
   fontFamily: "Nunito",
+  fontSize:'15px'
 });
 
 const Pricing = () => {

@@ -12,9 +12,9 @@
   color: #003e90;
   font-weight: 700;
 }
-.school_para41{
+.school_para41 {
   font-size: 18px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-weight: 400;
   text-align: center;
 }
@@ -36,8 +36,9 @@
   margin: 0;
 }
 .school_para22 {
+  font-family: 'Nunito';
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 39.6px;
   margin: 0;
 }
@@ -170,9 +171,12 @@
 
 /* 768px (Tablets Portrait) */
 @media (max-width: 768px) {
-  .school_para41{
-    font-size: 16px;
-    font-family: 'Quicksand';
+  .school_para {
+    font-size: 15px;
+  }
+  .school_para41 {
+    font-size: 15px;
+    font-family: "Quicksand";
     font-weight: 400;
   }
   .circle_text h1 {
@@ -186,11 +190,17 @@
     font-size: 20px !important;
     color: #ffd700;
   }
+  .school_para22 {
+    font-weight: 700;
+    font-family: "Nunito";
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
   .support-item p {
     font-size: 15px;
     margin: 0;
   }
-  .school_para2{
+  .school_para2 {
     font-size: 18px;
   }
   .image-containerschool {
@@ -200,12 +210,12 @@
 
 /* 425px (Large Mobile Phones) */
 @media (max-width: 425px) {
-  .school_para2{
+  .school_para2 {
     font-size: 18px;
   }
-  .school_para41{
+  .school_para41 {
     font-size: 14px;
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     font-weight: 400;
   }
   .circle_text h1 {
@@ -224,12 +234,12 @@
 
 /* 375px (Standard Mobile Phones) */
 @media (max-width: 375px) {
-  .school_para2{
+  .school_para2 {
     font-size: 18px;
   }
-  .school_para41{
+  .school_para41 {
     font-size: 14px;
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     font-weight: 400;
   }
   .circle_text h1 {
@@ -248,9 +258,9 @@
 
 /* 320px (Small Mobile Phones) */
 @media (max-width: 320px) {
-  .school_para41{
+  .school_para41 {
     font-size: 14px;
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     font-weight: 400;
   }
   .circle_text h1 {

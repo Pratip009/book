@@ -26,7 +26,7 @@ export default function MediaControlCard() {
       color: "#000000",
     },
     appDesc: {
-      fontSize: "var(--font-span)",
+      fontSize: "15px",
       fontFamily: "Nunito",
       color: "rgb(49, 49, 49)",
       textAlign: "justify",

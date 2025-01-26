@@ -30,7 +30,7 @@
 }
 
 .testimonial-description {
-  font-size: 14px; /* Adjusted for readability on smaller screens */
+  font-size: 15px; /* Adjusted for readability on smaller screens */
   font-family: "Nunito";
   margin-bottom: 0.8rem;
   color: #555;
@@ -68,7 +68,7 @@
     height: 60px;
   }
   .testimonial-description {
-    font-size: 13px;
+    font-size: 15px;
   }
   .testimonial-name {
     font-size: 15px;

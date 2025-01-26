@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import Pricing from "../pricing/pricing";
 import "./Service.css";
-import { makeStyles } from "@material-ui/core/styles";
+
 import { Container } from "react-bootstrap";
 import Banner from "../Banner";
 import mainImg from "../../Image/Product/essentialImg.png";
@@ -11,26 +11,7 @@ import pattern from "../../Image/Product/Frame 18.png";
 import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
-const useStyles = makeStyles((theme) => ({
-  imageContainer: {
-    marginTop: "110px",
-    width: "100%",
-    height: "300px",
-    overflow: "hidden",
-    [theme.breakpoints.down("sm")]: {
-      height: "200px", // Adjust height for small screens
-    },
-    [theme.breakpoints.down("xs")]: {
-      height: "150px", // Adjust height for extra small screens
-    },
-  },
-  image: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    objectPosition: "center",
-  },
-}));
+
 const Service = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

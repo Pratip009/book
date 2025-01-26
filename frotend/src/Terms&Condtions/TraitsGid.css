@@ -41,7 +41,7 @@
   
   .trait-text {
     color: #ffffff;
-    font-size: var(--font-span);
+    font-size: 15px;
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
   }
