@@ -3,9 +3,9 @@ const { addContact, getContacts } = require('../controller/contactController');
 const router = express.Router();
 
 // Route for adding a contact
-router.post('/contacts/add', addContact); // Change to /contacts/add
+router.post('/contacts/add', addContact);
 
 // Route for getting contacts
-router.get('/contacts', getContacts);  // Change to /contacts/list
+router.get('/contacts', getContacts);  
 
 module.exports = router;

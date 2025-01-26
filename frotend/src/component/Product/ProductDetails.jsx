@@ -17,10 +17,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRouteMatch } from "react-router-dom";
 import useActive from "../hook/useActive";
 import ReviewCard from "./ReviewCard";
-import {
-  clearErrors,
-  getProductDetails,
-} from "../../actions/productAction";
+import { clearErrors, getProductDetails } from "../../actions/productAction";
 import { useAlert } from "react-alert";
 import MetaData from "../layouts/MataData/MataData";
 import { addItemToCart } from "../../actions/cartAction";
@@ -44,15 +41,22 @@ const ProductDetails = () => {
     (state) => state.productDetails
   );
   useEffect(() => {
-    window.scrollTo(0, 0); // Reset scroll to top
-  }, []);
+    if (!loading) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [loading]);
+  
+
   useEffect(() => {
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
     }
     if (success) {
-      const initialImage = product.category === "pdf" ? pdfDefaultImage : (product.images[0]?.url || "");
+      const initialImage =
+        product.category === "pdf"
+          ? pdfDefaultImage
+          : product.images[0]?.url || "";
       setPreviewImg(initialImage);
       handleActive(0);
       dispatch({ type: PRODUCT_DETAILS_RESET });
@@ -69,7 +73,8 @@ const ProductDetails = () => {
 
   // handling Preview image
   const handlePreviewImg = (images, i) => {
-    const selectedImage = images[i]?.url || (product.category === "pdf" ? pdfDefaultImage : "");
+    const selectedImage =
+      images[i]?.url || (product.category === "pdf" ? pdfDefaultImage : "");
     setPreviewImg(selectedImage);
     handleActive(i);
   };
@@ -117,12 +122,18 @@ const ProductDetails = () => {
                             className={`tabs_item ${activeClass(i)}`}
                             onClick={() => handlePreviewImg(product.images, i)}
                           >
-                            <img src={img.url || pdfDefaultImage} alt="product-img" />
+                            <img
+                              src={img.url || pdfDefaultImage}
+                              alt="product-img"
+                            />
                           </div>
                         ))}
                     </div>
                     <figure className="prod_details_img">
-                      <img src={previewImg || pdfDefaultImage} alt="product-img" />
+                      <img
+                        src={previewImg || pdfDefaultImage}
+                        alt="product-img"
+                      />
                     </figure>
                   </div>
 
@@ -179,8 +190,6 @@ const ProductDetails = () => {
                       </div>
                     </div>
 
-                   
-
                     <div className="productDescription">
                       <div className="productDiscriptiopn_text">
                         <h4>Descripition :</h4>
@@ -198,7 +207,6 @@ const ProductDetails = () => {
                         We deliver! Just say when and how.
                       </div>
                     </div>
-                    
 
                     <div className="prod_details_additem">
                       <h5>QTY :</h5>

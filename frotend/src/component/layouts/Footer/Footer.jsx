@@ -8,6 +8,7 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import {NavLink , useLocation } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 
@@ -21,6 +22,9 @@ import { GrSecure } from "react-icons/gr";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
 export default function Footer() {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
   return (
     <div className="footer-wrapper">
       <MDBFooter
@@ -34,7 +38,7 @@ export default function Footer() {
             <MDBRow className="mt-3 p-0">
               <MDBCol md="4" lg="4" xl="4" xs="4" className="mt-1 p-2">
                 <MDBContainer className="m-0 p-0">
-                  <MDBNavbarBrand href="/" className="footer_logo">
+                  <MDBNavbarBrand to="/" className="footer_logo">
                     <img src={logo} width={200} alt="Logo" loading="lazy" />
                   </MDBNavbarBrand>
                   <MDBRow>
@@ -46,11 +50,9 @@ export default function Footer() {
                             height: "100%",
                           }}
                         >
-                        
-                            <TbTruckDelivery style={{color:'white'}} />
-                            <span className="text">Express Delivery</span>
-                            <span className="text-two">Ships in 24 Hours</span>
-                          
+                          <TbTruckDelivery style={{ color: "white" }} />
+                          <span className="text">Express Delivery</span>
+                          <span className="text-two">Ships in 24 Hours</span>
                         </MDBRow>
                       </div>
                     </MDBCol>
@@ -62,11 +64,9 @@ export default function Footer() {
                             height: "100%",
                           }}
                         >
-                         
-                            <GiCheckedShield style={{color:'white'}} />
-                            <span className="text">Brand Warranty</span>
-                            <span className="text-two">Original products</span>
-                          
+                          <GiCheckedShield style={{ color: "white" }} />
+                          <span className="text">Brand Warranty</span>
+                          <span className="text-two">Original products</span>
                         </MDBRow>
                       </div>
                     </MDBCol>
@@ -78,12 +78,10 @@ export default function Footer() {
                             height: "100%",
                           }}
                         >
-                         
-                            <RiExchangeBoxLine style={{color:'white'}} />
-                          
-                            <span className="text">Exciting Deals</span>
-                            <span className="text-two">All prepaid orders</span>
-                          
+                          <RiExchangeBoxLine style={{ color: "white" }} />
+
+                          <span className="text">Exciting Deals</span>
+                          <span className="text-two">All prepaid orders</span>
                         </MDBRow>
                       </div>
                     </MDBCol>
@@ -95,13 +93,10 @@ export default function Footer() {
                             height: "100%",
                           }}
                         >
-                        
-                            <GrSecure style={{color:'white'}} />
-                      
-                       
-                            <span className="text">Secure Payment</span>
-                            <span className="text-two">Secure certificate</span>
-                     
+                          <GrSecure style={{ color: "white" }} />
+
+                          <span className="text">Secure Payment</span>
+                          <span className="text-two">Secure certificate</span>
                         </MDBRow>
                       </div>
                     </MDBCol>
@@ -109,7 +104,7 @@ export default function Footer() {
                 </MDBContainer>
               </MDBCol>
 
-              <MDBCol md="6" lg="6" xl="6" xs="6" className=" p-2">
+              <MDBCol md="6" lg="6" xl="6" xs="6" className="p-2">
                 <MDBRow>
                   <MDBCol style={{ textAlign: "start" }}>
                     <h6
@@ -124,29 +119,54 @@ export default function Footer() {
                       Help
                     </h6>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/track-order"
+                        className={`footer_links ${
+                          isActive("/track-order") ? "active_link" : ""
+                        }`}
+                      >
                         Track Order
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/faqs"
+                        className={`footer_links ${
+                          isActive("/faqs") ? "active_link" : ""
+                        }`}
+                      >
                         FAQs
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="/policy/return" className="footer_links">
+                      <NavLink
+                        to="/policy/return"
+                        className={`footer_links ${
+                          isActive("/policy/return") ? "active_link" : ""
+                        }`}
+                      >
                         Cancel Order
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="/policy/return" className="footer_links">
+                      <NavLink
+                        to="/policy/return"
+                        className={`footer_links ${
+                          isActive("/policy/return") ? "active_link" : ""
+                        }`}
+                      >
                         Return Order
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/warranty-info"
+                        className={`footer_links ${
+                          isActive("/warranty-info") ? "active_link" : ""
+                        }`}
+                      >
                         Warranty Info
-                      </a>
+                      </NavLink>
                     </p>
                   </MDBCol>
 
@@ -163,29 +183,54 @@ export default function Footer() {
                       Policies
                     </h6>
                     <p>
-                      <a href="/policy/Terms" className="footer_links">
+                      <NavLink
+                        to="/policy/terms"
+                        className={`footer_links ${
+                          isActive("/policy/terms") ? "active_link" : ""
+                        }`}
+                      >
                         Return Policy
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/security"
+                        className={`footer_links ${
+                          isActive("/security") ? "active_link" : ""
+                        }`}
+                      >
                         Security
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/sitemap"
+                        className={`footer_links ${
+                          isActive("/sitemap") ? "active_link" : ""
+                        }`}
+                      >
                         Sitemap
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="/policy/Terms" className="footer_links">
+                      <NavLink
+                        to="/policy/privacy"
+                        className={`footer_links ${
+                          isActive("/policy/privacy") ? "active_link" : ""
+                        }`}
+                      >
                         Privacy Policy
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="/terms/conditions" className="footer_links">
+                      <NavLink
+                        to="/terms-conditions"
+                        className={`footer_links ${
+                          isActive("/terms-conditions") ? "active_link" : ""
+                        }`}
+                      >
                         T&C
-                      </a>
+                      </NavLink>
                     </p>
                   </MDBCol>
 
@@ -202,29 +247,54 @@ export default function Footer() {
                       Company
                     </h6>
                     <p>
-                      <a href="/about_us" className="footer_links">
+                      <NavLink
+                        to="/about-us"
+                        className={`footer_links ${
+                          isActive("/about-us") ? "active_link" : ""
+                        }`}
+                      >
                         About Us
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="/contact" className="footer_links">
+                      <NavLink
+                        to="/contact"
+                        className={`footer_links ${
+                          isActive("/contact") ? "active_link" : ""
+                        }`}
+                      >
                         Contact Us
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/service-centres"
+                        className={`footer_links ${
+                          isActive("/service-centres") ? "active_link" : ""
+                        }`}
+                      >
                         Service Centres
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/careers"
+                        className={`footer_links ${
+                          isActive("/careers") ? "active_link" : ""
+                        }`}
+                      >
                         Work With Us
-                      </a>
+                      </NavLink>
                     </p>
                     <p>
-                      <a href="#!" className="footer_links">
+                      <NavLink
+                        to="/courses"
+                        className={`footer_links ${
+                          isActive("/courses") ? "active_link" : ""
+                        }`}
+                      >
                         Courses
-                      </a>
+                      </NavLink>
                     </p>
                   </MDBCol>
                 </MDBRow>
@@ -267,46 +337,46 @@ export default function Footer() {
                 </span>
               </MDBCol>
               <MDBCol md="auto" className="text-center">
-                <a
-                  href="https://www.facebook.com"
+                <NavLink
+                  to="https://www.facebook.com"
                   className="me-4 text-reset"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaFacebook />
-                </a>
-                <a
-                  href="https://twitter.com"
+                </NavLink>
+                <NavLink
+                  to="https://twitter.com"
                   className="me-4 text-reset"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaXTwitter />
-                </a>
-                <a
-                  href="https://www.instagram.com"
+                </NavLink>
+                <NavLink
+                  to="https://www.instagram.com"
                   className="me-4 text-reset"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaInstagram />
-                </a>
-                <a
-                  href="https://wa.me/8240554890"
+                </NavLink>
+                <NavLink
+                  to="https://wa.me/8240554890"
                   className="me-4 text-reset"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <IoLogoWhatsapp />
-                </a>
-                <a
-                  href="https://www.youtube.com"
+                </NavLink>
+                <NavLink
+                  to="https://www.youtube.com"
                   className="me-4 text-reset"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaYoutube />
-                </a>
+                </NavLink>
               </MDBCol>
             </MDBRow>
             <MDBRow className="d-flex justify-content-center align-items-center mt-2">
@@ -318,12 +388,12 @@ export default function Footer() {
                   <IoIosMail className="mail-icon" />
                   <span>Email:</span>
                 </span>
-                <a
-                  href="mailto:infolearningneeds@gmail.com"
+                <NavLink
+                  to="mailto:infolearningneeds@gmail.com"
                   className="ms-2 text-reset"
                 >
                   infolearningneeds@gmail.com
-                </a>
+                </NavLink>
               </MDBCol>
 
               <MDBCol
@@ -334,9 +404,9 @@ export default function Footer() {
                   <FaPhone className="mail-icon" />
                   <span>Contact:</span>
                 </span>
-                <a href="tel:8240554890" className="ms-2 text-reset">
+                <NavLink to="tel:8240554890" className="ms-2 text-reset">
                   8240554890
-                </a>
+                </NavLink>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
@@ -347,9 +417,9 @@ export default function Footer() {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         >
           © 2024&nbsp;
-          <a href="https://learningneeds.in/" className="text-reset">
+          <NavLink to="https://learningneeds.in/" className="text-reset">
             Learning Needs, All Rights Reserved.
-          </a>
+          </NavLink>
         </div>
       </MDBFooter>
 
@@ -361,7 +431,7 @@ export default function Footer() {
                 Let’s Change, Learn, Grow, and Transform!
               </h1>
               <p className="overlay-text">
-                Learning Needs offers a variety of boutique services, tailored
+                Learning Needs offers NavLink variety of boutique services, tailored
                 to each client's need. Our specialized expertise allows the
                 Individual, Institution, Schools, and Organizations to achieve
                 their objectives.

@@ -21,7 +21,7 @@ const team = require("./route/teamRoutes");
 
 // Middleware
 app.use(cookieParser());
-app.use(express.json()); // Replaces bodyParser.json()
+app.use(express.json()); // Parse JSON body
 app.use(
   fileUpload({
     createParentPath: true,
@@ -30,12 +30,13 @@ app.use(
 );
 
 // CORS Configuration
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL, // Set this to your frontend's URL
-    credentials: true, // Allow cookies to be sent
-  })
-);
+const corsOptions = {
+  origin: "http://localhost:3000", // Replace with your frontend's URL
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true, // Allow credentials (cookies, authorization headers)
+};
+
+app.use(cors(corsOptions));
 
 // API Routes
 app.use("/api/v1", product);
@@ -49,13 +50,15 @@ app.use("/api/v1", blog);
 app.use("/api/v1", contactRoutes);
 app.use("/api/v1", team);
 
-// Serve static files from the frontend
-const __dirname1 = path.resolve();
-app.use(express.static(path.join(__dirname1, "/frotend/build")));
+// Serve static files from the frontend in production
+if (process.env.NODE_ENV === "production") {
+  const __dirname1 = path.resolve();
+  app.use(express.static(path.join(__dirname1, "/frotend/build")));
 
-app.get("*", (req, res) =>
-  res.sendFile(path.resolve(__dirname1, "frotend", "build", "index.html"))
-);
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "frotend", "build", "index.html"))
+  );
+}
 
 // Error Middleware
 app.use(errorMiddleware);

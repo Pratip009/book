@@ -143,6 +143,16 @@
 }
 
 /* Media queries for different screen sizes */
+@media (max-width: 992px){
+  .headerTop {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 5px 0; /* Adjust padding for extra-small screens */
+  }
+  .desktop-nav-link a{
+font-size: 10px;
+  }
+}
 @media (max-width: 767px) {
   .headerTop {
     flex-direction: column; /* Stack items vertically on smaller screens */

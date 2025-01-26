@@ -6,7 +6,7 @@ import {
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
-import { CiInstagram, CiLinkedin, CiFacebook } from "react-icons/ci";
+
 import "./OurTeam.css";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -14,27 +14,54 @@ import { FaLinkedin } from "react-icons/fa6";
 export default function OurTeam() {
   const [teamMembers, setTeamMembers] = useState([]);
 
-  useEffect(() => {
-    const fetchTeamMembers = async () => {
-      try {
-        const response = await fetch(
-          "https://learningneeds-strapi-11ta.onrender.com/api/teams?populate=*"
-        );
-        const data = await response.json();
-        setTeamMembers(data.data);
-      } catch (error) {
-        console.error("Error fetching team members:", error);
-      }
-    };
-
-    fetchTeamMembers();
-  }, []);
+  const data = [
+    {
+      id: 1,
+      name: "Rahul Singh",
+      image:
+        "https://res.cloudinary.com/dhlw57iz4/image/upload/v1720681049/newq_c1efb3bdfe.jpg",
+      position: "Founder/C.E.O",
+      linkedinUrl: "",
+      facebookUrl: "",
+      instagramUrl: "",
+    },
+    {
+      id: 2,
+      name: "Ritu G Chopra",
+      image:
+        "https://res.cloudinary.com/dhlw57iz4/image/upload/v1720679301/image_c958885324.png",
+      position: "Chief Training Advisor",
+      linkedinUrl: "",
+      facebookUrl: "",
+      instagramUrl: "",
+    },
+    {
+      id: 3,
+      name: "Dr. Anwesha Sengupta",
+      image:
+        "https://res.cloudinary.com/dhlw57iz4/image/upload/v1720679167/Cropped_Image_4_b6e9f833ec.png",
+      position: "Sr. Advisor",
+      linkedinUrl: "",
+      facebookUrl: "",
+      instagramUrl: "",
+    },
+    {
+      id: 4,
+      name: "Dr. Arunangshu Ghosh",
+      image:
+        "https://res.cloudinary.com/dhlw57iz4/image/upload/v1720593544/large_Cropped_Image_1_magicstudio_g4hqtn2jhxa_35530d24b6.png",
+      position: "Sr. Advisor",
+      linkedinUrl: "",
+      facebookUrl: "",
+      instagramUrl: "",
+    },
+  ];
 
   return (
     <MDBContainer className="py-5">
       <MDBRow className="d-flex justify-content-center"></MDBRow>
       <MDBRow className="d-flex justify-content-center align-items-center">
-        {teamMembers.map((member) => (
+        {data.map((member) => (
           <MDBCol
             md="3"
             className="d-flex flex-column align-items-center"
@@ -42,16 +69,15 @@ export default function OurTeam() {
           >
             <div className="d-flex justify-content-center mb-4">
               <img
-                src={member.attributes.image.data.attributes.url}
-                alt={member.attributes.Name}
+                src={member.image} // Adjusted to use the 'image' URL from your response structure
+                alt={member.name} // Adjusted to use 'name' from your response structure
                 className="rounded-circle shadow-1-strong"
                 width="150"
                 height="150"
               />
             </div>
-            <h5 className="mb-3">{member.attributes.Name}</h5>
-            <h6 className="mb-2">{member.attributes.designation}</h6>
-
+            <h5 className="mb-3">{member.name}</h5> {/* Adjusted for 'name' */}
+            <h6 className="mb-2">{member.position}</h6>
             <MDBTypography
               listUnStyled
               className="d-flex justify-content-center mb-2"

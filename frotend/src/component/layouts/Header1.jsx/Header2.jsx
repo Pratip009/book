@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,  } from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { FaPhoneAlt, FaEnvelope, FaBars } from "react-icons/fa";
-import axios from "axios";
+
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -17,7 +17,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
-import { baseURL } from "../../utils/constant";
+
 const navLinkStyle = {
   fontFamily: "Nunito",
   textDecoration: "none",
@@ -38,34 +38,11 @@ function Header2() {
   const isActive = (path) => location.pathname === path;
   const { isAuthenticated, user } = useSelector((state) => state.userData);
 
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("8240554890");
+  const [email, setEmail] = useState("infolearningneeds@gmail.com");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-
-  useEffect(() => {
-    axios
-      .get(`${baseURL}/contacts`)
-      .then((response) => {
-        console.log("API Response:", response.data); // Log the entire response
-        const contacts = response.data; // Adjust based on API response structure
-
-        // If data is an array, log each contact
-        if (Array.isArray(contacts)) {
-          contacts.forEach((contact, index) => {
-            console.log(`Contact ${index + 1}:`, contact);
-          });
-        }
-
-        // Example: Set phone and email for the first contact
-        if (contacts?.[0]) {
-          setPhone(contacts[0].number || "");
-          setEmail(contacts[0].email || "");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching contacts:", error); // Log error details
-      });
-  }, []);
+  // 8240554890
+  //infolearningneeds@gmail.com
 
   const toggleNavbar = () => {
     setIsNavbarCollapsed((prev) => !prev);

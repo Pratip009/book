@@ -66,7 +66,7 @@ const Service = () => {
             fontFamily: "Nunito",
             textAlign: "justify",
             display: "inline-block",
-            fontSize: "var(--font-span)",
+            fontSize: "14px",
           }}
         >
           Learning Needs actively works with various reliable preferred

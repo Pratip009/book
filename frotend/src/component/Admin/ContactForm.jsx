@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import useStyles from "../User/LoginFromStyle";
-import qs from "qs"; 
+import qs from "qs";
 import { Navbar } from "react-bootstrap";
 import Sidebar from "./Siderbar";
 
@@ -23,6 +23,7 @@ const ContactForm = () => {
   // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log(`Input changed - Name: ${name}, Value: ${value}`);
     setFormData({
       ...formData,
       [name]: value,

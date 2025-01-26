@@ -1,32 +1,14 @@
 const mongoose = require("mongoose");
 
-const teamMemberSchema = new mongoose.Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
-    designation: {
-      type: String,
-      required: true,
-    },
-    image: {
-      type: String,
-      required: true,
-    },
-    socialLinks: {
-      facebook: {
-        type: String,
-      },
-      linkedin: {
-        type: String,
-      },
-      instagram: {
-        type: String,
-      },
-    },
+const teamSchema = new mongoose.Schema({
+  name: String,
+  designation: String,
+  image: { type: mongoose.Schema.Types.ObjectId, ref: "Image" }, // Reference to GridFS file
+  socialLinks: {
+    facebook: String,
+    linkedin: String,
+    instagram: String,
   },
-  { timestamps: true }
-);
+});
 
-module.exports = mongoose.model("TeamMember", teamMemberSchema);
+module.exports = mongoose.model("Team", teamSchema);

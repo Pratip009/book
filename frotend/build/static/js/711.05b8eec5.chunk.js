@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrotend=self.webpackChunkfrotend||[]).push([[711],{69711:(e,t,s)=>{s.r(t),s.d(t,{default:()=>c});s(65043);var n=s(62582),f=s(70579);const c=()=>(0,f.jsxs)("div",{className:"offer-banner",children:[(0,f.jsx)("div",{className:"offer-text",children:"Limited Time Offer - Up to 50% Off!"}),(0,f.jsx)(n.N_,{to:"/contact",children:(0,f.jsx)("button",{className:"offer-button",children:"Connect With Us Today"})})]})}}]);
+//# sourceMappingURL=711.05b8eec5.chunk.js.map

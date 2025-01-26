@@ -26,7 +26,7 @@ const SoftSkill = () => {
         style={{
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "var(--font-span)",
+          fontSize: "14px",
           fontFamily: "Nunito",
         }}
       >
@@ -55,7 +55,7 @@ const SoftSkill = () => {
         style={{
           textAlign: "justify",
           display: "inline-block",
-          fontSize: "var(--font-span)",
+          fontSize: "14px",
           fontFamily: "Nunito",
         }}
       >
@@ -97,7 +97,7 @@ const SoftSkill = () => {
             style={{
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "var(--font-span)",
+              fontSize: "14px",
               fontFamily: "Nunito",
             }}
           >
@@ -129,7 +129,7 @@ const SoftSkill = () => {
             style={{
               textAlign: "justify",
               display: "inline-block",
-              fontSize: "var(--font-span)",
+              fontSize: "14px",
               fontFamily: "Nunito",
             }}
           >

@@ -31,16 +31,28 @@
 }
 
 .footer-custom h6 {
-  color: #FF4E00 !important;
+  color: #ff4e00 !important;
 }
 
+/* Your base link style */
 .footer_links {
   color: white;
   font-size: var(--font-span);
-  font-family: "Nunito";
+  font-family: "Nunito", sans-serif;
   text-decoration: none;
   font-weight: 600;
 }
+
+.footer_links:hover {
+  text-decoration: underline;
+}
+
+/* Add higher specificity for the active class */
+footer .footer_links.active_link {
+  color: #FF4E00 !important; /* Highlight color for active links */
+  font-weight: 700;
+}
+
 
 /* Custom Button Styling */
 .custom-btn {
@@ -56,7 +68,7 @@
 }
 /* Box Styling */
 .box {
-  background-color: #FF4E00;
+  background-color: #ff4e00;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
