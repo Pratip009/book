@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 const Programs = () => {
+
   return (
     <motion.section
       className="programs-container"
@@ -45,7 +46,7 @@ const Programs = () => {
                     to="/school"
                     aria-label="Enroll in School Management Services"
                   >
-                    <button>Enroll now →</button>
+                    <button>Read More →</button>
                   </Link>
                 </div>
                 <div className="icon12">
@@ -67,7 +68,7 @@ const Programs = () => {
                     collaborative learning environment.
                   </p>
                   <Link to="/training" aria-label="Enroll in Training Program">
-                    <button>Enroll now →</button>
+                    <button>Read More →</button>
                   </Link>
                 </div>
                 <div className="icon2">
@@ -88,7 +89,7 @@ const Programs = () => {
                     training nurtures athletic talent and fosters a love for
                     physical fitness.
                   </p>
-                  <button>Enroll now →</button>
+                  <button>Read More →</button>
                 </div>
                 <div className="icon3">
                   <img src={sports} alt="Sports Training Icon" />
@@ -109,7 +110,7 @@ const Programs = () => {
                     environment.
                   </p>
                   <Link to="/service" aria-label="Enroll in Services">
-                    <button>Enroll now →</button>
+                    <button>Read More →</button>
                   </Link>
                 </div>
                 <div className="icon4">

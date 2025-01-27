@@ -8,7 +8,7 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import {NavLink , useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 
@@ -391,6 +391,7 @@ export default function Footer() {
                 <NavLink
                   to="mailto:infolearningneeds@gmail.com"
                   className="ms-2 text-reset"
+                  style={{ fontSize: "15px" }}
                 >
                   infolearningneeds@gmail.com
                 </NavLink>
@@ -404,7 +405,11 @@ export default function Footer() {
                   <FaPhone className="mail-icon" />
                   <span>Contact:</span>
                 </span>
-                <NavLink to="tel:8240554890" className="ms-2 text-reset">
+                <NavLink
+                  to="tel:8240554890"
+                  className="ms-2 text-reset"
+                  style={{ fontSize: "15px" }}
+                >
                   8240554890
                 </NavLink>
               </MDBCol>
@@ -421,30 +426,29 @@ export default function Footer() {
             Learning Needs, All Rights Reserved.
           </NavLink>
         </div>
-      </MDBFooter>
-
-      <div className="overlay-container">
-        <div className="overlay-content">
-          <MDBRow>
-            <MDBCol md="10" xs="12" sm="12" className="text-col-two">
-              <h1 className="overlay-heading">
-                Let’s Change, Learn, Grow, and Transform!
-              </h1>
-              <p className="overlay-text">
-                Learning Needs offers NavLink variety of boutique services, tailored
-                to each client's need. Our specialized expertise allows the
-                Individual, Institution, Schools, and Organizations to achieve
-                their objectives.
-              </p>
-            </MDBCol>
-            <MDBCol md="2" xs="12" sm="12" className="button-col">
-              <button className="btn btn-primary btn-normal-case">
-                Get Started
-              </button>
-            </MDBCol>
-          </MDBRow>
+        <div className="overlay-container">
+          <div className="overlay-content">
+            <MDBRow>
+              <MDBCol md="10" xs="12" sm="12" className="text-col-two">
+                <h1 className="overlay-heading">
+                  Let’s Change, Learn, Grow, and Transform!
+                </h1>
+                <p className="overlay-text">
+                  Learning Needs offers variety of boutique services, tailored
+                  to each client's need. Our specialized expertise allows the
+                  Individual, Institution, Schools, and Organizations to achieve
+                  their objectives.
+                </p>
+              </MDBCol>
+              <MDBCol md="2" xs="12" sm="12" className="button-col">
+                <button className="btn btn-primary btn-normal-case">
+                  Get Started
+                </button>
+              </MDBCol>
+            </MDBRow>
+          </div>
         </div>
-      </div>
+      </MDBFooter>
     </div>
   );
 }

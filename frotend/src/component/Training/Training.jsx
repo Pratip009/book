@@ -64,11 +64,13 @@ const Training = () => {
                 ever increasing competitive and diverse business environment.
               </p>
             </Container>
-            <Container style={{
-              display:'flex',
-              alignItems:'center',
-              justifyContent:'center'
-            }}>
+            <Container
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <Suspense fallback={<div>Loading...</div>}>
                 <ProgramList />
               </Suspense>
@@ -97,7 +99,11 @@ const Training = () => {
                 marginBottom: "2rem",
               }}
             >
-              <img src={require("../../Image/sssa1233.png")} alt="" />
+              <img
+                src={require("../../Image/sssa1233.png")}
+                alt=""
+                loading="lazy"
+              />
             </div>
           </Container>
         </Grid>

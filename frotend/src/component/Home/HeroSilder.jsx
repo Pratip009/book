@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import Typed from "react-typed";
@@ -35,8 +34,18 @@ const slides = [
 
 function HeroSlider() {
   const [index, setIndex] = useState(0);
+  
   const handleSelect = useCallback((selectedIndex) => {
     setIndex(selectedIndex);
+  }, []);
+
+  // Preload images on mount
+  useEffect(() => {
+    const preloadImages = slides.map((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+      return img;
+    });
   }, []);
 
   const carouselItems = useMemo(() =>

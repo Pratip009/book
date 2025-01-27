@@ -1,4 +1,9 @@
 /* General Footer Styling */
+.footer-wrapper {
+  margin-top: 20px; /* You can adjust this value to control the distance */
+  padding-top: 20px; /* Optional, add padding at the top of the footer */
+  padding-bottom: 20px;
+}
 .footer-custom {
   font-family: "Nunito" !important;
   color: white !important;
@@ -49,10 +54,9 @@
 
 /* Add higher specificity for the active class */
 footer .footer_links.active_link {
-  color: #FF4E00 !important; /* Highlight color for active links */
+  color: #ff4e00 !important; /* Highlight color for active links */
   font-weight: 700;
 }
-
 
 /* Custom Button Styling */
 .custom-btn {
@@ -118,9 +122,14 @@ footer .footer_links.active_link {
   font-size: 12px;
   color: rgb(222, 222, 222);
 }
-
+.footer_links {
+  font-size: 15px;
+}
 /* Responsive Adjustments */
 @media (max-width: 767px) {
+  .footer_links {
+    font-size: 15px;
+  }
   .icon {
     font-size: 1.5rem;
   }
@@ -129,7 +138,7 @@ footer .footer_links.active_link {
   }
 
   .text-two {
-    font-size: 8px;
+    font-size: 14px;
   }
 }
 
@@ -162,7 +171,7 @@ footer .footer_links.active_link {
   color: white;
 }
 .text-reset {
-  font-size: var(--font-span);
+  font-size: 15px;
   font-family: "Nunito";
 }
 .overlay-content {
@@ -200,10 +209,16 @@ footer .footer_links.active_link {
 }
 
 @media (max-width: 576px) {
+  .footer_links {
+    font-size: 15px;
+  }
+  .text-two {
+    font-size: 14px;
+  }
   .textt {
     display: flex;
     align-items: center;
-    font-size: var(--font-span);
+    font-size: 15px;
   }
   .navbar-brand {
     display: flex;
@@ -214,10 +229,10 @@ footer .footer_links.active_link {
   .overlay-container {
     width: 94%;
   }
-  .overlay-text {
-    font-size: 10px;
-    text-align: justify;
-    padding: 0 15px 0 0;
+  .overlay-content p {
+    font-size: 14px;
+    margin: 0;
+    font-family: "Nunito";
   }
   .box-col {
     flex: 1 0 50%;
@@ -232,7 +247,9 @@ footer .footer_links.active_link {
   .overlay-heading {
     font-size: 14px;
   }
-
+  .overlay-content .btn {
+    font-size: 14px;
+  }
   .button-col button {
     background-color: #c01c1c;
     color: white;
@@ -244,10 +261,19 @@ footer .footer_links.active_link {
   }
 }
 @media (min-width: 768px) {
+  .footer_links {
+    font-size: 15px;
+  }
+  .overlay-content .btn {
+    font-size: 14px;
+  }
+  .text-two {
+    font-size: 14px;
+  }
   .textt {
     display: flex;
     align-items: center;
-    font-size: var(--font-span);
+    font-size: 15px;
   }
   .btn-normal-case {
     text-transform: none;
@@ -282,7 +308,7 @@ footer .footer_links.active_link {
   .textt {
     display: flex;
     align-items: center;
-    font-size: var(--font-span);
+    font-size: 15px;
   }
   .custom-input .form-label {
     font-size: 0.65rem; /* Adjust font size for mobile */

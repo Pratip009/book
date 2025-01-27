@@ -47,7 +47,9 @@ function Header2() {
   const toggleNavbar = () => {
     setIsNavbarCollapsed((prev) => !prev);
   };
-
+  const handleLinkClick = () => {
+    setIsNavbarCollapsed(false);
+  };
   return (
     <>
       {/* First Navbar Section */}
@@ -436,6 +438,7 @@ function Header2() {
               <Link
                 to="/"
                 className="mobile-nav-link"
+                onClick={handleLinkClick}
                 style={navLinkStyle}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -448,6 +451,7 @@ function Header2() {
               </Link>
               <Link
                 to="/about_us"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -461,6 +465,7 @@ function Header2() {
               </Link>
               <Link
                 to="/products"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -474,6 +479,7 @@ function Header2() {
               </Link>
               <Link
                 to="/training"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -488,6 +494,7 @@ function Header2() {
 
               <Link
                 to="/school"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -501,6 +508,7 @@ function Header2() {
               </Link>
               <Link
                 to="/service"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -514,6 +522,7 @@ function Header2() {
               </Link>
               <Link
                 to="/sports"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -527,6 +536,7 @@ function Header2() {
               </Link>
               <Link
                 to="/gallery"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -540,6 +550,7 @@ function Header2() {
               </Link>
               <Link
                 to="/blog"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
@@ -553,6 +564,7 @@ function Header2() {
               </Link>
               <Link
                 to="/contact"
+                onClick={handleLinkClick}
                 className="mobile-nav-link"
                 style={navLinkStyle}
                 onMouseOver={(e) =>
