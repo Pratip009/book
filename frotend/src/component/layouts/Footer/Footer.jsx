@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   MDBFooter,
   MDBContainer,
@@ -21,9 +21,11 @@ import { RiExchangeBoxLine } from "react-icons/ri";
 import { GrSecure } from "react-icons/gr";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
+import { Nav } from "react-bootstrap";
 export default function Footer() {
   const location = useLocation();
-
+  const [phone, setPhone] = useState("8240554890");
+  const [email, setEmail] = useState("infolearningneeds@gmail.com");
   const isActive = (path) => location.pathname === path;
   return (
     <div className="footer-wrapper">
@@ -388,13 +390,13 @@ export default function Footer() {
                   <IoIosMail className="mail-icon" />
                   <span>Email:</span>
                 </span>
-                <NavLink
-                  to="mailto:infolearningneeds@gmail.com"
+                <a
+                  href={`mailto:${email}`}
                   className="ms-2 text-reset"
                   style={{ fontSize: "15px" }}
                 >
-                  infolearningneeds@gmail.com
-                </NavLink>
+                  {email}
+                </a>
               </MDBCol>
 
               <MDBCol
@@ -405,13 +407,13 @@ export default function Footer() {
                   <FaPhone className="mail-icon" />
                   <span>Contact:</span>
                 </span>
-                <NavLink
-                  to="tel:8240554890"
+                <a
+                  href={`tel:${phone}`}
                   className="ms-2 text-reset"
                   style={{ fontSize: "15px" }}
                 >
-                  8240554890
-                </NavLink>
+                  {phone}
+                </a>
               </MDBCol>
             </MDBRow>
           </MDBContainer>

@@ -1,5 +1,8 @@
 /* Global Styles */
+.sports_cont{
+  height: max-content; /* Adjust based on footer height */
 
+}
 .sports_head h1 {
   font-family: "Quicksand";
   text-align: center;
@@ -83,7 +86,7 @@
   background-color: #e6f1ff;
   padding: 20px;
   border-radius: 10px;
-  text-align: start;
+  text-align: start !important;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-weight: 700;

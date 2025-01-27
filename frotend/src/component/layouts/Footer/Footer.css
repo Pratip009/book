@@ -2,7 +2,7 @@
 .footer-wrapper {
   margin-top: 20px; /* You can adjust this value to control the distance */
   padding-top: 20px; /* Optional, add padding at the top of the footer */
-  padding-bottom: 20px;
+
 }
 .footer-custom {
   font-family: "Nunito" !important;
@@ -209,6 +209,11 @@ footer .footer_links.active_link {
 }
 
 @media (max-width: 576px) {
+  .footer-wrapper {
+    margin-top: 130px; /* You can adjust this value to control the distance */
+    padding-top: 20px; /* Optional, add padding at the top of the footer */
+  
+  }
   .footer_links {
     font-size: 15px;
   }
