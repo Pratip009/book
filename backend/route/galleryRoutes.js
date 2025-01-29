@@ -10,7 +10,7 @@ const {
   uploadGalleryImage,
   deleteGalleryImage,
 } = require('../controller/galleryController');
-const { isAuthentictedUser, authorizeRoles } = require('../middleware/auth');
+const { isAuthentictedUser, authorizeRoles } = require('../middleWare/auth');
 
 // Public Routes
 router.route('/gallery').get(getAllGalleries);
