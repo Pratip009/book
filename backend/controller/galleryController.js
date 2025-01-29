@@ -1,51 +1,161 @@
-const Gallery = require('../models/Gallery');
-const cloudinary = require('cloudinary').v2; // For image upload (you can also use other solutions like Multer if you're storing images locally)
+const Gallery = require("../model/Gallery");
+const cloudinary = require("cloudinary").v2;
+const streamifier = require("streamifier"); // Ensure you import streamifier
 
-// Configure Cloudinary (if using)
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
-});
-
-exports.uploadImage = async (req, res) => {
+// Get all galleries
+exports.getAllGalleries = async (req, res) => {
   try {
-    const { category } = req.body;
-    const uploadedBy = req.user._id; // Assuming user is authenticated and we have access to the admin's user ID
-
-    // Check if category is valid
-    if (!['Training', 'School'].includes(category)) {
-      return res.status(400).json({ message: 'Invalid category selected.' });
-    }
-
-    // Upload image to Cloudinary (you can also use local storage instead)
-    const file = req.files.image; // Assuming you're using a package like `express-fileupload`
-    const uploadResult = await cloudinary.uploader.upload(file.tempFilePath, {
-      folder: 'gallery_images', // Optionally set folder in Cloudinary
-    });
-
-    // Create gallery entry
-    const gallery = new Gallery({
-      image: uploadResult.secure_url, // Store the URL of the uploaded image
-      category,
-      uploadedBy,
-    });
-
-    await gallery.save();
-    res.status(201).json({ message: 'Image uploaded successfully', gallery });
+    const galleries = await Gallery.find();
+    res.status(200).json({ success: true, galleries });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Something went wrong.' });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
-// Get all gallery items
-exports.getAllImages = async (req, res) => {
+// Upload an image to a gallery
+exports.uploadGalleryImage = async (req, res) => {
   try {
-    const galleries = await Gallery.find();
-    res.status(200).json(galleries);
+    const { file } = req; // The file uploaded by Multer
+    const { title, description } = req.body;
+
+    if (!file) {
+      return res.status(400).json({ success: false, message: "No file uploaded" });
+    }
+
+    // Upload image to Cloudinary
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        folder: "galleries",  // Optional: Specify a folder name in Cloudinary
+      },
+      async (error, result) => {
+        if (error) {
+          return res.status(500).json({ success: false, message: error.message });
+        }
+
+        // Image uploaded successfully, save the image details to the gallery
+        const gallery = await Gallery.findById(req.params.id);
+        if (!gallery) {
+          return res.status(404).json({ success: false, message: "Gallery not found" });
+        }
+
+        // Save image details (URL and public_id) to MongoDB
+        gallery.images.push({
+          url: result.secure_url,  // Cloudinary URL
+          public_id: result.public_id,  // Cloudinary public_id
+        });
+        await gallery.save();
+
+        res.status(200).json({
+          success: true,
+          message: "Image uploaded successfully",
+          gallery,
+        });
+      }
+    );
+
+    // Pipe the file buffer to Cloudinary upload stream
+    streamifier.createReadStream(file.buffer).pipe(uploadStream);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Unable to fetch gallery items' });
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// Get details of a specific gallery
+exports.getGalleryDetails = async (req, res) => {
+  try {
+    const gallery = await Gallery.findById(req.params.id);
+    if (!gallery) {
+      return res.status(404).json({ success: false, message: "Gallery not found" });
+    }
+    res.status(200).json({ success: true, gallery });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// Create a new gallery
+exports.createGallery = async (req, res) => {
+  try {
+    const { title, description } = req.body;
+
+    const gallery = new Gallery({ title, description });
+    await gallery.save();
+
+    res.status(201).json({ success: true, message: "Gallery created successfully", gallery });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// Update a gallery
+exports.updateGallery = async (req, res) => {
+  try {
+    const { title, description } = req.body;
+
+    let gallery = await Gallery.findById(req.params.id);
+    if (!gallery) {
+      return res.status(404).json({ success: false, message: "Gallery not found" });
+    }
+
+    gallery = await Gallery.findByIdAndUpdate(
+      req.params.id,
+      { title, description },
+      { new: true, runValidators: true }
+    );
+
+    res.status(200).json({ success: true, message: "Gallery updated successfully", gallery });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// Delete a gallery
+exports.deleteGallery = async (req, res) => {
+  try {
+    const gallery = await Gallery.findById(req.params.id);
+    if (!gallery) {
+      return res.status(404).json({ success: false, message: "Gallery not found" });
+    }
+
+    // Delete images from Cloudinary (optional)
+    for (let img of gallery.images) {
+      await cloudinary.uploader.destroy(img.public_id); // Destroy each image by its public_id
+    }
+
+    // Remove gallery
+    await gallery.remove();
+
+    res.status(200).json({ success: true, message: "Gallery deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// Delete an image from a gallery
+exports.deleteGalleryImage = async (req, res) => {
+  try {
+    const { imageId } = req.params;
+
+    const gallery = await Gallery.findById(req.params.id);
+    if (!gallery) {
+      return res.status(404).json({ success: false, message: "Gallery not found" });
+    }
+
+    // Find the image to delete and remove it
+    const imageToDelete = gallery.images.find((img) => img._id.toString() === imageId);
+    if (!imageToDelete) {
+      return res.status(404).json({ success: false, message: "Image not found in gallery" });
+    }
+
+    // Delete image from Cloudinary using public_id
+    await cloudinary.uploader.destroy(imageToDelete.public_id);
+
+    // Remove the image from the gallery
+    gallery.images = gallery.images.filter((img) => img._id.toString() !== imageId);
+    await gallery.save();
+
+    res.status(200).json({ success: true, message: "Image deleted successfully", gallery });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
   }
 };

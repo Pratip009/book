@@ -1,26 +1,31 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const gallerySchema = new mongoose.Schema({
-  image: {
+  title: {
     type: String,
-    required: true, // Image URL or path
+    required: [true, "Please provide a title for the gallery"],
+    trim: true,
   },
-  category: {
+  description: {
     type: String,
-    enum: ['Training', 'School'],
-    required: true,
+    trim: true,
   },
-  uploadedBy: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'user', // Assuming you have a User model to reference the admin who uploaded it
-    required: true,
-  },
+  images: [
+    {
+      url: {
+        type: String,
+        required: true,
+      },
+      public_id: {
+        type: String, // Used for cloud services like Cloudinary
+        required: true,
+      },
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-const Gallery = mongoose.model('Gallery', gallerySchema);
-
-module.exports = Gallery;
+module.exports = mongoose.model("Gallery", gallerySchema);

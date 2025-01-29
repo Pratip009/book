@@ -53,8 +53,6 @@ import StaffUpdateProduct from "./component/Staff/StaffUpdateProductList.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
-
 // const LazyPayment = React.lazy(() => import("./component/Cart/Payment"));
 const LazyDashboard = React.lazy(() => import("./component/Admin/Dashboard"));
 const LazyProductList = React.lazy(() =>
@@ -67,6 +65,9 @@ const LazyUserList = React.lazy(() => import("./component/Admin/UserList"));
 const LazyTeam = React.lazy(() => import("./component/Admin/Team.jsx"));
 const LazyAdminContact = React.lazy(() =>
   import("./component/Admin/ContactForm.jsx")
+);
+const LazyGallery = React.lazy(() =>
+  import("./component/Admin/GalleryImage.jsx")
 );
 const LazyUpdateProduct = React.lazy(() =>
   import("./component/Admin/UpdateProduct")
@@ -83,9 +84,6 @@ const LazyProductReviews = React.lazy(() =>
 );
 
 function App() {
-
- 
-
   const [stripeApiKey, setStripeApiKey] = useState("test");
 
   const dispatch = useDispatch();
@@ -663,7 +661,12 @@ function App() {
               path="/admin/news"
               component={LazyUpdateNews}
             />
-
+            <PrivateRoute
+              isAdmin={true}
+              exact
+              path="/admin/gallery"
+              component={LazyGallery}
+            />
             <PrivateRoute
               isAdmin={true}
               exact

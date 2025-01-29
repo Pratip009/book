@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import mainImg from "../../Image/Product/blogimg.png";
 import Banner from "../Banner";
 import pattern from "../../Image/Product/Frame 19.png";
@@ -6,114 +6,113 @@ import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
 import { Container } from "react-bootstrap";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
+
+const blogData = [
+  {
+    id: 1,
+    title: "The Power of Habit Formation",
+    description:
+      "Discover how small habits can lead to big changes in your life. Learn how to build and maintain habits effectively.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnE8sP9oXn01tUzZVjSA1AsjJS-oj4lYVG_w&s",
+  },
+  {
+    id: 2,
+    title: "Mindfulness and Productivity",
+    description:
+      "How practicing mindfulness can improve focus, reduce stress, and boost overall productivity in your daily life.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBVvkuQpdYVimY-xk34t3TCnm3gFC-M924A&s",
+  },
+  {
+    id: 3,
+    title: "Time Management Strategies",
+    description:
+      "Master the art of time management with practical strategies to enhance efficiency and balance your work-life schedule.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMGz3Jz1VYr84ZtTiKk8Mz-kFK5ibTh9iPBf43skv_7UdFIRNjf6WBLq4lOuqi8urSoPk&usqp=CAU",
+  },
+  {
+    id: 4,
+    title: "The Science of Motivation",
+    description:
+      "Understand the psychological triggers behind motivation and how to stay driven towards achieving your goals.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEUMbnOoou4Jtjp3kQpQTr7OvK4cyTQ_8pA&s",
+  },
+];
+
 export default function Blog() {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await fetch(
-          "https://learningneeds-strapi-11ta.onrender.com/api/blogs?populate=*"
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        setBlogs(data.data); // `data.data` should be an array of blog objects
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBlogs();
-  }, []);
 
   return (
-    <container-fluid>
-      {loading ? (
-        <div>Loading...</div>
-      ) : error ? (
-        <div>Error: {error.message}</div>
-      ) : (
-        <container-fluid>
-          <container-fluid>
-            <Banner
-              title="Personal Development for Smart People"
-              mainImage={mainImg}
-              iconLeft={bookImg}
-              backgroundPattern={pattern}
-              iconRight={star}
-            />
-          </container-fluid>
+    <div style={containerStyle}>
+      <Banner
+        title="Personal Development for Smart People"
+        mainImage={mainImg}
+        iconLeft={bookImg}
+        backgroundPattern={pattern}
+        iconRight={star}
+      />
 
-          <Container>
-           
-            <HeaderWithUnderline sentence="Our Blog" highlightedWord="Our Blog" />
+      <Container>
+        <HeaderWithUnderline sentence="Our Blog" highlightedWord="Our Blog" />
 
-            {blogs.length > 0 ? (
-              blogs.map((blog) => (
-                <div key={blog.id} style={blogStyle}>
-                  <h2 style={headingStyle}>{blog.attributes.heading}</h2>
-                  <p style={subheadingStyle}>{blog.attributes.subheading}</p>
-                  {blog.attributes.images &&
-                    blog.attributes.images.data &&
-                    blog.attributes.images.data.length > 0 && (
-                      <img
-                        src={
-                          blog.attributes.images.data[0].attributes.formats
-                            .thumbnail.url
-                        }
-                        alt={
-                          blog.attributes.images.data[0].attributes.name ||
-                          "Blog Image"
-                        }
-                        style={imageStyle}
-                      />
-                    )}
-                </div>
-              ))
-            ) : (
-              <div>No blogs available</div>
-            )}
-          </Container>
-        </container-fluid>
-      )}
-    </container-fluid>
+        <div style={blogContainerStyle}>
+          {blogData.map((blog) => (
+            <div key={blog.id} style={blogStyle}>
+              <img src={blog.image} alt={blog.title} style={imageStyle} />
+              <h2 style={headingStyle}>{blog.title}</h2>
+              <p style={subheadingStyle}>{blog.description}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </div>
   );
 }
 
+// Styles
 const containerStyle = {
   width: "100%",
   backgroundColor: "white",
   overflowX: "hidden",
+ 
+};
+
+const blogContainerStyle = {
+  display: "flex",
+  gap: "20px",
+  overflowX: "auto", // Enables horizontal scrolling on smaller screens
+  justifyContent: "center",
+  flexWrap: "wrap",
 };
 
 const blogStyle = {
-  marginBottom: "20px",
   padding: "20px",
-  borderBottom: "1px solid #ddd",
+  borderRadius: "10px",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  backgroundColor: "#fff",
+  textAlign: "center",
 };
 
 const headingStyle = {
-  fontSize: "36px",
+  fontSize: "24px",
   fontWeight: "bold",
-  marginBottom: "10px",
+  margin: "10px 0",
 };
 
 const subheadingStyle = {
   fontSize: "15px",
-  marginBottom: "10px",
   textAlign: "justify",
   fontFamily: "Nunito",
+  color: "#555",
 };
 
 const imageStyle = {
-  maxWidth: "50%",
+  maxWidth: "100%",
   height: "auto",
+  borderRadius: "8px",
 };
