@@ -121,8 +121,8 @@ const School = () => {
           </div>
 
           <HeaderWithUnderline
-            sentence="We Help People to Start Their School"
-            highlightedWord="Start Their School"
+            sentence="We Help People to Start Their Own School"
+            highlightedWord="Start Their Own School"
           />
           <div className="container py-5">
             <div className="row text-center">
