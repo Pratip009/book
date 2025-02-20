@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const errorMiddleware = require("./middleware/error.js");
+const errorMiddleware = require("./middleWare/error");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const path = require("path");
