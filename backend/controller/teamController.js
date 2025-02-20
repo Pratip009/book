@@ -1,4 +1,4 @@
-const TeamMember = require('../model/teamMember');
+const TeamMember = require('../model/TeamMember');
 
 // Add a new team member
 exports.addTeamMember = async (req, res) => {
