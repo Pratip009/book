@@ -1,41 +1,51 @@
-const Team = require("../model/TeamMember"); // Assuming you have a Team model
-const cloudinary = require("cloudinary").v2; // For image upload to Cloudinary
+const TeamMember = require('../model/teamMember');
 
-// Function to add team member
+// Add a new team member
 exports.addTeamMember = async (req, res) => {
   try {
-    const { name, designation, facebook, linkedin, instagram } = req.body;
-    const image = req.file ? req.file.path : null;
-
-    // Handle image upload if necessary (e.g., to Cloudinary)
-    let uploadedImage = null;
-    if (image) {
-      uploadedImage = await cloudinary.uploader.upload(image, {
-        folder: "team_members", // Optional: Store in a folder named "team_members"
+    const { name, role, bio, photo } = req.body;
+    const newTeamMember = new TeamMember({
+      name,
+      role,
+      bio,
+      photo,
+    });
+    await newTeamMember.save();
+    res
+      .status(201)
+      .json({
+        message: "Team member added successfully",
+        teamMember: newTeamMember,
       });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to add team member", error });
+  }
+};
+
+// Get all team members
+exports.getTeamMembers = async (req, res) => {
+  try {
+    const teamMembers = await TeamMember.find();
+    res.status(200).json(teamMembers);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch team members", error });
+  }
+};
+
+// Delete a team member
+exports.deleteTeamMember = async (req, res) => {
+  try {
+    const { id } = req.params;
+    console.log("Received request to delete ID:", id); // Log the ID
+    const deletedMember = await TeamMember.findByIdAndDelete(id);
+
+    if (!deletedMember) {
+      return res.status(404).json({ message: "Team member not found" });
     }
 
-    // Save team member data to database
-    const newTeamMember = await Team.create({
-      name,
-      designation,
-      facebook,
-      linkedin,
-      instagram,
-      image: uploadedImage ? uploadedImage.url : "", // Store image URL if uploaded
-    });
-
-    res.status(201).json({
-      success: true,
-      message: "Team member added successfully!",
-      data: newTeamMember,
-    });
+    res.status(200).json({ message: "Team member deleted successfully" });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({
-      success: false,
-      message: "Error adding team member.",
-      error: error.message,
-    });
+    console.error("Error deleting team member:", error);
+    res.status(500).json({ message: "Failed to delete team member", error });
   }
 };

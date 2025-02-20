@@ -1,61 +1,59 @@
-const app = require("./app");
-const dotenv = require("dotenv");
-const connectDB = require("./db/connectDB");
-const cloudinary = require("cloudinary").v2;
+require("dotenv").config({ path: "backend/config/config.env" });
+const express = require("express");
 const path = require("path");
-var express = require("express");
 const cors = require("cors");
-const Stripe = require("stripe")(process.env.SECRET_KEY);
 const bodyParser = require("body-parser");
+const cloudinary = require("cloudinary").v2;
+const Stripe = require("stripe")(process.env.SECRET_KEY);
+const connectDB = require("./db/connectDB");
 
-// Configuration
-dotenv.config({ path: "backend/config/config.env" });
+const app = require("./app");
+
+// Connect to Database
 connectDB();
 
-// Cloudinary configuration
+// Cloudinary Configuration
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+// Middleware
 app.use(cors());
-app.use(express.static(path.join(__dirname, "../frotend/build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frotend/build/index.html"));
-});
-
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-const PORT = process.env.PORT || 5000;
-const server = app.listen(PORT, () => {
-  
+// Serve Frontend
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
-// Payment route
+// Payment Route
 app.post("/payment", async (req, res) => {
-  let status, error;
-  const { token, amount } = req.body;
   try {
-    await Stripe.charges.create({
+    const { token, amount } = req.body;
+    const charge = await Stripe.charges.create({
       source: token.id,
       amount,
       currency: "usd",
     });
-    status = "success";
+    res.json({ success: true, charge });
   } catch (error) {
-    console.error(error);
-    status = "Failure";
-    res.json({ error, status });
+    console.error("Payment Error:", error);
+    res.status(500).json({ success: false, error: error.message });
   }
 });
 
-// Handle unhandled promise rejections
+
+// Start Server
+const PORT = process.env.PORT || 5000;
+const server = app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// Handle Unhandled Promise Rejections
 process.on("unhandledRejection", (err) => {
-  console.error(`Error: ${err.message}`);
- 
-  server.close(() => {
-    process.exit(1);
-  });
+  console.error(`Unhandled Error: ${err.message}`);
+  server.close(() => process.exit(1));
 });

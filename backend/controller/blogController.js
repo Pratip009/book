@@ -1,63 +1,49 @@
-const BlogModel = require("../model/blogModel");
+const Blog = require('../model/Blog');
 
-module.exports.getBlogs = async (req, res) => {
+exports.getBlogs = async (req, res) => {
   try {
-    const blogs = await BlogModel.find();
-    res.send(blogs);
-  } catch (err) {
-    
-    res.status(500).send({ error: err, msg: "Failed to fetch blogs" });
+    const blogs = await Blog.find();
+    res.status(200).json(blogs);
+  } catch (error) {
+    res.status(500).json({ message: 'Server Error' });
   }
 };
-exports.saveBlogPost = async (req, res) => {
-  const { title, description } = req.body;
-  // const imageUrl = req.file.path; // Path where the image is saved
+
+// @desc    Create a new blog
+// @route   POST /api/v1/blogs
+// @access  Public
+exports.createBlog = async (req, res) => {
+  const { title, subtitle, description, imageUrl } = req.body;
 
   try {
-    const blog = new BlogModel({
+    const newBlog = new Blog({
       title,
+      subtitle,
       description,
-      // imageUrl
+      imageUrl,
     });
 
-    await blog.save();
-    res.status(201).json(blog);
+    const blog = await newBlog.save();
+    res.status(201).json({ message: 'Blog created successfully', blog });
   } catch (error) {
-    
-    res.status(500).json({ message: "Error saving the blog post" });
-  }
-};
-module.exports.saveBlogs = async (req, res) => {
-  const { title, description, imageUrl } = req.body;
-  try {
-    const blog = await BlogModel.create({ title, description, imageUrl });
-    
-    res.status(201).send(blog);
-  } catch (err) {
-   
-    res.status(500).send({ error: err, msg: "Failed to save blog" });
+    res.status(500).json({ message: 'Server Error' });
   }
 };
 
-module.exports.updateBlogs = async (req, res) => {
-  const { id } = req.params;
-  const { title, description } = req.body;
+// @desc    Delete a blog
+// @route   DELETE /api/v1/blogs/:id
+// @access  Public
+exports.deleteBlog = async (req, res) => {
   try {
-    await BlogModel.findByIdAndUpdate(id, { title, description });
-    res.send("Blog updated successfully");
-  } catch (err) {
-    
-    res.status(500).send({ error: err, msg: "Failed to update blog" });
-  }
-};
+    const blog = await Blog.findById(req.params.id);
 
-module.exports.deleteBlogs = async (req, res) => {
-  const { id } = req.params;
-  try {
-    await BlogModel.findByIdAndDelete(id);
-    res.send("Blog deleted successfully");
-  } catch (err) {
-   
-    res.status(500).send({ error: err, msg: "Failed to delete blog" });
+    if (!blog) {
+      return res.status(404).json({ message: 'Blog not found' });
+    }
+
+    await blog.remove();
+    res.status(200).json({ message: 'Blog deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Server Error' });
   }
 };
