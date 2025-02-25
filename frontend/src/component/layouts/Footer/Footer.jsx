@@ -11,7 +11,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
-
+import axios from 'axios';
 import { FaXTwitter } from "react-icons/fa6";
 import logo from "../../../Image/LNWhite.png";
 import "./Footer.css";
@@ -22,11 +22,17 @@ import { GrSecure } from "react-icons/gr";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
 import { Nav } from "react-bootstrap";
+import SubscribeForm from "../../User/SubscribeForm";
+
 export default function Footer() {
   const location = useLocation();
   const [phone, setPhone] = useState("8240554890");
   const [email, setEmail] = useState("infolearningneeds@gmail.com");
+
   const isActive = (path) => location.pathname === path;
+
+
+ 
   return (
     <div className="footer-wrapper">
       <MDBFooter
@@ -132,9 +138,9 @@ export default function Footer() {
                     </p>
                     <p>
                       <NavLink
-                        to="/faqs"
+                        to="/about_us"
                         className={`footer_links ${
-                          isActive("/faqs") ? "active_link" : ""
+                          isActive("/about_us") ? "active_link" : ""
                         }`}
                       >
                         FAQs
@@ -226,9 +232,9 @@ export default function Footer() {
                     </p>
                     <p>
                       <NavLink
-                        to="/terms-conditions"
+                        to="/terms/conditions"
                         className={`footer_links ${
-                          isActive("/terms-conditions") ? "active_link" : ""
+                          isActive("/terms/conditions") ? "active_link" : ""
                         }`}
                       >
                         T&C
@@ -250,9 +256,9 @@ export default function Footer() {
                     </h6>
                     <p>
                       <NavLink
-                        to="/about-us"
+                        to="/about_us"
                         className={`footer_links ${
-                          isActive("/about-us") ? "active_link" : ""
+                          isActive("/about_us") ? "active_link" : ""
                         }`}
                       >
                         About Us
@@ -280,9 +286,9 @@ export default function Footer() {
                     </p>
                     <p>
                       <NavLink
-                        to="/careers"
+                        to="/career"
                         className={`footer_links ${
-                          isActive("/careers") ? "active_link" : ""
+                          isActive("/career") ? "active_link" : ""
                         }`}
                       >
                         Work With Us
@@ -306,27 +312,7 @@ export default function Footer() {
                 <h6 className="mb-4" style={{ fontSize: "var(--font-p)" }}>
                   Newsletter
                 </h6>
-                <div className="custom-input-wrapper">
-                  <input
-                    type="email"
-                    className="form-control custom-input-field"
-                    placeholder=" "
-                    required
-                  />
-                  <label className="custom-floating-label">Email address</label>
-                </div>
-                <p className="textt">
-                  By submitting your email address you agree to the Terms &
-                  Conditions
-                </p>
-                <MDBBtn
-                  color="light"
-                  type="submit"
-                  className="mb-4 custom-btn w-100"
-                  style={{ fontFamily: "Nunito" }}
-                >
-                  Subscribe
-                </MDBBtn>
+                <SubscribeForm/>
               </MDBCol>
             </MDBRow>
             <MDBRow className="d-flex justify-content-center align-items-center mt-4">

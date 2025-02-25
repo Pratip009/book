@@ -21,6 +21,8 @@ const contactRoutes = require("./route/contactRoutes");
 const teamRoutes = require("./route/teamRoutes");
 const galleryRoutes = require("./route/galleryRoutes");
 const testimonialRoutes = require("./route/testimonialRoutes");
+const careerRoutes = require('./route/careerRoute');
+const subscribeRoutes = require('./route/subscribeRoute');
 // CORS Configuration
 const corsOptions = {
   origin: "http://localhost:3000", // Replace with your frontend's URL
@@ -61,6 +63,8 @@ app.use("/api/v1/team", teamRoutes);
 app.use("/api/v1/testimonial", testimonialRoutes);
 app.use('/api/v1/blogs', blogRoutes);
 app.use("/api/v1", galleryRoutes);
+app.use("/api/v1", careerRoutes);
+app.use('/api/v1', subscribeRoutes);
 // Serve static files from the frontend in production
 if (process.env.NODE_ENV === "production") {
   const __dirname1 = path.resolve();

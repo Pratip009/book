@@ -31,7 +31,8 @@ import UpdatePassword from "../component/User/UpdatePassword";
 import ForgetPassword from "../component/User/ForgetPassword";
 import ResetPassword from "../component/User/ResetPassword";
 import UpdateProfile from "../component/User/UpdateProfile";
-
+import subscribeForm from "../component/User/SubscribeForm"
+import Career from "../component/Home/Career"
 import { useDispatch } from "react-redux";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -138,9 +139,11 @@ function Users() {
           />
 
           <PrivateRoute exact path="/orders" component={MyOrder} />
+          <PrivateRoute exact path="/career" component={Career} />
           <PrivateRoute exact path="/shipping" component={Shipping} />
           <PrivateRoute exact path="/order/confirm" component={ConfirmOrder} />
           <PrivateRoute exact path="/success" component={OrderSuccess} />
+          <PrivateRoute exact path="/subscribe" component={subscribeForm}/>
         </Switch>
 
         <Services />

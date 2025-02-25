@@ -16,6 +16,7 @@ import CreatTeam from "../component/Admin/Team"
 import createTestimonial from "../component/Admin/Testimonials"
 import createGallery from "../component/Admin/GalleryImage"
 import createBlog from "../component/Admin/BlogPost"
+import createCareer from "../component/Admin/CareerPost"
 const Admin = () => {
   return (
     <Router>
@@ -115,6 +116,12 @@ const Admin = () => {
           isAdmin={true}
           exact
           path="/admin/blog"
+          component={createBlog}
+        />
+        <PrivateRoute
+          isAdmin={true}
+          exact
+          path="/admin/career"
           component={createBlog}
         />
       </Switch>

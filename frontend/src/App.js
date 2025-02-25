@@ -23,6 +23,7 @@ import Products from "./component/Product/Products";
 import Signup from "./component/User/SignUp";
 import Login from "./component/User/Login";
 import Profile from "./component/User/Profile";
+import SubscribeForm from "./component/User/SubscribeForm"
 import UpdateProfile from "./component/User/UpdateProfile";
 import UpdatePassword from "./component/User/UpdatePassword";
 import ForgetPassword from "./component/User/ForgetPassword";
@@ -255,7 +256,7 @@ function App() {
             render={() => (
               <>
                 {<Header2 />}
-                <Career />
+                <PrivateRoute exact path="/career" component={Career} />
 
                 {<Footer />}
               </>
@@ -464,7 +465,18 @@ function App() {
               </>
             )}
           />
+<Route
+            exact
+            path="/subscribe"
+            render={() => (
+              <>
+                {<Header2 />}
+                <PrivateRoute exact path="/subscribe" component={SubscribeForm} />
 
+                {<Footer />}
+              </>
+            )}
+          />
           <Route
             exact
             path="/profile/update"

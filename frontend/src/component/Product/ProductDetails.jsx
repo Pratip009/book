@@ -40,13 +40,10 @@ const ProductDetails = () => {
   const { product, loading, error, success } = useSelector(
     (state) => state.productDetails
   );
-  useEffect(() => {
-    if (!loading) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [loading]);
-  
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   useEffect(() => {
     if (error) {
       alert.error(error);
