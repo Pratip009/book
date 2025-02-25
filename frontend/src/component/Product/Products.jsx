@@ -488,7 +488,7 @@ function Products() {
                 {/* Pagination */}
 
                 <Container fluid className="paginationContainer">
-                  <Row className="d-flex justify-content-center">
+                  <Row className="justify-content-center">
                     <Pagination
                       activePage={currentPage}
                       itemsCountPerPage={resultPerPage}

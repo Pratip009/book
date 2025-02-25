@@ -29,6 +29,7 @@ import { PRODUCT_DETAILS_RESET } from "../../constants/productsConstatns";
 import pdfDefaultImage from "../../Image/pdfplaceholder.png"; // Default image for pdf products
 
 const ProductDetails = () => {
+ 
   const match = useRouteMatch();
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -40,10 +41,9 @@ const ProductDetails = () => {
   const { product, loading, error, success } = useSelector(
     (state) => state.productDetails
   );
-
   useEffect(() => {
-    window.scrollTo(0, 0);
-  });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [match.params.id]);
   useEffect(() => {
     if (error) {
       alert.error(error);

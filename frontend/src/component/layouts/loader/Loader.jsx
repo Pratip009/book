@@ -1,10 +1,10 @@
 import React from "react";
-import { ReactComponent as CricketBall } from "../../../Image/Loader-svg/ball.svg";
+import CricketBallGif from "../../../Image/Loader-svg/1481.gif";
 import "./Loader.css";
 
 const CricketBallLoader = () => (
   <div className="cricket-ball-loader">
-    <CricketBall className="spinner" />
+    <img src={CricketBallGif} alt="Loading..." />
   </div>
 );
 
