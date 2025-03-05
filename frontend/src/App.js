@@ -89,7 +89,7 @@ const LazyProductReviews = React.lazy(() =>
 
 function App() {
   const [stripeApiKey, setStripeApiKey] = useState("test");
-
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
 
   // get STRIPE_API_KEY for payment from backend for connection to stripe payment gateway

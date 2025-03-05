@@ -33,7 +33,7 @@
       font-size: 20px; /* Smaller font size for mobile */
     }
     .highlighted-text {
-      font-size: 20px; /* Smaller font size for mobile */
+      font-size: 20px !important; /* Smaller font size for mobile */
     }
     .highlighted-text::after {
       content: "";
