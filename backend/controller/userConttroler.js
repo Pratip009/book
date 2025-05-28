@@ -6,30 +6,60 @@ const sendEmail = require("../utils/sendEmail");
 const crypto = require("crypto");
 const cloudinary = require("cloudinary");
 
-
 // signUp controller>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-exports.registerUser = asyncWrapper(async (req, res) => {
-  const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-    folder: "Avatar", // this folder cloudainry data base manage by us
-    width: 150,
-    crop: "scale"
-  });
+exports.registerUser = asyncWrapper(async (req, res, next) => {
+  try {
+    console.log("📢 Signup Request Received:", req.body);
 
+    if (!req.body.avatar) {
+      console.error("❌ Avatar is missing in request body");
+      return res
+        .status(400)
+        .json({ success: false, message: "Avatar is required" });
+    }
 
+    let myCloud;
+    try {
+      console.log("🟢 Uploading avatar to Cloudinary...");
+      myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+        folder: "Avatar",
+        width: 150,
+        crop: "scale",
+      });
+      console.log("✅ Avatar uploaded:", myCloud);
+    } catch (uploadError) {
+      console.error("❌ Cloudinary Upload Error:", uploadError);
+      return res
+        .status(500)
+        .json({ success: false, message: "Avatar upload failed" });
+    }
 
-  const { name, email, password } = req.body;
-  const user = await userModel.create({
-    name,
-    password,
-    email,
-    avatar: {
-      public_id: myCloud.public_id,
-      url: myCloud.secure_url,
-    },
-  });
+    const { name, email, password } = req.body;
+    if (!name || !email || !password) {
+      console.error("❌ Missing required fields:", { name, email, password });
+      return res
+        .status(400)
+        .json({ success: false, message: "All fields are required" });
+    }
 
-  // sending the res and staus code along with token using sendJWtToken method
-  sendJWtToken(user, 201, res);
+    console.log("🟢 Creating user in database...");
+    const user = await userModel.create({
+      name,
+      email,
+      password,
+      avatar: {
+        public_id: myCloud.public_id,
+        url: myCloud.secure_url,
+      },
+    });
+    console.log("✅ User created:", user);
+
+    console.log("🟢 Calling sendJWtToken...");
+    sendJWtToken(user, 201, res);
+  } catch (error) {
+    console.error("❌ Error in registerUser:", error);
+    next(error);
+  }
 });
 
 // Login User >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -73,8 +103,6 @@ exports.logoutUser = asyncWrapper(async (req, res) => {
     message: "User logged out",
   });
 });
-
-
 
 //// Forgot Password >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.forgotPassword = asyncWrapper(async (req, res, next) => {
@@ -174,7 +202,6 @@ exports.resetPassword = asyncWrapper(async (req, res, next) => {
 
 //// Get User Detail  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.getUserDetails = asyncWrapper(async (req, res) => {
-
   const user = await userModel.findById(req.user.id); // user.id because we set that user into as user.req when user gose autentiction. becauae all data of users set into req.user. only user when logged in then access this function
   res.status(200).json({
     success: true,
@@ -185,7 +212,7 @@ exports.getUserDetails = asyncWrapper(async (req, res) => {
 // update User password>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.updatePassword = asyncWrapper(async (req, res, next) => {
   const user = await userModel.findById(req.user.id).select("+password"); // + password because pass not allowed in shcema to acsess
-   
+
   const isPasswordMatched = await user.comparePassword(req.body.oldPassword); // user.comparePassword this method define in user Schema  for comapre given normal pass to savde hash pass
   // when user not found
   if (!isPasswordMatched) {

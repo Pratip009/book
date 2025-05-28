@@ -1,28 +1,39 @@
-// this method will take user Data status code and res =>  Then Create Token and will saving in cookie ans send
+const sendJWtToken = (user, statusCode = 200, res) => {
+    try {
+        const token = user.getJWTToken(); // Ensure user model has this method
 
-const sendJWtToken  = (user , statusCode , res) =>{
-   
+        // Check if token is generated
+        if (!token) {
+            console.error("JWT Token generation failed");
+            return res.status(500).json({ success: false, message: "Token generation failed" });
+        }
 
-;
-    const token = user.getJWTToken(); //every user has access all userModel methods
+        // Convert COOKIE_EXPIRE to a number and set a default value if undefined
+        const cookieExpire = Number(process.env.COOKIE_EXPIRE) || 5;
 
-     // options for cookie
-    const options = {
-        expires: new Date(
-            // expiry date from now to  + process.env.COOKIE_EXPIRE (eg 5day) + convert it mili sec
-            Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
-        ),
-        httpOnly: true,
-    };
-    
-    // wrapping all data into cookie eg token and options data
-    
-    res.status(statusCode).cookie("token", token, options).json({
-        success: true,
-        user,
-        token,
-    });
+        // Options for cookie
+        const options = {
+            expires: new Date(Date.now() + cookieExpire * 24 * 60 * 60 * 1000),
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "strict",
+        };
+
+        // Debugging Logs
+        console.log("Sending Token:", token);
+        console.log("Status Code:", statusCode);
+        console.log("Cookie Options:", options);
+
+        // Send response
+        res.status(statusCode).cookie("token", token, options).json({
+            success: true,
+            user,
+            token,
+        });
+    } catch (error) {
+        console.error("Error in sendJWtToken:", error);
+        res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
 };
 
 module.exports = sendJWtToken;
-
