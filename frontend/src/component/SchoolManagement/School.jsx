@@ -92,7 +92,7 @@ const School = () => {
               highlightedWord="Management Service"
             />
             <p className="school_para">
-              The Learning Needs team has expansive expertise on school
+              The Learning Needs team has extensive expertise on school
               management issues and can provide all necessary support in various
               ways. Our team member can advise you on any issues which your
               school may have. This could be staff performance issues,

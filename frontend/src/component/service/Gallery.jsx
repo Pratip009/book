@@ -32,8 +32,8 @@ const Gallery = () => {
   );
 
   return (
-    <div className="container-fluid">
-      <div className="container-fluid">
+    <container-fluid>
+      <container-fluid>
         <Banner
           title="You'll Only See the Best of the Best"
           mainImage={mainImg}
@@ -41,7 +41,7 @@ const Gallery = () => {
           backgroundPattern={pattern}
           iconRight={star}
         />
-      </div>
+       </container-fluid>
 
       <HeaderWithUnderline sentence="Gallery" highlightedWord="Gallery" />
 
@@ -50,7 +50,7 @@ const Gallery = () => {
         <Nav
           activeKey={activeTab}
           onSelect={(selectedKey) => setActiveTab(selectedKey)}
-          className="justify-center gap-3 my-4"
+          className="justify-content-center gap-3 my-4"
           style={{ borderBottom: "none" }}
         >
           {["training", "school"].map((tab) => (
@@ -183,7 +183,7 @@ const Gallery = () => {
           </div>
         </div>
       )}
-    </div>
+    </container-fluid>
   );
 };
 
