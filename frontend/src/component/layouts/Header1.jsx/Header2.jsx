@@ -1,12 +1,20 @@
-import React, { useState,  } from "react";
-import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Nav, Navbar, Button, Offcanvas } from "react-bootstrap";
 import { FaPhoneAlt, FaEnvelope, FaBars } from "react-icons/fa";
-
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { addItemToCart, removeItemFromCart } from "../../../actions/cartAction";
+import CartItem from "../../../component/Cart/CartItem";
+import TextField from "@material-ui/core/TextField";
+import { Typography } from "@material-ui/core";
+import ButtonMUI from "@material-ui/core/Button";
+import {
+  dispalyMoney,
+  generateDiscountedPrice,
+} from "../../../component/DisplayMoney/DisplayMoney";
 import CartIcon from "./CartIcon";
-import ProfileModal from "./ProfileModel";
+import ProfileModal from "../../../component/layouts/Header1.jsx/ProfileModel";
 import ScrollingTextHeader from "./ScrollingTextHeader";
 import logo from "../../../Image/LN.webp";
 import "./Header.css";
@@ -17,6 +25,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa6";
+import { FaTrash } from "react-icons/fa6";
 
 const navLinkStyle = {
   fontFamily: "Nunito",
@@ -29,27 +38,84 @@ const navLinkStyle = {
 const navLinkHoverStyle = {
   color: "#FF4E00",
 };
+
 const activeLinkStyle = {
   fontWeight: "bold",
   marginTop: "-2px",
 };
+
 function Header2() {
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
   const { isAuthenticated, user } = useSelector((state) => state.userData);
-
+  const { cartItems } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
   const [phone, setPhone] = useState("8240554890");
   const [email, setEmail] = useState("infolearningneeds@gmail.com");
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-  // 8240554890
-  //infolearningneeds@gmail.com
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [couponCode, setCouponCode] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+  const [isValid, setIsValid] = useState(true);
 
   const toggleNavbar = () => {
     setIsNavbarCollapsed((prev) => !prev);
   };
+
   const handleLinkClick = () => {
     setIsNavbarCollapsed(false);
   };
+
+  const toggleSidebar = () => {
+    setShowSidebar((prev) => !prev);
+  };
+
+  const increaseQuantity = (id, quantity, stock) => {
+    const newQty = quantity + 1;
+    if (stock <= quantity) {
+      return;
+    } else {
+      dispatch(addItemToCart(id, newQty));
+    }
+  };
+
+  const decreaseQuantity = (id, quantity) => {
+    const newQty = quantity - 1;
+    if (1 >= quantity) {
+      return;
+    }
+    dispatch(addItemToCart(id, newQty));
+  };
+
+  const deleteCartItems = (id) => {
+    dispatch(removeItemFromCart(id));
+  };
+
+  const handleApplyCoupon = () => {
+    setIsValid(false); // Placeholder for coupon logic
+  };
+
+  const handleFocus = (event) => {
+    setIsFocused(event.target.value !== "");
+  };
+
+  const checkoutHandler = () => {
+    setShowSidebar(false);
+    window.location.href = "/login?redirect=/shipping";
+  };
+
+  // Calculate price after discount
+  let totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  let discountedPrice = generateDiscountedPrice(totalPrice);
+  let totalDiscount = totalPrice - discountedPrice;
+  let final = totalPrice - totalDiscount;
+  final = dispalyMoney(final);
+  totalDiscount = dispalyMoney(totalDiscount);
+  totalPrice = dispalyMoney(totalPrice);
+
   return (
     <>
       {/* First Navbar Section */}
@@ -97,7 +163,6 @@ function Header2() {
                   className="text-center"
                   style={{ margin: "0 .25rem" }}
                 >
-                  {/* Social link with circular white background */}
                   <a
                     href="https://www.facebook.com"
                     target="_blank"
@@ -184,13 +249,12 @@ function Header2() {
 
             <Nav className="d-flex align-items-center">
               <Nav.Link
-                href={`mailto:${email}`} // Try opening the email client with `mailto`
-                target="_blank" // Open the email client in a new tab
+                href={`mailto:${email}`}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="d-flex align-items-center me-3 d-none d-lg-flex"
                 style={{
                   color: "white",
-
                   textDecoration: "none",
                 }}
               >
@@ -268,12 +332,11 @@ function Header2() {
             </Navbar.Brand>
           </Link>
 
-          {/* Icons for Mobile */}
           <Nav className="d-flex align-items-center ms-auto d-lg-none">
             <div className="d-flex align-items-center">
-              <Link to="/cart" className="me-3">
+              <Nav.Link onClick={toggleSidebar} className="me-3">
                 <CartIcon style={{ color: "black" }} />
-              </Link>
+              </Nav.Link>
               <span>
                 <ProfileModal user={user} isAuthenticated={isAuthenticated} />
               </span>
@@ -298,7 +361,7 @@ function Header2() {
                 className="desktop-nav-link"
                 style={{
                   ...navLinkStyle,
-                  ...(isActive("/") && activeLinkStyle), // Merge active styles
+                  ...(isActive("/") && activeLinkStyle),
                 }}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.color = navLinkHoverStyle.color)
@@ -348,7 +411,6 @@ function Header2() {
               >
                 Training
               </Link>
-
               <Link
                 to="/school"
                 className="desktop-nav-link"
@@ -429,8 +491,6 @@ function Header2() {
               </Link>
             </Nav>
 
-            {/* Mobile View Navigation */}
-
             <Nav
               className="d-flex flex-column align-items-start d-lg-none mx-2"
               id="mobile-nav"
@@ -491,7 +551,6 @@ function Header2() {
               >
                 Training
               </Link>
-
               <Link
                 to="/school"
                 onClick={handleLinkClick}
@@ -580,20 +639,335 @@ function Header2() {
           </Navbar.Collapse>
 
           <Nav className="d-none d-lg-flex align-items-center ms-auto">
-            <Link to="/cart" className="me-3">
+            <Nav.Link onClick={toggleSidebar} className="me-3">
               <CartIcon />
-            </Link>
+            </Nav.Link>
             <div>
               <ProfileModal user={user} isAuthenticated={isAuthenticated} />
             </div>
           </Nav>
         </Container>
       </Navbar>
+
+      {/* Cart Sidebar */}
+      <Offcanvas
+        show={showSidebar}
+        onHide={toggleSidebar}
+        placement="end"
+        className="tw-w-[400px] tw-bg-gray-50"
+      >
+        <Offcanvas.Header closeButton className="tw-bg-white tw-shadow-sm">
+          <Offcanvas.Title className="tw-font-nunito tw-text-xl tw-font-bold tw-text-gray-800">
+            Your Cart
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body className="tw-p-4 tw-flex tw-flex-col tw-gap-4">
+          {cartItems.length === 0 ? (
+            <div className="tw-text-center tw-py-8">
+              <Typography
+                variant="h6"
+                className="tw-font-nunito tw-text-gray-700 tw-mb-2"
+              >
+                Your Shopping Cart is Empty
+              </Typography>
+              <Typography
+                variant="body2"
+                className="tw-font-nunito tw-text-gray-500 tw-mb-4"
+              >
+                Let's get shopping!
+              </Typography>
+              <ButtonMUI
+                variant="contained"
+                className="tw-bg-[#FF4E00] tw-text-white tw-font-nunito hover:tw-bg-[#e64400]"
+                onClick={() => {
+                  toggleSidebar();
+                  window.location.href = "/products";
+                }}
+              >
+                Shop Now
+              </ButtonMUI>
+            </div>
+          ) : (
+            <div className="tw-relative tw-flex tw-flex-col tw-gap-6 tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-shadow-inner tw-min-h-[500px]">
+              {/* Cart Items Section */}
+              <div className="tw-max-h-[300px] tw-overflow-y-auto tw-pr-2">
+                {cartItems.map((item) => {
+                  const isPDF = item.type === "pdf";
+                  const imageSrc = isPDF
+                    ? "https://cdn-icons-png.flaticon.com/512/337/337946.png"
+                    : item.image || "https://via.placeholder.com/60";
+
+                  return (
+                    <div
+                      key={item.productId}
+                      style={{
+                        backgroundColor: "#ffffff",
+                        borderRadius: "16px",
+                        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.06)",
+                        padding: "16px",
+                        marginBottom: "16px",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "16px",
+                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                        cursor: "default",
+                        hover: {
+                          transform: "scale(1.01)",
+                          boxShadow: "0 6px 16px rgba(0, 0, 0, 0.1)",
+                        },
+                      }}
+                    >
+                      <img
+                        src={imageSrc}
+                        alt={item.name}
+                        onError={(e) => {
+                          e.target.onerror = null; // prevent infinite loop if fallback also fails
+                          e.target.src =
+                            "https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png"; // your fallback image URL
+                        }}
+                        style={{
+                          width: "64px",
+                          height: "64px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                          border: "1px solid #e5e7eb",
+                        }}
+                      />
+                      <div style={{ flex: 1 }}>
+                        <p
+                          style={{
+                            fontFamily: "Nunito, sans-serif",
+                            fontSize: "18px",
+                            fontWeight: 700,
+                            color: "#111827",
+                            marginBottom: "4px",
+                            whiteSpace: "nowrap",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                          }}
+                        >
+                          {item.name}
+                        </p>
+                        <p
+                          style={{
+                            fontFamily: "Nunito, sans-serif",
+                            fontSize: "14px",
+                            color: "#6b7280",
+                            marginBottom: "8px",
+                          }}
+                        >
+                          Price: {dispalyMoney(item.price)}
+                        </p>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "10px",
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <ButtonMUI
+                            variant="outlined"
+                            size="small"
+                            style={{
+                              fontFamily: "Nunito",
+                              borderColor: "#d1d5db",
+                              color: "#374151",
+                              minWidth: "32px",
+                              padding: "4px 10px",
+                            }}
+                            onClick={() =>
+                              decreaseQuantity(item.productId, item.quantity)
+                            }
+                          >
+                            −
+                          </ButtonMUI>
+                          <p
+                            style={{
+                              fontFamily: "Nunito, sans-serif",
+                              fontSize: "15px",
+                              fontWeight: 600,
+                              padding: "0 4px",
+                              minWidth: "20px",
+                              textAlign: "center",
+                              margin:0
+                            }}
+                          >
+                            {item.quantity}
+                          </p>
+                          <ButtonMUI
+                            variant="outlined"
+                            size="small"
+                            style={{
+                              fontFamily: "Nunito",
+                              borderColor: "#d1d5db",
+                              color: "#374151",
+                              minWidth: "32px",
+                              padding: "4px 10px",
+                            }}
+                            onClick={() =>
+                              increaseQuantity(
+                                item.productId,
+                                item.quantity,
+                                item.stock
+                              )
+                            }
+                          >
+                            +
+                          </ButtonMUI>
+                          <ButtonMUI
+                            
+                            size="small"
+                            style={{
+                              fontFamily: "Nunito",
+                              color: "#dc2626",
+                             
+                              
+                             
+                              marginLeft: "auto",
+                            }}
+                            onClick={() => deleteCartItems(item.productId)}
+                          >
+                            <FaTrash />
+
+                          </ButtonMUI>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Order Summary */}
+              <div
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: "12px",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                  padding: "20px",
+                  fontFamily: "'Nunito', sans-serif",
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "18px",
+                    color: "#2D3748",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Order Summary ({cartItems.length}{" "}
+                  {cartItems.length > 1 ? "items" : "item"})
+                </Typography>
+
+                {/* Price Details */}
+                <div style={{ marginBottom: "16px" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    <span style={{ color: "#718096" }}>Original Price</span>
+                    <span style={{ fontWeight: "500", color: "#2D3748" }}>
+                      {totalPrice}
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    <span style={{ color: "#718096" }}>Discount</span>
+                    <span style={{ color: "#A0AEC0" }}>
+                      <del>{totalDiscount}</del>
+                    </span>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <span style={{ color: "#718096" }}>Delivery</span>
+                    <span style={{ color: "#38A169", fontWeight: "bold" }}>
+                      Free
+                    </span>
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div
+                  style={{ borderTop: "1px solid #E2E8F0", margin: "16px 0" }}
+                />
+
+                {/* Final Total */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  <div>
+                    <Typography
+                      style={{ fontWeight: "bold", color: "#2D3748" }}
+                    >
+                      Total Price
+                    </Typography>
+                    <Typography style={{ fontSize: "12px", color: "#A0AEC0" }}>
+                      (Inclusive of all taxes)
+                    </Typography>
+                  </div>
+                  <Typography
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                      color: "#2D3748",
+                    }}
+                  >
+                    {final}
+                  </Typography>
+                </div>
+
+                {/* Sticky Checkout Button */}
+                <div
+                  style={{
+                    position: "sticky",
+                    bottom: 0,
+                    backgroundColor: "#F7FAFC",
+                    paddingTop: "12px",
+                    paddingBottom: "16px",
+                    marginTop: "24px",
+                  }}
+                >
+                  <ButtonMUI
+                    variant="contained"
+                    onClick={checkoutHandler}
+                    fullWidth
+                    style={{
+                      backgroundColor: "#FF4E00",
+                      color: "#fff",
+                      fontWeight: "600",
+                      padding: "12px 0",
+                      fontSize: "16px",
+                      borderRadius: "8px",
+                      fontFamily: "'Nunito', sans-serif",
+                    }}
+                  >
+                    Proceed to Checkout
+                  </ButtonMUI>
+                </div>
+              </div>
+            </div>
+          )}
+        </Offcanvas.Body>
+      </Offcanvas>
+
       <ScrollingTextHeader />
     </>
   );
 }
 
 export default Header2;
-// yim0eNWmTH-OiWI0ZDKAs7-BcBMJVE
-// admin

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../src/varients";
-import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
+
 const AboutUsSection = () => {
 
 
