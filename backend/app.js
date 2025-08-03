@@ -6,7 +6,6 @@ const fileUpload = require("express-fileupload");
 const path = require("path");
 const cors = require("cors");
 require("dotenv").config({ path: "./config/config.env" });
-const Gallery = require('./model/Gallery'); // Adjust the path based on your project structure
 
 // Import routes
 const user = require("./route/userRoute");
@@ -23,34 +22,35 @@ const galleryRoutes = require("./route/galleryRoutes");
 const testimonialRoutes = require("./route/testimonialRoutes");
 const careerRoutes = require('./route/careerRoute');
 const subscribeRoutes = require('./route/subscribeRoute');
-// CORS Configuration
+
+// ✅ CORS Configuration: allow local dev + production
 const corsOptions = {
-  origin: "https://learningneeds.in", // Replace with your frontend's URL
+  origin: [
+    "http://localhost:3000",        // for local development
+    "https://learningneeds.in"      // for production frontend
+  ],
   methods: "GET,POST,PUT,DELETE",
-  credentials: true, // Allow credentials (cookies, authorization headers)
+  credentials: true, // allow cookies / auth headers
 };
-app.use(cors(corsOptions)); // Apply CORS middleware
+app.use(cors(corsOptions));
 
-// Middleware
+// ✅ Middlewares
 app.use(cookieParser());
-app.use(express.json()); // Parse JSON body
+app.use(express.json()); // parse JSON body
 
-// Static file serving for uploads
+// Static files (uploads)
 app.use("/uploads", express.static("uploads"));
 
-// File upload middleware configuration
+// File upload configuration
 app.use(
   fileUpload({
     createParentPath: true,
-    limits: { fileSize: 50 * 1024 * 1024 }, // Limit file size to 50MB
-    abortOnLimit: true, // Abort upload on limit exceeded
+    limits: { fileSize: 50 * 1024 * 1024 }, // limit: 50 MB
+    abortOnLimit: true,
   })
 );
 
-// POST route for image upload
-
-
-// API Routes
+// ✅ API Routes
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
@@ -65,17 +65,17 @@ app.use('/api/v1/blogs', blogRoutes);
 app.use("/api/v1", galleryRoutes);
 app.use("/api/v1", careerRoutes);
 app.use('/api/v1', subscribeRoutes);
-// Serve static files from the frontend in production
+
+// ✅ Serve frontend build in production
 if (process.env.NODE_ENV === "production") {
   const __dirname1 = path.resolve();
-  app.use(express.static(path.join(__dirname1, "/frontend/build"))); // Corrected the typo here
-
+  app.use(express.static(path.join(__dirname1, "/frontend/build")));
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
   );
 }
 
-// Error Middleware
+// ✅ Error middleware (must be last)
 app.use(errorMiddleware);
 
 module.exports = app;
