@@ -25,7 +25,7 @@ const careerRoutes = require('./route/careerRoute');
 const subscribeRoutes = require('./route/subscribeRoute');
 // CORS Configuration
 const corsOptions = {
-  origin: "http://localhost:3000", // Replace with your frontend's URL
+  origin: "https://learningneeds.in", // Replace with your frontend's URL
   methods: "GET,POST,PUT,DELETE",
   credentials: true, // Allow credentials (cookies, authorization headers)
 };
