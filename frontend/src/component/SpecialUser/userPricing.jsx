@@ -88,7 +88,7 @@ export default function UserPricing() {
   const payNow = async (token) => {
     try {
       const response = await axios({
-        url: "http://localhost:5000/payment",
+        url: "https://book-rxj9.onrender.com/payment",
         method: "post",
         data: {
           amount: product.price * 100,
