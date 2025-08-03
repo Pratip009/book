@@ -55,22 +55,31 @@ const programs = [
   },
 ];
 
+// Modern color palette
 const getCardBackgroundColor = (index) => {
-  const colors = ["#ffebee", "#e3f2fd", "#e8f5e9"];
+  const colors = ["#F9FAFB", "#F3F4F6", "#EFF6FF"];
   return colors[index % colors.length];
 };
 
 const getHeadingBackgroundColor = (index) => {
-  const colors = ["#ffcdd2", "#bbdefb", "#c8e6c9"];
+  const colors = ["#E0F2F1", "#FCE4EC", "#E3F2FD"];
   return colors[index % colors.length];
 };
 
+// Modern styled card
 const StyledCard = styled(Card)(({ index }) => ({
   height: "100%",
   display: "flex",
   flexDirection: "column",
   marginTop: "2rem",
+  borderRadius: "20px",
+  boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
   backgroundColor: getCardBackgroundColor(index),
+  "&:hover": {
+    transform: "translateY(-8px)",
+    boxShadow: "0 16px 40px rgba(0,0,0,0.15)",
+  },
 }));
 
 const CardContentStyled = styled(CardContent)({
@@ -78,49 +87,58 @@ const CardContentStyled = styled(CardContent)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
+  padding: "24px",
 });
 
 const HeadingSection = styled("div")(({ index }) => ({
   backgroundColor: getHeadingBackgroundColor(index),
-  padding: "12px", // Adjusted padding
-  borderBottom: "2px solid #000",
+  padding: "18px",
+  borderTopLeftRadius: "20px",
+  borderTopRightRadius: "20px",
 }));
 
 const StyledHeadingTypography = styled(Typography)({
-  fontFamily: "Nunito",
-  fontSize: "var(--font-h4)",
-  fontWeight: "bold",
-  position: "relative",
-  marginBottom: "0px",
+  fontFamily: "Outfit, sans-serif",
+  fontSize: "20px",
+  fontWeight: 700,
+  color: "#1F2937",
 });
 
 const StyledTypography = styled(Typography)({
-  fontFamily: "Nunito",
+  fontFamily: "Outfit, sans-serif",
+  fontSize: "16px",
+  color: "#374151",
 });
 
 const ContactButton = styled(Button)({
-  backgroundColor: "#055694",
-  fontFamily: "Nunito",
+  backgroundColor: "#FF4E00",
+  fontFamily: "Outfit, sans-serif",
   color: "#fff",
-  marginTop: "12px", 
+  marginTop: "20px",
+  padding: "10px 20px",
+  fontSize: "16px",
+  borderRadius: "12px",
+  fontWeight: "bold",
+  textTransform: "none",
+  transition: "all 0.3s ease",
   "&:hover": {
     backgroundColor: "#cc3d00",
   },
 });
 
 const StyledDialogTitle = styled(DialogTitle)({
-  fontFamily: "Nunito",
-  borderBottom: "2px solid #cc3d00",
-});
-
-const StyledDialogContent = styled(DialogContent)({
-  fontFamily: "Nunito",
-  fontSize: "15px",
+  fontFamily: "Outfit, sans-serif",
+  fontSize: "20px",
+  fontWeight: "bold",
+  backgroundColor: "#f9fafb",
+  borderBottom: "2px solid #ff4e00",
 });
 
 const StyledDialogContentText = styled(DialogContentText)({
-  fontFamily: "Nunito",
-  fontSize:'15px'
+  fontFamily: "Outfit, sans-serif",
+  fontSize: "15px",
+  color: "#374151",
+  marginBottom: "10px",
 });
 
 const Pricing = () => {
@@ -136,26 +154,24 @@ const Pricing = () => {
 
   return (
     <>
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {programs.map((program, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <StyledCard index={index}>
               <HeadingSection index={index}>
-                <StyledHeadingTypography variant="h6">
+                <StyledHeadingTypography>
                   {program.category}
                 </StyledHeadingTypography>
               </HeadingSection>
               <CardContentStyled>
-                <List>
+                <List dense>
                   {program.items.map((item, idx) => (
                     <ListItem key={idx} disableGutters>
-                      <ListItemIcon>
-                        <CircleIcon style={{ fontSize: 30 }} />
+                      <ListItemIcon sx={{ minWidth: "30px" }}>
+                        <CircleIcon sx={{ fontSize: 12, color: "#FF4E00" }} />
                       </ListItemIcon>
                       <ListItemText
-                        primary={
-                          <StyledTypography style={{}}>{item}</StyledTypography>
-                        }
+                        primary={<StyledTypography>{item}</StyledTypography>}
                       />
                     </ListItem>
                   ))}
@@ -168,20 +184,18 @@ const Pricing = () => {
           </Grid>
         ))}
       </Grid>
-      <Dialog open={open} onClose={handleClose} maxWidth="sm">
-        {" "}
-        {/* Adjusted maxWidth */}
+      <Dialog open={open} onClose={handleClose} maxWidth="xs" fullWidth>
         <StyledDialogTitle>Contact Us</StyledDialogTitle>
-        <StyledDialogContent>
+        <DialogContent>
           <StyledDialogContentText>
-            For more information, please contact us at: 8240554890
+            📞 Phone: <strong>8240554890</strong>
           </StyledDialogContentText>
           <StyledDialogContentText>
-            Email: info@learningneeds.in
+            📧 Email: <strong>info@learningneeds.in</strong>
           </StyledDialogContentText>
-        </StyledDialogContent>
+        </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} variant="outlined" color="primary">
             Close
           </Button>
         </DialogActions>

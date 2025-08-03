@@ -321,8 +321,11 @@ function Header2() {
                 src={logo}
                 alt="Logo"
                 className="logo-lg d-none d-md-block"
-                width="200"
-                height="200"
+                style={{
+                  maxHeight: "30px",
+                  width: "auto",
+                  objectFit: "contain",
+                }}
               />
               <img
                 src={logo}
@@ -790,7 +793,7 @@ function Header2() {
                               padding: "0 4px",
                               minWidth: "20px",
                               textAlign: "center",
-                              margin:0
+                              margin: 0,
                             }}
                           >
                             {item.quantity}
@@ -816,20 +819,16 @@ function Header2() {
                             +
                           </ButtonMUI>
                           <ButtonMUI
-                            
                             size="small"
                             style={{
                               fontFamily: "Nunito",
                               color: "#dc2626",
-                             
-                              
-                             
+
                               marginLeft: "auto",
                             }}
                             onClick={() => deleteCartItems(item.productId)}
                           >
                             <FaTrash />
-
                           </ButtonMUI>
                         </div>
                       </div>

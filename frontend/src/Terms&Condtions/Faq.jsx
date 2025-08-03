@@ -409,16 +409,6 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
-      <h1
-        style={{
-          textAlign: "start",
-          fontSize: "var(--font-h3)",
-          color: "#FF4E00",
-          fontFamily: "Nunito",
-        }}
-      >
-        FAQ - Products
-      </h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -531,6 +521,16 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       &nbsp;
+      <h1
+        style={{
+          textAlign: "start",
+          fontSize: "var(--font-h3)",
+          color: "#FF4E00",
+          fontFamily: "Nunito",
+        }}
+      >
+        FAQ - Products
+      </h1>
       <Accordion sx={{ border: "1px solid #9A9A9A", boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
