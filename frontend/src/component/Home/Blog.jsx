@@ -6,13 +6,13 @@ import bookImg from "../../Image/home/teambook.png";
 import star from "../../Image/home/teamstar.png";
 import { Container } from "react-bootstrap";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
-
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 export default function Blog() {
   const [blogData, setBlogData] = useState([]);
 
   const fetchBlogData = async () => {
     try {
-      const response = await fetch("/api/v1/blogs");
+      const response = await fetch(`${API_BASE_URL}/api/v1/blogs`);
       const data = await response.json();
       setBlogData(data);
     } catch (error) {

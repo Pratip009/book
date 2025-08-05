@@ -9,12 +9,14 @@ import {
 import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./OurTeam.css";
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
 export default function OurTeam() {
   const [teamMembers, setTeamMembers] = useState([]);
 
   const fetchTeamMembers = async () => {
     try {
-      const response = await fetch("/api/v1/team");
+      const response = await fetch(`${API_BASE_URL}/api/v1/team`);
       const data = await response.json();
       setTeamMembers(data);
     } catch (error) {
@@ -28,7 +30,6 @@ export default function OurTeam() {
 
   return (
     <MDBContainer className="py-5">
-      <MDBRow className="d-flex justify-content-center"></MDBRow>
       <MDBRow className="d-flex justify-content-center align-items-center">
         {teamMembers.map((member) => (
           <MDBCol

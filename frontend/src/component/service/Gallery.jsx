@@ -7,7 +7,7 @@ import star from "../../Image/home/teamstar.png";
 import HeaderWithUnderline from "../UnderLineAnimation/HeaderWithUnderline";
 import { Container, Nav } from "react-bootstrap";
 import { FaTimes } from "react-icons/fa";
-
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 const Gallery = () => {
   const [galleryItems, setGalleryItems] = useState([]);
   const [activeTab, setActiveTab] = useState("training");
@@ -15,7 +15,7 @@ const Gallery = () => {
 
   const fetchGalleryItems = async () => {
     try {
-      const response = await fetch("/api/v1/gallery");
+      const response = await fetch(`${API_BASE_URL}/api/v1/gallery`);
       const data = await response.json();
       setGalleryItems(data);
     } catch (error) {

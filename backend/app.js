@@ -20,14 +20,15 @@ const contactRoutes = require("./route/contactRoutes");
 const teamRoutes = require("./route/teamRoutes");
 const galleryRoutes = require("./route/galleryRoutes");
 const testimonialRoutes = require("./route/testimonialRoutes");
-const careerRoutes = require('./route/careerRoute');
-const subscribeRoutes = require('./route/subscribeRoute');
+const careerRoutes = require("./route/careerRoute");
+const subscribeRoutes = require("./route/subscribeRoute");
 
 // ✅ CORS Configuration: allow local dev + production
 const corsOptions = {
   origin: [
-    "http://localhost:3000",        // for local development
-    "https://learningneeds.in"      // for production frontend
+    "http://localhost:3000", // for local development
+    "https://learningneeds.in",
+    "https://www.learningneeds.in", // for production frontend
   ],
   methods: "GET,POST,PUT,DELETE",
   credentials: true, // allow cookies / auth headers
@@ -61,10 +62,10 @@ app.use("/api/v1", adminMessage);
 app.use("/api/v1", contactRoutes);
 app.use("/api/v1/team", teamRoutes);
 app.use("/api/v1/testimonial", testimonialRoutes);
-app.use('/api/v1/blogs', blogRoutes);
+app.use("/api/v1/blogs", blogRoutes);
 app.use("/api/v1", galleryRoutes);
 app.use("/api/v1", careerRoutes);
-app.use('/api/v1', subscribeRoutes);
+app.use("/api/v1", subscribeRoutes);
 
 // ✅ Serve frontend build in production
 if (process.env.NODE_ENV === "production") {

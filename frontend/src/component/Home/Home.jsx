@@ -31,7 +31,7 @@ const Home = () => {
   const fetchNotices = async () => {
     try {
       const response = await fetch(
-        "https://learningneeds-strapi-11ta.onrender.com/api/noticeboards"
+        "https://book-rxj9.onrender.com/api/noticeboards"
       );
       if (!response.ok) throw new Error("Failed to fetch notices.");
       const data = await response.json();
