@@ -10,25 +10,25 @@ exports.createProduct = asyncWrapper(async (req, res) => {
   let { images, pdfs } = req.body;
 
   const uploadImage = async (img) => {
-      const result = await cloudinary.uploader.upload(img, {
-          folder: "Products/Images",
-          resource_type: "image"
-      });
-      return {
-          product_id: result.public_id,
-          url: result.secure_url,
-      };
+    const result = await cloudinary.uploader.upload(img, {
+      folder: "Products/Images",
+      resource_type: "image",
+    });
+    return {
+      product_id: result.public_id,
+      url: result.secure_url,
+    };
   };
 
   const uploadPdf = async (pdf) => {
-      const result = await cloudinary.uploader.upload(pdf, {
-          folder: "Products/PDFs",
-          resource_type: "raw" // specifying raw because it's not an image
-      });
-      return {
-          pdf_id: result.public_id,
-          url: result.secure_url,
-      };
+    const result = await cloudinary.uploader.upload(pdf, {
+      folder: "Products/PDFs",
+      resource_type: "raw", // specifying raw because it's not an image
+    });
+    return {
+      pdf_id: result.public_id,
+      url: result.secure_url,
+    };
   };
 
   // Handle image uploads
@@ -39,17 +39,17 @@ exports.createProduct = asyncWrapper(async (req, res) => {
 
   // Add the user ID and uploaded file information to the request body
   const newProductData = {
-      ...req.body,
-      user: req.user.id, // assuming user id is in req.user
-      images: imageLinks,
-      pdfs: pdfLinks
+    ...req.body,
+    user: req.user.id, // assuming user id is in req.user
+    images: imageLinks,
+    pdfs: pdfLinks,
   };
 
   const newProduct = await ProductModel.create(newProductData);
 
   res.status(201).json({
-      success: true,
-      data: newProduct
+    success: true,
+    data: newProduct,
   });
 });
 
@@ -81,22 +81,15 @@ exports.getAllProducts = asyncWrapper(async (req, res) => {
   });
 });
 
-
-
-
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> get all product admin route>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 exports.getAllProductsAdmin = asyncWrapper(async (req, res) => {
+  console.log("📦 getAllProductsAdmin called");
+  console.log("👤 User in getAllProductsAdmin:", req.user);
+
   const products = await ProductModel.find();
-
-  res.status(201).json({  
-    success: true,
-    products,
-  });
+  res.status(200).json({ success: true, products });
 });
-
-  
-
 
 //>>>>>>>>>>>>>>>>>> Update Admin Route >>>>>>>>>>>>>>>>>>>>>>>
 exports.updateProduct = asyncWrapper(async (req, res, next) => {
@@ -146,7 +139,6 @@ exports.updateProduct = asyncWrapper(async (req, res, next) => {
     product: product,
   });
 });
-
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  delete product --admin  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.deleteProduct = asyncWrapper(async (req, res, next) => {
@@ -210,7 +202,7 @@ exports.createProductReview = asyncWrapper(async (req, res, next) => {
         rev.ratings = ratings;
         rev.comment = comment;
         rev.recommend = recommend;
-        
+
         rev.title = title;
         product.numOfReviews = product.reviews.length;
       }
@@ -236,7 +228,6 @@ exports.createProductReview = asyncWrapper(async (req, res, next) => {
   });
 });
 
-
 // >>>>>>>>>>>>>>>>>>>>>> Get All Reviews of a product>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.getProductReviews = asyncWrapper(async (req, res, next) => {
   // we need product id for all reviews of the product
@@ -261,22 +252,19 @@ exports.deleteReview = asyncWrapper(async (req, res, next) => {
   const product = await ProductModel.findById(req.query.productId);
 
   if (!product) {
-    return next(new ErrorHandler("Product not found", 404)); 
+    return next(new ErrorHandler("Product not found", 404));
   }
 
   // check if ther any review avalible with given reviwe id. then filter the review array store inside reviews without that review
-  const reviews = product.reviews.filter(
-    (rev) => { return rev._id.toString() !== req.query.id.toString()}
-  );
+  const reviews = product.reviews.filter((rev) => {
+    return rev._id.toString() !== req.query.id.toString();
+  });
   // once review filterd then update new rating from prdoduct review
   let avg = 0;
   reviews.forEach((rev) => {
-   
     avg += rev.ratings;
   });
 
-
-  
   let ratings = 0;
   if (reviews.length === 0) {
     ratings = 0;

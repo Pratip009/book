@@ -100,15 +100,54 @@ export const newReview = (reviewData) => async (dispatch) => {
 };
 
 // Admin: get all products
+// getAdminProducts
+// productAction.jsx
 export const getAdminProducts = () => async (dispatch) => {
   try {
-    dispatch({ type: ADMIN_PRODUCT_REQUEST });
+    dispatch({ type: "ADMIN_PRODUCTS_REQUEST" });
 
-    const { data } = await api.get("/api/v1/admin/products");
+    const token = localStorage.getItem("token");
+    console.log("🛡️ Sending token:", token);
+    if (!token) {
+      throw new Error("No token found. Please login.");
+    }
 
-    dispatch({ type: ADMIN_PRODUCT_SUCCESS, payload: data.products });
+    const res = await fetch(
+      "/api/v1/admin/products",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        // Removed credentials: "include"
+      }
+    );
+
+    console.log("🔄 Response status:", res.status);
+    console.log("🔄 Response headers:", [...res.headers.entries()]);
+
+    const data = await res.json();
+    console.log("📦 Response JSON data:", data);
+
+    if (!res.ok) {
+      console.error(
+        "❌ Fetch error:",
+        data.message || "Failed to fetch products"
+      );
+      throw new Error(data.message || "Failed to fetch products");
+    }
+
+    dispatch({
+      type: "ADMIN_PRODUCTS_SUCCESS",
+      payload: data.products,
+    });
+    console.log("✅ Dispatched ADMIN_PRODUCTS_SUCCESS");
   } catch (error) {
-    dispatch({ type: ADMIN_PRODUCT_FAIL, payload: error.message });
+    console.error("🔥 Error in getAdminProducts:", error.message);
+    dispatch({
+      type: "ADMIN_PRODUCTS_FAIL",
+      payload: error.message,
+    });
   }
 };
 

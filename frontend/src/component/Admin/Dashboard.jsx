@@ -273,6 +273,7 @@ function Dashboard() {
   const history = useHistory();
   const dispatch = useDispatch();
   const [toggle, setToggle] = useState(false);
+
   const { products, loading, error } = useSelector((state) => state.products);
   const { orders, error: ordersError } = useSelector(
     (state) => state.allOrders
@@ -281,27 +282,37 @@ function Dashboard() {
 
   const alert = useAlert();
 
+  // ---- Debug logs ----
+  console.log("Products from Redux:", products);
+  console.log("Orders from Redux:", orders);
+  console.log("Users from Redux:", users);
+
   let OutOfStock = 0;
-  products &&
-    products.forEach((element) => {
-      // check how much items out of stocks in products array
-      if (element.stock === 0) {
-        OutOfStock += 1;
-      }
-    });
+  products?.forEach((element) => {
+    if (element.stock === 0) {
+      OutOfStock += 1;
+    }
+  });
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      console.warn("No token found, skipping admin API calls");
+      return;
+    }
+
     if (error) {
       alert.error(error);
-      dispatch(clearErrors);
+      dispatch(clearErrors());
     }
     if (usersError) {
       alert.error(usersError);
-      dispatch(clearErrors);
+      dispatch(clearErrors());
     }
     if (ordersError) {
       alert.error(ordersError);
-      dispatch(clearErrors);
+      dispatch(clearErrors());
     }
 
     dispatch(getAllOrders());
@@ -309,105 +320,51 @@ function Dashboard() {
     dispatch(getAdminProducts());
   }, [dispatch, error, alert, ordersError, usersError]);
 
-  // togle handler =>
   const toggleHandler = () => {
-    console.log("toggle");
+    console.log("Toggle Sidebar Clicked");
     setToggle(!toggle);
   };
 
-  // total Amount Earned
   let totalAmmount = 0;
-  orders &&
-    orders.forEach((item) => {
-      totalAmmount += item.totalPrice;
-    });
+  orders?.forEach((item) => {
+    totalAmmount += item.totalPrice;
+  });
 
-  // chart js values for Line component
+  console.log("Total Amount:", totalAmmount);
+  console.log("Out of Stock Count:", OutOfStock);
+
+  // Chart options guarded with optional chaining
   const lineOptions = {
-    chart: {
-      type: "line",
-      style: {
-        fontFamily: "Nunito",
-        fontWeight: "900",
-      },
-    },
-    xAxis: {
-      categories: ["Initial Amount", "Amount Earned"],
-      labels: {
-        style: {
-          fontWeight: "900",
-        },
-      },
-    },
-    yAxis: {
-      title: {
-        text: null,
-      },
-      labels: {
-        style: {
-          fontWeight: "900",
-        },
-      },
-    },
-    series: [
-      {
-        name: "TOTAL AMOUNT",
-        data: [0, totalAmmount],
-      },
-    ],
+    chart: { type: "line", style: { fontFamily: "Nunito", fontWeight: "900" } },
+    xAxis: { categories: ["Initial Amount", "Amount Earned"] },
+    yAxis: { title: { text: null } },
+    series: [{ name: "TOTAL AMOUNT", data: [0, totalAmmount] }],
     plotOptions: {
       line: {
         lineWidth: 4,
-        marker: {
-          enabled: true,
-        },
+        marker: { enabled: true },
         color: "black",
       },
     },
   };
-  // now set the Value of stock of the product for Doughnut component in  chart .
 
   const doughnutOptions = {
     chart: {
       type: "pie",
-      options3d: {
-        enabled: true,
-        alpha: 45,
-        beta: 0,
-      },
-      style: {
-        fontFamily: "Nunito",
-      },
+      options3d: { enabled: true, alpha: 45, beta: 0 },
+      style: { fontFamily: "Nunito" },
     },
     title: {
       text: "Product Stock Status",
       align: "center",
-      style: {
-        color: "black",
-        fontWeight: "900",
-      },
-    },
-
-    accessibility: {
-      point: {
-        valueSuffix: "%",
-      },
-    },
-    tooltip: {
-      pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+      style: { color: "black", fontWeight: "900" },
     },
     plotOptions: {
       pie: {
         allowPointSelect: true,
         cursor: "pointer",
         depth: 35,
-        dataLabels: {
-          enabled: true,
-          format: "{point.name}",
-          style: {
-            fontWeight: "500",
-          },
-        },
+        dataLabels: { enabled: true, format: "{point.name}" },
       },
     },
     series: [
@@ -415,32 +372,22 @@ function Dashboard() {
         type: "pie",
         name: "Share",
         data: [
-          ["Out of Stock", products.length - OutOfStock],
-
-          {
-            name: "Out of Stock",
-            y: OutOfStock,
-            sliced: true,
-            selected: true,
-          },
+          ["In Stock", (products?.length || 0) - OutOfStock],
+          { name: "Out of Stock", y: OutOfStock, sliced: true, selected: true },
         ],
       },
     ],
   };
 
-  // to close the sidebar when the screen size is greater than 1000px
+  // Close sidebar on large screens
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 999 && toggle) {
         setToggle(false);
       }
     };
-
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, [toggle]);
 
   return (
@@ -451,11 +398,7 @@ function Dashboard() {
         <>
           <MetaData title="Dashboard - Admin Panel" />
           <div className={classes.dashboard}>
-            <div
-              className={
-                !toggle ? `${classes.firstBox}` : `${classes.toggleBox}`
-              }
-            >
+            <div className={!toggle ? classes.firstBox : classes.toggleBox}>
               <Sidebar />
             </div>
 
@@ -464,36 +407,28 @@ function Dashboard() {
                 <Navbar toggleHandler={toggleHandler} />
               </div>
 
+              {/* Summary Cards */}
               <div className={classes.summaryCard}>
                 <div
                   className={classes.cardContainer}
                   style={{
                     backgroundImage: `url(${ProductImg})`,
                     backgroundSize: "cover",
-                    transition: "transform 0.2s ease-in-out",
-                    cursor: "pointer",
-                    ":hover": {
-                      transform: "scale(1.1)",
-                    },
                   }}
                   onClick={() => history.push("/admin/products")}
                 >
                   <div className={classes.headerConetnt}>
                     <ShoppingCart
                       fontSize="large"
-                      style={{
-                        fontSize: "3rem",
-                        boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.25)",
-                      }}
+                      style={{ fontSize: "3rem" }}
                     />
-
                     <Typography variant="h6" className={classes.heading}>
                       Total Products
                     </Typography>
                   </div>
                   <div className={classes.textContainer}>
                     <Typography variant="body2" className={classes.number}>
-                      {products && products.length}
+                      {products?.length || 0}
                     </Typography>
                   </div>
                 </div>
@@ -503,21 +438,13 @@ function Dashboard() {
                   style={{
                     backgroundImage: `url(${ordersImg})`,
                     backgroundSize: "cover",
-                    transition: "transform 0.2s ease-in-out",
-                    cursor: "pointer",
-                    ":hover": {
-                      transform: "scale(1.1)",
-                    },
                   }}
                   onClick={() => history.push("/admin/orders")}
                 >
                   <div className={classes.headerConetnt}>
                     <AssignmentInd
                       fontSize="large"
-                      style={{
-                        fontSize: "3rem",
-                        boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-                      }}
+                      style={{ fontSize: "3rem" }}
                     />
                     <Typography variant="h6" className={classes.heading}>
                       Total Orders
@@ -525,7 +452,7 @@ function Dashboard() {
                   </div>
                   <div className={classes.textContainer}>
                     <Typography variant="body2" className={classes.number}>
-                      {orders && orders.length}
+                      {orders?.length || 0}
                     </Typography>
                   </div>
                 </div>
@@ -535,34 +462,24 @@ function Dashboard() {
                   style={{
                     backgroundImage: `url(${usersImg})`,
                     backgroundSize: "cover",
-                    transition: "transform 0.2s ease-in-out",
-                    cursor: "pointer",
-                    ":hover": {
-                      transform: "scale(1.1)",
-                    },
                   }}
                   onClick={() => history.push("/admin/users")}
                 >
                   <div className={classes.headerConetnt}>
-                    <People
-                      fontSize="large"
-                      style={{
-                        fontSize: "3rem",
-                        boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-                      }}
-                    />
+                    <People fontSize="large" style={{ fontSize: "3rem" }} />
                     <Typography variant="h6" className={classes.heading}>
                       Total Users
                     </Typography>
                   </div>
                   <div className={classes.textContainer}>
                     <Typography variant="body2" className={classes.number}>
-                      {users && users.length}
+                      {users?.length || 0}
                     </Typography>
                   </div>
                 </div>
               </div>
 
+              {/* Charts */}
               <div className={classes.revenue}>
                 <div className={classes.doughnutChart}>
                   <HighchartsReact
@@ -576,21 +493,10 @@ function Dashboard() {
                   style={{
                     backgroundImage: `url(${ProductImg})`,
                     backgroundSize: "cover",
-                    transition: "transform 0.2s ease-in-out",
-                    borderRadius: "5px",
-
-                    width: "42%",
                   }}
                 >
                   <div className={classes.headerConetnt}>
-                    <BarChart
-                      fontSize="large"
-                      style={{
-                        fontSize: "3rem",
-                        boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-                      }}
-                    />
-
+                    <BarChart fontSize="large" style={{ fontSize: "3rem" }} />
                     <Typography variant="h6" className={classes.heading}>
                       Total Revenue
                     </Typography>

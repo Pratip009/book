@@ -6,7 +6,10 @@ const fileUpload = require("express-fileupload");
 const path = require("path");
 const cors = require("cors");
 require("dotenv").config({ path: "./config/config.env" });
-
+app.use((req, res, next) => {
+  console.log("🔥 Global hit:", req.method, req.originalUrl);
+  next();
+});
 // Import routes
 const user = require("./route/userRoute");
 const order = require("./route/orderRoute");
@@ -26,12 +29,13 @@ const subscribeRoutes = require("./route/subscribeRoute");
 // ✅ CORS Configuration: allow local dev + production
 const corsOptions = {
   origin: [
-    "http://localhost:3000", // for local development
+    "http://localhost:3000",
     "https://learningneeds.in",
-    "https://www.learningneeds.in", // for production frontend
+    "https://www.learningneeds.in",
   ],
   methods: "GET,POST,PUT,DELETE",
-  credentials: true, // allow cookies / auth headers
+  allowedHeaders: ["Content-Type", "Authorization"], // ✅ add this
+  credentials: true,
 };
 app.use(cors(corsOptions));
 

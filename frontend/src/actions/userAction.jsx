@@ -45,12 +45,16 @@ export function login(email, password) {
       dispatch({ type: LOGIN_REQUEST });
 
       const config = { headers: { "Content-Type": "application/json" } };
-
       const { data } = await axios.post(
         `/api/v1/login`,
         { email, password },
         config
       );
+
+      // Save token for future requests
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+      }
 
       dispatch({ type: LOGIN_SUCCESS, payload: data.user });
     } catch (error) {
@@ -58,6 +62,7 @@ export function login(email, password) {
     }
   };
 }
+
 // resgister user
 export function signUp(signupData) {
   return async function (dispatch) {

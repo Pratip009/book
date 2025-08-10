@@ -47,7 +47,7 @@ const Sidebar = ({ handleSideBarMenu, isAuthenticated, user }) => {
           </li>
         </Link>
         <Link
-          to="/products"
+          to="/product"
           style={{ color: "inherit", textDecoration: "none" }}
         >
           <li className="sidebar-menu-item">

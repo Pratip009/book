@@ -3,49 +3,54 @@ const userModel = require("../model/userModel");
 const jwt = require("jsonwebtoken");
 const ErrorHandler = require("../utils/errorHandler");
 
+console.log("🚦 Auth middleware file loaded"); // Should log once on server start
+
 exports.isAuthentictedUser = asyncWrapper(async (req, res, next) => {
-    // Extract token from cookies
-    const { token } = req.cookies;
-    
-    console.log("Token from cookies:", token); // Debugging log to check if token exists
-    
-    // If no token is found
-    if (!token) {
-        console.log("No token found. User is not authenticated."); // Debugging log
-        return next(new ErrorHandler("Please Login to access this resource", 401)); 
-    }
+  console.log(
+    `🛡️ isAuthentictedUser middleware triggered on URL: ${req.originalUrl}`
+  );
 
-    try {
-        // Verify token with secret key
-        const deCodeToken = jwt.verify(token, process.env.JWT_SECRET);
-        console.log("Decoded Token:", deCodeToken); // Debugging log to check decoded token
-        
-        // Get user by id from decoded token
-        const user = await userModel.findById(deCodeToken.id);
-        
-        console.log("User from database:", user); // Debugging log to check user data
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    token = req.headers.authorization.split(" ")[1];
+    console.log("🔑 Token found in header:", token);
+  } else {
+    console.log("❌ No token in authorization header");
+    return next(new ErrorHandler("Please Login to access this resource", 401));
+  }
 
-        req.user = user; // Store user in req.user
-        
-        next();
-    } catch (error) {
-        console.error("Error during token verification:", error); // Debugging log for verification errors
-        return next(new ErrorHandler("Invalid or expired token", 401)); // Handle token errors
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = await userModel.findById(decoded.id);
+    if (!req.user) {
+      console.log("❌ User not found in DB");
+      return next(new ErrorHandler("User not found", 401));
     }
+    console.log(
+      `✅ Authenticated user: ${req.user.email}, role: ${req.user.role}`
+    );
+    next();
+  } catch (error) {
+    console.log("❌ JWT verification failed:", error.message);
+    return next(new ErrorHandler("Invalid or expired token", 401));
+  }
 });
 
 // Function to authorize roles
 exports.authorizeRoles = (...roles) => {
-    return (req, res, next) => {
-        console.log("User Role:", req.user.role); // Debugging log to check the user's role
-        
-        if (!roles.includes(req.user.role)) {
-            console.log(`Role: ${req.user.role} is not allowed to access this resource.`); // Debugging log for role mismatch
-            return next(
-                new ErrorHandler(`Role: ${req.user.role} is not allowed to access this resource`, 403)
-            );
-        }
-        
-        next();
-    };
+  return (req, res, next) => {
+    console.log("🎭 authorizeRoles middleware triggered");
+    console.log("👤 User role:", req.user.role);
+    if (!roles.includes(req.user.role)) {
+      console.log(`🚫 Role ${req.user.role} is not allowed`);
+      return next(
+        new ErrorHandler(`Role: ${req.user.role} is not allowed`, 403)
+      );
+    }
+    console.log("✅ Role authorized");
+    next();
+  };
 };

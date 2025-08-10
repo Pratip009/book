@@ -20,7 +20,7 @@ cloudinary.config({
 });
 
 // Middleware
-app.use(cors());
+
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
@@ -45,7 +45,7 @@ app.post("/payment", async (req, res) => {
   }
 });
 
-
+console.log("JWT_SECRET:", process.env.JWT_SECRET);
 // Start Server
 const PORT = process.env.PORT || 5000;
 const server = app.listen(PORT, () => {

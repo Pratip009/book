@@ -220,9 +220,7 @@ function Sidebar() {
               >
                 <li className={classes.sideBarMenuItem}>
                   <SchoolIcon fontSize="large" />
-                  <span className={classes.sideBarMenuItem_text}>
-                    Team
-                  </span>
+                  <span className={classes.sideBarMenuItem_text}>Team</span>
                 </li>
               </Link>
               <Link
@@ -253,9 +251,7 @@ function Sidebar() {
               >
                 <li className={classes.sideBarMenuItem}>
                   <SchoolIcon fontSize="large" />
-                  <span className={classes.sideBarMenuItem_text}>
-                    Messages
-                  </span>
+                  <span className={classes.sideBarMenuItem_text}>Messages</span>
                 </li>
               </Link>
               <Link
@@ -264,9 +260,7 @@ function Sidebar() {
               >
                 <li className={classes.sideBarMenuItem}>
                   <SchoolIcon fontSize="large" />
-                  <span className={classes.sideBarMenuItem_text}>
-                  Blog
-                  </span>
+                  <span className={classes.sideBarMenuItem_text}>Blog</span>
                 </li>
               </Link>
               <Link
@@ -275,9 +269,7 @@ function Sidebar() {
               >
                 <li className={classes.sideBarMenuItem}>
                   <SchoolIcon fontSize="large" />
-                  <span className={classes.sideBarMenuItem_text}>
-                  Gallery
-                  </span>
+                  <span className={classes.sideBarMenuItem_text}>Gallery</span>
                 </li>
               </Link>
             </ul>

@@ -63,30 +63,48 @@ exports.registerUser = asyncWrapper(async (req, res, next) => {
 });
 
 // Login User >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-exports.loginUser = asyncWrapper(async (req, res, next) => {
-  const { email, password } = req.body;
+exports.loginUser = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
 
-  // checking if user has given password and email both
-  if (!email || !password) {
-    return next(new ErrorHandler("Please Enter Email & Password", 400));
+    // 1. Validate input
+    if (!email || !password) {
+      return next(new ErrorHandler("Please enter email and password", 400));
+    }
+
+    // 2. Find user in DB
+    const user = await User.findOne({ email }).select("+password");
+    if (!user) {
+      return next(new ErrorHandler("Invalid email or password", 401));
+    }
+
+    // 3. Check password
+    const isPasswordMatched = await user.comparePassword(password);
+    if (!isPasswordMatched) {
+      return next(new ErrorHandler("Invalid email or password", 401));
+    }
+
+    // 4. Generate token
+    const token = user.getJWTToken();
+
+    // 5. Send token in cookie
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true, // since Render is HTTPS
+      sameSite: "None", // needed for cross-site cookies
+      expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+    });
+
+    // 6. Return response
+    res.status(200).json({
+      success: true,
+      user,
+      token,
+    });
+  } catch (error) {
+    next(error);
   }
-  const user = await userModel.findOne({ email }).select("+password"); // .select("+password") because in schema we set set select : false so password is'nt return to anyone so we add +password here for verfication of pass
-
-  // jab user nhi mila data base main given credentials ke sath tab
-  if (!user) {
-    return next(new ErrorHandler("Invalid email or password", 401));
-  }
-
-  // comparePassword method defind in useSchema by use . it will comapre this password to hashfrom password at database
-  const isPasswordMatched = await user.comparePassword(password);
-
-  // when password not mathced with original hashed password
-  if (!isPasswordMatched) {
-    return next(new ErrorHandler("Invalid email or password", 401));
-  }
-
-  sendJWtToken(user, 200, res);
-});
+};
 
 // logOut Controller =>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
