@@ -29,7 +29,7 @@ function Header() {
   // Fetch phone and email data from API
   useEffect(() => {
     axios
-      .get("https://book-rxj9.onrender.com/api/phoneand-emails")
+      .get("https://book-rxj9.onrender.com/api/v1/phoneand-emails")
       .then((response) => {
         const data = response.data?.data[0]?.attributes;
         if (data) {

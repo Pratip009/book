@@ -65,43 +65,43 @@ exports.registerUser = asyncWrapper(async (req, res, next) => {
 // Login User >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.loginUser = async (req, res, next) => {
   try {
+    console.log("Login attempt:", req.body);
     const { email, password } = req.body;
 
-    // 1. Validate input
     if (!email || !password) {
+      console.log("Missing email or password");
       return next(new ErrorHandler("Please enter email and password", 400));
     }
 
-    // 2. Find user in DB
     const user = await userModel.findOne({ email }).select("+password");
     if (!user) {
+      console.log("User not found with email:", email);
       return next(new ErrorHandler("Invalid email or password", 401));
     }
 
-    // 3. Check password
     const isPasswordMatched = await user.comparePassword(password);
     if (!isPasswordMatched) {
+      console.log("Password mismatch for email:", email);
       return next(new ErrorHandler("Invalid email or password", 401));
     }
 
-    // 4. Generate token
     const token = user.getJWTToken();
+    console.log("Generated JWT token:", token);
 
-    // 5. Send token in cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true, // since Render is HTTPS
-      sameSite: "None", // needed for cross-site cookies
+      secure: true,
+      sameSite: "None",
       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
     });
 
-    // 6. Return response
     res.status(200).json({
       success: true,
       user,
       token,
     });
   } catch (error) {
+    console.error("Login error:", error);
     next(error);
   }
 };
